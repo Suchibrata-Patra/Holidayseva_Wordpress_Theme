@@ -1,3 +1,4 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <h1>Page Load Statistics</h1>
   <div id="chart-container">
     <canvas id="loadChart"></canvas>
