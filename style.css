@@ -52,7 +52,7 @@ Tags: travel, tourism, responsive, dynamic, clean, modern
 
 }
 
-.nav li{
+.nav li a{
     list-style: none;
     margin:20px;
     background-color: none;
