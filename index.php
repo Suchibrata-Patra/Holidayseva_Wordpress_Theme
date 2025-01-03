@@ -1,5 +1,6 @@
 <?php 
     echo get_template_directory_uri();
+    echo '<br>';
     bloginfo('template_directory');
 ?>
 <!DOCTYPE html>
