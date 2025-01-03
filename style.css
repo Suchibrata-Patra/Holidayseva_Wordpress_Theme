@@ -26,12 +26,11 @@ Tags: travel, tourism, responsive, dynamic, clean, modern
     --text_black: #000000;    /* Dark gray text */
     --text-secondary: #777777;  /* Lighter gray text */
 
-    --holidayseva_white: rgb(255,255,255);
+    --holidayseva_white: rgb(40, 16, 16);
     --holidayseva_red : rgb(255,0,0);
     --button_primary:black;
     --button_hover:grey;
 
-    --primary_font_size:3px;
 }
 
 *{
