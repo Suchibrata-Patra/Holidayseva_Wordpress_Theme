@@ -13,12 +13,7 @@ get_header();
     <div>
         <?php the_content(); ?>
         <?php 
-        the_post_thumbnail(); // Without parameter ->; Thumbnail 
-        the_post_thumbnail( 'thumbnail'); // Thumbnail (default 150px x 150px max) 
-        the_post_thumbnail('medium'); // Medium resolution (default 300px x 300px max) 
-        the_post_thumbnail('large'); // Large resolution (default 1024px x 1024px max)
-        the_post_thumbnail('full'); // Original image resolution (unmodified) 
-        the_post_thumbnail(array(10000, 100)); // Other resolutions (height, width)
+        the_post_thumbnail(array(100, 100)); // Other resolutions (height, width)
         ?>
 
     </div>
