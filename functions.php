@@ -43,6 +43,7 @@ function custom_dashboard_page() {
     <div class="wrap">
         <h1>Welcome to the Custom Dashboard</h1>
         <p>Here is where you can manage your custom settings.</p>
+        <img src="https://media.tenor.com/3IYpyDhud_YAAAAM/cat-dancing-gif-dancing-cat.gif" alt="">
     </div>
     <?php
 }
