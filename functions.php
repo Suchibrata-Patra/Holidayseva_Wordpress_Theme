@@ -42,6 +42,7 @@ function custom_dashboard_page() {
     <div class="wrap">
         <h1>Welcome to the Custom Dashboard</h1>
         <p>Here is where you can manage your custom settings for the Holiday Seva menu.</p>
+        <img src="https://media.tenor.com/3IYpyDhud_YAAAAM/cat-dancing-gif-dancing-cat.gif" alt="">
     </div>
     <?php
 }
@@ -52,7 +53,7 @@ function custom_submenu_page() {
     <div class="wrap">
         <h1>Welcome to the Submenu Page</h1>
         <p>This is the content for the submenu under the "Holiday Seva" menu.</p>
-        <img src="" alt="">
+        <img src="https://media.tenor.com/3IYpyDhud_YAAAAM/cat-dancing-gif-dancing-cat.gif" alt="">
     </div>
     <?php
 }
