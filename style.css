@@ -46,4 +46,12 @@ Tags: travel, tourism, responsive, dynamic, clean, modern
 
 .nav{
     display: flex;
+    background-color: var(--holidayseva_background_light);
+    text-decoration: none;
+
+}
+
+.nav li{
+    list-style: none;
+    margin:20px;
 }
