@@ -10,10 +10,10 @@ get_header();
 </head>
 <body>
     <h1><?php the_title(); ?></h1>
-    <div>
         <?php 
         the_post_thumbnail(array(100, 100)); // Other resolutions (height, width)
         ?>
+    <div>
         <?php the_content(); ?>
 
     </div>
