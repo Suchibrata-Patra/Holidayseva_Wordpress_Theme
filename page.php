@@ -16,7 +16,7 @@ get_header();
 
     <br><br>
 
-    <div id="stats">
+    <div id="stats" style='font-size:var(--primary_font_size)'>
         <h2>Page Load Statistics</h2>
         <p><strong>DOM Content Loaded (DOMContentLoaded):</strong> <span id="dom-content-loaded"></span></p>
         <p><strong>Page Load (load event):</strong> <span id="page-load"></span></p>
