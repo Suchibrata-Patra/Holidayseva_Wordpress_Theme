@@ -9,49 +9,37 @@ get_header();
     <title><?php wp_title(); ?></title>
 </head>
 <body>
-    <?php echo the_title(); ?>
-    <?php the_content(); ?>
+    <h1><?php the_title(); ?></h1>
+    <div>
+        <?php the_content(); ?>
+    </div>
 
-
-
-
-
-
-
-
-
-
-    
     <br><br>
 
-<div id="stats">
-    <h2>Page Load Statistics</h2>
-<p><strong>DOM Content Loaded (DOMContentLoaded):</strong> <span id="dom-content-loaded"></span></p>
-<p><strong>Page Load (load event):</strong> <span id="page-load"></span></p>
-<p><strong>Total Page Load Time:</strong> <span id="total-load-time"></span> ms</p>
-</div>
-<script>
-window.onload = function () {
-  // Get performance data using the Performance API
-  const performanceData = window.performance.timing;
+    <div id="stats">
+        <h2>Page Load Statistics</h2>
+        <p><strong>DOM Content Loaded (DOMContentLoaded):</strong> <span id="dom-content-loaded"></span></p>
+        <p><strong>Page Load (load event):</strong> <span id="page-load"></span></p>
+        <p><strong>Total Page Load Time:</strong> <span id="total-load-time"></span> ms</p>
+    </div>
 
-  // Calculate various times
-  const navigationStart = performanceData.navigationStart;
-  const domContentLoadedTime = performanceData.domContentLoadedEventEnd - navigationStart;
-  const pageLoadTime = performanceData.loadEventEnd - navigationStart;
-  const totalLoadTime = pageLoadTime;
+    <script>
+        window.onload = function () {
+            // Get performance data using the Performance API
+            const performanceData = window.performance.timing;
 
-  // Display the results on the page
-  document.getElementById('nav-start').textContent = navigationStart;
-  document.getElementById('dom-content-loaded').textContent = domContentLoadedTime + ' ms';
-  document.getElementById('page-load').textContent = pageLoadTime + ' ms';
-  document.getElementById('total-load-time').textContent = totalLoadTime + ' ms';
-};
-</script>
+            // Calculate various times
+            const navigationStart = performanceData.navigationStart;
+            const domContentLoadedTime = performanceData.domContentLoadedEventEnd - navigationStart;
+            const pageLoadTime = performanceData.loadEventEnd - navigationStart;
+            const totalLoadTime = pageLoadTime;
 
-
-
-
+            // Display the results on the page
+            document.getElementById('dom-content-loaded').textContent = domContentLoadedTime + ' ms';
+            document.getElementById('page-load').textContent = pageLoadTime + ' ms';
+            document.getElementById('total-load-time').textContent = totalLoadTime + ' ms';
+        };
+    </script>
 
 </body>
 </html>
