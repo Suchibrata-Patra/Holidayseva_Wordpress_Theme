@@ -10,5 +10,6 @@ get_header();
 </head>
 <body>
     <?php echo the_title(); ?>
+    <?php the_content(); ?>
 </body>
 </html>
