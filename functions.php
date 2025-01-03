@@ -8,10 +8,6 @@
 ?>
 <style>
     .current_page_parent a, .current-menu-item a{
-        border-bottom:1px solid red;
-        color:grey;
-        padding:10px;
-
+        /* Place Custom Styling For Selected Items on Selected Item of Navbar */
     }
-
 </style>
