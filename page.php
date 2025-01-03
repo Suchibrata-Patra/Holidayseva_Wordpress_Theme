@@ -1,7 +1,6 @@
 <?php 
 get_header();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +9,6 @@ get_header();
     <title><?php wp_title(); ?></title>
 </head>
 <body>
-    <?php 
-    if ( have_posts() ) :
-        while ( have_posts() ) : the_post();
-            echo the_title(); // Or just echo get_the_title()
-        endwhile;
-    endif;
-    ?>
-    fdfj
+    <?php echo the_title(); ?>
 </body>
 </html>
-
-<?php 
-get_footer();
-?>
