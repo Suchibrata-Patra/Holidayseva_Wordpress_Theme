@@ -13,7 +13,6 @@ get_header();
     <div>
         <?php the_content(); ?>
         <?php 
-        the_post_thumbnail();
         the_post_thumbnail(); // Without parameter ->; Thumbnail 
         the_post_thumbnail( 'thumbnail'); // Thumbnail (default 150px x 150px max) 
         the_post_thumbnail('medium'); // Medium resolution (default 300px x 300px max) 
