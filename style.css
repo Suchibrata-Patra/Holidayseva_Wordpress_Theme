@@ -10,3 +10,36 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: holidayseva
 Tags: travel, tourism, responsive, dynamic, clean, modern
 */
+
+:root{
+    /* Primary Colors */
+    --primary_colour :rgb(255, 0, 0);
+    --secondary_color:rgb(255, 106, 106);
+    --accent_color: rgb(8, 214, 8);
+
+
+    /* Theme Background and Foregroud Colours*/
+    --holidayseva_background_light:rgb(249, 249, 249);
+    --holidayseva_background_dark:rgb(191, 191, 191);
+
+    /* Text Colours*/
+    --text_black: #000000;    /* Dark gray text */
+    --text-secondary: #777777;  /* Lighter gray text */
+
+    --holidayseva_white: rgb(255,255,255);
+    --holidayseva_red : rgb(255,0,0);
+    --button_primary:black;
+    --button_hover:grey;
+}
+
+*{
+    background-color: var(--holidayseva_background_dark);
+}
+
+.hero_section_home_page{
+    background-color: var(--holidayseva_white);
+    color: var(--text_black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
