@@ -32,7 +32,7 @@ get_header();
     </div>
 
 
-    <!-- The Following Portion is Completely for Page Speed Analytics -->
+    <!-- The Following Portion is Completely for Page Speed -->
     <br><br>
     <div id="stats">
         <p><strong>Page Load time</strong> <span id="dom-content-loaded"></span></p>
