@@ -23,27 +23,36 @@ function custom_admin_menu() {
         2                         // Position of the menu item (optional)
     );
 
-    // Example of using a custom icon (uncomment to use this):
-    // add_menu_page(
-    //     'Custom Dashboard',       // Page title
-    //     'Holiday Seva',           // Menu title (the text shown in the sidebar)
-    //     'manage_options',         // Required capability
-    //     'custom-dashboard',       // Menu slug (URL part)
-    //     'custom_dashboard_page',  // Callback function for the page content
-    //     get_template_directory_uri() . '/images/custom-icon.png', // Custom icon URL
-    //     2                         // Position of the menu item (optional)
-    // );
+    // Add a submenu item under the 'Holiday Seva' menu
+    add_submenu_page(
+        'custom-dashboard',       // Parent menu slug (the menu where this will appear)
+        'Submenu Page Title',     // Submenu page title (appears in the browser title)
+        'Submenu Item',           // Submenu item text (the text shown in the sidebar)
+        'manage_options',         // Required capability
+        'custom-submenu',         // Submenu slug (URL part)
+        'custom_submenu_page'     // Callback function for the submenu content
+    );
 }
 
 add_action('admin_menu', 'custom_admin_menu'); // Hook to register the custom admin menu
 
-// Callback function for the custom admin page content
+// Callback function for the custom admin page content (for the parent menu)
 function custom_dashboard_page() {
     ?>
     <div class="wrap">
         <h1>Welcome to the Custom Dashboard</h1>
-        <p>Here is where you can manage your custom settings.</p>
-        <img src="https://media.tenor.com/3IYpyDhud_YAAAAM/cat-dancing-gif-dancing-cat.gif" alt="">
+        <p>Here is where you can manage your custom settings for the Holiday Seva menu.</p>
+    </div>
+    <?php
+}
+
+// Callback function for the custom submenu content
+function custom_submenu_page() {
+    ?>
+    <div class="wrap">
+        <h1>Welcome to the Submenu Page</h1>
+        <p>This is the content for the submenu under the "Holiday Seva" menu.</p>
+        <img src="" alt="">
     </div>
     <?php
 }
