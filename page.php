@@ -9,6 +9,6 @@ get_header();
     <title><?php the_title(); ?></title>
 </head>
 <body>
-    
+    <?php echo the_title(); ?>
 </body>
 </html>
