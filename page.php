@@ -17,7 +17,7 @@ get_header();
 <?php
 	$imagepath = wp_get_attachment_image_src(get_post_thumbnail_id(),'large');
     ?>
-	<img src="<?php echo $imagepath[0]; ?>" width="500">
+	<img src="<?php echo $imagepath[0]; ?>" width="200">
     <div>
         <?php the_content(); ?>
 
