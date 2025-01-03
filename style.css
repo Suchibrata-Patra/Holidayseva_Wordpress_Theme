@@ -55,4 +55,7 @@ Tags: travel, tourism, responsive, dynamic, clean, modern
 .nav li{
     list-style: none;
     margin:20px;
+    background-color: none;
+    text-decoration: none;
+    color: var(--primary_colour);
 }
