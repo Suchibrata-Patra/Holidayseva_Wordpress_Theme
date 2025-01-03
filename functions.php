@@ -6,3 +6,11 @@
     add_theme_support('custom-header');
     
 ?>
+<style>
+    .current_page_parent a, .current-menu-item a{
+        border-bottom:1px solid red;
+        color:grey;
+        padding:10px;
+    }
+
+</style>
