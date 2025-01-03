@@ -1,5 +1,6 @@
-<?php echo the_title(); ?>
-
+<?php 
+get_header();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
