@@ -20,7 +20,7 @@ function custom_admin_menu() {
         'custom-dashboard',       // Menu slug (URL part)
         'custom_dashboard_page',  // Callback function for the page content
         'dashicons-palmtree',     // Icon (using Dashicon)
-        5                         // Position of the menu item (optional)
+        2                         // Position of the menu item (optional)
     );
 
     // Add a submenu item under the 'Holiday Seva' menu
