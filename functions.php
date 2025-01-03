@@ -16,12 +16,12 @@ function custom_admin_menu() {
     // Add a top-level menu page
     add_menu_page(
         'Custom Dashboard',       // Page title
-        'Custom Menu',            // Menu title (the text shown in the sidebar)
+        'HolidaySeva',            // Menu title (the text shown in the sidebar)
         'manage_options',         // Required capability (who can see this menu)
         'custom-dashboard',       // Menu slug (URL part)
         'custom_dashboard_page',  // Callback function for the page content
         'dashicons-admin-site',   // Icon (use Dashicons or custom)
-        6                         // Position of the menu item (optional)
+        2                        // Position of the menu item (optional)
     );
 }
 
