@@ -16,7 +16,7 @@ get_header();
 
     <br><br>
 
-    <div id="stats" style='font-size:10px !important;'>
+    <div id="stats">
         <p><strong>Page Load time</strong> <span id="dom-content-loaded"></span></p>
     </div>
 
