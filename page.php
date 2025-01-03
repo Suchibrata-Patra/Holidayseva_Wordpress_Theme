@@ -23,24 +23,12 @@ get_header();
 
     <script>
        window.onload = function () {
-    // Get performance data using the Performance API
     const performanceData = window.performance.timing;
-
-    // Calculate various times in milliseconds
     const navigationStart = performanceData.navigationStart;
     const domContentLoadedTime = performanceData.domContentLoadedEventEnd - navigationStart;
-    const pageLoadTime = performanceData.loadEventEnd - navigationStart;
-    const totalLoadTime = pageLoadTime;
 
-    // Convert times to seconds (divide by 1000)
-    const domContentLoadedTimeInSec = (domContentLoadedTime / 1000).toFixed(3); // Show up to 3 decimal places
-    const pageLoadTimeInSec = (pageLoadTime / 1000).toFixed(3); // Show up to 3 decimal places
-    const totalLoadTimeInSec = (totalLoadTime / 1000).toFixed(3); // Show up to 3 decimal places
-
-    // Display the results on the page
+    const domContentLoadedTimeInSec = (domContentLoadedTime / 1000).toFixed(3);
     document.getElementById('dom-content-loaded').textContent = domContentLoadedTimeInSec + ' seconds';
-    document.getElementById('page-load').textContent = pageLoadTimeInSec + ' seconds';
-    document.getElementById('total-load-time').textContent = totalLoadTimeInSec + ' seconds';
 };
 
     </script>
