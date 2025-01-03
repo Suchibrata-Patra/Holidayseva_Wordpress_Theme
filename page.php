@@ -13,6 +13,11 @@ get_header();
         <div style="display:flex;"><?php 
         the_post_thumbnail(array(100, 100)); // Other resolutions (height, width)
         ?>
+
+<?php
+	$imagepath = wp_get_attachment_image_src(get_post_thumbnail_id(),'large');
+    ?>
+	<img src="<?php echo $imagepath[0]; ?>" width="500">
     <div>
         <?php the_content(); ?>
 
