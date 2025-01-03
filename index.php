@@ -2,7 +2,7 @@
     echo get_template_directory_uri();
     echo '<br>';
     bloginfo('template_directory');
-    get_headers();
+    get_header();
 ?>
 <body>
     <div class="hero_section_home_page">
