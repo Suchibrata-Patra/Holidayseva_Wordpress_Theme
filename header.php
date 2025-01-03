@@ -10,7 +10,7 @@
 <?php
     $logo_image = get_header_image();
 ?>
-<img src="<?php echo $logo_image; ?>" alt="">
+<img src="<?php echo $logo_image; ?>" alt="" width="200">
 <?php wp_nav_menu(array('theme_location'=>'primary_menu',
     'menu_class'=>'nav'
     )); ?>
