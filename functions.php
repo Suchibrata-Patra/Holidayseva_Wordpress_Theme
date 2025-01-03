@@ -19,7 +19,7 @@ function custom_admin_menu() {
         'manage_options',         // Required capability (who can see this menu)
         'custom-dashboard',       // Menu slug (URL part)
         'custom_dashboard_page',  // Callback function for the page content
-        'dashicons-calendar',     // Icon (using Dashicon)
+        'dashicons-palmtree',     // Icon (using Dashicon)
         2                         // Position of the menu item (optional)
     );
 
