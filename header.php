@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="<?php  echo get_template_directory_uri(); ?>/style.css">
     <title>Holidayseva</title>
 </head>
+
+<?php
+    $logo_image = get_header_image();
+?>
+<img src="<?php echo $logo_image; ?>" alt="">
 <?php wp_nav_menu(array('theme_location'=>'primary_menu',
     'menu_class'=>'nav'
     )); ?>
