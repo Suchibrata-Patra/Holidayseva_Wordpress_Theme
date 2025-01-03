@@ -48,6 +48,7 @@ Tags: travel, tourism, responsive, dynamic, clean, modern
     display: flex;
     background-color: var(--holidayseva_background_light);
     text-decoration: none;
+    color: var(--primary_colour);
 
 }
 
