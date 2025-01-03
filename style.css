@@ -44,6 +44,6 @@ Tags: travel, tourism, responsive, dynamic, clean, modern
     justify-content: center;
 }
 
-nav{
+.nav{
     display: flex;
 }
