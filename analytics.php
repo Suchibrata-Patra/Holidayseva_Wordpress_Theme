@@ -1,5 +1,25 @@
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<h1>Page Load Statistics</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Load Stats with Graph</title>
+  <!-- Include Chart.js library from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+    #chart-container {
+      width: 80%;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Page Load Statistics</h1>
   <div id="chart-container">
     <canvas id="loadChart"></canvas>
   </div>
@@ -68,3 +88,5 @@
       });
     };
   </script>
+</body>
+</html>
