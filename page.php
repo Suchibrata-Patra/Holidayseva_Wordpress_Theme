@@ -10,8 +10,5 @@ get_header();
 </head>
 <body>
     <?php echo the_title(); ?>
-    <?php echo the_title(); ?>
-    <?php echo the_title(); ?>
-    <?php echo the_title(); ?>
 </body>
 </html>
