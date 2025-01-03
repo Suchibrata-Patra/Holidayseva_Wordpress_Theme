@@ -7,10 +7,11 @@
     
 ?>
 <style>
-    .current_page_parent a, .current-menu-item a{
+    .current_page_parent a, .current-menu-item a li{
         border-bottom:1px solid red;
         color:grey;
         padding:10px;
+
     }
 
 </style>
