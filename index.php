@@ -1,4 +1,7 @@
-<?php echo get_template_directory_uri()  ?>
+<?php 
+    echo get_template_directory_uri();
+    bloginfo('template_directory');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
