@@ -9,8 +9,8 @@
 <style>
     .current_page_parent a, .current-menu-item a li{
         border-bottom:1px solid red;
-        color:grey !important;
         padding:10px;
+        backgrounf-color:pink;
 
     }
 
