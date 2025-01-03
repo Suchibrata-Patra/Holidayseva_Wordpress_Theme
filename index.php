@@ -1,3 +1,4 @@
+<?php echo get_template_directory_uri()  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    -
+    
 </body>
 </html>
