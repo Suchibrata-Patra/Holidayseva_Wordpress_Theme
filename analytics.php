@@ -2,7 +2,6 @@
 
 <div id="stats">
     <h2>Page Load Statistics</h2>
-<p><strong>Navigation Start:</strong> <span id="nav-start"></span></p>
 <p><strong>DOM Content Loaded (DOMContentLoaded):</strong> <span id="dom-content-loaded"></span></p>
 <p><strong>Page Load (load event):</strong> <span id="page-load"></span></p>
 <p><strong>Total Page Load Time:</strong> <span id="total-load-time"></span> ms</p>
