@@ -1,1 +1,1 @@
-ss
+<?php echo the_title(); ?>
