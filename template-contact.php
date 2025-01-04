@@ -3,6 +3,7 @@
 ?>
 <?php get_header();?>
 <?php
+   the_post();
 	while(have_posts()){
 		the_post();
 				$imagepath = wp_get_attachment_image_src(get_post_thumbnail_id(),'large');
