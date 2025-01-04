@@ -11,3 +11,6 @@
     $logo_image = get_header_image();
 ?>
 <a href="<?php echo site_url();?>"> <img src="<?php echo $logo_image; ?>" alt="" width="50"></a>
+<?php wp_nav_menu(array('theme_location'=>'primary_menu',
+    'menu_class'=>'nav'
+    )); ?>
