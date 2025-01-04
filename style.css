@@ -50,7 +50,6 @@ Tags: travel, tourism, responsive, dynamic, clean, modern
     background-color: var(--holidayseva_background_light); /* Background color from CSS variable */
     padding: 10px 20px;                    /* Add some padding for spacing */
     justify-content: center;               /* Center align the menu items */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a more polished look */
 }
 
 /* Navigation List Styling */
