@@ -1,1 +1,1 @@
-<?php dynamic_sidebar('sidebar'); ?>
+Lorem
