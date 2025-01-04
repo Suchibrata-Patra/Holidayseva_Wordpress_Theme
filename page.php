@@ -44,4 +44,3 @@ get_header();
 </html>
 page.php
 
-<?php dynamic_sidebar('sidebar'); ?>
