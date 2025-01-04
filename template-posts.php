@@ -1,5 +1,5 @@
 <?php
-//Template Name: Contacts
+//Template Name: Blog Post
 ?>
 <?php get_header();?>
 <?php
