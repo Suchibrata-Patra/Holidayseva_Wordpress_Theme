@@ -1,7 +1,7 @@
 <?php 
-    echo get_template_directory_uri();
+    // echo get_template_directory_uri();
     echo '<br>';
-    bloginfo('template_directory');
+    // bloginfo('template_directory');
     get_header();
 ?>
 <body>
