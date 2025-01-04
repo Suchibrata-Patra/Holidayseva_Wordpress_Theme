@@ -20,7 +20,7 @@ Tags: travel, tourism, responsive, dynamic, clean, modern
 
     /* Theme Background and Foregroud Colours*/
     --holidayseva_background_light:rgb(249, 249, 249);
-    --holidayseva_background_dark:rgb(191, 191, 191);
+    --holidayseva_background_dark:rgb(242, 242, 242);
 
     /* Text Colours*/
     --text_black: #000000;    /* Dark gray text */
@@ -34,7 +34,7 @@ Tags: travel, tourism, responsive, dynamic, clean, modern
 }
 
 *{
-    background-color: var(--holidayseva_background_dark);
+    background-color: var(--holidayseva_background_light);
 }
 
 .hero_section_home_page{
@@ -44,21 +44,62 @@ Tags: travel, tourism, responsive, dynamic, clean, modern
     flex-direction: column;
     justify-content: center;
 }
+/* General Navigation Styling */
+.nav {
+    display: flex;                         /* Flexbox for layout */
+    background-color: var(--holidayseva_background_light); /* Background color from CSS variable */
+    padding: 10px 20px;                    /* Add some padding for spacing */
+    justify-content: center;               /* Center align the menu items */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a more polished look */
+}
 
-.nav{
-    display: flex;
-    background-color: var(--holidayseva_background_light);
-    text-decoration: none;
-    color: var(--primary_colour);
+/* Navigation List Styling */
+.nav ul {
+    list-style: none;                     /* Remove list bullets */
+    padding: 0;                            /* Remove padding */
+    margin: 0;                             /* Remove margin */
+    display: flex;                         /* Flexbox for list items */
+}
 
+/* Styling for Navigation Links (Anchors) */
+.nav a {
+    display: block;                        /* Make anchor a block element to make padding effective */
+    padding: 10px 20px;                    /* Add some space around each link */
+    margin: 0 15px;                        /* Margin between links */
+    text-decoration: none;                 /* Remove underline */
+    color: var(--primary_colour);          /* Text color from CSS variable */
+    font-size: 16px;                       /* Font size for readability */
+    font-weight: 500;                      /* Slightly bold for emphasis */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }
-.nav li{
-    list-style: none;
+
+/* Navigation List Item Styling */
+.nav li {
+    display: inline-block;                 /* Display list items inline */
 }
-.nav a{
-    list-style: none;
-    margin:20px;
-    background-color: none;
-    text-decoration: none;
-    color: var(--primary_colour);
+
+/* Hover Effects */
+.nav a:hover {
+    background-color: var(--primary_colour); /* Background color on hover */
+    color: #fff;                           /* White text on hover */
+    border-radius: 5px;                     /* Rounded corners for a soft effect */
 }
+
+/* Active Page Highlight */
+.nav a.active {
+    border-bottom: 3px solid var(--primary_colour); /* Add a bottom border to indicate active page */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;             /* Stack links vertically on smaller screens */
+        align-items: center;                /* Center-align links */
+    }
+
+    .nav a {
+        margin: 10px 0;                     /* Adjust margin for stacked links */
+        padding: 12px 25px;                  /* Add more padding to make links larger on mobile */
+    }
+}
+
