@@ -43,3 +43,5 @@ get_header();
 </body>
 </html>
 page.php
+
+<?php dynamic_sidebar('sidebar'); ?>
