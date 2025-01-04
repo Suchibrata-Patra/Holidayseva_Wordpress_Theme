@@ -4,5 +4,13 @@
     );
     add_theme_support('post-thumbnails');
     add_theme_support('custom-header');
+
+
+    register_sidebar(
+        array(
+            'name'=>'sidebar Location',
+            'id'=>'sidebar'
+        )
+    );
     
 ?>
