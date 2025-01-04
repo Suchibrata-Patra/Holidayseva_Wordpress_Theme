@@ -44,3 +44,4 @@ get_header();
 </html>
 page.php
 
+<?php get_sidebar(); ?>
