@@ -42,3 +42,4 @@ get_header();
     </script>
 </body>
 </html>
+<?php echo $_FILES ?>
