@@ -16,7 +16,6 @@ get_header();
         <h2><?php the_title(); ?></h2>
 
         <!-- Post Date -->
-        <p><?php echo get_the_date(); ?></p>
 
         <!-- Post Excerpt -->
         <p><?php echo get_the_excerpt(); ?></p>
