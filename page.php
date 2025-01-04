@@ -42,6 +42,3 @@ get_header();
     </script>
 </body>
 </html>
-
-
-LOrem
