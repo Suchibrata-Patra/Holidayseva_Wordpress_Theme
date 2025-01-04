@@ -1,5 +1,5 @@
 <?php
-//Template Name: Contact
+//Template Name: Contacts
 ?>
 <?php get_header();?>
 <?php
@@ -17,3 +17,4 @@
 <?php
 } 
 ?>
+
