@@ -7,6 +7,8 @@
 ?>
 <body>
    This page Comes from index.php
+   
+   <?php the_title(); ?>
    <?php the_content(); ?>
 </body>
 </html>
