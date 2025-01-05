@@ -4,16 +4,9 @@
 <?php get_header(); ?>
 
 <?php
-  // Custom query to fetch multiple posts
-  $args = array(
-    'posts_per_page' => -1,  // Show all posts
-  );
-  $query = new WP_Query($args);
-
-  // The loop to display posts
-  if ($query->have_posts()) :
-    while ($query->have_posts()) :
-      $query->the_post();
+  // Default WordPress loop
+  if (have_posts()) :
+    while (have_posts()) : the_post();
       // Get the post's featured image URL
       $imagepath = wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium');
       ?>
@@ -31,10 +24,8 @@
         <!-- Display the post's excerpt -->
         <p class="post-excerpt"><?php echo get_the_excerpt(); ?></p>
       </div>
-    <?php endwhile; ?>
-  <?php endif; ?>
-  
-  <!-- Reset post data after custom query -->
-  <?php wp_reset_postdata(); ?>
+    <?php endwhile;
+  endif;
+?>
 
 <?php get_footer(); ?>
