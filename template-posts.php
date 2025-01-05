@@ -4,9 +4,15 @@
 <?php get_header(); ?>
 
 <?php
-  // Default WordPress loop
-  if (have_posts()) :
-    while (have_posts()) : the_post();
+  // Custom query to fetch all posts
+  $args = array(
+    'posts_per_page' => -1,  // Show all posts
+  );
+  $query = new WP_Query($args);
+
+  // Start the loop
+  if ($query->have_posts()) :
+    while ($query->have_posts()) : $query->the_post();
       // Get the post's featured image URL
       $imagepath = wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium');
       ?>
@@ -26,6 +32,9 @@
       </div>
     <?php endwhile;
   endif;
+
+  // Reset the post data after custom query
+  wp_reset_postdata();
 ?>
 
 <?php get_footer(); ?>
