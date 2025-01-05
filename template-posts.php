@@ -16,6 +16,7 @@
       <?php endif; ?>
 
       <h2><?php the_title(); ?></h2>
+      <?php the_content(); ?>
 
       <!-- Display the post's publish date -->
       <p class="post-date"><?php echo get_the_date(); ?></p>
