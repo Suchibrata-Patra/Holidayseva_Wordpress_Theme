@@ -16,7 +16,7 @@
       // Get the post's featured image URL
       $imagepath = wp_get_attachment_image_src(get_post_thumbnail_id(), 'medium');
       ?>
-      <div class="post" style="display:flex;">
+      <div class="post" style="display:flex;flex-direction:column;">
         <?php if ($imagepath): ?>
           <img src="<?php echo esc_url($imagepath[0]); ?>" alt="<?php the_title(); ?>" width="50">
         <?php endif; ?>
