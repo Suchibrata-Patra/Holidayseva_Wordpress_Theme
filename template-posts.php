@@ -2,7 +2,6 @@
 //Template Name: Blog Post
 ?>
 <?php get_header(); ?>
-<?php the_post(); ?>
 
 <?php
   while (have_posts()) {
