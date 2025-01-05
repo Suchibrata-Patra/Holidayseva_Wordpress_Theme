@@ -7,7 +7,6 @@
 ?>
 <body>
    This page Comes from index.php
-   
   <strong>
   <?php the_title(); ?>
   </strong>

@@ -9,6 +9,7 @@
     // Get the post's featured image URL
     $imagepath = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
     ?>
+    This Page Should Show all Posts in this Site.
     <div class="post">
       <!-- Check if the post has a featured image -->
       <?php if ($imagepath): ?>
