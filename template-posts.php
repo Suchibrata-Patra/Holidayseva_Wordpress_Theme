@@ -6,7 +6,7 @@
 <?php
   // Custom query to fetch multiple posts
   $args = array(
-    'posts_per_page' => -1,  // Show all posts
+    'posts_per_page' => 2,  // Show all posts
   );
   $query = new WP_Query($args);
 
