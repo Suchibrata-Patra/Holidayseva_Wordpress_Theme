@@ -350,30 +350,6 @@
   </aside>
   
   <div class="new-overlay"></div>
-  
-  <script>
-    const newHamburger = document.querySelector('.new-hamburger');
-    const newSidebar = document.querySelector('.new-sidebar');
-    const newCloseBtn = document.querySelector('.new-sidebar .new-close-btn');
-    const newOverlay = document.querySelector('.new-overlay');
-    
-    // Open Sidebar
-    newHamburger.addEventListener('click', () => {
-        newSidebar.style.left = '0';
-        newOverlay.style.display = 'block';
-    });
-    
-    // Close Sidebar
-    newCloseBtn.addEventListener('click', () => {
-        newSidebar.style.left = '-300px';
-        newOverlay.style.display = 'none';
-    });
-    
-    newOverlay.addEventListener('click', () => {
-        newSidebar.style.left = '-300px';
-        newOverlay.style.display = 'none';
-    });
-  </script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
     * {
@@ -748,6 +724,27 @@
         alert('Speech Recognition API is not supported in your browser.');
     }
 </script>
-<?php wp_nav_menu(array('theme_location'=>'primary_menu',
-    'menu_class'=>'nav'
-    )); ?>
+  
+  <script>
+    const newHamburger = document.querySelector('.new-hamburger');
+    const newSidebar = document.querySelector('.new-sidebar');
+    const newCloseBtn = document.querySelector('.new-sidebar .new-close-btn');
+    const newOverlay = document.querySelector('.new-overlay');
+    
+    // Open Sidebar
+    newHamburger.addEventListener('click', () => {
+        newSidebar.style.left = '0';
+        newOverlay.style.display = 'block';
+    });
+    
+    // Close Sidebar
+    newCloseBtn.addEventListener('click', () => {
+        newSidebar.style.left = '-300px';
+        newOverlay.style.display = 'none';
+    });
+    
+    newOverlay.addEventListener('click', () => {
+        newSidebar.style.left = '-300px';
+        newOverlay.style.display = 'none';
+    });
+  </script>
