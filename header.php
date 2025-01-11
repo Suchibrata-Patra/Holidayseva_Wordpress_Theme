@@ -338,7 +338,7 @@
   <aside class="new-sidebar">
     <div class="new-close-btn">&times;</div>
     <ul>
-        <div class="new-logo" style="margin-left:5% !important;">
+        <div class="new-logo" style="margin-left:0% !important;">
             <img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/logo.png" alt="Logo" loading="lazy">
         </div>
         <li><a href="https://www.gangasagar-tourism.com/">Home</a></li>
