@@ -277,7 +277,7 @@
         <!-- Logo and Social Icons for Mobile -->
         <div class="new-logo-container">
             <div class="new-logo" style="text-decoration: none;">
-                <!-- <a href="/"><img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/logo.png" alt="Logo" loading="lazy"></a> -->
+                <a href="/"><img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/logo.png" alt="Logo" loading="lazy"></a>
                 
             </div>
             
