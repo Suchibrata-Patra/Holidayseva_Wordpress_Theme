@@ -11,9 +11,9 @@ get_header();
     </title>
 </head>
 <body>
-    <h1>
+    <!-- <h1>
         <?php the_title(); ?>
-    </h1>
+    </h1> -->
     <div style="display:flex;">
         <?php 
         the_post_thumbnail(array(100, 100)); // Other resolutions (height, width)
