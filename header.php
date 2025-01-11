@@ -112,7 +112,7 @@
     .new-sidebar {
         position: fixed;
         top: 0;
-        left: -300px;
+        left: -3000px;
         width: 300px;
         height: 100%;
         background-color: #ffffff;
