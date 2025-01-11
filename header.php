@@ -744,7 +744,7 @@
     });
     
     newOverlay.addEventListener('click', () => {
-        newSidebar.style.left = '-300px';
+        newSidebar.style.left = '-900px';
         newOverlay.style.display = 'none';
     });
   </script>
