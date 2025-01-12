@@ -69,7 +69,7 @@
     <div class="new-close-btn">&times;</div>
     <ul>
         <div class="new-logo" style="margin-left:14% !important;">
-            <img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/logo.png" alt="Logo" loading="lazy">
+            <img src="<?php echo $logo_image; ?>" alt="Logo" loading="lazy">
         </div>
         <li><a href="https://www.gangasagar-tourism.com/">Home</a></li>
         <li><a href="https://www.gangasagar-tourism.com/about/">About</a></li>
@@ -111,8 +111,10 @@
 
             <!-- Powered By Section -->
             <p style="margin: 0; font-size: 14px; font-weight: 400; color: rgb(120, 120, 120);">Powered By</p>
-            <img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/logo.png" alt="Logo"
+            <img src="<?php echo $logo_image; ?>" alt="Logo"
                 style="width: auto; height: 40px; margin: 8px 0 16px 0;">
+            <!-- <img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/logo.png" alt="Logo"
+                style="width: auto; height: 40px; margin: 8px 0 16px 0;"> -->
 
             <!-- Mic Button -->
             <button
