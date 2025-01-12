@@ -3,6 +3,7 @@
     $logo_image = get_header_image();
 ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/header.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/conact_sidebar.css">
 <header class="new-wrapper">
     <div class="new-header">
         <!-- Logo and Social Icons for Mobile -->
