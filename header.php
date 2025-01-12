@@ -8,8 +8,7 @@
 <?php
     $logo_image = get_header_image();
 ?>
-<link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- Stylesheet Integration -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/header.css">
