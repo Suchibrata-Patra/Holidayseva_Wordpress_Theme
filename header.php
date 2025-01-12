@@ -318,4 +318,4 @@
         newOverlay.style.display = 'none';
     });
 </script>
-<?php require('get_template_directory_uri()/contact_sidebar.php'); ?>
+<?php require('contact_sidebar.php'); ?>
