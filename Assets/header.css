@@ -24,7 +24,7 @@
         margin-right: -25px;
 
     }
-    #microphone_button{
+    #modal_microphone_button{
         background-color: rgb(0, 0, 0);
         color: white;
         border: none; width: 80px;
@@ -333,6 +333,15 @@
         align-items: center;
         margin-bottom: 0px !important;
         margin-left: 15%;
+        background-color: rgb(234, 234, 234, 0);
+        cursor: pointer;
+        border-radius: 50px;
+        height: 40px; width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border:none !important;
     }
 
     #search-icon svg {

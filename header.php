@@ -85,8 +85,7 @@
             style="width: 80%;height: auto;color: black;">
 
         <!-- Mic Button -->
-        <button id="micButton"
-            style="background-color: rgb(234, 234, 234, 0); cursor: pointer; border-radius: 50px; height: 40px; width: 40px; display: flex; align-items: center; justify-content: center; padding: 10px;border:none !important;">
+        <button id="micButton">
             <span class="material-icons" id="micIcon" style="color:#758694; font-size: 24px;">mic</span>
         </button>
 
@@ -101,7 +100,7 @@
                 style="width: auto; height: 40px; margin: 8px 0 16px 0;"> -->
 
             <!-- Mic Button -->
-            <button id="microphone_button"
+            <button id="modal_microphone_button"
                 onmouseover="this.style.boxShadow='0 10px 25px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.1)';"
                 onmouseout="this.style.boxShadow='0 6px 15px rgba(0, 0, 0, 0.2)'; this.style.transform='scale(1)';">
                 <span class="material-icons">mic</span>
