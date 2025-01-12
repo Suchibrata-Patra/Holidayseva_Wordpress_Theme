@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call" />
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/contact_sidebar.css">
 <header class="wrapper-modern">
     <div class="header-modern">
@@ -6,31 +6,22 @@
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     const whatsappLinkModern = document.getElementById("whatsapp-link-modern");
-
                     const currentPageURLModern = window.location.href;
-
                     const defaultTextModern = `Hello,
   I came across your website and explored this page: ${currentPageURLModern}.
   I'm interested in learning more about the tours you offer. Could you kindly share details about the itinerary, pricing, and any other relevant information?`;
                     const whatsappURLModern = `https://wa.me/8145302135/?text=${encodeURIComponent(defaultTextModern)}`;
-
                     whatsappLinkModern.href = whatsappURLModern;
                 });
             </script>
         </div>
-
-        
-
-
 <header class="wrapper-modern">
     <div class="header-modern">
         <div class="logo-container-modern">
             <script>
                 document.addEventListener("DOMContentLoaded", function () {
                     const whatsappLinkModern = document.getElementById("whatsapp-link-modern");
-
                     const currentPageURLModern = window.location.href;
-
                     const defaultTextModern = `Hello,
   I came across your website and explored this page: ${currentPageURLModern}.
   I'm interested in learning more about the tours you offer. Could you kindly share details about the itinerary, pricing, and any other relevant information?`;
@@ -40,7 +31,6 @@
                 });
             </script>
         </div>
-
         <!-- <div class="hamburger-modern">
             <span class="material-symbols-outlined" style="padding: 13px;background-color:#fcefd4;border-radius: 5px !important;">
                 call
