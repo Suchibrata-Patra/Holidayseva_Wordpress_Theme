@@ -3,6 +3,7 @@
     --primary_colour :rgb(255, 0, 0);
     --secondary_color:rgb(255, 106, 106);
     --accent_color: rgb(8, 214, 8);
+    --holidayseva_black:rgb(0,0,0);
 
 
     /* Theme Background and Foregroud Colours*/
@@ -11,7 +12,7 @@
 
     /* Text Colours*/
     --text_black: #000000;    /* Dark gray text */
-    --text-secondary: #777777;  /* Lighter gray text */
+    --text_secondary: #777777;  /* Lighter gray text */
 
     --holidayseva_white: rgb(40, 16, 16);
     --holidayseva_red : rgb(255,0,0);
