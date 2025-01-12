@@ -1,5 +1,5 @@
 .sidebar_contact_button {
-    background-color: #000000;
+    background-color: var(--holidayseva_black);
     /* WhatsApp green */
     color: white;
     font-size: 14px;
