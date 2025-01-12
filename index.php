@@ -5,7 +5,6 @@
     get_header();
     get_post();
 ?>
-<body>
    This page Comes from index.php
    <?php the_content(); ?>
 </body>
