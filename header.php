@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php wp_title(); ?></title>  
     <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri();?>/Assets/Images/favicon.svg">  
-<?php
+    <?php
+    $template_uri = get_template_directory_uri();
     $logo_image = get_header_image();
-?>
+    ?>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- Stylesheet Integration -->
-<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/header.css">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/conact_sidebar.css">
+ 
+<link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/header.css">
+<link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/conact_sidebar.css">
 <!-- For getting Access of centralised Colour Scheme -->
-<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/holidayseva_colors.css">
+<link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/holidayseva_colors.css">
 
 <!-- Main Header Content -->
 <header class="new-wrapper">
@@ -127,10 +130,14 @@
     </div>
 </center>
 <!-- Deferred Javascript To Load Javascript After the Rendering is Over -->
-<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/SearchbarTypingEffect.js" defer></script>
-<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/SearchPageRedirect.js" defer></script>
-<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/MicButtonModal.js" defer></script>
-<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/HeaderWhatsappButton.js" defer></script>
+<?php
+    // $template_uri = get_template_directory_uri();
+    // This Above Code iS fetched in above Portion
+?>
+<script src="<?php echo $template_uri; ?>/Assets/javascript/SearchbarTypingEffect.js" defer></script>
+<script src="<?php echo $template_uri; ?>/Assets/javascript/SearchPageRedirect.js" defer></script>
+<script src="<?php echo $template_uri; ?>/Assets/javascript/MicButtonModal.js" defer></script>
+<script src="<?php echo $template_uri; ?>/Assets/javascript/HeaderWhatsappButton.js" defer></script>
 <script>
     const newHamburger = document.querySelector('.new-hamburger');
     const newSidebar = document.querySelector('.new-sidebar');
