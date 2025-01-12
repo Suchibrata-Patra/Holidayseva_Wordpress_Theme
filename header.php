@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +14,6 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/conact_sidebar.css">
 <!-- For getting Access of centralised Colour Scheme -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/holidayseva_colors.css">
-
-
-
 <!-- Main Header Content -->
 <header class="new-wrapper">
     <div class="new-header">
@@ -171,71 +167,9 @@
 
     </div>
 </center>
-<script>
-    const placeholders = [
-        "'Gangasagar'",
-        "'Mayapur'",
-        "'Iskon'",
-        "'Puri'",
-        "'Kolkata'",
-        "'Vrindavan'",
-        "'Haridwar'",
-        "'Rishikesh'",
-        "'Ayodhya'",
-        "'Mathura'",
-        "'Dwaraka'",
-        "'Tirupati'",
-        "'Badrinath'",
-        "'Kedarnath'",
-        "'Varanasi'",
-        "'Ramnagar'",
-        "'Shimla'",
-        "'Nainital'",
-        "'Ujjain'",
-        "'Jammu'"
-    ];
 
 
-    let placeholderIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-
-    function typeEffect() {
-        const inputField = document.getElementById('searchInput');
-        const baseText = "Search for ";
-        const currentText = placeholders[placeholderIndex];
-
-        if (isDeleting) {
-            // Remove characters one by one from the name part
-            inputField.placeholder = baseText + currentText.substring(0, charIndex);
-            charIndex--;
-
-            if (charIndex < 0) {
-                isDeleting = false;
-                placeholderIndex = (placeholderIndex + 1) % placeholders.length; // Move to the next text
-                setTimeout(typeEffect, 500); // Pause before typing the next placeholder
-                return;
-            }
-        } else {
-            // Add characters one by one to the name part
-            inputField.placeholder = baseText + currentText.substring(0, charIndex);
-            charIndex++;
-
-            if (charIndex > currentText.length) {
-                isDeleting = true;
-                setTimeout(typeEffect, 1000); // Pause before deleting starts
-                return;
-            }
-        }
-
-        // Adjust typing/backspacing speed
-        const speed = isDeleting ? 80 : 100;
-        setTimeout(typeEffect, speed);
-    }
-
-    // Start the typing effect
-    typeEffect();
-</script>
+<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/search_bar_typing_effect.js" defer></script>
 
 
 <script>
