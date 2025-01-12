@@ -312,7 +312,7 @@
         width: 100%;
         max-width: 584px;
         border: 2px solid #e0e0e0;
-        border-radius: 50px;
+        border-radius: 10px;
         display: flex;
         padding: 0 8px 0 14px;
     }

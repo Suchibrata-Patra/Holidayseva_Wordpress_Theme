@@ -8,7 +8,10 @@
 <?php
     $logo_image = get_header_image();
 ?>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="preload" href="https://fonts.gstatic.com/s/materialicons/v100/flUhRq6tzZclQEJ-Vdgq.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+
 <!-- Stylesheet Integration -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/header.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/conact_sidebar.css">
@@ -105,8 +108,8 @@
                 <span class="material-icons">mic</span>
             </button>
             <!-- Google Icon -->
-            <img src="https://storage.googleapis.com/support-kms-prod/yQaqmZKczQG1vU5R8W3Lk5NROfCyU71FHdcm"
-                alt="Google Icon" style="width: 60px; height: auto; margin-top: 20px;" loading="lazy">
+            <!-- <img src="https://storage.googleapis.com/support-kms-prod/yQaqmZKczQG1vU5R8W3Lk5NROfCyU71FHdcm"
+                alt="Google Icon" style="width: 60px; height: auto; margin-top: 20px;" loading="lazy"> -->
         </div>
         <!-- Fade-in Animation -->
         <style>
