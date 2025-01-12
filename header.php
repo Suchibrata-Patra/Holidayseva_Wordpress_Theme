@@ -11,7 +11,13 @@
 ?>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!-- Stylesheet Integration -->
-<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/header.css">
+<!-- <link  rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/header.css"> -->
+<link rel="preload" href="<?php echo get_template_directory_uri(); ?>/Assets/header.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+<noscript>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/header.css">
+</noscript>
+
+
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/conact_sidebar.css">
 <!-- For getting Access of centralised Colour Scheme -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/holidayseva_colors.css">
