@@ -11,6 +11,7 @@
 
 
 <!-- Main Header Content -->
+<div style="display:flex;">
 <header class="new-wrapper">
     <div class="new-header">
         <!-- Logo and Social Icons for Mobile -->
@@ -75,6 +76,7 @@
     wp_nav_menu(array('theme_location'=>'primary_menu'));
 ?>
 </aside>
+<div class="new-overlay"></div>
     <div id="form-input">
         <div id="search-icon" style="color: #000000;">
             <span class="material-icons">search</span>
@@ -129,6 +131,7 @@
 
 
     </div>
+</div>
 
 
 
