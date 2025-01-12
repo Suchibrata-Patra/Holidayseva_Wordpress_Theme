@@ -74,6 +74,10 @@
         <li><a href="#">₹ INR</a></li>
         <li><a href="#">Sign in</a></li>
     </ul>
+    <?php wp_nav_menu(array('theme_location'=>'primary_menu',
+    'menu_class'=>'new-menu'
+    ));
+?>
 </aside>
 <div class="new-overlay"></div>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
