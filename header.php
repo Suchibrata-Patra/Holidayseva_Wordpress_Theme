@@ -9,7 +9,6 @@
     $logo_image = get_header_image();
 ?>
 <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="preload" href="https://fonts.gstatic.com/s/materialicons/v100/flUhRq6tzZclQEJ-Vdgq.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 
 <!-- Stylesheet Integration -->
