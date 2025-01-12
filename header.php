@@ -2,13 +2,16 @@
     'menu_class'=>'new-menu'
     ));
 ?>
+<?php
+    $logo_image = get_header_image();
+?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/header.css">
 <header class="new-wrapper">
     <div class="new-header">
         <!-- Logo and Social Icons for Mobile -->
         <div class="new-logo-container">
             <div class="new-logo" style="text-decoration: none;">
-                <a href="/"><img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/logo.png" alt="Logo"
+                <a href="/"><img src="<?php echo $logo_image; ?>" alt="Logo"
                         loading="lazy"></a>
             </div>
             <!-- Social Icons for Mobile -->
