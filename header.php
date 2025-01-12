@@ -101,8 +101,7 @@
                 style="width: auto; height: 40px; margin: 8px 0 16px 0;"> -->
 
             <!-- Mic Button -->
-            <button
-                style="background-color: rgb(0, 0, 0); color: white; border: none; width: 80px; height: 80px; font-size: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); transition: transform 0.2s ease, box-shadow 0.2s ease;"
+            <button id="microphone_button"
                 onmouseover="this.style.boxShadow='0 10px 25px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.1)';"
                 onmouseout="this.style.boxShadow='0 6px 15px rgba(0, 0, 0, 0.2)'; this.style.transform='scale(1)';">
                 <span class="material-icons">mic</span>
