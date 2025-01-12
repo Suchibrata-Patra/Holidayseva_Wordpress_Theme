@@ -1,5 +1,5 @@
 <?php wp_nav_menu(array('theme_location'=>'primary_menu',
-    'menu_class'=>'nav'
+    'menu_class'=>'new-wrapper'
     ));
 ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/header.css">
