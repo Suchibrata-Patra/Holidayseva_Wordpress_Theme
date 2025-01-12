@@ -30,10 +30,10 @@
             <div class="new-social-icons" style="margin-right: 15px;">
                 <a href="#" id="whatsapp-link"><img
                         src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/Whatsapp.png"
-                        alt="Whatsapp"></a>
+                        alt="Whatsapp" loading="lazy"></a>
                 <a href="tel:+918145302135"><img
                         src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/phone-call.png" alt="Call"
-                        style="border-radius: 50px;"></a>
+                        style="border-radius: 50px;" loading="lazy"></a>
             </div>
             
         </div>
@@ -104,7 +104,7 @@
 
             <!-- Powered By Section -->
             <p style="margin: 0; font-size: 14px; font-weight: 400; color: rgb(120, 120, 120);">Powered By</p>
-            <img src="<?php echo $logo_image; ?>" alt="Logo" style="width: auto; height: 40px; margin: 8px 0 16px 0;">
+            <img src="<?php echo $logo_image; ?>" alt="Logo" style="width: auto; height: 40px; margin: 8px 0 16px 0;" loading="lazy">
             <!-- <img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/logo.png" alt="Logo"
                 style="width: auto; height: 40px; margin: 8px 0 16px 0;"> -->
 
@@ -117,7 +117,7 @@
 
             <!-- Google Icon -->
             <img src="https://storage.googleapis.com/support-kms-prod/yQaqmZKczQG1vU5R8W3Lk5NROfCyU71FHdcm"
-                alt="Google Icon" style="width: 60px; height: auto; margin-top: 20px;">
+                alt="Google Icon" style="width: 60px; height: auto; margin-top: 20px;" loading="lazy">
         </div>
 
         <!-- Fade-in Animation -->
