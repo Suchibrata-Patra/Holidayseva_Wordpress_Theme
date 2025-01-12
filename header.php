@@ -29,12 +29,12 @@
             </div>
             <!-- Social Icons for Mobile -->
             <div class="new-social-icons" style="margin-right: 15px;">
-                <a href="#" id="whatsapp-link"><img
-                        src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/Whatsapp.png"
+                <a href="#" id="whatsapp-link"><img rel="preload"
+                        src="<?php echo $template_uri; ?>/Assets/Images/favicon.svg"
                         alt="Whatsapp" loading="lazy"></a>
-                <a href="tel:+918145302135"><img
-                        src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/phone-call.png" alt="Call"
-                        style="border-radius: 50px;" loading="lazy"></a>
+                <a href="tel:+918145302135"><img rel="preload"
+                        src="<?php echo $template_uri; ?>/Assets/Images/CallButton.png"
+                        alt="Call" style="border-radius: 50px;" loading="lazy"></a>
             </div>
         </div>
         <!-- Navigation Menu -->
@@ -158,5 +158,5 @@
         newOverlay.style.display = 'none';
     });
 </script>
-<?php require('contact_sidebar.php'); ?>
+<?php require('CallButttonSidebar.php'); ?>
 </head>
