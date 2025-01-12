@@ -75,7 +75,7 @@
         <li><a href="#">Sign in</a></li>
     </ul>
     <?php wp_nav_menu(array('theme_location'=>'primary_menu',
-    'menu_class'=>'new-menu'
+    'menu_class'=>'new-sidebar'
     ));
 ?>
 </aside>
