@@ -325,7 +325,7 @@
         align-items: center;
     }
 
-    #micButton{
+    #micButton {
         width: 33px;
         height: auto;
         display: flex;
@@ -333,15 +333,6 @@
         align-items: center;
         margin-bottom: 0px !important;
         margin-left: 15%;
-        background-color: rgb(234, 234, 234, 0);
-        cursor: pointer;
-        border-radius: 50px;
-        height: 40px; width: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        border:none !important;
     }
 
     #search-icon svg {
