@@ -15,13 +15,14 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/conact_sidebar.css">
 <!-- For getting Access of centralised Colour Scheme -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/holidayseva_colors.css">
+
 <!-- Main Header Content -->
 <header class="new-wrapper">
     <div class="new-header">
         <!-- Logo and Social Icons for Mobile -->
         <div class="new-logo-container">
             <div class="new-logo" style="text-decoration: none;">
-                <a href="/"><img src="<?php echo $logo_image; ?>" alt="Logo" loading="lazy"></a>
+                <a href="/"><img rel="preload" src="<?php echo $logo_image; ?>" alt="Logo" loading="lazy"></a>
             </div>
             <!-- Social Icons for Mobile -->
             <div class="new-social-icons" style="margin-right: 15px;">
