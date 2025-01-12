@@ -86,7 +86,7 @@
 
         <!-- Mic Button -->
         <button id="micButton"
-            background-color: rgb(234, 234, 234, 0); cursor: pointer; border-radius: 50px; height: 40px; width: 40px; display: flex; align-items: center; justify-content: center; padding: 10px;border:none !important;>
+            style="background-color: rgb(234, 234, 234, 0); cursor: pointer; border-radius: 50px; height: 40px; width: 40px; display: flex; align-items: center; justify-content: center; padding: 10px;border:none !important;">
             <span class="material-icons" id="micIcon" style="color:#758694; font-size: 24px;">mic</span>
         </button>
 
