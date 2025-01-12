@@ -46,10 +46,10 @@
                 <li><a href="https://www.gangasagar-tourism.com/about/">About</a></li>
                 <li><a href="https://www.gangasagar-tourism.com/contact/">Contact</a></li>
             </ul> -->
-            <?php wp_nav_menu(array('theme_location'=>'primary_menu',
+    <?php wp_nav_menu(array('theme_location'=>'primary_menu',
     'menu_class'=>'new-menu'
     ));
-?>
+    ?>
         </nav>
         <!-- Currency and Sign-In Buttons -->
         <div class="new-buttons">
@@ -68,7 +68,7 @@
 <!-- New Sidebar -->
 <aside class="new-sidebar">
     <div class="new-close-btn">&times;</div>
-    <ul>
+    <!-- <ul>
         <div class="new-logo" style="margin-left:14% !important;">
             <img src="<?php echo $logo_image; ?>" alt="Logo" loading="lazy">
         </div>
@@ -77,10 +77,8 @@
         <li><a href="https://www.gangasagar-tourism.com/contact/">Contact</a></li>
         <li><a href="#">₹ INR</a></li>
         <li><a href="#">Sign in</a></li>
-    </ul>
-    <?php wp_nav_menu(array('theme_location'=>'primary_menu',
-    'menu_class'=>'new-sidebar'
-    ));
+    </ul> -->
+    <?php wp_nav_menu(array('theme_location'=>'primary_menu'));
 ?>
 </aside>
 <div class="new-overlay"></div>
