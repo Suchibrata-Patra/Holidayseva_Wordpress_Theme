@@ -102,7 +102,7 @@
 
             <!-- Mic Button -->
             <button id="microphone_button"
-                onmouseover="this.style.boxShadow='0 10px 25px rgba(196, 62, 62, 0.3)'; this.style.transform='scale(1.1)';"
+                onmouseover="this.style.boxShadow='0 10px 25px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.1)';"
                 onmouseout="this.style.boxShadow='0 6px 15px rgba(0, 0, 0, 0.2)'; this.style.transform='scale(1)';">
                 <span class="material-icons">mic</span>
             </button>
