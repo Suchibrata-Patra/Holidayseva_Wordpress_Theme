@@ -1,107 +1,149 @@
-    .wrapper-modern {
-        width: 100%;
-        background-color: #fff;
-        display: flex;
-        justify-content: center;
-        padding: 0px;
-        position: relative;
-    }
+.sidebar_contact_button {
+    background-color: #000000;
+    /* WhatsApp green */
+    color: white;
+    font-size: 14px;
+    /* Smaller text for a compact look */
+    font-weight: 500;
+    /* Slightly bolder text for emphasis */
+    border: none;
+    padding: 8px 20px 9px 20px;
+    /* Smaller padding */
+    border-radius: 3px;
+    /* Slightly rounded corners for a more professional look */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    /* Reduced gap for a more compact design */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
 
-    .header-modern {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        /* width: %; */
-        position: relative;
-    }
+.whatsapp-icon {
+    width: 18px;
+    /* Smaller icon size */
+    height: 18px;
+}
 
-    .logo-modern img {
-        max-height: 50px;
-        z-index: 100;
-    }
+.wrapper-modern {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    position: relative;
+}
 
-    .social-icons-modern {
-        display: none;
-        gap: 10px;
-    }
+.header-modern {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: %; */
+    position: relative;
+}
 
-    .social-icons-modern a {
-        text-decoration: none;
-    }
+.hamburger-modern {
+    display: inline-block;
+    /* box-shadow: -4px 0px 10px 0px rgba(255, 186, 186, 0.6); Shadow on left and bottom */
+    border-radius: 10px;
+    /* Smooth edges for the div */
+    margin-right: -4px;
+}
 
-    .social-icons-modern img {
-        width: 25px;
-        height: 25px;
-    }
+.hamburger-modern:hover {
+    box-shadow: -6px 6px 12px 0px rgba(255, 190, 190, 0.8);
+    /* Stronger shadow on hover */
+}
 
-    .menu-modern {
-        display: flex;
-        gap: 20px;
-        padding-top: 3%;
-    }
+.logo-modern img {
+    max-height: 50px;
+    z-index: 100;
+}
 
-    .menu-modern ul {
-        list-style-type: none;
-        display: flex;
-        gap: 7px;
-    }
+.social-icons-modern {
+    display: none;
+    gap: 10px;
+}
 
-    .buttons-modern .btn-inr {
-        color: black;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 50px;
-    }
+.social-icons-modern a {
+    text-decoration: none;
+}
 
-    .btn-inr:hover {
-        background-color: rgb(225, 225, 225);
-    }
+.social-icons-modern img {
+    width: 25px;
+    height: 25px;
+}
 
-    .menu-modern a {
-        text-decoration: none;
-        color: #000000;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-weight: 400;
-        font-size: 1.2rem;
-        padding: 10px 20px;
-        border-radius: 50px;
-    }
+.menu-modern {
+    display: flex;
+    gap: 20px;
+    padding-top: 3%;
+}
 
-    .menu-modern a:hover {
-        background-color: rgb(235, 235, 235);
-        text-decoration: none;
-    }
+.menu-modern ul {
+    list-style-type: none;
+    display: flex;
+    gap: 7px;
+}
 
-    .buttons-modern .btn-modern {
-        background-color: #000000;
-        color: white;
-        padding: 8px 20px;
-        text-decoration: none;
-        border-radius: 25px;
-        font-weight: bold;
-        margin-left: 10px;
-    }
+.buttons-modern .btn-inr {
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
 
-    .buttons-modern .btn-modern:hover {
-        background-color: #111111;
-    }
+.btn-inr:hover {
+    background-color: rgb(225, 225, 225);
+}
 
-    .hamburger-modern {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-        gap: 5px;
-        position: fixed;
-        top:60vh;
-        right:0px;
-    }
+.menu-modern a {
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
 
-    .hamburger-modern span {
-        width: 50px;
-        height: 50px;        
-    }
+.menu-modern a:hover {
+    background-color: rgb(235, 235, 235);
+    text-decoration: none;
+}
 
-    .sidebar-modern {
+.buttons-modern .btn-modern {
+    background-color: #000000;
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.buttons-modern .btn-modern:hover {
+    background-color: #111111;
+}
+
+.hamburger-modern {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    position: fixed;
+    top: 60vh;
+    right: 0px;
+}
+
+.hamburger-modern span {
+    width: 50px;
+    height: 50px;
+}
+
+.sidebar-modern {
     position: fixed;
     top: 0px;
     right: -300px;
@@ -120,166 +162,172 @@
 
 .sidebar-modern .bottom-image {
     position: absolute;
-    bottom: 2px; /* Adjust spacing from the bottom edge */
+    bottom: 2px;
+    /* Adjust spacing from the bottom edge */
     left: 50%;
     transform: translateX(-50%);
-    width: 100%; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    /* Adjust size as needed */
+    height: auto;
+    /* Maintain aspect ratio */
     border-bottom-left-radius: 5px;
 }
 
 
-    .sidebar-modern ul {
-        list-style-type: none;
-        padding: 0;
+.sidebar-modern ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-modern ul li {
+    margin: 15px 0;
+}
+
+.sidebar-modern ul a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.sidebar-modern .close-btn-modern {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-end;
+    display: flex;
+}
+
+.overlay-modern {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255, 0);
+    display: none;
+    z-index: 999;
+}
+
+@media (max-width: 768px) {
+    .wrapper-modern {
+        background-color: rgba(252, 252, 252, 0.8);
     }
 
-    .sidebar-modern ul li {
-        margin: 15px 0;
+    .sidebar-modern {
+        border-right: 1px solid rgb(232, 232, 232);
     }
 
     .sidebar-modern ul a {
-        text-decoration: none;
-        color: rgb(0, 0, 0);
-        font-weight: bold;
-        font-size: 18px;
+        font-size: 20px;
+        color: black;
     }
 
-    .sidebar-modern .close-btn-modern {
-        font-size: 24px;
-        font-weight: bold;
-        cursor: pointer;
-        align-self: flex-end;
+    .menu-modern,
+    .buttons-modern {
+        display: none;
+    }
+
+    .hamburger-modern {
         display: flex;
     }
 
-    .overlay-modern {
-        position: fixed;
-        top: 0;
-        left: 0;
+    .social-icons-modern {
+        display: flex;
+        gap: 10px;
+    }
+
+    .logo-modern img {
+        max-height: 90px;
+        margin-left: -18%;
+    }
+
+    .logo-container-modern {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         width: 100%;
-        height: 100%;
-        background: rgb(255, 255, 255, 0);
+    }
+}
+
+@media (max-width: 1281px) {
+    .wrapper-modern {
+        background-color: white;
+    }
+
+    .sidebar-modern {
+        border-right: 1px solid rgb(232, 232, 232);
+    }
+
+    .sidebar-modern ul a {
+        font-size: 20px;
+        color: black;
+    }
+
+    .menu-modern,
+    .buttons-modern {
         display: none;
-        z-index: 999;
     }
 
-    @media (max-width: 768px) {
-        .wrapper-modern {
-            background-color: rgba(252, 252, 252, 0.8);
-        }
-
-        .sidebar-modern {
-            border-right: 1px solid rgb(232, 232, 232);
-        }
-
-        .sidebar-modern ul a {
-            font-size: 20px;
-            color: black;
-        }
-
-        .menu-modern, .buttons-modern {
-            display: none;
-        }
-
-        .hamburger-modern {
-            display: flex;
-        }
-
-        .social-icons-modern {
-            display: flex;
-            gap: 10px;
-        }
-
-        .logo-modern img {
-            max-height: 90px;
-            margin-left: -18%;
-        }
-
-        .logo-container-modern {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
+    .hamburger-modern {
+        display: flex;
     }
 
-    @media (max-width: 1281px) {
-        .wrapper-modern {
-            background-color: white;
-        }
-
-        .sidebar-modern {
-            border-right: 1px solid rgb(232, 232, 232);
-        }
-
-        .sidebar-modern ul a {
-            font-size: 20px;
-            color: black;
-        }
-
-        .menu-modern, .buttons-modern {
-            display: none;
-        }
-
-        .hamburger-modern {
-            display: flex;
-        }
-
-        .social-icons-modern {
-            display: flex;
-            gap: 10px;
-        }
-
-        .logo-modern img {
-            max-height: 30px;
-            margin-left: -18%;
-        }
-
-        .logo-container-modern {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
+    .social-icons-modern {
+        display: flex;
+        gap: 10px;
     }
 
-    @media (min-width: 769px) and (max-width: 1281px) {
-        .wrapper-modern {
-            background-color: white;
-        }
-
-        .sidebar-modern {
-            border-right: 1px solid rgb(232, 232, 232);
-        }
-
-        .sidebar-modern ul a {
-            font-size: 20px;
-            color: black;
-        }
-
-        .menu-modern, .buttons-modern {
-            display: none;
-        }
-
-        .hamburger-modern {
-            display: flex;
-        }
-
-        .social-icons-modern {
-            display: flex;
-            gap: 10px;
-        }
-
-        .logo-modern img {
-            max-height: 60px;
-            z-index: 100;
-        }
-
-        .logo-container-modern {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
+    .logo-modern img {
+        max-height: 30px;
+        margin-left: -18%;
     }
+
+    .logo-container-modern {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1281px) {
+    .wrapper-modern {
+        background-color: white;
+    }
+
+    .sidebar-modern {
+        border-right: 1px solid rgb(232, 232, 232);
+    }
+
+    .sidebar-modern ul a {
+        font-size: 20px;
+        color: black;
+    }
+
+    .menu-modern,
+    .buttons-modern {
+        display: none;
+    }
+
+    .hamburger-modern {
+        display: flex;
+    }
+
+    .social-icons-modern {
+        display: flex;
+        gap: 10px;
+    }
+
+    .logo-modern img {
+        max-height: 60px;
+        z-index: 100;
+    }
+
+    .logo-container-modern {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+}

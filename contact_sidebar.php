@@ -38,23 +38,8 @@
         </div> -->
         <div class="hamburger-modern">
             <!-- <span class="material-symbols-outlined" style="padding: 15px; background-color:#fcefd4; border-radius: 10px !important; color: #FF4545;">call</span> -->
-            <img src="<?php echo get_template_directory_uri();?>/Assets/Images/call_icon.svg" alt="call" style="padding: 15px; background-color:#fcefd4; border-radius: 10px !important; color: #FF4545;width:55px;height:auto;">
-        </div>
-        
-        <style>
-            .hamburger-modern {
-                display: inline-block;
-                /* box-shadow: -4px 0px 10px 0px rgba(255, 186, 186, 0.6); Shadow on left and bottom */
-                border-radius: 10px; /* Smooth edges for the div */
-                margin-right: -4px;
-            }
-        
-            .hamburger-modern:hover {
-                box-shadow: -6px 6px 12px 0px rgba(255, 190, 190, 0.8); /* Stronger shadow on hover */
-            }
-        </style>
-        
-        
+            <img src="<?php echo get_template_directory_uri();?>/Assets/Images/call_icon.svg" alt="call" style="padding: 15px; background-color:#fcefd4; border-radius: 10px !important; color: #FF4545;width:50px;height:auto;">
+        </div>        
     </div>
 </header>
 
@@ -89,33 +74,7 @@
                   </button>
             </div>
               
-              <style>
-                .sidebar_contact_button {
-                  background-color: #000000; /* WhatsApp green */
-                  color: white;
-                  font-size: 14px;  /* Smaller text for a compact look */
-                  font-weight: 500;  /* Slightly bolder text for emphasis */
-                  border: none;
-                  padding: 8px 20px 9px 20px; /* Smaller padding */
-                  border-radius: 3px; /* Slightly rounded corners for a more professional look */
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  gap: 8px; /* Reduced gap for a more compact design */
-                  cursor: pointer;
-                  transition: background-color 0.3s ease;
-                  text-decoration: none;
-                }
-/*               
-                .sidebar_contact_button:hover {
-                  background-color: #e80000; /* Darker green on hover */
-                }
-               */
-                .whatsapp-icon {
-                  width: 18px;  /* Smaller icon size */
-                  height: 18px;
-                }
-              </style>
+ 
               
               <script>
                 function sendWhatsAppMessage() {
