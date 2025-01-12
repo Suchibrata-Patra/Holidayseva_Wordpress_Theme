@@ -1,4 +1,5 @@
 
+<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/contact_sidebar.css">
 <header class="wrapper-modern">
     <div class="header-modern">
         <div class="logo-container-modern">
