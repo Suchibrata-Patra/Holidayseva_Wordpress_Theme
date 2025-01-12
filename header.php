@@ -2,6 +2,7 @@
 <?php
     $logo_image = get_header_image();
 ?>
+
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/header.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/conact_sidebar.css">
 <header class="new-wrapper">
@@ -143,10 +144,6 @@
                 }
             }
         </style>
-
-
-
-
         <script>
             // Ensure popup is hidden on page load
             document.addEventListener("DOMContentLoaded", function () {
@@ -321,3 +318,4 @@
         newOverlay.style.display = 'none';
     });
 </script>
+<?php require('get_template_directory_uri()/contact_sidebar.php'); ?>
