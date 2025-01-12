@@ -37,7 +37,8 @@
             </span>
         </div> -->
         <div class="hamburger-modern">
-            <span class="material-symbols-outlined" style="padding: 15px; background-color:#fcefd4; border-radius: 10px !important; color: #FF4545;">call</span>
+            <!-- <span class="material-symbols-outlined" style="padding: 15px; background-color:#fcefd4; border-radius: 10px !important; color: #FF4545;">call</span> -->
+            <img src="<?php echo get_template_directory_uri();?>/Assets/images/call_icon.svg" alt="call_icon" style="padding: 15px; background-color:#fcefd4; border-radius: 10px !important; color: #FF4545;">
         </div>
         
         <style>
