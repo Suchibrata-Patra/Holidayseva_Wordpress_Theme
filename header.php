@@ -1,18 +1,22 @@
-
 <?php
     $logo_image = get_header_image();
 ?>
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Stylesheet Integration -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/header.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/conact_sidebar.css">
+<!-- For getting Access of centralised Colour Scheme -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/holidayseva_colors.css">
+
+
+
+<!-- Main Header Content -->
 <header class="new-wrapper">
     <div class="new-header">
         <!-- Logo and Social Icons for Mobile -->
         <div class="new-logo-container">
             <div class="new-logo" style="text-decoration: none;">
-                <a href="/"><img src="<?php echo $logo_image; ?>" alt="Logo"
-                        loading="lazy"></a>
+                <a href="/"><img src="<?php echo $logo_image; ?>" alt="Logo" loading="lazy"></a>
             </div>
             <!-- Social Icons for Mobile -->
             <div class="new-social-icons" style="margin-right: 15px;">
@@ -23,20 +27,7 @@
                         src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/phone-call.png" alt="Call"
                         style="border-radius: 50px;"></a>
             </div>
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    const whatsappLink = document.getElementById("whatsapp-link");
-                    // Fetch the URL of the current page
-                    const currentPageURL = window.location.href;
-                    // Generate the WhatsApp link with the default text
-                    const defaultText = `Hello,
-  I came across your website and explored this page : ${currentPageURL}.
-  I'm interested in learning more about the tours you offer, Could You kindly share details about the itenary,pricing and any other relevant information ?`;
-                    const whatsappURL = `https://wa.me/8145302135/?text=${encodeURIComponent(defaultText)}`;
-                    // Update the anchor tag's href attribute
-                    whatsappLink.href = whatsappURL;
-                });
-            </script>
+            
         </div>
         <!-- Navigation Menu -->
         <nav class="new-menu">
@@ -47,7 +38,7 @@
                 <li><a href="https://www.gangasagar-tourism.com/about/">About</a></li>
                 <li><a href="https://www.gangasagar-tourism.com/contact/">Contact</a></li>
             </ul> -->
-    <?php wp_nav_menu(array('theme_location'=>'primary_menu',
+            <?php wp_nav_menu(array('theme_location'=>'primary_menu',
     'menu_class'=>'new-menu'
     ));
     ?>
@@ -78,23 +69,13 @@
         <li><a href="#">Sign in</a></li>
     </ul> -->
     <div class="new-logo" style="margin-left:14% !important;">
-            <img src="<?php echo $logo_image; ?>" alt="Logo" loading="lazy">
-        </div>
+        <img src="<?php echo $logo_image; ?>" alt="Logo" loading="lazy">
+    </div>
     <?php 
     wp_nav_menu(array('theme_location'=>'primary_menu'));
 ?>
 </aside>
-<div class="new-overlay"></div>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<center>
     <div id="form-input">
-        <!-- <div id="search-icon">
-            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path
-                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
-                </path>
-            </svg>
-        </div> -->
         <div id="search-icon" style="color: #000000;">
             <span class="material-icons">search</span>
         </div>
@@ -113,8 +94,7 @@
 
             <!-- Powered By Section -->
             <p style="margin: 0; font-size: 14px; font-weight: 400; color: rgb(120, 120, 120);">Powered By</p>
-            <img src="<?php echo $logo_image; ?>" alt="Logo"
-                style="width: auto; height: 40px; margin: 8px 0 16px 0;">
+            <img src="<?php echo $logo_image; ?>" alt="Logo" style="width: auto; height: 40px; margin: 8px 0 16px 0;">
             <!-- <img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/logo.png" alt="Logo"
                 style="width: auto; height: 40px; margin: 8px 0 16px 0;"> -->
 
@@ -145,29 +125,18 @@
                 }
             }
         </style>
-        <script>
-            // Ensure popup is hidden on page load
-            document.addEventListener("DOMContentLoaded", function () {
-                var popup = document.getElementById("popup");
-                popup.style.display = "none"; // Explicitly set display to none on load
-            });
-
-            document.getElementById("micButton").addEventListener("click", function () {
-                var popup = document.getElementById("popup");
-
-                // Display the popup
-                popup.style.display = "flex";
-
-                // Hide the popup after 4 seconds
-                setTimeout(function () {
-                    popup.style.display = "none";
-                }, 5000);
-            });
-        </script>
+        
 
 
     </div>
-</center>
+
+
+
+
+
+
+
+
 <script>
     const placeholders = [
         "'Gangasagar'",
@@ -319,4 +288,37 @@
         newOverlay.style.display = 'none';
     });
 </script>
+<script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const whatsappLink = document.getElementById("whatsapp-link");
+                // Fetch the URL of the current page
+                const currentPageURL = window.location.href;
+                // Generate the WhatsApp link with the default text
+                const defaultText = `Hello,
+I came across your website and explored this page : ${currentPageURL}.
+I'm interested in learning more about the tours you offer, Could You kindly share details about the itenary,pricing and any other relevant information ?`;
+                const whatsappURL = `https://wa.me/8145302135/?text=${encodeURIComponent(defaultText)}`;
+                // Update the anchor tag's href attribute
+                whatsappLink.href = whatsappURL;
+            });
+        </script>
+        <script>
+            // Ensure popup is hidden on page load
+            document.addEventListener("DOMContentLoaded", function () {
+                var popup = document.getElementById("popup");
+                popup.style.display = "none"; // Explicitly set display to none on load
+            });
+
+            document.getElementById("micButton").addEventListener("click", function () {
+                var popup = document.getElementById("popup");
+
+                // Display the popup
+                popup.style.display = "flex";
+
+                // Hide the popup after 4 seconds
+                setTimeout(function () {
+                    popup.style.display = "none";
+                }, 5000);
+            });
+        </script>
 <?php require('contact_sidebar.php'); ?>
