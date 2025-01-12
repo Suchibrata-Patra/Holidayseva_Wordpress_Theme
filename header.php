@@ -2,6 +2,7 @@
     'menu_class'=>'nav'
     ));
 ?>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/header.css">
 <header class="new-wrapper">
     <div class="new-header">
         <!-- Logo and Social Icons for Mobile -->
