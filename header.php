@@ -11,7 +11,6 @@
 
 
 <!-- Main Header Content -->
-<div style="display:flex;">
 <header class="new-wrapper">
     <div class="new-header">
         <!-- Logo and Social Icons for Mobile -->
@@ -39,6 +38,10 @@
                 <li><a href="https://www.gangasagar-tourism.com/about/">About</a></li>
                 <li><a href="https://www.gangasagar-tourism.com/contact/">Contact</a></li>
             </ul> -->
+            <?php wp_nav_menu(array('theme_location'=>'primary_menu',
+    'menu_class'=>'new-menu'
+    ));
+    ?>
         </nav>
         <!-- Currency and Sign-In Buttons -->
         <div class="new-buttons">
@@ -127,15 +130,6 @@
 
 
     </div>
-    
-</div>
-<?php wp_nav_menu(array('theme_location'=>'primary_menu',
-    'menu_class'=>'new-menu'
-    ));
-    ?>
-
-
-
 
 
 
