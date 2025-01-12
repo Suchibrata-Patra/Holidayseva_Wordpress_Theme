@@ -31,7 +31,6 @@
                         src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/phone-call.png" alt="Call"
                         style="border-radius: 50px;" loading="lazy"></a>
             </div>
-            
         </div>
         <!-- Navigation Menu -->
         <nav class="new-menu">
@@ -60,7 +59,6 @@
         </div>
     </div>
 </header>
-
 <!-- New Sidebar -->
 <aside class="new-sidebar">
     <div class="new-close-btn">&times;</div>
@@ -87,35 +85,29 @@
         </div>
         <input type="text" placeholder="Dream destination is awaiting for you !" id="searchInput"
             style="width: 80%;height: auto;color: black;">
-
         <!-- Mic Button -->
         <button id="micButton"
             style="background-color: rgb(234, 234, 234, 0); cursor: pointer; border-radius: 50px; height: 40px; width: 40px; display: flex; align-items: center; justify-content: center; padding: 10px;border:none !important;">
             <span class="material-icons" id="micIcon" style="color:#758694; font-size: 24px;">mic</span>
         </button>
-
         <!-- Modal -->
         <div id="popup"
             style="display: none !important; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgb(255, 255, 255); color: rgb(0, 0, 0); padding: 20px; width: 320px; height: 320px; border-radius: 15px; text-align: center; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); display: flex; align-items: center; justify-content: center; flex-direction: column; animation: fadeIn 0.4s ease-in-out;">
-
             <!-- Powered By Section -->
             <p style="margin: 0; font-size: 14px; font-weight: 400; color: rgb(120, 120, 120);">Powered By</p>
             <img src="<?php echo $logo_image; ?>" alt="Logo" style="width: auto; height: 40px; margin: 8px 0 16px 0;" loading="lazy">
             <!-- <img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/logo.png" alt="Logo"
                 style="width: auto; height: 40px; margin: 8px 0 16px 0;"> -->
-
             <!-- Mic Button -->
             <button id="modal_microphone_button"
                 onmouseover="this.style.boxShadow='0 10px 25px rgba(0, 0, 0, 0.3)'; this.style.transform='scale(1.1)';"
                 onmouseout="this.style.boxShadow='0 6px 15px rgba(0, 0, 0, 0.2)'; this.style.transform='scale(1)';">
                 <span class="material-icons">mic</span>
             </button>
-
             <!-- Google Icon -->
             <img src="https://storage.googleapis.com/support-kms-prod/yQaqmZKczQG1vU5R8W3Lk5NROfCyU71FHdcm"
                 alt="Google Icon" style="width: 60px; height: auto; margin-top: 20px;" loading="lazy">
         </div>
-
         <!-- Fade-in Animation -->
         <style>
             @keyframes fadeIn {
@@ -130,53 +122,32 @@
                 }
             }
         </style>
-        <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    const whatsappLink = document.getElementById("whatsapp-link");
-                    // Fetch the URL of the current page
-                    const currentPageURL = window.location.href;
-                    // Generate the WhatsApp link with the default text
-                    const defaultText = `Hello,
-  I came across your website and explored this page : ${currentPageURL}.
-  I'm interested in learning more about the tours you offer, Could You kindly share details about the itenary,pricing and any other relevant information ?`;
-                    const whatsappURL = `https://wa.me/8145302135/?text=${encodeURIComponent(defaultText)}`;
-                    // Update the anchor tag's href attribute
-                    whatsappLink.href = whatsappURL;
-                });
-            </script>
-        
-
-
     </div>
 </center>
-
-
+<!-- Deferred Javascript To Load Javascript After the Rendering is Over -->
 <script src="<?php echo get_template_directory_uri();?>/Assets/javascript/search_bar_typing_effect.js" defer></script>
 <script src="<?php echo get_template_directory_uri();?>/Assets/javascript/redirect_to_search_page.js" defer></script>
 <script src="<?php echo get_template_directory_uri();?>/Assets/javascript/mic_button_modal.js" defer></script>
+<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/whatsapp_tap_to_send.js" defer></script>
 <script>
     const newHamburger = document.querySelector('.new-hamburger');
     const newSidebar = document.querySelector('.new-sidebar');
     const newCloseBtn = document.querySelector('.new-sidebar .new-close-btn');
     const newOverlay = document.querySelector('.new-overlay');
-
     // Open Sidebar
     newHamburger.addEventListener('click', () => {
         newSidebar.style.left = '0';
         newOverlay.style.display = 'block';
     });
-
     // Close Sidebar
     newCloseBtn.addEventListener('click', () => {
         newSidebar.style.left = '-900px';
         newOverlay.style.display = 'none';
     });
-
     newOverlay.addEventListener('click', () => {
         newSidebar.style.left = '-900px';
         newOverlay.style.display = 'none';
     });
 </script>
 <?php require('contact_sidebar.php'); ?>
-
 </head>
