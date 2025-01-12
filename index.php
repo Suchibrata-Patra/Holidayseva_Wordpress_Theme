@@ -1,8 +1,11 @@
 <?php 
+get_header();
+?>
+<?php 
     // echo get_template_directory_uri();
     echo '<br>';
     // bloginfo('template_directory');
-    get_header();
+    // get_header();
     get_post();
 ?>
    This page Comes from index.php

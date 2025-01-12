@@ -325,3 +325,4 @@
 <?php require('contact_sidebar.php'); ?>
 
 </head>
+<body>
