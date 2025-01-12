@@ -108,10 +108,7 @@
             <img src="https://storage.googleapis.com/support-kms-prod/yQaqmZKczQG1vU5R8W3Lk5NROfCyU71FHdcm"
                 alt="Google Icon" style="width: 60px; height: auto; margin-top: 20px;">
         </div>
-        <?php wp_nav_menu(array('theme_location'=>'primary_menu',
-    'menu_class'=>'new-menu'
-    ));
-    ?>
+
         <!-- Fade-in Animation -->
         <style>
             @keyframes fadeIn {
@@ -130,6 +127,10 @@
 
 
     </div>
+    <?php wp_nav_menu(array('theme_location'=>'primary_menu',
+    'menu_class'=>'new-menu'
+    ));
+    ?>
 </div>
 
 
