@@ -125,10 +125,10 @@
     </div>
 </center>
 <!-- Deferred Javascript To Load Javascript After the Rendering is Over -->
-<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/search_bar_typing_effect.js" defer></script>
-<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/redirect_to_search_page.js" defer></script>
-<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/mic_button_modal.js" defer></script>
-<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/whatsapp_tap_to_send.js" defer></script>
+<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/SearchbarTypingEffect.js" defer></script>
+<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/SearchPageRedirect.js" defer></script>
+<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/MicButtonModal.js" defer></script>
+<script src="<?php echo get_template_directory_uri();?>/Assets/javascript/HeaderWhatsappButton.js" defer></script>
 <script>
     const newHamburger = document.querySelector('.new-hamburger');
     const newSidebar = document.querySelector('.new-sidebar');

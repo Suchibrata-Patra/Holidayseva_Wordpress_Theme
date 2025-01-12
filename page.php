@@ -1,36 +1,15 @@
-<?php 
-get_header();
-?>
-    <h1>
-        <?php the_title(); ?>
-    </h1>
+<?php get_header(); ?>
+    <h1> <?php the_title(); ?> </h1>
     <div style="display:flex;">
-        <?php 
-        the_post_thumbnail(array(100, 100)); // Other resolutions (height, width)
-        ?>
-        <?php
-	$imagepath = wp_get_attachment_image_src(get_post_thumbnail_id(),'large');
-    ?>
-        <div>
-            <?php the_content(); ?>
-        </div>
+        <?php the_post_thumbnail(array(100, 100)); // Other resolutions (height, width)?>
+        <?php $imagepath = wp_get_attachment_image_src(get_post_thumbnail_id(),'large');?>
+        <div> <?php the_content(); ?> </div>
     </div>
     <!-- The Following Portion is Completely for Page Speed -->
     <br><br>
-    <div id="stats">
-        <p><strong>Page Load time</strong> <span id="dom-content-loaded"></span></p>
-    </div>
-    <script>
-        window.onload = function () {
-            const performanceData = window.performance.timing;
-            const navigationStart = performanceData.navigationStart;
-            const domContentLoadedTime = performanceData.domContentLoadedEventEnd - navigationStart;
-            const domContentLoadedTimeInSec = (domContentLoadedTime / 1000).toFixed(3);
-            document.getElementById('dom-content-loaded').textContent = domContentLoadedTimeInSec + ' seconds';
-        };
-    </script>
+    <div id="stats"><p><strong>Page Load time</strong> <span id="dom-content-loaded"></span></p></div>
+    <script src="<?php echo get_template_directory_uri();?>/Assets/javascript/PageSpeed.js" defer></script>
 </body>
 </html>
-page.php
-
+This Content is Getting Fetched From Page.php<br>
 <?php get_sidebar(); ?>
