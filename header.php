@@ -1,7 +1,4 @@
-<?php wp_nav_menu(array('theme_location'=>'primary_menu',
-    'menu_class'=>'new-menu'
-    ));
-?>
+
 <?php
     $logo_image = get_header_image();
 ?>
@@ -42,13 +39,17 @@
         </div>
         <!-- Navigation Menu -->
         <nav class="new-menu">
-            <ul>
+            <!-- <ul>
                 <li><a href="https://www.gangasagar-tourism.com/">Home</a></li>
                 <li><a href="https://www.gangasagar-tourism.com/tour/">Tour</a></li>
                 <li><a href="https://www.gangasagar-tourism.com/about/">Holiday Homes</a></li>
                 <li><a href="https://www.gangasagar-tourism.com/about/">About</a></li>
                 <li><a href="https://www.gangasagar-tourism.com/contact/">Contact</a></li>
-            </ul>
+            </ul> -->
+            <?php wp_nav_menu(array('theme_location'=>'primary_menu',
+    'menu_class'=>'new-menu'
+    ));
+?>
         </nav>
         <!-- Currency and Sign-In Buttons -->
         <div class="new-buttons">
