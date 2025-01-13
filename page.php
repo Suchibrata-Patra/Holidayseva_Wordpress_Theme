@@ -12,9 +12,9 @@
 </body>
 </html>
 <h1>Images will load after the page is fully loaded</h1>
-    <img data-src="https://via.placeholder.com/300x200" alt="Skeleton Loader" class="delayed-image">
-    <img data-src="https://via.placeholder.com/300x200/ff0000" alt="Skeleton Loader" class="delayed-image">
-    <img data-src="https://via.placeholder.com/300x200/00ff00" alt="Skeleton Loader" class="delayed-image">
+    <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
+    <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
+    <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
 
     <script>
         window.addEventListener('load', () => {
@@ -22,7 +22,6 @@
             const images = document.querySelectorAll('.delayed-image');
             
             images.forEach(img => {
-                // Set the actual source from the data-src attribute
                 const dataSrc = img.getAttribute('data-src');
                 if (dataSrc) {
                     img.src = dataSrc;
