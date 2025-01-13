@@ -52,26 +52,28 @@
         }
     </style>
 
-    <script>
-        window.addEventListener('load', () => {
-            // Fetch all placeholders
-            const placeholders = document.querySelectorAll('.placeholder.delayed-image');
+<script>
+    window.addEventListener('load', () => {
+        // Fetch all placeholders
+        const placeholders = document.querySelectorAll('.placeholder.delayed-image');
 
-            placeholders.forEach(placeholder => {
-                const dataSrc = placeholder.getAttribute('data-src');
-                const img = document.createElement('img');
+        placeholders.forEach(placeholder => {
+            const dataSrc = placeholder.getAttribute('data-src');
+            const img = document.createElement('img');
 
-                img.src = dataSrc;
-                img.onload = () => {
-                    img.classList.add('loaded'); // Mark the image as loaded
-                    placeholder.appendChild(img); // Add image to placeholder
-                };
+            img.src = dataSrc;
+            img.onload = () => {
+                img.classList.add('loaded'); // Mark the image as loaded
+                placeholder.appendChild(img); // Add image to placeholder
+            };
 
-                img.onerror = () => {
-                    console.error(`Image failed to load: ${dataSrc}`);
-                    // Leave the placeholder visible
-                };
-            });
+            img.onerror = () => {
+                console.error(`Image failed to load: ${dataSrc}`);
+                // Add error feedback (optional)
+                placeholder.innerHTML = `<div style="color: red; text-align: center; padding: 10px;">Image failed to load</div>`;
+            };
         });
-    </script>
+    });
+</script>
+
 <?php get_sidebar(); ?>
