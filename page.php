@@ -23,7 +23,6 @@
             background-size: 200% 100%;
             animation: shimmer 1.5s infinite;
             border-radius: 5px;
-            display: inline-block;
         }
 
         /* Stop animation once the content is loaded */
