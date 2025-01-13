@@ -40,6 +40,15 @@
         .delayed-image:not([src]) {
             opacity: 1; /* Ensure the skeleton is visible */
         }
+        .delayed-image:not([src])::after {
+    content: "Image failed to load";
+    display: block;
+    font-size: 12px;
+    color: red;
+    text-align: center;
+    margin-top: 5px;
+}
+
 
         /* Skeleton shimmer animation */
         @keyframes shimmer {
@@ -52,17 +61,23 @@
         }
     </style>
 
-    <script>
-        window.addEventListener('load', () => {
-            // Select all images with the "delayed-image" class
-            const images = document.querySelectorAll('.delayed-image');
+<script>
+    window.addEventListener('load', () => {
+        // Select all images with the "delayed-image" class
+        const images = document.querySelectorAll('.delayed-image');
 
-            images.forEach(img => {
-                const dataSrc = img.getAttribute('data-src');
-                if (dataSrc) {
-                    img.src = dataSrc;
-                }
-            });
+        images.forEach(img => {
+            const dataSrc = img.getAttribute('data-src');
+            if (dataSrc) {
+                img.src = dataSrc;
+
+                // Handle error case
+                img.onerror = () => {
+                    img.removeAttribute('src'); // Remove src to restore skeleton
+                };
+            }
         });
-    </script>
+    });
+</script>
+
 <?php get_sidebar(); ?>
