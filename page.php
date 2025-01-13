@@ -9,7 +9,7 @@
     <h1>Images will load after the page is fully loaded</h1>
     <div class="image-container">
         <div class="placeholder delayed-image" data-src="https://s0.2mdn.net/simgad/6020499889114613682"></div>
-        <div class="placeholder delayed-image" data-src="https://s0.2mdn.net/simgasdsd/6020499889114613682"></div>
+        <div class="placeholder delayed-image" data-src="https://s0.2mdn.net/simgad/6020499889114613682"></div>
         <div class="placeholder delayed-image" data-src="https://s0.2mdn.net/simgad/6020499889114613682"></div>
     </div>
 
@@ -30,8 +30,8 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 300px;
+            height: auto;
             object-fit: cover;
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
