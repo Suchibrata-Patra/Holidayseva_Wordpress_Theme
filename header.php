@@ -158,5 +158,5 @@
         newOverlay.style.display = 'none';
     });
 </script>
-<?php require('CallButttonSidebar.php'); ?>
+<?php include_once('CallButttonSidebar.php');?>
 </head>

@@ -1,5 +1,9 @@
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call" />
-<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/contact_sidebar.css">
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call" /> -->
+<?php
+    // $template_uri = get_template_directory_uri();
+    // $logo_image = get_header_image();
+?>
+<link rel="stylesheet" href="<?php echo $template_uri;?>/Assets/contact_sidebar.css">
 <header class="wrapper-modern">
     <div class="header-modern">
         <div class="logo-container-modern">
@@ -8,8 +12,8 @@
                     const whatsappLinkModern = document.getElementById("whatsapp-link-modern");
                     const currentPageURLModern = window.location.href;
                     const defaultTextModern = `Hello,
-  I came across your website and explored this page: ${currentPageURLModern}.
-  I'm interested in learning more about the tours you offer. Could you kindly share details about the itinerary, pricing, and any other relevant information?`;
+I came across your website and explored this page: ${currentPageURLModern}.
+I'm interested in learning more about the tours you offer. Could you kindly share details about the itinerary, pricing, and any other relevant information?`;
                     const whatsappURLModern = `https://wa.me/8145302135/?text=${encodeURIComponent(defaultTextModern)}`;
                     whatsappLinkModern.href = whatsappURLModern;
                 });
@@ -23,22 +27,17 @@
                     const whatsappLinkModern = document.getElementById("whatsapp-link-modern");
                     const currentPageURLModern = window.location.href;
                     const defaultTextModern = `Hello,
-  I came across your website and explored this page: ${currentPageURLModern}.
-  I'm interested in learning more about the tours you offer. Could you kindly share details about the itinerary, pricing, and any other relevant information?`;
+I came across your website and explored this page: ${currentPageURLModern}.
+I'm interested in learning more about the tours you offer. Could you kindly share details about the itinerary, pricing, and any other relevant information?`;
                     const whatsappURLModern = `https://wa.me/8145302135/?text=${encodeURIComponent(defaultTextModern)}`;
 
                     whatsappLinkModern.href = whatsappURLModern;
                 });
             </script>
         </div>
-        <!-- <div class="hamburger-modern">
-            <span class="material-symbols-outlined" style="padding: 13px;background-color:#fcefd4;border-radius: 5px !important;">
-                call
-            </span>
-        </div> -->
         <div class="hamburger-modern">
             <!-- <span class="material-symbols-outlined" style="padding: 15px; background-color:#fcefd4; border-radius: 10px !important; color: #FF4545;">call</span> -->
-            <img src="<?php echo get_template_directory_uri();?>/Assets/Images/call_icon.svg" alt="call" style="padding: 15px; background-color:#fcefd4; border-radius: 10px !important; color: #FF4545;width:50px;height:auto;">
+            <img src="<?php echo $template_uri;?>/Assets/Images/call_icon.svg" alt="call" style="padding: 15px; background-color:#fcefd4; border-radius: 10px !important; color: #FF4545;width:50px;height:auto;">
         </div>        
     </div>
 </header>
@@ -72,10 +71,7 @@
                   <button onclick="sendWhatsAppMessage()" class="sidebar_contact_button">
                     Whatsapp
                   </button>
-            </div>
-              
- 
-              
+            </div> 
               <script>
                 function sendWhatsAppMessage() {
                   var pageURL = window.location.href;
@@ -99,37 +95,11 @@
     <!-- <img class="bottom-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrHb2cUZS-zk0eL7VFL_FDcovL82BvsfZuPA&s" alt="Bottom Image"> -->
     <img class="bottom-image" src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/Gangasagar-Tour-Packages.jpg" alt="Bottom Image">
 </aside>
-
-
 <div class="overlay-modern"></div>
-
-<script>
-    const hamburgerModern = document.querySelector('.hamburger-modern');
-    const sidebarModern = document.querySelector('.sidebar-modern');
-    const closeBtnModern = document.querySelector('.sidebar-modern .close-btn-modern');
-    const overlayModern = document.querySelector('.overlay-modern');
-
-    hamburgerModern.addEventListener('click', () => {
-        sidebarModern.style.right = '0';
-        overlayModern.style.display = 'block';
-    });
-
-    closeBtnModern.addEventListener('click', () => {
-        sidebarModern.style.right = '-300px';
-        overlayModern.style.display = 'none';
-    });
-
-    overlayModern.addEventListener('click', () => {
-        sidebarModern.style.right = '-300px';
-        overlayModern.style.display = 'none';
-    });
-</script>
             </span>
         </div>
-        
     </div>
 </header>
-
 <aside class="sidebar-modern">
     <div class="close-btn-modern">&times;</div>
     <ul>
@@ -143,26 +113,21 @@
     <!-- Image at the bottom -->
     <img class="bottom-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrHb2cUZS-zk0eL7VFL_FDcovL82BvsfZuPA&s" alt="Bottom Image">
 </aside>
-
-
 <div class="overlay-modern"></div>
-
 <script>
     const hamburgerModern = document.querySelector('.hamburger-modern');
     const sidebarModern = document.querySelector('.sidebar-modern');
     const closeBtnModern = document.querySelector('.sidebar-modern .close-btn-modern');
     const overlayModern = document.querySelector('.overlay-modern');
-
+    
     hamburgerModern.addEventListener('click', () => {
         sidebarModern.style.right = '0';
         overlayModern.style.display = 'block';
     });
-
     closeBtnModern.addEventListener('click', () => {
         sidebarModern.style.right = '-300px';
         overlayModern.style.display = 'none';
     });
-
     overlayModern.addEventListener('click', () => {
         sidebarModern.style.right = '-300px';
         overlayModern.style.display = 'none';
