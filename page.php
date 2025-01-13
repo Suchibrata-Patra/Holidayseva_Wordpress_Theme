@@ -1,7 +1,7 @@
 <?php get_header(); ?>
     <h1> <?php the_title(); ?> </h1>
     <div style="display:flex;">
-        <?php the_post_thumbnail(array(100, 100)); // Other resolutions (height, width) ?>
+        <?php the_post_thumbnail(array(100, 100), ['class' => 'skeleton_loader']); // Add skeleton_loader class ?>
         <?php $imagepath = wp_get_attachment_image_src(get_post_thumbnail_id(),'large'); ?>
         <div> <?php the_content(); ?> </div>
     </div>
@@ -12,31 +12,28 @@
 
     <h1>Images will load after the page is fully loaded</h1>
     <div class="image-container" style="display: flex;">
-        <img data-src="https://s0.2mdn.net/simgad/60204998891146136sss82" alt="Skeleton Loader" class="delayed-image" style="background-color:rgb(248, 248, 248);border-radius: 10px;">
-        <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
-        <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
+        <img data-src="https://s0.2mdn.net/simgad/60204998891146136sss82" alt="Skeleton Loader" class="delayed-image skeleton_loader" style="background-color:rgb(248, 248, 248);border-radius: 10px;">
+        <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image skeleton_loader">
+        <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image skeleton_loader">
     </div>
     <style>
         /* Skeleton animation styling */
-        .delayed-image {
-            width: 300px; /* Set a fixed width */
-            height: auto; /* Set a fixed height */
+        .skeleton_loader {
+            width: 300px; /* Default width */
+            height: auto; /* Default height */
             background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
             background-size: 200% 100%;
             animation: shimmer 1.5s infinite;
-            object-fit: cover; /* Ensures proper image scaling */
+            border-radius: 5px;
+            display: inline-block;
         }
 
-        /* Stop animation once the image loads */
-        .delayed-image[src] {
-            background: transparent; /* Remove skeleton animation */
-            animation: none; /* Stop the animation */
-            transition: opacity 0.5s ease-in-out; /* Smooth transition */
-            opacity: 1; /* Make the image fully visible */
-        }
-
-        .delayed-image:not([src]) {
-            opacity: 1; /* Ensure the skeleton is visible */
+        /* Stop animation once the content is loaded */
+        .skeleton_loader.loaded {
+            background: transparent;
+            animation: none;
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
         }
 
         /* Skeleton shimmer animation */
@@ -52,13 +49,21 @@
 
     <script>
         window.addEventListener('load', () => {
-            // Select all images with the "delayed-image" class
-            const images = document.querySelectorAll('.delayed-image');
+            // Handle delayed loading of images with skeleton loader
+            const images = document.querySelectorAll('.delayed-image.skeleton_loader');
 
             images.forEach(img => {
                 const dataSrc = img.getAttribute('data-src');
                 if (dataSrc) {
-                    img.src = dataSrc;
+                    const tempImg = new Image();
+                    tempImg.src = dataSrc;
+
+                    // When the image is fully loaded
+                    tempImg.onload = () => {
+                        img.src = dataSrc; // Set actual image
+                        img.classList.add('loaded'); // Add loaded class
+                        img.classList.remove('skeleton_loader'); // Remove skeleton loader class
+                    };
                 }
             });
         });
