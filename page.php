@@ -11,7 +11,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/Assets/javascript/PageSpeed.js" defer></script>
 
     <h1>Images will load after the page is fully loaded</h1>
-    <div class="image-container">
+    <div class="image-container" style="display: flex;">
         <img data-src="https://s0.2mdn.net/simgad/60204998891146136sss82" alt="Skeleton Loader" class="delayed-image" style="background-color:rgb(248, 248, 248);border-radius: 10px;">
         <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
         <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
