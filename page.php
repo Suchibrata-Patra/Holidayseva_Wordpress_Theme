@@ -9,12 +9,34 @@
     <br><br>
     <div id="stats"><p><strong>Page Load time</strong> <span id="dom-content-loaded"></span></p></div>
     <script src="<?php echo get_template_directory_uri();?>/Assets/javascript/PageSpeed.js" defer></script>
-</body>
-</html>
-<h1>Images will load after the page is fully loaded</h1>
-    <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
-    <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
-    <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
+
+    <h1>Images will load after the page is fully loaded</h1>
+    <div class="image-container">
+        <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
+        <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
+        <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
+    </div>
+
+    <style>
+        /* Placeholder styling for images */
+        .delayed-image {
+            width: 300px;
+            height: 200px;
+            background-color: #e0e0e0; /* Grey placeholder color */
+            display: inline-block;
+        }
+
+        /* Optional: Add a smooth transition effect when the image loads */
+        .delayed-image[src] {
+            background-color: transparent; /* Remove placeholder background */
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+        }
+
+        .delayed-image:not([src]) {
+            opacity: 0;
+        }
+    </style>
 
     <script>
         window.addEventListener('load', () => {
