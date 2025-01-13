@@ -12,7 +12,7 @@
 
     <h1>Images will load after the page is fully loaded</h1>
     <div class="image-container">
-        <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
+        <img data-src="https://s0.2mdn.net/simgad/s6020499889114613682" alt="Skeleton Loader" class="delayed-image">
         <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
         <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
     </div>
