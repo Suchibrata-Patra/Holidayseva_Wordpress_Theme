@@ -20,7 +20,7 @@
         /* Skeleton animation styling */
         .skeleton_loader {
             width: 300px; /* Default width */
-            height: auto; /* Default height */
+            height: 500px; /* Default height */
             background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
             background-size: 200% 100%;
             animation: shimmer 1.5s infinite;
