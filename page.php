@@ -14,7 +14,7 @@
     <div class="image-container" style="display: flex;">
         <img data-src="https://s0.2mdn.net/simgad/60204998891146136sss82" alt="Skeleton Loader" class="delayed-image skeleton_loader" style="background-color:rgb(248, 248, 248);border-radius: 10px;">
         <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image skeleton_loader">
-        <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image ">
+        <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image skeleton_loader">
     </div>
     <style>
         /* Skeleton animation styling */
