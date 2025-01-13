@@ -25,7 +25,7 @@
         <!-- Logo and Social Icons for Mobile -->
         <div class="new-logo-container">
             <div class="new-logo" style="text-decoration: none;">
-                <a href="/"><img rel="preload" src="<?php echo $logo_image; ?>" alt="Logo" loading="lazy" class="delayed-image skeleton_loader"></a>
+                <a href="/"><img rel="preload" src="<?php echo $logo_image; ?>" alt="Logo" loading="lazy" class="skeleton_loader"></a>
             </div>
             <!-- Social Icons for Mobile -->
             <div class="new-social-icons" style="margin-right: 15px;">
