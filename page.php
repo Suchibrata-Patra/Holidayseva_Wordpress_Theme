@@ -16,7 +16,6 @@
         <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
         <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
     </div>
-
     <style>
         /* Skeleton animation styling */
         .delayed-image {
