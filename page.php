@@ -12,9 +12,9 @@
 </body>
 </html>
 <h1>Images will load after the page is fully loaded</h1>
-    <img data-src="https://via.placeholder.com/300x200" alt="Image 1" class="delayed-image">
-    <img data-src="https://via.placeholder.com/300x200/ff0000" alt="Image 2" class="delayed-image">
-    <img data-src="https://via.placeholder.com/300x200/00ff00" alt="Image 3" class="delayed-image">
+    <img data-src="https://via.placeholder.com/300x200" alt="Skeleton Loader" class="delayed-image">
+    <img data-src="https://via.placeholder.com/300x200/ff0000" alt="Skeleton Loader" class="delayed-image">
+    <img data-src="https://via.placeholder.com/300x200/00ff00" alt="Skeleton Loader" class="delayed-image">
 
     <script>
         window.addEventListener('load', () => {
