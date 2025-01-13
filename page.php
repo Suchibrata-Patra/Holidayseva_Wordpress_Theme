@@ -12,7 +12,7 @@
 
     <h1>Images will load after the page is fully loaded</h1>
     <div class="image-container">
-        <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
+        <img data-src="https://s0.2mdn.net/simgad/60204998891146136ss82" alt="Skeleton Loader" class="delayed-image">
         <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
         <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
     </div>
@@ -21,7 +21,7 @@
         /* Skeleton animation styling */
         .delayed-image {
             width: 300px; /* Set a fixed width */
-            height: 200px; /* Set a fixed height */
+            height: auto; /* Set a fixed height */
             background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
             background-size: 200% 100%;
             animation: shimmer 1.5s infinite;
