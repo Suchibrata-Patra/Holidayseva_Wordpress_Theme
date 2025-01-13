@@ -1,44 +1,44 @@
 <?php get_header(); ?>
     <h1> <?php the_title(); ?> </h1>
     <div style="display:flex;">
-        <?php the_post_thumbnail(array(100, 100)); // Other resolutions (height, width) ?>
+        <?php the_post_thumbnail(array(100, 100)); ?>
         <?php $imagepath = wp_get_attachment_image_src(get_post_thumbnail_id(),'large'); ?>
         <div> <?php the_content(); ?> </div>
     </div>
-    <!-- The Following Portion is Completely for Page Speed -->
-    <br><br>
-    <div id="stats"><p><strong>Page Load time</strong> <span id="dom-content-loaded"></span></p></div>
-    <script src="<?php echo get_template_directory_uri(); ?>/Assets/javascript/PageSpeed.js" defer></script>
 
     <h1>Images will load after the page is fully loaded</h1>
     <div class="image-container">
-        <img data-src="https://s0.2mdn.net/simgad/60204998891146136ss82" alt="Skeleton Loader" class="delayed-image">
-        <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
-        <img data-src="https://s0.2mdn.net/simgad/6020499889114613682" alt="Skeleton Loader" class="delayed-image">
+        <div class="placeholder delayed-image" data-src="https://s0.2mdn.net/simgad/6020499889114613682"></div>
+        <div class="placeholder delayed-image" data-src="https://s0.2mdn.net/simgad/6020499889114613682"></div>
+        <div class="placeholder delayed-image" data-src="https://s0.2mdn.net/simgad/6020499889114613682"></div>
     </div>
 
     <style>
-        /* Skeleton animation styling */
-        .delayed-image {
+        /* Placeholder styling */
+        .placeholder {
             width: 300px; /* Set a fixed width */
-            height: auto; /* Set a fixed height */
+            height: 200px; /* Set a fixed height */
             background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
             background-size: 200% 100%;
             animation: shimmer 1.5s infinite;
-            display: inline-block; /* Ensures it occupies space */
-            object-fit: cover; /* Ensures proper image scaling */
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Stop animation once the image loads */
-        .delayed-image[src] {
-            background: transparent; /* Remove skeleton animation */
-            animation: none; /* Stop the animation */
-            transition: opacity 0.5s ease-in-out; /* Smooth transition */
-            opacity: 1; /* Make the image fully visible */
+        .placeholder img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
 
-        .delayed-image:not([src]) {
-            opacity: 1; /* Ensure the skeleton is visible */
+        .placeholder img.loaded {
+            opacity: 1;
         }
 
         /* Skeleton shimmer animation */
@@ -54,14 +54,23 @@
 
     <script>
         window.addEventListener('load', () => {
-            // Select all images with the "delayed-image" class
-            const images = document.querySelectorAll('.delayed-image');
+            // Fetch all placeholders
+            const placeholders = document.querySelectorAll('.placeholder.delayed-image');
 
-            images.forEach(img => {
-                const dataSrc = img.getAttribute('data-src');
-                if (dataSrc) {
-                    img.src = dataSrc;
-                }
+            placeholders.forEach(placeholder => {
+                const dataSrc = placeholder.getAttribute('data-src');
+                const img = document.createElement('img');
+
+                img.src = dataSrc;
+                img.onload = () => {
+                    img.classList.add('loaded'); // Mark the image as loaded
+                    placeholder.appendChild(img); // Add image to placeholder
+                };
+
+                img.onerror = () => {
+                    console.error(`Image failed to load: ${dataSrc}`);
+                    // Leave the placeholder visible
+                };
             });
         });
     </script>
