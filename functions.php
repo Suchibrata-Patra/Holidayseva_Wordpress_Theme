@@ -52,10 +52,12 @@ function wporg_custom_post_type() {
             'has_archive' => true,
             'supports'    => array('title', 'editor', 'thumbnail', 'custom-fields'), // Thumbnail support
             'show_in_rest' => true, // Enable REST API support (optional, for Gutenberg)
+            'rewrite'     => array('slug' => 'tour') // Set the custom slug here
         )
     );
 }
 add_action('init', 'wporg_custom_post_type');
+
 
 // Add meta boxes for additional fields
 function wporg_add_meta_boxes() {
