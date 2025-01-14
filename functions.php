@@ -41,25 +41,108 @@
 }
 add_action('init', 'create_book_post_type');
 
-function add_tours_admin_page() {
-    add_menu_page(
-        'Tours',                // Page title
-        'Tours',                // Menu title
-        'manage_options',       // Capability
-        'tours-admin-page',     // Menu slug
-        'display_tours_page',   // Callback function to display the page
-        'dashicons-palmtree',   // Icon URL or Dashicon class
-        5                       // Position in the admin menu
+function create_tour_post_type() {
+    $args = array(
+        'labels' => array(
+            'name' => 'Tours',
+            'singular_name' => 'Tour',
+            'add_new' => 'Add New Tour',
+            'add_new_item' => 'Add New Tour',
+            'edit_item' => 'Edit Tour',
+            'new_item' => 'New Tour',
+            'view_item' => 'View Tour',
+            'search_items' => 'Search Tours',
+            'not_found' => 'No Tours found',
+            'not_found_in_trash' => 'No Tours found in Trash',
+            'all_items' => 'All Tours',
+            'insert_into_item' => 'Insert into tour',
+            'uploaded_to_this_item' => 'Uploaded to this tour',
+        ),
+        'public' => true,
+        'hierarchical' => false, // Tours are not hierarchical
+        'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt'),
+        'menu_icon' => 'dashicons-palmtree',
+        'show_in_rest' => true, // Enable Gutenberg block editor
+        'has_archive' => true,
+        'rewrite' => array('slug' => 'tours'),
     );
+    register_post_type('tour', $args);
 }
-add_action( 'admin_menu', 'add_tours_admin_page' );
+add_action('init', 'create_tour_post_type');
+function handle_save_tour_data() {
+    // Check if the current user has permission
+    if ( ! current_user_can( 'manage_options' ) ) {
+        wp_die( __( 'You do not have sufficient permissions to access this page.', 'textdomain' ) );
+    }
 
+    // Validate and sanitize the input fields
+    if ( isset( $_POST['tour_name'], $_POST['tour_price'], $_POST['tour_description'] ) ) {
+        $tour_name = sanitize_text_field( $_POST['tour_name'] );
+        $tour_price = floatval( $_POST['tour_price'] );
+        $tour_description = sanitize_textarea_field( $_POST['tour_description'] );
+
+        // Insert the tour as a custom post
+        $tour_id = wp_insert_post( array(
+            'post_title'   => $tour_name,
+            'post_content' => $tour_description,
+            'post_status'  => 'publish',
+            'post_type'    => 'tour',
+            'meta_input'   => array(
+                'tour_price' => $tour_price,
+            ),
+        ) );
+
+        // Redirect with a success message
+        wp_redirect( admin_url( 'edit.php?post_type=tour&status=success' ) );
+        exit;
+    }
+
+    // Redirect back with an error if data is invalid
+    wp_redirect( admin_url( 'admin.php?page=tours-admin-page&status=error' ) );
+    exit;
+}
+add_action( 'admin_post_save_tour_data', 'handle_save_tour_data' );
+function handle_save_tour_data() {
+    // Check if the current user has permission
+    if ( ! current_user_can( 'manage_options' ) ) {
+        wp_die( __( 'You do not have sufficient permissions to access this page.', 'textdomain' ) );
+    }
+
+    // Validate and sanitize the input fields
+    if ( isset( $_POST['tour_name'], $_POST['tour_price'], $_POST['tour_description'] ) ) {
+        $tour_name = sanitize_text_field( $_POST['tour_name'] );
+        $tour_price = floatval( $_POST['tour_price'] );
+        $tour_description = sanitize_textarea_field( $_POST['tour_description'] );
+
+        // Store the tour data as an option (for simplicity)
+        $tours = get_option( 'saved_tours', array() );
+        $tours[] = array(
+            'name'        => $tour_name,
+            'price'       => $tour_price,
+            'description' => $tour_description,
+        );
+        update_option( 'saved_tours', $tours );
+
+        // Redirect with a success message
+        wp_redirect( admin_url( 'admin.php?page=tours-admin-page&status=success' ) );
+        exit;
+    }
+
+    // Redirect back with an error if data is invalid
+    wp_redirect( admin_url( 'admin.php?page=tours-admin-page&status=error' ) );
+    exit;
+}
+add_action( 'admin_post_save_tour_data', 'handle_save_tour_data' );
 function display_tours_page() {
     ?>
     <div class="wrap">
         <h1><?php esc_html_e( 'Add New Tour', 'textdomain' ); ?></h1>
+
+        <?php if ( isset( $_GET['status'] ) && $_GET['status'] === 'success' ) : ?>
+            <div class="updated notice"><p><?php esc_html_e( 'Tour saved successfully!', 'textdomain' ); ?></p></div>
+        <?php endif; ?>
+
         <form method="post" action="<?php echo admin_url( 'admin-post.php' ); ?>">
-            <!-- Hidden field to specify the action -->
             <input type="hidden" name="action" value="save_tour_data">
             
             <table class="form-table">
@@ -78,47 +161,27 @@ function display_tours_page() {
             </table>
             <?php submit_button( __( 'Save Tour', 'textdomain' ) ); ?>
         </form>
+
+        <h2><?php esc_html_e( 'All Tours', 'textdomain' ); ?></h2>
+
+        <?php
+        // Retrieve saved tours
+        $tours = get_option( 'saved_tours', array() );
+        if ( ! empty( $tours ) ) :
+        ?>
+            <ul>
+                <?php foreach ( $tours as $tour ) : ?>
+                    <li><strong><?php echo esc_html( $tour['name'] ); ?></strong><br>
+                        Price: <?php echo esc_html( $tour['price'] ); ?><br>
+                        Description: <?php echo esc_html( $tour['description'] ); ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php else : ?>
+            <p><?php esc_html_e( 'No tours added yet.', 'textdomain' ); ?></p>
+        <?php endif; ?>
     </div>
     <?php
 }
-function handle_save_tour_data() {
-    // Check if the current user has permission
-    if ( ! current_user_can( 'manage_options' ) ) {
-        wp_die( __( 'You do not have sufficient permissions to access this page.', 'textdomain' ) );
-    }
-
-    // Validate and sanitize the input fields
-    if ( isset( $_POST['tour_name'], $_POST['tour_price'], $_POST['tour_description'] ) ) {
-        $tour_name = sanitize_text_field( $_POST['tour_name'] );
-        $tour_price = floatval( $_POST['tour_price'] );
-        $tour_description = sanitize_textarea_field( $_POST['tour_description'] );
-
-        // Save data to the database (e.g., as an option or in a custom table)
-        $tour_data = [
-            'name'        => $tour_name,
-            'price'       => $tour_price,
-            'description' => $tour_description,
-        ];
-        add_option( 'last_saved_tour', $tour_data ); // Save as an option for simplicity
-
-        // Redirect with a success message
-        wp_redirect( admin_url( 'admin.php?page=tours-admin-page&status=success' ) );
-        exit;
-    }
-
-    // Redirect back with an error if data is invalid
-    wp_redirect( admin_url( 'admin.php?page=tours-admin-page&status=error' ) );
-    exit;
-}
-add_action( 'admin_post_save_tour_data', 'handle_save_tour_data' );
-
-if ( isset( $_GET['status'] ) ) {
-    if ( $_GET['status'] === 'success' ) {
-        echo '<div class="updated notice"><p>' . esc_html__( 'Tour saved successfully!', 'textdomain' ) . '</p></div>';
-    } elseif ( $_GET['status'] === 'error' ) {
-        echo '<div class="error notice"><p>' . esc_html__( 'There was an error saving the tour.', 'textdomain' ) . '</p></div>';
-    }
-}
-
     
 ?>
