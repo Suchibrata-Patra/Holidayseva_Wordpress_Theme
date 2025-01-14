@@ -46,6 +46,7 @@ function create_book_post_type() {
         'show_in_rest' => true, // Enable Gutenberg block editor
         'has_archive' => true,
         'rewrite' => array('slug' => 'books'),
+        'menu_position' => 2, // Add this line
     );
     register_post_type('book', $args);
 }
