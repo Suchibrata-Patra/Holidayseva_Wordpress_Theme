@@ -28,8 +28,8 @@ function create_book_post_type() {
         'labels' => array(
             'name' => 'Tours',
             'singular_name' => 'Tours',
-            'add_new' => 'Add New Book',
-            'add_new_item' => 'Add New Book',
+            'add_new' => 'Add New Tour',
+            'add_new_item' => 'Add New Tour',
             'edit_item' => 'Edit Book',
             'new_item' => 'New Book',
             'view_item' => 'View Book',
