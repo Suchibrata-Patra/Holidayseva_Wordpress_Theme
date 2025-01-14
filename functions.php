@@ -76,5 +76,34 @@ function create_book_post_type() {
 
 // Register the custom post type on 'init' action
 add_action('init', 'create_book_post_type');
+// Register custom taxonomy for "Destinations"
+function create_destination_taxonomy() {
+    $labels = array(
+        'name'              => 'Destinations',
+        'singular_name'     => 'Destination',
+        'search_items'      => 'Search Destinations',
+        'all_items'         => 'All Destinations',
+        'parent_item'       => 'Parent Destination',
+        'parent_item_colon' => 'Parent Destination:',
+        'edit_item'         => 'Edit Destination',
+        'update_item'       => 'Update Destination',
+        'add_new_item'      => 'Add New Destination',
+        'new_item_name'     => 'New Destination Name',
+        'menu_name'         => 'Destinations',
+    );
+
+    $args = array(
+        'hierarchical'      => true, // Makes it behave like categories
+        'show_ui'            => true,
+        'show_admin_column'  => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'destination'),
+    );
+
+    // Register the taxonomy for the "tour" custom post type
+    register_taxonomy('destination', array('tour'), $args);
+}
+
+add_action('init', 'create_destination_taxonomy');
 
 ?>
