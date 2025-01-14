@@ -32,7 +32,48 @@
                     <img src="<?php echo esc_url($book_cover_image); ?>" alt="Cover Image" class="book-cover-image" />
                 </div>
         <?php endif; ?>
+
+        <!-- Send Book Details via Subdomain Button -->
+        <button id="send-book-details" class="send-book-details-btn">Send Book Details</button>
     </div>
 </div>
+
+<script>
+    document.getElementById('send-book-details').addEventListener('click', function() {
+        // Retrieve all the custom fields
+        var bookName = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_name', true)); ?>';
+        var bookIsbn = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_isbn', true)); ?>';
+        var bookDetails = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_details', true)); ?>';
+        var bookAuthor = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_author', true)); ?>';
+        var bookPublisher = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_publisher', true)); ?>';
+        var bookPublishDate = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_publish_date', true)); ?>';
+        var bookLanguage = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_language', true)); ?>';
+        var bookGenre = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_genre', true)); ?>';
+        var bookPages = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_pages', true)); ?>';
+        var bookCoverType = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_cover_type', true)); ?>';
+        var bookPrice = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_price', true)); ?>';
+        var bookStock = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_stock', true)); ?>';
+        var bookEdition = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_edition', true)); ?>';
+
+        // Construct the URL with query parameters
+        var url = 'https://sub.domain.com/submit-details?' +
+                  'book_name=' + encodeURIComponent(bookName) + '&' +
+                  'isbn=' + encodeURIComponent(bookIsbn) + '&' +
+                  'details=' + encodeURIComponent(bookDetails) + '&' +
+                  'author=' + encodeURIComponent(bookAuthor) + '&' +
+                  'publisher=' + encodeURIComponent(bookPublisher) + '&' +
+                  'publish_date=' + encodeURIComponent(bookPublishDate) + '&' +
+                  'language=' + encodeURIComponent(bookLanguage) + '&' +
+                  'genre=' + encodeURIComponent(bookGenre) + '&' +
+                  'pages=' + encodeURIComponent(bookPages) + '&' +
+                  'cover_type=' + encodeURIComponent(bookCoverType) + '&' +
+                  'price=' + encodeURIComponent(bookPrice) + '&' +
+                  'stock=' + encodeURIComponent(bookStock) + '&' +
+                  'edition=' + encodeURIComponent(bookEdition);
+
+        // Redirect to the URL
+        window.location.href = url;
+    });
+</script>
 
 <?php get_footer(); ?>
