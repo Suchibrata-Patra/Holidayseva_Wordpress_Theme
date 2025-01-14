@@ -56,7 +56,7 @@
         var bookEdition = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_edition', true)); ?>';
 
         // Construct the URL with query parameters
-        var url = 'https://sub.domain.com/submit-details?' +
+        var url = 'https://booking.holidayseva.com/submit-details?' +
                   'book_name=' + encodeURIComponent(bookName) + '&' +
                   'isbn=' + encodeURIComponent(bookIsbn) + '&' +
                   'details=' + encodeURIComponent(bookDetails) + '&' +
