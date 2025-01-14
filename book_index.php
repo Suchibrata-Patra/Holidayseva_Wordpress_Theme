@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Book Index
- * Description: A custom template for displaying a list of books with inline styling.
+ * Description: A custom template for displaying a list of books with inline styling and a search bar.
  */
 get_header(); ?>
 
@@ -10,11 +10,22 @@ get_header(); ?>
         Our Books
     </h1>
     
+    <!-- Search Bar Form -->
+    <form role="search" method="get" class="book-search-form" action="<?php echo esc_url(home_url('/')); ?>" style="margin-bottom: 40px;">
+        <input type="text" name="s" placeholder="Search books..." value="<?php echo get_search_query(); ?>" 
+               style="padding: 10px; font-size: 1em; width: 250px; border: 2px solid #ccc; border-radius: 5px;">
+        <input type="hidden" name="post_type" value="book" /> <!-- Ensure it searches only books -->
+        <button type="submit" style="padding: 10px 15px; background-color: #0073e6; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Search
+        </button>
+    </form>
+    
     <?php
     // Define the custom query to get all "book" posts
     $args = array(
         'post_type' => 'book', // Custom post type "book"
         'posts_per_page' => -1, // Show all books
+        's' => get_search_query(), // Search query
     );
 
     $book_query = new WP_Query($args);
