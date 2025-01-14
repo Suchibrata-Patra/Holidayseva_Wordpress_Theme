@@ -42,7 +42,7 @@ function create_book_post_type() {
         ),
         'public' => true,
         'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
-        'menu_icon' => 'dashicons-book',
+        'menu_icon' => 'palm_tree',
         'show_in_rest' => true, // Enable Gutenberg block editor
         'has_archive' => true,
         'rewrite' => array('slug' => 'books'),
