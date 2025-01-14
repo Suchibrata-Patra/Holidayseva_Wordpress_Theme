@@ -1,4 +1,5 @@
 <?php
+add_theme_support('post-thumbnails');
 
 // Function to create the custom table for bookings
 function create_custom_table() {
