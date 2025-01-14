@@ -68,10 +68,56 @@ add_action('add_meta_boxes', 'add_book_meta_boxes');
 function display_book_meta_box($post) {
     // Retrieve existing custom fields values
     $book_cover_image = get_post_meta($post->ID, '_book_cover_image', true);
+    $book_name = get_post_meta($post->ID, '_book_name', true);
+    $book_isbn = get_post_meta($post->ID, '_book_isbn', true);
+    $book_details = get_post_meta($post->ID, '_book_details', true);
+    $book_author = get_post_meta($post->ID, '_book_author', true);
+    $book_publisher = get_post_meta($post->ID, '_book_publisher', true);
+    $book_publish_date = get_post_meta($post->ID, '_book_publish_date', true);
+    $book_language = get_post_meta($post->ID, '_book_language', true);
+    $book_genre = get_post_meta($post->ID, '_book_genre', true);
+    $book_pages = get_post_meta($post->ID, '_book_pages', true);
+    $book_cover_type = get_post_meta($post->ID, '_book_cover_type', true);
+    $book_price = get_post_meta($post->ID, '_book_price', true);
+    $book_stock = get_post_meta($post->ID, '_book_stock', true);
+    $book_edition = get_post_meta($post->ID, '_book_edition', true);
 
     ?>
-    <!-- Other fields go here... -->
-
+<label for="book_name">Book Name:</label>
+    <input type="text" name="book_name" value="<?php echo esc_attr($book_name); ?>" class="widefat" />
+    
+    <label for="book_isbn">ISBN:</label>
+    <input type="text" name="book_isbn" value="<?php echo esc_attr($book_isbn); ?>" class="widefat" />
+    
+    <label for="book_details">Details:</label>
+    <textarea name="book_details" class="widefat"><?php echo esc_textarea($book_details); ?></textarea>
+    
+    <label for="book_author">Author:</label>
+    <input type="text" name="book_author" value="<?php echo esc_attr($book_author); ?>" class="widefat" />
+    
+    <label for="book_publisher">Publisher:</label>
+    <input type="text" name="book_publisher" value="<?php echo esc_attr($book_publisher); ?>" class="widefat" />
+    
+    <label for="book_publish_date">Publish Date:</label>
+    <input type="date" name="book_publish_date" value="<?php echo esc_attr($book_publish_date); ?>" class="widefat" />
+    
+    <label for="book_language">Language:</label>
+    <input type="text" name="book_language" value="<?php echo esc_attr($book_language); ?>" class="widefat" />
+    
+    <label for="book_genre">Genre:</label>
+    <input type="text" name="book_genre" value="<?php echo esc_attr($book_genre); ?>" class="widefat" />
+    
+    <label for="book_pages">Pages:</label>
+    <input type="number" name="book_pages" value="<?php echo esc_attr($book_pages); ?>" class="widefat" />
+    
+    <label for="book_cover_type">Cover Type:</label>
+    <input type="text" name="book_cover_type" value="<?php echo esc_attr($book_cover_type); ?>" class="widefat" />
+    
+    <label for="book_price">Price:</label>
+    <input type="number" name="book_price" value="<?php echo esc_attr($book_price); ?>" class="widefat" />
+    
+    <label for="book_stock">Stock:</label>
+    <input type="number" name="book_stock" value="<?php echo esc_attr($book_stock); ?>" class="widefat" />
     <label for="book_cover_image">Cover Image:</label>
     <input type="text" name="book_cover_image" id="book_cover_image" value="<?php echo esc_attr($book_cover_image); ?>" class="widefat" />
     <button type="button" id="book_cover_image_button" class="button">Select Image</button>
