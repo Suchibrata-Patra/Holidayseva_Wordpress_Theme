@@ -18,7 +18,9 @@
 <link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/conact_sidebar.css">
 <!-- For getting Access of centralised Colour Scheme -->
 <link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/holidayseva_colors.css">
+</head>
 
+<body>
 <!-- Main Header Content -->
 <header class="new-wrapper">
     <div class="new-header">
@@ -159,4 +161,3 @@
     });
 </script>
 <?php include_once('CallButttonSidebar.php');?>
-</head>
