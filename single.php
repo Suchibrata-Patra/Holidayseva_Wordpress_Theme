@@ -24,12 +24,18 @@
         <strong>Stock:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_stock', true)); ?><br>
         <strong>Edition:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_edition', true)); ?><br>
 
-        <!-- Display Cover Image -->
+        <!-- Display All Cover Images -->
         <?php 
-            $book_cover_image = get_post_meta(get_the_ID(), '_book_cover_image', true); 
-            if ($book_cover_image) : ?>
-                <div class="book-cover">
-                    <img src="<?php echo esc_url($book_cover_image); ?>" alt="Cover Image" class="book-cover-image" />
+            // Retrieve all cover images
+            $book_cover_images = get_post_meta(get_the_ID(), '_book_cover_images', true); 
+
+            if (!empty($book_cover_images) && is_array($book_cover_images)) : ?>
+                <div class="book-covers">
+                    <?php foreach ($book_cover_images as $book_cover_image) : ?>
+                        <div class="book-cover">
+                            <img src="<?php echo esc_url($book_cover_image); ?>" alt="Cover Image" class="book-cover-image" />
+                        </div>
+                    <?php endforeach; ?>
                 </div>
         <?php endif; ?>
 
