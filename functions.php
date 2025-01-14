@@ -1,5 +1,51 @@
 <?php
-// Add custom post type for Books
+
+// Function to create the custom table
+function create_custom_table() {
+    global $wpdb;
+    
+    $table_name = $wpdb->prefix . 'custom_bookings'; // Name of your custom table
+    $charset_collate = $wpdb->get_charset_collate();
+
+    // SQL query to create the table
+    $sql = "CREATE TABLE $table_name (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        customer_name varchar(255) NOT NULL,
+        tour_id mediumint(9) NOT NULL,
+        booking_date datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
+        payment_status varchar(20) NOT NULL,
+        PRIMARY KEY  (id)
+    ) $charset_collate;";
+
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
+}
+
+// Register theme activation hook to create the table when the theme is activated
+function theme_activation() {
+    create_custom_table();  // Create the custom table on theme activation
+    // Other theme activation actions, if needed
+}
+add_action('after_switch_theme', 'theme_activation');
+
+// Register navigation menu
+register_nav_menus(
+    array('primary_menu' => 'Top Menu')
+);
+
+// Add theme support for post thumbnails and custom header
+add_theme_support('post-thumbnails');
+add_theme_support('custom-header');
+
+// Register sidebar location
+register_sidebar(
+    array(
+        'name' => 'Sidebar Location',
+        'id' => 'sidebar',
+    )
+);
+
+// Function to create a custom post type for Books
 function create_book_post_type() {
     $args = array(
         'labels' => array(
@@ -27,129 +73,37 @@ function create_book_post_type() {
     );
     register_post_type('book', $args);
 }
+
+// Register the custom post type on 'init' action
 add_action('init', 'create_book_post_type');
-
-// Add custom menu under the 'Bookings' section in the admin
-function custom_bookings_menu() {
-    add_submenu_page(
-        'edit.php?post_type=booking', // Add this under the 'Bookings' menu
-        'Manage Books',               // Page title
-        'Manage Books',               // Menu title
-        'manage_options',             // Capability
-        'manage_books',               // Menu slug
-        'manage_books_page'           // Function to display the page
+// Register custom taxonomy for "Destinations"
+function create_destination_taxonomy() {
+    $labels = array(
+        'name'              => 'Destinations',
+        'singular_name'     => 'Destination',
+        'search_items'      => 'Search Destinations',
+        'all_items'         => 'All Destinations',
+        'parent_item'       => 'Parent Destination',
+        'parent_item_colon' => 'Parent Destination:',
+        'edit_item'         => 'Edit Destination',
+        'update_item'       => 'Update Destination',
+        'add_new_item'      => 'Add New Destination',
+        'new_item_name'     => 'New Destination Name',
+        'menu_name'         => 'Destinations',
     );
+
+    $args = array(
+        'hierarchical'      => true, // Makes it behave like categories
+        'show_ui'            => true,
+        'show_admin_column'  => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'destination'),
+    );
+
+    // Register the taxonomy for the "tour" custom post type
+    register_taxonomy('destination', array('tour'), $args);
 }
-add_action('admin_menu', 'custom_bookings_menu');
 
-// Function to display the custom admin page
-function manage_books_page() {
-    // Check if the user is allowed to manage books
-    if (!current_user_can('manage_options')) {
-        return;
-    }
+add_action('init', 'create_destination_taxonomy');
 
-    // Handle form submission
-    if (isset($_POST['submit_book_form'])) {
-        $post_data = array(
-            'post_title'   => sanitize_text_field($_POST['book_name']),
-            'post_content' => sanitize_textarea_field($_POST['book_details']),
-            'post_type'    => 'book',
-            'post_status'  => 'publish',
-        );
-
-        // Handle existing book (if editing)
-        if (!empty($_POST['book_id'])) {
-            $post_data['ID'] = $_POST['book_id'];
-            $post_id = wp_update_post($post_data);
-        } else {
-            $post_id = wp_insert_post($post_data);
-        }
-
-        // Save custom fields
-        update_post_meta($post_id, '_book_name', sanitize_text_field($_POST['book_name']));
-        update_post_meta($post_id, '_book_isbn', sanitize_text_field($_POST['book_isbn']));
-        update_post_meta($post_id, '_book_details', sanitize_textarea_field($_POST['book_details']));
-        update_post_meta($post_id, '_book_author', sanitize_text_field($_POST['book_author']));
-        update_post_meta($post_id, '_book_publisher', sanitize_text_field($_POST['book_publisher']));
-        update_post_meta($post_id, '_book_publish_date', sanitize_text_field($_POST['book_publish_date']));
-        update_post_meta($post_id, '_book_language', sanitize_text_field($_POST['book_language']));
-        update_post_meta($post_id, '_book_genre', sanitize_text_field($_POST['book_genre']));
-        update_post_meta($post_id, '_book_pages', intval($_POST['book_pages']));
-        update_post_meta($post_id, '_book_cover_type', sanitize_text_field($_POST['book_cover_type']));
-        update_post_meta($post_id, '_book_price', floatval($_POST['book_price']));
-        update_post_meta($post_id, '_book_stock', intval($_POST['book_stock']));
-        update_post_meta($post_id, '_book_edition', sanitize_text_field($_POST['book_edition']));
-
-        // Redirect to the Books list page (edit.php?post_type=book)
-        wp_redirect(admin_url('edit.php?post_type=book'));
-        exit;
-    }
-
-    // Display the form
-    ?>
-    <div class="wrap">
-        <h1 class="wp-heading-inline">Manage Books</h1>
-        
-        <form method="post" action="">
-            <table class="form-table">
-                <tr>
-                    <th><label for="book_name">Book Name:</label></th>
-                    <td><input type="text" name="book_name" id="book_name" class="regular-text" required /></td>
-                </tr>
-                <tr>
-                    <th><label for="book_isbn">ISBN:</label></th>
-                    <td><input type="text" name="book_isbn" id="book_isbn" class="regular-text" required /></td>
-                </tr>
-                <tr>
-                    <th><label for="book_details">Details:</label></th>
-                    <td><textarea name="book_details" id="book_details" class="large-text" required></textarea></td>
-                </tr>
-                <tr>
-                    <th><label for="book_author">Author:</label></th>
-                    <td><input type="text" name="book_author" id="book_author" class="regular-text" required /></td>
-                </tr>
-                <tr>
-                    <th><label for="book_publisher">Publisher:</label></th>
-                    <td><input type="text" name="book_publisher" id="book_publisher" class="regular-text" required /></td>
-                </tr>
-                <tr>
-                    <th><label for="book_publish_date">Publish Date:</label></th>
-                    <td><input type="date" name="book_publish_date" id="book_publish_date" class="regular-text" required /></td>
-                </tr>
-                <tr>
-                    <th><label for="book_language">Language:</label></th>
-                    <td><input type="text" name="book_language" id="book_language" class="regular-text" required /></td>
-                </tr>
-                <tr>
-                    <th><label for="book_genre">Genre:</label></th>
-                    <td><input type="text" name="book_genre" id="book_genre" class="regular-text" required /></td>
-                </tr>
-                <tr>
-                    <th><label for="book_pages">Pages:</label></th>
-                    <td><input type="number" name="book_pages" id="book_pages" class="regular-text" required /></td>
-                </tr>
-                <tr>
-                    <th><label for="book_cover_type">Cover Type:</label></th>
-                    <td><input type="text" name="book_cover_type" id="book_cover_type" class="regular-text" required /></td>
-                </tr>
-                <tr>
-                    <th><label for="book_price">Price:</label></th>
-                    <td><input type="number" name="book_price" id="book_price" class="regular-text" required /></td>
-                </tr>
-                <tr>
-                    <th><label for="book_stock">Stock:</label></th>
-                    <td><input type="number" name="book_stock" id="book_stock" class="regular-text" required /></td>
-                </tr>
-                <tr>
-                    <th><label for="book_edition">Edition:</label></th>
-                    <td><input type="text" name="book_edition" id="book_edition" class="regular-text" required /></td>
-                </tr>
-            </table>
-            
-            <input type="submit" name="submit_book_form" value="Save Book" class="button button-primary" />
-        </form>
-    </div>
-    <?php
-}
 ?>
