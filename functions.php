@@ -1,6 +1,6 @@
 <?php
 
-// Function to create the custom table
+// Function to create the custom table for bookings
 function create_custom_table() {
     global $wpdb;
     
@@ -40,7 +40,6 @@ function create_book_post_type() {
             'uploaded_to_this_item' => 'Uploaded to this book',
         ),
         'public' => true,
-        'hierarchical' => false, // Books are not hierarchical themselves
         'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
         'menu_icon' => 'dashicons-book',
         'show_in_rest' => true, // Enable Gutenberg block editor
@@ -54,12 +53,12 @@ add_action('init', 'create_book_post_type');
 // Add custom fields for Book details
 function add_book_meta_boxes() {
     add_meta_box(
-        'book_details_meta_box', // Meta box ID
-        'Book Details', // Title of the meta box
-        'display_book_meta_box', // Callback function to display the meta box
-        'book', // Post type where it will be displayed
-        'normal', // Position of the meta box
-        'high' // Priority of the meta box
+        'book_details_meta_box', 
+        'Book Details', 
+        'display_book_meta_box', 
+        'book', 
+        'normal', 
+        'high' 
     );
 }
 
@@ -68,60 +67,42 @@ add_action('add_meta_boxes', 'add_book_meta_boxes');
 // Callback function to display custom fields in the meta box
 function display_book_meta_box($post) {
     // Retrieve existing custom fields values
-    $book_name = get_post_meta($post->ID, '_book_name', true);
-    $book_isbn = get_post_meta($post->ID, '_book_isbn', true);
-    $book_details = get_post_meta($post->ID, '_book_details', true);
-    $book_author = get_post_meta($post->ID, '_book_author', true);
-    $book_publisher = get_post_meta($post->ID, '_book_publisher', true);
-    $book_publish_date = get_post_meta($post->ID, '_book_publish_date', true);
-    $book_language = get_post_meta($post->ID, '_book_language', true);
-    $book_genre = get_post_meta($post->ID, '_book_genre', true);
-    $book_pages = get_post_meta($post->ID, '_book_pages', true);
-    $book_cover_type = get_post_meta($post->ID, '_book_cover_type', true);
-    $book_price = get_post_meta($post->ID, '_book_price', true);
-    $book_stock = get_post_meta($post->ID, '_book_stock', true);
-    $book_edition = get_post_meta($post->ID, '_book_edition', true);
+    $book_cover_image = get_post_meta($post->ID, '_book_cover_image', true);
 
-    // Display custom fields in the meta box
     ?>
-    <label for="book_name">Book Name:</label>
-    <input type="text" name="book_name" value="<?php echo esc_attr($book_name); ?>" class="widefat" />
-    
-    <label for="book_isbn">ISBN:</label>
-    <input type="text" name="book_isbn" value="<?php echo esc_attr($book_isbn); ?>" class="widefat" />
-    
-    <label for="book_details">Details:</label>
-    <textarea name="book_details" class="widefat"><?php echo esc_textarea($book_details); ?></textarea>
-    
-    <label for="book_author">Author:</label>
-    <input type="text" name="book_author" value="<?php echo esc_attr($book_author); ?>" class="widefat" />
-    
-    <label for="book_publisher">Publisher:</label>
-    <input type="text" name="book_publisher" value="<?php echo esc_attr($book_publisher); ?>" class="widefat" />
-    
-    <label for="book_publish_date">Publish Date:</label>
-    <input type="date" name="book_publish_date" value="<?php echo esc_attr($book_publish_date); ?>" class="widefat" />
-    
-    <label for="book_language">Language:</label>
-    <input type="text" name="book_language" value="<?php echo esc_attr($book_language); ?>" class="widefat" />
-    
-    <label for="book_genre">Genre:</label>
-    <input type="text" name="book_genre" value="<?php echo esc_attr($book_genre); ?>" class="widefat" />
-    
-    <label for="book_pages">Pages:</label>
-    <input type="number" name="book_pages" value="<?php echo esc_attr($book_pages); ?>" class="widefat" />
-    
-    <label for="book_cover_type">Cover Type:</label>
-    <input type="text" name="book_cover_type" value="<?php echo esc_attr($book_cover_type); ?>" class="widefat" />
-    
-    <label for="book_price">Price:</label>
-    <input type="number" name="book_price" value="<?php echo esc_attr($book_price); ?>" class="widefat" />
-    
-    <label for="book_stock">Stock:</label>
-    <input type="number" name="book_stock" value="<?php echo esc_attr($book_stock); ?>" class="widefat" />
-    
-    <label for="book_edition">Edition:</label>
-    <input type="text" name="book_edition" value="<?php echo esc_attr($book_edition); ?>" class="widefat" />
+    <!-- Other fields go here... -->
+
+    <label for="book_cover_image">Cover Image:</label>
+    <input type="text" name="book_cover_image" id="book_cover_image" value="<?php echo esc_attr($book_cover_image); ?>" class="widefat" />
+    <button type="button" id="book_cover_image_button" class="button">Select Image</button>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($){
+            var mediaUploader;
+            $('#book_cover_image_button').click(function(e) {
+                e.preventDefault();
+                if (mediaUploader) {
+                    mediaUploader.open();
+                    return;
+                }
+
+                mediaUploader = wp.media.frames.file_frame = wp.media({
+                    title: 'Select Cover Image',
+                    button: {
+                        text: 'Select Image'
+                    },
+                    multiple: false
+                });
+
+                mediaUploader.on('select', function() {
+                    var attachment = mediaUploader.state().get('selection').first().toJSON();
+                    $('#book_cover_image').val(attachment.url);
+                });
+
+                mediaUploader.open();
+            });
+        });
+    </script>
     <?php
 }
 
@@ -129,6 +110,10 @@ function display_book_meta_box($post) {
 function save_book_meta($post_id) {
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
 
+    // Save custom fields values
+    if (isset($_POST['book_cover_image'])) {
+        update_post_meta($post_id, '_book_cover_image', esc_url_raw($_POST['book_cover_image']));
+    }
     if (isset($_POST['book_name'])) {
         update_post_meta($post_id, '_book_name', sanitize_text_field($_POST['book_name']));
     }
@@ -171,4 +156,8 @@ function save_book_meta($post_id) {
 }
 
 add_action('save_post', 'save_book_meta');
+
+// Optionally, you can add the function to create a custom table (call create_custom_table when needed)
+add_action('after_switch_theme', 'create_custom_table');
+
 ?>
