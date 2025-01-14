@@ -50,31 +50,23 @@ add_action('init', 'create_book_post_type');
 function create_tour_post_type() {
     $args = array(
         'labels' => array(
-            'name'               => 'Tours',
-            'singular_name'      => 'Tour',
-            'add_new'            => 'Add New Tour',
-            'add_new_item'       => 'Add New Tour',
-            'edit_item'          => 'Edit Tour',
-            'new_item'           => 'New Tour',
-            'view_item'          => 'View Tour',
-            'search_items'       => 'Search Tours',
-            'not_found'          => 'No Tours found',
-            'not_found_in_trash' => 'No Tours found in Trash',
-            'all_items'          => 'All Tours',
-            'insert_into_item'   => 'Insert into tour',
-            'uploaded_to_this_item' => 'Uploaded to this tour',
+            'name' => 'Tours',
+            'singular_name' => 'Tour',
+            'add_new' => 'Add New Tour',
+            'all_items' => 'All Tours',
         ),
         'public' => true,
-        'hierarchical' => false, // Tours are not hierarchical
+        'hierarchical' => false,
         'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt'),
         'menu_icon' => 'dashicons-palmtree',
-        'show_in_rest' => true, // Enable Gutenberg block editor
+        'show_in_rest' => true,
         'has_archive' => true,
-        'rewrite' => array('slug' => 'tours'),
+        'rewrite' => array('slug' => 'tours'), // Check this slug
     );
     register_post_type('tour', $args);
 }
 add_action('init', 'create_tour_post_type');
+
 
 // Handle saving tour data (saving as an option for simplicity)
 function handle_save_tour_data() {
