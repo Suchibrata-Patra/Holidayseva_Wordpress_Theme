@@ -3,7 +3,26 @@
     get_post(); 
 ?>
 <div class="book-details">
+    <!-- Book Cover Images at the Top -->
+    <?php 
+        // Retrieve all cover images
+        $book_cover_images = get_post_meta(get_the_ID(), '_book_cover_images', true); 
+        if (!empty($book_cover_images) && is_array($book_cover_images)) : ?>
+            <div class="book-cover-section">
+                <h3>Book Covers</h3>
+                <div class="book-cover-gallery">
+                    <?php foreach ($book_cover_images as $book_cover_image) : ?>
+                        <div class="book-cover">
+                            <img src="<?php echo esc_url($book_cover_image); ?>" alt="Cover Image" class="book-cover-image" />
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+    <?php endif; ?>
+
+    <!-- Book Title -->
     <h1 class="book-title"><?php the_title(); ?></h1>
+
     <div class="book-content">
         <?php the_content(); ?>
     </div>
@@ -52,27 +71,10 @@
                 <strong>Edition:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_edition', true)); ?>
             </div>
         </div>
-
-        <!-- Display All Cover Images -->
-        <?php 
-            // Retrieve all cover images
-            $book_cover_images = get_post_meta(get_the_ID(), '_book_cover_images', true); 
-            if (!empty($book_cover_images) && is_array($book_cover_images)) : ?>
-                <div class="book-covers">
-                    <h3>Cover Images</h3>
-                    <div class="book-cover-gallery">
-                        <?php foreach ($book_cover_images as $book_cover_image) : ?>
-                            <div class="book-cover">
-                                <img src="<?php echo esc_url($book_cover_image); ?>" alt="Cover Image" class="book-cover-image" />
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-        <?php endif; ?>
-
-        <!-- Send Book Details via Subdomain Button -->
-        <button id="send-book-details" class="send-book-details-btn">Send Book Details</button>
     </div>
+
+    <!-- Send Book Details Button -->
+    <button id="send-book-details" class="send-book-details-btn">Send Book Details</button>
 </div>
 
 <!-- CSS -->
@@ -85,43 +87,25 @@
         border-radius: 8px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-    .book-title {
-        font-size: 2rem;
-        font-weight: bold;
-        color: #2c3e50;
-        margin-bottom: 20px;
+    
+    .book-cover-section {
+        text-align: center;
+        margin-bottom: 30px;
     }
-    .book-content {
-        margin-bottom: 20px;
-    }
-    .book-meta {
-        margin-top: 30px;
-    }
-    .book-meta h3 {
+    
+    .book-cover-section h3 {
         font-size: 1.5rem;
         color: #34495e;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
-    .book-meta-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    .book-meta-item {
-        font-size: 1rem;
-        color: #7f8c8d;
-    }
-    .book-meta-item strong {
-        color: #2c3e50;
-    }
-    .book-covers {
-        margin-top: 20px;
-    }
+    
     .book-cover-gallery {
         display: flex;
         gap: 15px;
+        justify-content: center;
         flex-wrap: wrap;
     }
+
     .book-cover {
         width: 150px;
         height: 200px;
@@ -129,11 +113,49 @@
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
+
     .book-cover img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
+
+    .book-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .book-content {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .book-meta h3 {
+        font-size: 1.5rem;
+        color: #34495e;
+        margin-bottom: 15px;
+    }
+
+    .book-meta-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .book-meta-item {
+        font-size: 1rem;
+        color: #7f8c8d;
+    }
+
+    .book-meta-item strong {
+        color: #2c3e50;
+    }
+
     .send-book-details-btn {
         display: inline-block;
         background-color: #3498db;
@@ -144,7 +166,10 @@
         font-size: 1rem;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        margin: 0 auto;
+        display: block;
     }
+
     .send-book-details-btn:hover {
         background-color: #2980b9;
     }
