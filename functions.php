@@ -1,12 +1,13 @@
 <?php
 
+// Function to create the custom table
 function create_custom_table() {
     global $wpdb;
     
     $table_name = $wpdb->prefix . 'custom_bookings'; // Name of your custom table
     $charset_collate = $wpdb->get_charset_collate();
 
-    // SQL query to create table
+    // SQL query to create the table
     $sql = "CREATE TABLE $table_name (
         id mediumint(9) NOT NULL AUTO_INCREMENT,
         customer_name varchar(255) NOT NULL,
@@ -20,22 +21,32 @@ function create_custom_table() {
     dbDelta($sql);
 }
 
-// Register activation hook for the plugin
-register_activation_hook(__FILE__, 'create_custom_table');
-    register_nav_menus(
-        array('primary_menu'=>'Top Menu')
-    );
-    add_theme_support('post-thumbnails');
-    add_theme_support('custom-header');
+// Register theme activation hook to create the table when the theme is activated
+function theme_activation() {
+    create_custom_table();  // Create the custom table on theme activation
+    // Other theme activation actions, if needed
+}
+add_action('after_switch_theme', 'theme_activation');
 
+// Register navigation menu
+register_nav_menus(
+    array('primary_menu' => 'Top Menu')
+);
 
-    register_sidebar(
-        array(
-            'name'=>'sidebar Location',
-            'id'=>'sidebar'
-        )
-    );
-    function create_book_post_type() {
+// Add theme support for post thumbnails and custom header
+add_theme_support('post-thumbnails');
+add_theme_support('custom-header');
+
+// Register sidebar location
+register_sidebar(
+    array(
+        'name' => 'Sidebar Location',
+        'id' => 'sidebar',
+    )
+);
+
+// Function to create a custom post type for Books
+function create_book_post_type() {
     $args = array(
         'labels' => array(
             'name' => 'Books',
@@ -62,7 +73,8 @@ register_activation_hook(__FILE__, 'create_custom_table');
     );
     register_post_type('book', $args);
 }
+
+// Register the custom post type on 'init' action
 add_action('init', 'create_book_post_type');
 
-    
 ?>
