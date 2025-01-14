@@ -41,5 +41,44 @@
 }
 add_action('init', 'create_book_post_type');
 
+
+function register_tours_post_type() {
+    $labels = array(
+        'name'               => 'Tours',
+        'singular_name'      => 'Tour',
+        'menu_name'          => 'Tours',
+        'name_admin_bar'     => 'Tour',
+        'add_new'            => 'Add New',
+        'add_new_item'       => 'Add New Tour',
+        'new_item'           => 'New Tour',
+        'edit_item'          => 'Edit Tour',
+        'view_item'          => 'View Tour',
+        'all_items'          => 'All Tours',
+        'search_items'       => 'Search Tours',
+        'parent_item_colon'  => 'Parent Tours:',
+        'not_found'          => 'No tours found.',
+        'not_found_in_trash' => 'No tours found in Trash.',
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array( 'slug' => 'tours' ),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'menu_icon'          => 'dashicons-palmtree', // Choose an appropriate icon from https://developer.wordpress.org/resource/dashicons/
+        'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
+    );
+
+    register_post_type( 'tours', $args );
+}
+add_action( 'init', 'register_tours_post_type' );
+
     
 ?>
