@@ -81,7 +81,7 @@ function manage_books_page() {
         update_post_meta($post_id, '_book_stock', intval($_POST['book_stock']));
         update_post_meta($post_id, '_book_edition', sanitize_text_field($_POST['book_edition']));
 
-        // Redirect to avoid form resubmission
+        // Redirect to the Books list page (edit.php?post_type=book)
         wp_redirect(admin_url('edit.php?post_type=book'));
         exit;
     }
