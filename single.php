@@ -23,6 +23,15 @@
         <strong>Price:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_price', true)); ?><br>
         <strong>Stock:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_stock', true)); ?><br>
         <strong>Edition:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_edition', true)); ?><br>
+
+        <!-- Display Cover Image -->
+        <?php 
+            $book_cover_image = get_post_meta(get_the_ID(), '_book_cover_image', true); 
+            if ($book_cover_image) : ?>
+                <div class="book-cover">
+                    <img src="<?php echo esc_url($book_cover_image); ?>" alt="Cover Image" class="book-cover-image" />
+                </div>
+        <?php endif; ?>
     </div>
 </div>
 
