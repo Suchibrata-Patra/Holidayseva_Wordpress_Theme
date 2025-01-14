@@ -67,7 +67,7 @@ add_action('add_meta_boxes', 'add_book_meta_boxes');
 // Callback function to display custom fields in the meta box
 function display_book_meta_box($post) {
     // Retrieve existing custom fields values
-    $book_cover_image = get_post_meta($post->ID, '_book_cover_image', true);
+    $book_cover_images = get_post_meta($post->ID, '_book_cover_images', true);
     $book_name = get_post_meta($post->ID, '_book_name', true);
     $book_isbn = get_post_meta($post->ID, '_book_isbn', true);
     $book_details = get_post_meta($post->ID, '_book_details', true);
@@ -81,9 +81,9 @@ function display_book_meta_box($post) {
     $book_price = get_post_meta($post->ID, '_book_price', true);
     $book_stock = get_post_meta($post->ID, '_book_stock', true);
     $book_edition = get_post_meta($post->ID, '_book_edition', true);
-
+    
     ?>
-<label for="book_name">Book Name:</label>
+    <label for="book_name">Book Name:</label>
     <input type="text" name="book_name" value="<?php echo esc_attr($book_name); ?>" class="widefat" />
     
     <label for="book_isbn">ISBN:</label>
@@ -118,14 +118,15 @@ function display_book_meta_box($post) {
     
     <label for="book_stock">Stock:</label>
     <input type="number" name="book_stock" value="<?php echo esc_attr($book_stock); ?>" class="widefat" />
-    <label for="book_cover_image">Cover Image:</label>
-    <input type="text" name="book_cover_image" id="book_cover_image" value="<?php echo esc_attr($book_cover_image); ?>" class="widefat" />
-    <button type="button" id="book_cover_image_button" class="button">Select Image</button>
+
+    <label for="book_cover_images">Cover Images:</label>
+    <input type="text" name="book_cover_images" id="book_cover_images" value="<?php echo esc_attr(implode(',', (array)$book_cover_images)); ?>" class="widefat" />
+    <button type="button" id="book_cover_images_button" class="button">Select Images</button>
 
     <script type="text/javascript">
         jQuery(document).ready(function($){
             var mediaUploader;
-            $('#book_cover_image_button').click(function(e) {
+            $('#book_cover_images_button').click(function(e) {
                 e.preventDefault();
                 if (mediaUploader) {
                     mediaUploader.open();
@@ -133,16 +134,19 @@ function display_book_meta_box($post) {
                 }
 
                 mediaUploader = wp.media.frames.file_frame = wp.media({
-                    title: 'Select Cover Image',
+                    title: 'Select Cover Images',
                     button: {
-                        text: 'Select Image'
+                        text: 'Select Images'
                     },
-                    multiple: false
+                    multiple: true // Allow multiple file selection
                 });
 
                 mediaUploader.on('select', function() {
-                    var attachment = mediaUploader.state().get('selection').first().toJSON();
-                    $('#book_cover_image').val(attachment.url);
+                    var attachments = mediaUploader.state().get('selection').toJSON();
+                    var imageUrls = attachments.map(function(attachment) {
+                        return attachment.url;
+                    });
+                    $('#book_cover_images').val(imageUrls.join(', '));
                 });
 
                 mediaUploader.open();
@@ -157,8 +161,8 @@ function save_book_meta($post_id) {
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
 
     // Save custom fields values
-    if (isset($_POST['book_cover_image'])) {
-        update_post_meta($post_id, '_book_cover_image', esc_url_raw($_POST['book_cover_image']));
+    if (isset($_POST['book_cover_images'])) {
+        update_post_meta($post_id, '_book_cover_images', explode(',', sanitize_text_field($_POST['book_cover_images'])));
     }
     if (isset($_POST['book_name'])) {
         update_post_meta($post_id, '_book_name', sanitize_text_field($_POST['book_name']));
