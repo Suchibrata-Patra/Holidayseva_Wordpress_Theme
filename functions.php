@@ -1,5 +1,27 @@
 <?php
 
+function create_custom_table() {
+    global $wpdb;
+    
+    $table_name = $wpdb->prefix . 'custom_bookings'; // Name of your custom table
+    $charset_collate = $wpdb->get_charset_collate();
+
+    // SQL query to create table
+    $sql = "CREATE TABLE $table_name (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        customer_name varchar(255) NOT NULL,
+        tour_id mediumint(9) NOT NULL,
+        booking_date datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
+        payment_status varchar(20) NOT NULL,
+        PRIMARY KEY  (id)
+    ) $charset_collate;";
+
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
+}
+
+// Register activation hook for the plugin
+register_activation_hook(__FILE__, 'create_custom_table');
     register_nav_menus(
         array('primary_menu'=>'Top Menu')
     );
