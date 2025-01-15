@@ -184,7 +184,6 @@ add_action('admin_menu', 'add_trip_options_page');
 
 
 // Function to display the options page
-// Function to display the options page with Rank Math meta box
 function display_add_trip_page() {
     ?>
     <div class="wrap">
@@ -201,7 +200,7 @@ function display_add_trip_page() {
                 $tour_price = floatval($_POST['tour_price']);
                 $tour_availability = sanitize_text_field($_POST['tour_availability']);
                 $tour_cover_images = sanitize_text_field($_POST['tour_cover_images']);
-                
+
                 // Create a new post of type 'tour'
                 $tour_post = array(
                     'post_title' => $tour_name,
@@ -221,13 +220,6 @@ function display_add_trip_page() {
 
                 // Insert the post into the database
                 $post_id = wp_insert_post($tour_post);
-
-                // Insert Rank Math SEO meta fields
-                if (class_exists('RankMath')) {
-                    update_post_meta($post_id, '_rank_math_title', sanitize_text_field($_POST['rank_math_title']));
-                    update_post_meta($post_id, '_rank_math_description', sanitize_textarea_field($_POST['rank_math_description']));
-                    update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
-                }
 
                 if ($post_id) {
                     echo '<div class="updated"><p>Tour added successfully!</p></div>';
@@ -272,22 +264,6 @@ function display_add_trip_page() {
                     <th scope="row"><label for="tour_cover_images">Cover Images (comma-separated URLs):</label></th>
                     <td><input type="text" name="tour_cover_images" id="tour_cover_images" class="regular-text" required />
                     </td>
-                </tr>
-
-                <!-- Rank Math SEO Fields -->
-                <tr valign="top">
-                    <th scope="row"><label for="rank_math_title">SEO Title:</label></th>
-                    <td><input type="text" name="rank_math_title" id="rank_math_title" class="regular-text" /></td>
-                </tr>
-
-                <tr valign="top">
-                    <th scope="row"><label for="rank_math_description">SEO Description:</label></th>
-                    <td><textarea name="rank_math_description" id="rank_math_description" rows="3" class="large-text"></textarea></td>
-                </tr>
-
-                <tr valign="top">
-                    <th scope="row"><label for="rank_math_focus_keyword">Focus Keyword:</label></th>
-                    <td><input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword" class="regular-text" /></td>
                 </tr>
             </table>
 
