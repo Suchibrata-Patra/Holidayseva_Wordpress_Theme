@@ -90,3 +90,5 @@ function enqueue_media_uploader_scripts() {
     wp_enqueue_media();
 }
 add_action('admin_enqueue_scripts', 'enqueue_media_uploader_scripts');
+
+include('forms.php');
