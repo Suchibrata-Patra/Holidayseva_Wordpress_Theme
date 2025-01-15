@@ -86,7 +86,7 @@ function display_book_meta_box($post) {
     
     ?>
     <label for="book_name">Book Name:</label>
-    <input type="text" name="book_name" value="<?php echo esc_attr($book_name); ?>" class="widefat" style=""/>
+    <input type="text" name="book_name" value="<?php echo esc_attr($book_name); ?>" class="widefat" style="border:2px solid black;"/>
     
     <label for="book_isbn">ISBN:</label>
     <input type="text" name="book_isbn" value="<?php echo esc_attr($book_isbn); ?>" class="widefat" />
