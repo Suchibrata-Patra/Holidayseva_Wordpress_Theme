@@ -182,7 +182,25 @@ function add_trip_options_page() {
 }
 add_action('admin_menu', 'add_trip_options_page');
 
-
+function create_posttype() {
+  
+    register_post_type( 'events',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Events' ),
+                'singular_name' => __( 'Event' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'events'),
+            'show_in_rest' => true,
+  
+        )
+    );
+}
+// Hook our function to 'init' 
+add_action( 'init', 'create_posttype' );
 // Function to display the options page
 function display_add_trip_page() {
     ?>
