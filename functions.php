@@ -1,145 +1,215 @@
 <?php
+add_theme_support('post-thumbnails');
 
-// Register Custom Post Type for Tours
-function create_tour_post_type() {
+// Function to create the custom table for bookings
+function create_custom_table() {
+    global $wpdb;
+    
+    $table_name = $wpdb->prefix . 'custom_bookings'; // Name of your custom table
+    $charset_collate = $wpdb->get_charset_collate();
+
+    // SQL query to create the table
+    $sql = "CREATE TABLE $table_name (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        customer_name varchar(255) NOT NULL,
+        tour_id mediumint(9) NOT NULL,
+        booking_date datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
+        payment_status varchar(20) NOT NULL,
+        PRIMARY KEY  (id)
+    ) $charset_collate;";
+
+    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+    dbDelta($sql);
+}
+
+// Function to create a custom post type for Books
+function create_book_post_type() {
     $args = array(
         'labels' => array(
             'name' => 'Tours',
-            'singular_name' => 'Tour',
-            'add_new' => 'Add New',
+            'singular_name' => 'Tours',
+            'add_new' => 'Add New Tour',
             'add_new_item' => 'Add New Tour',
-            'edit_item' => 'Edit Tour',
-            'new_item' => 'New Tour',
-            'view_item' => 'View Tour',
-            'all_items' => 'All Tours',
-            'search_items' => 'Search Tours',
-            'not_found' => 'No tours found',
-            'not_found_in_trash' => 'No tours found in Trash',
-            'parent_item_colon' => '',
-            'menu_name' => 'Tours'
+            'edit_item' => 'Edit Book',
+            'new_item' => 'New Book',
+            'view_item' => 'View Book',
+            'search_items' => 'Search Books',
+            'not_found' => 'No Books found',
+            'not_found_in_trash' => 'No Books found in Trash',
+            'all_items' => 'All Books',
+            'insert_into_item' => 'Insert into book',
+            'uploaded_to_this_item' => 'Uploaded to this book',
         ),
         'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+        'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
+        'menu_icon' => 'dashicons-palmtree',
+        'show_in_rest' => true, // Enable Gutenberg block editor
         'has_archive' => true,
-        'rewrite' => array( 'slug' => 'tours' ),
-        'show_in_rest' => true,
+        'rewrite' => array('slug' => 'books'),
+        'menu_position' => 2, // Add this line
     );
-    register_post_type( 'tour', $args );
+    register_post_type('book', $args);
 }
-add_action( 'init', 'create_tour_post_type' );
+add_action('init', 'create_book_post_type');
 
-// Add custom fields (meta boxes) for Tour images
-function add_tour_meta_boxes() {
+// Add custom fields for Book details
+function add_book_meta_boxes() {
     add_meta_box(
-        'tour_images',
-        'Tour Images',
-        'tour_images_callback',
-        'tour',
-        'normal',
-        'high'
+        'book_details_meta_box', 
+        'Book Details', 
+        'display_book_meta_box', 
+        'book', 
+        'normal', 
+        'high' 
     );
 }
-add_action( 'add_meta_boxes', 'add_tour_meta_boxes' );
 
-// Callback function for Tour images meta box
-function tour_images_callback( $post ) {
-    wp_nonce_field( 'tour_images_nonce', 'tour_images_nonce_field' );
+add_action('add_meta_boxes', 'add_book_meta_boxes');
 
-    // Get stored values
-    $image1 = get_post_meta( $post->ID, '_tour_image_1', true );
-    $image2 = get_post_meta( $post->ID, '_tour_image_2', true );
-    $image3 = get_post_meta( $post->ID, '_tour_image_3', true );
-    $image4 = get_post_meta( $post->ID, '_tour_image_4', true );
-
+// Callback function to display custom fields in the meta box
+function display_book_meta_box($post) {
+    // Retrieve existing custom fields values
+    $book_cover_images = get_post_meta($post->ID, '_book_cover_images', true);
+    $book_name = get_post_meta($post->ID, '_book_name', true);
+    $book_isbn = get_post_meta($post->ID, '_book_isbn', true);
+    $book_details = get_post_meta($post->ID, '_book_details', true);
+    $book_author = get_post_meta($post->ID, '_book_author', true);
+    $book_publisher = get_post_meta($post->ID, '_book_publisher', true);
+    $book_publish_date = get_post_meta($post->ID, '_book_publish_date', true);
+    $book_language = get_post_meta($post->ID, '_book_language', true);
+    $book_genre = get_post_meta($post->ID, '_book_genre', true);
+    $book_pages = get_post_meta($post->ID, '_book_pages', true);
+    $book_cover_type = get_post_meta($post->ID, '_book_cover_type', true);
+    $book_price = get_post_meta($post->ID, '_book_price', true);
+    $book_stock = get_post_meta($post->ID, '_book_stock', true);
+    $book_edition = get_post_meta($post->ID, '_book_edition', true);
+    
     ?>
-    <p>
-        <label for="tour_image_1">Tour Image 1</label><br>
-        <input type="text" name="tour_image_1" id="tour_image_1" value="<?php echo esc_attr( $image1 ); ?>" class="regular-text" />
-        <button type="button" class="upload_image_button button">Choose Image</button>
-    </p>
-    <p>
-        <label for="tour_image_2">Tour Image 2</label><br>
-        <input type="text" name="tour_image_2" id="tour_image_2" value="<?php echo esc_attr( $image2 ); ?>" class="regular-text" />
-        <button type="button" class="upload_image_button button">Choose Image</button>
-    </p>
-    <p>
-        <label for="tour_image_3">Tour Image 3</label><br>
-        <input type="text" name="tour_image_3" id="tour_image_3" value="<?php echo esc_attr( $image3 ); ?>" class="regular-text" />
-        <button type="button" class="upload_image_button button">Choose Image</button>
-    </p>
-    <p>
-        <label for="tour_image_4">Tour Image 4</label><br>
-        <input type="text" name="tour_image_4" id="tour_image_4" value="<?php echo esc_attr( $image4 ); ?>" class="regular-text" />
-        <button type="button" class="upload_image_button button">Choose Image</button>
-    </p>
+    <label for="book_name">Book Name:</label>
+    <input type="text" name="book_name" value="<?php echo esc_attr($book_name); ?>" class="widefat" />
+    
+    <label for="book_isbn">ISBN:</label>
+    <input type="text" name="book_isbn" value="<?php echo esc_attr($book_isbn); ?>" class="widefat" />
+    
+    <label for="book_details">Details:</label>
+    <textarea name="book_details" class="widefat"><?php echo esc_textarea($book_details); ?></textarea>
+    
+    <label for="book_author">Author:</label>
+    <input type="text" name="book_author" value="<?php echo esc_attr($book_author); ?>" class="widefat" />
+    
+    <label for="book_publisher">Publisher:</label>
+    <input type="text" name="book_publisher" value="<?php echo esc_attr($book_publisher); ?>" class="widefat" />
+    
+    <label for="book_publish_date">Publish Date:</label>
+    <input type="date" name="book_publish_date" value="<?php echo esc_attr($book_publish_date); ?>" class="widefat" />
+    
+    <label for="book_language">Language:</label>
+    <input type="text" name="book_language" value="<?php echo esc_attr($book_language); ?>" class="widefat" />
+    
+    <label for="book_genre">Genre:</label>
+    <input type="text" name="book_genre" value="<?php echo esc_attr($book_genre); ?>" class="widefat" />
+    
+    <label for="book_pages">Pages:</label>
+    <input type="number" name="book_pages" value="<?php echo esc_attr($book_pages); ?>" class="widefat" />
+    
+    <label for="book_cover_type">Cover Type:</label>
+    <input type="text" name="book_cover_type" value="<?php echo esc_attr($book_cover_type); ?>" class="widefat" />
+    
+    <label for="book_price">Price:</label>
+    <input type="number" name="book_price" value="<?php echo esc_attr($book_price); ?>" class="widefat" />
+    
+    <label for="book_stock">Stock:</label>
+    <input type="number" name="book_stock" value="<?php echo esc_attr($book_stock); ?>" class="widefat" />
 
-    <?php
-    // Add 10 related forms
-    for ($i = 1; $i <= 10; $i++) {
-        ?>
-        <p>
-            <label for="tour_related_form_<?php echo $i; ?>">Related Form <?php echo $i; ?></label><br>
-            <input type="text" name="tour_related_form_<?php echo $i; ?>" id="tour_related_form_<?php echo $i; ?>" value="<?php echo esc_attr( get_post_meta( $post->ID, '_tour_related_form_' . $i, true ) ); ?>" class="regular-text" />
-        </p>
-        <?php
-    }
-}
+    <label for="book_cover_images">Cover Images:</label>
+    <input type="text" name="book_cover_images" id="book_cover_images" value="<?php echo esc_attr(implode(',', (array)$book_cover_images)); ?>" class="widefat" />
+    <button type="button" id="book_cover_images_button" class="button">Select Images</button>
 
-// Save the custom meta data (Tour Images and Related Forms)
-function save_tour_meta_data( $post_id ) {
-    if ( ! isset( $_POST['tour_images_nonce_field'] ) || ! wp_verify_nonce( $_POST['tour_images_nonce_field'], 'tour_images_nonce' ) ) {
-        return;
-    }
-
-    // Save Tour Images
-    if ( isset( $_POST['tour_image_1'] ) ) {
-        update_post_meta( $post_id, '_tour_image_1', sanitize_text_field( $_POST['tour_image_1'] ) );
-    }
-    if ( isset( $_POST['tour_image_2'] ) ) {
-        update_post_meta( $post_id, '_tour_image_2', sanitize_text_field( $_POST['tour_image_2'] ) );
-    }
-    if ( isset( $_POST['tour_image_3'] ) ) {
-        update_post_meta( $post_id, '_tour_image_3', sanitize_text_field( $_POST['tour_image_3'] ) );
-    }
-    if ( isset( $_POST['tour_image_4'] ) ) {
-        update_post_meta( $post_id, '_tour_image_4', sanitize_text_field( $_POST['tour_image_4'] ) );
-    }
-
-    // Save Related Forms
-    for ($i = 1; $i <= 10; $i++) {
-        if ( isset( $_POST['tour_related_form_' . $i] ) ) {
-            update_post_meta( $post_id, '_tour_related_form_' . $i, sanitize_text_field( $_POST['tour_related_form_' . $i] ) );
-        }
-    }
-}
-add_action( 'save_post', 'save_tour_meta_data' );
-
-// Enqueue media uploader scripts
-function enqueue_media_uploader() {
-    wp_enqueue_media();
-    ?>
     <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $('.upload_image_button').click(function(e) {
+        jQuery(document).ready(function($){
+            var mediaUploader;
+            $('#book_cover_images_button').click(function(e) {
                 e.preventDefault();
-                var button = $(this);
-                var custom_uploader = wp.media({
-                    title: 'Select Image',
+                if (mediaUploader) {
+                    mediaUploader.open();
+                    return;
+                }
+
+                mediaUploader = wp.media.frames.file_frame = wp.media({
+                    title: 'Select Cover Images',
                     button: {
-                        text: 'Use this image'
+                        text: 'Select Images'
                     },
-                    multiple: false
-                }).on('select', function() {
-                    var attachment = custom_uploader.state().get('selection').first().toJSON();
-                    button.prev('input').val(attachment.url);
-                }).open();
+                    multiple: true // Allow multiple file selection
+                });
+
+                mediaUploader.on('select', function() {
+                    var attachments = mediaUploader.state().get('selection').toJSON();
+                    var imageUrls = attachments.map(function(attachment) {
+                        return attachment.url;
+                    });
+                    $('#book_cover_images').val(imageUrls.join(', '));
+                });
+
+                mediaUploader.open();
             });
         });
     </script>
     <?php
 }
-add_action( 'admin_enqueue_scripts', 'enqueue_media_uploader' );
+
+// Save custom fields values when the post is saved
+function save_book_meta($post_id) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+
+    // Save custom fields values
+    if (isset($_POST['book_cover_images'])) {
+        update_post_meta($post_id, '_book_cover_images', explode(',', sanitize_text_field($_POST['book_cover_images'])));
+    }
+    if (isset($_POST['book_name'])) {
+        update_post_meta($post_id, '_book_name', sanitize_text_field($_POST['book_name']));
+    }
+    if (isset($_POST['book_isbn'])) {
+        update_post_meta($post_id, '_book_isbn', sanitize_text_field($_POST['book_isbn']));
+    }
+    if (isset($_POST['book_details'])) {
+        update_post_meta($post_id, '_book_details', sanitize_textarea_field($_POST['book_details']));
+    }
+    if (isset($_POST['book_author'])) {
+        update_post_meta($post_id, '_book_author', sanitize_text_field($_POST['book_author']));
+    }
+    if (isset($_POST['book_publisher'])) {
+        update_post_meta($post_id, '_book_publisher', sanitize_text_field($_POST['book_publisher']));
+    }
+    if (isset($_POST['book_publish_date'])) {
+        update_post_meta($post_id, '_book_publish_date', sanitize_text_field($_POST['book_publish_date']));
+    }
+    if (isset($_POST['book_language'])) {
+        update_post_meta($post_id, '_book_language', sanitize_text_field($_POST['book_language']));
+    }
+    if (isset($_POST['book_genre'])) {
+        update_post_meta($post_id, '_book_genre', sanitize_text_field($_POST['book_genre']));
+    }
+    if (isset($_POST['book_pages'])) {
+        update_post_meta($post_id, '_book_pages', intval($_POST['book_pages']));
+    }
+    if (isset($_POST['book_cover_type'])) {
+        update_post_meta($post_id, '_book_cover_type', sanitize_text_field($_POST['book_cover_type']));
+    }
+    if (isset($_POST['book_price'])) {
+        update_post_meta($post_id, '_book_price', floatval($_POST['book_price']));
+    }
+    if (isset($_POST['book_stock'])) {
+        update_post_meta($post_id, '_book_stock', intval($_POST['book_stock']));
+    }
+    if (isset($_POST['book_edition'])) {
+        update_post_meta($post_id, '_book_edition', sanitize_text_field($_POST['book_edition']));
+    }
+}
+
+add_action('save_post', 'save_book_meta');
+
+// Optionally, you can add the function to create a custom table (call create_custom_table when needed)
+add_action('after_switch_theme', 'create_custom_table');
 
 ?>

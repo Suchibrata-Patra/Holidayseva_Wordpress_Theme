@@ -11,6 +11,7 @@
     $logo_image = get_header_image();
     ?>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <!-- Stylesheet Integration -->
  
 <link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/header.css">
