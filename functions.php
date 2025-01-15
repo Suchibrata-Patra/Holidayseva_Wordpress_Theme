@@ -26,8 +26,8 @@ function create_custom_table() {
 function create_book_post_type() {
     $args = array(
         'labels' => array(
-            'name' => 'Book',
-            'singular_name' => 'Books',
+            'name' => 'Tours',
+            'singular_name' => 'Tours',
             'add_new' => 'Add New Tour',
             'add_new_item' => 'Add New Tour',
             'edit_item' => 'Edit Book',
@@ -213,4 +213,3 @@ add_action('save_post', 'save_book_meta');
 add_action('after_switch_theme', 'create_custom_table');
 
 ?>
-
