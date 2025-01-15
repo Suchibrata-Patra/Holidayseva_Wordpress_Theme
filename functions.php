@@ -56,12 +56,12 @@ add_action('init', 'create_tour_post_type');
 function add_tour_meta_boxes() {
     add_meta_box(
         'tour_details_meta_box', 
-        'tour Details', 
+        'Tour Details', 
         'display_tour_meta_box', 
-        'tour', 
+        'tours', // Corrected post type
         'normal', 
-        'high' 
-    );
+        'high'
+    );    
 }
 
 add_action('add_meta_boxes', 'add_tour_meta_boxes');
