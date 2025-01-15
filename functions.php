@@ -186,4 +186,10 @@ function save_tour_meta($post_id) {
 }
 
 add_action('save_post', 'save_tour_meta');
+
+function flush_rewrite_rules_on_activation() {
+    flush_rewrite_rules();
+}
+add_action('after_switch_theme', 'flush_rewrite_rules_on_activation');
+
 ?>
