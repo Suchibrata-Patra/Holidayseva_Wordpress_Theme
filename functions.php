@@ -46,13 +46,10 @@ function create_tour_post_type() {
         'show_in_rest' => true, // Enable Gutenberg block editor
         'has_archive' => true,
         'rewrite' => array('slug' => 'tours'),
-        'show_ui' => true, // Ensure UI is shown
-        'menu_position' => 5, // Change this position for placing it directly under "Pages"
-        'menu_icon' => 'dashicons-palmtree', // Optional: Customize the icon
+        'menu_position' => 2,
     );
     register_post_type('tour', $args);
 }
-
 add_action('init', 'create_tour_post_type');
 
 // Add custom fields for Tour details
