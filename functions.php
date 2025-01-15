@@ -13,6 +13,23 @@ add_filter( 'rank_math/snippet/rich_snippet_data', function( $data, $post ) {
     return $data;
 }, 10, 2 );
 
+function register_custom_post_type() {
+    $args = array(
+        'labels' => array(
+            'name' => 'Custom Posts',
+            'singular_name' => 'Custom Post',
+        ),
+        'public' => true,  // Make sure it's publicly accessible
+        'has_archive' => true,  // Enable the archive page for the post type
+        'rewrite' => array('slug' => 'custom-posts'),
+        'show_in_rest' => true,  // This ensures it shows up in REST API (important for some integrations)
+        'show_in_sitemap' => true, // Add this to explicitly include it in the sitemap
+        'supports' => array('title', 'editor', 'thumbnail'),
+    );
+    register_post_type('custom_post', $args); // Replace 'custom_post' with your post type slug
+}
+add_action('init', 'register_custom_post_type');
+
 
 // Function to create the custom table for bookings
 function create_custom_table() {
