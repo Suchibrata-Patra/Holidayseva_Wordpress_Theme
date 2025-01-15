@@ -45,7 +45,7 @@ while (have_posts()) :
 
     // Display the cover images (if any)
     $tour_cover_images = get_post_meta(get_the_ID(), '_tour_cover_images', true);
-
+    
     if (!empty($tour_cover_images)) {
         // Explode the comma-separated string into an array of image URLs
         $images = is_string($tour_cover_images) ? explode(',', $tour_cover_images) : [];
@@ -53,9 +53,14 @@ while (have_posts()) :
         echo '<div class="tour-cover-images">';
         echo '<h3>Gallery</h3>';
 
-        // Loop through each image URL
-        foreach ($images as $image_url) {
-            echo '<img src="' . esc_url(trim($image_url)) . '" alt="Tour Image" class="tour-image" />';
+        // Ensure that $images is an array and loop through it
+        if (is_array($images) && !empty($images)) {
+            foreach ($images as $image_url) {
+                echo '<img src="' . esc_url(trim($image_url)) . '" alt="Tour Image" class="tour-image" />';
+            }
+        } else {
+            // If no valid images are available, you can display a fallback message
+            echo '<p>No images available for this tour.</p>';
         }
 
         echo '</div>';
