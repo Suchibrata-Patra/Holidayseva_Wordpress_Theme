@@ -10,7 +10,7 @@
     <meta name="description" content="Your homepage description here" />
     <meta name="title" content="Your homepage title here" />
     <?php endif; ?>
-test
+
     <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri();?>/Assets/Images/favicon.svg">  
     <?php
     $template_uri = get_template_directory_uri();
