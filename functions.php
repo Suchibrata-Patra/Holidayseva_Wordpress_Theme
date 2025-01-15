@@ -133,6 +133,7 @@ function display_tour_meta_box($post) {
     <?php
 }
 
+
 // Save custom fields values when the post is saved
 function save_tour_meta($post_id) {
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
