@@ -9,61 +9,105 @@ get_header();
 <div class="container">
     <h1 class="page-title">Our Books</h1>
 
-    <!-- Search Form -->
-    <div class="book-search-form">
-        <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-            <input type="hidden" name="post_type" value="book" />
-            <input type="search" name="s" placeholder="Search Books..." value="<?php echo get_search_query(); ?>" />
-            <button type="submit">Search</button>
-        </form>
-    </div>
+    <div class="content-wrapper">
+        <!-- Filter Section -->
+        <aside class="filters">
+            <h2>Filter Books</h2>
+            <form method="get" action="<?php echo esc_url(home_url('/')); ?>">
+                <input type="hidden" name="post_type" value="book" />
+                
+                <!-- Filter by Price -->
+                <label for="price_filter">Price (Max):</label>
+                <input type="number" name="price_filter" id="price_filter" value="<?php echo esc_attr($_GET['price_filter'] ?? ''); ?>" />
 
-    <!-- Book Listings -->
-    <div class="book-listing">
-        <?php if (have_posts()) : ?>
-            <ul class="book-list">
-                <?php while (have_posts()) : the_post(); ?>
-                    <li class="book-item">
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="book-thumbnail">
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <?php the_post_thumbnail('medium'); ?>
-                                <?php else : ?>
-                                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/default-thumbnail.jpg'); ?>" alt="<?php the_title(); ?>">
-                                <?php endif; ?>
-                            </div>
-                            <div class="book-info">
-                                <h2 class="book-title"><?php the_title(); ?></h2>
-                                
-                                <!-- Custom Fields -->
-                                <div class="book-meta">
+                <!-- Filter by Author -->
+                <label for="author_filter">Author:</label>
+                <input type="text" name="author_filter" id="author_filter" value="<?php echo esc_attr($_GET['author_filter'] ?? ''); ?>" />
+
+                <!-- Filter by Language -->
+                <label for="language_filter">Language:</label>
+                <input type="text" name="language_filter" id="language_filter" value="<?php echo esc_attr($_GET['language_filter'] ?? ''); ?>" />
+
+                <button type="submit">Apply Filters</button>
+            </form>
+        </aside>
+
+        <!-- Main Content Section -->
+        <main class="book-listing">
+            <?php
+            // Handle filters
+            $meta_query = array('relation' => 'AND');
+
+            if (!empty($_GET['price_filter'])) {
+                $meta_query[] = array(
+                    'key' => '_book_price',
+                    'value' => intval($_GET['price_filter']),
+                    'type' => 'NUMERIC',
+                    'compare' => '<=',
+                );
+            }
+
+            if (!empty($_GET['author_filter'])) {
+                $meta_query[] = array(
+                    'key' => '_book_author',
+                    'value' => sanitize_text_field($_GET['author_filter']),
+                    'compare' => 'LIKE',
+                );
+            }
+
+            if (!empty($_GET['language_filter'])) {
+                $meta_query[] = array(
+                    'key' => '_book_language',
+                    'value' => sanitize_text_field($_GET['language_filter']),
+                    'compare' => 'LIKE',
+                );
+            }
+
+            $args = array(
+                'post_type' => 'book',
+                'meta_query' => $meta_query,
+            );
+
+            $query = new WP_Query($args);
+
+            if ($query->have_posts()) : ?>
+                <ul class="book-list">
+                    <?php while ($query->have_posts()) : $query->the_post(); ?>
+                        <li class="book-item">
+                            <div class="book-card">
+                                <div class="book-thumbnail">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <?php the_post_thumbnail('medium'); ?>
+                                    <?php else : ?>
+                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/default-thumbnail.jpg'); ?>" alt="<?php the_title(); ?>">
+                                    <?php endif; ?>
+                                </div>
+                                <div class="book-info">
+                                    <h2 class="book-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                     <p><strong>Author:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_author', true)); ?></p>
                                     <p><strong>Price:</strong> $<?php echo esc_html(get_post_meta(get_the_ID(), '_book_price', true)); ?></p>
                                     <p><strong>Publisher:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_publisher', true)); ?></p>
                                     <p><strong>Language:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_language', true)); ?></p>
-                                    <p><strong>Pages:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_pages', true)); ?></p>
-                                </div>
-                                
-                                <div class="book-excerpt">
-                                    <?php the_excerpt(); ?>
+                                    <p class="book-excerpt"><?php the_excerpt(); ?></p>
                                 </div>
                             </div>
-                        </a>
-                    </li>
-                <?php endwhile; ?>
-            </ul>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
 
-            <!-- Pagination -->
-            <div class="pagination">
-                <?php
-                echo paginate_links(array(
-                    'total' => $wp_query->max_num_pages,
-                ));
-                ?>
-            </div>
-        <?php else : ?>
-            <p>No books found. Please check back later!</p>
-        <?php endif; ?>
+                <!-- Pagination -->
+                <div class="pagination">
+                    <?php
+                    echo paginate_links(array(
+                        'total' => $query->max_num_pages,
+                    ));
+                    ?>
+                </div>
+            <?php else : ?>
+                <p>No books found matching your filters.</p>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+        </main>
     </div>
 </div>
 
@@ -77,64 +121,78 @@ get_header();
     text-align: center;
     margin-bottom: 20px;
 }
-.book-search-form {
-    text-align: center;
-    margin-bottom: 30px;
+.content-wrapper {
+    display: flex;
+    gap: 20px;
 }
-.book-search-form input[type="search"] {
-    width: 60%;
-    padding: 10px;
+.filters {
+    width: 25%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.filters h2 {
+    margin-bottom: 15px;
+}
+.filters label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.filters input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.book-search-form button {
-    padding: 10px 20px;
-    border: none;
+.filters button {
+    display: block;
+    width: 100%;
+    padding: 10px;
     background-color: #0073aa;
     color: white;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-.book-search-form button:hover {
+.filters button:hover {
     background-color: #005177;
+}
+.book-listing {
+    flex: 1;
 }
 .book-list {
     list-style: none;
     padding: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    margin: 0;
 }
 .book-item {
+    margin-bottom: 20px;
+}
+.book-card {
+    display: flex;
+    gap: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-.book-item:hover {
-    transform: scale(1.03);
 }
 .book-thumbnail img {
-    width: 100%;
+    width: 150px;
     height: auto;
-    display: block;
+    object-fit: cover;
 }
 .book-info {
     padding: 15px;
-    text-align: center;
 }
 .book-title {
     font-size: 1.5em;
-    margin: 10px 0;
-}
-.book-meta p {
-    font-size: 0.9em;
-    margin: 5px 0;
-    color: #555;
+    margin-bottom: 10px;
 }
 .book-excerpt {
-    font-size: 1em;
+    font-size: 0.9em;
     color: #555;
     margin-top: 10px;
 }
