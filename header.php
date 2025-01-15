@@ -1,28 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <?php wp_head(); ?> <!-- Place wp_head() here -->
+
     <?php if ( is_front_page() && !is_paged() ) : ?>
     <meta name="description" content="Your homepage description here" />
     <meta name="title" content="Your homepage title here" />
-<?php endif; ?>
-<?php wp_head(); ?>
+    <?php endif; ?>
+
     <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri();?>/Assets/Images/favicon.svg">  
     <?php
     $template_uri = get_template_directory_uri();
     $logo_image = get_header_image();
     ?>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<!-- Stylesheet Integration -->
- 
-<link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/header.css">
-<link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/conact_sidebar.css">
-<!-- For getting Access of centralised Colour Scheme -->
-<link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/holidayseva_colors.css">
+    <!-- Stylesheet Integration -->
+    <link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/header.css">
+    <link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/conact_sidebar.css">
+    <!-- For getting Access of centralised Colour Scheme -->
+    <link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/holidayseva_colors.css">
 </head>
+
 
 <body>
 <!-- Main Header Content -->
