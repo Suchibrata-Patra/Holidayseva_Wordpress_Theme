@@ -27,7 +27,7 @@ function create_tours_post_type() {
     $args = array(
         'labels' => array(
             'name' => 'Tours',
-            'singular_name' => 'Tours',
+            'singular_name' => 'Tour',
             'add_new' => 'Add New Tour',
             'add_new_item' => 'Add New Tour',
             'edit_item' => 'Edit tours',
