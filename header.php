@@ -1,8 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php wp_title(); ?></title>  
     
     <?php wp_head(); ?> <!-- Place wp_head() here -->
 
@@ -11,7 +13,7 @@
     <meta name="title" content="Your homepage title here" />
     <?php endif; ?>
 
-    <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri();?>/Assets/Images/favicon.svg">  
+    <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Images/favicon.svg">  
     <?php
     $template_uri = get_template_directory_uri();
     $logo_image = get_header_image();
