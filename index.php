@@ -2,6 +2,7 @@
     get_header(); 
     get_post(); 
 ?>
+This is index.php
 <div class="tours-details">
     <!-- tours Cover Images at the Top -->
     <?php 
