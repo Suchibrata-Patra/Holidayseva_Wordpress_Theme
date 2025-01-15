@@ -52,87 +52,6 @@ function create_tour_post_type() {
 }
 add_action('init', 'create_tour_post_type');
 
-// Add custom fields for Tour details
-function add_tour_meta_boxes() {
-    add_meta_box(
-        'tour_details_meta_box', 
-        'Tour Details', 
-        'display_tour_meta_box', 
-        'tour', 
-        'normal', 
-        'high' 
-    );
-}
-
-add_action('add_meta_boxes', 'add_tour_meta_boxes');
-
-// Callback function to display custom fields in the meta box
-function display_tour_meta_box($post) {
-    // Retrieve existing custom fields values
-    $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
-    $tour_name = get_post_meta($post->ID, '_tour_name', true);
-    $tour_details = get_post_meta($post->ID, '_tour_details', true);
-    $tour_location = get_post_meta($post->ID, '_tour_location', true);
-    $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
-    $tour_price = get_post_meta($post->ID, '_tour_price', true);
-    $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
-
-    ?>
-    <label for="tour_name">Tour Name:</label>
-    <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="widefat" />
-    
-    <label for="tour_details">Details:</label>
-    <textarea name="tour_details" class="widefat"><?php echo esc_textarea($tour_details); ?></textarea>
-    
-    <label for="tour_location">Location:</label>
-    <input type="text" name="tour_location" value="<?php echo esc_attr($tour_location); ?>" class="widefat" />
-
-    <label for="tour_duration">Duration:</label>
-    <input type="text" name="tour_duration" value="<?php echo esc_attr($tour_duration); ?>" class="widefat" />
-
-    <label for="tour_price">Price:</label>
-    <input type="number" name="tour_price" value="<?php echo esc_attr($tour_price); ?>" class="widefat" />
-
-    <label for="tour_availability">Availability:</label>
-    <input type="text" name="tour_availability" value="<?php echo esc_attr($tour_availability); ?>" class="widefat" />
-
-    <label for="tour_cover_images">Cover Images:</label>
-    <input type="text" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array)$tour_cover_images)); ?>" class="widefat" />
-    <button type="button" id="tour_cover_images_button" class="button">Select Images</button>
-
-    <script type="text/javascript">
-        jQuery(document).ready(function($){
-            var mediaUploader;
-            $('#tour_cover_images_button').click(function(e) {
-                e.preventDefault();
-                if (mediaUploader) {
-                    mediaUploader.open();
-                    return;
-                }
-
-                mediaUploader = wp.media.frames.file_frame = wp.media({
-                    title: 'Select Cover Images',
-                    button: {
-                        text: 'Select Images'
-                    },
-                    multiple: true // Allow multiple file selection
-                });
-
-                mediaUploader.on('select', function() {
-                    var attachments = mediaUploader.state().get('selection').toJSON();
-                    var imageUrls = attachments.map(function(attachment) {
-                        return attachment.url;
-                    });
-                    $('#tour_cover_images').val(imageUrls.join(', '));
-                });
-
-                mediaUploader.open();
-            });
-        });
-    </script>
-    <?php
-}
-
 // Save custom fields values when the post is saved
 function save_tour_meta($post_id) {
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
@@ -166,4 +85,8 @@ add_action('save_post', 'save_tour_meta');
 // Optionally, you can add the function to create a custom table (call create_custom_table when needed)
 add_action('after_switch_theme', 'create_custom_table');
 
-?>
+// Enqueue media uploader scripts for the media buttons
+function enqueue_media_uploader_scripts() {
+    wp_enqueue_media();
+}
+add_action('admin_enqueue_scripts', 'enqueue_media_uploader_scripts');
