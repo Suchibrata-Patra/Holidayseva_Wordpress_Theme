@@ -128,7 +128,7 @@ get_header();
 }
 .skeleton-loader {
     width: 150px; /* Adjust to match the thumbnail size */
-    height: 150px; /* Adjust to match the thumbnail size */
+    height: auto; /* Adjust to match the thumbnail size */
     background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
     background-size: 200% 100%;
     animation: skeleton-loading 1.5s infinite;
