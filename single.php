@@ -190,7 +190,7 @@
         var bookPages = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_pages', true)); ?>';
         var bookCoverType = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_cover_type', true)); ?>';
         var bookPrice = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_price', true)); ?>';
-        var bookStock = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_stock', true)); ?>';
+        var tourstock = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_stock', true)); ?>';
         var bookEdition = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_edition', true)); ?>';
 
         // Construct the URL with query parameters
@@ -206,7 +206,7 @@
                   'pages=' + encodeURIComponent(bookPages) + '&' +
                   'cover_type=' + encodeURIComponent(bookCoverType) + '&' +
                   'price=' + encodeURIComponent(bookPrice) + '&' +
-                  'stock=' + encodeURIComponent(bookStock) + '&' +
+                  'stock=' + encodeURIComponent(tourstock) + '&' +
                   'edition=' + encodeURIComponent(bookEdition);
 
         // Redirect to the URL

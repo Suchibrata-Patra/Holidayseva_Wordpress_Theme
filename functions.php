@@ -22,7 +22,7 @@ function create_custom_table() {
     dbDelta($sql);
 }
 
-// Function to create a custom post type for Books
+// Function to create a custom post type for tours
 function create_book_post_type() {
     $args = array(
         'labels' => array(
@@ -33,10 +33,10 @@ function create_book_post_type() {
             'edit_item' => 'Edit Book',
             'new_item' => 'New Book',
             'view_item' => 'View Book',
-            'search_items' => 'Search Books',
-            'not_found' => 'No Books found',
-            'not_found_in_trash' => 'No Books found in Trash',
-            'all_items' => 'All Books',
+            'search_items' => 'Search tours',
+            'not_found' => 'No tours found',
+            'not_found_in_trash' => 'No tours found in Trash',
+            'all_items' => 'All tours',
             'insert_into_item' => 'Insert into book',
             'uploaded_to_this_item' => 'Uploaded to this book',
         ),
@@ -45,7 +45,7 @@ function create_book_post_type() {
         'menu_icon' => 'dashicons-palmtree',
         'show_in_rest' => true, // Enable Gutenberg block editor
         'has_archive' => true,
-        'rewrite' => array('slug' => 'books'),
+        'rewrite' => array('slug' => 'tours'),
         'menu_position' => 2, // Add this line
     );
     register_post_type('book', $args);
