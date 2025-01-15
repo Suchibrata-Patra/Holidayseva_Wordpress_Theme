@@ -7,8 +7,7 @@ get_header();
 ?>
 
 <div class="container">
-    <h1 class="page-title">Our Books</h1>
-
+    <h1 class="page-title">All Tours</h1>
     <div class="content-wrapper">
         <!-- Filter Section -->
         <aside class="filters">
