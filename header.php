@@ -7,9 +7,8 @@
     <?php if ( is_front_page() && !is_paged() ) : ?>
     <meta name="description" content="Your homepage description here" />
     <meta name="title" content="Your homepage title here" />
-    <?php endif; ?>
+<?php endif; ?>
 <?php wp_head(); ?>
-    <title><?php wp_title(); ?></title>  
     <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri();?>/Assets/Images/favicon.svg">  
     <?php
     $template_uri = get_template_directory_uri();
