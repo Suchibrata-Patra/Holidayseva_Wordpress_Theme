@@ -26,8 +26,8 @@ function create_custom_table() {
 function create_book_post_type() {
     $args = array(
         'labels' => array(
-            'name' => 'Tours',
-            'singular_name' => 'Tours',
+            'name' => 'Book',
+            'singular_name' => 'Books',
             'add_new' => 'Add New Tour',
             'add_new_item' => 'Add New Tour',
             'edit_item' => 'Edit Book',
