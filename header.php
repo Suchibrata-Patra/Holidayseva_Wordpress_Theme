@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php if ( is_front_page() && !is_paged() ) : ?>
+    <meta name="description" content="Your homepage description here" />
+    <meta name="title" content="Your homepage title here" />
+    <?php endif; ?>
+<?php wp_head(); ?>
     <title><?php wp_title(); ?></title>  
     <link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri();?>/Assets/Images/favicon.svg">  
     <?php
@@ -65,11 +70,6 @@
             <span style="width: 15px !important;"></span>
         </div>
     </div>
-    <?php if ( is_front_page() && !is_paged() ) : ?>
-    <meta name="description" content="Your homepage description here" />
-    <meta name="title" content="Your homepage title here" />
-<?php endif; ?>
-<?php wp_head(); ?>
 </header>
 <!-- New Sidebar -->
 <aside class="new-sidebar">
