@@ -58,11 +58,11 @@ I'm interested in learning more about the tours you offer. Could you kindly shar
         <hr>
 
         <li>
-            <span style="font-size: 0.9rem;"><span class="material-symbols-outlined" style="padding:3px; border-radius: 10px !important; color: #000000;font-size: 0.9rem !important;background-color: rgb(244, 244, 244);margin-top: 7px !important;margin-right: 3px;">call</span>tour Tours</span> <br>
+            <span style="font-size: 0.9rem;"><span class="material-symbols-outlined" style="padding:3px; border-radius: 10px !important; color: #000000;font-size: 0.9rem !important;background-color: rgb(244, 244, 244);margin-top: 7px !important;margin-right: 3px;">call</span>Book Tours</span> <br>
             <a href="tel:8145302135" style="font-weight: 500;text-decoration: none;color: black;">+91 - 8145302135</a>
         </li>
         <li>
-            <span style="font-size: 0.9rem;"><span class="material-symbols-outlined" style="padding: 3px;border-radius: 10px !important; color: #000000;font-size: 0.9rem !important;background-color: rgb(244, 244, 244);margin-top: 7px !important;margin-right: 3px;">call</span>tour Best Tours</span><br>
+            <span style="font-size: 0.9rem;"><span class="material-symbols-outlined" style="padding: 3px;border-radius: 10px !important; color: #000000;font-size: 0.9rem !important;background-color: rgb(244, 244, 244);margin-top: 7px !important;margin-right: 3px;">call</span>Book Best Tours</span><br>
             <a href="tel:8583992988" style="font-weight: 500;text-decoration: none;color: black;">+91 - 8583992988</a>
         </li>
         <li>
