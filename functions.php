@@ -169,8 +169,10 @@ add_action('save_post', 'save_tour_meta');
 add_action('after_switch_theme', 'create_custom_table');
 
 // Create the options page under the "Settings" menu
+// Create the options page under the "Tours" menu
 function add_trip_options_page() {
-    add_options_page(
+    add_submenu_page(
+        'edit.php?post_type=tour', // Parent menu slug for "Tours"
         'Add Trip', // Page title
         'Add Trip', // Menu title
         'manage_options', // Capability
@@ -179,6 +181,7 @@ function add_trip_options_page() {
     );
 }
 add_action('admin_menu', 'add_trip_options_page');
+
 
 // Function to display the options page
 function display_add_trip_page() {
