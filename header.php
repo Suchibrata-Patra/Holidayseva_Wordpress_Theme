@@ -65,12 +65,11 @@
             <span style="width: 15px !important;"></span>
         </div>
     </div>
-    <?php wp_head(); ?>
     <?php if ( is_front_page() && !is_paged() ) : ?>
     <meta name="description" content="Your homepage description here" />
     <meta name="title" content="Your homepage title here" />
 <?php endif; ?>
-
+<?php wp_head(); ?>
 </header>
 <!-- New Sidebar -->
 <aside class="new-sidebar">
