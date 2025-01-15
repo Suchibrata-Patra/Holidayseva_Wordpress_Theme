@@ -50,7 +50,6 @@ function create_tour_post_type() {
         'menu_position' => 2,
     );
     register_post_type('tour', $args);
-    
 }
 add_action('init', 'create_tour_post_type');
 
@@ -101,6 +100,9 @@ function display_tour_meta_box($post) {
     <label for="tour_cover_images">Cover Images:</label>
     <input type="text" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array)$tour_cover_images)); ?>" class="widefat" />
     <button type="button" id="tour_cover_images_button" class="button">Select Images</button>
+
+    <label for="rank_math_focus_keyword">Focus Keyword:</label>
+    <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword" class="regular-text" />
 
     <script type="text/javascript">
         jQuery(document).ready(function($){
@@ -161,6 +163,11 @@ function save_tour_meta($post_id) {
     if (isset($_POST['tour_availability'])) {
         update_post_meta($post_id, '_tour_availability', sanitize_text_field($_POST['tour_availability']));
     }
+
+    // Save Focus Keyword
+    if (isset($_POST['rank_math_focus_keyword'])) {
+        update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
+    }
 }
 
 add_action('save_post', 'save_tour_meta');
@@ -168,7 +175,6 @@ add_action('save_post', 'save_tour_meta');
 // Optionally, you can add the function to create a custom table (call create_custom_table when needed)
 add_action('after_switch_theme', 'create_custom_table');
 
-// Create the options page under the "Settings" menu
 // Create the options page under the "Tours" menu
 function add_trip_options_page() {
     add_submenu_page(
@@ -181,7 +187,6 @@ function add_trip_options_page() {
     );
 }
 add_action('admin_menu', 'add_trip_options_page');
-
 
 // Function to display the options page
 function display_add_trip_page() {
@@ -200,6 +205,7 @@ function display_add_trip_page() {
                 $tour_price = floatval($_POST['tour_price']);
                 $tour_availability = sanitize_text_field($_POST['tour_availability']);
                 $tour_cover_images = sanitize_text_field($_POST['tour_cover_images']);
+                $focus_keyword = sanitize_text_field($_POST['rank_math_focus_keyword']);
 
                 // Create a new post of type 'tour'
                 $tour_post = array(
@@ -215,6 +221,7 @@ function display_add_trip_page() {
                         '_tour_price' => $tour_price,
                         '_tour_availability' => $tour_availability,
                         '_tour_cover_images' => explode(',', $tour_cover_images),
+                        '_rank_math_focus_keyword' => $focus_keyword,
                     ),
                 );
 
@@ -262,8 +269,12 @@ function display_add_trip_page() {
 
                 <tr valign="top">
                     <th scope="row"><label for="tour_cover_images">Cover Images (comma-separated URLs):</label></th>
-                    <td><input type="text" name="tour_cover_images" id="tour_cover_images" class="regular-text" required />
-                    </td>
+                    <td><input type="text" name="tour_cover_images" id="tour_cover_images" class="regular-text" required /></td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row"><label for="rank_math_focus_keyword">Focus Keyword:</label></th>
+                    <td><input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword" class="regular-text" /></td>
                 </tr>
             </table>
 
