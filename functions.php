@@ -28,7 +28,7 @@ function create_tour_post_type() {
         'labels' => array(
             'name' => 'Tours',
             'singular_name' => 'Tour',
-            'add_new' => 'Add New Tour',
+            'add_new' => 'Add New Tour', // Change label for "Add New"
             'add_new_item' => 'Add New Tour',
             'edit_item' => 'Edit Tour',
             'new_item' => 'New Tour',
@@ -41,6 +41,8 @@ function create_tour_post_type() {
             'uploaded_to_this_item' => 'Uploaded to this tour',
         ),
         'public' => true,
+        'show_ui' => true, // Make sure the UI is shown
+        'show_in_menu' => true, // Ensure that it appears in the sidebar
         'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments'),
         'menu_icon' => 'dashicons-palmtree',
         'show_in_rest' => true, // Enable Gutenberg block editor
@@ -48,9 +50,11 @@ function create_tour_post_type() {
         'rewrite' => array('slug' => 'tours'),
         'menu_position' => 2,
     );
+
     register_post_type('tour', $args);
 }
 add_action('init', 'create_tour_post_type');
+
 
 // Add custom fields for Tour details
 function add_tour_meta_boxes() {
