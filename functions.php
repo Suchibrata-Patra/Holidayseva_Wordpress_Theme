@@ -45,7 +45,7 @@ function create_tour_post_type() {
         'menu_icon' => 'dashicons-palmtree',
         'show_in_rest' => true, // Enable Gutenberg block editor
         'has_archive' => true,
-        'rewrite' => array('slug' => 'tourss'),
+        'rewrite' => array('slug' => 'tours'),
         'menu_position' => 2, // Add this line
     );
     register_post_type('tour', $args);
