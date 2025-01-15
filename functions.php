@@ -50,6 +50,7 @@ function create_tour_post_type() {
         'menu_position' => 2,
     );
     register_post_type('tour', $args);
+    add_action('admin_menu', 'add_trip_options_page');
 }
 add_action('init', 'create_tour_post_type');
 
