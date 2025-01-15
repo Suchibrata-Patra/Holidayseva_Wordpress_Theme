@@ -1,28 +1,6 @@
 <?php
 add_theme_support('post-thumbnails');
 
-// Function to create the custom table for bookings
-function create_custom_table() {
-    global $wpdb;
-    
-    $table_name = $wpdb->prefix . 'custom_bookings'; // Name of your custom table
-    $charset_collate = $wpdb->get_charset_collate();
-
-    // SQL query to create the table
-    $sql = "CREATE TABLE $table_name (
-        id mediumint(9) NOT NULL AUTO_INCREMENT,
-        customer_name varchar(255) NOT NULL,
-        tour_id mediumint(9) NOT NULL,
-        booking_date datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
-        payment_status varchar(20) NOT NULL,
-        PRIMARY KEY  (id)
-    ) $charset_collate;";
-
-    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    dbDelta($sql);
-}
-
-// Function to create a custom post type for Books
 function create_tour_post_type() {
     $args = array(
         'labels' => array(
@@ -208,8 +186,4 @@ function save_tour_meta($post_id) {
 }
 
 add_action('save_post', 'save_tour_meta');
-
-// Optionally, you can add the function to create a custom table (call create_custom_table when needed)
-add_action('after_switch_theme', 'create_custom_table');
-
 ?>
