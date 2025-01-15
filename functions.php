@@ -2,6 +2,17 @@
 // Add theme support for post thumbnails
 add_theme_support('post-thumbnails');
 
+add_filter( 'rank_math/snippet/rich_snippet_data', function( $data, $post ) {
+    if ( 'tour' === $post->post_type ) {
+        // Custom schema data for 'tour' post type
+        $data['@type'] = 'TouristAttraction';
+        $data['name'] = get_the_title( $post );
+        $data['description'] = get_the_excerpt( $post );
+        // Add other custom fields here
+    }
+    return $data;
+}, 10, 2 );
+
 
 // Function to create the custom table for bookings
 function create_custom_table() {
