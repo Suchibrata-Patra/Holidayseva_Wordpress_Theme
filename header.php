@@ -65,6 +65,19 @@
             <span style="width: 15px !important;"></span>
         </div>
     </div>
+    <?php wp_head(); ?>
+    <?php
+if ( function_exists( 'rank_math_the_head' ) ) {
+    rank_math_the_head();
+} else {
+    // Fallback code for meta tags
+    echo '<title>' . esc_html( get_the_title() ) . '</title>';
+    echo '<meta name="description" content="' . esc_attr( get_the_excerpt() ) . '" />';
+    // Add other meta tags manually if needed
+}
+?>
+
+
 </header>
 <!-- New Sidebar -->
 <aside class="new-sidebar">
@@ -161,14 +174,3 @@
     });
 </script>
 <?php include_once('CallButttonSidebar.php');?>
-<?php wp_head(); ?>
-<?php
-if ( function_exists( 'rank_math_the_head' ) ) {
-    rank_math_the_head();
-} else {
-    // Fallback code for meta tags
-    echo '<title>' . esc_html( get_the_title() ) . '</title>';
-    echo '<meta name="description" content="' . esc_attr( get_the_excerpt() ) . '" />';
-    // Add other meta tags manually if needed
-}
-?>
