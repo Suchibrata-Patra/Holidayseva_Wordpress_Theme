@@ -79,61 +79,106 @@ function display_tour_meta_box($post) {
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
 
     ?>
-    <label for="tour_name">Tour Name:</label>
-    <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="widefat" />
-    
-    <label for="tour_details">Details:</label>
-    <textarea name="tour_details" class="widefat"><?php echo esc_textarea($tour_details); ?></textarea>
-    
-    <label for="tour_location">Location:</label>
-    <input type="text" name="tour_location" value="<?php echo esc_attr($tour_location); ?>" class="widefat" />
+    <div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="#tour_form" class="list-group-item list-group-item-action active" data-toggle="collapse" aria-expanded="true">
+                    Tour Details
+                </a>
+                <a href="#seo_form" class="list-group-item list-group-item-action" data-toggle="collapse" aria-expanded="false">
+                    SEO Settings
+                </a>
+            </div>
+        </div>
 
-    <label for="tour_duration">Duration:</label>
-    <input type="text" name="tour_duration" value="<?php echo esc_attr($tour_duration); ?>" class="widefat" />
+        <!-- Main Content -->
+        <div class="col-md-9">
+            <div id="tour_form" class="collapse show">
+                <h3>Tour Details</h3>
+                <form method="post" action="">
+                    <div class="form-group">
+                        <label for="tour_name">Tour Name:</label>
+                        <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="form-control" />
+                    </div>
 
-    <label for="tour_price">Price:</label>
-    <input type="number" name="tour_price" value="<?php echo esc_attr($tour_price); ?>" class="widefat" />
+                    <div class="form-group">
+                        <label for="tour_details">Details:</label>
+                        <textarea name="tour_details" class="form-control"><?php echo esc_textarea($tour_details); ?></textarea>
+                    </div>
 
-    <label for="tour_availability">Availability:</label>
-    <input type="text" name="tour_availability" value="<?php echo esc_attr($tour_availability); ?>" class="widefat" />
+                    <div class="form-group">
+                        <label for="tour_location">Location:</label>
+                        <input type="text" name="tour_location" value="<?php echo esc_attr($tour_location); ?>" class="form-control" />
+                    </div>
 
-    <label for="tour_cover_images">Cover Images:</label>
-    <input type="text" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array)$tour_cover_images)); ?>" class="widefat" />
-    <button type="button" id="tour_cover_images_button" class="button">Select Images</button>
+                    <div class="form-group">
+                        <label for="tour_duration">Duration:</label>
+                        <input type="text" name="tour_duration" value="<?php echo esc_attr($tour_duration); ?>" class="form-control" />
+                    </div>
 
-    <label for="rank_math_focus_keyword">Focus Keyword:</label>
-    <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword" class="regular-text" />
+                    <div class="form-group">
+                        <label for="tour_price">Price:</label>
+                        <input type="number" name="tour_price" value="<?php echo esc_attr($tour_price); ?>" class="form-control" />
+                    </div>
 
-    <script type="text/javascript">
-        jQuery(document).ready(function($){
-            var mediaUploader;
-            $('#tour_cover_images_button').click(function(e) {
-                e.preventDefault();
-                if (mediaUploader) {
-                    mediaUploader.open();
-                    return;
-                }
+                    <div class="form-group">
+                        <label for="tour_availability">Availability:</label>
+                        <input type="text" name="tour_availability" value="<?php echo esc_attr($tour_availability); ?>" class="form-control" />
+                    </div>
 
-                mediaUploader = wp.media.frames.file_frame = wp.media({
-                    title: 'Select Cover Images',
-                    button: {
-                        text: 'Select Images'
-                    },
-                    multiple: true // Allow multiple file selection
-                });
+                    <div class="form-group">
+                        <label for="tour_cover_images">Cover Images:</label>
+                        <input type="text" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array)$tour_cover_images)); ?>" class="form-control" />
+                        <button type="button" id="tour_cover_images_button" class="btn btn-primary mt-2">Select Images</button>
+                    </div>
+                </form>
+            </div>
 
-                mediaUploader.on('select', function() {
-                    var attachments = mediaUploader.state().get('selection').toJSON();
-                    var imageUrls = attachments.map(function(attachment) {
-                        return attachment.url;
-                    });
-                    $('#tour_cover_images').val(imageUrls.join(', '));
-                });
+            <div id="seo_form" class="collapse">
+                <h3>SEO Settings</h3>
+                <div class="form-group">
+                    <label for="rank_math_focus_keyword">Focus Keyword:</label>
+                    <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword" class="form-control" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+<script type="text/javascript">
+    jQuery(document).ready(function($){
+        var mediaUploader;
+        $('#tour_cover_images_button').click(function(e) {
+            e.preventDefault();
+            if (mediaUploader) {
                 mediaUploader.open();
+                return;
+            }
+
+            mediaUploader = wp.media.frames.file_frame = wp.media({
+                title: 'Select Cover Images',
+                button: {
+                    text: 'Select Images'
+                },
+                multiple: true // Allow multiple file selection
             });
+
+            mediaUploader.on('select', function() {
+                var attachments = mediaUploader.state().get('selection').toJSON();
+                var imageUrls = attachments.map(function(attachment) {
+                    return attachment.url;
+                });
+                $('#tour_cover_images').val(imageUrls.join(', '));
+            });
+
+            mediaUploader.open();
         });
-    </script>
+    });
+</script>
+
     <?php
 }
 
@@ -189,5 +234,100 @@ function add_trip_options_page() {
 add_action('admin_menu', 'add_trip_options_page');
 
 // Function to display the options page
+function display_add_trip_page() {
+    ?>
+    <div class="wrap">
+        <h1>Add a New Trip</h1>
+        <form method="post" action="">
+            <?php
+            // Check if the form has been submitted
+            if (isset($_POST['add_trip_submit'])) {
+                // Get the data from the form and sanitize it
+                $tour_name = sanitize_text_field($_POST['tour_name']);
+                $tour_details = sanitize_textarea_field($_POST['tour_details']);
+                $tour_location = sanitize_text_field($_POST['tour_location']);
+                $tour_duration = sanitize_text_field($_POST['tour_duration']);
+                $tour_price = floatval($_POST['tour_price']);
+                $tour_availability = sanitize_text_field($_POST['tour_availability']);
+                $tour_cover_images = sanitize_text_field($_POST['tour_cover_images']);
+                $focus_keyword = sanitize_text_field($_POST['rank_math_focus_keyword']);
 
+                // Create a new post of type 'tour'
+                $tour_post = array(
+                    'post_title' => $tour_name,
+                    'post_content' => $tour_details,
+                    'post_status' => 'publish',
+                    'post_type' => 'tour',
+                    'meta_input' => array(
+                        '_tour_name' => $tour_name,
+                        '_tour_details' => $tour_details,
+                        '_tour_location' => $tour_location,
+                        '_tour_duration' => $tour_duration,
+                        '_tour_price' => $tour_price,
+                        '_tour_availability' => $tour_availability,
+                        '_tour_cover_images' => explode(',', $tour_cover_images),
+                        '_rank_math_focus_keyword' => $focus_keyword,
+                    ),
+                );
+
+                // Insert the post into the database
+                $post_id = wp_insert_post($tour_post);
+
+                if ($post_id) {
+                    echo '<div class="updated"><p>Tour added successfully!</p></div>';
+                } else {
+                    echo '<div class="error"><p>Failed to add tour. Please try again.</p></div>';
+                }
+            }
+            ?>
+
+            <table class="form-table">
+                <tr valign="top">
+                    <th scope="row"><label for="tour_name">Tour Name:</label></th>
+                    <td><input type="text" name="tour_name" id="tour_name" class="regular-text" required /></td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row"><label for="tour_details">Details:</label></th>
+                    <td><textarea name="tour_details" id="tour_details" rows="5" class="large-text" required></textarea></td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row"><label for="tour_location">Location:</label></th>
+                    <td><input type="text" name="tour_location" id="tour_location" class="regular-text" required /></td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row"><label for="tour_duration">Duration:</label></th>
+                    <td><input type="text" name="tour_duration" id="tour_duration" class="regular-text" required /></td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row"><label for="tour_price">Price:</label></th>
+                    <td><input type="number" name="tour_price" id="tour_price" class="regular-text" required /></td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row"><label for="tour_availability">Availability:</label></th>
+                    <td><input type="text" name="tour_availability" id="tour_availability" class="regular-text" required /></td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row"><label for="tour_cover_images">Cover Images (comma-separated URLs):</label></th>
+                    <td><input type="text" name="tour_cover_images" id="tour_cover_images" class="regular-text" required /></td>
+                </tr>
+
+                <tr valign="top">
+                    <th scope="row"><label for="rank_math_focus_keyword">Focus Keyword:</label></th>
+                    <td><input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword" class="regular-text" /></td>
+                </tr>
+            </table>
+
+            <p class="submit">
+                <input type="submit" name="add_trip_submit" id="add_trip_submit" class="button-primary" value="Add Trip" />
+            </p>
+        </form>
+    </div>
+    <?php
+}
 ?>
