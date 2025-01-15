@@ -87,3 +87,4 @@ else :
 endif;
 
 get_footer();
+lorem
