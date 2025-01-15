@@ -161,3 +161,4 @@
     });
 </script>
 <?php include_once('CallButttonSidebar.php');?>
+<?php wp_head(); ?>
