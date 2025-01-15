@@ -17,4 +17,3 @@ endif;
 
 get_footer(); // Load the footer
 ?>
-Lorem
