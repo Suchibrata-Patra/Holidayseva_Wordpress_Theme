@@ -1,7 +1,7 @@
 <?php
 get_header(); 
 
-// Check if there are any tours
+// Check if there are any tour
 if (have_posts()) :
     ?>
     <header class="archive-header">
@@ -11,7 +11,7 @@ if (have_posts()) :
 
     <div class="tour-archive-list">
         <?php
-        // Start the loop to display tours
+        // Start the loop to display tour
         while (have_posts()) : the_post();
             // Get custom fields for each tour
             $tour_name = get_post_meta(get_the_ID(), '_tour_name', true);
@@ -83,7 +83,7 @@ if (have_posts()) :
 
 <?php
 else :
-    echo '<p>No tours found.</p>';
+    echo '<p>No tour found.</p>';
 endif;
 
 get_footer();
