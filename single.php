@@ -110,7 +110,47 @@ get_header(); ?>
     endwhile; // End of the loop.
     ?>
 </main><!-- #main -->
+<style>
+    .tour-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
 
+.tour-featured-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.tour-details, .tour-content, .tour-bookings {
+    margin-bottom: 40px;
+}
+
+.tour-cover-images img {
+    max-width: 100px;
+    height: auto;
+    margin: 5px;
+    display: inline-block;
+}
+
+.bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.bookings-table th, .bookings-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.bookings-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+</style>
 <?php
 get_footer();
 ?>
