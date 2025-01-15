@@ -1,7 +1,12 @@
+
 <?php 
     get_header(); 
     get_post(); 
 ?>
+<?php
+var_dump(get_post_meta(get_the_ID(), '_tour_name', true));
+?>
+
 <div class="tour-details">
     <!-- tour Cover Images at the Top -->
     <?php 
