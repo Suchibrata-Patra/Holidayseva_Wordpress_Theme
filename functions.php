@@ -47,6 +47,7 @@ add_action( 'add_meta_boxes', 'add_tour_meta_boxes' );
 function tour_images_callback( $post ) {
     wp_nonce_field( 'tour_images_nonce', 'tour_images_nonce_field' );
 
+    // Get stored values
     $image1 = get_post_meta( $post->ID, '_tour_image_1', true );
     $image2 = get_post_meta( $post->ID, '_tour_image_2', true );
     $image3 = get_post_meta( $post->ID, '_tour_image_3', true );
@@ -56,32 +57,43 @@ function tour_images_callback( $post ) {
     <p>
         <label for="tour_image_1">Tour Image 1</label><br>
         <input type="text" name="tour_image_1" id="tour_image_1" value="<?php echo esc_attr( $image1 ); ?>" class="regular-text" />
-        <button type="button" class="upload_image_button button">Upload Image</button>
+        <button type="button" class="upload_image_button button">Choose Image</button>
     </p>
     <p>
         <label for="tour_image_2">Tour Image 2</label><br>
         <input type="text" name="tour_image_2" id="tour_image_2" value="<?php echo esc_attr( $image2 ); ?>" class="regular-text" />
-        <button type="button" class="upload_image_button button">Upload Image</button>
+        <button type="button" class="upload_image_button button">Choose Image</button>
     </p>
     <p>
         <label for="tour_image_3">Tour Image 3</label><br>
         <input type="text" name="tour_image_3" id="tour_image_3" value="<?php echo esc_attr( $image3 ); ?>" class="regular-text" />
-        <button type="button" class="upload_image_button button">Upload Image</button>
+        <button type="button" class="upload_image_button button">Choose Image</button>
     </p>
     <p>
         <label for="tour_image_4">Tour Image 4</label><br>
         <input type="text" name="tour_image_4" id="tour_image_4" value="<?php echo esc_attr( $image4 ); ?>" class="regular-text" />
-        <button type="button" class="upload_image_button button">Upload Image</button>
+        <button type="button" class="upload_image_button button">Choose Image</button>
     </p>
+
     <?php
+    // Add 10 related forms
+    for ($i = 1; $i <= 10; $i++) {
+        ?>
+        <p>
+            <label for="tour_related_form_<?php echo $i; ?>">Related Form <?php echo $i; ?></label><br>
+            <input type="text" name="tour_related_form_<?php echo $i; ?>" id="tour_related_form_<?php echo $i; ?>" value="<?php echo esc_attr( get_post_meta( $post->ID, '_tour_related_form_' . $i, true ) ); ?>" class="regular-text" />
+        </p>
+        <?php
+    }
 }
 
-// Save the custom meta data (Tour Images)
+// Save the custom meta data (Tour Images and Related Forms)
 function save_tour_meta_data( $post_id ) {
     if ( ! isset( $_POST['tour_images_nonce_field'] ) || ! wp_verify_nonce( $_POST['tour_images_nonce_field'], 'tour_images_nonce' ) ) {
         return;
     }
 
+    // Save Tour Images
     if ( isset( $_POST['tour_image_1'] ) ) {
         update_post_meta( $post_id, '_tour_image_1', sanitize_text_field( $_POST['tour_image_1'] ) );
     }
@@ -93,6 +105,13 @@ function save_tour_meta_data( $post_id ) {
     }
     if ( isset( $_POST['tour_image_4'] ) ) {
         update_post_meta( $post_id, '_tour_image_4', sanitize_text_field( $_POST['tour_image_4'] ) );
+    }
+
+    // Save Related Forms
+    for ($i = 1; $i <= 10; $i++) {
+        if ( isset( $_POST['tour_related_form_' . $i] ) ) {
+            update_post_meta( $post_id, '_tour_related_form_' . $i, sanitize_text_field( $_POST['tour_related_form_' . $i] ) );
+        }
     }
 }
 add_action( 'save_post', 'save_tour_meta_data' );
@@ -122,4 +141,5 @@ function enqueue_media_uploader() {
     <?php
 }
 add_action( 'admin_enqueue_scripts', 'enqueue_media_uploader' );
-?>s
+
+?>
