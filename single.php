@@ -1,94 +1,216 @@
 <?php 
-// Single Post Template for Custom Post Type "Tours"
-get_header(); 
+    get_header(); 
+    get_post(); 
 ?>
-
-<div class="tour-details">
-    <!-- Tour Cover Images -->
+<div class="book-details">
+    <!-- Book Cover Images at the Top -->
     <?php 
-    $tour_cover_images = get_post_meta(get_the_ID(), '_tour_cover_images', true);
-    if (!empty($tour_cover_images) && is_array($tour_cover_images)) : ?>
-        <div class="tour-cover-section">
-            <h3>Tour Covers</h3>
-            <div class="tour-cover-gallery">
-                <?php foreach ($tour_cover_images as $tour_cover_image) : ?>
-                    <div class="tour-cover">
-                        <img src="<?php echo esc_url($tour_cover_image); ?>" alt="Tour Cover for <?php the_title(); ?>" />
-                    </div>
-                <?php endforeach; ?>
+        // Retrieve all cover images
+        $book_cover_images = get_post_meta(get_the_ID(), '_book_cover_images', true); 
+        if (!empty($book_cover_images) && is_array($book_cover_images)) : ?>
+            <div class="book-cover-section">
+                <h3>Book Covers</h3>
+                <div class="book-cover-gallery">
+                    <?php foreach ($book_cover_images as $book_cover_image) : ?>
+                        <div class="book-cover">
+                            <img src="<?php echo esc_url($book_cover_image); ?>" alt="Cover Image" class="book-cover-image" />
+                        </div>
+                    <?php endforeach; ?>
+                </div>
             </div>
-        </div>
     <?php endif; ?>
 
-    <!-- Tour Title -->
-    <h1 class="tour-title"><?php the_title(); ?></h1>
+    <!-- Book Title -->
+    <h1 class="book-title"><?php the_title(); ?></h1>
 
-    <!-- Tour Content -->
-    <div class="tour-content">
+    <div class="book-content">
         <?php the_content(); ?>
     </div>
 
-    <!-- Custom Tour Fields -->
-    <div class="tour-meta">
-        <h3>Tour Details</h3>
-        <div class="tour-meta-grid">
-            <?php
-            // Define the custom fields to display
-            $fields = [
-                'Tour Name' => '_tour_name',
-                'ISBN' => '_tour_isbn',
-                'Details' => '_tour_details',
-                'Author' => '_tour_author',
-                'Publisher' => '_tour_publisher',
-                'Publish Date' => '_tour_publish_date',
-                'Language' => '_tour_language',
-                'Genre' => '_tour_genre',
-                'Pages' => '_tour_pages',
-                'Cover Type' => '_tour_cover_type',
-                'Price' => '_tour_price',
-                'Stock' => '_tour_stock',
-                'Edition' => '_tour_edition',
-            ];
-
-            // Loop through each field and display its value
-            foreach ($fields as $label => $meta_key) :
-                $value = get_post_meta(get_the_ID(), $meta_key, true) ?: 'N/A';
-            ?>
-                <div class="tour-meta-item">
-                    <strong><?php echo esc_html($label); ?>:</strong> <?php echo esc_html($value); ?>
-                </div>
-            <?php endforeach; ?>
+    <!-- Custom Book Fields -->
+    <div class="book-meta">
+        <h3>Book Details</h3>
+        <div class="book-meta-grid">
+            <div class="book-meta-item">
+                <strong>Book Name:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_name', true)); ?>
+            </div>
+            <div class="book-meta-item">
+                <strong>ISBN:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_isbn', true)); ?>
+            </div>
+            <div class="book-meta-item">
+                <strong>Details:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_details', true)); ?>
+            </div>
+            <div class="book-meta-item">
+                <strong>Author:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_author', true)); ?>
+            </div>
+            <div class="book-meta-item">
+                <strong>Publisher:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_publisher', true)); ?>
+            </div>
+            <div class="book-meta-item">
+                <strong>Publish Date:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_publish_date', true)); ?>
+            </div>
+            <div class="book-meta-item">
+                <strong>Language:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_language', true)); ?>
+            </div>
+            <div class="book-meta-item">
+                <strong>Genre:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_genre', true)); ?>
+            </div>
+            <div class="book-meta-item">
+                <strong>Pages:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_pages', true)); ?>
+            </div>
+            <div class="book-meta-item">
+                <strong>Cover Type:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_cover_type', true)); ?>
+            </div>
+            <div class="book-meta-item">
+                <strong>Price:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_price', true)); ?>
+            </div>
+            <div class="book-meta-item">
+                <strong>Stock:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_stock', true)); ?>
+            </div>
+            <div class="book-meta-item">
+                <strong>Edition:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_edition', true)); ?>
+            </div>
         </div>
     </div>
 
-    <!-- Send Tour Details Button -->
-    <button id="send-tour-details" class="send-tour-details-btn">Send Tour Details</button>
+    <!-- Send Book Details Button -->
+    <button id="send-book-details" class="send-book-details-btn">Send Book Details</button>
 </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const sendButton = document.getElementById('send-tour-details');
-        sendButton.addEventListener('click', function () {
-            const data = {
-                tour_name: '<?php echo esc_js(get_post_meta(get_the_ID(), '_tour_name', true)); ?>',
-                isbn: '<?php echo esc_js(get_post_meta(get_the_ID(), '_tour_isbn', true)); ?>',
-                details: '<?php echo esc_js(get_post_meta(get_the_ID(), '_tour_details', true)); ?>',
-                author: '<?php echo esc_js(get_post_meta(get_the_ID(), '_tour_author', true)); ?>',
-                publisher: '<?php echo esc_js(get_post_meta(get_the_ID(), '_tour_publisher', true)); ?>',
-                publish_date: '<?php echo esc_js(get_post_meta(get_the_ID(), '_tour_publish_date', true)); ?>',
-                language: '<?php echo esc_js(get_post_meta(get_the_ID(), '_tour_language', true)); ?>',
-                genre: '<?php echo esc_js(get_post_meta(get_the_ID(), '_tour_genre', true)); ?>',
-                pages: '<?php echo esc_js(get_post_meta(get_the_ID(), '_tour_pages', true)); ?>',
-                cover_type: '<?php echo esc_js(get_post_meta(get_the_ID(), '_tour_cover_type', true)); ?>',
-                price: '<?php echo esc_js(get_post_meta(get_the_ID(), '_tour_price', true)); ?>',
-                stock: '<?php echo esc_js(get_post_meta(get_the_ID(), '_tour_stock', true)); ?>',
-                edition: '<?php echo esc_js(get_post_meta(get_the_ID(), '_tour_edition', true)); ?>'
-            };
+<!-- CSS -->
+<style>
+    .book-details {
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .book-cover-section {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .book-cover-section h3 {
+        font-size: 1.5rem;
+        color: #34495e;
+        margin-bottom: 20px;
+    }
+    
+    .book-cover-gallery {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
-            const queryString = new URLSearchParams(data).toString();
-            const url = `https://touring.holidayseva.com/submit-details?${queryString}`;
-            window.location.href = url;
-        });
+    .book-cover {
+        width: 150px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .book-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .book-content {
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .book-meta h3 {
+        font-size: 1.5rem;
+        color: #34495e;
+        margin-bottom: 15px;
+    }
+
+    .book-meta-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .book-meta-item {
+        font-size: 1rem;
+        color: #7f8c8d;
+    }
+
+    .book-meta-item strong {
+        color: #2c3e50;
+    }
+
+    .send-book-details-btn {
+        display: inline-block;
+        background-color: #3498db;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .send-book-details-btn:hover {
+        background-color: #2980b9;
+    }
+</style>
+
+
+<script>
+    document.getElementById('send-book-details').addEventListener('click', function() {
+        // Retrieve all the custom fields
+        var bookName = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_name', true)); ?>';
+        var bookIsbn = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_isbn', true)); ?>';
+        var bookDetails = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_details', true)); ?>';
+        var bookAuthor = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_author', true)); ?>';
+        var bookPublisher = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_publisher', true)); ?>';
+        var bookPublishDate = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_publish_date', true)); ?>';
+        var bookLanguage = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_language', true)); ?>';
+        var bookGenre = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_genre', true)); ?>';
+        var bookPages = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_pages', true)); ?>';
+        var bookCoverType = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_cover_type', true)); ?>';
+        var bookPrice = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_price', true)); ?>';
+        var bookStock = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_stock', true)); ?>';
+        var bookEdition = '<?php echo esc_js(get_post_meta(get_the_ID(), '_book_edition', true)); ?>';
+
+        // Construct the URL with query parameters
+        var url = 'https://booking.holidayseva.com/submit-details?' +
+                  'book_name=' + encodeURIComponent(bookName) + '&' +
+                  'isbn=' + encodeURIComponent(bookIsbn) + '&' +
+                  'details=' + encodeURIComponent(bookDetails) + '&' +
+                  'author=' + encodeURIComponent(bookAuthor) + '&' +
+                  'publisher=' + encodeURIComponent(bookPublisher) + '&' +
+                  'publish_date=' + encodeURIComponent(bookPublishDate) + '&' +
+                  'language=' + encodeURIComponent(bookLanguage) + '&' +
+                  'genre=' + encodeURIComponent(bookGenre) + '&' +
+                  'pages=' + encodeURIComponent(bookPages) + '&' +
+                  'cover_type=' + encodeURIComponent(bookCoverType) + '&' +
+                  'price=' + encodeURIComponent(bookPrice) + '&' +
+                  'stock=' + encodeURIComponent(bookStock) + '&' +
+                  'edition=' + encodeURIComponent(bookEdition);
+
+        // Redirect to the URL
+        window.location.href = url;
     });
 </script>
 
