@@ -24,9 +24,6 @@ function create_custom_table() {
 }
 
 
- functions modified_system(){
-    
- }
 
 // Function to create a custom post type for Tours
 function create_tour_post_type() {
