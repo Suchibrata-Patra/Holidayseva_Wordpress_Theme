@@ -258,7 +258,8 @@ function display_add_trip_page() {
 
                 <tr valign="top">
                     <th scope="row"><label for="tour_cover_images">Cover Images (comma-separated URLs):</label></th>
-                    <td><input type="text" name="tour_cover_images" id="tour_cover_images" class="regular-text" required /></td>
+                    <td><input type="text" name="tour_cover_images" id="tour_cover_images" class="regular-text" required />
+                    </td>
                 </tr>
             </table>
 
