@@ -2,11 +2,6 @@
 // Add theme support for post thumbnails
 add_theme_support('post-thumbnails');
 
-add_filter( 'rank_math/flags/post_types', function( $post_types ) {
-    $post_types[] = 'tour'; // Add your custom post type
-    return $post_types;
-});
-
 
 // Function to create the custom table for bookings
 function create_custom_table() {
