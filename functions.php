@@ -55,16 +55,16 @@ add_action('init', 'create_book_post_type');
 // Add custom fields for Book details
 function add_book_meta_boxes() {
     add_meta_box(
-        'book_details_meta_box',
-        'Book Details',
-        'display_book_meta_box',
-        'book',
-        'normal',
-        'high'
+        'book_details_meta_box', 
+        'Book Details', 
+        'display_book_meta_box', 
+        'book', 
+        'normal', 
+        'high' 
     );
 }
-add_action('add_meta_boxes', 'add_book_meta_boxes');
 
+add_action('add_meta_boxes', 'add_book_meta_boxes');
 
 // Callback function to display custom fields in the meta box
 function display_book_meta_box($post) {
@@ -126,12 +126,8 @@ function display_book_meta_box($post) {
     <button type="button" id="book_cover_images_button" class="button">Select Images</button>
 
     <script type="text/javascript">
-        jQuery(document).ready(function($) {
+        jQuery(document).ready(function($){
             var mediaUploader;
-
-            // Make the meta box draggable
-            $('#book_details_meta_box').parent().css('cursor', 'move').draggable();
-
             $('#book_cover_images_button').click(function(e) {
                 e.preventDefault();
                 if (mediaUploader) {
