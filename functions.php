@@ -5,7 +5,7 @@ add_theme_support('post-thumbnails');
 function create_custom_table() {
     global $wpdb;
     
-    $table_name = $wpdb->prefix . 'custom_toursings'; // Name of your custom table
+    $table_name = $wpdb->prefix . 'tour_bookings'; // Name of your custom table
     $charset_collate = $wpdb->get_charset_collate();
 
     // SQL query to create the table
@@ -85,6 +85,7 @@ function display_tours_meta_box($post) {
     $tours_edition = get_post_meta($post->ID, '_tours_edition', true);
     
     ?>
+    <h3>Hola</h3>
     <label for="tours_name">tours Name:</label>
     <input type="text" name="tours_name" value="<?php echo esc_attr($tours_name); ?>" class="widefat" />
     
