@@ -75,13 +75,14 @@ get_header();
                     <?php while ($query->have_posts()) : $query->the_post(); ?>
                         <li class="book-item">
                             <div class="book-card">
-                                <div class="book-thumbnail">
-                                    <?php if (has_post_thumbnail()) : ?>
-                                        <?php the_post_thumbnail('medium'); ?>
-                                    <?php else : ?>
-                                        <img src="<?php echo esc_url(get_template_directory_uri() . '/images/default-thumbnail.jpg'); ?>" alt="<?php the_title(); ?>">
-                                    <?php endif; ?>
-                                </div>
+                            <div class="book-thumbnail">
+    <?php if (has_post_thumbnail()) : ?>
+        <?php the_post_thumbnail('medium'); ?>
+    <?php else : ?>
+        <div class="skeleton-loader"></div>
+    <?php endif; ?>
+</div>
+
                                 <div class="book-info">
                                     <h2 class="book-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                                     <p><strong>Author:</strong> <?php echo esc_html(get_post_meta(get_the_ID(), '_book_author', true)); ?></p>
@@ -125,6 +126,25 @@ get_header();
     display: flex;
     gap: 20px;
 }
+.skeleton-loader {
+    width: 150px; /* Adjust to match the thumbnail size */
+    height: 225px; /* Adjust to match the thumbnail size */
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    border-radius: 5px; /* Add rounded corners if desired */
+    display: inline-block;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
 .filters {
     width: 25%;
     padding: 20px;
