@@ -48,8 +48,13 @@ get_header(); ?>
         if (!empty($tour_cover_images)) {
             echo '<div class="tour-cover-images">';
             echo '<h3>Gallery</h3>';
-            $images = explode(',', $tour_cover_images);
-            foreach ($images as $image_url) {
+            if (is_string($some_variable)) {
+                $result = explode(',', $some_variable);
+            } else {
+                // Handle the case when $some_variable is not a string
+                $result = []; // or some default value
+            }
+                        foreach ($images as $image_url) {
                 echo '<img src="' . esc_url(trim($image_url)) . '" alt="Tour Image" class="tour-image" />';
             }
             echo '</div>';
