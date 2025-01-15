@@ -78,27 +78,49 @@ function display_tour_meta_box($post) {
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
 
     ?>
-    <label for="tour_name">Tour Name:</label>
-    <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="widefat" />
-    
-    <label for="tour_details">Details:</label>
-    <textarea name="tour_details" class="widefat"><?php echo esc_textarea($tour_details); ?></textarea>
-    
-    <label for="tour_location">Location:</label>
-    <input type="text" name="tour_location" value="<?php echo esc_attr($tour_location); ?>" class="widefat" />
+    <div id="tour-multi-step-form">
+        <!-- Step 1 -->
+        <div class="step step-1">
+            <h3>Tour Basic Info</h3>
+            <label for="tour_name">Tour Name:</label>
+            <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="widefat" />
+            
+            <label for="tour_details">Details:</label>
+            <textarea name="tour_details" class="widefat"><?php echo esc_textarea($tour_details); ?></textarea>
+            
+            <label for="tour_location">Location:</label>
+            <input type="text" name="tour_location" value="<?php echo esc_attr($tour_location); ?>" class="widefat" />
+            
+            <button type="button" class="next-step">Next</button>
+        </div>
 
-    <label for="tour_duration">Duration:</label>
-    <input type="text" name="tour_duration" value="<?php echo esc_attr($tour_duration); ?>" class="widefat" />
+        <!-- Step 2 -->
+        <div class="step step-2" style="display:none;">
+            <h3>Tour Duration & Pricing</h3>
+            <label for="tour_duration">Duration:</label>
+            <input type="text" name="tour_duration" value="<?php echo esc_attr($tour_duration); ?>" class="widefat" />
 
-    <label for="tour_price">Price:</label>
-    <input type="number" name="tour_price" value="<?php echo esc_attr($tour_price); ?>" class="widefat" />
+            <label for="tour_price">Price:</label>
+            <input type="number" name="tour_price" value="<?php echo esc_attr($tour_price); ?>" class="widefat" />
 
-    <label for="tour_availability">Availability:</label>
-    <input type="text" name="tour_availability" value="<?php echo esc_attr($tour_availability); ?>" class="widefat" />
+            <label for="tour_availability">Availability:</label>
+            <input type="text" name="tour_availability" value="<?php echo esc_attr($tour_availability); ?>" class="widefat" />
+            
+            <button type="button" class="prev-step">Previous</button>
+            <button type="button" class="next-step">Next</button>
+        </div>
 
-    <label for="tour_cover_images">Cover Images:</label>
-    <input type="text" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array)$tour_cover_images)); ?>" class="widefat" />
-    <button type="button" id="tour_cover_images_button" class="button">Select Images</button>
+        <!-- Step 3 -->
+        <div class="step step-3" style="display:none;">
+            <h3>Cover Images</h3>
+            <label for="tour_cover_images">Cover Images:</label>
+            <input type="text" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array)$tour_cover_images)); ?>" class="widefat" />
+            <button type="button" id="tour_cover_images_button" class="button">Select Images</button>
+            
+            <button type="button" class="prev-step">Previous</button>
+            <button type="submit" class="submit-step">Save Tour</button>
+        </div>
+    </div>
 
     <script type="text/javascript">
         jQuery(document).ready(function($){
@@ -128,10 +150,20 @@ function display_tour_meta_box($post) {
 
                 mediaUploader.open();
             });
+
+            // Multi-step navigation
+            $('.next-step').click(function() {
+                $(this).closest('.step').hide().next('.step').show();
+            });
+
+            $('.prev-step').click(function() {
+                $(this).closest('.step').hide().prev('.step').show();
+            });
         });
     </script>
     <?php
 }
+
 
 // Save custom fields values when the post is saved
 function save_tour_meta($post_id) {
@@ -167,3 +199,31 @@ add_action('save_post', 'save_tour_meta');
 add_action('after_switch_theme', 'create_custom_table');
 
 ?>
+
+<style>
+    #tour-multi-step-form .step {
+    display: none;
+}
+
+#tour-multi-step-form .step-1 {
+    display: block;
+}
+
+button.next-step,
+button.prev-step,
+button.submit-step {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #0073aa;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button.next-step:hover,
+button.prev-step:hover,
+button.submit-step:hover {
+    background-color: #005177;
+}
+
+</style>
