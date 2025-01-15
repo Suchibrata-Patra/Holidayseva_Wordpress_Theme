@@ -22,7 +22,7 @@ function create_custom_table() {
     dbDelta($sql);
 }
 
-// Function to create a custom post type for tourss
+// Function to create a custom post type for tours
 function create_tours_post_type() {
     $args = array(
         'labels' => array(
@@ -33,10 +33,10 @@ function create_tours_post_type() {
             'edit_item' => 'Edit tours',
             'new_item' => 'New tours',
             'view_item' => 'View tours',
-            'search_items' => 'Search tourss',
-            'not_found' => 'No tourss found',
-            'not_found_in_trash' => 'No tourss found in Trash',
-            'all_items' => 'All tourss',
+            'search_items' => 'Search tours',
+            'not_found' => 'No tours found',
+            'not_found_in_trash' => 'No tours found in Trash',
+            'all_items' => 'All tours',
             'insert_into_item' => 'Insert into tours',
             'uploaded_to_this_item' => 'Uploaded to this tours',
         ),
@@ -45,7 +45,7 @@ function create_tours_post_type() {
         'menu_icon' => 'dashicons-palmtree',
         'show_in_rest' => true, // Enable Gutenberg block editor
         'has_archive' => true,
-        'rewrite' => array('slug' => 'tourss'),
+        'rewrite' => array('slug' => 'tours'),
         'menu_position' => 2, // Add this line
     );
     register_post_type('tours', $args);
