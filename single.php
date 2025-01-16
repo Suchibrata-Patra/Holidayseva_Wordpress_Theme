@@ -2,7 +2,7 @@
 /**
  * The template for displaying single Tour posts.
  *
- * @package Holidayseva
+ * @package YourThemeName
  */
 
 get_header(); ?>
@@ -12,24 +12,26 @@ get_header(); ?>
     while (have_posts()) :
         the_post();
 
+        // Store the post ID once
+        $post_id = get_the_ID();
+
         // Collect all the data upfront
         $tour_title = get_the_title();
         $tour_thumbnail = has_post_thumbnail() ? get_the_post_thumbnail(null, 'large') : '';
-        $tour_description = wp_kses_post(get_post_meta(get_the_ID(), '_tour_description', true));
-        $tour_location = get_post_meta(get_the_ID(), '_tour_location', true);
-        $tour_duration = get_post_meta(get_the_ID(), '_tour_duration', true);
-        $tour_price = get_post_meta(get_the_ID(), '_tour_price', true);
-        $tour_availability = get_post_meta(get_the_ID(), '_tour_availability', true);
-        $tour_cover_images = get_post_meta(get_the_ID(), '_tour_cover_images', true);
+        $tour_description = wp_kses_post(get_post_meta($post_id, '_tour_description', true));
+        $tour_location = get_post_meta($post_id, '_tour_location', true);
+        $tour_duration = get_post_meta($post_id, '_tour_duration', true);
+        $tour_price = get_post_meta($post_id, '_tour_price', true);
+        $tour_availability = get_post_meta($post_id, '_tour_availability', true);
+        $tour_cover_images = get_post_meta($post_id, '_tour_cover_images', true);
         
         // Fetch bookings for the current tour
         global $wpdb;
         $table_name = $wpdb->prefix . 'custom_bookings';
-        $current_tour_id = get_the_ID();
         $bookings = $wpdb->get_results(
             $wpdb->prepare(
                 "SELECT * FROM $table_name WHERE tour_id = %d",
-                $current_tour_id
+                $post_id
             )
         );
 
