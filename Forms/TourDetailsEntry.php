@@ -69,7 +69,7 @@ function display_tour_meta_box($post) {
                 </div>
  
                 <div class="form-group">
-                    <label for="tour_cover_images">Slider Images <span style="font-weight:300!important;">These Are the Tour Page's Slider Image</span></label>
+                    <label for="tour_cover_images">Slider Images <span style="font-weight:300!important;">[ These Are the Tour Page's Slider Image ]</span></label>
                     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control" style="display: none !important;"
                         value="<?php echo esc_attr($tour_cover_images); ?>" placeholder=""/>
                     <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
