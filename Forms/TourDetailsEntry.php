@@ -47,7 +47,7 @@ function display_tour_meta_box($post) {
                 <div class="form-group">
                     <label for="tour_location">Location:</label>
                     <input type="text" name="tour_location" id="tour_location" class="form-control"
-                        value="<?php echo esc_attr($tour_location); ?>" />
+                        value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA"/>
                 </div>
 
                 <div class="form-group">
