@@ -308,7 +308,4 @@ function save_tour_meta($post_id) {
 }
 
 add_action('save_post', 'save_tour_meta');
-
-// Optionally, you can add the function to create a custom table (call create_custom_table when needed)
-add_action('after_switch_theme', 'create_custom_table');
 ?>
