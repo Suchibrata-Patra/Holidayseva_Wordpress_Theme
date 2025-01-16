@@ -24,7 +24,7 @@ function register_custom_post_types() {
             'singular_name' => 'Tour',
             'slug' => 'tours',
             'icon' => 'dashicons-palmtree',
-            'position' => 2, // Position for the "Tours" post type
+            'position' => 200, // Position for the "Tours" post type
         ],
     ];
 
