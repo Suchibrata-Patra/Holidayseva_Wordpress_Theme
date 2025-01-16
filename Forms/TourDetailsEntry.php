@@ -141,7 +141,7 @@ function display_tour_meta_box($post) {
     /* Sidebar Styling */
     .sidebar {
         width: 20%;
-        background-color: #16404D;
+        background-color:rgb(6, 38, 48);
         color: white;
         padding: 10px;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
