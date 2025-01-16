@@ -113,6 +113,29 @@ function display_tour_meta_box($post) {
         <button type="button" id="add-highlight" class="btn btn-secondary">Add Highlight</button>
     </form>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const container = document.getElementById('highlights-container');
+    const addButton = document.getElementById('add-highlight');
+
+    addButton.addEventListener('click', function () {
+        const newIndex = container.children.length;
+        const newField = `
+            <div class="form-group highlight-item">
+                <label for="tour_highlight_${newIndex}">Highlight ${newIndex + 1}</label>
+                <input type="text" name="tour_highlights[]" id="tour_highlight_${newIndex}" class="form-control" value="" />
+                <button type="button" class="remove-highlight">Remove</button>
+            </div>`;
+        container.insertAdjacentHTML('beforeend', newField);
+    });
+
+    container.addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-highlight')) {
+            e.target.closest('.highlight-item').remove();
+        }
+    });
+});
+</script>
 
         <!--Itinerary -->
         <div id="itinerary" class="hidden">
@@ -320,29 +343,6 @@ function display_tour_meta_box($post) {
     });
 
 </script>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const container = document.getElementById('highlights-container');
-    const addButton = document.getElementById('add-highlight');
-
-    addButton.addEventListener('click', function () {
-        const newIndex = container.children.length;
-        const newField = `
-            <div class="form-group highlight-item">
-                <label for="tour_highlight_${newIndex}">Highlight ${newIndex + 1}</label>
-                <input type="text" name="tour_highlights[]" id="tour_highlight_${newIndex}" class="form-control" value="" />
-                <button type="button" class="remove-highlight">Remove</button>
-            </div>`;
-        container.insertAdjacentHTML('beforeend', newField);
-    });
-
-    container.addEventListener('click', function (e) {
-        if (e.target.classList.contains('remove-highlight')) {
-            e.target.closest('.highlight-item').remove();
-        }
-    });
-});
-</script>
 
 <?php
 }
@@ -391,7 +391,11 @@ function save_tour_meta($post_id) {
     
     if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
         $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights']));
-        update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
+        if (!empty($sanitized_highlights)) {
+            update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
+        } else {
+            delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights provided
+        }
     } else {
         delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights provided
     }
