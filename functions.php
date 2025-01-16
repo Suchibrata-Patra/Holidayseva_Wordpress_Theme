@@ -6,7 +6,7 @@ require_once get_template_directory() . '/Forms/TourDetailsEntry.php';
 add_theme_support('post-thumbnails');
 
 // Add custom schema for 'tour' post type with Rank Math
-add_filter('rank_math/snippet/rich_snippet_data', function($data, $post) {
+add_filter('rank_math/snippet/rich_snippet_data', function ($data, $post) {
     if ($post->post_type === 'tour') {
         $data['@type'] = 'TouristAttraction';
         $data['name'] = get_the_title($post);
@@ -87,3 +87,62 @@ function add_tour_meta_boxes() {
     );
 }
 add_action('add_meta_boxes', 'add_tour_meta_boxes');
+
+// Add Administration Details Page
+function add_admin_details_page() {
+    add_menu_page(
+        'Administration Details',
+        'Administration Details',
+        'manage_options',
+        'admin-details',
+        'display_admin_details_page',
+        'dashicons-admin-generic',
+        90
+    );
+}
+add_action('admin_menu', 'add_admin_details_page');
+
+// Display the Administration Details Page
+function display_admin_details_page() {
+    // Handle form submission
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['global_variable'])) {
+        // Update the global variable
+        update_option('my_global_variable', sanitize_text_field($_POST['global_variable']));
+        echo '<div class="updated"><p>Global variable updated successfully.</p></div>';
+    }
+
+    // Get the current value of the global variable
+    $global_variable = get_option('my_global_variable', 'Default Value');
+
+    // Display the form
+    ?>
+    <div class="wrap">
+        <h1>Administration Details</h1>
+        <form method="POST" action="">
+            <table class="form-table">
+                <tr>
+                    <th scope="row">
+                        <label for="global_variable">Global Variable</label>
+                    </th>
+                    <td>
+                        <input
+                            type="text"
+                            id="global_variable"
+                            name="global_variable"
+                            value="<?php echo esc_attr($global_variable); ?>"
+                            class="regular-text"
+                        />
+                    </td>
+                </tr>
+            </table>
+            <?php submit_button('Save Changes'); ?>
+        </form>
+    </div>
+    <?php
+}
+
+// Access the global variable anywhere in the code
+function get_my_global_variable() {
+    return get_option('my_global_variable', 'Default Value');
+}
+?>
