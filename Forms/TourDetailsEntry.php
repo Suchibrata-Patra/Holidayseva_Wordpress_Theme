@@ -3,6 +3,7 @@ function display_tour_meta_box($post) {
     // Retrieve existing custom fields values
     $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
     $tour_name = get_post_meta($post->ID, '_tour_name', true);
+    $tour_name = get_post_meta($post->ID, '_tour_description', true);
     $tour_details = get_post_meta($post->ID, '_tour_details', true);
     $tour_location = get_post_meta($post->ID, '_tour_location', true);
     $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
@@ -25,19 +26,8 @@ function display_tour_meta_box($post) {
         <div id="basic_info">
             <h3 class="form-title">Basic Info</h3>
             <form method="post" action="" class="styled-form">
-                <!-- <div class="form-group">
-                    <label for="tour_name">Tour Name:</label>
-                    <input type="text" name="tour_name" id="tour_name" class="form-control"
-                        value="<?php echo esc_attr($tour_name); ?>" />
-                </div>
-
                 <div class="form-group">
-                    <label for="tour_details">Details:</label>
-                    <textarea name="tour_details" id="tour_details"
-                        class="form-control"><?php echo esc_textarea($tour_details); ?></textarea>
-                </div> -->
-                <div class="form-group">
-                    <label for="tour_name">Tour Name:</label>
+                    <label for="tour_name">Tour Package Name:</label>
                     <input type="text" name="tour_name" id="tour_name" class="form-control"
                         value="<?php echo esc_attr($tour_name); ?>" />
                 </div>
@@ -313,7 +303,7 @@ function save_tour_meta($post_id) {
     if (isset($_POST['tour_details'])) {
         // update_post_meta($post_id, '_tour_details', sanitize_textarea_field($_POST['tour_details']));
     }
-    
+
     if (isset($_POST['tour_name'])) {
         update_post_meta($post_id, '_tour_name', sanitize_text_field($_POST['tour_name']));
     }
