@@ -141,7 +141,7 @@ function display_tour_meta_box($post) {
     /* Sidebar Styling */
     .sidebar {
         width: 20%;
-        background-color: rgb(0, 0, 0);
+        background-color: #16404D;
         color: white;
         padding: 10px;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -158,11 +158,11 @@ function display_tour_meta_box($post) {
     }
 
     .sidebar a.active {
-        background-color: #3498db;
+        background-color: #DDA853;
     }
 
     .sidebar a:hover {
-        background-color: #2980b9;
+        background-color: #FBF5DD;
     }
 
     /* Main Content Styling */
