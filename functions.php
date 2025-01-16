@@ -166,9 +166,11 @@ function display_tour_meta_box($post) {
             <div id="seo_form" class="collapse">
                 <h3>SEO Settings</h3>
                 <div class="form-group">
-                    <label for="rank_math_focus_keyword">Focus Keyword:</label>
-                    <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword" class="form-control" />
-                </div>
+                        <label for="tour_name">Tour Name:</label>
+                        <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="form-control" />
+                        <label for="tour_name">Tour Name:</label>
+                        <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="form-control" />
+                    </div>
             </div>
         </div>
     </div>
