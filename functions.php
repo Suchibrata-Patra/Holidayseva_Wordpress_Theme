@@ -249,19 +249,4 @@ add_action('save_post', 'save_tour_meta');
 
 // Optionally, you can add the function to create a custom table (call create_custom_table when needed)
 add_action('after_switch_theme', 'create_custom_table');
-
-// Create the options page under the "Tours" menu
-function add_trip_options_page() {
-    add_submenu_page(
-        'edit.php?post_type=tour', // Parent menu slug for "Tours"
-        'Add Trip', // Page title
-        'Add Trip', // Menu title
-        'manage_options', // Capability
-        'add_trip', // Menu slug
-        'display_add_trip_page' // Function to display the options page content
-    );
-}
-add_action('admin_menu', 'add_trip_options_page');
-
-// Function to display the options page
 ?>
