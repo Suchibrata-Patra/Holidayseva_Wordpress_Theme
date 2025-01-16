@@ -393,7 +393,7 @@ function save_tour_meta($post_id) {
         $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights']));
         update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
     } else {
-        delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights
+        delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights provided
     }
     
 }
