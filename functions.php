@@ -1,5 +1,4 @@
 <?php
-// Add theme support for post thumbnails
 add_theme_support('post-thumbnails');
 
 add_filter( 'rank_math/snippet/rich_snippet_data', function( $data, $post ) {
@@ -31,8 +30,6 @@ function register_custom_post_type() {
 add_action('init', 'register_custom_post_type');
 
 
-
-// Function to create the custom table for bookings
 function create_custom_table() {
     global $wpdb;
     
@@ -246,7 +243,5 @@ function save_tour_meta($post_id) {
 }
 
 add_action('save_post', 'save_tour_meta');
-
-// Optionally, you can add the function to create a custom table (call create_custom_table when needed)
 add_action('after_switch_theme', 'create_custom_table');
 ?>
