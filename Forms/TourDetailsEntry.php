@@ -25,7 +25,7 @@ function display_tour_meta_box($post) {
         <div id="basic_info">
             <h3 class="form-title">Basic Info</h3>
             <form method="post" action="" class="styled-form">
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="tour_name">Tour Name:</label>
                     <input type="text" name="tour_name" id="tour_name" class="form-control"
                         value="<?php echo esc_attr($tour_name); ?>" />
@@ -35,6 +35,23 @@ function display_tour_meta_box($post) {
                     <label for="tour_details">Details:</label>
                     <textarea name="tour_details" id="tour_details"
                         class="form-control"><?php echo esc_textarea($tour_details); ?></textarea>
+                </div> -->
+                <div class="form-group">
+                    <label for="tour_name">Tour Name:</label>
+                    <input type="text" name="tour_name" id="tour_name" class="form-control"
+                        value="<?php echo esc_attr($tour_name); ?>" />
+                </div>
+                
+                <div class="form-group">
+                    <label for="tour_description">Tour Description:</label>
+                    <?php
+                        $tour_description = isset($tour_description) ? $tour_description : ''; // Get existing value if exists
+                        wp_editor($tour_description, 'tour_description', array(
+                            'textarea_name' => 'tour_description',
+                            'textarea_rows' => 10,
+                            'media_buttons' => true, // Enable media buttons (images, etc.)
+                        ));
+                    ?>
                 </div>
 
                 <div class="form-group">
@@ -291,11 +308,21 @@ function save_tour_meta($post_id) {
         update_post_meta($post_id, '_tour_cover_images', explode(',', sanitize_text_field($_POST['tour_cover_images'])));
     }
     if (isset($_POST['tour_name'])) {
-        update_post_meta($post_id, '_tour_name', sanitize_text_field($_POST['tour_name']));
+        // update_post_meta($post_id, '_tour_name', sanitize_text_field($_POST['tour_name']));
     }
     if (isset($_POST['tour_details'])) {
-        update_post_meta($post_id, '_tour_details', sanitize_textarea_field($_POST['tour_details']));
+        // update_post_meta($post_id, '_tour_details', sanitize_textarea_field($_POST['tour_details']));
     }
+    
+    if (isset($_POST['tour_name'])) {
+        update_post_meta($post_id, '_tour_name', sanitize_text_field($_POST['tour_name']));
+    }
+
+    // Save tour description (Visual Editor content)
+    if (isset($_POST['tour_description'])) {
+        update_post_meta($post_id, '_tour_description', wp_kses_post($_POST['tour_description'])); // Sanitize HTML
+    }
+
     if (isset($_POST['tour_location'])) {
         update_post_meta($post_id, '_tour_location', sanitize_text_field($_POST['tour_location']));
     }
