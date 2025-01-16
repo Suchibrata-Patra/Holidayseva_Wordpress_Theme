@@ -126,7 +126,6 @@ function display_tour_meta_box($post) {
         <div class="col-md-9">
             <div id="tour_form" class="collapse show">
                 <h3>Tour Details</h3>
-                Lorem
                 <form method="post" action="">
                     <div class="form-group">
                         <label for="tour_name">Tour Name:</label>
