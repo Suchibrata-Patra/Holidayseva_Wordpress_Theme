@@ -116,8 +116,8 @@ function display_tour_meta_box($post) {
 
 <div class="content">
     <div id="tour_form">
-        <h3>Tour Details</h3>
-        <form method="post" action="">
+        <h3 class="form-title">Tour Details</h3>
+        <form method="post" action="" class="styled-form">
             <div class="form-group">
                 <label for="tour_name">Tour Name:</label>
                 <input type="text" name="tour_name" id="tour_name" class="form-control" />
@@ -151,14 +151,14 @@ function display_tour_meta_box($post) {
             <div class="form-group">
                 <label for="tour_cover_images">Cover Images:</label>
                 <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control" />
-                <button type="button" id="tour_cover_images_button">Select Images</button>
+                <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
             </div>
         </form>
     </div>
 
     <div id="seo_form" class="hidden">
-        <h3>SEO Settings</h3>
-        <form method="post" action="">
+        <h3 class="form-title">SEO Settings</h3>
+        <form method="post" action="" class="styled-form">
             <div class="form-group">
                 <label for="rank_math_focus_keyword">Focus Keyword:</label>
                 <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword" class="form-control" />
@@ -168,30 +168,56 @@ function display_tour_meta_box($post) {
 </div>
 
 <style>
+    /* Sidebar Styling */
     .sidebar {
         width: 25%;
-        background-color: #343a40;
+        background-color: #2c3e50;
         color: white;
-        padding: 15px;
+        padding: 20px;
         float: left;
+        height: 100vh;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     }
 
     .sidebar a {
         display: block;
-        padding: 10px;
+        padding: 12px 15px;
         color: white;
         text-decoration: none;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         border-radius: 5px;
+        transition: background-color 0.3s ease;
     }
 
     .sidebar a.active {
-        background-color: #495057;
+        background-color: #3498db;
     }
 
+    .sidebar a:hover {
+        background-color: #2980b9;
+    }
+
+    /* Content Styling */
     .content {
         margin-left: 25%;
+        padding: 30px;
+        background-color: #ecf0f1;
+        min-height: 100vh;
+    }
+
+    .form-title {
+        margin-bottom: 20px;
+        color: #34495e;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    /* Form Styling */
+    .styled-form {
+        background-color: white;
         padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .form-group {
@@ -200,30 +226,42 @@ function display_tour_meta_box($post) {
 
     .form-group label {
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
         font-weight: bold;
+        color: #34495e;
     }
 
     .form-group input, 
     .form-group textarea {
-        width: 50%;
+        width: 100%;
         padding: 10px;
-        border: 1px solid #ccc;
+        border: 1px solid #bdc3c7;
         border-radius: 5px;
+        font-size: 1rem;
+        color: #2c3e50;
     }
 
-    .form-group button {
+    .form-group input:focus, 
+    .form-group textarea:focus {
+        border-color: #3498db;
+        outline: none;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    }
+
+    .form-button {
         margin-top: 10px;
-        padding: 10px 15px;
-        background-color: #007bff;
+        padding: 10px 20px;
+        background-color: #3498db;
         color: white;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
     }
 
-    .form-group button:hover {
-        background-color: #0056b3;
+    .form-button:hover {
+        background-color: #2980b9;
     }
 
     .hidden {
