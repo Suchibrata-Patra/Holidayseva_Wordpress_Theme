@@ -13,7 +13,8 @@ function display_tour_meta_box($post) {
     <!-- Sidebar -->
     <div class="sidebar">
         <a href="#" class="tab-link active" data-target="tour_form">Tour Details</a>
-        <a href="#" class="tab-link" data-target="seo_form">SEO Settings</a>
+        <a href="#" class="tab-link" data-target="highlights">Highlights</a>
+        <a href="#" class="tab-link" data-target="itinerary">Itinerary</a>
     </div>
 
     <!-- Main Content -->
@@ -69,8 +70,8 @@ function display_tour_meta_box($post) {
         </div>
 
         <!-- SEO Form -->
-        <div id="seo_form" class="hidden">
-            <h3 class="form-title">SEO Settings</h3>
+        <div id="highlights" class="hidden">
+            <h3 class="form-title">Highlights</h3>
             <form method="post" action="" class="styled-form">
                 <div class="form-group">
                     <label for="rank_math_focus_keyword">Focus Keyword:</label>
@@ -79,8 +80,10 @@ function display_tour_meta_box($post) {
                 </div>
             </form>
         </div>
-        <div id="seo_form" class="hidden">
-            <h3 class="form-title">SEO Settings</h3>
+
+        <!-- SEO Form -->
+        <div id="itinerary" class="hidden">
+            <h3 class="form-title">Highlights</h3>
             <form method="post" action="" class="styled-form">
                 <div class="form-group">
                     <label for="rank_math_focus_keyword">Focus Keyword:</label>
