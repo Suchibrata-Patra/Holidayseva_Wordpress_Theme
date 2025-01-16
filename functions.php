@@ -87,3 +87,67 @@ function add_tour_meta_boxes() {
     );
 }
 add_action('add_meta_boxes', 'add_tour_meta_boxes');
+
+// Add menu for Global Variables
+function add_global_variables_menu() {
+    add_menu_page(
+        'Global Variables',               // Page title
+        'Global Variables',               // Menu title
+        'manage_options',                 // Capability
+        'global-variables',               // Menu slug
+        'display_global_variables_page',  // Callback function
+        'dashicons-admin-generic',        // Icon
+        20                                // Position
+    );
+}
+add_action('admin_menu', 'add_global_variables_menu');
+
+// Display Global Variables page
+function display_global_variables_page() {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['global_variable_name'])) {
+        // Save the global variable
+        $name = sanitize_text_field($_POST['global_variable_name']);
+        $value = sanitize_text_field($_POST['global_variable_value']);
+        update_option($name, $value);
+        echo '<div class="updated"><p>Global variable saved!</p></div>';
+    }
+
+    ?>
+    <div class="wrap">
+        <h1>Manage Global Variables</h1>
+        <form method="post" action="">
+            <table class="form-table">
+                <tr>
+                    <th><label for="global_variable_name">Variable Name</label></th>
+                    <td><input type="text" id="global_variable_name" name="global_variable_name" class="regular-text" required></td>
+                </tr>
+                <tr>
+                    <th><label for="global_variable_value">Variable Value</label></th>
+                    <td><input type="text" id="global_variable_value" name="global_variable_value" class="regular-text" required></td>
+                </tr>
+            </table>
+            <?php submit_button('Save Variable'); ?>
+        </form>
+        <h2>Existing Variables</h2>
+        <table class="widefat">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                // Display all stored global variables
+                $all_options = wp_load_alloptions();
+                foreach ($all_options as $name => $value) {
+                    if (strpos($name, '_') !== 0) { // Exclude internal options
+                        echo "<tr><td>{$name}</td><td>{$value}</td></tr>";
+                    }
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+    <?php
+}
