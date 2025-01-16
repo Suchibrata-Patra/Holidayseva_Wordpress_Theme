@@ -162,7 +162,7 @@ function display_tour_meta_box($post) {
     }
 
     .sidebar a:hover {
-        background-color: #FBF5DD;
+        background-color:rgb(210, 159, 77);
     }
 
     /* Main Content Styling */
