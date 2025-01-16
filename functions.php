@@ -104,27 +104,27 @@ function display_tour_meta_box($post) {
 
                 <div class="form-group">
                     <label for="tour_details">Details:</label>
-                    <textarea name="tour_details" id="tour_details" class="form-control"></textarea>
+                    <textarea name="tour_details" id="tour_details" class="form-control"><?php echo esc_textarea($tour_details); ?></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="tour_location">Location:</label>
-                    <input type="text" name="tour_location" id="tour_location" class="form-control" />
+                    <input type="text" name="tour_location" id="tour_location" class="form-control" value="<?php echo esc_attr($tour_location); ?>" />
                 </div>
 
                 <div class="form-group">
                     <label for="tour_duration">Duration:</label>
-                    <input type="text" name="tour_duration" id="tour_duration" class="form-control" />
+                    <input type="text" name="tour_duration" id="tour_duration" class="form-control" value="<?php echo esc_attr($tour_duration); ?>" />
                 </div>
 
                 <div class="form-group">
                     <label for="tour_price">Price:</label>
-                    <input type="number" name="tour_price" id="tour_price" class="form-control" />
+                    <input type="number" name="tour_price" id="tour_price" class="form-control" value="<?php echo esc_attr($tour_price); ?>" />
                 </div>
 
                 <div class="form-group">
                     <label for="tour_availability">Availability:</label>
-                    <input type="text" name="tour_availability" id="tour_availability" class="form-control" />
+                    <input type="text" name="tour_availability" id="tour_availability" class="form-control" value="<?php echo esc_attr($tour_availability); ?>" />
                 </div>
 
                 <div class="form-group">
