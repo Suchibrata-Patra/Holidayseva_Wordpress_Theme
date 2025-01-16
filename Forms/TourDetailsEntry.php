@@ -65,7 +65,7 @@ function display_tour_meta_box($post) {
                 <div class="form-group">
                     <label for="tour_availability">Availability:</label>
                     <input type="text" name="tour_availability" id="tour_availability" class="form-control"
-                        value="<?php echo esc_attr($tour_availability); ?>" />
+                        value="<?php echo esc_attr($tour_availability); ?>" placeholder="Avialable Immediately"/>
                 </div>
  
                 <div class="form-group">
@@ -82,10 +82,11 @@ function display_tour_meta_box($post) {
         <div id="highlights" class="hidden">
             <h3 class="form-title">Highlights</h3>
             <form method="post" action="" class="styled-form">
-                <div class="form-group">
-                    <label for="rank_math_focus_keyword">Focus Keyword:</label>
-                    <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword"
-                        class="form-control" />
+            <div class="form-group">
+                    <label for="tour_cover_images">Cover Images:</label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                        value="<?php echo esc_attr($tour_cover_images); ?>" />
+                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
                 </div>
             </form>
         </div>
@@ -94,10 +95,11 @@ function display_tour_meta_box($post) {
         <div id="itinerary" class="hidden">
             <h3 class="form-title">Itinerary</h3>
             <form method="post" action="" class="styled-form">
-                <div class="form-group">
-                    <label for="rank_math_focus_keyword">Focus Keyword:</label>
-                    <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword"
-                        class="form-control" />
+            <div class="form-group">
+                    <label for="tour_cover_images">Cover Images:</label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                        value="<?php echo esc_attr($tour_cover_images); ?>" />
+                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
                 </div>
             </form>
         </div>
@@ -105,10 +107,11 @@ function display_tour_meta_box($post) {
         <div id="reviews" class="hidden">
             <h3 class="form-title">Reviews</h3>
             <form method="post" action="" class="styled-form">
-                <div class="form-group">
-                    <label for="rank_math_focus_keyword">Focus Keyword:</label>
-                    <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword"
-                        class="form-control" />
+            <div class="form-group">
+                    <label for="tour_cover_images">Cover Images:</label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                        value="<?php echo esc_attr($tour_cover_images); ?>" />
+                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
                 </div>
             </form>
         </div>
@@ -116,10 +119,11 @@ function display_tour_meta_box($post) {
         <div id="frequently_asked_questions" class="hidden">
             <h3 class="form-title">Frequently Asked Questions</h3>
             <form method="post" action="" class="styled-form">
-                <div class="form-group">
-                    <label for="rank_math_focus_keyword">Focus Keyword:</label>
-                    <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword"
-                        class="form-control" />
+            <div class="form-group">
+                    <label for="tour_cover_images">Cover Images:</label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                        value="<?php echo esc_attr($tour_cover_images); ?>" />
+                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
                 </div>
             </form>
         </div>
