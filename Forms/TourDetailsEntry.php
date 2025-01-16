@@ -27,13 +27,13 @@ function display_tour_meta_box($post) {
             <h3 class="form-title">Basic Info</h3>
             <form method="post" action="" class="styled-form">
                 <div class="form-group">
-                    <label for="tour_name">Tour Package Name:</label>
+                    <label for="tour_name">Tour Package Name</label>
                     <input type="text" name="tour_name" id="tour_name" class="form-control"
                         value="<?php echo esc_attr($tour_name); ?>" />
                 </div>
                 
                 <div class="form-group">
-                    <label for="tour_description">Tour Description:</label>
+                    <label for="tour_description">Tour Description</label>
                     <?php
                         $tour_description = isset($tour_description) ? $tour_description : ''; // Get existing value if exists
                         wp_editor($tour_description, 'tour_description', array(
@@ -45,7 +45,7 @@ function display_tour_meta_box($post) {
                 </div>
 
                 <div class="form-group">
-                    <label for="tour_location">Location:</label>
+                    <label for="tour_location">Location</label>
                     <input type="text" name="tour_location" id="tour_location" class="form-control"
                         value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA"/>
                 </div>
@@ -57,13 +57,13 @@ function display_tour_meta_box($post) {
                 </div>
 
                 <div class="form-group">
-                    <label for="tour_price">Price:</label>
+                    <label for="tour_price">Price</label>
                     <input type="number" name="tour_price" id="tour_price" class="form-control"
-                        value="<?php echo esc_attr($tour_price); ?>" />
+                        value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR"/>
                 </div>
 
                 <div class="form-group">
-                    <label for="tour_availability">Availability:</label>
+                    <label for="tour_availability">Availability</label>
                     <input type="text" name="tour_availability" id="tour_availability" class="form-control"
                         value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately"/>
                 </div>
@@ -83,7 +83,7 @@ function display_tour_meta_box($post) {
             <h3 class="form-title">Highlights</h3>
             <form method="post" action="" class="styled-form">
             <div class="form-group">
-                    <label for="tour_cover_images">Cover Images:</label>
+                    <label for="tour_cover_images">Cover Images </label>
                     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
                         value="<?php echo esc_attr($tour_cover_images); ?>" />
                     <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
@@ -96,7 +96,7 @@ function display_tour_meta_box($post) {
             <h3 class="form-title">Itinerary</h3>
             <form method="post" action="" class="styled-form">
             <div class="form-group">
-                    <label for="tour_cover_images">Cover Images:</label>
+                    <label for="tour_cover_images">Cover Images </label>
                     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
                         value="<?php echo esc_attr($tour_cover_images); ?>" />
                     <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
@@ -108,7 +108,7 @@ function display_tour_meta_box($post) {
             <h3 class="form-title">Reviews</h3>
             <form method="post" action="" class="styled-form">
             <div class="form-group">
-                    <label for="tour_cover_images">Cover Images:</label>
+                    <label for="tour_cover_images">Cover Images </label>
                     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
                         value="<?php echo esc_attr($tour_cover_images); ?>" />
                     <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
@@ -120,7 +120,7 @@ function display_tour_meta_box($post) {
             <h3 class="form-title">Frequently Asked Questions</h3>
             <form method="post" action="" class="styled-form">
             <div class="form-group">
-                    <label for="tour_cover_images">Cover Images:</label>
+                    <label for="tour_cover_images">Cover Images </label>
                     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
                         value="<?php echo esc_attr($tour_cover_images); ?>" />
                     <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
