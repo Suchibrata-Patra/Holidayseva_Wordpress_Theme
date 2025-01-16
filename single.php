@@ -9,6 +9,21 @@
 
 
 get_header(); ?>
+<?php
+// Retrieve highlights
+$tour_highlights = get_post_meta(get_the_ID(), '_tour_highlights', true);
+
+if (!empty($tour_highlights) && is_array($tour_highlights)) {
+    echo '<ul class="tour-highlights">';
+    foreach ($tour_highlights as $highlight) {
+        echo '<li>' . esc_html($highlight) . '</li>';
+    }
+    echo '</ul>';
+} else {
+    echo '<p>No highlights available for this tour.</p>';
+}
+?>
+
 
 <main id="primary" class="site-main">
     <?php
