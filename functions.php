@@ -173,6 +173,7 @@ function display_tour_meta_box($post) {
         background-color: #343a40;
         color: white;
         padding: 15px;
+        float: left;
     }
 
     .sidebar a {
@@ -189,7 +190,7 @@ function display_tour_meta_box($post) {
     }
 
     .content {
-        width: 75%;
+        margin-left: 25%;
         padding: 20px;
     }
 
@@ -205,7 +206,7 @@ function display_tour_meta_box($post) {
 
     .form-group input, 
     .form-group textarea {
-        width: 100%;
+        width: 50%;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
