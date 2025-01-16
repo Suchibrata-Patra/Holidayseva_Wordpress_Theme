@@ -99,7 +99,7 @@ function display_tour_meta_box($post) {
             <form method="post" action="" class="styled-form">
                 <div class="form-group">
                     <label for="tour_name">Tour Name:</label>
-                    <input type="text" name="tour_name" id="tour_name" class="form-control" />
+                    <input type="text" name="tour_name" id="tour_name" class="form-control"  value="<?php echo esc_attr($tour_name); ?>"/>
                 </div>
 
                 <div class="form-group">
