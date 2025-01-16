@@ -106,75 +106,127 @@ function display_tour_meta_box($post) {
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
 
     ?>
-    <div class="container-fluid">
-    <div class="row">
-        <!-- Sidebar -->
-        <div class="col-md-3">
-            <div class="list-group">
-                <a href="#tour_form" class="list-group-item list-group-item-action active" data-toggle="collapse" aria-expanded="true">
-                    Tour Details
-                </a>
-                <a href="#seo_form" class="list-group-item list-group-item-action" data-toggle="collapse" aria-expanded="false">
-                    SEO Settings
-                </a>
-            </div>
+    <div class="tour-meta-box">
+        <style>
+            .tour-meta-box {
+                display: flex;
+                height: 400px;
+            }
+            .tour-sidebar {
+                width: 20%;
+                background: #f9f9f9;
+                border-right: 1px solid #ddd;
+                padding: 10px;
+            }
+            .tour-sidebar .menu-item {
+                padding: 10px;
+                cursor: pointer;
+                margin-bottom: 5px;
+                border-radius: 4px;
+            }
+            .tour-sidebar .menu-item.active {
+                background: #007cba;
+                color: white;
+            }
+            .tour-content {
+                width: 80%;
+                padding: 20px;
+            }
+            .tour-content .form-group {
+                margin-bottom: 15px;
+            }
+            .hidden {
+                display: none;
+            }
+        </style>
+
+        <div class="tour-sidebar">
+            <div class="menu-item active" data-section="details">Tour Details</div>
+            <div class="menu-item" data-section="seo">SEO Settings</div>
         </div>
 
-        <!-- Main Content -->
-        <div class="col-md-9">
-            <div id="tour_form" class="collapse show">
+        <div class="tour-content">
+            <!-- Tour Details Section -->
+            <div id="details" class="section">
                 <h3>Tour Details</h3>
-                <form method="post" action="">
-                    <div class="form-group">
-                        <label for="tour_name">Tour Name:</label>
-                        <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="form-control" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tour_details">Details:</label>
-                        <textarea name="tour_details" class="form-control"><?php echo esc_textarea($tour_details); ?></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tour_location">Location:</label>
-                        <input type="text" name="tour_location" value="<?php echo esc_attr($tour_location); ?>" class="form-control" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tour_duration">Duration:</label>
-                        <input type="text" name="tour_duration" value="<?php echo esc_attr($tour_duration); ?>" class="form-control" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tour_price">Price:</label>
-                        <input type="number" name="tour_price" value="<?php echo esc_attr($tour_price); ?>" class="form-control" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tour_availability">Availability:</label>
-                        <input type="text" name="tour_availability" value="<?php echo esc_attr($tour_availability); ?>" class="form-control" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="tour_cover_images">Cover Images:</label>
-                        <input type="text" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array)$tour_cover_images)); ?>" class="form-control" />
-                        <button type="button" id="tour_cover_images_button" class="btn btn-primary mt-2">Select Images</button>
-                    </div>
-                </form>
+                <div class="form-group">
+                    <label for="tour_name">Tour Name:</label>
+                    <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="tour_details">Details:</label>
+                    <textarea name="tour_details" class="form-control"><?php echo esc_textarea($tour_details); ?></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tour_location">Location:</label>
+                    <input type="text" name="tour_location" value="<?php echo esc_attr($tour_location); ?>" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="tour_duration">Duration:</label>
+                    <input type="text" name="tour_duration" value="<?php echo esc_attr($tour_duration); ?>" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="tour_price">Price:</label>
+                    <input type="number" name="tour_price" value="<?php echo esc_attr($tour_price); ?>" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="tour_availability">Availability:</label>
+                    <input type="text" name="tour_availability" value="<?php echo esc_attr($tour_availability); ?>" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="tour_cover_images">Cover Images:</label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array)$tour_cover_images)); ?>" class="form-control" />
+                    <button type="button" id="tour_cover_images_button" class="btn btn-primary mt-2">Select Images</button>
+                </div>
             </div>
 
-            <div id="seo_form" class="collapse">
+            <!-- SEO Settings Section -->
+            <div id="seo" class="section hidden">
                 <h3>SEO Settings</h3>
                 <div class="form-group">
-                        <label for="tour_name">Tour Name:</label>
-                        <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="form-control" />
-                        <label for="tour_name">Tour Name:</label>
-                        <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="form-control" />
-                    </div>
+                    <label for="rank_math_focus_keyword">Focus Keyword:</label>
+                    <input type="text" name="rank_math_focus_keyword" class="form-control" />
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            // Sidebar navigation
+            $('.tour-sidebar .menu-item').click(function () {
+                $('.tour-sidebar .menu-item').removeClass('active');
+                $(this).addClass('active');
+                $('.tour-content .section').addClass('hidden');
+                $('#' + $(this).data('section')).removeClass('hidden');
+            });
+
+            // Media uploader for images
+            var mediaUploader;
+            $('#tour_cover_images_button').click(function (e) {
+                e.preventDefault();
+                if (mediaUploader) {
+                    mediaUploader.open();
+                    return;
+                }
+                mediaUploader = wp.media.frames.file_frame = wp.media({
+                    title: 'Select Cover Images',
+                    button: {
+                        text: 'Select Images'
+                    },
+                    multiple: true
+                });
+                mediaUploader.on('select', function () {
+                    var attachments = mediaUploader.state().get('selection').toJSON();
+                    var imageUrls = attachments.map(function (attachment) {
+                        return attachment.url;
+                    });
+                    $('#tour_cover_images').val(imageUrls.join(', '));
+                });
+                mediaUploader.open();
+            });
+        });
+    </script>
 
 <script type="text/javascript">
     jQuery(document).ready(function($){
