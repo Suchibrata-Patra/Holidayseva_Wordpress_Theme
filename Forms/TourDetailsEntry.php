@@ -153,7 +153,7 @@ function display_tour_meta_box($post) {
         color: white;
         text-decoration: none;
         margin-bottom: 5px;
-        border-radius: 5px;
+        border-radius: 0px;
         transition: background-color 0.3s ease;
     }
 
