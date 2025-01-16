@@ -82,37 +82,14 @@ function display_tour_meta_box($post) {
 
         <!-- Highlights -->
         <div id="highlights" class="hidden">
-    <h3 class="form-title">Highlights</h3>
-    <form method="post" action="" class="styled-form">
-        <div id="highlights-container">
-            <?php 
-            // Check if we already have highlights, display them dynamically
-            if (!empty($tour_highlights) && is_array($tour_highlights)) {
-                foreach ($tour_highlights as $key => $highlight) {
-                    ?>
-                    <div class="form-group highlight-item">
-                        <label for="tour_highlight_<?php echo $key; ?>">Highlight <?php echo $key + 1; ?></label>
-                        <input type="text" name="tour_highlights[]" id="tour_highlight_<?php echo $key; ?>" 
-                            class="form-control" value="<?php echo esc_attr($highlight); ?>" />
-                        <button type="button" class="remove-highlight">Remove</button>
-                    </div>
-                    <?php
-                }
-            } else {
-                // Default: one empty highlight field
-                ?>
-                <div class="form-group highlight-item">
-                    <label for="tour_highlight_0">Highlight 1</label>
-                    <input type="text" name="tour_highlights[]" id="tour_highlight_0" class="form-control" value="" />
-                    <button type="button" class="remove-highlight">Remove</button>
+            <h3 class="form-title">Itinerary</h3>
+            <form method="post" action="" class="styled-form">
+            <div class="form-group">
+                    
                 </div>
-                <?php
-            }
-            ?>
+            </form>
         </div>
-        <button type="button" id="add-highlight" class="btn btn-secondary">Add Highlight</button>
-    </form>
-</div>
+
 
         <!--Itinerary -->
         <div id="itinerary" class="hidden">
