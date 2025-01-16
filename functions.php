@@ -31,7 +31,6 @@ function register_custom_post_type() {
 add_action('init', 'register_custom_post_type');
 
 
-
 // Function to create the custom table for bookings
 function create_custom_table() {
     global $wpdb;
@@ -109,18 +108,108 @@ function display_tour_meta_box($post) {
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
 
     ?>
-    
+    <div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="#tour_form" class="list-group-item list-group-item-action active" data-toggle="collapse" aria-expanded="true">
+                    Tour Details
+                </a>
+                <a href="#seo_form" class="list-group-item list-group-item-action" data-toggle="collapse" aria-expanded="false">
+                    SEO Settings
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9">
+            <div id="tour_form" class="collapse show">
+                <h3>Tour Details</h3>
+                <form method="post" action="">
+                    <div class="form-group">
+                        <label for="tour_name">Tour Name:</label>
+                        <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour_details">Details:</label>
+                        <textarea name="tour_details" class="form-control"><?php echo esc_textarea($tour_details); ?></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour_location">Location:</label>
+                        <input type="text" name="tour_location" value="<?php echo esc_attr($tour_location); ?>" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour_duration">Duration:</label>
+                        <input type="text" name="tour_duration" value="<?php echo esc_attr($tour_duration); ?>" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour_price">Price:</label>
+                        <input type="number" name="tour_price" value="<?php echo esc_attr($tour_price); ?>" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour_availability">Availability:</label>
+                        <input type="text" name="tour_availability" value="<?php echo esc_attr($tour_availability); ?>" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour_cover_images">Cover Images:</label>
+                        <input type="text" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array)$tour_cover_images)); ?>" class="form-control" />
+                        <button type="button" id="tour_cover_images_button" class="btn btn-primary mt-2">Select Images</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="seo_form" class="collapse">
+                <h3>SEO Settings</h3>
+                <div class="form-group">
+                    <label for="rank_math_focus_keyword">Focus Keyword:</label>
+                    <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword" class="form-control" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script type="text/javascript">
+    jQuery(document).ready(function($){
+        var mediaUploader;
+        $('#tour_cover_images_button').click(function(e) {
+            e.preventDefault();
+            if (mediaUploader) {
+                mediaUploader.open();
+                return;
+            }
+
+            mediaUploader = wp.media.frames.file_frame = wp.media({
+                title: 'Select Cover Images',
+                button: {
+                    text: 'Select Images'
+                },
+                multiple: true // Allow multiple file selection
+            });
+
+            mediaUploader.on('select', function() {
+                var attachments = mediaUploader.state().get('selection').toJSON();
+                var imageUrls = attachments.map(function(attachment) {
+                    return attachment.url;
+                });
+                $('#tour_cover_images').val(imageUrls.join(', '));
+            });
+
+            mediaUploader.open();
+        });
+    });
+</script>
 
     <?php
 }
-// Include the form HTML from the new file
-include_once get_template_directory() . '/tour-form.php';
-
-// Enqueue the JavaScript file to handle the form functionality
-function enqueue_tour_form_script() {
-    wp_enqueue_script('tour-form-script', get_template_directory_uri() . '/js/tour-form.js', array('jquery'), null, true);
-}
-add_action('wp_enqueue_scripts', 'enqueue_tour_form_script');
 
 // Save custom fields values when the post is saved
 function save_tour_meta($post_id) {
