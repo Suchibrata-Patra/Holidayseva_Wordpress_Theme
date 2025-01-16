@@ -184,9 +184,9 @@ function display_tour_meta_box($post) {
     /* Sidebar Styling */
     .sidebar {
         width: 20%;
-        background-color: #2c3e50;
+        background-color:rgb(0, 0, 0);
         color: white;
-        padding: 20px;
+        padding: 10px;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     }
 
