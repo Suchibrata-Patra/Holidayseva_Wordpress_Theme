@@ -29,6 +29,15 @@ get_header(); ?>
             'Price' => get_post_meta(get_the_ID(), '_tour_price', true),
             'Availability' => get_post_meta(get_the_ID(), '_tour_availability', true),
         );
+        // Display the tour description
+$tour_description = get_post_meta(get_the_ID(), '_tour_description', true);
+if (!empty($tour_description)) {
+    echo '<div class="tour-description">';
+    echo '<h3>Tour Description</h3>';
+    echo '<p>' . wp_kses_post($tour_description) . '</p>';
+    echo '</div>';
+}
+
 
         echo '<div class="tour-details">';
         echo '<h3>Tour Details</h3>';
