@@ -46,11 +46,11 @@ function add_tour_meta_boxes() {
 }
 add_action('add_meta_boxes', 'add_tour_meta_boxes');
 
-// Add MasterSettings Page
+// Add AppConfig Page
 function add_admin_details_page() {
     add_menu_page(
-        'MasterSettings',
-        'MasterSettings',
+        'AppConfig',
+        'AppConfig',
         'manage_options',
         'admin-details',
         'display_admin_details_page',
@@ -60,7 +60,7 @@ function add_admin_details_page() {
 }
 add_action('admin_menu', 'add_admin_details_page');
 
-// Display the MasterSettings Page
+// Display the AppConfig Page
 function display_admin_details_page() {
     // Handle form submission
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['global_variable'])) {
@@ -75,7 +75,7 @@ function display_admin_details_page() {
     // Display the form
     ?>
     <div class="wrap">
-        <h1>MasterSettings</h1>
+        <h1>AppConfig</h1>
         <form method="POST" action="">
             <table class="form-table">
                 <tr>
