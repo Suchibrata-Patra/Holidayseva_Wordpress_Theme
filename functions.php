@@ -1,6 +1,5 @@
 <?php
 add_theme_support('post-thumbnails');
-
 add_filter( 'rank_math/snippet/rich_snippet_data', function( $data, $post ) {
     if ( 'tour' === $post->post_type ) {
         // Custom schema data for 'tour' post type
@@ -28,27 +27,6 @@ function register_custom_post_type() {
     register_post_type('custom_post', $args); // Replace 'custom_post' with your post type slug
 }
 add_action('init', 'register_custom_post_type');
-
-
-function create_custom_table() {
-    global $wpdb;
-    
-    $table_name = $wpdb->prefix . 'custom_bookings'; // Name of your custom table
-    $charset_collate = $wpdb->get_charset_collate();
-
-    // SQL query to create the table
-    $sql = "CREATE TABLE $table_name (
-        id mediumint(9) NOT NULL AUTO_INCREMENT,
-        customer_name varchar(255) NOT NULL,
-        tour_id mediumint(9) NOT NULL,
-        booking_date datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
-        payment_status varchar(20) NOT NULL,
-        PRIMARY KEY  (id)
-    ) $charset_collate;";
-
-    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    dbDelta($sql);
-}
 
 // Function to create a custom post type for Tours
 function create_tour_post_type() {
@@ -106,71 +84,73 @@ function display_tour_meta_box($post) {
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
 
     ?>
-    <div class="container-fluid">
+   <div class="container-fluid">
     <div class="row">
-        <!-- Sidebar -->
+        <!-- Sidebar with Tabs -->
         <div class="col-md-3">
             <div class="list-group">
-                <a href="#tour_form" class="list-group-item list-group-item-action active" data-toggle="collapse" aria-expanded="true">
+                <a href="#tour_details_tab" class="list-group-item list-group-item-action active" data-toggle="tab" aria-expanded="true">
                     Tour Details
                 </a>
-                <a href="#seo_form" class="list-group-item list-group-item-action" data-toggle="collapse" aria-expanded="false">
+                <a href="#seo_settings_tab" class="list-group-item list-group-item-action" data-toggle="tab" aria-expanded="false">
                     SEO Settings
                 </a>
             </div>
         </div>
 
-        <!-- Main Content -->
+        <!-- Main Content with Tab Content -->
         <div class="col-md-9">
-            <div id="tour_form" class="collapse show">
-                <h3>Tour Details</h3>
-                <form method="post" action="">
-                    <div class="form-group">
-                        <label for="tour_name">Tour Name:</label>
-                        <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="form-control" />
-                    </div>
+            <div class="tab-content">
+                <!-- Tour Details Tab -->
+                <div id="tour_details_tab" class="tab-pane fade show active">
+                    <h3>Tour Details</h3>
+                    <form method="post" action="">
+                        <div class="form-group">
+                            <label for="tour_name">Tour Name:</label>
+                            <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="form-control" />
+                        </div>
 
-                    <div class="form-group">
-                        <label for="tour_details">Details:</label>
-                        <textarea name="tour_details" class="form-control"><?php echo esc_textarea($tour_details); ?></textarea>
-                    </div>
+                        <div class="form-group">
+                            <label for="tour_details">Details:</label>
+                            <textarea name="tour_details" class="form-control"><?php echo esc_textarea($tour_details); ?></textarea>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="tour_location">Location:</label>
-                        <input type="text" name="tour_location" value="<?php echo esc_attr($tour_location); ?>" class="form-control" />
-                    </div>
+                        <div class="form-group">
+                            <label for="tour_location">Location:</label>
+                            <input type="text" name="tour_location" value="<?php echo esc_attr($tour_location); ?>" class="form-control" />
+                        </div>
 
-                    <div class="form-group">
-                        <label for="tour_duration">Duration:</label>
-                        <input type="text" name="tour_duration" value="<?php echo esc_attr($tour_duration); ?>" class="form-control" />
-                    </div>
+                        <div class="form-group">
+                            <label for="tour_duration">Duration:</label>
+                            <input type="text" name="tour_duration" value="<?php echo esc_attr($tour_duration); ?>" class="form-control" />
+                        </div>
 
-                    <div class="form-group">
-                        <label for="tour_price">Price:</label>
-                        <input type="number" name="tour_price" value="<?php echo esc_attr($tour_price); ?>" class="form-control" />
-                    </div>
+                        <div class="form-group">
+                            <label for="tour_price">Price:</label>
+                            <input type="number" name="tour_price" value="<?php echo esc_attr($tour_price); ?>" class="form-control" />
+                        </div>
 
-                    <div class="form-group">
-                        <label for="tour_availability">Availability:</label>
-                        <input type="text" name="tour_availability" value="<?php echo esc_attr($tour_availability); ?>" class="form-control" />
-                    </div>
+                        <div class="form-group">
+                            <label for="tour_availability">Availability:</label>
+                            <input type="text" name="tour_availability" value="<?php echo esc_attr($tour_availability); ?>" class="form-control" />
+                        </div>
 
-                    <div class="form-group">
-                        <label for="tour_cover_images">Cover Images:</label>
-                        <input type="text" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array)$tour_cover_images)); ?>" class="form-control" />
-                        <button type="button" id="tour_cover_images_button" class="btn btn-primary mt-2">Select Images</button>
-                    </div>
-                </form>
-            </div>
+                        <div class="form-group">
+                            <label for="tour_cover_images">Cover Images:</label>
+                            <input type="text" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array)$tour_cover_images)); ?>" class="form-control" />
+                            <button type="button" id="tour_cover_images_button" class="btn btn-primary mt-2">Select Images</button>
+                        </div>
+                    </form>
+                </div>
 
-            <div id="seo_form" class="collapse">
-                <h3>SEO Settings</h3>
-                <div class="form-group">
-                        <label for="tour_name">Tour Name:</label>
-                        <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="form-control" />
-                        <label for="tour_name">Tour Name:</label>
-                        <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="form-control" />
+                <!-- SEO Settings Tab -->
+                <div id="seo_settings_tab" class="tab-pane fade">
+                    <h3>SEO Settings</h3>
+                    <div class="form-group">
+                        <label for="rank_math_focus_keyword">Focus Keyword:</label>
+                        <input type="text" name="rank_math_focus_keyword" value="<?php echo esc_attr(get_post_meta($post->ID, '_rank_math_focus_keyword', true)); ?>" class="form-control" />
                     </div>
+                </div>
             </div>
         </div>
     </div>
@@ -207,10 +187,10 @@ function display_tour_meta_box($post) {
     });
 </script>
 
+
     <?php
 }
 
-// Save custom fields values when the post is saved
 function save_tour_meta($post_id) {
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
 
@@ -244,5 +224,25 @@ function save_tour_meta($post_id) {
 }
 
 add_action('save_post', 'save_tour_meta');
+
+// function create_custom_table() {
+//     global $wpdb;
+    
+//     $table_name = $wpdb->prefix . 'custom_bookings'; // Name of your custom table
+//     $charset_collate = $wpdb->get_charset_collate();
+
+//     // SQL query to create the table
+//     $sql = "CREATE TABLE $table_name (
+//         id mediumint(9) NOT NULL AUTO_INCREMENT,
+//         customer_name varchar(255) NOT NULL,
+//         tour_id mediumint(9) NOT NULL,
+//         booking_date datetime DEFAULT CURRENT_TIMESTAMP NOT NULL,
+//         payment_status varchar(20) NOT NULL,
+//         PRIMARY KEY  (id)
+//     ) $charset_collate;";
+
+//     require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
+//     dbDelta($sql);
+// }
 add_action('after_switch_theme', 'create_custom_table');
 ?>
