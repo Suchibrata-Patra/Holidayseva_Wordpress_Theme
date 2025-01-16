@@ -15,6 +15,8 @@ function display_tour_meta_box($post) {
         <a href="#" class="tab-link active" data-target="tour_form">Tour Details</a>
         <a href="#" class="tab-link" data-target="highlights">Highlights</a>
         <a href="#" class="tab-link" data-target="itinerary">Itinerary</a>
+        <a href="#" class="tab-link" data-target="reviews">Reviews</a>
+        <a href="#" class="tab-link" data-target="frequently_asked_questions">Frequenly Asked Questions</a>
     </div>
 
     <!-- Main Content -->
@@ -69,7 +71,7 @@ function display_tour_meta_box($post) {
             </form>
         </div>
 
-        <!-- SEO Form -->
+        <!-- Highlights -->
         <div id="highlights" class="hidden">
             <h3 class="form-title">Highlights</h3>
             <form method="post" action="" class="styled-form">
@@ -81,9 +83,31 @@ function display_tour_meta_box($post) {
             </form>
         </div>
 
-        <!-- SEO Form -->
+        <!--Itinerary -->
         <div id="itinerary" class="hidden">
-            <h3 class="form-title">Highlights</h3>
+            <h3 class="form-title">Itinerary</h3>
+            <form method="post" action="" class="styled-form">
+                <div class="form-group">
+                    <label for="rank_math_focus_keyword">Focus Keyword:</label>
+                    <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword"
+                        class="form-control" />
+                </div>
+            </form>
+        </div>
+        <!--Reviews -->
+        <div id="reviews" class="hidden">
+            <h3 class="form-title">Reviews</h3>
+            <form method="post" action="" class="styled-form">
+                <div class="form-group">
+                    <label for="rank_math_focus_keyword">Focus Keyword:</label>
+                    <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword"
+                        class="form-control" />
+                </div>
+            </form>
+        </div>
+        <!-- Frequently Asked Questions -->
+        <div id="frequently_asked_questions" class="hidden">
+            <h3 class="form-title">Frequently Asked Questions</h3>
             <form method="post" action="" class="styled-form">
                 <div class="form-group">
                     <label for="rank_math_focus_keyword">Focus Keyword:</label>
