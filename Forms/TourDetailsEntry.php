@@ -192,9 +192,9 @@ function display_tour_meta_box($post) {
 
     .form-group label {
         display: block;
-        margin-bottom: 8px;
-        font-weight: bold;
-        color: #34495e;
+        margin-bottom: 2px;
+        font-weight: 600;
+        color:rgb(0, 0, 0);
     }
 
     .form-group input,
