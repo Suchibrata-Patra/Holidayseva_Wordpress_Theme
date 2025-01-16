@@ -12,7 +12,7 @@ function display_tour_meta_box($post) {
 <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
-        <a href="#" class="tab-link active" data-target="tour_form">Tour Details</a>
+        <a href="#" class="tab-link active" data-target="basic_info">Basic Info</a>
         <a href="#" class="tab-link" data-target="highlights">Highlights</a>
         <a href="#" class="tab-link" data-target="itinerary">Itinerary</a>
         <a href="#" class="tab-link" data-target="reviews">Reviews</a>
@@ -22,8 +22,8 @@ function display_tour_meta_box($post) {
     <!-- Main Content -->
     <div class="main-content">
         <!-- Tour Form -->
-        <div id="tour_form">
-            <h3 class="form-title">Tour Details</h3>
+        <div id="basic_info">
+            <h3 class="form-title">Basic Info</h3>
             <form method="post" action="" class="styled-form">
                 <div class="form-group">
                     <label for="tour_name">Tour Name:</label>
