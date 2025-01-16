@@ -25,11 +25,20 @@ function display_tour_meta_box($post) {
         <div id="basic_info">
             <h3 class="form-title">Basic Info</h3>
             <form method="post" action="" class="styled-form">
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="tour_name">Tour Name:</label>
                     <input type="text" name="tour_name" id="tour_name" class="form-control"
                         value="<?php echo esc_attr($tour_name); ?>" />
-                </div>
+                </div> -->
+                <label for="tour_description">Tour Description:</label>
+    <?php
+        $tour_description = isset($tour_description) ? $tour_description : ''; // Get existing value if exists
+        wp_editor($tour_description, 'tour_description', array(
+            'textarea_name' => 'tour_description',
+            'textarea_rows' => 10,
+            'media_buttons' => true, // Enable media buttons (images, etc.)
+        ));
+    ?>
 
                 <div class="form-group">
                     <label for="tour_details">Details:</label>
