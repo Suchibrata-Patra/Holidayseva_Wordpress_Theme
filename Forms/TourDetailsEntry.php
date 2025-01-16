@@ -135,7 +135,7 @@ function display_tour_meta_box($post) {
     .container {
         display: flex;
         min-height: 100vh;
-        background-color: #ecf0f1;
+        background-color:rgb(255, 255, 255);
     }
 
     /* Sidebar Styling */
@@ -168,7 +168,7 @@ function display_tour_meta_box($post) {
     /* Main Content Styling */
     .main-content {
         flex-grow: 1;
-        padding: 30px;
+        padding: 10px;
     }
 
     .form-title {
@@ -181,7 +181,7 @@ function display_tour_meta_box($post) {
     /* Form Styling */
     .styled-form {
         background-color: white;
-        padding: 20px;
+        padding: 10px;
         border-radius: 8px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
