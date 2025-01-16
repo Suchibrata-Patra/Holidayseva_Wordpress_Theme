@@ -104,50 +104,61 @@ add_action('admin_menu', 'add_global_variables_menu');
 
 // Display Global Variables page
 function display_global_variables_page() {
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['global_variable_name'])) {
-        // Save the global variable
-        $name = sanitize_text_field($_POST['global_variable_name']);
-        $value = sanitize_text_field($_POST['global_variable_value']);
-        update_option($name, $value);
-        echo '<div class="updated"><p>Global variable saved!</p></div>';
+    // Handle form submission
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['global_variables_form'])) {
+        // Save each field
+        update_option('primary_whatsapp_number', sanitize_text_field($_POST['primary_whatsapp_number']));
+        update_option('secondary_whatsapp_number', sanitize_text_field($_POST['secondary_whatsapp_number']));
+        update_option('third_number', sanitize_text_field($_POST['third_number']));
+
+        // Handle image upload for Marketing Banner
+        if (!empty($_FILES['marketing_banner']['name'])) {
+            require_once(ABSPATH . 'wp-admin/includes/file.php');
+            $uploaded = wp_handle_upload($_FILES['marketing_banner'], ['test_form' => false]);
+            if (isset($uploaded['url'])) {
+                update_option('marketing_banner', esc_url($uploaded['url']));
+            }
+        }
+
+        echo '<div class="updated"><p>Global variables updated successfully!</p></div>';
     }
+
+    // Get current values
+    $primary_whatsapp_number = get_option('primary_whatsapp_number', '');
+    $secondary_whatsapp_number = get_option('secondary_whatsapp_number', '');
+    $third_number = get_option('third_number', '');
+    $marketing_banner = get_option('marketing_banner', '');
 
     ?>
     <div class="wrap">
         <h1>Manage Global Variables</h1>
-        <form method="post" action="">
+        <form method="post" action="" enctype="multipart/form-data">
             <table class="form-table">
                 <tr>
-                    <th><label for="global_variable_name">Variable Name</label></th>
-                    <td><input type="text" id="global_variable_name" name="global_variable_name" class="regular-text" required></td>
+                    <th><label for="primary_whatsapp_number">Primary WhatsApp Number</label></th>
+                    <td><input type="text" id="primary_whatsapp_number" name="primary_whatsapp_number" class="regular-text" value="<?php echo esc_attr($primary_whatsapp_number); ?>" required></td>
                 </tr>
                 <tr>
-                    <th><label for="global_variable_value">Variable Value</label></th>
-                    <td><input type="text" id="global_variable_value" name="global_variable_value" class="regular-text" required></td>
+                    <th><label for="secondary_whatsapp_number">Secondary WhatsApp Number</label></th>
+                    <td><input type="text" id="secondary_whatsapp_number" name="secondary_whatsapp_number" class="regular-text" value="<?php echo esc_attr($secondary_whatsapp_number); ?>"></td>
+                </tr>
+                <tr>
+                    <th><label for="third_number">Third Number</label></th>
+                    <td><input type="text" id="third_number" name="third_number" class="regular-text" value="<?php echo esc_attr($third_number); ?>"></td>
+                </tr>
+                <tr>
+                    <th><label for="marketing_banner">Marketing Banner</label></th>
+                    <td>
+                        <?php if ($marketing_banner): ?>
+                            <img src="<?php echo esc_url($marketing_banner); ?>" alt="Marketing Banner" style="max-width: 300px; display: block; margin-bottom: 10px;">
+                        <?php endif; ?>
+                        <input type="file" id="marketing_banner" name="marketing_banner">
+                    </td>
                 </tr>
             </table>
-            <?php submit_button('Save Variable'); ?>
+            <?php wp_nonce_field('save_global_variables', 'global_variables_form'); ?>
+            <?php submit_button('Save Changes'); ?>
         </form>
-        <h2>Existing Variables</h2>
-        <table class="widefat">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Value</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                // Display all stored global variables
-                $all_options = wp_load_alloptions();
-                foreach ($all_options as $name => $value) {
-                    if (strpos($name, '_') !== 0) { // Exclude internal options
-                        echo "<tr><td>{$name}</td><td>{$value}</td></tr>";
-                    }
-                }
-                ?>
-            </tbody>
-        </table>
     </div>
     <?php
 }
