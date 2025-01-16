@@ -1,6 +1,6 @@
 <?php
 // Include meta box logic
-require_once get_template_directory() . '/tour-meta-box.php';
+require_once get_template_directory() . '/Forms/TourDetailsEntry.php';
 
 // Add support for post thumbnails
 add_theme_support('post-thumbnails');
