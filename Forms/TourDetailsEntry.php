@@ -82,60 +82,15 @@ function display_tour_meta_box($post) {
 
         <!-- Highlights -->
         <div id="highlights" class="hidden">
-    <h3 class="form-title">Highlights</h3>
-    <form method="post" action="" class="styled-form">
-        <div id="highlights-container">
-            <?php 
-            // Check if we already have highlights, display them dynamically
-            if (!empty($tour_highlights) && is_array($tour_highlights)) {
-                foreach ($tour_highlights as $key => $highlight) {
-                    ?>
-                    <div class="form-group highlight-item">
-                        <label for="tour_highlight_<?php echo $key; ?>">Highlight <?php echo $key + 1; ?></label>
-                        <input type="text" name="tour_highlights[]" id="tour_highlight_<?php echo $key; ?>" 
-                            class="form-control" value="<?php echo esc_attr($highlight); ?>" />
-                        <button type="button" class="remove-highlight">Remove</button>
-                    </div>
-                    <?php
-                }
-            } else {
-                // Default: one empty highlight field
-                ?>
-                <div class="form-group highlight-item">
-                    <label for="tour_highlight_0">Highlight 1</label>
-                    <input type="text" name="tour_highlights[]" id="tour_highlight_0" class="form-control" value="" />
-                    <button type="button" class="remove-highlight">Remove</button>
-                </div>
-                <?php
-            }
-            ?>
+            <h3 class="form-title">Highlights</h3>
+            <form method="post" action="" class="styled-form">
+            <div class="form-group">
+                    <label for="tour_location">Location</label>
+                    <input type="text" name="tour_location" id="tour_location" class="form-control"
+                        value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA"/>
+            </div>
+            </form>
         </div>
-        <button type="button" id="add-highlight" class="btn btn-secondary">Add Highlight</button>
-    </form>
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const container = document.getElementById('highlights-container');
-    const addButton = document.getElementById('add-highlight');
-
-    addButton.addEventListener('click', function () {
-        const newIndex = container.children.length;
-        const newField = `
-            <div class="form-group highlight-item">
-                <label for="tour_highlight_${newIndex}">Highlight ${newIndex + 1}</label>
-                <input type="text" name="tour_highlights[]" id="tour_highlight_${newIndex}" class="form-control" value="" />
-                <button type="button" class="remove-highlight">Remove</button>
-            </div>`;
-        container.insertAdjacentHTML('beforeend', newField);
-    });
-
-    container.addEventListener('click', function (e) {
-        if (e.target.classList.contains('remove-highlight')) {
-            e.target.closest('.highlight-item').remove();
-        }
-    });
-});
-</script>
 
         <!--Itinerary -->
         <div id="itinerary" class="hidden">
@@ -342,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-</script>
+</>
 
 <?php
 }
@@ -387,17 +342,6 @@ function save_tour_meta($post_id) {
     // Save Focus Keyword
     if (isset($_POST['rank_math_focus_keyword'])) {
         update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
-    }
-    
-    if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
-        $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights']));
-        if (!empty($sanitized_highlights)) {
-            update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
-        } else {
-            delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights provided
-        }
-    } else {
-        delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights provided
     }
     
 }
