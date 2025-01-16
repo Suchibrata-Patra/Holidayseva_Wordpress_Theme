@@ -73,8 +73,8 @@ function display_tour_meta_box($post) {
                     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
                         value="<?php echo esc_attr($tour_cover_images); ?>" placeholder=""/>
                     <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
+                    <div id="tour_cover_images_preview" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
                 </div>
-
             </form>
         </div>
 
@@ -247,43 +247,52 @@ function display_tour_meta_box($post) {
         });
     });
 
-    document.getElementById('tour_cover_images_button').addEventListener('click', function () {
-        alert('Media uploader functionality is disabled in this demo.');
-    });
-    jQuery(document).ready(function ($) {
-        let mediaUploader;
+    document.addEventListener('DOMContentLoaded', function () {
+        jQuery(document).ready(function ($) {
+            let mediaUploader;
 
-        $('#tour_cover_images_button').on('click', function (e) {
-            e.preventDefault();
+            // Handle media uploader
+            $('#tour_cover_images_button').on('click', function (e) {
+                e.preventDefault();
 
-            // If the uploader object has already been created, reopen it.
-            if (mediaUploader) {
-                mediaUploader.open();
-                return;
-            }
+                // If the uploader object has already been created, reopen it.
+                if (mediaUploader) {
+                    mediaUploader.open();
+                    return;
+                }
 
-            // Extend the wp.media object.
-            mediaUploader = wp.media({
-                title: 'Choose Cover Images',
-                button: {
-                    text: 'Use these images',
-                },
-                multiple: true, // Allow multiple images
-            });
-
-            // When an image is selected, run a callback.
-            mediaUploader.on('select', function () {
-                const selection = mediaUploader.state().get('selection');
-                const imageUrls = [];
-                selection.each(function (attachment) {
-                    const url = attachment.toJSON().url;
-                    imageUrls.push(url);
+                // Extend the wp.media object.
+                mediaUploader = wp.media({
+                    title: 'Choose Cover Images',
+                    button: {
+                        text: 'Use these images',
+                    },
+                    multiple: true, // Allow multiple images
                 });
-                $('#tour_cover_images').val(imageUrls.join(','));
-            });
 
-            // Open the uploader dialog.
-            mediaUploader.open();
+                // When an image is selected, run a callback.
+                mediaUploader.on('select', function () {
+                    const selection = mediaUploader.state().get('selection');
+                    const imageUrls = [];
+                    $('#tour_cover_images_preview').empty(); // Clear the preview container
+
+                    selection.each(function (attachment) {
+                        const url = attachment.toJSON().url;
+                        imageUrls.push(url);
+
+                        // Append the image to the preview container
+                        $('#tour_cover_images_preview').append(
+                            `<img src="${url}" style="width: 100px; height: auto; border: 1px solid #ccc;">`
+                        );
+                    });
+
+                    // Set the value of the hidden input field
+                    $('#tour_cover_images').val(imageUrls.join(','));
+                });
+
+                // Open the uploader dialog.
+                mediaUploader.open();
+            });
         });
     });
 
