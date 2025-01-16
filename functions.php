@@ -148,37 +148,11 @@ function display_global_variables_page() {
                 <tr>
                     <th><label for="marketing_banner">Marketing Banner</label></th>
                     <td>
-    <?php if ($marketing_banner): ?>
-        <img id="marketing_banner_preview" src="<?php echo esc_url($marketing_banner); ?>" 
-             alt="Marketing Banner" style="max-width: 300px; display: block; margin-bottom: 10px;">
-    <?php else: ?>
-        <img id="marketing_banner_preview" src="" 
-             alt="No Banner" style="max-width: 300px; display: none; margin-bottom: 10px;">
-    <?php endif; ?>
-    
-    <input type="file" id="marketing_banner" name="marketing_banner" 
-           accept="image/*" onchange="previewMarketingBanner(event)">
-</td>
-
-<script>
-    function previewMarketingBanner(event) {
-        const file = event.target.files[0];
-        const preview = document.getElementById('marketing_banner_preview');
-        
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                preview.src = e.target.result;
-                preview.style.display = 'block';
-            };
-            reader.readAsDataURL(file);
-        } else {
-            preview.src = '';
-            preview.style.display = 'none';
-        }
-    }
-</script>
-
+                        <?php if ($marketing_banner): ?>
+                            <img src="<?php echo esc_url($marketing_banner); ?>" alt="Marketing Banner" style="max-width: 300px; display: block; margin-bottom: 10px;">
+                        <?php endif; ?>
+                        <input type="file" id="marketing_banner" name="marketing_banner">
+                    </td>
                 </tr>
             </table>
             <?php wp_nonce_field('save_global_variables', 'global_variables_form'); ?>
