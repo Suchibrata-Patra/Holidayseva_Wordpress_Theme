@@ -399,4 +399,5 @@ function save_tour_meta($post_id) {
 }
 
 add_action('save_post', 'save_tour_meta');
+error_log(print_r($_POST['tour_highlights'], true));
 ?>
