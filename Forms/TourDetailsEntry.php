@@ -200,7 +200,7 @@ function display_tour_meta_box($post) {
     .form-group input,
     .form-group textarea {
         width: 100%;
-        padding: 10px;
+        padding: 7px;
         border: 1px solid #bdc3c7;
         border-radius: 0px;
         font-size: 1rem;
