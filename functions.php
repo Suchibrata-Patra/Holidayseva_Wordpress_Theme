@@ -55,7 +55,7 @@ function add_admin_details_page() {
         'admin-details',
         'display_admin_details_page',
         'dashicons-admin-generic',
-        90
+        2 // Position (2 places it at the top, below Dashboard)
     );
 }
 add_action('admin_menu', 'add_admin_details_page');
