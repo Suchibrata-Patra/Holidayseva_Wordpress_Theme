@@ -79,6 +79,16 @@ function display_tour_meta_box($post) {
                 </div>
             </form>
         </div>
+        <div id="seo_form" class="hidden">
+            <h3 class="form-title">SEO Settings</h3>
+            <form method="post" action="" class="styled-form">
+                <div class="form-group">
+                    <label for="rank_math_focus_keyword">Focus Keyword:</label>
+                    <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword"
+                        class="form-control" />
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
