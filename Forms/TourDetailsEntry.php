@@ -138,10 +138,10 @@ function display_tour_meta_box($post) {
 
     .sidebar a {
         display: block;
-        padding: 12px 15px;
+        padding: 6px 15px;
         color: white;
         text-decoration: none;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         border-radius: 5px;
         transition: background-color 0.3s ease;
     }
