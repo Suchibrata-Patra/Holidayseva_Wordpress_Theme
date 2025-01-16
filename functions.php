@@ -88,6 +88,10 @@ function add_tour_meta_boxes() {
 }
 add_action('add_meta_boxes', 'add_tour_meta_boxes');
 
+
+
+
+// Setting up Options to Set Custom Global Variables 
 // Add menu for Global Variables
 function add_global_variables_menu() {
     add_menu_page(
