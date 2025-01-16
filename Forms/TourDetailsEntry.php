@@ -182,8 +182,8 @@ function display_tour_meta_box($post) {
     .styled-form {
         background-color: white;
         padding: 10px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius:0px;
+        /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     }
 
     .form-group {
@@ -202,7 +202,7 @@ function display_tour_meta_box($post) {
         width: 100%;
         padding: 10px;
         border: 1px solid #bdc3c7;
-        border-radius: 5px;
+        border-radius: 0px;
         font-size: 1rem;
         color: #2c3e50;
     }
