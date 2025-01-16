@@ -143,22 +143,10 @@ function display_tour_meta_box($post) {
                 </div>
 
                 <div class="form-group">
-                <label for="tour_cover_images">Cover Images:</label>
-    <div id="tour_cover_images_preview" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;">
-        <?php 
-        if (!empty($tour_cover_images)) {
-            $image_urls = explode(',', $tour_cover_images);
-            foreach ($image_urls as $image_url) {
-                echo '<div style="position: relative; display: inline-block;">';
-                echo '<img src="' . esc_url($image_url) . '" style="width: 100px; height: 100px; object-fit: cover; border: 1px solid #ccc; border-radius: 5px;" />';
-                echo '<button type="button" class="remove-image" style="position: absolute; top: -5px; right: -5px; background: #e74c3c; color: white; border: none; border-radius: 50%; cursor: pointer;">&times;</button>';
-                echo '</div>';
-            }
-        }
-        ?>
-    </div>
-    <input type="hidden" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr($tour_cover_images); ?>" />
-    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
+                    <label for="tour_cover_images">Cover Images:</label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                        value="<?php echo esc_attr($tour_cover_images); ?>" />
+                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
                 </div>
 
             </form>
@@ -299,68 +287,41 @@ function display_tour_meta_box($post) {
         alert('Media uploader functionality is disabled in this demo.');
     });
     jQuery(document).ready(function ($) {
-    let mediaUploader;
+        let mediaUploader;
 
-    $('#tour_cover_images_button').on('click', function (e) {
-        e.preventDefault();
+        $('#tour_cover_images_button').on('click', function (e) {
+            e.preventDefault();
 
-        // If the uploader object has already been created, reopen it.
-        if (mediaUploader) {
-            mediaUploader.open();
-            return;
-        }
+            // If the uploader object has already been created, reopen it.
+            if (mediaUploader) {
+                mediaUploader.open();
+                return;
+            }
 
-        // Extend the wp.media object.
-        mediaUploader = wp.media({
-            title: 'Choose Cover Images',
-            button: {
-                text: 'Use these images',
-            },
-            multiple: true, // Allow multiple images
-        });
-
-        // When images are selected, run a callback.
-        mediaUploader.on('select', function () {
-            const selection = mediaUploader.state().get('selection');
-            const imageUrls = [];
-            const previewContainer = $('#tour_cover_images_preview');
-            previewContainer.empty(); // Clear existing previews
-
-            selection.each(function (attachment) {
-                const imageUrl = attachment.toJSON().url;
-                imageUrls.push(imageUrl);
-
-                // Add image preview
-                const imagePreview = `
-                    <div style="position: relative; display: inline-block;">
-                        <img src="${imageUrl}" style="width: 100px; height: 100px; object-fit: cover; border: 1px solid #ccc; border-radius: 5px;" />
-                        <button type="button" class="remove-image" style="position: absolute; top: -5px; right: -5px; background: #e74c3c; color: white; border: none; border-radius: 50%; cursor: pointer;">&times;</button>
-                    </div>
-                `;
-                previewContainer.append(imagePreview);
+            // Extend the wp.media object.
+            mediaUploader = wp.media({
+                title: 'Choose Cover Images',
+                button: {
+                    text: 'Use these images',
+                },
+                multiple: true, // Allow multiple images
             });
 
-            // Update the hidden input field with the new image URLs
-            $('#tour_cover_images').val(imageUrls.join(','));
+            // When an image is selected, run a callback.
+            mediaUploader.on('select', function () {
+                const selection = mediaUploader.state().get('selection');
+                const imageUrls = [];
+                selection.each(function (attachment) {
+                    const url = attachment.toJSON().url;
+                    imageUrls.push(url);
+                });
+                $('#tour_cover_images').val(imageUrls.join(','));
+            });
+
+            // Open the uploader dialog.
+            mediaUploader.open();
         });
-
-        // Open the uploader dialog.
-        mediaUploader.open();
     });
-
-    // Handle removing an image
-    $('#tour_cover_images_preview').on('click', '.remove-image', function () {
-        $(this).parent().remove();
-
-        // Update the hidden input field with remaining image URLs
-        const remainingUrls = [];
-        $('#tour_cover_images_preview img').each(function () {
-            remainingUrls.push($(this).attr('src'));
-        });
-        $('#tour_cover_images').val(remainingUrls.join(','));
-    });
-});
-
 
 </script>
 
