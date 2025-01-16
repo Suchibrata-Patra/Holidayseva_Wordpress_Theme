@@ -38,7 +38,7 @@ function display_tour_meta_box($post) {
                         $tour_description = isset($tour_description) ? $tour_description : ''; // Get existing value if exists
                         wp_editor($tour_description, 'tour_description', array(
                             'textarea_name' => 'tour_description',
-                            'textarea_rows' => 10,
+                            'textarea_rows' => 5,
                             'media_buttons' => true, // Enable media buttons (images, etc.)
                         ));
                     ?>
