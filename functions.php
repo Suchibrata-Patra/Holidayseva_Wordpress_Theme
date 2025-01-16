@@ -19,17 +19,12 @@ add_filter('rank_math/snippet/rich_snippet_data', function($data, $post) {
 // Register custom post types
 function register_custom_post_types() {
     $post_types = [
-        'custom_post' => [
-            'name' => 'Custom Posts',
-            'singular_name' => 'Custom Post',
-            'slug' => 'custom-posts',
-            'icon' => 'dashicons-admin-post',
-        ],
         'tour' => [
             'name' => 'Tours',
             'singular_name' => 'Tour',
             'slug' => 'tours',
             'icon' => 'dashicons-palmtree',
+            'position' => 2, // Position for the "Tours" post type
         ],
     ];
 
