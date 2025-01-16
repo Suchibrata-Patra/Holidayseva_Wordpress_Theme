@@ -49,8 +49,8 @@ function display_add_trip_form() {
                 }
             }
             ?>
-
             <table class="form-table">
+                Lorem
                 <tr valign="top">
                     <th scope="row"><label for="tour_name">Tour Name:</label></th>
                     <td><input type="text" name="tour_name" id="tour_name" class="regular-text" required /></td>
