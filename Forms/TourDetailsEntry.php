@@ -58,7 +58,7 @@ function display_tour_meta_box($post) {
                     <input type="text" name="tour_availability" id="tour_availability" class="form-control"
                         value="<?php echo esc_attr($tour_availability); ?>" />
                 </div>
-
+ 
                 <div class="form-group">
                     <label for="tour_cover_images">Cover Images:</label>
                     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
