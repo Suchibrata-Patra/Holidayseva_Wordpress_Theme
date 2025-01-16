@@ -109,183 +109,107 @@ function display_tour_meta_box($post) {
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
 
     ?>
-    <div class="sidebar">
-    <a href="#" class="tab-link active" data-target="tour_form">Tour Details</a>
-    <a href="#" class="tab-link" data-target="seo_form">SEO Settings</a>
-</div>
+    <div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            <div class="list-group">
+                <a href="#tour_form" class="list-group-item list-group-item-action active" data-toggle="collapse" aria-expanded="true">
+                    Tour Details
+                </a>
+                <a href="#seo_form" class="list-group-item list-group-item-action" data-toggle="collapse" aria-expanded="false">
+                    SEO Settings
+                </a>
+            </div>
+        </div>
 
-<div class="content">
-    <div id="tour_form">
-        <h3 class="form-title">Tour Details</h3>
-        <form method="post" action="" class="styled-form">
-            <div class="form-group">
-                <label for="tour_name">Tour Name:</label>
-                <input type="text" name="tour_name" id="tour_name" class="form-control" />
+        <!-- Main Content -->
+        <div class="col-md-9">
+            <div id="tour_form" class="collapse show">
+                <h3>Tour Details</h3>
+                <form method="post" action="">
+                    <div class="form-group">
+                        <label for="tour_name">Tour Name:</label>
+                        <input type="text" name="tour_name" value="<?php echo esc_attr($tour_name); ?>" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour_details">Details:</label>
+                        <textarea name="tour_details" class="form-control"><?php echo esc_textarea($tour_details); ?></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour_location">Location:</label>
+                        <input type="text" name="tour_location" value="<?php echo esc_attr($tour_location); ?>" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour_duration">Duration:</label>
+                        <input type="text" name="tour_duration" value="<?php echo esc_attr($tour_duration); ?>" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour_price">Price:</label>
+                        <input type="number" name="tour_price" value="<?php echo esc_attr($tour_price); ?>" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour_availability">Availability:</label>
+                        <input type="text" name="tour_availability" value="<?php echo esc_attr($tour_availability); ?>" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tour_cover_images">Cover Images:</label>
+                        <input type="text" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array)$tour_cover_images)); ?>" class="form-control" />
+                        <button type="button" id="tour_cover_images_button" class="btn btn-primary mt-2">Select Images</button>
+                    </div>
+                </form>
             </div>
 
-            <div class="form-group">
-                <label for="tour_details">Details:</label>
-                <textarea name="tour_details" id="tour_details" class="form-control"></textarea>
+            <div id="seo_form" class="collapse">
+                <h3>SEO Settings</h3>
+                <div class="form-group">
+                    <label for="rank_math_focus_keyword">Focus Keyword:</label>
+                    <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword" class="form-control" />
+                </div>
             </div>
-
-            <div class="form-group">
-                <label for="tour_location">Location:</label>
-                <input type="text" name="tour_location" id="tour_location" class="form-control" />
-            </div>
-
-            <div class="form-group">
-                <label for="tour_duration">Duration:</label>
-                <input type="text" name="tour_duration" id="tour_duration" class="form-control" />
-            </div>
-
-            <div class="form-group">
-                <label for="tour_price">Price:</label>
-                <input type="number" name="tour_price" id="tour_price" class="form-control" />
-            </div>
-
-            <div class="form-group">
-                <label for="tour_availability">Availability:</label>
-                <input type="text" name="tour_availability" id="tour_availability" class="form-control" />
-            </div>
-
-            <div class="form-group">
-                <label for="tour_cover_images">Cover Images:</label>
-                <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control" />
-                <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
-            </div>
-        </form>
+        </div>
     </div>
-
-    <div id="seo_form" class="hidden">
-        <h3 class="form-title">SEO Settings</h3>
-        <form method="post" action="" class="styled-form">
-            <div class="form-group">
-                <label for="rank_math_focus_keyword">Focus Keyword:</label>
-                <input type="text" name="rank_math_focus_keyword" id="rank_math_focus_keyword" class="form-control" />
-            </div>
-        </form>
-    </div>
 </div>
-
-<style>
-    /* Sidebar Styling */
-    .sidebar {
-        width: 25%;
-        background-color: #2c3e50;
-        color: white;
-        padding: 20px;
-        float: left;
-        height: 100vh;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .sidebar a {
-        display: block;
-        padding: 12px 15px;
-        color: white;
-        text-decoration: none;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    .sidebar a.active {
-        background-color: #3498db;
-    }
-
-    .sidebar a:hover {
-        background-color: #2980b9;
-    }
-
-    /* Content Styling */
-    .content {
-        margin-left: 25%;
-        padding: 30px;
-        background-color: #ecf0f1;
-        min-height: 100vh;
-    }
-
-    .form-title {
-        margin-bottom: 20px;
-        color: #34495e;
-        font-size: 1.5em;
-        font-weight: bold;
-    }
-
-    /* Form Styling */
-    .styled-form {
-        background-color: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: bold;
-        color: #34495e;
-    }
-
-    .form-group input, 
-    .form-group textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #bdc3c7;
-        border-radius: 5px;
-        font-size: 1rem;
-        color: #2c3e50;
-    }
-
-    .form-group input:focus, 
-    .form-group textarea:focus {
-        border-color: #3498db;
-        outline: none;
-        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-    }
-
-    .form-button {
-        margin-top: 10px;
-        padding: 10px 20px;
-        background-color: #3498db;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
-    }
-
-    .form-button:hover {
-        background-color: #2980b9;
-    }
-
-    .hidden {
-        display: none;
-    }
-</style>
-
-<script>
-    document.querySelectorAll('.tab-link').forEach(link => {
-        link.addEventListener('click', function(e) {
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($){
+        var mediaUploader;
+        $('#tour_cover_images_button').click(function(e) {
             e.preventDefault();
-            document.querySelectorAll('.tab-link').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.content > div').forEach(content => content.classList.add('hidden'));
+            if (mediaUploader) {
+                mediaUploader.open();
+                return;
+            }
 
-            this.classList.add('active');
-            document.getElementById(this.dataset.target).classList.remove('hidden');
+            mediaUploader = wp.media.frames.file_frame = wp.media({
+                title: 'Select Cover Images',
+                button: {
+                    text: 'Select Images'
+                },
+                multiple: true // Allow multiple file selection
+            });
+
+            mediaUploader.on('select', function() {
+                var attachments = mediaUploader.state().get('selection').toJSON();
+                var imageUrls = attachments.map(function(attachment) {
+                    return attachment.url;
+                });
+                $('#tour_cover_images').val(imageUrls.join(', '));
+            });
+
+            mediaUploader.open();
         });
     });
-
-    document.getElementById('tour_cover_images_button').addEventListener('click', function() {
-        alert('Media uploader functionality is disabled in this demo.');
-    });
 </script>
-
 
     <?php
 }
