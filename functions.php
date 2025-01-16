@@ -28,6 +28,15 @@ function register_custom_post_type() {
 }
 add_action('init', 'register_custom_post_type');
 
+function enqueue_media_uploader_scripts($hook) {
+    // Check if the current post type is 'tour'
+    global $post;
+    if (isset($post->post_type) && $post->post_type === 'tour') {
+        wp_enqueue_media(); // Enqueue WordPress media uploader
+        wp_enqueue_script('tour-meta-box-script', get_template_directory_uri() . '/js/tour-meta-box.js', array('jquery'), null, true);
+    }
+}
+add_action('admin_enqueue_scripts', 'enqueue_media_uploader_scripts');
 
 // Function to create a custom post type for Tours
 function create_tour_post_type() {
@@ -128,10 +137,11 @@ function display_tour_meta_box($post) {
                 </div>
 
                 <div class="form-group">
-                    <label for="tour_cover_images">Cover Images:</label>
-                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control" />
-                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
-                </div>
+    <label for="tour_cover_images">Cover Images:</label>
+    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control" value="<?php echo esc_attr($tour_cover_images); ?>" />
+    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
+</div>
+
             </form>
         </div>
 
@@ -268,6 +278,43 @@ function display_tour_meta_box($post) {
     document.getElementById('tour_cover_images_button').addEventListener('click', function() {
         alert('Media uploader functionality is disabled in this demo.');
     });
+    jQuery(document).ready(function ($) {
+    let mediaUploader;
+
+    $('#tour_cover_images_button').on('click', function (e) {
+        e.preventDefault();
+
+        // If the uploader object has already been created, reopen it.
+        if (mediaUploader) {
+            mediaUploader.open();
+            return;
+        }
+
+        // Extend the wp.media object.
+        mediaUploader = wp.media({
+            title: 'Choose Cover Images',
+            button: {
+                text: 'Use these images',
+            },
+            multiple: true, // Allow multiple images
+        });
+
+        // When an image is selected, run a callback.
+        mediaUploader.on('select', function () {
+            const selection = mediaUploader.state().get('selection');
+            const imageUrls = [];
+            selection.each(function (attachment) {
+                const url = attachment.toJSON().url;
+                imageUrls.push(url);
+            });
+            $('#tour_cover_images').val(imageUrls.join(','));
+        });
+
+        // Open the uploader dialog.
+        mediaUploader.open();
+    });
+});
+
 </script>
 
 
