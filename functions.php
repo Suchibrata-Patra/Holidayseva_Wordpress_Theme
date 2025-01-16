@@ -112,7 +112,7 @@ function display_tour_meta_box($post) {
     <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
-        <div class="col-md-3">
+        <div class="col-md-3" style="position: sticky; top: 0; height: 100vh; overflow-y: auto;">
             <div class="list-group">
                 <a href="#tour_form" class="list-group-item list-group-item-action active" data-toggle="collapse" aria-expanded="true">
                     Tour Details
@@ -176,40 +176,31 @@ function display_tour_meta_box($post) {
         </div>
     </div>
 </div>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6Jty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function($){
-        var mediaUploader;
-        $('#tour_cover_images_button').click(function(e) {
-            e.preventDefault();
-            if (mediaUploader) {
-                mediaUploader.open();
-                return;
-            }
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Smooth scroll to form section
+        document.querySelectorAll('.list-group-item').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
 
-            mediaUploader = wp.media.frames.file_frame = wp.media({
-                title: 'Select Cover Images',
-                button: {
-                    text: 'Select Images'
-                },
-                multiple: true // Allow multiple file selection
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 20,
+                        behavior: 'smooth'
+                    });
+                }
             });
-
-            mediaUploader.on('select', function() {
-                var attachments = mediaUploader.state().get('selection').toJSON();
-                var imageUrls = attachments.map(function(attachment) {
-                    return attachment.url;
-                });
-                $('#tour_cover_images').val(imageUrls.join(', '));
-            });
-
-            mediaUploader.open();
         });
     });
 </script>
+
 
     <?php
 }
