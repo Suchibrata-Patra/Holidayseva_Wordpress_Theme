@@ -3,7 +3,7 @@ function display_tour_meta_box($post) {
     // Retrieve existing custom fields values
     $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
     $tour_name = get_post_meta($post->ID, '_tour_name', true);
-    $tour_name = get_post_meta($post->ID, '_tour_description', true);
+    $tour_description = get_post_meta($post->ID, '_tour_description', true);
     $tour_details = get_post_meta($post->ID, '_tour_details', true);
     $tour_location = get_post_meta($post->ID, '_tour_location', true);
     $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
