@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 function display_tour_meta_box($post) {
     // Retrieve existing custom fields values
     $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
@@ -8,7 +8,7 @@ function display_tour_meta_box($post) {
     $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
-?> -->
+?>
 <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
