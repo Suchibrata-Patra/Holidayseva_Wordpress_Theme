@@ -3,7 +3,10 @@
  * The template for displaying single Tour posts.
  *
  * @package YourThemeName
+ *
+ * Template Name: Tour
  */
+
 
 get_header(); ?>
 
