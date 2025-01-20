@@ -346,49 +346,40 @@ function save_tour_meta($post_id) {
     if (isset($_POST['tour_cover_images'])) {
         update_post_meta($post_id, '_tour_cover_images', explode(',', sanitize_text_field($_POST['tour_cover_images'])));
     }
-    if (isset($_POST['tour_name'])) {
-        // update_post_meta($post_id, '_tour_name', sanitize_text_field($_POST['tour_name']));
-    }
-    if (isset($_POST['tour_details'])) {
-        // update_post_meta($post_id, '_tour_details', sanitize_textarea_field($_POST['tour_details']));
-    }
-
+    
     if (isset($_POST['tour_name'])) {
         update_post_meta($post_id, '_tour_name', sanitize_text_field($_POST['tour_name']));
     }
 
-    // Save tour description (Visual Editor content)
     if (isset($_POST['tour_description'])) {
-        update_post_meta($post_id, '_tour_description', wp_kses_post($_POST['tour_description'])); // Sanitize HTML
+        update_post_meta($post_id, '_tour_description', wp_kses_post($_POST['tour_description']));
     }
 
     if (isset($_POST['tour_location'])) {
         update_post_meta($post_id, '_tour_location', sanitize_text_field($_POST['tour_location']));
     }
+
     if (isset($_POST['tour_duration'])) {
         update_post_meta($post_id, '_tour_duration', sanitize_text_field($_POST['tour_duration']));
     }
+
     if (isset($_POST['tour_price'])) {
         update_post_meta($post_id, '_tour_price', floatval($_POST['tour_price']));
     }
+
     if (isset($_POST['tour_availability'])) {
         update_post_meta($post_id, '_tour_availability', sanitize_text_field($_POST['tour_availability']));
     }
 
-    // Save Focus Keyword
-    if (isset($_POST['rank_math_focus_keyword'])) {
-        update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
-    }
-    
+    // Save tour highlights (ensure it's an array and sanitize the values)
     if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
         $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights']));
         update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
     } else {
         delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights
     }
-    
-    
 }
+
 
 add_action('save_post', 'save_tour_meta');
 error_log(print_r($_POST['tour_highlights'], true));
