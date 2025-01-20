@@ -83,14 +83,27 @@ $tour_highlights = is_array($tour_highlights) ? implode("\n", $tour_highlights) 
         </div>
 
         <!-- Highlights -->
-        <div id="highlights" class="hidden">
-            <h3 class="form-title">Itinerary</h3>
-            <form method="post" action="" class="styled-form">
-            <div class="form-group">
-    <label for="tour_highlights">Tour Highlights</label>
-    <textarea name="tour_highlights" id="tour_highlights" class="form-control" placeholder="Enter one highlight per line"><?php 
-        echo esc_textarea(implode("\n", (array)$tour_highlights)); 
-    ?></textarea>
+       <!-- Highlights -->
+<div id="highlights" class="hidden">
+    <h3 class="form-title">Itinerary</h3>
+    <form method="post" action="" class="styled-form">
+        <div class="form-group">
+            <label for="tour_highlights">Tour Highlights</label>
+            <?php
+            // Retrieve the stored tour highlights
+            $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
+
+            // If highlights exist and are in an array, display them in the textarea, one per line
+            if (!empty($tour_highlights)) {
+                $tour_highlights_string = implode("\n", (array)$tour_highlights); // Convert array to string with each item on a new line
+            } else {
+                $tour_highlights_string = ''; // No highlights, set to an empty string
+            }
+            ?>
+            <!-- Display the highlights in the textarea -->
+            <textarea name="tour_highlights" id="tour_highlights" class="form-control" placeholder="Enter one highlight per line"><?php echo esc_textarea($tour_highlights_string); ?></textarea>
+        </div>
+    </form>
 </div>
 
             </div>
