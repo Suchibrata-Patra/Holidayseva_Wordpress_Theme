@@ -80,19 +80,17 @@ function display_tour_meta_box($post) {
             </form>
         </div>
 
-        <!-- Highlights -->
-        <div id="highlights" class="hidden">
-            <h3 class="form-title">Itinerary</h3>
-            <form method="post" action="" class="styled-form">
-            <div class="form-group">
-                    <label for="highlights">Availability</label>
-                    <input type="text" name="highlights" id="highlights" class="form-control"
-                        value="<?php echo esc_attr($highlights); ?>" placeholder="Available Immediately"/>
-                </div>
-            </div>
-            </form>
+       <!-- Highlights -->
+<div id="highlights-container">
+    <h3 class="form-title">Itinerary</h3>
+    <form method="post" action="" class="styled-form">
+        <div id="highlights-list">
+            <!-- Dynamically added inputs will go here -->
         </div>
-
+        <button type="button" id="add-highlight" class="btn btn-primary">Add Highlight</button>
+        <input type="submit" value="Save Highlights" class="btn btn-success" />
+    </form>
+</div>
 
         <!--Itinerary -->
         <div id="itinerary" class="hidden">
@@ -296,6 +294,38 @@ function display_tour_meta_box($post) {
                 // Open the uploader dialog.
                 mediaUploader.open();
             });
+        });
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const highlightsList = document.getElementById("highlights-list");
+        const addHighlightBtn = document.getElementById("add-highlight");
+
+        // Function to create a new highlight input row
+        function createHighlightInput(value = "") {
+            const div = document.createElement("div");
+            div.className = "form-group highlight-item";
+            div.innerHTML = `
+                <input type="text" name="highlights[]" class="form-control" value="${value}" placeholder="Enter a highlight" />
+                <button type="button" class="btn btn-danger remove-highlight">Remove</button>
+            `;
+            highlightsList.appendChild(div);
+
+            // Attach event listener to remove button
+            div.querySelector(".remove-highlight").addEventListener("click", function () {
+                div.remove();
+            });
+        }
+
+        // Add initial input field if no highlights exist
+        if (highlightsList.children.length === 0) {
+            createHighlightInput();
+        }
+
+        // Add a new input field when clicking the "Add Highlight" button
+        addHighlightBtn.addEventListener("click", function () {
+            createHighlightInput();
         });
     });
 
