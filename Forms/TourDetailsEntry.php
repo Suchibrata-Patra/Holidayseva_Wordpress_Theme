@@ -11,8 +11,6 @@ function display_tour_meta_box($post) {
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
 
     $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
-$tour_highlights = is_array($tour_highlights) ? implode("\n", $tour_highlights) : '';
-
 ?>
 <div class="container">
     <!-- Sidebar -->
@@ -83,32 +81,31 @@ $tour_highlights = is_array($tour_highlights) ? implode("\n", $tour_highlights) 
         </div>
 
         <!-- Highlights -->
-       <!-- Highlights -->
+     <!-- Highlights -->
 <div id="highlights" class="hidden">
-    <h3 class="form-title">Itinerary</h3>
+    <h3 class="form-title">Tour Highlights</h3>
     <form method="post" action="" class="styled-form">
-        <div class="form-group">
-            <label for="tour_highlights">Tour Highlights</label>
+        <div id="tour_highlights_container">
             <?php
-            // Retrieve the stored tour highlights
-            $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
-
-            // If highlights exist and are in an array, display them in the textarea, one per line
-            if (!empty($tour_highlights)) {
-                $tour_highlights_string = implode("\n", (array)$tour_highlights); // Convert array to string with each item on a new line
-            } else {
-                $tour_highlights_string = ''; // No highlights, set to an empty string
-            }
+                if ($tour_highlights) {
+                    foreach ($tour_highlights as $highlight) {
+                        echo '<div class="highlight-group">';
+                        echo '<input type="text" name="tour_highlights[]" class="form-control" value="' . esc_attr($highlight) . '" />';
+                        echo '<button type="button" class="remove-highlight form-button" style="background-color: red; margin-left: 10px;">Remove</button>';
+                        echo '</div>';
+                    }
+                } else {
+                    echo '<div class="highlight-group">';
+                    echo '<input type="text" name="tour_highlights[]" class="form-control" />';
+                    echo '<button type="button" class="remove-highlight form-button" style="background-color: red; margin-left: 10px;">Remove</button>';
+                    echo '</div>';
+                }
             ?>
-            <!-- Display the highlights in the textarea -->
-            <textarea name="tour_highlights" id="tour_highlights" class="form-control" placeholder="Enter one highlight per line"><?php echo esc_textarea($tour_highlights_string); ?></textarea>
         </div>
+        <button type="button" id="add_highlight" class="form-button">Add Highlight</button>
     </form>
 </div>
 
-            </div>
-            </form>
-        </div>
         
 
         <!--Itinerary -->
@@ -256,6 +253,26 @@ $tour_highlights = is_array($tour_highlights) ? implode("\n", $tour_highlights) 
 </style>
 
 <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    jQuery(document).ready(function ($) {
+        // Add new highlight field
+        $('#add_highlight').on('click', function (e) {
+            e.preventDefault();
+            let newHighlight = `
+                <div class="highlight-group">
+                    <input type="text" name="tour_highlights[]" class="form-control" />
+                    <button type="button" class="remove-highlight form-button" style="background-color: red; margin-left: 10px;">Remove</button>
+                </div>`;
+            $('#tour_highlights_container').append(newHighlight);
+        });
+
+        // Remove highlight field
+        $(document).on('click', '.remove-highlight', function () {
+            $(this).closest('.highlight-group').remove();
+        });
+    });
+});
+
     document.querySelectorAll('.tab-link').forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -363,15 +380,12 @@ function save_tour_meta($post_id) {
         update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
     }
     
-    if (isset($_POST['tour_highlights'])) {
-        // Split the input by line breaks into an array
-        $highlights_raw = sanitize_textarea_field($_POST['tour_highlights']);
-        $highlights_array = array_filter(array_map('trim', explode("\n", $highlights_raw))); // Clean and filter lines
-        update_post_meta($post_id, '_tour_highlights', $highlights_array);
+    if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
+        $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights']));
+        update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
     } else {
         delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights provided
     }
-    
     
 }
 
