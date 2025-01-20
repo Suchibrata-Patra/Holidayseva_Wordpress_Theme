@@ -85,23 +85,23 @@ function display_tour_meta_box($post) {
 <div id="highlights" class="hidden">
     <h3 class="form-title">Tour Highlights</h3>
     <form method="post" action="" class="styled-form">
-        <div id="tour_highlights_container">
-            <?php
-                if ($tour_highlights) {
-                    foreach ($tour_highlights as $highlight) {
-                        echo '<div class="highlight-group">';
-                        echo '<input type="text" name="tour_highlights[]" class="form-control" value="' . esc_attr($highlight) . '" />';
-                        echo '<button type="button" class="remove-highlight form-button" style="background-color: red; margin-left: 10px;">Remove</button>';
-                        echo '</div>';
-                    }
-                } else {
+    <div id="tour_highlights_container">
+        <?php
+            if ($tour_highlights) {
+                foreach ($tour_highlights as $highlight) {
                     echo '<div class="highlight-group">';
-                    echo '<input type="text" name="tour_highlights[]" class="form-control" />';
+                    echo '<input type="text" name="tour_highlights[]" class="form-control" value="' . esc_attr($highlight) . '" />';
                     echo '<button type="button" class="remove-highlight form-button" style="background-color: red; margin-left: 10px;">Remove</button>';
                     echo '</div>';
                 }
-            ?>
-        </div>
+            } else {
+                echo '<div class="highlight-group">';
+                echo '<input type="text" name="tour_highlights[]" class="form-control" />';
+                echo '<button type="button" class="remove-highlight form-button" style="background-color: red; margin-left: 10px;">Remove</button>';
+                echo '</div>';
+            }
+        ?>
+    </div>
         <button type="button" id="add_highlight" class="form-button">Add Highlight</button>
     </form>
 </div>
@@ -384,8 +384,9 @@ function save_tour_meta($post_id) {
         $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights']));
         update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
     } else {
-        delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights provided
+        delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights
     }
+    
     
 }
 
