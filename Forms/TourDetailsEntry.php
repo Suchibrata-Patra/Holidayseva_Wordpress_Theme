@@ -83,30 +83,20 @@ $tour_highlights = is_array($tour_highlights) ? implode("\n", $tour_highlights) 
         </div>
 
         <!-- Highlights -->
-    <!-- Highlights -->
-<div id="highlights" class="hidden">
-    <h3 class="form-title">Itinerary</h3>
-    <form method="post" action="" class="styled-form">
-        <div class="form-group">
-            <label for="tour_highlights">Tour Highlights</label>
-            <?php
-            // Retrieve the highlights stored for this post
-            $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
-
-            // Check if there are any highlights
-            if (!empty($tour_highlights)) {
-                // Join the highlights array into a string, each item on a new line
-                $tour_highlights_string = implode("\n", (array) $tour_highlights);
-            } else {
-                // If no highlights are stored, set an empty string
-                $tour_highlights_string = '';
-            }
-            ?>
-            <textarea name="tour_highlights" id="tour_highlights" class="form-control" placeholder="Enter one highlight per line"><?php echo esc_textarea($tour_highlights_string); ?></textarea>
-        </div>
-    </form>
+        <div id="highlights" class="hidden">
+            <h3 class="form-title">Itinerary</h3>
+            <form method="post" action="" class="styled-form">
+            <div class="form-group">
+    <label for="tour_highlights">Tour Highlights</label>
+    <textarea name="tour_highlights" id="tour_highlights" class="form-control" placeholder="Enter one highlight per line"><?php 
+        echo esc_textarea(implode("\n", (array)$tour_highlights)); 
+    ?></textarea>
 </div>
 
+            </div>
+            </form>
+        </div>
+        
 
         <!--Itinerary -->
         <div id="itinerary" class="hidden">
@@ -312,19 +302,6 @@ $tour_highlights = is_array($tour_highlights) ? implode("\n", $tour_highlights) 
             });
         });
     });
-    document.addEventListener('DOMContentLoaded', function () {
-    jQuery(document).ready(function ($) {
-        // Check if there are highlights stored
-        var highlightsStored = '<?php echo !empty($tour_highlights) ? "true" : "false"; ?>';
-
-        if (highlightsStored === "true") {
-            // If there are highlights, display the highlights tab and content
-            $('#highlights').removeClass('hidden');
-            $('.tab-link[data-target="highlights"]').addClass('active');
-        }
-    });
-});
-
 
 </script>
 
