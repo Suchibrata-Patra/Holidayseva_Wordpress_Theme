@@ -391,27 +391,12 @@ function save_tour_meta($post_id) {
         update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
     }
     
-    // Save highlights to the database
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['highlights']) && is_array($_POST['highlights'])) {
-        // Sanitize input
-        $highlights = array_map('sanitize_text_field', $_POST['highlights']);
-        
-        // Save as serialized array in the database
-        update_option('tour_highlights', $highlights);
+    if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
+        $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights']));
+        update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
+    } else {
+        delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights provided
     }
-}
-
-// Retrieve highlights from the database
-$highlights = get_option('tour_highlights', []);
-
-// Output the existing highlights in the form
-echo '<script>';
-foreach ($highlights as $highlight) {
-    echo "createHighlightInput('" . esc_js($highlight) . "');";
-}
-echo '</script>';
-
     
 }
 
