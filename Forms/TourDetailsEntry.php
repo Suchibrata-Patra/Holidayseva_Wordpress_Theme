@@ -82,16 +82,30 @@ function display_tour_meta_box($post) {
 
         <!-- Highlights -->
         <div id="highlights" class="hidden">
-            <h3 class="form-title">Itinerary</h3>
-            <form method="post" action="" class="styled-form">
-            <div class="form-group">
-                    <label for="highlights">Availability</label>
-                    <input type="text" name="highlights" id="highlights" class="form-control"
-                        value="<?php echo esc_attr($highlights); ?>" placeholder="Available Immediately"/>
-                </div>
-            </div>
-            </form>
+    <h3 class="form-title">Itinerary</h3>
+    <form method="post" action="" class="styled-form">
+        <div class="form-group">
+            <label for="highlights">Availability</label>
+            <input type="text" name="highlights[]" id="highlights" class="form-control"
+                value="<?php echo esc_attr($highlights); ?>" placeholder="Available Immediately"/>
         </div>
+        
+        <!-- Button to add more fields -->
+        <button type="button" id="add-more" class="btn btn-primary">Add More</button>
+        
+        <!-- Submit Button -->
+        <input type="submit" name="submit_highlights" value="Save" class="btn btn-success" />
+    </form>
+</div>
+<script>
+document.getElementById('add-more').addEventListener('click', function() {
+    var formGroup = document.querySelector('.form-group');
+    var newField = formGroup.cloneNode(true); // Clone the first field
+    var inputs = newField.getElementsByTagName('input');
+    inputs[0].value = ''; // Clear the value of the cloned input
+    formGroup.parentNode.insertBefore(newField, this); // Insert the new field above the button
+});
+</script>
 
 
         <!--Itinerary -->
@@ -346,12 +360,17 @@ function save_tour_meta($post_id) {
         update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
     }
     
-    if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
-        $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights']));
-        update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
-    } else {
-        delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights provided
+    if (isset($_POST['highlights']) && is_array($_POST['highlights'])) {
+        // Sanitize each highlight value
+        $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['highlights']));
+        // Update or delete post meta for highlights
+        if (!empty($sanitized_highlights)) {
+            update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
+        } else {
+            delete_post_meta($post_id, '_tour_highlights'); // Delete meta if highlights are empty
+        }
     }
+
     
 }
 
