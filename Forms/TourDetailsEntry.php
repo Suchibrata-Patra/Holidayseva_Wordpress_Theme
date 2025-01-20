@@ -9,6 +9,7 @@ function display_tour_meta_box($post) {
     $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
+
     $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
 ?>
 <div class="container">
@@ -79,34 +80,18 @@ function display_tour_meta_box($post) {
             </form>
         </div>
 
-       <!-- Highlights -->
-<div id="highlights-container">
-    <h3 class="form-title">Highlights</h3>
-    <form method="post" action="" class="styled-form">
-        <div id="highlights-list">
-            <?php
-            // Retrieve highlights from the database
-            $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
-            if (!empty($tour_highlights) && is_array($tour_highlights)) {
-                foreach ($tour_highlights as $highlight) {
-                    echo '<div class="form-group highlight-item">';
-                    echo '<input type="text" name="tour_highlights[]" class="form-control" value="' . esc_attr($highlight) . '" placeholder="Enter a highlight" />';
-                    echo '<button type="button" class="btn btn-danger remove-highlight">Remove</button>';
-                    echo '</div>';
-                }
-            } else {
-                // Display one empty input field if no highlights exist
-                echo '<div class="form-group highlight-item">';
-                echo '<input type="text" name="tour_highlights[]" class="form-control" value="" placeholder="Enter a highlight" />';
-                echo '<button type="button" class="btn btn-danger remove-highlight">Remove</button>';
-                echo '</div>';
-            }
-            ?>
+        <!-- Highlights -->
+        <div id="highlights" class="hidden">
+            <h3 class="form-title">Itinerary</h3>
+            <form method="post" action="" class="styled-form">
+            <div class="form-group">
+                    <label for="highlights">Availability</label>
+                    <input type="text" name="highlights" id="highlights" class="form-control"
+                        value="<?php echo esc_attr($highlights); ?>" placeholder="Available Immediately"/>
+                </div>
+            </div>
+            </form>
         </div>
-        <button type="button" id="add-highlight" class="btn btn-primary">Add Highlight</button>
-        <input type="submit" value="Save Highlights" class="btn btn-success" />
-    </form>
-</div>
 
 
         <!--Itinerary -->
@@ -315,39 +300,6 @@ function display_tour_meta_box($post) {
     });
 
 </script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const highlightsList = document.getElementById("highlights-list");
-        const addHighlightBtn = document.getElementById("add-highlight");
-
-        // Function to create a new highlight input row
-        function createHighlightInput(value = "") {
-            const div = document.createElement("div");
-            div.className = "form-group highlight-item";
-            div.innerHTML = `
-                <input type="text" name="tour_highlights[]" class="form-control" value="${value}" placeholder="Enter a highlight" />
-                <button type="button" class="btn btn-danger remove-highlight">Remove</button>
-            `;
-            highlightsList.appendChild(div);
-
-            // Attach event listener to remove button
-            div.querySelector(".remove-highlight").addEventListener("click", function () {
-                div.remove();
-            });
-        }
-
-        // Add initial input field if no highlights exist
-        if (highlightsList.children.length === 0) {
-            createHighlightInput();
-        }
-
-        // Add a new input field when clicking the "Add Highlight" button
-        addHighlightBtn.addEventListener("click", function () {
-            createHighlightInput();
-        });
-    });
-</script>
-
 
 <?php
 }
