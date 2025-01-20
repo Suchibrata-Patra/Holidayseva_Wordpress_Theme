@@ -80,7 +80,7 @@ function display_tour_meta_box($post) {
             </form>
         </div>
 
-        <!-- Highlights -->
+        <!-- Highlights
         <div id="highlights" class="hidden">
             <h3 class="form-title">Itinerary</h3>
             <form method="post" action="" class="styled-form">
@@ -91,7 +91,52 @@ function display_tour_meta_box($post) {
                 </div>
             </div>
             </form>
+        </div> -->
+        <!-- Highlights -->
+<div id="highlights-container">
+    <h3 class="form-title">Itinerary</h3>
+    <form method="post" action="" class="styled-form">
+        <div id="highlights-list">
+            <!-- Dynamically added inputs will go here -->
         </div>
+        <button type="button" id="add-highlight" class="btn btn-primary">Add Highlight</button>
+        <input type="submit" value="Save Highlights" class="btn btn-success" />
+    </form>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const highlightsList = document.getElementById("highlights-list");
+        const addHighlightBtn = document.getElementById("add-highlight");
+
+        // Function to create a new highlight input row
+        function createHighlightInput(value = "") {
+            const div = document.createElement("div");
+            div.className = "form-group highlight-item";
+            div.innerHTML = `
+                <input type="text" name="highlights[]" class="form-control" value="${value}" placeholder="Enter a highlight" />
+                <button type="button" class="btn btn-danger remove-highlight">Remove</button>
+            `;
+            highlightsList.appendChild(div);
+
+            // Attach event listener to remove button
+            div.querySelector(".remove-highlight").addEventListener("click", function () {
+                div.remove();
+            });
+        }
+
+        // Add initial input field if no highlights exist
+        if (highlightsList.children.length === 0) {
+            createHighlightInput();
+        }
+
+        // Add a new input field when clicking the "Add Highlight" button
+        addHighlightBtn.addEventListener("click", function () {
+            createHighlightInput();
+        });
+    });
+</script>
+
 
 
         <!--Itinerary -->
@@ -346,12 +391,27 @@ function save_tour_meta($post_id) {
         update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
     }
     
-    if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
-        $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights']));
-        update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
-    } else {
-        delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights provided
+    // Save highlights to the database
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['highlights']) && is_array($_POST['highlights'])) {
+        // Sanitize input
+        $highlights = array_map('sanitize_text_field', $_POST['highlights']);
+        
+        // Save as serialized array in the database
+        update_option('tour_highlights', $highlights);
     }
+}
+
+// Retrieve highlights from the database
+$highlights = get_option('tour_highlights', []);
+
+// Output the existing highlights in the form
+echo '<script>';
+foreach ($highlights as $highlight) {
+    echo "createHighlightInput('" . esc_js($highlight) . "');";
+}
+echo '</script>';
+
     
 }
 
