@@ -316,6 +316,39 @@ function display_tour_meta_box($post) {
     });
 
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const highlightsList = document.getElementById("highlights-list");
+        const addHighlightBtn = document.getElementById("add-highlight");
+
+        // Function to create a new highlight input row
+        function createHighlightInput(value = "") {
+            const div = document.createElement("div");
+            div.className = "form-group highlight-item";
+            div.innerHTML = `
+                <input type="text" name="tour_highlights[]" class="form-control" value="${value}" placeholder="Enter a highlight" />
+                <button type="button" class="btn btn-danger remove-highlight">Remove</button>
+            `;
+            highlightsList.appendChild(div);
+
+            // Attach event listener to remove button
+            div.querySelector(".remove-highlight").addEventListener("click", function () {
+                div.remove();
+            });
+        }
+
+        // Add initial input field if no highlights exist
+        if (highlightsList.children.length === 0) {
+            createHighlightInput();
+        }
+
+        // Add a new input field when clicking the "Add Highlight" button
+        addHighlightBtn.addEventListener("click", function () {
+            createHighlightInput();
+        });
+    });
+</script>
+
 
 <?php
 }
