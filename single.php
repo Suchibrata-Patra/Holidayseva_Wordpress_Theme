@@ -187,3 +187,32 @@ if (!empty($tour_highlights) && is_array($tour_highlights)) {
 <?php
 get_footer();
 ?>
+
+
+
+
+tour Highlights Section
+<?php
+// Assuming you are on a single tour page or custom page
+// Get the post ID of the current tour (e.g., in a single post template)
+$post_id = get_the_ID(); // Get the current post ID
+
+// Retrieve the stored highlights (if any)
+$tour_highlights = get_post_meta($post_id, '_tour_highlights', true);
+
+if (!empty($tour_highlights)) {
+    echo '<div class="tour-highlights">';
+    echo '<h3>Tour Highlights</h3>';
+    echo '<ul>';
+    
+    // Loop through the highlights and display them
+    foreach ($tour_highlights as $highlight) {
+        echo '<li>' . esc_html($highlight) . '</li>';
+    }
+    
+    echo '</ul>';
+    echo '</div>';
+} else {
+    echo '<p>No highlights available for this tour.</p>';
+}
+?>
