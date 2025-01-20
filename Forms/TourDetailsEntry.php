@@ -124,6 +124,24 @@ function display_tour_meta_box($post) {
             document.getElementById('highlight-fields').appendChild(newField);
         });
     });
+    document.getElementById('add-more').addEventListener('click', function() {
+    // Get the form group and clone the first one
+    var formGroup = document.querySelector('.form-group');
+    var newField = formGroup.cloneNode(true); // Clone the first field
+    
+    // Clear the cloned input field
+    var inputs = newField.getElementsByTagName('input');
+    inputs[0].value = ''; // Clear the value of the cloned input
+    
+    // Add a unique ID to each input for identification
+    var inputId = 'highlight_' + (document.querySelectorAll('.form-group').length + 1);
+    inputs[0].id = inputId;
+    inputs[0].name = 'highlights[]'; // Ensure the input name is part of an array
+
+    // Insert the new field above the button
+    formGroup.parentNode.insertBefore(newField, this);
+});
+
 </script>
 
 
@@ -380,14 +398,13 @@ function save_tour_meta($post_id) {
         update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
     }
     
-    if (isset($_POST['highlights']) && is_array($_POST['highlights'])) {
-        // Sanitize each highlight value
+    f (isset($_POST['highlights']) && is_array($_POST['highlights'])) {
+        // Sanitize each highlight value and save them as an array
         $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['highlights']));
-        // Update or delete post meta for highlights
         if (!empty($sanitized_highlights)) {
             update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
         } else {
-            delete_post_meta($post_id, '_tour_highlights'); // Delete meta if highlights are empty
+            delete_post_meta($post_id, '_tour_highlights');
         }
     }
 
