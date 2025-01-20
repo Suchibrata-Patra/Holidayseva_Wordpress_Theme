@@ -81,32 +81,18 @@ function display_tour_meta_box($post) {
         </div>
 
         <!-- Highlights -->
-     <!-- Highlights -->
-<div id="highlights" class="hidden">
-    <h3 class="form-title">Tour Highlights</h3>
-    <form method="post" action="" class="styled-form">
-    <div id="tour_highlights_container">
-        <?php
-            if ($tour_highlights) {
-                foreach ($tour_highlights as $highlight) {
-                    echo '<div class="highlight-group">';
-                    echo '<input type="text" name="tour_highlights[]" class="form-control" value="' . esc_attr($highlight) . '" />';
-                    echo '<button type="button" class="remove-highlight form-button" style="background-color: red; margin-left: 10px;">Remove</button>';
-                    echo '</div>';
-                }
-            } else {
-                echo '<div class="highlight-group">';
-                echo '<input type="text" name="tour_highlights[]" class="form-control" />';
-                echo '<button type="button" class="remove-highlight form-button" style="background-color: red; margin-left: 10px;">Remove</button>';
-                echo '</div>';
-            }
-        ?>
-    </div>
-        <button type="button" id="add_highlight" class="form-button">Add Highlight</button>
-    </form>
-</div>
+        <div id="highlights" class="hidden">
+            <h3 class="form-title">Itinerary</h3>
+            <form method="post" action="" class="styled-form">
+            <div class="form-group">
+                    <label for="highlights">Availability</label>
+                    <input type="text" name="highlights" id="highlights" class="form-control"
+                        value="<?php echo esc_attr($highlights); ?>" placeholder="Available Immediately"/>
+                </div>
+            </div>
+            </form>
+        </div>
 
-        
 
         <!--Itinerary -->
         <div id="itinerary" class="hidden">
@@ -253,26 +239,6 @@ function display_tour_meta_box($post) {
 </style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    jQuery(document).ready(function ($) {
-        // Add new highlight field
-        $('#add_highlight').on('click', function (e) {
-            e.preventDefault();
-            let newHighlight = `
-                <div class="highlight-group">
-                    <input type="text" name="tour_highlights[]" class="form-control" />
-                    <button type="button" class="remove-highlight form-button" style="background-color: red; margin-left: 10px;">Remove</button>
-                </div>`;
-            $('#tour_highlights_container').append(newHighlight);
-        });
-
-        // Remove highlight field
-        $(document).on('click', '.remove-highlight', function () {
-            $(this).closest('.highlight-group').remove();
-        });
-    });
-});
-
     document.querySelectorAll('.tab-link').forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
@@ -346,40 +312,48 @@ function save_tour_meta($post_id) {
     if (isset($_POST['tour_cover_images'])) {
         update_post_meta($post_id, '_tour_cover_images', explode(',', sanitize_text_field($_POST['tour_cover_images'])));
     }
-    
+    if (isset($_POST['tour_name'])) {
+        // update_post_meta($post_id, '_tour_name', sanitize_text_field($_POST['tour_name']));
+    }
+    if (isset($_POST['tour_details'])) {
+        // update_post_meta($post_id, '_tour_details', sanitize_textarea_field($_POST['tour_details']));
+    }
+
     if (isset($_POST['tour_name'])) {
         update_post_meta($post_id, '_tour_name', sanitize_text_field($_POST['tour_name']));
     }
 
+    // Save tour description (Visual Editor content)
     if (isset($_POST['tour_description'])) {
-        update_post_meta($post_id, '_tour_description', wp_kses_post($_POST['tour_description']));
+        update_post_meta($post_id, '_tour_description', wp_kses_post($_POST['tour_description'])); // Sanitize HTML
     }
 
     if (isset($_POST['tour_location'])) {
         update_post_meta($post_id, '_tour_location', sanitize_text_field($_POST['tour_location']));
     }
-
     if (isset($_POST['tour_duration'])) {
         update_post_meta($post_id, '_tour_duration', sanitize_text_field($_POST['tour_duration']));
     }
-
     if (isset($_POST['tour_price'])) {
         update_post_meta($post_id, '_tour_price', floatval($_POST['tour_price']));
     }
-
     if (isset($_POST['tour_availability'])) {
         update_post_meta($post_id, '_tour_availability', sanitize_text_field($_POST['tour_availability']));
     }
 
-    // Save tour highlights (ensure it's an array and sanitize the values)
+    // Save Focus Keyword
+    if (isset($_POST['rank_math_focus_keyword'])) {
+        update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
+    }
+    
     if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
         $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights']));
         update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
     } else {
-        delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights
+        delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights provided
     }
+    
 }
-
 
 add_action('save_post', 'save_tour_meta');
 error_log(print_r($_POST['tour_highlights'], true));
