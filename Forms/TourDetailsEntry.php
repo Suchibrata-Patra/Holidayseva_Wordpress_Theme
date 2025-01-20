@@ -82,16 +82,27 @@ function display_tour_meta_box($post) {
 
         <!-- Highlights -->
         <div id="highlights" class="hidden">
-            <h3 class="form-title">Itinerary</h3>
-            <form method="post" action="" class="styled-form">
-            <div class="form-group">
-                    <label for="highlights">Availability</label>
-                    <input type="text" name="highlights" id="highlights" class="form-control"
-                        value="<?php echo esc_attr($highlights); ?>" placeholder="Available Immediately"/>
-                </div>
-            </div>
-            </form>
+    <h3 class="form-title">Itinerary</h3>
+    <form method="post" action="" class="styled-form">
+        <div class="form-group">
+            <label for="highlights">Availability</label>
+            <!-- Loop to create 20 input fields -->
+            <?php
+            $existing_highlights = get_post_meta($post->ID, '_tour_highlights', true);
+            if (!is_array($existing_highlights)) {
+                $existing_highlights = array_fill(0, 20, ''); // Fill with empty values if no data is found
+            }
+            for ($i = 0; $i < 20; $i++) {
+                $highlight_value = isset($existing_highlights[$i]) ? esc_attr($existing_highlights[$i]) : '';
+                ?>
+                <input type="text" name="tour_highlights[]" class="form-control" value="<?php echo $highlight_value; ?>" placeholder="Highlight <?php echo $i + 1; ?>" />
+                <?php
+            }
+            ?>
         </div>
+    </form>
+</div>
+
 
 
         <!--Itinerary -->
@@ -347,11 +358,13 @@ function save_tour_meta($post_id) {
     }
     
     if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
+        // Sanitize each highlight and filter out empty values
         $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights']));
         update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
     } else {
         delete_post_meta($post_id, '_tour_highlights'); // Remove meta if no highlights provided
     }
+    
     
 }
 
