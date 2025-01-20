@@ -85,8 +85,11 @@ function display_tour_meta_box($post) {
             <h3 class="form-title">Itinerary</h3>
             <form method="post" action="" class="styled-form">
             <div class="form-group">
-                    
+                    <label for="highlights">Availability</label>
+                    <input type="text" name="highlights" id="highlights" class="form-control"
+                        value="<?php echo esc_attr($highlights); ?>" placeholder="Available Immediately"/>
                 </div>
+            </div>
             </form>
         </div>
 
