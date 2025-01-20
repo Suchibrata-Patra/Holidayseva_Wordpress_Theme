@@ -398,7 +398,7 @@ function save_tour_meta($post_id) {
         update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
     }
     
-    f (isset($_POST['highlights']) && is_array($_POST['highlights'])) {
+    if (isset($_POST['highlights']) && is_array($_POST['highlights'])) {
         // Sanitize each highlight value and save them as an array
         $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['highlights']));
         if (!empty($sanitized_highlights)) {
