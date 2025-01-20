@@ -82,30 +82,50 @@ function display_tour_meta_box($post) {
 
         <!-- Highlights -->
         <div id="highlights" class="hidden">
-    <h3 class="form-title">Itinerary</h3>
-    <form method="post" action="" class="styled-form">
-        <div class="form-group">
-            <label for="highlights">Availability</label>
-            <input type="text" name="highlights[]" id="highlights" class="form-control"
-                value="<?php echo esc_attr($highlights); ?>" placeholder="Available Immediately"/>
+            <h3 class="form-title">Tour Highlights</h3>
+            <form method="post" action="" class="styled-form">
+                <div id="highlight-fields">
+                    <?php
+                    if (!empty($tour_highlights)) {
+                        foreach ($tour_highlights as $highlight) {
+                            echo '<div class="form-group"><input type="text" name="highlights[]" class="form-control" value="' . esc_attr($highlight) . '" /></div>';
+                        }
+                    } else {
+                        echo '<div class="form-group"><input type="text" name="highlights[]" class="form-control" placeholder="Enter a highlight" /></div>';
+                    }
+                    ?>
+                </div>
+                <!-- Button to add more fields -->
+                <button type="button" id="add-more" class="btn btn-primary">Add More</button>
+            </form>
         </div>
         
-        <!-- Button to add more fields -->
-        <button type="button" id="add-more" class="btn btn-primary">Add More</button>
-        
-        <!-- Submit Button -->
-        <input type="submit" name="submit_highlights" value="Save" class="btn btn-success" />
-    </form>
+        <!-- Other sections (Itinerary, Reviews, FAQ) can go here as needed -->
+    </div>
 </div>
 <script>
-document.getElementById('add-more').addEventListener('click', function() {
-    var formGroup = document.querySelector('.form-group');
-    var newField = formGroup.cloneNode(true); // Clone the first field
-    var inputs = newField.getElementsByTagName('input');
-    inputs[0].value = ''; // Clear the value of the cloned input
-    formGroup.parentNode.insertBefore(newField, this); // Insert the new field above the button
-});
+    document.querySelectorAll('.tab-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelectorAll('.tab-link').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.main-content > div').forEach(content => content.classList.add('hidden'));
+
+            this.classList.add('active');
+            document.getElementById(this.dataset.target).classList.remove('hidden');
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Add more fields dynamically
+        document.getElementById('add-more').addEventListener('click', function () {
+            const newField = document.createElement('div');
+            newField.classList.add('form-group');
+            newField.innerHTML = '<input type="text" name="highlights[]" class="form-control" placeholder="Enter a highlight" />';
+            document.getElementById('highlight-fields').appendChild(newField);
+        });
+    });
 </script>
+
 
 
         <!--Itinerary -->
