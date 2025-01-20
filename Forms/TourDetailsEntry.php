@@ -80,18 +80,51 @@ function display_tour_meta_box($post) {
             </form>
         </div>
 
-        <!-- Highlights -->
-        <div id="highlights" class="hidden">
-            <h3 class="form-title">Itinerary</h3>
-            <form method="post" action="" class="styled-form">
-            <div class="form-group">
-                    <label for="highlights">Availability</label>
-                    <input type="text" name="highlights" id="highlights" class="form-control"
-                        value="<?php echo esc_attr($highlights); ?>" placeholder="Available Immediately"/>
-                </div>
-            </div>
-            </form>
+       <!-- Highlights -->
+<div id="highlights-section" class="hidden">
+    <h3 class="form-title">Itinerary</h3>
+    <form method="post" action="" class="styled-form">
+        <div id="highlights-wrapper">
+            <!-- Dynamic Highlights Input Fields Will Be Added Here -->
         </div>
+        <button type="button" id="add-highlight" class="btn btn-primary">+ Add Highlight</button>
+        <input type="submit" name="save_highlights" value="Save Highlights" class="btn btn-success"/>
+    </form>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const wrapper = document.getElementById("highlights-wrapper");
+        const addButton = document.getElementById("add-highlight");
+
+        // Initializing with existing data
+        let highlights = <?php echo json_encode(get_option('highlights', [])); ?>;
+
+        function addHighlightField(value = "") {
+            const div = document.createElement("div");
+            div.classList.add("form-group", "highlight-item");
+
+            div.innerHTML = `
+                <input type="text" name="highlights[]" class="form-control" value="${value}" placeholder="Highlight"/>
+                <button type="button" class="btn btn-danger remove-highlight">-</button>
+            `;
+
+            wrapper.appendChild(div);
+
+            // Attach remove event
+            div.querySelector(".remove-highlight").addEventListener("click", function() {
+                div.remove();
+            });
+        }
+
+        // Load existing highlights
+        highlights.forEach(highlight => addHighlightField(highlight));
+
+        // Add new highlight field
+        addButton.addEventListener("click", () => addHighlightField());
+    });
+</script>
+
 
 
         <!--Itinerary -->
@@ -300,6 +333,24 @@ function display_tour_meta_box($post) {
     });
 
 </script>
+add_action('admin_post_save_highlights', function() {
+    if (isset($_POST['save_highlights'])) {
+        // Sanitize the input
+        $highlights = array_map('sanitize_text_field', $_POST['highlights'] ?? []);
+        // Update the database option
+        update_option('highlights', $highlights);
+
+        // Redirect to the same page
+        wp_redirect($_SERVER['HTTP_REFERER']);
+        exit;
+    }
+});
+
+// Retrieve Highlights Array (Optional Helper Function)
+function get_highlights() {
+    return get_option('highlights', []);
+}
+?>
 
 <?php
 }
