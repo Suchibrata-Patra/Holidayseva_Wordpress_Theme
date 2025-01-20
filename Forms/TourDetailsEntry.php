@@ -88,12 +88,15 @@ function display_tour_meta_box($post) {
             <label for="highlights">Availability</label>
             <!-- Loop to create 20 input fields -->
             <?php
+            // Get the stored highlights as an array
             $existing_highlights = get_post_meta($post->ID, '_tour_highlights', true);
             if (!is_array($existing_highlights)) {
                 $existing_highlights = array_fill(0, 20, ''); // Fill with empty values if no data is found
             }
+
+            // Create 20 input fields for highlights
             for ($i = 0; $i < 20; $i++) {
-                $highlight_value = isset($existing_highlights[$i]) ? esc_attr($existing_highlights[$i]) : '';
+                $highlight_value = isset($existing_highlights[$i]) ? esc_attr($existing_highlights[$i]) : ''; 
                 ?>
                 <input type="text" name="tour_highlights[]" class="form-control" value="<?php echo $highlight_value; ?>" placeholder="Highlight <?php echo $i + 1; ?>" />
                 <?php
