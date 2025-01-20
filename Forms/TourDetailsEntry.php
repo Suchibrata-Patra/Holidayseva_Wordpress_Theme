@@ -333,24 +333,30 @@ function display_tour_meta_box($post) {
     });
 
 </script>
+<?php
+// Save Highlights Array
 add_action('admin_post_save_highlights', function() {
+    // Check if the form is submitted
     if (isset($_POST['save_highlights'])) {
-        // Sanitize the input
+        // Sanitize the input (ensure no malicious data is saved)
         $highlights = array_map('sanitize_text_field', $_POST['highlights'] ?? []);
-        // Update the database option
+
+        // Save the highlights array to the WordPress options table
         update_option('highlights', $highlights);
 
-        // Redirect to the same page
+        // Redirect back to the same page after saving
         wp_redirect($_SERVER['HTTP_REFERER']);
         exit;
     }
 });
 
-// Retrieve Highlights Array (Optional Helper Function)
+// Retrieve Highlights Array (Helper Function)
 function get_highlights() {
+    // Retrieve the highlights array from the WordPress options table
     return get_option('highlights', []);
 }
 ?>
+
 
 <?php
 }
