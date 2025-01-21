@@ -27,6 +27,8 @@ get_header(); ?>
         $tour_price = get_post_meta($post_id, '_tour_price', true);
         $tour_availability = get_post_meta($post_id, '_tour_availability', true);
         $tour_cover_images = get_post_meta($post_id, '_tour_cover_images', true);
+
+        $tour_highlights = get_post_meta($post_id, '_tour_highlights', true);
         
         // Fetch bookings for the current tour
         global $wpdb;
