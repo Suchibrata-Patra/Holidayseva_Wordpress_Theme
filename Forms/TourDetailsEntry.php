@@ -370,6 +370,7 @@ function save_tour_meta($post_id) {
   // Saving the Tour Highlights
 if (isset($_POST['tour_highlights'])) {
     update_post_meta($post_id, '_tour_highlights', sanitize_textarea_field($_POST['tour_highlights']));
+    error_log('Tour highlights saved: ' . $highlights);
 }
 
         
