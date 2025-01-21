@@ -11,7 +11,8 @@ function display_tour_meta_box($post) {
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
 
     $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
-?>
+    var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
+    ?>
 <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
@@ -94,9 +95,10 @@ function display_tour_meta_box($post) {
             <h3 class="form-title">Highlights</h3>
             <form method="post" action="" class="styled-form">
             <div class="form-group">
-                    <label for="tour_highlights">Cover Images </label>
+                    <label for="tour_highlights">Tour Highlights</label>
                     <input type="text" name="tour_highlights" id="tour_highlights" class="form-control"
-                        value="<?php echo esc_attr($tour_highlights); ?>" />
+       value="<?php echo esc_attr($tour_highlights); ?>" />
+
                 </div>
             </form>
         </div>
@@ -354,9 +356,10 @@ function save_tour_meta($post_id) {
     }
 
     // Save Focus Keyword
-    if (isset($_POST['rank_math_focus_keyword'])) {
-        update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
+    if (isset($_POST['tour_highlights'])) {
+        update_post_meta($post_id, '_tour_highlights', sanitize_text_field($_POST['tour_highlights']));
     }
+    
 }
 
 add_action('save_post', 'save_tour_meta');
