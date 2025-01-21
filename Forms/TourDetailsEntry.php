@@ -2,15 +2,13 @@
 function display_tour_meta_box($post) {
     // Retrieve existing custom fields values
     $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
-    $tour_name = get_post_meta($post->ID, '_tour_name', true);
-    $tour_description = get_post_meta($post->ID, '_tour_description', true);
-    $tour_details = get_post_meta($post->ID, '_tour_details', true);
-    $tour_location = get_post_meta($post->ID, '_tour_location', true);
-    $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
-    $tour_price = get_post_meta($post->ID, '_tour_price', true);
-    $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
-
-    ?>
+$tour_name = get_post_meta($post->ID, '_tour_name', true); $tour_description =
+get_post_meta($post->ID, '_tour_description', true); $tour_details =
+get_post_meta($post->ID, '_tour_details', true); $tour_location =
+get_post_meta($post->ID, '_tour_location', true); $tour_duration =
+get_post_meta($post->ID, '_tour_duration', true); $tour_price =
+get_post_meta($post->ID, '_tour_price', true); $tour_availability =
+get_post_meta($post->ID, '_tour_availability', true); ?>
 <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
@@ -38,11 +36,9 @@ function display_tour_meta_box($post) {
                     <?php
                         $tour_description = isset($tour_description) ? $tour_description : ''; // Get existing value if exists
                         wp_editor($tour_description, 'tour_description', array(
-                            'textarea_name' => 'tour_description',
-                            'textarea_rows' => 5,
-                            'media_buttons' => true, // Enable media buttons (images, etc.)
-                        ));
-                    ?>
+                            'textarea_name' =>
+          'tour_description', 'textarea_rows' => 5, 'media_buttons' => true, //
+          Enable media buttons (images, etc.) )); ?>
                 </div>
 
                 <div class="form-group">
@@ -70,14 +66,17 @@ function display_tour_meta_box($post) {
                 </div>
 
                 <div class="form-group">
-                    <label for="tour_cover_images">Slider Images <span style="font-weight:300!important;">[ These Are
-                            the Tour Page's Slider Image ]</span></label>
+                    <label for="tour_cover_images">Slider Images
+                        <span style="font-weight: 300 !important">[ These Are the Tour Page's Slider Image
+                            ]</span></label>
                     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                        style="display: none !important;" value="<?php echo esc_attr($tour_cover_images); ?>"
+                        style="display: none !important" value="<?php echo esc_attr($tour_cover_images); ?>"
                         placeholder="" />
-                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
+                    <button type="button" id="tour_cover_images_button" class="form-button">
+                        Select Images
+                    </button>
                     <div id="tour_cover_images_preview"
-                        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
+                        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px"></div>
                 </div>
             </form>
         </div>
@@ -94,65 +93,69 @@ function display_tour_meta_box($post) {
             </form>
         </div>
 
-
         <!-- Other sections (Itinerary, Reviews, FAQ) can go here as needed -->
+
+        <!--Itinerary -->
+        <div id="itinerary" class="hidden">
+            <h3 class="form-title">Itinerary</h3>
+            <form method="post" action="" class="styled-form">
+                <div class="form-group">
+                    <label for="tour_cover_images">Cover Images </label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                        value="<?php echo esc_attr($tour_cover_images); ?>" />
+                    <button type="button" id="tour_cover_images_button" class="form-button">
+                        Select Images
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!--Reviews -->
+        <div id="reviews" class="hidden">
+            <h3 class="form-title">Reviews</h3>
+            <form method="post" action="" class="styled-form">
+                <div class="form-group">
+                    <label for="tour_cover_images">Cover Images </label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                        value="<?php echo esc_attr($tour_cover_images); ?>" />
+                    <button type="button" id="tour_cover_images_button" class="form-button">
+                        Select Images
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!-- Frequently Asked Questions -->
+        <div id="frequently_asked_questions" class="hidden">
+            <h3 class="form-title">Frequently Asked Questions</h3>
+            <form method="post" action="" class="styled-form">
+                <div class="form-group">
+                    <label for="tour_cover_images">Cover Images </label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                        value="<?php echo esc_attr($tour_cover_images); ?>" />
+                    <button type="button" id="tour_cover_images_button" class="form-button">
+                        Select Images
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
-
-
-
-<!--Itinerary -->
-<div id="itinerary" class="hidden">
-    <h3 class="form-title">Itinerary</h3>
-    <form method="post" action="" class="styled-form">
-        <div class="form-group">
-            <label for="tour_cover_images">Cover Images </label>
-            <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                value="<?php echo esc_attr($tour_cover_images); ?>" />
-            <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
-        </div>
-    </form>
-</div>
-
-<!--Reviews -->
-<div id="reviews" class="hidden">
-    <h3 class="form-title">Reviews</h3>
-    <form method="post" action="" class="styled-form">
-        <div class="form-group">
-            <label for="tour_cover_images">Cover Images </label>
-            <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                value="<?php echo esc_attr($tour_cover_images); ?>" />
-            <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
-        </div>
-    </form>
-</div>
-<!-- Frequently Asked Questions -->
-<div id="frequently_asked_questions" class="hidden">
-    <h3 class="form-title">Frequently Asked Questions</h3>
-    <form method="post" action="" class="styled-form">
-        <div class="form-group">
-            <label for="tour_cover_images">Cover Images </label>
-            <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                value="<?php echo esc_attr($tour_cover_images); ?>" />
-            <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
-        </div>
-    </form>
-</div>
-</div>
-</div>
 <script>
-    document.querySelectorAll('.tab-link').forEach(link => {
-        link.addEventListener('click', function (e) {
+    document.querySelectorAll(".tab-link").forEach((link) => {
+        link.addEventListener("click", function (e) {
             e.preventDefault();
-            document.querySelectorAll('.tab-link').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.main-content > div').forEach(content => content.classList.add('hidden'));
+            document
+                .querySelectorAll(".tab-link")
+                .forEach((tab) => tab.classList.remove("active"));
+            document
+                .querySelectorAll(".main-content > div")
+                .forEach((content) => content.classList.add("hidden"));
 
-            this.classList.add('active');
-            document.getElementById(this.dataset.target).classList.remove('hidden');
+            this.classList.add("active");
+            document.getElementById(this.dataset.target).classList.remove("hidden");
         });
     });
-
 </script>
 <style>
     /* Layout Styling */
@@ -182,7 +185,7 @@ function display_tour_meta_box($post) {
     }
 
     .sidebar a.active {
-        background-color: #DDA853;
+        background-color: #dda853;
     }
 
     .sidebar a:hover {
@@ -260,23 +263,27 @@ function display_tour_meta_box($post) {
 </style>
 
 <script>
-    document.querySelectorAll('.tab-link').forEach(link => {
-        link.addEventListener('click', function (e) {
+    document.querySelectorAll(".tab-link").forEach((link) => {
+        link.addEventListener("click", function (e) {
             e.preventDefault();
-            document.querySelectorAll('.tab-link').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.main-content > div').forEach(content => content.classList.add('hidden'));
+            document
+                .querySelectorAll(".tab-link")
+                .forEach((tab) => tab.classList.remove("active"));
+            document
+                .querySelectorAll(".main-content > div")
+                .forEach((content) => content.classList.add("hidden"));
 
-            this.classList.add('active');
-            document.getElementById(this.dataset.target).classList.remove('hidden');
+            this.classList.add("active");
+            document.getElementById(this.dataset.target).classList.remove("hidden");
         });
     });
 
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener("DOMContentLoaded", function () {
         jQuery(document).ready(function ($) {
             let mediaUploader;
 
             // Handle media uploader
-            $('#tour_cover_images_button').on('click', function (e) {
+            $("#tour_cover_images_button").on("click", function (e) {
                 e.preventDefault();
 
                 // If the uploader object has already been created, reopen it.
@@ -287,31 +294,31 @@ function display_tour_meta_box($post) {
 
                 // Extend the wp.media object.
                 mediaUploader = wp.media({
-                    title: 'Choose Cover Images',
+                    title: "Choose Cover Images",
                     button: {
-                        text: 'Use these images',
+                        text: "Use these images",
                     },
                     multiple: true, // Allow multiple images
                 });
 
                 // When an image is selected, run a callback.
-                mediaUploader.on('select', function () {
-                    const selection = mediaUploader.state().get('selection');
+                mediaUploader.on("select", function () {
+                    const selection = mediaUploader.state().get("selection");
                     const imageUrls = [];
-                    $('#tour_cover_images_preview').empty(); // Clear the preview container
+                    $("#tour_cover_images_preview").empty(); // Clear the preview container
 
                     selection.each(function (attachment) {
                         const url = attachment.toJSON().url;
                         imageUrls.push(url);
 
                         // Append the image to the preview container
-                        $('#tour_cover_images_preview').append(
+                        $("#tour_cover_images_preview").append(
                             `<img src="${url}" style="width: 100px; height: auto; border: 1px solid #ccc;">`
                         );
                     });
 
                     // Set the value of the hidden input field
-                    $('#tour_cover_images').val(imageUrls.join(','));
+                    $("#tour_cover_images").val(imageUrls.join(","));
                 });
 
                 // Open the uploader dialog.
@@ -319,7 +326,6 @@ function display_tour_meta_box($post) {
             });
         });
     });
-
 </script>
 
 <?php
