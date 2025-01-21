@@ -10,6 +10,7 @@ function display_tour_meta_box($post) {
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
 
+    $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
     ?>
 <div class="container">
     <!-- Sidebar -->
@@ -80,13 +81,15 @@ function display_tour_meta_box($post) {
         </div>
             
         <!-- Highlights -->
-        <div id="basic_info">
+    <div id="highlights">
             <h3 class="form-title">Tour Basic Info</h3>
             <form method="post" action="" class="styled-form">
                 <div class="form-group">
-                    <label for="tour_highlight">Tour Package Name</label>
-                    <input type="text" name="tour_highlight" id="tour_highlight" class="form-control"
-                        value="<?php echo esc_attr($tour_highlight); ?>" />
+                    <label for="tour_highlights">Tour Package Name</label>
+                    <input type="text" name="tour_highlights" id="tour_highlights" class="form-control"
+    value="<?php echo esc_attr($tour_highlights); ?>" />
+
+                        
                 </div>
             </form>
         </div>
