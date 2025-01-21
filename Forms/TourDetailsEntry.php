@@ -407,7 +407,6 @@ function save_tour_meta($post_id) {
             delete_post_meta($post_id, '_tour_highlights');
         }
     }
-
     
 }
 
