@@ -184,6 +184,22 @@ if (!empty($tour_highlights) && is_array($tour_highlights)) {
     }
 </style>
 
+tour Highlights Section
+<?php
+$tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
+
+error_log(print_r($tour_highlights, true));  // This will log the retrieved data to the error log
+
+if (!empty($tour_highlights)) {
+    foreach ($tour_highlights as $highlight) {
+        echo '<div>' . esc_html($highlight) . '</div>';
+    }
+} else {
+    echo 'No highlights found.';  // This will help debug if no data is being returned
+}
+?>
+
+
 <?php
 get_footer();
 ?>
@@ -191,14 +207,3 @@ get_footer();
 
 
 
-tour Highlights Section
-<?php
-$tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
-if (!empty($tour_highlights)) {
-    // Process or display each highlight
-    foreach ($tour_highlights as $highlight) {
-        echo '<div>' . esc_html($highlight) . '</div>';
-    }
-}
-
-?>
