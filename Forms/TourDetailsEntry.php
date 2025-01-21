@@ -70,6 +70,12 @@ function display_tour_meta_box($post) {
                     <input type="text" name="tour_availability" id="tour_availability" class="form-control"
                         value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately"/>
                 </div>
+                <div class="form-group">
+                    <label for="tour_highlights">Tour Highlights</label>
+                    <input type="text" name="tour_highlights" id="tour_highlights" class="form-control"
+       value="<?php echo esc_attr($tour_highlights); ?>" />
+
+                </div>
  
                 <!-- <div class="form-group">
                     <label for="tour_cover_images">Slider Images</label>
