@@ -43,8 +43,16 @@ get_header(); ?>
         // Start displaying the collected data
         ?>
         <h1 class="tour-title"><?php echo esc_html($tour_title); ?></h1>
-        <h1 class="tour-title"><?php echo esc_html($tour_highlights); ?></h1>
+        <h3>Tour Highlights Portions</h3>
+<?php
+$tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
+if (!empty($tour_highlights) && is_array($tour_highlights)) {
+    foreach ($tour_highlights as $highlight) {
+        echo '<p>' . esc_html($highlight) . '</p>';
+    }
+}
 
+?>
         <?php if ($tour_thumbnail) : ?>
             <div class="tour-featured-image"><?php echo $tour_thumbnail; ?></div>
         <?php endif; ?>
