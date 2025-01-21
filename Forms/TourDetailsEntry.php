@@ -80,31 +80,7 @@ function display_tour_meta_box($post) {
         </div>
             
         <!-- Highlights -->
-        <div id="highlights" class="hidden">
-    <h3 class="form-title">Tour Highlights</h3>
-    <div class="form-group" id="highlights-container">
-        <label>Highlights</label>
-        <?php 
-        $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
-        if (!empty($tour_highlights) && is_array($tour_highlights)) {
-            foreach ($tour_highlights as $highlight) { ?>
-                <div class="highlight-item">
-                    <input type="text" name="tour_highlights[]" class="form-control highlight-field" 
-                           value="<?php echo esc_attr($highlight); ?>" placeholder="Highlight description" />
-                    <button type="button" class="remove-highlight form-button" style="background-color: #e74c3c;">Remove</button>
-                </div>
-            <?php }
-        } else { ?>
-            <div class="highlight-item">
-                <input type="text" name="tour_highlights[]" class="form-control highlight-field" 
-                       placeholder="Highlight description" />
-                <button type="button" class="remove-highlight form-button" style="background-color: #e74c3c;">Remove</button>
-            </div>
-        <?php } ?>
-    </div>
-    <button type="button" id="add-highlight" class="form-button" style="margin-top: 10px;">Add Highlight</button>
-</div>
-
+         
     
 
         
