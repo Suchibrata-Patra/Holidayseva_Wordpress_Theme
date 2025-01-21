@@ -82,15 +82,15 @@ function display_tour_meta_box($post) {
 
         <!-- Highlights -->
         <div id="highlights" class="hidden">
-            <h3 class="form-title">Highlights</h3>
-            <form method="post" action="" class="styled-form">
-            <div class="form-group">
-                    <label for="tour_highlights">Duration:</label>
-                    <input type="text" name="tour_highlights" id="tour_highlights" class="form-control"
-                        value="<?php echo esc_attr($tour_highlights); ?>" placeholder="7 Night 8 Days" />
-                </div>
-            </form>
+    <h3 class="form-title">Highlights</h3>
+    <form method="post" action="" class="styled-form">
+        <div class="form-group">
+            <label for="tour_highlights">Tour Highlights</label>
+            <textarea name="tour_highlights" id="tour_highlights" class="form-control" rows="5"><?php echo esc_textarea($tour_highlights); ?></textarea>
         </div>
+    </form>
+</div>
+
         
         <!-- Other sections (Itinerary, Reviews, FAQ) can go here as needed -->
     </div>
@@ -368,12 +368,8 @@ function save_tour_meta($post_id) {
     if (isset($_POST['tour_highlights'])) {
         update_post_meta($post_id, '_tour_highlights', sanitize_text_field($_POST['tour_highlights']));
     }
-    
-    
-
-    
+        
 }
 
 add_action('save_post', 'save_tour_meta');
-error_log(print_r($_POST['tour_highlights'], true));
 ?>
