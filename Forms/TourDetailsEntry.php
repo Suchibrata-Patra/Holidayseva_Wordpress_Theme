@@ -79,16 +79,19 @@ function display_tour_meta_box($post) {
                 </div>
             </form>
         </div>
-<!-- Highlights -->
-<div id="highlights" class="hidden">
-    <h3 class="form-title">Tour Highlights</h3>
-    <form method="post" action="" class="styled-form">
-        <div class="form-group">
-            <label for="tour_highlights">Tour Highlights</label>
-            <textarea name="tour_highlights" id="tour_highlights" class="form-control" rows="5"><?php echo esc_textarea($tour_highlights); ?></textarea>
+            
+        <!-- Highlights -->
+        <div id="highlights" class="hidden">
+            <h3 class="form-title">highlights</h3>
+            <form method="post" action="" class="styled-form">
+            <div class="form-group">
+                    <label for="tour_highlights">Cover Images </label>
+                    <input type="text" name="tour_highlights" id="tour_highlights" class="form-control"
+                        value="<?php echo esc_attr($tour_highlights); ?>" />
+                    <button type="button" id="tour_highlights_button" class="form-button">Select Images</button>
+                </div>
+            </form>
         </div>
-    </form>
-</div>
 
         
         <!-- Other sections (Itinerary, Reviews, FAQ) can go here as needed -->
