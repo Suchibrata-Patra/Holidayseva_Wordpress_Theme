@@ -9,21 +9,6 @@
 
 
 get_header(); ?>
-<?php
-// Retrieve highlights
-$tour_highlights = get_post_meta(get_the_ID(), '_tour_highlights', true);
-
-if (!empty($tour_highlights) && is_array($tour_highlights)) {
-    echo '<ul class="tour-highlights">';
-    foreach ($tour_highlights as $highlight) {
-        echo '<li>' . esc_html($highlight) . '</li>';
-    }
-    echo '</ul>';
-} else {
-    echo '<p>No highlights available for this tour.</p>';
-}
-?>
-
 
 <main id="primary" class="site-main">
     <?php
@@ -56,6 +41,7 @@ if (!empty($tour_highlights) && is_array($tour_highlights)) {
         // Start displaying the collected data
         ?>
         <h1 class="tour-title"><?php echo esc_html($tour_title); ?></h1>
+        <h1 class="tour-title"><?php echo esc_html($tour_highlights); ?></h1>
 
         <?php if ($tour_thumbnail) : ?>
             <div class="tour-featured-image"><?php echo $tour_thumbnail; ?></div>
@@ -183,21 +169,6 @@ if (!empty($tour_highlights) && is_array($tour_highlights)) {
         font-weight: bold;
     }
 </style>
-
-------
-<?php
-$tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
-
-error_log(print_r($tour_highlights, true));  // This will log the retrieved data to the error log
-
-if (!empty($tour_highlights)) {
-    foreach ($tour_highlights as $highlight) {
-        echo '<div>' . esc_html($highlight) . '</div>';
-    }
-} else {
-    echo 'No highlights found.';  // This will help debug if no data is being returned
-}
-?>
 
 
 <?php
