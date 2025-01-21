@@ -184,7 +184,7 @@ if (!empty($tour_highlights) && is_array($tour_highlights)) {
     }
 </style>
 
-tour Highlights Section
+------
 <?php
 $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
 
