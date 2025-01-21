@@ -9,9 +9,7 @@ function display_tour_meta_box($post) {
     $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
-
-    $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
-    ?>
+?>
 <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
@@ -26,7 +24,7 @@ function display_tour_meta_box($post) {
     <div class="main-content">
         <!-- Tour Form -->
         <div id="basic_info">
-            <h3 class="form-title">Tour Basic Info</h3>
+            <h3 class="form-title">Basic Info</h3>
             <form method="post" action="" class="styled-form">
                 <div class="form-group">
                     <label for="tour_name">Tour Package Name</label>
@@ -70,49 +68,37 @@ function display_tour_meta_box($post) {
                         value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately"/>
                 </div>
  
-                <div class="form-group">
-                    <label for="tour_cover_images">Slider Images <span style="font-weight:300!important;">[ These Are the Tour Page's Slider Image ]</span></label>
+                <!-- <div class="form-group">
+                    <label for="tour_cover_images">Slider Images</label>
                     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control" style="display: none !important;"
                         value="<?php echo esc_attr($tour_cover_images); ?>" placeholder=""/>
                     <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
                     <div id="tour_cover_images_preview" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
-                </div>
-            </form>
-        </div>
-            
-        <!-- Highlights -->
-    <div id="highlights">
-            <h3 class="form-title">Tour Basic Info</h3>
-            <form method="post" action="" class="styled-form">
+                </div> -->
                 <div class="form-group">
-                    <label for="tour_highlights">Tour Package Name</label>
-                    <input type="text" name="tour_highlights" id="tour_highlights" class="form-control"
-    value="<?php echo esc_attr($tour_highlights); ?>" />
+    <label for="tour_cover_images">Slider Images</label>
+    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control" style="display: none !important;"
+        value="<?php echo esc_attr($tour_cover_images); ?>" placeholder=""/>
+    <button type="button" id="tour_cover_images_button" class="form-button" 
+        title="Click to select images for the slider">Select Images</button>
+    <div id="tour_cover_images_preview" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
+</div>
 
-                        
-                </div>
             </form>
         </div>
 
-        
-        <!-- Other sections (Itinerary, Reviews, FAQ) can go here as needed -->
-    </div>
-</div>
-<script>
-    document.querySelectorAll('.tab-link').forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelectorAll('.tab-link').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.main-content > div').forEach(content => content.classList.add('hidden'));
-
-            this.classList.add('active');
-            document.getElementById(this.dataset.target).classList.remove('hidden');
-        });
-    });
-
-</script>
-
-
+        <!-- Highlights -->
+        <div id="highlights" class="hidden">
+            <h3 class="form-title">Highlights</h3>
+            <form method="post" action="" class="styled-form">
+            <div class="form-group">
+                    <label for="tour_cover_images">Cover Images </label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                        value="<?php echo esc_attr($tour_cover_images); ?>" />
+                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
+                </div>
+            </form>
+        </div>
 
         <!--Itinerary -->
         <div id="itinerary" class="hidden">
@@ -164,7 +150,7 @@ function display_tour_meta_box($post) {
     /* Sidebar Styling */
     .sidebar {
         width: 20%;
-        background-color:rgb(6, 38, 48);
+        background-color: #16404D;
         color: white;
         padding: 10px;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -321,6 +307,7 @@ function display_tour_meta_box($post) {
 
 </script>
 
+
 <?php
 }
 
@@ -365,7 +352,6 @@ function save_tour_meta($post_id) {
     if (isset($_POST['rank_math_focus_keyword'])) {
         update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
     }
-        
 }
 
 add_action('save_post', 'save_tour_meta');
