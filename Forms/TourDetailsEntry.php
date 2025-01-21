@@ -389,6 +389,12 @@ function save_tour_meta($post_id) {
     if (isset($_POST['rank_math_focus_keyword'])) {
         update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
     }
+
+
+    // Saving the Tour Highlights
+    if (isset($_POST['tour_highlights'])) {
+        update_post_meta($post_id, '_tour_highlights', sanitize_text_field($_POST['tour_highlights']));
+    }
     
     
 
