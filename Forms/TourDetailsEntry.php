@@ -84,10 +84,11 @@ function display_tour_meta_box($post) {
         <div id="highlights" class="hidden">
     <h3 class="form-title">Highlights</h3>
     <form method="post" action="" class="styled-form">
-        <div class="form-group">
-            <label for="tour_highlights">Tour Highlights</label>
-            <input type="text" name="tour_highlights" id="tour_highlights" class="form-control" value="<?php echo esc_attr($tour_highlights); ?>" />
-        </div>
+    <div class="form-group">
+                    <label for="tour_highlights">Tour Package Name</label>
+                    <input type="text" name="tour_highlights" id="tour_highlights" class="form-control"
+                        value="<?php echo esc_attr($tour_highlights); ?>" />
+                </div>
     </form>
 </div>
 
