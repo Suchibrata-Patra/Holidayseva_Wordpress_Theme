@@ -32,7 +32,7 @@ function display_tour_meta_box($post) {
                     <input type="text" name="tour_name" id="tour_name" class="form-control"
                         value="<?php echo esc_attr($tour_name); ?>" />
                 </div>
-                
+
                 <div class="form-group">
                     <label for="tour_description">Tour Description</label>
                     <?php
@@ -48,7 +48,7 @@ function display_tour_meta_box($post) {
                 <div class="form-group">
                     <label for="tour_location">Location</label>
                     <input type="text" name="tour_location" id="tour_location" class="form-control"
-                        value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA"/>
+                        value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA" />
                 </div>
 
                 <div class="form-group">
@@ -60,87 +60,86 @@ function display_tour_meta_box($post) {
                 <div class="form-group">
                     <label for="tour_price">Price</label>
                     <input type="number" name="tour_price" id="tour_price" class="form-control"
-                        value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR"/>
+                        value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR" />
                 </div>
 
                 <div class="form-group">
                     <label for="tour_availability">Availability</label>
                     <input type="text" name="tour_availability" id="tour_availability" class="form-control"
-                        value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately"/>
+                        value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately" />
                 </div>
- 
+
                 <div class="form-group">
-                    <label for="tour_cover_images">Slider Images <span style="font-weight:300!important;">[ These Are the Tour Page's Slider Image ]</span></label>
-                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control" style="display: none !important;"
-                        value="<?php echo esc_attr($tour_cover_images); ?>" placeholder=""/>
+                    <label for="tour_cover_images">Slider Images <span style="font-weight:300!important;">[ These Are
+                            the Tour Page's Slider Image ]</span></label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                        style="display: none !important;" value="<?php echo esc_attr($tour_cover_images); ?>"
+                        placeholder="" />
                     <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
-                    <div id="tour_cover_images_preview" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
+                    <div id="tour_cover_images_preview"
+                        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
                 </div>
             </form>
         </div>
-            
+
         <!-- Highlights -->
         <div id="basic_info">
             <h3 class="form-title">Tour Basic Info</h3>
             <form method="post" action="" class="styled-form">
                 <div class="form-group">
-                    <label for="tour_name">Tour Package Name</label>
-                    <input type="text" name="tour_name" id="tour_name" class="form-control"
-                        value="<?php echo esc_attr($tour_name); ?>" />
-                </div>
-                
-                <div class="form-group">
-                    <label for="tour_description">Tour Description</label>
-                    <?php
-                        $tour_description = isset($tour_description) ? $tour_description : ''; // Get existing value if exists
-                        wp_editor($tour_description, 'tour_description', array(
-                            'textarea_name' => 'tour_description',
-                            'textarea_rows' => 5,
-                            'media_buttons' => true, // Enable media buttons (images, etc.)
-                        ));
-                    ?>
-                </div>
-
-                <div class="form-group">
-                    <label for="tour_location">Location</label>
-                    <input type="text" name="tour_location" id="tour_location" class="form-control"
-                        value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA"/>
-                </div>
-
-                <div class="form-group">
-                    <label for="tour_duration">Duration:</label>
-                    <input type="text" name="tour_duration" id="tour_duration" class="form-control"
-                        value="<?php echo esc_attr($tour_duration); ?>" placeholder="7 Night 8 Days" />
-                </div>
-
-                <div class="form-group">
-                    <label for="tour_price">Price</label>
-                    <input type="number" name="tour_price" id="tour_price" class="form-control"
-                        value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR"/>
-                </div>
-
-                <div class="form-group">
-                    <label for="tour_availability">Availability</label>
-                    <input type="text" name="tour_availability" id="tour_availability" class="form-control"
-                        value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately"/>
-                </div>
- 
-                <div class="form-group">
-                    <label for="tour_cover_images">Slider Images <span style="font-weight:300!important;">[ These Are the Tour Page's Slider Image ]</span></label>
-                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control" style="display: none !important;"
-                        value="<?php echo esc_attr($tour_cover_images); ?>" placeholder=""/>
-                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
-                    <div id="tour_cover_images_preview" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
+                    <label for="tour_highlight">Tour Package Name</label>
+                    <input type="text" name="tour_highlight" id="tour_highlight" class="form-control"
+                        value="<?php echo esc_attr($tour_highlight); ?>" />
                 </div>
             </form>
         </div>
 
-         
-    
 
-        
         <!-- Other sections (Itinerary, Reviews, FAQ) can go here as needed -->
     </div>
+</div>
+
+
+
+
+<!--Itinerary -->
+<div id="itinerary" class="hidden">
+    <h3 class="form-title">Itinerary</h3>
+    <form method="post" action="" class="styled-form">
+        <div class="form-group">
+            <label for="tour_cover_images">Cover Images </label>
+            <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                value="<?php echo esc_attr($tour_cover_images); ?>" />
+            <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
+        </div>
+    </form>
+</div>
+
+<!--Reviews -->
+<div id="reviews" class="hidden">
+    <h3 class="form-title">Reviews</h3>
+    <form method="post" action="" class="styled-form">
+        <div class="form-group">
+            <label for="tour_cover_images">Cover Images </label>
+            <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                value="<?php echo esc_attr($tour_cover_images); ?>" />
+            <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
+        </div>
+    </form>
+</div>
+<!-- Frequently Asked Questions -->
+<div id="frequently_asked_questions" class="hidden">
+    <h3 class="form-title">Frequently Asked Questions</h3>
+    <form method="post" action="" class="styled-form">
+        <div class="form-group">
+            <label for="tour_cover_images">Cover Images </label>
+            <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                value="<?php echo esc_attr($tour_cover_images); ?>" />
+            <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
+        </div>
+    </form>
+</div>
+</div>
 </div>
 <script>
     document.querySelectorAll('.tab-link').forEach(link => {
@@ -155,60 +154,18 @@ function display_tour_meta_box($post) {
     });
 
 </script>
-
-
-
-        <!--Itinerary -->
-        <div id="itinerary" class="hidden">
-            <h3 class="form-title">Itinerary</h3>
-            <form method="post" action="" class="styled-form">
-            <div class="form-group">
-                    <label for="tour_cover_images">Cover Images </label>
-                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                        value="<?php echo esc_attr($tour_cover_images); ?>" />
-                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
-                </div>
-            </form>
-        </div>
-        <!--Reviews -->
-        <div id="reviews" class="hidden">
-            <h3 class="form-title">Reviews</h3>
-            <form method="post" action="" class="styled-form">
-            <div class="form-group">
-                    <label for="tour_cover_images">Cover Images </label>
-                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                        value="<?php echo esc_attr($tour_cover_images); ?>" />
-                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
-                </div>
-            </form>
-        </div>
-        <!-- Frequently Asked Questions -->
-        <div id="frequently_asked_questions" class="hidden">
-            <h3 class="form-title">Frequently Asked Questions</h3>
-            <form method="post" action="" class="styled-form">
-            <div class="form-group">
-                    <label for="tour_cover_images">Cover Images </label>
-                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                        value="<?php echo esc_attr($tour_cover_images); ?>" />
-                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
 <style>
     /* Layout Styling */
     .container {
         display: flex;
         min-height: 100vh;
-        background-color:rgb(255, 255, 255);
+        background-color: rgb(255, 255, 255);
     }
 
     /* Sidebar Styling */
     .sidebar {
         width: 20%;
-        background-color:rgb(6, 38, 48);
+        background-color: rgb(6, 38, 48);
         color: white;
         padding: 10px;
         box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
@@ -229,7 +186,7 @@ function display_tour_meta_box($post) {
     }
 
     .sidebar a:hover {
-        background-color:rgb(210, 159, 77);
+        background-color: rgb(210, 159, 77);
     }
 
     /* Main Content Styling */
@@ -249,7 +206,7 @@ function display_tour_meta_box($post) {
     .styled-form {
         background-color: white;
         padding: 10px;
-        border-radius:0px;
+        border-radius: 0px;
         /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     }
 
@@ -261,7 +218,7 @@ function display_tour_meta_box($post) {
         display: block;
         margin-bottom: 2px;
         font-weight: 600;
-        color:rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
     }
 
     .form-group input,
