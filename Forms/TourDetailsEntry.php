@@ -82,21 +82,13 @@ function display_tour_meta_box($post) {
 
         <!-- Highlights -->
         <div id="highlights" class="hidden">
-            <h3 class="form-title">Tour Highlights</h3>
+            <h3 class="form-title">Highlights</h3>
             <form method="post" action="" class="styled-form">
-                <div id="highlight-fields">
-                    <?php
-                    if (!empty($tour_highlights)) {
-                        foreach ($tour_highlights as $highlight) {
-                            echo '<div class="form-group"><input type="text" name="highlights[]" class="form-control" value="' . esc_attr($highlight) . '" /></div>';
-                        }
-                    } else {
-                        echo '<div class="form-group"><input type="text" name="highlights[]" class="form-control" placeholder="Enter a highlight" /></div>';
-                    }
-                    ?>
+            <div class="form-group">
+                    <label for="tour_highlights">Duration:</label>
+                    <input type="text" name="tour_highlights" id="tour_highlights" class="form-control"
+                        value="<?php echo esc_attr($tour_highlights); ?>" placeholder="7 Night 8 Days" />
                 </div>
-                <!-- Button to add more fields -->
-                <button type="button" id="add-more" class="btn btn-primary">Add More</button>
             </form>
         </div>
         
@@ -398,16 +390,7 @@ function save_tour_meta($post_id) {
         update_post_meta($post_id, '_rank_math_focus_keyword', sanitize_text_field($_POST['rank_math_focus_keyword']));
     }
     
-    if (isset($_POST['highlights']) && is_array($_POST['highlights'])) {
-        // Sanitize each highlight value and save them as an array
-        $sanitized_highlights = array_filter(array_map('sanitize_text_field', $_POST['highlights']));
-        if (!empty($sanitized_highlights)) {
-            update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
-        } else {
-            delete_post_meta($post_id, '_tour_highlights');
-        }
-    }
-    error_log(print_r($_POST['highlights'], true));
+    
 
     
 }
