@@ -107,33 +107,6 @@ function display_tour_meta_box($post) {
         });
     });
 
-    document.addEventListener('DOMContentLoaded', function () {
-        // Add more fields dynamically
-        document.getElementById('add-more').addEventListener('click', function () {
-            const newField = document.createElement('div');
-            newField.classList.add('form-group');
-            newField.innerHTML = '<input type="text" name="highlights[]" class="form-control" placeholder="Enter a highlight" />';
-            document.getElementById('highlight-fields').appendChild(newField);
-        });
-    });
-    document.getElementById('add-more').addEventListener('click', function() {
-    // Get the form group and clone the first one
-    var formGroup = document.querySelector('.form-group');
-    var newField = formGroup.cloneNode(true); // Clone the first field
-    
-    // Clear the cloned input field
-    var inputs = newField.getElementsByTagName('input');
-    inputs[0].value = ''; // Clear the value of the cloned input
-    
-    // Add a unique ID to each input for identification
-    var inputId = 'highlight_' + (document.querySelectorAll('.form-group').length + 1);
-    inputs[0].id = inputId;
-    inputs[0].name = 'highlights[]'; // Ensure the input name is part of an array
-
-    // Insert the new field above the button
-    formGroup.parentNode.insertBefore(newField, this);
-});
-
 </script>
 
 
