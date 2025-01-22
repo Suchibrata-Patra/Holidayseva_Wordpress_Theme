@@ -84,77 +84,14 @@ function display_tour_meta_box($post) {
         </div>
 
         <!-- Highlights -->
-        <!-- <div id="highlights" class="hidden">
+        <div id="highlights" class="hidden">
             <h3 class="form-title">Highlights</h3>
             <div class="form-group">
                     <label for="tour_highlights">Tour Highlights</label>
                     <input type="text" name="tour_highlights" id="tour_highlights" class="form-control" value="<?php echo esc_attr($tour_highlights); ?>" />
                 </div>
             </form>
-        </div> -->
-        <!-- Highlights -->
-<div id="highlights" class="hidden">
-    <h3 class="form-title">Highlights</h3>
-    <div id="tour_highlights_container">
-        <?php
-        // Decode the existing highlights if available
-        $tour_highlights = !empty($tour_highlights) ? json_decode($tour_highlights, true) : [];
-
-        if (!empty($tour_highlights)) {
-            foreach ($tour_highlights as $index => $highlight) {
-                ?>
-                <div class="form-group highlight-item">
-                    <label for="tour_highlights_<?php echo $index; ?>">Highlight</label>
-                    <input type="text" name="tour_highlights[]" id="tour_highlights_<?php echo $index; ?>"
-                        class="form-control" value="<?php echo esc_attr($highlight); ?>" />
-                    <button type="button" class="remove-highlight form-button">Remove</button>
-                </div>
-                <?php
-            }
-        } else {
-            ?>
-            <div class="form-group highlight-item">
-                <label for="tour_highlights_0">Highlight</label>
-                <input type="text" name="tour_highlights[]" id="tour_highlights_0" class="form-control" />
-                <button type="button" class="remove-highlight form-button">Remove</button>
-            </div>
-            <?php
-        }
-        ?>
-    </div>
-    <button type="button" id="add_highlight" class="form-button">Add Highlight</button>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Add highlight field
-        document.getElementById('add_highlight').addEventListener('click', function () {
-            const container = document.getElementById('tour_highlights_container');
-            const count = container.querySelectorAll('.highlight-item').length;
-            const newHighlight = document.createElement('div');
-            newHighlight.classList.add('form-group', 'highlight-item');
-            newHighlight.innerHTML = `
-                <label for="tour_highlights_${count}">Highlight</label>
-                <input type="text" name="tour_highlights[]" id="tour_highlights_${count}" class="form-control" />
-                <button type="button" class="remove-highlight form-button">Remove</button>
-            `;
-            container.appendChild(newHighlight);
-            attachRemoveEvents(); // Reattach events
-        });
-
-        // Attach remove events
-        function attachRemoveEvents() {
-            document.querySelectorAll('.remove-highlight').forEach(button => {
-                button.addEventListener('click', function () {
-                    this.parentElement.remove();
-                });
-            });
-        }
-
-        attachRemoveEvents(); // Initial attachment
-    });
-</script>
-
+        </div>
 
         <!--Itinerary -->
         <div id="itinerary" class="hidden">
@@ -404,15 +341,10 @@ function save_tour_meta($post_id) {
         update_post_meta($post_id, '_tour_availability', sanitize_text_field($_POST['tour_availability']));
     }
 
-    // if (isset($_POST['tour_highlights'])) {
-    //     update_post_meta($post_id, '_tour_highlights', sanitize_text_field($_POST['tour_highlights']));
-    // }
-
     if (isset($_POST['tour_highlights'])) {
-        $highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
-        update_post_meta($post_id, '_tour_highlights', json_encode($highlights));
+        update_post_meta($post_id, '_tour_highlights', sanitize_text_field($_POST['tour_highlights']));
     }
-    
+
     // Save Focus Keyword
     if (isset($_POST['tour_highlights'])) {
         update_post_meta($post_id, '_tour_highlights', sanitize_text_field($_POST['tour_highlights']));
