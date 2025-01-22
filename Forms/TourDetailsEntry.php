@@ -93,31 +93,33 @@ function display_tour_meta_box($post) {
             </form>
         </div> -->
         <!-- Highlights -->
-        <div id="highlights-container">
-    <?php
-    $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
-    if (!empty($tour_highlights) && is_array($tour_highlights)) {
-        foreach ($tour_highlights as $highlight) {
+<div id="highlights" class="hidden">
+    <h3 class="form-title">Highlights</h3>
+    <div id="highlights-container">
+        <?php
+        $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
+        if (!empty($tour_highlights) && is_array($tour_highlights)) {
+            foreach ($tour_highlights as $key => $highlight) {
+                ?>
+                <div class="highlight-item">
+                    <input type="text" name="tour_highlights[]" class="form-control highlight-input" 
+                        value="<?php echo esc_attr($highlight); ?>" placeholder="Enter a highlight">
+                    <button type="button" class="remove-highlight-button form-button">Remove</button>
+                </div>
+                <?php
+            }
+        } else {
             ?>
             <div class="highlight-item">
-                <input type="text" name="tour_highlights[]" class="form-control highlight-input" 
-                    value="<?php echo esc_attr($highlight); ?>" placeholder="Enter a highlight">
+                <input type="text" name="tour_highlights[]" class="form-control highlight-input" placeholder="Enter a highlight">
                 <button type="button" class="remove-highlight-button form-button">Remove</button>
             </div>
             <?php
         }
-    } else {
-        // If no highlights exist, display one empty input field
         ?>
-        <div class="highlight-item">
-            <input type="text" name="tour_highlights[]" class="form-control highlight-input" placeholder="Enter a highlight">
-            <button type="button" class="remove-highlight-button form-button">Remove</button>
-        </div>
-        <?php
-    }
-    ?>
+    </div>
+    <button type="button" id="add-highlight-button" class="form-button">Add Highlight</button>
 </div>
-
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const highlightsContainer = document.getElementById('highlights-container');
