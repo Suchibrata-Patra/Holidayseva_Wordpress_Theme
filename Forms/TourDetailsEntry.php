@@ -1,5 +1,5 @@
 <?php
-function display_tour_meta_box($post) {
+    function display_tour_meta_box($post) {
     // Retrieve existing custom fields values
     $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
     $tour_name = get_post_meta($post->ID, '_tour_name', true);
@@ -9,10 +9,10 @@ function display_tour_meta_box($post) {
     $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
-
     $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
     var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
-    ?>
+?>
+
 <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
@@ -408,12 +408,13 @@ function save_tour_meta($post_id) {
     // if (isset($_POST['tour_highlights'])) {
     //     update_post_meta($post_id, '_tour_highlights', sanitize_text_field($_POST['tour_highlights']));
     // }
-    if (isset($_POST['tour_highlights'])) {
-        $highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights'])); // Remove empty fields
+    if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
+        $highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights'])); // Sanitize each highlight and remove empty ones
         update_post_meta($post_id, '_tour_highlights', $highlights);
     } else {
         delete_post_meta($post_id, '_tour_highlights'); // Remove meta field if no highlights are present
     }
+    
     
     // Save Focus Keyword
     if (isset($_POST['tour_highlights'])) {
