@@ -344,19 +344,12 @@ function save_tour_meta($post_id) {
     if (isset($_POST['tour_availability'])) {
         update_post_meta($post_id, '_tour_availability', sanitize_text_field($_POST['tour_availability']));
     }
-
-  if (isset($_POST['tour_highlights'])) {
-    // Sanitize each highlight in the array
-    $sanitized_highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
-    
-    // Update the post meta with the sanitized array
-    update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
-}
-
-    
-    // Save Focus Keyword
     if (isset($_POST['tour_highlights'])) {
-        update_post_meta($post_id, '_tour_highlights', sanitize_text_field($_POST['tour_highlights']));
+        // Sanitize each highlight in the array
+        $sanitized_highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
+        
+        // Update the post meta with the sanitized array
+        update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
     }
     
 }
