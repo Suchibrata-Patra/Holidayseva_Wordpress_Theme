@@ -10,7 +10,9 @@ function display_tour_meta_box($post) {
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
     $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
-    echo '<strong> Debug Info</strong>';
+
+    $itinerary = get_post_meta($post->ID, '_itinerary', true);
+
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
     var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
 ?>
@@ -128,6 +130,20 @@ function display_tour_meta_box($post) {
                 </div>
             </form>
         </div>
+
+        <div id="Reviews">
+<h3 class="form-title">Reviews</h3>
+        <?php for ($i = 1; $i <= 5; $i++) : ?>
+            <div class="form-group">
+                    <label for="reviews_<?php echo $i; ?>">Review Item <?php echo $i; ?></label>
+                    <input type="text" 
+                           name="reviews[]" 
+                           id="reviews_<?php echo $i; ?>" 
+                           class="form-control" 
+                           value="<?php echo isset($reviews[$i - 1]) ? esc_attr($reviews[$i - 1]) : ''; ?>" />
+                </div>
+        <?php endfor; ?>
+</div>
         <!-- Frequently Asked Questions -->
         <div id="frequently_asked_questions" class="hidden">
             <h3 class="form-title">Frequently Asked Questions</h3>
@@ -373,15 +389,27 @@ function save_tour_meta($post_id) {
 
 
     // Saving the POsts for the Tour Itinery
-    if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
+    if (isset($_POST['itin']) && is_array($_POST['itinerary'])) {
         // Sanitize each highlight
-        $sanitized_highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
+        $sanitized_highlights = array_map('sanitize_text_field', $_POST['itinerary']);
         
         // Save as post meta
-        update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
+        update_post_meta($post_id, '_itinerary', $sanitized_highlights);
     } else {
         // If highlights are empty, delete the meta to avoid clutter
-        delete_post_meta($post_id, '_tour_highlights');
+        delete_post_meta($post_id, '_itinerary');
+    }
+
+    // Saving the Reiews
+    if (isset($_POST['reviews']) && is_array($_POST['review'])) {
+        // Sanitize each highlight
+        $sanitized_highlights = array_map('sanitize_text_field', $_POST['itinerary']);
+        
+        // Save as post meta
+        update_post_meta($post_id, '_reviews', $sanitized_highlights);
+    } else {
+        // If highlights are empty, delete the meta to avoid clutter
+        delete_post_meta($post_id, '_itinerary');
     }
 
 }
