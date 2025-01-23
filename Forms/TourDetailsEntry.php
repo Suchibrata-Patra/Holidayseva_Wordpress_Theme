@@ -13,6 +13,7 @@ function display_tour_meta_box($post) {
 
     $itinerary = get_post_meta($post->ID, '_itinerary', true);
     $reviews = get_post_meta($post->ID, '_reviews', true);
+    $included = get_post_meta($post->ID, '_included', true);
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
     var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
@@ -118,7 +119,7 @@ function display_tour_meta_box($post) {
         <?php endfor; ?> 
 </div>
         <!--Reviews -->
-        <div id="reviews" class="hidden">
+        <!-- <div id="reviews" class="hidden">
             <h3 class="form-title">Reviews</h3>
             
             <div class="form-group">
@@ -127,7 +128,7 @@ function display_tour_meta_box($post) {
                         value="<?php echo esc_attr($tour_cover_images); ?>" />
                     <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
                 </div>
-        </div>
+        </div> -->
 
         <div id="Reviews">
 <h3 class="form-title">Reviews</h3>
@@ -142,6 +143,23 @@ function display_tour_meta_box($post) {
                 </div>
         <?php endfor; ?>
 </div>
+        <!-- Included -->
+  
+        <div id="included">
+<h3 class="form-title">Included</h3>
+        <?php for ($i = 1; $i <= 5; $i++) : ?>
+            <div class="form-group">
+                    <label for="included_<?php echo $i; ?>">Review Item <?php echo $i; ?></label>
+                    <input type="text" 
+                           name="included[]" 
+                           id="included_<?php echo $i; ?>" 
+                           class="form-control" 
+                           value="<?php echo isset($included[$i - 1]) ? esc_attr($included[$i - 1]) : ''; ?>" />
+                </div>
+        <?php endfor; ?>
+</div>
+
+
         <!-- Frequently Asked Questions -->
         <div id="frequently_asked_questions" class="hidden">
             <h3 class="form-title">Frequently Asked Questions</h3>
@@ -398,17 +416,21 @@ function save_tour_meta($post_id) {
         delete_post_meta($post_id, '_itinerary');
     }
 
-    // Saving the Reiews
-    if (isset($_POST['reviews']) && is_array($_POST['review'])) {
+    // Saving The Included
+    if (isset($_POST['included']) && is_array($_POST['included'])) {
         // Sanitize each highlight
-        $sanitized_highlights = array_map('sanitize_text_field', $_POST['itinerary']);
+        $sanitized_highlights = array_map('sanitize_text_field', $_POST['included']);
         
         // Save as post meta
-        update_post_meta($post_id, '_reviews', $sanitized_highlights);
+        update_post_meta($post_id, '_included', $sanitized_highlights);
     } else {
         // If highlights are empty, delete the meta to avoid clutter
-        delete_post_meta($post_id, '_itinerary');
+        delete_post_meta($post_id, '_included');
     }
+
+
+
+
 
 }
 
