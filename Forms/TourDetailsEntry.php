@@ -89,6 +89,7 @@ function display_tour_meta_box($post) {
 
         <!-- Highlights -->
        <!-- Highlights -->
+       <div class="highlights">
        <div id="highlights">
 <h3 class="form-title">Highlights</h3>
         <?php for ($i = 1; $i <= 20; $i++) : ?>
@@ -102,11 +103,13 @@ function display_tour_meta_box($post) {
                 </div>
         <?php endfor; ?>
 </div>
+       </div>
 
 
 
         <!--Itinerary -->
-        <div id="itinerary">
+<div class="itinerary">
+<div id="itinerary">
 <h3 class="form-title">itinerary</h3>
         <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
@@ -118,6 +121,7 @@ function display_tour_meta_box($post) {
                            value="<?php echo isset($itinerary[$i - 1]) ? esc_attr($itinerary[$i - 1]) : ''; ?>" />
                 </div>
         <?php endfor; ?>
+</div>
 </div>
         <!--Reviews -->
         <div id="reviews" class="hidden">
