@@ -90,7 +90,7 @@ function display_tour_meta_box($post) {
         <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
                 <label for="tour_highlight_<?php echo $i; ?>">Highlight <?php echo $i; ?></label>
-                <input type="text" name="tour_highlights[]" id="tour_highlight_<?php echo $i; ?>" class="form-control" value="<?php echo isset($tour_highlights[$i - 1]) ? esc_attr($tour_highlights[$i - 1]) : ''; ?>" />
+                <input type="text" name="tour_highlights[]" id="tour_highlight_<?php echo $i; ?>" class="form-control" value="<?php echo isset($tour_highlights[$i - 1]) ? esc_attr($tour_highlights[$i - 1]) : 'Value Not Found'; ?>" />
             </div>
         <?php endfor; ?>
     </form>
@@ -358,6 +358,7 @@ function save_tour_meta($post_id) {
     }
 
 }
+
 
 add_action('save_post', 'save_tour_meta');
 ?>
