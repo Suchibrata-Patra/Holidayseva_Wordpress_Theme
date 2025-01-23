@@ -1,5 +1,5 @@
 <?php
-    function display_tour_meta_box($post) {
+function display_tour_meta_box($post) {
     // Retrieve existing custom fields values
     $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
     $tour_name = get_post_meta($post->ID, '_tour_name', true);
@@ -12,7 +12,6 @@
     $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
     var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
 ?>
-
 <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
@@ -84,77 +83,18 @@
         </div>
 
         <!-- Highlights -->
-        <!-- <div id="highlights" class="hidden">
-            <h3 class="form-title">Highlights</h3>
-            <div class="form-group">
-                    <label for="tour_highlights">Tour Highlights</label>
-                    <input type="text" name="tour_highlights" id="tour_highlights" class="form-control" value="<?php echo esc_attr($tour_highlights); ?>" />
-                </div>
-            </form>
-        </div> -->
-        <!-- Highlights -->
-<!-- Highlights -->
-<div id="highlights" class="hidden">
+       <!-- Highlights -->
+<div id="highlights">
     <h3 class="form-title">Highlights</h3>
-    <div id="highlights-container">
-        <?php
-        $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
-
-        // Check if highlights exist and are an array
-        if (!empty($tour_highlights) && is_array($tour_highlights)) {
-            foreach ($tour_highlights as $highlight) {
-                ?>
-                <div class="highlight-item">
-                    <input type="text" name="tour_highlights[]" class="form-control highlight-input" 
-                           value="<?php echo esc_attr($highlight); ?>" placeholder="Enter a highlight">
-                    <button type="button" class="remove-highlight-button form-button">Remove</button>
-                </div>
-                <?php
-            }
-        } else {
-            // If no highlights exist, display one empty input field
-            ?>
-            <div class="highlight-item">
-                <input type="text" name="tour_highlights[]" class="form-control highlight-input" placeholder="Enter a highlight">
-                <button type="button" class="remove-highlight-button form-button">Remove</button>
+    <form>
+        <?php for ($i = 1; $i <= 20; $i++) : ?>
+            <div class="form-group">
+                <label for="tour_highlight_<?php echo $i; ?>">Highlight <?php echo $i; ?></label>
+                <input type="text" name="tour_highlights[]" id="tour_highlight_<?php echo $i; ?>" class="form-control" value="<?php echo isset($tour_highlights[$i - 1]) ? esc_attr($tour_highlights[$i - 1]) : ''; ?>" />
             </div>
-            <?php
-        }
-        ?>
-    </div>
-    <button type="button" id="add-highlight-button" class="form-button">Add Highlight</button>
+        <?php endfor; ?>
+    </form>
 </div>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const container = document.getElementById('highlights-container');
-    const addButton = document.getElementById('add-highlight-button');
-
-    // Add new highlight input field
-    addButton.addEventListener('click', function () {
-        const newField = document.createElement('div');
-        newField.classList.add('highlight-item');
-        newField.innerHTML = `
-            <input type="text" name="tour_highlights[]" class="form-control highlight-input" placeholder="Enter a highlight">
-            <button type="button" class="remove-highlight-button form-button">Remove</button>
-        `;
-        container.appendChild(newField);
-
-        // Add event listener to the new remove button
-        newField.querySelector('.remove-highlight-button').addEventListener('click', function () {
-            newField.remove();
-        });
-    });
-
-    // Remove highlight input field
-    container.addEventListener('click', function (event) {
-        if (event.target.classList.contains('remove-highlight-button')) {
-            const highlightItem = event.target.closest('.highlight-item');
-            highlightItem.remove();
-        }
-    });
-});
-
-</script>
 
 
         <!--Itinerary -->
@@ -405,16 +345,14 @@ function save_tour_meta($post_id) {
         update_post_meta($post_id, '_tour_availability', sanitize_text_field($_POST['tour_availability']));
     }
 
-    // if (isset($_POST['tour_highlights'])) {
-    //     update_post_meta($post_id, '_tour_highlights', sanitize_text_field($_POST['tour_highlights']));
-    // }
-    if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
-        $highlights = array_filter(array_map('sanitize_text_field', $_POST['tour_highlights'])); // Sanitize each highlight and remove empty ones
-        update_post_meta($post_id, '_tour_highlights', $highlights);
-    } else {
-        delete_post_meta($post_id, '_tour_highlights'); // Remove meta field if no highlights are present
-    }
+  if (isset($_POST['tour_highlights'])) {
+    // Sanitize each highlight in the array
+    $sanitized_highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
     
+    // Update the post meta with the sanitized array
+    update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
+}
+
     
     // Save Focus Keyword
     if (isset($_POST['tour_highlights'])) {
