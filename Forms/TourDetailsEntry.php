@@ -9,7 +9,8 @@ function display_tour_meta_box($post) {
     $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
-    $tour_highlights = get_post_meta($post_id, '_tour_highlights', true);
+    $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
+    wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
     var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
 ?>
 <div class="container">
@@ -88,13 +89,13 @@ function display_tour_meta_box($post) {
 <h3 class="form-title">Highlights</h3>
         <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
-                <label for="tour_highlight_<?php echo $i; ?>">Highlight <?php echo $i; ?></label>
-                <input type="text" 
-                       name="tour_highlights[]" 
-                       id="tour_highlight_<?php echo $i; ?>" 
-                       class="form-control" 
-                       value="<?php echo isset($tour_highlights[$i - 1]) ? esc_attr($tour_highlights[$i - 1]) : ''; ?>" />
-            </div>
+                    <label for="tour_highlight_<?php echo $i; ?>">Highlight <?php echo $i; ?></label>
+                    <input type="text" 
+                           name="tour_highlights[]" 
+                           id="tour_highlight_<?php echo $i; ?>" 
+                           class="form-control" 
+                           value="<?php echo isset($tour_highlights[$i - 1]) ? esc_attr($tour_highlights[$i - 1]) : ''; ?>" />
+                </div>
         <?php endfor; ?>
 </div>
 
@@ -349,6 +350,14 @@ function save_tour_meta($post_id) {
     if (isset($_POST['tour_availability'])) {
         update_post_meta($post_id, '_tour_availability', sanitize_text_field($_POST['tour_availability']));
     }
+    if (isset($_POST['tour_highlights_nonce_field']) && !wp_verify_nonce($_POST['tour_highlights_nonce_field'], 'tour_highlights_nonce')) {
+        return $post_id; // Nonce is invalid, do not save
+    }
+
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+    if (!current_user_can('edit_post', $post_id)) return $post_id;
+    
+    // Check if tour_highlights is set and is an array
     if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
         // Sanitize each highlight
         $sanitized_highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
@@ -364,4 +373,9 @@ function save_tour_meta($post_id) {
 
 
 add_action('save_post', 'save_tour_meta');
+add_action('add_meta_boxes', 'add_tour_highlights_metabox');
+
+function add_tour_highlights_metabox() {
+    add_meta_box('tour_highlights', 'Tour Highlights', 'render_tour_highlights_form', 'tour', 'normal', 'default');
+}
 ?>
