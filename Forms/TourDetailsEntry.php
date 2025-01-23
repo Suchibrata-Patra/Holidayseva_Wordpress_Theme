@@ -103,17 +103,19 @@ function display_tour_meta_box($post) {
 
 
         <!--Itinerary -->
-        <div id="itinerary" class="hidden">
-            <h3 class="form-title">Itinerary</h3>
-            
+        <div id="itinerary">
+<h3 class="form-title">itinerary</h3>
+        <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
-                    <label for="tour_cover_images">Cover Images </label>
-                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                        value="<?php echo esc_attr($tour_cover_images); ?>" />
-                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
+                    <label for="itinerary_<?php echo $i; ?>">Highlight <?php echo $i; ?></label>
+                    <input type="text" 
+                           name="itinerary[]" 
+                           id="itinerary_<?php echo $i; ?>" 
+                           class="form-control" 
+                           value="<?php echo isset($itinerary[$i - 1]) ? esc_attr($itinerary[$i - 1]) : ''; ?>" />
                 </div>
-            </form>
-        </div>
+        <?php endfor; ?>
+</div>
         <!--Reviews -->
         <div id="reviews" class="hidden">
             <h3 class="form-title">Reviews</h3>
@@ -357,7 +359,20 @@ function save_tour_meta($post_id) {
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
     if (!current_user_can('edit_post', $post_id)) return $post_id;
     
-    // Check if tour_highlights is set and is an array
+    // Savig these for Tour ighlights
+    if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
+        // Sanitize each highlight
+        $sanitized_highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
+        
+        // Save as post meta
+        update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
+    } else {
+        // If highlights are empty, delete the meta to avoid clutter
+        delete_post_meta($post_id, '_tour_highlights');
+    }
+
+
+    // Saving the POsts for the Tour Itinery
     if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
         // Sanitize each highlight
         $sanitized_highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
