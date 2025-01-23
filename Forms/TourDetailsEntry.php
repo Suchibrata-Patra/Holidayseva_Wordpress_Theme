@@ -373,9 +373,5 @@ function save_tour_meta($post_id) {
 
 
 add_action('save_post', 'save_tour_meta');
-add_action('add_meta_boxes', 'add_tour_highlights_metabox');
 
-function add_tour_highlights_metabox() {
-    add_meta_box('tour_highlights', 'Tour Highlights', 'render_tour_highlights_form', 'tour', 'normal', 'default');
-}
 ?>
