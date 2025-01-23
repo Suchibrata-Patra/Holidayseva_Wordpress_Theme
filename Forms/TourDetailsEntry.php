@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="<?php echo get_template_directory();?>/Assets/TourDetailsEntry.css">
-<?php echo get_template_directory(); ?>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/TourDetailsEntry.css">
 <?php
 function display_tour_meta_box($post) {
     // Retrieve existing custom fields values
