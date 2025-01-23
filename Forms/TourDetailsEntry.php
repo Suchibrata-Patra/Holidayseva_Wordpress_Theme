@@ -107,7 +107,7 @@ function display_tour_meta_box($post) {
 <h3 class="form-title">itinerary</h3>
         <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
-                    <label for="itinerary_<?php echo $i; ?>">Highlight <?php echo $i; ?></label>
+                    <label for="itinerary_<?php echo $i; ?>">Itinerary Item <?php echo $i; ?></label>
                     <input type="text" 
                            name="itinerary[]" 
                            id="itinerary_<?php echo $i; ?>" 
