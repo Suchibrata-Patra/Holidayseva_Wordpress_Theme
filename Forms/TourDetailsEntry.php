@@ -333,7 +333,6 @@ function save_tour_meta($post_id) {
     if (isset($_POST['tour_name'])) {
         update_post_meta($post_id, '_tour_name', sanitize_text_field($_POST['tour_name']));
     }
-
     // Save tour description (Visual Editor content)
     if (isset($_POST['tour_description'])) {
         update_post_meta($post_id, '_tour_description', wp_kses_post($_POST['tour_description'])); // Sanitize HTML
