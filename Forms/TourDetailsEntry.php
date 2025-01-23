@@ -115,7 +115,7 @@ function display_tour_meta_box($post) {
                            class="form-control" 
                            value="<?php echo isset($itinerary[$i - 1]) ? esc_attr($itinerary[$i - 1]) : ''; ?>" />
                 </div>
-        <?php endfor; ?>
+        <?php endfor; ?> 
 </div>
         <!--Reviews -->
         <div id="reviews" class="hidden">
