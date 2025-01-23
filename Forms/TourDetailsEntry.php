@@ -84,12 +84,9 @@ function display_tour_meta_box($post) {
     <div id="tour_cover_images_preview" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
 </div>
 
-            </form>
         </div>
 
         <!-- Highlights -->
-       <!-- Highlights -->
-       <div class="highlights">
        <div id="highlights">
 <h3 class="form-title">Highlights</h3>
         <?php for ($i = 1; $i <= 20; $i++) : ?>
@@ -103,13 +100,11 @@ function display_tour_meta_box($post) {
                 </div>
         <?php endfor; ?>
 </div>
-       </div>
 
 
 
         <!--Itinerary -->
-<div class="itinerary">
-<div id="itinerary">
+        <div id="itinerary">
 <h3 class="form-title">itinerary</h3>
         <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
@@ -122,7 +117,6 @@ function display_tour_meta_box($post) {
                 </div>
         <?php endfor; ?>
 </div>
-</div>
         <!--Reviews -->
         <div id="reviews" class="hidden">
             <h3 class="form-title">Reviews</h3>
@@ -133,7 +127,6 @@ function display_tour_meta_box($post) {
                         value="<?php echo esc_attr($tour_cover_images); ?>" />
                     <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
                 </div>
-            </form>
         </div>
 
         <div id="Reviews">
