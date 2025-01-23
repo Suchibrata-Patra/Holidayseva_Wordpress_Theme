@@ -9,7 +9,7 @@ function display_tour_meta_box($post) {
     $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
-    $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
+    $tour_highlights = get_post_meta($post_id, '_tour_highlights', true);
     var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
 ?>
 <div class="container">
@@ -344,14 +344,13 @@ function save_tour_meta($post_id) {
     if (isset($_POST['tour_availability'])) {
         update_post_meta($post_id, '_tour_availability', sanitize_text_field($_POST['tour_availability']));
     }
-    if (isset($_POST['tour_highlights'])) {
+    if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
         // Sanitize each highlight in the array
         $sanitized_highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
         
         // Update the post meta with the sanitized array
         update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
     }
-    
 }
 
 add_action('save_post', 'save_tour_meta');
