@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?php echo get_template_directory();?>/Assets/TourDetailsEntry.css">
 <?php
 function display_tour_meta_box($post) {
     // Retrieve existing custom fields values
@@ -26,6 +27,7 @@ function display_tour_meta_box($post) {
         <a href="#" class="tab-link" data-target="itinerary">Itinerary</a>
         <a href="#" class="tab-link" data-target="reviews">Reviews</a>
         <a href="#" class="tab-link" data-target="frequently_asked_questions">Frequenly Asked Questions</a>
+        <a href="#" class="tab-link" data-target="pricing">Reviews</a>
     </div>
 
     <!-- Main Content -->
@@ -119,17 +121,6 @@ function display_tour_meta_box($post) {
         <?php endfor; ?> 
 </div>
         <!--Reviews -->
-        <!-- <div id="reviews" class="hidden">
-            <h3 class="form-title">Reviews</h3>
-            
-            <div class="form-group">
-                    <label for="tour_cover_images">Cover Images </label>
-                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                        value="<?php echo esc_attr($tour_cover_images); ?>" />
-                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
-                </div>
-        </div> -->
-
         <div id="Reviews">
 <h3 class="form-title">Reviews</h3>
         <?php for ($i = 1; $i <= 5; $i++) : ?>
@@ -175,110 +166,6 @@ function display_tour_meta_box($post) {
     </div>
 </div>
 
-<style>
-    /* Layout Styling */
-    .container {
-        display: flex;
-        min-height: 100vh;
-        background-color:rgb(255, 255, 255);
-    }
-
-    /* Sidebar Styling */
-    .sidebar {
-        width: 20%;
-        background-color: #16404D;
-        color: white;
-        padding: 10px;
-        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    }
-
-    .sidebar a {
-        display: block;
-        padding: 6px 15px;
-        color: white;
-        text-decoration: none;
-        margin-bottom: 5px;
-        border-radius: 0px;
-        transition: background-color 0.3s ease;
-    }
-
-    .sidebar a.active {
-        background-color: #DDA853;
-    }
-
-    .sidebar a:hover {
-        background-color:rgb(210, 159, 77);
-    }
-
-    /* Main Content Styling */
-    .main-content {
-        flex-grow: 1;
-        padding: 10px;
-    }
-
-    .form-title {
-        margin-bottom: 20px;
-        color: #34495e;
-        font-size: 1.5em;
-        font-weight: bold;
-    }
-
-    /* Form Styling */
-    .styled-form {
-        background-color: white;
-        padding: 10px;
-        border-radius:0px;
-        /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 2px;
-        font-weight: 600;
-        color:rgb(0, 0, 0);
-    }
-
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 7px;
-        border: 1px solid #bdc3c7;
-        border-radius: 0px;
-        font-size: 1rem;
-        color: #2c3e50;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-        border-color: #3498db;
-        outline: none;
-        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
-    }
-
-    .form-button {
-        margin-top: 10px;
-        padding: 10px 20px;
-        background-color: #3498db;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
-    }
-
-    .form-button:hover {
-        background-color: #2980b9;
-    }
-
-    .hidden {
-        display: none;
-    }
-</style>
 
 <script>
     document.querySelectorAll('.tab-link').forEach(link => {
