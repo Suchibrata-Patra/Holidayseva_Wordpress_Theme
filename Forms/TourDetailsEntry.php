@@ -10,7 +10,7 @@ function display_tour_meta_box($post) {
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
     $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
-    echo '<strong> Debug Info</strong>'
+    echo '<strong> Debug Info</strong>';
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
     var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
 ?>
