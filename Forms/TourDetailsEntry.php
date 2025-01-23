@@ -12,6 +12,7 @@ function display_tour_meta_box($post) {
     $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
 
     $itinerary = get_post_meta($post->ID, '_itinerary', true);
+    $reviews = get_post_meta($post->ID, '_reviews', true);
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
     var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
@@ -389,7 +390,7 @@ function save_tour_meta($post_id) {
 
 
     // Saving the POsts for the Tour Itinery
-    if (isset($_POST['itin']) && is_array($_POST['itinerary'])) {
+    if (isset($_POST['itinerary']) && is_array($_POST['itinerary'])) {
         // Sanitize each highlight
         $sanitized_highlights = array_map('sanitize_text_field', $_POST['itinerary']);
         
