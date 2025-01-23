@@ -311,6 +311,8 @@ function display_tour_meta_box($post) {
 // Save custom fields values when the post is saved
 function save_tour_meta($post_id) {
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+    if (!current_user_can('edit_post', $post_id)) return $post_id;
+
 
     // Save custom fields values
     if (isset($_POST['tour_cover_images'])) {
@@ -345,12 +347,16 @@ function save_tour_meta($post_id) {
         update_post_meta($post_id, '_tour_availability', sanitize_text_field($_POST['tour_availability']));
     }
     if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
-        // Sanitize each highlight in the array
+        // Sanitize each highlight
         $sanitized_highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
         
-        // Update the post meta with the sanitized array
+        // Save as post meta
         update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
+    } else {
+        // If highlights are empty, delete the meta to avoid clutter
+        delete_post_meta($post_id, '_tour_highlights');
     }
+
 }
 
 add_action('save_post', 'save_tour_meta');
