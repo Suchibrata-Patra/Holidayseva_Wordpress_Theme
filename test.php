@@ -1,1 +1,11 @@
-Lorem ipsum dolor sit amet consectetur adipisicing elit. In delectus commodi quaerat quae rem? Quia dolore consequuntur quae rem excepturi vel, ipsa repellendus itaque architecto? Ad, repudiandae quos dolore eaque praesentium dolorem nihil facilis assumenda necessitatibus numquam recusandae. Dolorem impedit quisquam vero, est ex aspernatur possimus ad quos deserunt et deleniti labore debitis, atque eos quibusdam dolore natus aut assumenda qui suscipit iure, quasi modi sit. Dolor, numquam molestiae eveniet, nam ea minus aut amet, corporis aperiam ullam quibusdam. Quas corrupti eos quos dolore ab assumenda rem numquam repudiandae pariatur, sint qui beatae necessitatibus quisquam ut, cupiditate corporis voluptate nam? Libero rerum beatae praesentium eligendi, dolorem magni debitis. Et similique aliquam vitae quibusdam ratione officiis sequi, exercitationem inventore deleniti quae blanditiis delectus nulla non ipsum reprehenderit neque reiciendis! Autem, omnis possimus recusandae atque unde eaque repellat alias vero natus nisi hic, quo iure similique. Aperiam, ipsa nisi. Inventore minus omnis molestiae non temporibus ad. Fugit facere voluptate aliquam sit sed fugiat consequatur dignissimos minima asperiores ea corrupti quo ex pariatur fuga, commodi adipisci? Modi tempore voluptas delectus nesciunt iure tenetur odit iste, sint itaque nobis? Quos, fugiat labore eius, alias dolore modi omnis unde laborum velit ducimus qui. Sequi, saepe?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
