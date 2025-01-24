@@ -154,7 +154,8 @@ function display_tour_meta_box($post) {
 <!-- Recommendation ENGINE -->
 <div id="recommendation" class="hidden">
 <h3 class="form-title">Recommended Tours</h3>
-<span>Choose the Tour Pages [Maximum - 10, Min - 4] Such that the returning users can get to know about our top selling tour packages</span>
+<span>Choose the Tour Pages [Maximum - 10, Min - 4] Such that the returning users can get to know about our top selling tour packages...</span>
+<span><h4>under Development</h4></span>
 </div>
 
 
