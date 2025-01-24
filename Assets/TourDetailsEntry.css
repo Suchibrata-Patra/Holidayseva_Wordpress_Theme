@@ -1,20 +1,24 @@
 :root{
  --holidayseva_black:rgb(0,0,0);
  --holidayseva-white:rgb(255,255,255);
+ --holidayseva_grey_color:#bdc3c7;
  --holidayseva_grey:rgb(120, 120, 120);
  --holidayseva_blue_primary:#2980b9;
  --holidayseva_blue_light:#2980b9;
+ --holidayseva_blue_darker:#34495e;
  --holidayseva_seagreen:#16404d;
  --holidayseva_yellow:#dda853;
  --holidayseva_yellow_pale:#DDA853;
-
+}
+:root{
+    --holidayseva_button_padding:10px;
 }
 
     /* Layout Styling */
     .container {
         display: flex;
         min-height: 100vh;
-        background-color:rgb(255, 255, 255);
+        background-color:var(--holidayseva-white)
     }
 
     /* Sidebar Styling */
@@ -52,7 +56,7 @@
 
     .form-title {
         margin-bottom: 20px;
-        color: #34495e;
+        color:var(--holidayseva_blue_darker);
         font-size: 1.5em;
         font-weight: bold;
     }
@@ -79,7 +83,7 @@
     .form-group textarea {
         width: 100%;
         padding: 7px;
-        border: 1px solid #bdc3c7;
+        border: 1px solid var(--holidayseva_grey_color);
         border-radius: 0px;
         font-size: 1rem;
         color: #2c3e50;
@@ -154,7 +158,7 @@
 
     .form-title {
         margin-bottom: 20px;
-        color: #34495e;
+        color: var(--holidayseva_blue_darker);
         font-size: 1.5em;
         font-weight: bold;
     }
@@ -182,7 +186,7 @@
     .form-group textarea {
         width: 100%;
         padding: 7px;
-        border: 1px solid #bdc3c7;
+        border: 1px solid var(--holidayseva_grey_color);
         border-radius: 0px;
         font-size: 1rem;
         color: #2c3e50;
