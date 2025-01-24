@@ -165,7 +165,7 @@ function display_tour_meta_box($post) {
 
 
 <!-- Recommendation ENGINE -->
-<div id="recommendation">
+<div id="recommendation" class="hidden">
 <h3 class="form-title">Recommendation</h3>
 </div>
 
