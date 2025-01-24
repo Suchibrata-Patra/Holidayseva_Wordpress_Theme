@@ -29,7 +29,7 @@ function display_tour_meta_box($post) {
         <a href="#" class="tab-link" data-target="pricing">Pricing (New)</a>
         <a href="#" class="tab-link" data-target="reviews">Reviews</a>
         <a href="#" class="tab-link" data-target="frequently_asked_questions">FAQ</a>
-        <span> <hr> Mau Tracking Algorithm <hr> </span>
+        <span> <hr> Dynamic Contents <hr> </span>
         <a href="#" class="tab-link" data-target="recommendation">Recommendation ENGINE</a>
     </div>
 
