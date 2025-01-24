@@ -10,8 +10,8 @@ function display_tour_meta_box($post) {
     $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
-    $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
 
+    $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
     $itinerary = get_post_meta($post->ID, '_itinerary', true);
     $reviews = get_post_meta($post->ID, '_reviews', true);
     $included = get_post_meta($post->ID, '_included', true);
@@ -267,49 +267,41 @@ function display_tour_meta_box($post) {
 
 // Save custom fields values when the post is saved
 function save_tour_meta($post_id) {
+    // Check for autosave or invalid permissions
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
     if (!current_user_can('edit_post', $post_id)) return $post_id;
 
-
-    // Save custom fields values
-    if (isset($_POST['tour_cover_images'])) {
-        update_post_meta($post_id, '_tour_cover_images', explode(',', sanitize_text_field($_POST['tour_cover_images'])));
-    }
-    if (isset($_POST['tour_name'])) {
-        // update_post_meta($post_id, '_tour_name', sanitize_text_field($_POST['tour_name']));
-    }
-    if (isset($_POST['tour_details'])) {
-        // update_post_meta($post_id, '_tour_details', sanitize_textarea_field($_POST['tour_details']));
+    // Verify nonce
+    if (!isset($_POST['tour_meta_nonce']) || !wp_verify_nonce($_POST['tour_meta_nonce'], 'tour_meta_nonce_action')) {
+        return $post_id;
     }
 
+    // Save individual fields
     if (isset($_POST['tour_name'])) {
         update_post_meta($post_id, '_tour_name', sanitize_text_field($_POST['tour_name']));
     }
-    // Save tour description (Visual Editor content)
+
     if (isset($_POST['tour_description'])) {
-        update_post_meta($post_id, '_tour_description', wp_kses_post($_POST['tour_description'])); // Sanitize HTML
+        update_post_meta($post_id, '_tour_description', wp_kses_post($_POST['tour_description']));
     }
 
     if (isset($_POST['tour_location'])) {
         update_post_meta($post_id, '_tour_location', sanitize_text_field($_POST['tour_location']));
     }
+
     if (isset($_POST['tour_duration'])) {
         update_post_meta($post_id, '_tour_duration', sanitize_text_field($_POST['tour_duration']));
     }
+
     if (isset($_POST['tour_price'])) {
         update_post_meta($post_id, '_tour_price', floatval($_POST['tour_price']));
     }
+
     if (isset($_POST['tour_availability'])) {
         update_post_meta($post_id, '_tour_availability', sanitize_text_field($_POST['tour_availability']));
     }
-    if (isset($_POST['tour_highlights_nonce_field']) && !wp_verify_nonce($_POST['tour_highlights_nonce_field'], 'tour_highlights_nonce')) {
-        return $post_id; // Nonce is invalid, do not save
-    }
 
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
-    if (!current_user_can('edit_post', $post_id)) return $post_id;
-    
-    // Highlights
+    // Save array fields
     if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
         $sanitized_highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
         update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
@@ -317,8 +309,6 @@ function save_tour_meta($post_id) {
         delete_post_meta($post_id, '_tour_highlights');
     }
 
-
-    // Itinerary
     if (isset($_POST['itinerary']) && is_array($_POST['itinerary'])) {
         $sanitized_itinerary = array_map('sanitize_text_field', $_POST['itinerary']);
         update_post_meta($post_id, '_itinerary', $sanitized_itinerary);
@@ -326,7 +316,6 @@ function save_tour_meta($post_id) {
         delete_post_meta($post_id, '_itinerary');
     }
 
-    // Included
     if (isset($_POST['included']) && is_array($_POST['included'])) {
         $sanitized_included = array_map('sanitize_text_field', $_POST['included']);
         update_post_meta($post_id, '_included', $sanitized_included);
@@ -334,7 +323,6 @@ function save_tour_meta($post_id) {
         delete_post_meta($post_id, '_included');
     }
 
-    // Excluded
     if (isset($_POST['excluded']) && is_array($_POST['excluded'])) {
         $sanitized_excluded = array_map('sanitize_text_field', $_POST['excluded']);
         update_post_meta($post_id, '_excluded', $sanitized_excluded);
@@ -342,19 +330,14 @@ function save_tour_meta($post_id) {
         delete_post_meta($post_id, '_excluded');
     }
 
-    // Saving The Reviews
     if (isset($_POST['reviews']) && is_array($_POST['reviews'])) {
         $sanitized_reviews = array_map('sanitize_text_field', $_POST['reviews']);
         update_post_meta($post_id, '_reviews', $sanitized_reviews);
     } else {
         delete_post_meta($post_id, '_reviews');
     }
-
-
-
-
-
 }
+
 
 
 add_action('save_post', 'save_tour_meta');
