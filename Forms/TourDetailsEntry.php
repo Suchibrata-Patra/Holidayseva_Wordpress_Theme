@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/TourDetailsEntry.css">
 <?php
 function display_tour_meta_box($post) {
     // Retrieve existing custom fields values
@@ -10,13 +9,10 @@ function display_tour_meta_box($post) {
     $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
-    
     $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
 
     $itinerary = get_post_meta($post->ID, '_itinerary', true);
     $reviews = get_post_meta($post->ID, '_reviews', true);
-    $included = get_post_meta($post->ID, '_included', true);
-    $excluded = get_post_meta($post->ID, '_excluded', true);
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
     var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
@@ -27,11 +23,8 @@ function display_tour_meta_box($post) {
         <a href="#" class="tab-link active" data-target="basic_info">Basic Info</a>
         <a href="#" class="tab-link" data-target="highlights">Highlights</a>
         <a href="#" class="tab-link" data-target="itinerary">Itinerary</a>
-        <a href="#" class="tab-link" data-target="included">Included</a>
-        <a href="#" class="tab-link" data-target="excluded">Excluded</a>
         <a href="#" class="tab-link" data-target="reviews">Reviews</a>
         <a href="#" class="tab-link" data-target="frequently_asked_questions">Frequenly Asked Questions</a>
-        <a href="#" class="tab-link" data-target="pricing">Reviews</a>
     </div>
 
     <!-- Main Content -->
@@ -122,64 +115,33 @@ function display_tour_meta_box($post) {
                            class="form-control" 
                            value="<?php echo isset($itinerary[$i - 1]) ? esc_attr($itinerary[$i - 1]) : ''; ?>" />
                 </div>
-        <?php endfor; ?> 
-</div>
-        <!-- Included -->
-  
-        <div id="included">
-<h3 class="form-title">Included</h3>
-        <?php for ($i = 1; $i <= 5; $i++) : ?>
-            <div class="form-group">
-                    <label for="included_<?php echo $i; ?>">Including Item <?php echo $i; ?></label>
-                    <input type="text" 
-                           name="included[]" 
-                           id="included_<?php echo $i; ?>" 
-                           class="form-control" 
-                           value="<?php echo isset($included[$i - 1]) ? esc_attr($included[$i - 1]) : ''; ?>" />
-                </div>
         <?php endfor; ?>
 </div>
-
-        <!-- Excluded -->
-  
-        <div id="excluded">
-<h3 class="form-title">Excluded</h3>
-        <?php for ($i = 1; $i <= 5; $i++) : ?>
-            <div class="form-group">
-                    <label for="excluded_<?php echo $i; ?>">Excluding Item <?php echo $i; ?></label>
-                    <input type="text" 
-                           name="excluded[]" 
-                           id="excluded_<?php echo $i; ?>" 
-                           class="form-control" 
-                           value="<?php echo isset($excluded[$i - 1]) ? esc_attr($excluded[$i - 1]) : ''; ?>" />
-                </div>
-        <?php endfor; ?>
-</div>
-
-
-
-
-
-
-
-
-
         <!--Reviews -->
-        <div id="reviews">
-<h3 class="form-title">Reviews</h3>
-        <?php for ($i = 1; $i <= 20; $i++) : ?>
+        <div id="reviews" class="hidden">
+            <h3 class="form-title">Reviews</h3>
+            
             <div class="form-group">
-                    <label for="reviews_<?php echo $i; ?>">Reviews Item <?php echo $i; ?></label>
+                    <label for="tour_cover_images">Cover Images </label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                        value="<?php echo esc_attr($tour_cover_images); ?>" />
+                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
+                </div>
+        </div>
+
+        <div id="Reviews">
+<h3 class="form-title">Reviews</h3>
+        <?php for ($i = 1; $i <= 5; $i++) : ?>
+            <div class="form-group">
+                    <label for="reviews_<?php echo $i; ?>">Review Item <?php echo $i; ?></label>
                     <input type="text" 
                            name="reviews[]" 
                            id="reviews_<?php echo $i; ?>" 
                            class="form-control" 
                            value="<?php echo isset($reviews[$i - 1]) ? esc_attr($reviews[$i - 1]) : ''; ?>" />
                 </div>
-        <?php endfor; ?> 
+        <?php endfor; ?>
 </div>
-
-
         <!-- Frequently Asked Questions -->
         <div id="frequently_asked_questions" class="hidden">
             <h3 class="form-title">Frequently Asked Questions</h3>
@@ -198,6 +160,110 @@ function display_tour_meta_box($post) {
 
 
 
+<style>
+    /* Layout Styling */
+    .container {
+        display: flex;
+        min-height: 100vh;
+        background-color:rgb(255, 255, 255);
+    }
+
+    /* Sidebar Styling */
+    .sidebar {
+        width: 20%;
+        background-color: #16404D;
+        color: white;
+        padding: 10px;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar a {
+        display: block;
+        padding: 6px 15px;
+        color: white;
+        text-decoration: none;
+        margin-bottom: 5px;
+        border-radius: 0px;
+        transition: background-color 0.3s ease;
+    }
+
+    .sidebar a.active {
+        background-color: #DDA853;
+    }
+
+    .sidebar a:hover {
+        background-color:rgb(210, 159, 77);
+    }
+
+    /* Main Content Styling */
+    .main-content {
+        flex-grow: 1;
+        padding: 10px;
+    }
+
+    .form-title {
+        margin-bottom: 20px;
+        color: #34495e;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    /* Form Styling */
+    .styled-form {
+        background-color: white;
+        padding: 10px;
+        border-radius:0px;
+        /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 2px;
+        font-weight: 600;
+        color:rgb(0, 0, 0);
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 7px;
+        border: 1px solid #bdc3c7;
+        border-radius: 0px;
+        font-size: 1rem;
+        color: #2c3e50;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: #3498db;
+        outline: none;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    }
+
+    .form-button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .form-button:hover {
+        background-color: #2980b9;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
 
 <script>
     document.querySelectorAll('.tab-link').forEach(link => {
@@ -307,53 +373,45 @@ function save_tour_meta($post_id) {
         return $post_id; // Nonce is invalid, do not save
     }
 
-    // if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
-    // if (!current_user_can('edit_post', $post_id)) return $post_id;
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+    if (!current_user_can('edit_post', $post_id)) return $post_id;
     
-    // Highlights
+    // Savig these for Tour ighlights
     if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
+        // Sanitize each highlight
         $sanitized_highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
+        
+        // Save as post meta
         update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
     } else {
+        // If highlights are empty, delete the meta to avoid clutter
         delete_post_meta($post_id, '_tour_highlights');
     }
 
 
-    // Itinerary
+    // Saving the POsts for the Tour Itinery
     if (isset($_POST['itinerary']) && is_array($_POST['itinerary'])) {
-        $sanitized_itinerary = array_map('sanitize_text_field', $_POST['itinerary']);
-        update_post_meta($post_id, '_itinerary', $sanitized_itinerary);
+        // Sanitize each highlight
+        $sanitized_highlights = array_map('sanitize_text_field', $_POST['itinerary']);
+        
+        // Save as post meta
+        update_post_meta($post_id, '_itinerary', $sanitized_highlights);
     } else {
+        // If highlights are empty, delete the meta to avoid clutter
         delete_post_meta($post_id, '_itinerary');
     }
 
-    // Included
-    if (isset($_POST['included']) && is_array($_POST['included'])) {
-        $sanitized_included = array_map('sanitize_text_field', $_POST['included']);
-        update_post_meta($post_id, '_included', $sanitized_included);
+    // Saving the Reiews
+    if (isset($_POST['reviews']) && is_array($_POST['review'])) {
+        // Sanitize each highlight
+        $sanitized_highlights = array_map('sanitize_text_field', $_POST['itinerary']);
+        
+        // Save as post meta
+        update_post_meta($post_id, '_reviews', $sanitized_highlights);
     } else {
-        delete_post_meta($post_id, '_included');
+        // If highlights are empty, delete the meta to avoid clutter
+        delete_post_meta($post_id, '_itinerary');
     }
-
-    // Excluded
-    if (isset($_POST['excluded']) && is_array($_POST['excluded'])) {
-        $sanitized_excluded = array_map('sanitize_text_field', $_POST['excluded']);
-        update_post_meta($post_id, '_excluded', $sanitized_excluded);
-    } else {
-        delete_post_meta($post_id, '_excluded');
-    }
-
-    // Saving The Reviews
-    if (isset($_POST['reviews']) && is_array($_POST['reviews'])) {
-        $sanitized_reviews = array_map('sanitize_text_field', $_POST['reviews']);
-        update_post_meta($post_id, '_reviews', $sanitized_reviews);
-    } else {
-        delete_post_meta($post_id, '_reviews');
-    }
-
-
-
-
 
 }
 
