@@ -26,7 +26,7 @@ function display_tour_meta_box($post) {
         <a href="#" class="tab-link" data-target="itinerary">Itinerary</a>
         <a href="#" class="tab-link" data-target="included">Included (New)</a>
         <a href="#" class="tab-link" data-target="excluded">Excluded (New)</a>
-        <a href="#" class="tab-link" data-target="pricing">Pricing (New)</a>
+        <a href="#" class="tab-link" data-target="pricing"> <strong>Pricing</strong> </a>
         <a href="#" class="tab-link" data-target="reviews">Reviews</a>
         <a href="#" class="tab-link" data-target="frequently_asked_questions">FAQ</a>
         <span> <hr> Dynamic Contents <hr> </span>
