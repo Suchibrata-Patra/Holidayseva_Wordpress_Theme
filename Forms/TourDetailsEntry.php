@@ -157,6 +157,9 @@ function display_tour_meta_box($post) {
     </div>
 </div>
 
+
+
+
 <style>
     /* Layout Styling */
     .container {
