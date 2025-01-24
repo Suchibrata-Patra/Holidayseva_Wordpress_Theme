@@ -15,6 +15,7 @@ function display_tour_meta_box($post) {
     $itinerary = get_post_meta($post->ID, '_itinerary', true);
     $reviews = get_post_meta($post->ID, '_reviews', true);
     $included = get_post_meta($post->ID, '_included', true);
+    $excluded = get_post_meta($post->ID, '_excluded', true);
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
     var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
