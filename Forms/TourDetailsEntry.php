@@ -20,6 +20,7 @@ function display_tour_meta_box($post) {
 <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
+        <span> <hr>Fundamenatal Details<hr> </span>
         <a href="#" class="tab-link active" data-target="basic_info">Basic Info</a>
         <a href="#" class="tab-link" data-target="highlights">Highlights</a>
         <a href="#" class="tab-link" data-target="itinerary">Itinerary</a>
