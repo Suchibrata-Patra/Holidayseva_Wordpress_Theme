@@ -148,6 +148,13 @@ function display_tour_meta_box($post) {
                 </div>
         <?php endfor; ?>
 </div>
+
+
+
+<!-- Recommendation ENGINE -->
+<div id="recommendation" class="hidden">
+<h3 class="form-title">Recommendation</h3>
+</div>
         <!-- Frequently Asked Questions -->
         <div id="frequently_asked_questions" class="hidden">
             <h3 class="form-title">Frequently Asked Questions</h3>
@@ -164,10 +171,6 @@ function display_tour_meta_box($post) {
 </div>
 
 
-<!-- Recommendation ENGINE -->
-<div id="recommendation" class="hidden">
-<h3 class="form-title">Recommendation</h3>
-</div>
 
 
 
