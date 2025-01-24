@@ -124,7 +124,7 @@ function display_tour_meta_box($post) {
         <?php endfor; ?>
 </div>
         <!--Reviews -->
-        <div id="reviews" class="hidden">
+        <!-- <div id="reviews" class="hidden">
             <h3 class="form-title">Reviews</h3>
             
             <div class="form-group">
@@ -133,7 +133,7 @@ function display_tour_meta_box($post) {
                         value="<?php echo esc_attr($tour_cover_images); ?>" />
                     <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
                 </div>
-        </div>
+        </div> -->
 
         <div id="Reviews">
 <h3 class="form-title">Reviews</h3>
@@ -165,8 +165,8 @@ function display_tour_meta_box($post) {
 
 
 <!-- Recommendation ENGINE -->
-<div id="recommendation" class="hidden">
-    <h4>Recommendation Engine</h4>
+<div id="recommendation">
+<h3 class="form-title">Recommendation</h3>
 </div>
 
 
