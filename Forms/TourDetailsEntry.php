@@ -25,6 +25,8 @@ function display_tour_meta_box($post) {
         <a href="#" class="tab-link active" data-target="basic_info">Basic Info</a>
         <a href="#" class="tab-link" data-target="highlights">Highlights</a>
         <a href="#" class="tab-link" data-target="itinerary">Itinerary</a>
+        <a href="#" class="tab-link" data-target="included">Included</a>
+        <a href="#" class="tab-link" data-target="excluded">Excluded</a>
         <a href="#" class="tab-link" data-target="reviews">Reviews</a>
         <a href="#" class="tab-link" data-target="frequently_asked_questions">Frequenly Asked Questions</a>
         <a href="#" class="tab-link" data-target="pricing">Reviews</a>
@@ -120,27 +122,13 @@ function display_tour_meta_box($post) {
                 </div>
         <?php endfor; ?> 
 </div>
-        <!--Reviews -->
-        <div id="Reviews">
-<h3 class="form-title">Reviews</h3>
-        <?php for ($i = 1; $i <= 5; $i++) : ?>
-            <div class="form-group">
-                    <label for="reviews_<?php echo $i; ?>">Review Item <?php echo $i; ?></label>
-                    <input type="text" 
-                           name="reviews[]" 
-                           id="reviews_<?php echo $i; ?>" 
-                           class="form-control" 
-                           value="<?php echo isset($reviews[$i - 1]) ? esc_attr($reviews[$i - 1]) : ''; ?>" />
-                </div>
-        <?php endfor; ?>
-</div>
         <!-- Included -->
   
         <div id="included">
 <h3 class="form-title">Included</h3>
         <?php for ($i = 1; $i <= 5; $i++) : ?>
             <div class="form-group">
-                    <label for="included_<?php echo $i; ?>">Review Item <?php echo $i; ?></label>
+                    <label for="included_<?php echo $i; ?>">Including Item <?php echo $i; ?></label>
                     <input type="text" 
                            name="included[]" 
                            id="included_<?php echo $i; ?>" 
@@ -148,6 +136,45 @@ function display_tour_meta_box($post) {
                            value="<?php echo isset($included[$i - 1]) ? esc_attr($included[$i - 1]) : ''; ?>" />
                 </div>
         <?php endfor; ?>
+</div>
+
+        <!-- Excluded -->
+  
+        <div id="excluded">
+<h3 class="form-title">Excluded</h3>
+        <?php for ($i = 1; $i <= 5; $i++) : ?>
+            <div class="form-group">
+                    <label for="excluded_<?php echo $i; ?>">Excluding Item <?php echo $i; ?></label>
+                    <input type="text" 
+                           name="excluded[]" 
+                           id="excluded_<?php echo $i; ?>" 
+                           class="form-control" 
+                           value="<?php echo isset($excluded[$i - 1]) ? esc_attr($excluded[$i - 1]) : ''; ?>" />
+                </div>
+        <?php endfor; ?>
+</div>
+
+
+
+
+
+
+
+
+
+        <!--Reviews -->
+        <div id="reviews">
+<h3 class="form-title">Reviews</h3>
+        <?php for ($i = 1; $i <= 20; $i++) : ?>
+            <div class="form-group">
+                    <label for="reviews_<?php echo $i; ?>">Reviews Item <?php echo $i; ?></label>
+                    <input type="text" 
+                           name="reviews[]" 
+                           id="reviews_<?php echo $i; ?>" 
+                           class="form-control" 
+                           value="<?php echo isset($reviews[$i - 1]) ? esc_attr($reviews[$i - 1]) : ''; ?>" />
+                </div>
+        <?php endfor; ?> 
 </div>
 
 
@@ -281,41 +308,45 @@ function save_tour_meta($post_id) {
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
     if (!current_user_can('edit_post', $post_id)) return $post_id;
     
-    // Savig these for Tour ighlights
+    // Highlights
     if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
-        // Sanitize each highlight
         $sanitized_highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
-        
-        // Save as post meta
         update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
     } else {
-        // If highlights are empty, delete the meta to avoid clutter
         delete_post_meta($post_id, '_tour_highlights');
     }
 
 
-    // Saving the POsts for the Tour Itinery
+    // Itinerary
     if (isset($_POST['itinerary']) && is_array($_POST['itinerary'])) {
-        // Sanitize each highlight
-        $sanitized_highlights = array_map('sanitize_text_field', $_POST['itinerary']);
-        
-        // Save as post meta
-        update_post_meta($post_id, '_itinerary', $sanitized_highlights);
+        $sanitized_itinerary = array_map('sanitize_text_field', $_POST['itinerary']);
+        update_post_meta($post_id, '_itinerary', $sanitized_itinerary);
     } else {
-        // If highlights are empty, delete the meta to avoid clutter
         delete_post_meta($post_id, '_itinerary');
     }
 
-    // Saving The Included
+    // Included
     if (isset($_POST['included']) && is_array($_POST['included'])) {
-        // Sanitize each highlight
-        $sanitized_highlights = array_map('sanitize_text_field', $_POST['included']);
-        
-        // Save as post meta
-        update_post_meta($post_id, '_included', $sanitized_highlights);
+        $sanitized_included = array_map('sanitize_text_field', $_POST['included']);
+        update_post_meta($post_id, '_included', $sanitized_included);
     } else {
-        // If highlights are empty, delete the meta to avoid clutter
         delete_post_meta($post_id, '_included');
+    }
+
+    // Excluded
+    if (isset($_POST['excluded']) && is_array($_POST['excluded'])) {
+        $sanitized_excluded = array_map('sanitize_text_field', $_POST['excluded']);
+        update_post_meta($post_id, '_excluded', $sanitized_excluded);
+    } else {
+        delete_post_meta($post_id, '_excluded');
+    }
+
+    // Saving The Reviews
+    if (isset($_POST['reviews']) && is_array($_POST['reviews'])) {
+        $sanitized_reviews = array_map('sanitize_text_field', $_POST['reviews']);
+        update_post_meta($post_id, '_reviews', $sanitized_reviews);
+    } else {
+        delete_post_meta($post_id, '_reviews');
     }
 
 
