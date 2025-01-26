@@ -170,14 +170,10 @@ function display_tour_meta_box($post) {
             <div id="reviews-container">
                 <?php foreach ($reviews as $index => $review) : ?>
                 <div class="review-set" data-index="<?php echo $index; ?>">
-                    <div style="display:flex; justify-content: space-between; align-items: center;">
-                        <h4>Review
-                            <?php echo $index + 1; ?>
-                        </h4>
-                        <button type="button" class="remove-review"
-                            style="padding:2px 5px; border-radius:50px; border:1px solid grey; margin-left: auto;">Remove<i
-                                class="material-icons">backspace</i></button>
-                    </div>
+                <div style="display:flex; justify-content: space-between; align-items: center;">
+    <h4>Review <?php echo $index + 1; ?></h4>
+    <button type="button" class="remove-review" style="padding:2px 5px; border-radius:50px; border:1px solid grey; margin-left: auto;">Remove<i class="material-icons">backspace</i></button>
+</div>
 
                     <div style="display:flex;">
                         <div class="form-group">
@@ -199,14 +195,15 @@ function display_tour_meta_box($post) {
                         </div>
 
                         <div class="form-group" style="margin-left:30px;width:80%;">
-                            <label for="review_content_<?php echo $index; ?>">Review</label>
-                            <textarea name="reviews[<?php echo $index; ?>][content]"
-                                id="review_content_<?php echo $index; ?>" style="border-radius:5px;"
-                                class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
-                        </div>
-
+                        <label for="review_content_<?php echo $index; ?>">Review</label>
+                        <textarea name="reviews[<?php echo $index; ?>][content]"
+                            id="review_content_<?php echo $index; ?>"
+                            style="border-radius:5px;"
+                            class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
                     </div>
 
+                    </div>
+                    
                     <!-- <button type="button" class="remove-review">Remove</button> -->
                 </div>
                 <?php endforeach; ?>
