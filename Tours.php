@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Any Page Template
+Template Name:Any
 */
 ?>
 this is testlorem.php
