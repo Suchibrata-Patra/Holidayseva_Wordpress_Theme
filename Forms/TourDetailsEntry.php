@@ -144,33 +144,31 @@ function display_tour_meta_box($post) {
 
 
 
-              <!-- Day Plans -->
-<div id="day_plans" class="hidden">
-    <h3 class="form-title">Day Plans</h3>
-    <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
-        <div class="form-group" style="color:black;">
-            <label for="day_plans<?php echo $i; ?>">Highlight for Day <?php echo $i; ?></label>
-            <textarea
-                name="day_plans[]"
-                id="day_plans<?php echo $i; ?>"
-                class="form-control"
-                rows="5"
-                placeholder="Enter highlights for Day <?php echo $i; ?>"
-                style="color: black; background-color: white;"
-            ><?php echo isset($day_plans[$i - 1]) ? esc_textarea($day_plans[$i - 1]) : ''; ?></textarea>
-        </div>
-    <?php endfor; ?>
-</div>
+                <!-- Day Plans -->
+    <div id="day_plans" class="hidden">
+        <h3 class="form-title">Day Plans</h3>
+        <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
+            <div class="form-group" style="color:black;">
+                <label for="day_plans<?php echo $i; ?>">Highlight for Day <?php echo $i; ?></label>
+                <?php
+                $content = isset($day_plans[$i - 1]) ? $day_plans[$i - 1] : ''; // Get the highlight for each day
+                $editor_id = 'day_plans' . $i; // Unique ID for each editor
 
-<style>
-    #day_plans textarea.form-control {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 14px;
-    }
-</style>
+                // Add TinyMCE editor for each day
+                wp_editor(
+                    $content,
+                    $editor_id,
+                    [
+                        'textarea_name' => 'day_plans[]',
+                        'media_buttons' => true, // Enable media buttons
+                        'textarea_rows' => 5,    // Adjust height
+                    ]
+                );
+                ?>
+            </div>
+            
+        <?php endfor; ?>
+    </div>
 
 
         <!--Itinerary -->
