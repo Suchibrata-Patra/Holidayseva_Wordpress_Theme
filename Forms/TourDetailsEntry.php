@@ -238,9 +238,10 @@ function display_tour_meta_box($post) {
                     </select>
 
                    
+
                 </div>
                 <div class=\"form-group\">
-                    <label for=\"review_content_${index}\">Review Content</label>
+                    <label for=\"review_content_${index}\" style=\"width:80%;\">Review Content</label>
                     <textarea name=\"reviews[${index}][content]\" id=\"review_content_${index}\" class=\"form-control\"></textarea>
                 </div>
                 </div>
