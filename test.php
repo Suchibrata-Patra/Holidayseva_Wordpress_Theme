@@ -1,38 +1,45 @@
 <?php
 function display_tour_meta_box($post) {
-    $reviews = get_post_meta($post->ID, '_reviews', true);
+    $day_plans = get_post_meta($post->ID, '_day_plans', true) ?: [];
 ?>
 
- <!--Reviews -->
- <div id="reviews" class="hidden">
-            <h3 class="form-title">Reviews</h3>
-            <?php for ($i = 1; $i <= 5; $i++) : ?>
-            <div class="form-group">
-                <label for="reviews_<?php echo $i; ?>">Review Item
-                    <?php echo $i; ?>
-                </label>
-                <input type="text" name="reviews[]" id="reviews_<?php echo $i; ?>" class="form-control"
-                    value="<?php echo isset($reviews[$i - 1]) ? esc_attr($reviews[$i - 1]) : ''; ?>" />
-            </div>
-            <?php endfor; ?>
+<!-- Day Plans -->
+<div id="day_plans">
+    <h3 class="form-title">Day Plans</h3>
+    <?php for ($i = 0; $i < $tour_duration_days; $i++) : ?>
+        <div class="form-group">
+            <label for="day_plans<?php echo $i; ?>">Highlight for Day <?php echo $i; ?></label>
+            <?php
+            $content = isset($day_plans[$i - 1]) ? $day_plans[$i - 1] : ''; // Content for each day's highlight
+            $editor_id = 'day_plans' . $i; // Unique ID for each editor
+            
+            // Add TinyMCE editor for each day
+            wp_editor(
+                $content,
+                $editor_id,
+                [
+                    'textarea_name' => 'day_plans[]',
+                    'media_buttons' => true, // Enable media buttons
+                    'textarea_rows' => 5,    // Adjust height
+                    'editor_class' => 'form-control', // Add custom classes if needed
+                ]
+            );
+            ?>
+        </div>
+    <?php endfor; ?>
 </div>
-
 
 <?php
 }
 
-// Save custom fields values when the post is saved
-function save_tour_meta($post_id) {
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
-    if (!current_user_can('edit_post', $post_id)) return $post_id;
-
-    if (isset($_POST['reviews']) && is_array($_POST['reviews'])) {
-        $sanitized_highlights = array_map('sanitize_text_field', $_POST['reviews']);
-        
-        update_post_meta($post_id, '_reviews', $sanitized_highlights);
-    } else {
-        delete_post_meta($post_id, '_reviews');
+function save_day_plans_meta($post_id) {
+    if (isset($_POST['day_plans']) && is_array($_POST['day_plans'])) {
+        // Sanitize each day plan's content before saving
+        $sanitized_plans = array_map('wp_kses_post', $_POST['day_plans']);
+        update_post_meta($post_id, '_day_plans', $sanitized_plans);
+    }else{
+        delete_post_meta($post_id, '_day_plans');
     }
 }
-add_action('save_post', 'save_tour_meta');
+add_action('save_post', 'save_day_plans_meta');
 ?>
