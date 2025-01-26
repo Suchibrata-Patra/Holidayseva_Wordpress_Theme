@@ -130,7 +130,7 @@ function display_tour_meta_box($post) {
 <h3 class="form-title">included</h3>
         <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
-                    <label for="included_<?php echo $i; ?>">Itinerary Item <?php echo $i; ?></label>
+                    <label for="included_<?php echo $i; ?>">Included Item <?php echo $i; ?></label>
                     <input type="text" 
                            name="included[]" 
                            id="included_<?php echo $i; ?>" 
