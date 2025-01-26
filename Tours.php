@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Any Page Template
-Template Path: templates/Tours.php
+Template Name: Tour Details
 */
 ?>
+This Page is Comming from the Tours.php
