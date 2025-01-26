@@ -352,7 +352,7 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
                             <img src="https://static.vecteezy.com/system/resources/previews/002/002/403/non_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Avatar 2" class="avatar-img"> Avatar 2
                         </div>
                         <div class="dropdown-option" data-value="https://img.freepik.com/premium-photo/bearded-man-illustration_665280-67047.jpg">
-                            <img src="" alt="Avatar 3" class="avatar-img"> Avatar 3
+                            <img src="https://img.freepik.com/premium-photo/bearded-man-illustration_665280-67047.jpg" alt="Avatar 3" class="avatar-img"> Avatar 3
                         </div>
                         <!-- Add more avatars as needed -->
                     </div>
