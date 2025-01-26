@@ -40,6 +40,7 @@ function display_tour_meta_box($post) {
         </a>
         <a href="#" class="tab-link" data-target="reviews">Reviews</a>
         <a href="#" class="tab-link" data-target="google_map_iframe">Google Map Iframe</a>
+        <a href="#" class="tab-link" data-target="badges">Special Badges</a>
         <a href="#" class="tab-link" data-target="frequently_asked_questions">FAQ</a>
         <span>
             <hr> Dynamic Contents
