@@ -332,7 +332,6 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
 
 
 
-
         <!-- Frequently Asked Questions -->
         <div id="frequently_asked_questions" class="hidden">
             <h3 class="form-title">Frequently Asked Questions</h3>
