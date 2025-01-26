@@ -1,45 +1,43 @@
 <?php
 function display_tour_meta_box($post) {
-    $day_plans = get_post_meta($post->ID, '_day_plans', true) ?: [];
+    // Retrieve existing custom fields values
+    $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
 ?>
+<div class="form-group">
+    <label for="tour_cover_images">Slider Images</label>
+    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+         value="<?php echo esc_attr($tour_cover_images); ?>"
+        placeholder="" />
+    <button type="button" id="tour_cover_images_button" class="form-button"
+        title="Click to select images for the slider">Select Images</button>
+    <div id="tour_cover_images_preview"
+        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
+        <?php
+        // Get the saved tour cover images (assuming this is a serialized array of image IDs or URLs)
+        $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
 
-<!-- Day Plans -->
-<div id="day_plans">
-    <h3 class="form-title">Day Plans</h3>
-    <?php for ($i = 0; $i < $tour_duration_days; $i++) : ?>
-        <div class="form-group">
-            <label for="day_plans<?php echo $i; ?>">Highlight for Day <?php echo $i; ?></label>
-            <?php
-            $content = isset($day_plans[$i - 1]) ? $day_plans[$i - 1] : ''; // Content for each day's highlight
-            $editor_id = 'day_plans' . $i; // Unique ID for each editor
-            
-            // Add TinyMCE editor for each day
-            wp_editor(
-                $content,
-                $editor_id,
-                [
-                    'textarea_name' => 'day_plans[]',
-                    'media_buttons' => true, // Enable media buttons
-                    'textarea_rows' => 5,    // Adjust height
-                    'editor_class' => 'form-control', // Add custom classes if needed
-                ]
-            );
-            ?>
-        </div>
-    <?php endfor; ?>
+        if ($tour_cover_images) {
+            // If tour_cover_images is not empty, loop through the images and display them
+            foreach ($tour_cover_images as $image_url) {
+                echo '<div class="image-preview">';
+                echo '<img src="' . esc_url($image_url) . '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" />';
+                echo '</div>';
+            }
+        }
+        ?>
+    </div>
 </div>
-
 <?php
 }
 
-function save_day_plans_meta($post_id) {
-    if (isset($_POST['day_plans']) && is_array($_POST['day_plans'])) {
-        // Sanitize each day plan's content before saving
-        $sanitized_plans = array_map('wp_kses_post', $_POST['day_plans']);
-        update_post_meta($post_id, '_day_plans', $sanitized_plans);
-    }else{
-        delete_post_meta($post_id, '_day_plans');
+// Save custom fields values when the post is saved
+function save_tour_meta($post_id) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+    if (!current_user_can('edit_post', $post_id)) return $post_id;
+
+
+    // Save custom fields values
+    if (isset($_POST['tour_cover_images'])) {
+        update_post_meta($post_id, '_tour_cover_images', explode(',', sanitize_text_field($_POST['tour_cover_images'])));
     }
-}
-add_action('save_post', 'save_day_plans_meta');
 ?>
