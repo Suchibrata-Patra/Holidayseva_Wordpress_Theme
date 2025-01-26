@@ -162,7 +162,7 @@ function display_tour_meta_box($post) {
 
 
 
-       <!-- Reviews -->
+        <!-- Reviews -->
 <div id="reviews">
     <h3 class="form-title">Reviews</h3>
     <div id="reviews-container">
@@ -175,13 +175,12 @@ function display_tour_meta_box($post) {
                 <input type="text" name="reviews[<?php echo $index; ?>][name]" id="reviewer_name_<?php echo $index; ?>" class="form-control" value="<?php echo esc_attr($review['name'] ?? ''); ?>" />
             </div>
             <div class="form-group">
-                <label>Review Score</label>
-                <div class="star-rating" data-index="<?php echo $index; ?>">
+                <label for="review_score_<?php echo $index; ?>">Review Score</label>
+                <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>" class="form-control">
                     <?php for ($i = 1; $i <= 5; $i++) : ?>
-                    <span class="star <?php echo ($review['score'] ?? 0) >= $i ? 'selected' : ''; ?>" data-value="<?php echo $i; ?>">&#9733;</span>
+                    <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '', $i); ?>><?php echo $i; ?></option>
                     <?php endfor; ?>
-                    <input type="hidden" name="reviews[<?php echo $index; ?>][score]" value="<?php echo esc_attr($review['score'] ?? 0); ?>">
-                </div>
+                </select>
             </div>
             </div>
             <div class="form-group">
@@ -200,43 +199,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const container = document.getElementById('reviews-container');
     const addReviewButton = document.getElementById('add-review');
 
-    function initializeStarRating(starContainer) {
-        const stars = starContainer.querySelectorAll('.star');
-        const hiddenInput = starContainer.querySelector('input[type="hidden"]');
-
-        stars.forEach(star => {
-            star.addEventListener('click', function() {
-                const value = this.getAttribute('data-value');
-                hiddenInput.value = value;
-                stars.forEach(s => s.classList.remove('selected'));
-                stars.forEach(s => {
-                    if (s.getAttribute('data-value') <= value) {
-                        s.classList.add('selected');
-                    }
-                });
-            });
-        });
-    }
-
-    document.querySelectorAll('.star-rating').forEach(initializeStarRating);
-
     addReviewButton.addEventListener('click', function() {
         const index = container.children.length;
         const reviewHTML = `
             <div class=\"review-set\" data-index=\"${index}\">
                 <h4>Review ${index + 1}</h4>
-                <div style=\"display:flex;\">
                 <div class=\"form-group\">
                     <label for=\"reviewer_name_${index}\">Reviewer Name</label>
                     <input type=\"text\" name=\"reviews[${index}][name]\" id=\"reviewer_name_${index}\" class=\"form-control\" />
                 </div>
                 <div class=\"form-group\">
-                    <label>Review Score</label>
-                    <div class=\"star-rating\" data-index=\"${index}\">
-                        ${[1, 2, 3, 4, 5].map(i => `<span class=\"star\" data-value=\"${i}\">&#9733;</span>`).join('')}
-                        <input type=\"hidden\" name=\"reviews[${index}][score]\" value=\"0\">
-                    </div>
-                </div>
+                    <label for=\"review_score_${index}\">Review Score</label>
+                    <select name=\"reviews[${index}][score]\" id=\"review_score_${index}\" class=\"form-control\">
+                        ${[1, 2, 3, 4, 5].map(i => `<option value=\"${i}\">${i}</option>`).join('')}
+                    </select>
                 </div>
                 <div class=\"form-group\">
                     <label for=\"review_content_${index}\">Review Content</label>
@@ -247,10 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = reviewHTML.trim();
-        const newReview = tempDiv.firstChild;
-        container.appendChild(newReview);
-
-        initializeStarRating(newReview.querySelector('.star-rating'));
+        container.appendChild(tempDiv.firstChild);
     });
 
     container.addEventListener('click', function(event) {
