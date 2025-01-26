@@ -86,6 +86,17 @@ get_header(); ?>
     </ul>
 <?php endif; ?>
 
+<?php if (!empty($tour_cover_images) && is_array($tour_cover_images)) : ?>
+    <h3>Images:</h3>
+    <ul>
+        <?php foreach ($tour_cover_images as $plans) : ?>
+            <?php if (!empty($image_url)) : // Only display non-empty Plans ?>
+                  <img src="<?php echo $image_url;?>" alt="" srcset="">
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
 
                 <?php if (!empty($itinerary)) : ?>
                     <h3>Itinerary:</h3>
