@@ -8,6 +8,9 @@ function display_tour_meta_box($post) {
     $tour_location = get_post_meta($post->ID, '_tour_location', true);
     $tour_duration_days = get_post_meta($post->ID, '_tour_duration_days', true);
     $tour_duration_nights = get_post_meta($post->ID, '_tour_duration_nights', true);
+    $day_plans = get_post_meta($post->ID, '_day_plans', true) ?: [];
+
+
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_offers = get_post_meta($post->ID, '_tour_offers', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
@@ -139,6 +142,33 @@ function display_tour_meta_box($post) {
             <?php endfor; ?>
         </div>
 
+
+
+                <!-- Day Plans -->
+                <div id="day_plans">
+    <h3 class="form-title">Day Plans</h3>
+    <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
+        <div class="form-group">
+            <label for="tour_highlight_<?php echo $i; ?>">Highlight for Day <?php echo $i; ?></label>
+            <?php
+            $content = isset($day_plans[$i - 1]) ? $day_plans[$i - 1] : ''; // Content for each day's highlight
+            $editor_id = 'tour_highlight_' . $i; // Unique ID for each editor
+            
+            // Add TinyMCE editor for each day
+            wp_editor(
+                $content,
+                $editor_id,
+                [
+                    'textarea_name' => 'day_plans[]',
+                    'media_buttons' => true, // Enable media buttons
+                    'textarea_rows' => 5,    // Adjust height
+                    'editor_class' => 'form-control', // Add custom classes if needed
+                ]
+            );
+            ?>
+        </div>
+    <?php endfor; ?>
+</div>
 
 
         <!--Itinerary -->
@@ -796,5 +826,13 @@ function save_google_map_and_tour_price($post_id) {
 }
 add_action('save_post', 'save_google_map_and_tour_price');
 
+function save_day_plans_meta($post_id) {
+    if (isset($_POST['day_plans']) && is_array($_POST['day_plans'])) {
+        // Sanitize each day plan's content before saving
+        $sanitized_plans = array_map('wp_kses_post', $_POST['day_plans']);
+        update_post_meta($post_id, '_day_plans', $sanitized_plans);
+    }
+}
+add_action('save_post', 'save_day_plans_meta');
 
 ?>
