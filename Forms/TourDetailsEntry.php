@@ -149,7 +149,7 @@ function display_tour_meta_box($post) {
     <h3 class="form-title">Day Plans</h3>
     <?php for ($i = 0; $i < $tour_duration_days; $i++) : ?>
         <div class="form-group">
-            <label for="tour_day_plans_<?php echo $i; ?>">Highlight for Day <?php echo $i; ?></label>
+            <label for="tour_day_plans_<?php echo $i; ?>">Plans for Day <?php echo $i; ?></label>
             <?php
             $content = isset($day_plans[$i - 1]) ? $day_plans[$i - 1] : ''; // Content for each day's highlight
             $editor_id = 'tour_day_plans_' . $i; // Unique ID for each editor
