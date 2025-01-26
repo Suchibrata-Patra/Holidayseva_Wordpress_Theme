@@ -227,9 +227,19 @@ function display_tour_meta_box($post) {
                 </div>
                 <div class=\"form-group\">
                     <label for=\"review_score_${index}\">Review Score</label>
-                    <select name=\"reviews[${index}][score]\" id=\"review_score_${index}\" class=\"form-control\">
-                        ${[1, 2, 3, 4, 5].map(i => `<option value=\"${i}\">${i}</option>`).join('')}
+                    
+                    <select name=\"reviews[${index}][score]\" id=\"review_score_${index}\"
+                                class="form-control" style="padding:10px 10px;border-radius:5px;">
+                                <?php for ($i = 1; $i <= 5; $i++) : ?>
+                                <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '' , $i); ?>>
+                                    <?php echo str_repeat('&#x2B50;', $i); ?>
+                                </option>
+                                <?php endfor; ?>
                     </select>
+
+                    // <select name=\"reviews[${index}][score]\" id=\"review_score_${index}\" class=\"form-control\">
+                    //     ${[1, 2, 3, 4, 5].map(i => `<option value=\"${i}\">${i}</option>`).join('')}
+                    // </select>
                 </div>
                 <div class=\"form-group\">
                     <label for=\"review_content_${index}\">Review Content</label>
