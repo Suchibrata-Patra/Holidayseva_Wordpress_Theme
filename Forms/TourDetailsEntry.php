@@ -86,25 +86,25 @@ function display_tour_meta_box($post) {
                     <input type="text" name="tour_duration" id="tour_duration" class="form-control"
                         value="<?php echo esc_attr($tour_duration); ?>" placeholder="7 Night 8 Days" />
                 </div> -->
-                        <div style="display:flex;">
-                        <div class="form-group">
-    <label for="tour_duration_days">Duration (Days):</label>
-    <input type="number" name="tour_duration_days" id="tour_duration_days" class="form-control"
-        value="<?php echo esc_attr($tour_duration_days); ?>" placeholder="1" />
-</div>
+                <div style="display:flex;">
+                    <div class="form-group">
+                        <label for="tour_duration_days">Duration (Days):</label>
+                        <input type="number" name="tour_duration_days" id="tour_duration_days" class="form-control"
+                            value="<?php echo esc_attr($tour_duration_days); ?>" placeholder="1" />
+                    </div>
 
-<div class="form-group" style="margin-left:10px;">
-    <label for="tour_duration_nights">Duration (Nights):</label>
-    <input type="number" name="tour_duration_nights" id="tour_duration_nights" class="form-control"
-        value="<?php echo esc_attr($tour_duration_nights); ?>" placeholder="0" />
-</div>
-<div class="form-group" style="margin-left:10px;">
-   <label for="tour_note">Note</label>
-    <span name="tour_note">By Default it will take Same Day tour Package. <br> If Tour is of SameDay, Choose Day as 1 and Nights as 0 </span>
-</div>
+                    <div class="form-group" style="margin-left:10px;">
+                        <label for="tour_duration_nights">Duration (Nights):</label>
+                        <input type="number" name="tour_duration_nights" id="tour_duration_nights" class="form-control"
+                            value="<?php echo esc_attr($tour_duration_nights); ?>" placeholder="0" />
+                    </div>
+                    <div class="form-group" style="margin-left:10px;">
+                        <label for="tour_note">Note</label>
+                        <span name="tour_note">By Default it will take <strong><i>Same Day tour Package.</i></strong> <br>For same day tour package choose Day = 1 and Nights = 0 </span>
+                    </div>
 
-                        </div>
-                
+                </div>
+
 
                 <div class="form-group">
                     <label for="tour_availability">Availability</label>
@@ -189,18 +189,23 @@ function display_tour_meta_box($post) {
         <div id="reviews" class="hidden">
             <div style="display:flex;">
                 <h3 class="form-title">Reviews</h3>
-                <button type="button" id="add-review" style="border-radius:50px;background-color:green;color:white;border:none;margin-top:0%;margin-bottom:5%;margin-left:20px;padding:5px 10px;">Add +</button>
+                <button type="button" id="add-review"
+                    style="border-radius:50px;background-color:green;color:white;border:none;margin-top:0%;margin-bottom:5%;margin-left:20px;padding:5px 10px;">Add
+                    +</button>
             </div>
             <div id="reviews-container">
                 <?php foreach ($reviews as $index => $review) : ?>
-                <div class="review-set" data-index="<?php echo $index; ?>" style="border:2px solid #2980b9;margin-top:10px;border-radius:4px;padding:5px;background-color:#FBFBFB;">
-                    <h4 style="margin-bottom:3px;">Review No - <?php echo $index + 1; ?>
+                <div class="review-set" data-index="<?php echo $index; ?>"
+                    style="border:2px solid #2980b9;margin-top:10px;border-radius:4px;padding:5px;background-color:#FBFBFB;">
+                    <h4 style="margin-bottom:3px;">Review No -
+                        <?php echo $index + 1; ?>
                     </h4>
                     <div style="display:flex;">
                         <div class="form-group">
                             <label for="reviewer_name_<?php echo $index; ?>">Name</label>
                             <input type="text" name="reviews[<?php echo $index; ?>][name]"
-                                id="reviewer_name_<?php echo $index; ?>" class="form-control" style="padding:10px 10px;border-radius:5px;"
+                                id="reviewer_name_<?php echo $index; ?>" class="form-control"
+                                style="padding:10px 10px;border-radius:5px;"
                                 value="<?php echo esc_attr($review['name'] ?? ''); ?>" />
                         </div>
 
@@ -219,14 +224,14 @@ function display_tour_meta_box($post) {
                         <div class="form-group" style="margin-left:10px;width:80%;">
                             <label for="review_content_<?php echo $index; ?>">Review</label>
                             <textarea name="reviews[<?php echo $index; ?>][content]"
-                            id="review_content_<?php echo $index; ?>"
-                            style="border-radius:5px;"
-                            class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
+                                id="review_content_<?php echo $index; ?>" style="border-radius:5px;"
+                                class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
                         </div>
 
                     </div>
-                    
-                    <button type="button" class="remove-review" style="border-radius:50px;background-color:red;color:white;border:none;padding:5px 8px;">Remove</button>
+
+                    <button type="button" class="remove-review"
+                        style="border-radius:50px;background-color:red;color:white;border:none;padding:5px 8px;">Remove</button>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -303,7 +308,7 @@ function display_tour_meta_box($post) {
             <div class="form-group">
                 <label for="tour_price">Price (Per Adult)</label>
                 <input type="number" name="tour_price" id="tour_price" class="form-control"
-                    value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR" required/>
+                    value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR" required />
             </div>
 
             <div id="offers_section">
