@@ -62,13 +62,16 @@ get_header(); ?>
                 <p><strong>Price:</strong> <?php echo esc_html($tour_price); ?></p>
                 <p><strong>Availability:</strong> <?php echo esc_html($tour_availability); ?></p>
                 <?php if (!empty($tour_highlights) && is_array($tour_highlights)) : ?>
-        <h3>Highlights:</h3>
-        <ul>
-            <?php foreach ($tour_highlights as $highlight) : ?>
+    <h3>Highlights:</h3>
+    <ul>
+        <?php foreach ($tour_highlights as $highlight) : ?>
+            <?php if (!empty($highlight)) : // Only display non-empty highlights ?>
                 <li><?php echo esc_html($highlight); ?></li>
-            <?php endforeach; ?>
-        </ul>
-    <?php endif; ?>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
 
                 <?php if (!empty($day_plans)) : ?>
                     <h3>Day Plans:</h3>
