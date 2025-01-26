@@ -190,7 +190,7 @@ function display_tour_meta_box($post) {
 
 
         <!-- pricing Strategy -->
-        <div id="pricing">
+        <div id="pricing" class="hidden">
     <h3 class="form-title">Basic Info</h3>
     <form method="post" action="" class="styled-form">
         <div class="form-group">
