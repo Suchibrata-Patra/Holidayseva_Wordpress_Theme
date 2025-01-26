@@ -124,7 +124,7 @@ get_header(); ?>
 
                 <?php if (!empty($google_map_link)) : ?>
                     <h3>Google Map:</h3>
-                   <?php  echo '$google_map_link'; ?>
+                   <?php  echo $google_map_link; ?>
                 <?php endif; ?>
 
                 <?php if (!empty($tour_cover_images)) : ?>
