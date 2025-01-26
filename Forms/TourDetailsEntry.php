@@ -218,7 +218,7 @@ function display_tour_meta_box($post) {
                 addReviewButton.addEventListener('click', function () {
                     const index = container.children.length;
                     const reviewHTML = `
-            <div class=\"review-set\" data-index=\"${index}\" style=\"border:2px solid red;\">
+            <div class=\"review-set\" data-index=\"${index}\" style=\"border:2px solid red;margin-top:10px;\">
                 <h4>Review ${index + 1}</h4>
                 <div style=\"display:flex;\">
                 <div class=\"form-group\">
