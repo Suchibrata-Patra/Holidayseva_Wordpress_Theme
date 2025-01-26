@@ -204,17 +204,22 @@ function display_tour_meta_box($post) {
         </div>
 
         <div id="offers_section">
-            <h4>People-Based Offers</h4>
+    <h4>People-Based Offers</h4>
+
+    <?php if (!empty($tour_offers)) : ?>
+        <?php foreach ($tour_offers as $offer) : ?>
             <div class="offer-group">
                 <label>From</label>
-                <input type="number" name="offer[from][]" class="form-control" placeholder="Min People" />
+                <input type="number" name="offer[from][]" class="form-control" value="<?php echo esc_attr($offer['from']); ?>" />
                 <label>To</label>
-                <input type="number" name="offer[to][]" class="form-control" placeholder="Max People" />
+                <input type="number" name="offer[to][]" class="form-control" value="<?php echo esc_attr($offer['to']); ?>" />
                 <label>Discount (%)</label>
-                <input type="number" name="offer[discount][]" class="form-control" placeholder="Discount" />
+                <input type="number" name="offer[discount][]" class="form-control" value="<?php echo esc_attr($offer['discount']); ?>" />
                 <button type="button" class="remove-offer-btn">Remove</button>
             </div>
-        </div>
+        <?php endforeach; ?>
+    <?php endif; ?>
+</div>
         <button type="button" id="add_offer_btn" class="btn btn-secondary">Add More Offers</button>
         <br><br>
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -576,5 +581,40 @@ function save_tour_meta($post_id) {
 
 
 add_action('save_post', 'save_tour_meta');
+
+
+function save_tour_pricing_data($post_id) {
+    // Verify the nonce for security
+    if (!isset($_POST['tour_highlights_nonce_field']) || !wp_verify_nonce($_POST['tour_highlights_nonce_field'], 'tour_highlights_nonce')) {
+        return;
+    }
+
+    // Check for autosave and user permissions
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if (!current_user_can('edit_post', $post_id)) return;
+
+    // Save pricing data (People-Based Offers)
+    if (isset($_POST['offer']['from'], $_POST['offer']['to'], $_POST['offer']['discount'])) {
+        $offers = [];
+        $from = $_POST['offer']['from'];
+        $to = $_POST['offer']['to'];
+        $discount = $_POST['offer']['discount'];
+
+        foreach ($from as $index => $value) {
+            if (!empty($value) && !empty($to[$index]) && !empty($discount[$index])) {
+                $offers[] = [
+                    'from' => sanitize_text_field($value),
+                    'to' => sanitize_text_field($to[$index]),
+                    'discount' => sanitize_text_field($discount[$index]),
+                ];
+            }
+        }
+
+        // Save offers array as JSON in post meta
+        update_post_meta($post_id, '_tour_offers', $offers);
+    }
+}
+add_action('save_post', 'save_tour_pricing_data');
+
 
 ?>
