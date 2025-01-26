@@ -86,7 +86,8 @@ function display_tour_meta_box($post) {
                     <input type="text" name="tour_duration" id="tour_duration" class="form-control"
                         value="<?php echo esc_attr($tour_duration); ?>" placeholder="7 Night 8 Days" />
                 </div> -->
-                <div class="form-group">
+                        <div style="display:flex;">
+                        <div class="form-group">
     <label for="tour_duration_days">Duration (Days):</label>
     <input type="number" name="tour_duration_days" id="tour_duration_days" class="form-control"
         value="<?php echo esc_attr($tour_duration_days); ?>" placeholder="7" />
@@ -98,6 +99,7 @@ function display_tour_meta_box($post) {
         value="<?php echo esc_attr($tour_duration_nights); ?>" placeholder="8" />
 </div>
 
+                        </div>
                 
 
                 <div class="form-group">
