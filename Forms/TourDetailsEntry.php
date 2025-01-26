@@ -141,7 +141,7 @@ function display_tour_meta_box($post) {
         if ($tour_cover_images) {
             // If tour_cover_images is not empty, loop through the images and display them
             foreach ($tour_cover_images as $image_url) {
-                echo '<div class="image-preview" style="border:0.5px solid grey;border-radius:10px;">';
+                echo '<div class="image-preview">';
                 echo '<img src="' . esc_url($image_url) . '" alt="Tour Image" style="max-width: 150px; height: auto;" />';
                 echo '</div>';
             }
