@@ -25,7 +25,13 @@ function display_tour_meta_box($post) {
     $reviews = is_array($reviews) ? $reviews : [];
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
-    var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
+    var_dump($tour_cover_images); // This should display the value of `_tour_highlights`.
+    var_dump($tour_name); // This should display the value of `_tour_highlights`.
+    var_dump($tour_description); // This should display the value of `_tour_highlights`.
+    var_dump($tour_details); // This should display the value of `_tour_highlights`.
+    var_dump($tour_location); // This should display the value of `_tour_highlights`.
+    var_dump($tour_duration_days); // This should display the value of `_tour_highlights`.
+    var_dump($tour_duration_nights); // This should display the value of `_tour_highlights`.
 ?>
 <div class="container">
     <!-- Sidebar -->
