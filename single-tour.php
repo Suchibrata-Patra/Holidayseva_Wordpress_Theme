@@ -17,29 +17,27 @@ get_header(); ?>
         $post_id = get_the_ID();
 
         // Collect data
-    // Retrieve existing custom fields values
-    $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
-    $tour_name = get_post_meta($post->ID, '_tour_name', true);
-    $tour_description = get_post_meta($post->ID, '_tour_description', true);
-    $tour_details = get_post_meta($post->ID, '_tour_details', true);
-    $tour_location = get_post_meta($post->ID, '_tour_location', true);
-    $tour_duration_days = get_post_meta($post->ID, '_tour_duration_days', true);
-    $tour_duration_nights = get_post_meta($post->ID, '_tour_duration_nights', true);
-    $day_plans = get_post_meta($post->ID, '_day_plans', true) ?: [];
+        $tour_cover_images = get_post_meta($post_id, '_tour_cover_images', true);
+        $tour_name = get_post_meta($post_id, '_tour_name', true);
+        $tour_description = get_post_meta($post_id, '_tour_description', true);
+        $tour_details = get_post_meta($post_id, '_tour_details', true);
+        $tour_location = get_post_meta($post_id, '_tour_location', true);
+        $tour_duration_days = get_post_meta($post_id, '_tour_duration_days', true);
+        $tour_duration_nights = get_post_meta($post_id, '_tour_duration_nights', true);
+        $day_plans = get_post_meta($post_id, '_day_plans', true) ?: [];
 
+        $tour_price = get_post_meta($post_id, '_tour_price', true);
+        $tour_offers = get_post_meta($post_id, '_tour_offers', true);
+        $tour_availability = get_post_meta($post_id, '_tour_availability', true);
+        $tour_highlights = get_post_meta($post_id, '_tour_highlights', true);
 
-    $tour_price = get_post_meta($post->ID, '_tour_price', true);
-    $tour_offers = get_post_meta($post->ID, '_tour_offers', true);
-    $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
-    $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
+        $itinerary = get_post_meta($post_id, '_itinerary', true);
+        $included = get_post_meta($post_id, '_included', true);
+        $excluded = get_post_meta($post_id, '_excluded', true);
 
-    $itinerary = get_post_meta($post->ID, '_itinerary', true);
-    $included = get_post_meta($post->ID, '_included', true);
-    $excluded = get_post_meta($post->ID, '_excluded', true);
-    // Fetch the saved Google Maps iframe
-    $google_map_link = get_post_meta(get_the_ID(), '_google_map_link', true);
-    $reviews = get_post_meta($post->ID, '_reviews', true);
-    $reviews = is_array($reviews) ? $reviews : [];
+        $google_map_link = get_post_meta($post_id, '_google_map_link', true);
+        $reviews = get_post_meta($post_id, '_reviews', true);
+        $reviews = is_array($reviews) ? $reviews : [];
 
         global $wpdb;
         $table_name = $wpdb->prefix . 'custom_bookings';
@@ -47,66 +45,92 @@ get_header(); ?>
             $wpdb->prepare("SELECT * FROM $table_name WHERE tour_id = %d", $post_id)
         );
 
-        // Display all collected data
-        echo '<h1>' . esc_html($tour_title) . '</h1>';
-        echo $tour_thumbnail;
-        echo '<p>' . esc_html($tour_description) . '</p>';
-        echo '<p>Location: ' . esc_html($tour_location) . '</p>';
-        echo '<p>Duration: ' . esc_html($tour_duration_days) . '</p>';
-        echo '<p>Price: ' . esc_html($tour_price) . '</p>';
-        echo '<p>Availability: ' . esc_html($tour_availability) . '</p>';
-        echo '<p>Highlights: ' . esc_html($tour_highlights) . '</p>';
+        // Display data
+        ?>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <header class="entry-header">
+                <h1 class="entry-title"><?php echo esc_html($tour_name ? $tour_name : get_the_title()); ?></h1>
+                <div class="tour-thumbnail">
+                    <?php echo get_the_post_thumbnail($post_id, 'large'); ?>
+                </div>
+            </header>
 
-        if (!empty($day_plans)) {
-            echo '<h3>Day Plans:</h3>';
-            foreach ($day_plans as $day => $plan) {
-                echo '<p>Day ' . esc_html($day) . ': ' . esc_html($plan) . '</p>';
-            }
-        }
+            <div class="entry-content">
+                <p><strong>Description:</strong> <?php echo esc_html($tour_description); ?></p>
+                <p><strong>Location:</strong> <?php echo esc_html($tour_location); ?></p>
+                <p><strong>Duration:</strong> <?php echo esc_html("$tour_duration_days Days, $tour_duration_nights Nights"); ?></p>
+                <p><strong>Price:</strong> <?php echo esc_html($tour_price); ?></p>
+                <p><strong>Availability:</strong> <?php echo esc_html($tour_availability); ?></p>
+                <p><strong>Highlights:</strong> <?php echo esc_html($tour_highlights); ?></p>
 
-        if (!empty($itinerary)) {
-            echo '<h3>Itinerary:</h3><p>' . esc_html($itinerary) . '</p>';
-        }
+                <?php if (!empty($day_plans)) : ?>
+                    <h3>Day Plans:</h3>
+                    <ul>
+                        <?php foreach ($day_plans as $day => $plan) : ?>
+                            <li><strong>Day <?php echo esc_html($day + 1); ?>:</strong> <?php echo esc_html($plan); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
 
-        if (!empty($included)) {
-            echo '<h3>Included:</h3><p>' . esc_html($included) . '</p>';
-        }
+                <?php if (!empty($itinerary)) : ?>
+                    <h3>Itinerary:</h3>
+                    <p><?php echo nl2br(esc_html($itinerary)); ?></p>
+                <?php endif; ?>
 
-        if (!empty($excluded)) {
-            echo '<h3>Excluded:</h3><p>' . esc_html($excluded) . '</p>';
-        }
+                <?php if (!empty($included)) : ?>
+                    <h3>Included:</h3>
+                    <p><?php echo nl2br(esc_html($included)); ?></p>
+                <?php endif; ?>
 
-        if (!empty($google_map_link)) {
-            echo '<h3>Google Map:</h3><p>' . esc_url($google_map_link) . '</p>';
-        }
+                <?php if (!empty($excluded)) : ?>
+                    <h3>Excluded:</h3>
+                    <p><?php echo nl2br(esc_html($excluded)); ?></p>
+                <?php endif; ?>
 
-        // if (!empty($tour_cover_images)) {
-        //     echo '<h3>Gallery:</h3>';
-        //     $images = is_array($tour_cover_images) ? $tour_cover_images : explode(',', $tour_cover_images);
-        //     foreach ($images as $image_url) {
-        //         $trimmed_url = trim($image_url);
-        //         if (!empty($trimmed_url)) {
-        //             echo '<p>' . esc_url($trimmed_url) . '</p>';
-        //         }
-        //     }
-        // }
+                <?php if (!empty($google_map_link)) : ?>
+                    <h3>Google Map:</h3>
+                    <iframe src="<?php echo esc_url($google_map_link); ?>" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <?php endif; ?>
 
-        if (!empty($reviews)) {
-            echo '<h3>Reviews:</h3>';
-            foreach ($reviews as $review) {
-                echo '<p>' . esc_html($review) . '</p>';
-            }
-        }
+                <?php if (!empty($tour_cover_images)) : ?>
+                    <h3>Gallery:</h3>
+                    <div class="gallery">
+                        <?php
+                        $images = is_array($tour_cover_images) ? $tour_cover_images : explode(',', $tour_cover_images);
+                        foreach ($images as $image_url) :
+                            $trimmed_url = trim($image_url);
+                            if (!empty($trimmed_url)) :
+                                ?>
+                                <img src="<?php echo esc_url($trimmed_url); ?>" alt="Tour Image" class="tour-image" />
+                            <?php
+                            endif;
+                        endforeach;
+                        ?>
+                    </div>
+                <?php endif; ?>
 
-        if (!empty($bookings)) {
-            echo '<h3>Bookings:</h3>';
-            foreach ($bookings as $booking) {
-                echo '<p>' . esc_html($booking->customer_name) . ' - ' . esc_html($booking->booking_date) . ' - ' . esc_html($booking->payment_status) . '</p>';
-            }
-        } else {
-            echo '<p>No bookings available for this tour.</p>';
-        }
+                <?php if (!empty($reviews)) : ?>
+                    <h3>Reviews:</h3>
+                    <ul>
+                        <?php foreach ($reviews as $review) : ?>
+                            <li><?php echo esc_html($review); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
 
+                <?php if (!empty($bookings)) : ?>
+                    <h3>Bookings:</h3>
+                    <ul>
+                        <?php foreach ($bookings as $booking) : ?>
+                            <li><?php echo esc_html($booking->customer_name . ' - ' . $booking->booking_date . ' - ' . $booking->payment_status); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php else : ?>
+                    <p>No bookings available for this tour.</p>
+                <?php endif; ?>
+            </div>
+        </article>
+        <?php
     endwhile;
     ?>
 </main><!-- #main -->
