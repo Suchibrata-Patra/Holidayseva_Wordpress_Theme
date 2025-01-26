@@ -205,7 +205,7 @@ function display_tour_meta_box($post) {
                 </div>
                 <?php endforeach; ?>
             </div>
-            <button type="button" id="add-review" style="margin-top:30px;border-radius:50px;background-color:green;color:white;border:none;padding:5px 8px;">Add Review</button>
+            <button type="button" id="add-review" style="margin-top:30px;border-radius:50px;background-color:green;color:white;border:none;padding:5px 8px;">Add Review +</button>
         </div>
 
         <script>
