@@ -73,16 +73,16 @@ get_header(); ?>
             echo '<h3>Google Map:</h3><p>' . esc_url($google_map_link) . '</p>';
         }
 
-        if (!empty($tour_cover_images)) {
-            echo '<h3>Gallery:</h3>';
-            $images = is_array($tour_cover_images) ? $tour_cover_images : explode(',', $tour_cover_images);
-            foreach ($images as $image_url) {
-                $trimmed_url = trim($image_url);
-                if (!empty($trimmed_url)) {
-                    echo '<p>' . esc_url($trimmed_url) . '</p>';
-                }
-            }
-        }
+        // if (!empty($tour_cover_images)) {
+        //     echo '<h3>Gallery:</h3>';
+        //     $images = is_array($tour_cover_images) ? $tour_cover_images : explode(',', $tour_cover_images);
+        //     foreach ($images as $image_url) {
+        //         $trimmed_url = trim($image_url);
+        //         if (!empty($trimmed_url)) {
+        //             echo '<p>' . esc_url($trimmed_url) . '</p>';
+        //         }
+        //     }
+        // }
 
         if (!empty($reviews)) {
             echo '<h3>Reviews:</h3>';
