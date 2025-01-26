@@ -174,13 +174,13 @@ function display_tour_meta_box($post) {
                     </h4>
                     <div style="display:flex;">
                         <div class="form-group">
-                            <label for="reviewer_name_<?php echo $index; ?>">Reviewer Name</label>
+                            <label for="reviewer_name_<?php echo $index; ?>">Name</label>
                             <input type="text" name="reviews[<?php echo $index; ?>][name]"
                                 id="reviewer_name_<?php echo $index; ?>" class="form-control"
                                 value="<?php echo esc_attr($review['name'] ?? ''); ?>" />
                         </div>
                         <div class="form-group" style="margin-left:30px;">
-                            <label for="review_score_<?php echo $index; ?>">Review Score</label>
+                            <label for="review_score_<?php echo $index; ?>">Rating</label>
                             <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>"
                                 class="form-control" style="padding:10px 10px;">
                                 <?php for ($i = 1; $i <= 5; $i++) : ?>
@@ -192,7 +192,7 @@ function display_tour_meta_box($post) {
                         </div>
 
                         <div class="form-group" style="margin-left:30px;">
-                        <label for="review_content_<?php echo $index; ?>">Review Content</label>
+                        <label for="review_content_<?php echo $index; ?>">Review</label>
                         <textarea name="reviews[<?php echo $index; ?>][content]"
                             id="review_content_<?php echo $index; ?>"
                             class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
