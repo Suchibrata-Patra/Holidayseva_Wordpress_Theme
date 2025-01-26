@@ -179,7 +179,14 @@ get_header(); ?>
             <?php if (!empty($review['name']) || !empty($review['content']) || !empty($review['score'])) : ?>
                 <li>
                     <strong>Name:</strong> <?php echo esc_html($review['name']); ?><br>
-                    <strong>Score:</strong> <?php echo esc_html($review['score']); ?>/10<br>
+                    <strong>Score:</strong>
+                    <?php
+                    $score = intval($review['score']);
+                    // Display stars
+                    for ($i = 0; $i < $score; $i++) {
+                        echo '⭐';
+                    }
+                    ?><br>
                     <strong>Content:</strong> <?php echo esc_html($review['content']); ?>
                 </li>
             <?php endif; ?>
@@ -188,6 +195,7 @@ get_header(); ?>
 <?php else : ?>
     <p>No reviews available for this tour.</p>
 <?php endif; ?>
+
 
             </ul>
             <?php endif; ?>
