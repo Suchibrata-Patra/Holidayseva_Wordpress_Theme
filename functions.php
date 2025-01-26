@@ -105,10 +105,10 @@ function add_global_variables_menu() {
 }
 add_action('admin_menu', 'add_global_variables_menu');
 
-function add_global_variables_menu() {
+function add_global_variables_menu_new() {
     add_menu_page(
-        'Global Variables',               // Page title
-        'Global Variables',               // Menu title
+        'Global Variables New',               // Page title
+        'Global Variables New',               // Menu title
         'manage_options',                 // Capability
         'global-variables',               // Menu slug
         'display_global_variables_page',  // Callback function
@@ -116,7 +116,7 @@ function add_global_variables_menu() {
         20                                // Position
     );
 }
-add_action('admin_menu', 'add_global_variables_menu');
+add_action('admin_menu', 'add_global_variables_menu_new');
 
 // Display Global Variables page
 function display_global_variables_page() {
