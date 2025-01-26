@@ -154,7 +154,7 @@ function display_tour_meta_box($post) {
         </div>
 
         <!-- Highlights -->
-        <div id="highlights" class="hidden">
+        <!-- <div id="highlights" class="hidden">
             <h3 class="form-title">Highlights</h3>
             <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
@@ -165,7 +165,45 @@ function display_tour_meta_box($post) {
                     value="<?php echo isset($tour_highlights[$i - 1]) ? esc_attr($tour_highlights[$i - 1]) : ''; ?>" />
             </div>
             <?php endfor; ?>
-        </div>
+        </div> -->
+        <div id="highlights">
+    <h3 class="form-title">Highlights</h3>
+    <div id="highlight-fields">
+        <?php if (!empty($tour_highlights)) : ?>
+            <?php foreach ($tour_highlights as $index => $highlight) : ?>
+                <div class="form-group">
+                    <input type="text" name="tour_highlights[]" class="form-control" value="<?php echo esc_attr($highlight); ?>" />
+                    <button type="button" class="remove-highlight">Remove</button>
+                </div>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <div class="form-group">
+                <input type="text" name="tour_highlights[]" class="form-control" placeholder="Enter highlight" />
+                <button type="button" class="remove-highlight">Remove</button>
+            </div>
+        <?php endif; ?>
+    </div>
+    <button type="button" id="add-highlight">Add Highlight</button>
+</div>
+<script>
+    document.getElementById('add-highlight').addEventListener('click', function () {
+        const container = document.getElementById('highlight-fields');
+        const newField = document.createElement('div');
+        newField.classList.add('form-group');
+        newField.innerHTML = `
+            <input type="text" name="tour_highlights[]" class="form-control" placeholder="Enter highlight" />
+            <button type="button" class="remove-highlight">Remove</button>
+        `;
+        container.appendChild(newField);
+    });
+
+    document.getElementById('highlight-fields').addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-highlight')) {
+            e.target.parentElement.remove();
+        }
+    });
+</script>
+
 
 
 
