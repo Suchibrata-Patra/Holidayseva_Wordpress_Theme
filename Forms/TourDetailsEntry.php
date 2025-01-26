@@ -616,12 +616,7 @@ function save_tour_meta($post_id) {
     } else {
         // If highlights are empty, delete the meta to avoid clutter
         delete_post_meta($post_id, '_excluded');
-    }
-
-    // Google Maps Iframes
-    if (isset($_POST['google_map_iframe'])) {
-        update_post_meta($post_id, '_google_map_iframe', wp_kses_post($_POST['google_map_iframe']));
-    }    
+    } 
 
 }
 
@@ -661,6 +656,20 @@ function save_tour_pricing_data($post_id) {
     }
 }
 add_action('save_post', 'save_tour_pricing_data');
+
+// Save the iframe data
+function save_google_map_iframe($post_id) {
+    // Check if it's a valid save request and not an autosave
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+    
+    // Check if it's the right post type (if applicable)
+    if (isset($_POST['google_map_iframe'])) {
+        $google_map_iframe = sanitize_text_field($_POST['google_map_iframe']);
+        update_post_meta($post_id, '_google_map_iframe', $google_map_iframe);
+    }
+    return $post_id;
+}
+add_action('save_post', 'save_google_map_iframe');
 
 
 ?>
