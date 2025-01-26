@@ -140,6 +140,21 @@ function display_tour_meta_box($post) {
         <?php endfor; ?>
 </div>
 
+        <!--Excluded -->
+        <div id="excluded">
+<h3 class="form-title">excluded</h3>
+        <?php for ($i = 1; $i <= 20; $i++) : ?>
+            <div class="form-group">
+                    <label for="excluded_<?php echo $i; ?>">Excluded Item <?php echo $i; ?></label>
+                    <input type="text" 
+                           name="excluded[]" 
+                           id="excluded_<?php echo $i; ?>" 
+                           class="form-control" 
+                           value="<?php echo isset($excluded[$i - 1]) ? esc_attr($excluded[$i - 1]) : ''; ?>" />
+                </div>
+        <?php endfor; ?>
+</div>
+
         <!--Reviews -->
         <div id="Reviews">
 <h3 class="form-title">Reviews</h3>
@@ -448,6 +463,17 @@ function save_tour_meta($post_id) {
     } else {
         // If highlights are empty, delete the meta to avoid clutter
         delete_post_meta($post_id, '_included');
+    }
+    // Saving the Excluded
+    if (isset($_POST['excluded']) && is_array($_POST['excluded'])) {
+        // Sanitize each highlight
+        $sanitized_highlights = array_map('sanitize_text_field', $_POST['excluded']);
+        
+        // Save as post meta
+        update_post_meta($post_id, '_excluded', $sanitized_highlights);
+    } else {
+        // If highlights are empty, delete the meta to avoid clutter
+        delete_post_meta($post_id, '_excluded');
     }
 
 }
