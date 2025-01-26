@@ -17,22 +17,29 @@ get_header(); ?>
         $post_id = get_the_ID();
 
         // Collect data
-        $tour_title = get_the_title();
-        $tour_thumbnail = has_post_thumbnail() ? get_the_post_thumbnail(null, 'large') : '';
-        $tour_description = get_post_meta($post_id, '_tour_description', true);
-        $tour_location = get_post_meta($post_id, '_tour_location', true);
-        $tour_duration = get_post_meta($post_id, '_tour_duration', true);
-        $tour_price = get_post_meta($post_id, '_tour_price', true);
-        $tour_availability = get_post_meta($post_id, '_tour_availability', true);
-        $tour_cover_images = get_post_meta($post_id, '_tour_cover_images', true);
-        $tour_highlights = get_post_meta($post_id, '_tour_highlights', true);
-        $day_plans = get_post_meta($post_id, '_day_plans', true) ?: [];
-        $itinerary = get_post_meta($post_id, '_itinerary', true);
-        $included = get_post_meta($post_id, '_included', true);
-        $excluded = get_post_meta($post_id, '_excluded', true);
-        $google_map_link = get_post_meta($post_id, '_google_map_link', true);
-        $reviews = get_post_meta($post_id, '_reviews', true);
-        $reviews = is_array($reviews) ? $reviews : [];
+    // Retrieve existing custom fields values
+    $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
+    $tour_name = get_post_meta($post->ID, '_tour_name', true);
+    $tour_description = get_post_meta($post->ID, '_tour_description', true);
+    $tour_details = get_post_meta($post->ID, '_tour_details', true);
+    $tour_location = get_post_meta($post->ID, '_tour_location', true);
+    $tour_duration_days = get_post_meta($post->ID, '_tour_duration_days', true);
+    $tour_duration_nights = get_post_meta($post->ID, '_tour_duration_nights', true);
+    $day_plans = get_post_meta($post->ID, '_day_plans', true) ?: [];
+
+
+    $tour_price = get_post_meta($post->ID, '_tour_price', true);
+    $tour_offers = get_post_meta($post->ID, '_tour_offers', true);
+    $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
+    $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
+
+    $itinerary = get_post_meta($post->ID, '_itinerary', true);
+    $included = get_post_meta($post->ID, '_included', true);
+    $excluded = get_post_meta($post->ID, '_excluded', true);
+    // Fetch the saved Google Maps iframe
+    $google_map_link = get_post_meta(get_the_ID(), '_google_map_link', true);
+    $reviews = get_post_meta($post->ID, '_reviews', true);
+    $reviews = is_array($reviews) ? $reviews : [];
 
         global $wpdb;
         $table_name = $wpdb->prefix . 'custom_bookings';
@@ -45,7 +52,7 @@ get_header(); ?>
         echo $tour_thumbnail;
         echo '<p>' . esc_html($tour_description) . '</p>';
         echo '<p>Location: ' . esc_html($tour_location) . '</p>';
-        echo '<p>Duration: ' . esc_html($tour_duration) . '</p>';
+        echo '<p>Duration: ' . esc_html($tour_duration_days) . '</p>';
         echo '<p>Price: ' . esc_html($tour_price) . '</p>';
         echo '<p>Availability: ' . esc_html($tour_availability) . '</p>';
         echo '<p>Highlights: ' . esc_html($tour_highlights) . '</p>';
