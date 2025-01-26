@@ -272,7 +272,7 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
 <div id="google_map_iframe">
     <h3 class="form-title">Google Maps Iframe Input</h3>
     <div class="form-group">
-        <label for="google_map_link">Google Maps Iframe Link</label>
+        <label for="google_map_link">Google Maps iframe Link</label>
         <textarea 
             name="google_map_link" 
             id="google_map_link" 
@@ -282,7 +282,7 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
     </div>
     <div class="map-preview">
         <h4>Map Preview</h4>
-        <div id="iframe_preview" style="border: 1px solid #ddd; padding: 10px; height: 400px;">
+        <div id="iframe_preview" style="border: 1px solid #ddd; padding: 10px; height:auto;">
             <!-- The iframe will load here -->
         </div>
     </div>
