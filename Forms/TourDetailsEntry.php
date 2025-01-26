@@ -220,6 +220,7 @@ function display_tour_meta_box($post) {
                     const reviewHTML = `
             <div class=\"review-set\" data-index=\"${index}\" style=\"border:2px solid red;\">
                 <h4>Review ${index + 1}</h4>
+                <div style=\"display:flex;\">
                 <div class=\"form-group\">
                     <label for=\"reviewer_name_${index}\">Reviewer Name</label>
                     <input type=\"text\" name=\"reviews[${index}][name]\" id=\"reviewer_name_${index}\" class=\"form-control\" />
@@ -233,6 +234,7 @@ function display_tour_meta_box($post) {
                 <div class=\"form-group\">
                     <label for=\"review_content_${index}\">Review Content</label>
                     <textarea name=\"reviews[${index}][content]\" id=\"review_content_${index}\" class=\"form-control\"></textarea>
+                </div>
                 </div>
                 <button type=\"button\" class=\"remove-review\">Remove</button>
             </div>`;
