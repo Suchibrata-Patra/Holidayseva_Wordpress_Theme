@@ -208,3 +208,38 @@ function display_global_variables_page() {
     </div>
     <?php
 }
+// Add custom bulk action
+function custom_bulk_actions($bulk_actions) {
+    $bulk_actions['custom_action'] = 'My Custom Action'; // Define custom action
+    return $bulk_actions;
+}
+
+add_filter('bulk_actions-edit-page', 'custom_bulk_actions'); // Add to pages screen
+add_filter('bulk_actions-edit-post', 'custom_bulk_actions'); // Add to posts screen (if needed)
+
+// Handle custom bulk action
+function custom_bulk_action_handle($redirect_to, $doaction, $post_ids) {
+    if ($doaction === 'custom_action') {
+        // Perform your custom action here, for example, update posts/pages
+        foreach ($post_ids as $post_id) {
+            // Example: Add a custom field or update something for each selected post/page
+            update_post_meta($post_id, '_custom_field', 'Value added by bulk action');
+        }
+        // Optionally, add a custom message to display after the action
+        $redirect_to = add_query_arg('bulk_custom_action', count($post_ids), $redirect_to);
+    }
+    return $redirect_to;
+}
+
+add_filter('handle_bulk_actions-edit-page', 'custom_bulk_action_handle', 10, 3);
+add_filter('handle_bulk_actions-edit-post', 'custom_bulk_action_handle', 10, 3);
+
+// Display custom success message
+function custom_bulk_action_admin_notice() {
+    if (isset($_REQUEST['bulk_custom_action'])) {
+        $count = intval($_REQUEST['bulk_custom_action']);
+        printf('<div id="message" class="updated fade"><p>' . $count . ' posts/pages were updated with custom action.</p></div>');
+    }
+}
+
+add_action('admin_notices', 'custom_bulk_action_admin_notice');
