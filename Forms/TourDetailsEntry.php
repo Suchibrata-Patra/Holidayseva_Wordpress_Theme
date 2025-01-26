@@ -100,7 +100,7 @@ function display_tour_meta_box($post) {
                     </div>
                     <div class="form-group" style="margin-left:10px;">
                         <label for="tour_note">Note</label>
-                        <span name="tour_note">By Default, it will take <strong><i><u>Same Day tour Package.</u></i></strong> <br>For same day tour package choose Day = 1 and Nights = 0 </span>
+                        <span name="tour_note">By Default, it will take <strong><i><u>Same Day tour Package.</u></i></strong> <br>For same day tour package choose Day = 1 and Nights = 0.</span>
                     </div>
 
                 </div>
