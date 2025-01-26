@@ -221,35 +221,6 @@ function display_tour_meta_box($post) {
     </form>
 </div>
 
-<script>
-document.getElementById('add_offer_btn').addEventListener('click', function () {
-    const offersSection = document.getElementById('offers_section');
-    const newOfferGroup = document.createElement('div');
-    newOfferGroup.classList.add('offer-group');
-
-    newOfferGroup.innerHTML = `
-        <label>From</label>
-        <input type="number" name="offer[from][]" class="form-control" placeholder="Min People" />
-        <label>To</label>
-        <input type="number" name="offer[to][]" class="form-control" placeholder="Max People" />
-        <label>Discount (%)</label>
-        <input type="number" name="offer[discount][]" class="form-control" placeholder="Discount" />
-        <button type="button" class="remove-offer-btn">Remove</button>
-    `;
-
-    offersSection.appendChild(newOfferGroup);
-
-    newOfferGroup.querySelector('.remove-offer-btn').addEventListener('click', function () {
-        newOfferGroup.remove();
-    });
-});
-
-document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-        btn.parentElement.remove();
-    });
-});
-</script>
 
 <style>
 .offer-group {
