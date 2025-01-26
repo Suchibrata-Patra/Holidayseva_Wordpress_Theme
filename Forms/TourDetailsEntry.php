@@ -32,7 +32,7 @@ function display_tour_meta_box($post) {
         <a href="#" class="tab-link" data-target="itinerary">Itinerary</a>
         <a href="#" class="tab-link" data-target="included">Included (New)</a>
         <a href="#" class="tab-link" data-target="excluded">Excluded (New)</a>
-        <a href="#" class="tab-link" data-target="pricing"> <strong style="font-weight:600!important;">Pricing</strong>
+        <a href="#" class="tab-link" data-target="pricing"> <strong style="font-weight:600!important;">Price Settings</strong>
         </a>
         <a href="#" class="tab-link" data-target="reviews">Reviews</a>
         <a href="#" class="tab-link" data-target="frequently_asked_questions">FAQ</a>
@@ -193,7 +193,6 @@ function display_tour_meta_box($post) {
         <!-- pricing Strategy -->
         <div id="pricing" class="hidden">
     <h3 class="form-title">Basic Info</h3>
-    <form method="post" action="" class="styled-form">
         <div class="form-group">
             <label for="tour_price">Price</label>
             <input type="number" name="tour_price" id="tour_price" class="form-control"
@@ -202,7 +201,6 @@ function display_tour_meta_box($post) {
 
         <div id="offers_section">
     <h4>Discount by adult number booking</h4>
-
     <?php if (!empty($tour_offers)) : ?>
         <?php foreach ($tour_offers as $offer) : ?>
             <div class="offer-group">
@@ -220,7 +218,6 @@ function display_tour_meta_box($post) {
         <button type="button" id="add_offer_btn" class="btn btn-secondary">Add More Offers</button>
         <br><br>
         <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
 </div>
 
 <script>
