@@ -194,7 +194,7 @@ function display_tour_meta_box($post) {
         <div id="pricing" class="hidden">
     <h3 class="form-title">Basic Info</h3>
         <div class="form-group">
-            <label for="tour_price">Price</label>
+            <label for="tour_price">Price (Per Adults)</label>
             <input type="number" name="tour_price" id="tour_price" class="form-control"
                 value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR" />
         </div>
