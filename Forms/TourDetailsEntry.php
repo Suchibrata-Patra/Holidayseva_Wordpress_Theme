@@ -17,8 +17,7 @@ function display_tour_meta_box($post) {
     $excluded = get_post_meta($post->ID, '_excluded', true);
     // Fetch the saved Google Maps iframe
     $google_map_link = get_post_meta(get_the_ID(), '_google_map_link', true);
-    $reviews = get_post_meta(get_the_ID(), '_reviews', true);
-
+    $reviews = get_post_meta($post->ID, '_reviews', true);
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
     var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
@@ -334,41 +333,6 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
 
 
         <!-- Reviews-->
-        <div id="reviews-wrapper">
-    <h3 class="form-title">Customer Reviews</h3>
-    
-    <div id="reviews-container">
-        <!-- A single name-review pair -->
-        <div class="review-pair">
-            <div class="form-group">
-                <label for="reviewers_name[]">Customer Name</label>
-                <input type="text" name="reviewers_name[]" class="form-control" placeholder="Enter Customer Name" />
-            </div>
-            <div class="form-group">
-                <label for="customer_review[]">Customer Review</label>
-                <textarea name="customer_review[]" class="form-control" placeholder="Enter Customer Review"></textarea>
-            </div>
-        </div>
-    </div>
-
-    <!-- Add New Review Button -->
-    <button type="button" id="add-review" class="button">Add Another Review</button>
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const addReviewButton = document.getElementById('add-review');
-    const reviewsContainer = document.getElementById('reviews-container');
-
-    addReviewButton.addEventListener('click', function() {
-        // Clone the first review-pair and clear its input values
-        const reviewPair = document.querySelector('.review-pair').cloneNode(true);
-        reviewPair.querySelectorAll('input, textarea').forEach(input => input.value = '');
-        reviewsContainer.appendChild(reviewPair);
-    });
-});
-</script>
-
         
         
         
@@ -622,28 +586,7 @@ function save_tour_meta($post_id) {
         delete_post_meta($post_id, '_itinerary');
     }
 
-    // Saving the Reiews
-    if (isset($_POST['reviews']) && is_array($_POST['review'])) {
-        // Sanitize each highlight
-        $sanitized_highlights = array_map('sanitize_text_field', $_POST['itinerary']);
-        
-        // Save as post meta
-        update_post_meta($post_id, '_reviews', $sanitized_highlights);
-    } else {
-        // If highlights are empty, delete the meta to avoid clutter
-        delete_post_meta($post_id, '_reviews');
-    }
-    // Saving the Reviewer's name
-    if (isset($_POST['reviewers_name']) && is_array($_POST['reviewers_name'])) {
-        // Sanitize each highlight
-        $sanitized_highlights = array_map('sanitize_text_field', $_POST['reviewers_name']);
-        
-        // Save as post meta
-        update_post_meta($post_id, '_reviewers_name', $sanitized_highlights);
-    } else {
-        // If highlights are empty, delete the meta to avoid clutter
-        delete_post_meta($post_id, '_reviewers_name');
-    }
+
 
     // Saving the Included
     if (isset($_POST['included']) && is_array($_POST['included'])) {
@@ -728,39 +671,6 @@ function save_google_map_and_tour_price($post_id) {
     return $post_id;
 }
 add_action('save_post', 'save_google_map_and_tour_price');
-
-// Save Reviews and Reviewers' Names as Pairs
-function save_reviews_meta($post_id) {
-    // Verify nonce for security
-    if (!isset($_POST['your_nonce_field']) || !wp_verify_nonce($_POST['your_nonce_field'], 'your_nonce_action')) {
-        return;
-    }
-
-    // Check if name-review arrays are set
-    if (isset($_POST['reviewers_name'], $_POST['customer_review']) && 
-        is_array($_POST['reviewers_name']) && 
-        is_array($_POST['customer_review'])) {
-        
-        $pairs = [];
-        foreach ($_POST['reviewers_name'] as $index => $name) {
-            // Make sure both name and review exist for the pair
-            if (!empty($name) && !empty($_POST['customer_review'][$index])) {
-                $pairs[] = [
-                    'name' => sanitize_text_field($name),
-                    'review' => sanitize_textarea_field($_POST['customer_review'][$index])
-                ];
-            }
-        }
-
-        // Save serialized pairs
-        update_post_meta($post_id, '_reviews', $pairs);
-    } else {
-        // Delete meta if no valid pairs exist
-        delete_post_meta($post_id, '_reviews');
-    }
-}
-add_action('save_post', 'save_reviews_meta');
-
 
 
 ?>
