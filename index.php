@@ -1,11 +1,4 @@
-<?php
-/**
- * The template for displaying single Tour posts.
- *
- * @package YourThemeName
- */
 
-get_header(); ?>
 
 <main id="primary" class="site-main">
 <?php
