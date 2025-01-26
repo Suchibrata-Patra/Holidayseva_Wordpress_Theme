@@ -203,7 +203,7 @@ function display_tour_meta_box($post) {
 
                     </div>
                     
-                    <button type="button" class="remove-review">Remove</button>
+                    <button type="button" class="remove-review" style="border-radius:50px;background-color:red;color:white;">Remove</button>
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -245,7 +245,7 @@ function display_tour_meta_box($post) {
                     <textarea name=\"reviews[${index}][content]\" id=\"review_content_${index}\" class=\"form-control\"></textarea>
                 </div>
                 </div>
-                <button type=\"button\" class=\"remove-review\">Remove</button>
+                <button type=\"button\" class=\"remove-review\" style=\"border-radius:50px;background-color:red;color:white;\">Remove</button>
             </div>`;
 
                     const tempDiv = document.createElement('div');
