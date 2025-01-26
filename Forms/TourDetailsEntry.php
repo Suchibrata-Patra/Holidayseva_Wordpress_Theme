@@ -173,7 +173,7 @@ function display_tour_meta_box($post) {
                     <h4>Review
                         <?php echo $index + 1; ?>
                     </h4>
-                    <button type="button" class="remove-review" style="padding:2px 5px;border-radius:50px;">Remove</button>
+                    <button type="button" class="remove-review" style="padding:2px 5px;border-radius:50px;">Remove &#xe14a;</button>
                     </div>
                     <div style="display:flex;">
                         <div class="form-group">
