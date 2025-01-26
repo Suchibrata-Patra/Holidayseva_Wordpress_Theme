@@ -35,7 +35,8 @@ function display_tour_meta_box($post) {
         <a href="#" class="tab-link" data-target="itinerary">Itinerary</a>
         <a href="#" class="tab-link" data-target="included">Included (New)</a>
         <a href="#" class="tab-link" data-target="excluded">Excluded (New)</a>
-        <a href="#" class="tab-link" data-target="pricing"> <strong style="font-weight:600!important;">Price Settings</strong>
+        <a href="#" class="tab-link" data-target="pricing"> <strong style="font-weight:600!important;">Price
+                Settings</strong>
         </a>
         <a href="#" class="tab-link" data-target="reviews">Reviews</a>
         <a href="#" class="tab-link" data-target="google_map_iframe">Google Map Iframe</a>
@@ -82,7 +83,7 @@ function display_tour_meta_box($post) {
                     <input type="text" name="tour_duration" id="tour_duration" class="form-control"
                         value="<?php echo esc_attr($tour_duration); ?>" placeholder="7 Night 8 Days" />
                 </div>
-                
+
                 <div class="form-group">
                     <label for="tour_availability">Availability</label>
                     <input type="text" name="tour_availability" id="tour_availability" class="form-control"
@@ -163,48 +164,57 @@ function display_tour_meta_box($post) {
 
 
         <!-- Reviews -->
-<div id="reviews">
-    <h3 class="form-title">Reviews</h3>
-    <div id="reviews-container">
-        <?php foreach ($reviews as $index => $review) : ?>
-        <div class="review-set" data-index="<?php echo $index; ?>">
-            <h4>Review <?php echo $index + 1; ?></h4>
-            <div style="display:flex;">
-            <div class="form-group">
-                <label for="reviewer_name_<?php echo $index; ?>">Reviewer Name</label>
-                <input type="text" name="reviews[<?php echo $index; ?>][name]" id="reviewer_name_<?php echo $index; ?>" class="form-control" value="<?php echo esc_attr($review['name'] ?? ''); ?>" />
-            </div>
-            <div class="form-group" style="margin-left:30px;">
-    <label for="review_score_<?php echo $index; ?>">Review Score</label>
-    <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>" class="form-control" style="padding:10px 10px;">
-        <?php for ($i = 1; $i <= 5; $i++) : ?>
-            <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '', $i); ?>>
-                <?php echo str_repeat('&#9733;', $i); ?>
-            </option>
-        <?php endfor; ?>
-    </select>
-</div>
+        <div id="reviews">
+            <h3 class="form-title">Reviews</h3>
+            <div id="reviews-container">
+                <?php foreach ($reviews as $index => $review) : ?>
+                <div class="review-set" data-index="<?php echo $index; ?>">
+                    <h4>Review
+                        <?php echo $index + 1; ?>
+                    </h4>
+                    <div style="display:flex;">
+                        <div class="form-group">
+                            <label for="reviewer_name_<?php echo $index; ?>">Reviewer Name</label>
+                            <input type="text" name="reviews[<?php echo $index; ?>][name]"
+                                id="reviewer_name_<?php echo $index; ?>" class="form-control"
+                                value="<?php echo esc_attr($review['name'] ?? ''); ?>" />
+                        </div>
+                        <div class="form-group" style="margin-left:30px;">
+                            <label for="review_score_<?php echo $index; ?>">Review Score</label>
+                            <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>"
+                                class="form-control" style="padding:10px 10px;">
+                                <?php for ($i = 1; $i <= 5; $i++) : ?>
+                                <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '' , $i); ?>>
+                                    <?php echo str_repeat('&#9733;', $i); ?>
+                                </option>
+                                <?php endfor; ?>
+                            </select>
+                        </div>
 
+                        <div class="form-group">
+                        <label for="review_content_<?php echo $index; ?>">Review Content</label>
+                        <textarea name="reviews[<?php echo $index; ?>][content]"
+                            id="review_content_<?php echo $index; ?>"
+                            class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
+                    </div>
+
+                    </div>
+                    
+                    <button type="button" class="remove-review">Remove</button>
+                </div>
+                <?php endforeach; ?>
             </div>
-            <div class="form-group">
-                <label for="review_content_<?php echo $index; ?>">Review Content</label>
-                <textarea name="reviews[<?php echo $index; ?>][content]" id="review_content_<?php echo $index; ?>" class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
-            </div>
-            <button type="button" class="remove-review">Remove</button>
+            <button type="button" id="add-review">Add Review</button>
         </div>
-        <?php endforeach; ?>
-    </div>
-    <button type="button" id="add-review">Add Review</button>
-</div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const container = document.getElementById('reviews-container');
-    const addReviewButton = document.getElementById('add-review');
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const container = document.getElementById('reviews-container');
+                const addReviewButton = document.getElementById('add-review');
 
-    addReviewButton.addEventListener('click', function() {
-        const index = container.children.length;
-        const reviewHTML = `
+                addReviewButton.addEventListener('click', function () {
+                    const index = container.children.length;
+                    const reviewHTML = `
             <div class=\"review-set\" data-index=\"${index}\">
                 <h4>Review ${index + 1}</h4>
                 <div class=\"form-group\">
@@ -224,18 +234,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button type=\"button\" class=\"remove-review\">Remove</button>
             </div>`;
 
-        const tempDiv = document.createElement('div');
-        tempDiv.innerHTML = reviewHTML.trim();
-        container.appendChild(tempDiv.firstChild);
-    });
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = reviewHTML.trim();
+                    container.appendChild(tempDiv.firstChild);
+                });
 
-    container.addEventListener('click', function(event) {
-        if (event.target.classList.contains('remove-review')) {
-            event.target.closest('.review-set').remove();
-        }
-    });
-});
-</script>
+                container.addEventListener('click', function (event) {
+                    if (event.target.classList.contains('remove-review')) {
+                        event.target.closest('.review-set').remove();
+                    }
+                });
+            });
+        </script>
 
 
 
@@ -253,41 +263,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
         <!-- pricing Strategy -->
         <div id="pricing" class="hidden">
-    <h3 class="form-title">Basic Info</h3>
-        <div class="form-group">
-            <label for="tour_price">Price (Per Adult)</label>
-            <input type="number" name="tour_price" id="tour_price" class="form-control"
-                value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR" />
+            <h3 class="form-title">Basic Info</h3>
+            <div class="form-group">
+                <label for="tour_price">Price (Per Adult)</label>
+                <input type="number" name="tour_price" id="tour_price" class="form-control"
+                    value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR" />
+            </div>
+
+            <div id="offers_section">
+                <h4>Discount by adult number booking</h4>
+                <?php if (!empty($tour_offers)) : ?>
+                <?php foreach ($tour_offers as $offer) : ?>
+                <div class="offer-group">
+                    <label>From</label>
+                    <input type="number" name="offer[from][]" class="form-control"
+                        value="<?php echo esc_attr($offer['from']); ?>" />
+                    <label>To</label>
+                    <input type="number" name="offer[to][]" class="form-control"
+                        value="<?php echo esc_attr($offer['to']); ?>" />
+                    <label>Discount (%)</label>
+                    <input type="number" name="offer[discount][]" class="form-control"
+                        value="<?php echo esc_attr($offer['discount']); ?>" />
+                    <button type="button" class="remove-offer-btn">Remove</button>
+                </div>
+                <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
+            <button type="button" id="add_offer_btn" class="btn btn-secondary">Add More Offers</button>
+            <br><br>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </div>
 
-        <div id="offers_section">
-    <h4>Discount by adult number booking</h4>
-    <?php if (!empty($tour_offers)) : ?>
-        <?php foreach ($tour_offers as $offer) : ?>
-            <div class="offer-group">
-                <label>From</label>
-                <input type="number" name="offer[from][]" class="form-control" value="<?php echo esc_attr($offer['from']); ?>" />
-                <label>To</label>
-                <input type="number" name="offer[to][]" class="form-control" value="<?php echo esc_attr($offer['to']); ?>" />
-                <label>Discount (%)</label>
-                <input type="number" name="offer[discount][]" class="form-control" value="<?php echo esc_attr($offer['discount']); ?>" />
-                <button type="button" class="remove-offer-btn">Remove</button>
-            </div>
-        <?php endforeach; ?>
-    <?php endif; ?>
-</div>
-        <button type="button" id="add_offer_btn" class="btn btn-secondary">Add More Offers</button>
-        <br><br>
-        <button type="submit" class="btn btn-primary">Submit</button>
-</div>
+        <script>
+            document.getElementById('add_offer_btn').addEventListener('click', function () {
+                const offersSection = document.getElementById('offers_section');
+                const newOfferGroup = document.createElement('div');
+                newOfferGroup.classList.add('offer-group');
 
-<script>
-document.getElementById('add_offer_btn').addEventListener('click', function () {
-    const offersSection = document.getElementById('offers_section');
-    const newOfferGroup = document.createElement('div');
-    newOfferGroup.classList.add('offer-group');
-
-    newOfferGroup.innerHTML = `
+                newOfferGroup.innerHTML = `
         <label>From</label>
         <input type="number" name="offer[from][]" class="form-control" placeholder="Min People" />
         <label>To</label>
@@ -297,97 +310,96 @@ document.getElementById('add_offer_btn').addEventListener('click', function () {
         <button type="button" class="remove-offer-btn">Remove</button>
     `;
 
-    offersSection.appendChild(newOfferGroup);
+                offersSection.appendChild(newOfferGroup);
 
-    newOfferGroup.querySelector('.remove-offer-btn').addEventListener('click', function () {
-        newOfferGroup.remove();
-    });
-});
+                newOfferGroup.querySelector('.remove-offer-btn').addEventListener('click', function () {
+                    newOfferGroup.remove();
+                });
+            });
 
-document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-        btn.parentElement.remove();
-    });
-});
-</script>
+            document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    btn.parentElement.remove();
+                });
+            });
+        </script>
 
-<style>
-.offer-group {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.remove-offer-btn {
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.remove-offer-btn:hover {
-    background-color: #ff1a1a;
-}
-</style>
-
-
-<!-- Google Maps iframes -->
-<div id="google_map_iframe">
-    <h3 class="form-title">Google Maps Iframe Input</h3>
-    <div class="form-group">
-        <label for="google_map_link">Google Maps iframe Link</label>
-        <textarea 
-            name="google_map_link" 
-            id="google_map_link" 
-            class="form-control" 
-            placeholder="Paste your Google Maps iframe embed link here" 
-            rows="4"><?php echo esc_textarea($google_map_link); ?></textarea>
-    </div>
-    <div class="map-preview">
-        <h4>Map Preview</h4>
-        <div id="iframe_preview" style="border: 1px solid #ddd; padding: 10px; height:auto;">
-            <!-- The iframe will load here -->
-        </div>
-    </div>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const googleMapInput = document.getElementById('google_map_link');
-        const iframePreview = document.getElementById('iframe_preview');
-        
-        // Check if there's an iframe link saved in localStorage
-        const savedIframeCode = localStorage.getItem('googleMapIframe');
-        if (savedIframeCode) {
-            googleMapInput.value = savedIframeCode; // Load the saved value back into the textarea
-            iframePreview.innerHTML = savedIframeCode; // Show the saved iframe preview
-        }
-
-        // Event listener for changes in the textarea
-        googleMapInput.addEventListener('input', function () {
-            const iframeCode = googleMapInput.value.trim();
-            // Check if the input contains an iframe tag
-            if (iframeCode.startsWith('<iframe') && iframeCode.endsWith('</iframe>')) {
-                iframePreview.innerHTML = iframeCode; // Update the preview with the iframe
-                localStorage.setItem('googleMapIframe', iframeCode); // Save the iframe code in localStorage
-            } else {
-                iframePreview.innerHTML = '<p style="color: red;">Invalid iframe code. Please paste a valid Google Maps iframe embed link.</p>';
-                localStorage.removeItem('googleMapIframe'); // Clear the saved iframe if it's invalid
+        <style>
+            .offer-group {
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
             }
-        });
-    });
-</script>
-<!-- End Google Maps iframe -->
+
+            .remove-offer-btn {
+                background-color: #ff4d4d;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .remove-offer-btn:hover {
+                background-color: #ff1a1a;
+            }
+        </style>
+
+
+        <!-- Google Maps iframes -->
+        <div id="google_map_iframe">
+            <h3 class="form-title">Google Maps Iframe Input</h3>
+            <div class="form-group">
+                <label for="google_map_link">Google Maps iframe Link</label>
+                <textarea name="google_map_link" id="google_map_link" class="form-control"
+                    placeholder="Paste your Google Maps iframe embed link here"
+                    rows="4"><?php echo esc_textarea($google_map_link); ?></textarea>
+            </div>
+            <div class="map-preview">
+                <h4>Map Preview</h4>
+                <div id="iframe_preview" style="border: 1px solid #ddd; padding: 10px; height:auto;">
+                    <!-- The iframe will load here -->
+                </div>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const googleMapInput = document.getElementById('google_map_link');
+                const iframePreview = document.getElementById('iframe_preview');
+
+                // Check if there's an iframe link saved in localStorage
+                const savedIframeCode = localStorage.getItem('googleMapIframe');
+                if (savedIframeCode) {
+                    googleMapInput.value = savedIframeCode; // Load the saved value back into the textarea
+                    iframePreview.innerHTML = savedIframeCode; // Show the saved iframe preview
+                }
+
+                // Event listener for changes in the textarea
+                googleMapInput.addEventListener('input', function () {
+                    const iframeCode = googleMapInput.value.trim();
+                    // Check if the input contains an iframe tag
+                    if (iframeCode.startsWith('<iframe') && iframeCode.endsWith('</iframe>')) {
+                        iframePreview.innerHTML = iframeCode; // Update the preview with the iframe
+                        localStorage.setItem('googleMapIframe', iframeCode); // Save the iframe code in localStorage
+                    } else {
+                        iframePreview.innerHTML = '<p style="color: red;">Invalid iframe code. Please paste a valid Google Maps iframe embed link.</p>';
+                        localStorage.removeItem('googleMapIframe'); // Clear the saved iframe if it's invalid
+                    }
+                });
+            });
+        </script>
+        <!-- End Google Maps iframe -->
 
 
 
 
 
 
-        
-        
-        
+
+
+
 
 
     </div>
