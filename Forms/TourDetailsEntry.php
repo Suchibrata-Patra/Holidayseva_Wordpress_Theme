@@ -165,47 +165,68 @@ function display_tour_meta_box($post) {
 
         <!-- Reviews -->
         <div id="reviews">
-            <h3 class="form-title">Reviews</h3>
-            <div id="reviews-container">
-                <?php foreach ($reviews as $index => $review) : ?>
-                <div class="review-set" data-index="<?php echo $index; ?>">
-                    <h4>Review
-                        <?php echo $index + 1; ?>
-                    </h4>
-                    <div style="display:flex;">
-                        <div class="form-groups">
-                            <label for="reviewer_name_<?php echo $index; ?>">Reviewer Name</label>
-                            <input type="text" name="reviews[<?php echo $index; ?>][name]"
-                                id="reviewer_name_<?php echo $index; ?>" class="form-control"
-                                value="<?php echo esc_attr($review['name'] ?? ''); ?>" />
-                        </div>
-                        <div class="form-group" style="margin-left:30px;">
-                            <label for="review_score_<?php echo $index; ?>">Review Score</label>
-                            <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>"
-                                class="form-control" style="padding:10px 10px;">
-                                <?php for ($i = 1; $i <= 5; $i++) : ?>
-                                <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '' , $i); ?>>
-                                    <?php echo str_repeat('&#9733;', $i); ?>
-                                </option>
-                                <?php endfor; ?>
-                            </select>
-                        </div>
-
-                        <div class="form-group" style="margin-left:30px;">
-                        <label for="review_content_<?php echo $index; ?>">Review Content</label>
-                        <textarea name="reviews[<?php echo $index; ?>][content]"
-                            id="review_content_<?php echo $index; ?>"
-                            class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
-                    </div>
-
-                    </div>
-                    
-                    <button type="button" class="remove-review">Remove</button>
+    <h3 class="form-title">Reviews</h3>
+    <div id="reviews-container">
+        <?php foreach ($reviews as $index => $review) : ?>
+        <div class="review-set" data-index="<?php echo $index; ?>">
+            <h4>Review <?php echo $index + 1; ?></h4>
+            <div style="display:flex;">
+                <div class="form-group">
+                    <label for="reviewer_name_<?php echo $index; ?>">Reviewer Name</label>
+                    <input type="text" name="reviews[<?php echo $index; ?>][name]"
+                        id="reviewer_name_<?php echo $index; ?>" class="form-control"
+                        value="<?php echo esc_attr($review['name'] ?? ''); ?>" />
                 </div>
-                <?php endforeach; ?>
+                <div class="form-group" style="margin-left:30px;">
+                    <label for="review_score_<?php echo $index; ?>">Review Score</label>
+                    <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>"
+                        class="form-control" style="padding:10px 10px;">
+                        <?php for ($i = 1; $i <= 5; $i++) : ?>
+                        <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '' , $i); ?>>
+                            <?php echo str_repeat('&#9733;', $i); ?>
+                        </option>
+                        <?php endfor; ?>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-left:30px;">
+                    <label for="review_content_<?php echo $index; ?>">Review Content</label>
+                    <textarea name="reviews[<?php echo $index; ?>][content]"
+                        id="review_content_<?php echo $index; ?>"
+                        class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
+                </div>
             </div>
-            <button type="button" id="add-review">Add Review</button>
+            <div class="button-group">
+                <button type="button" class="remove-review">Remove</button>
+            </div>
         </div>
+        <?php endforeach; ?>
+    </div>
+    <div class="button-group">
+        <button type="button" id="add-review">Add Review</button>
+    </div>
+</div>
+<style>
+    #reviews .button-group {
+    display: flex;
+    justify-content: space-between; /* Adjust spacing as needed */
+    align-items: center;
+    margin-top: 20px; /* Add some spacing from the content above */
+}
+
+#reviews .button-group button {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#reviews .button-group button:hover {
+    background-color: #e0e0e0;
+}
+
+</style>
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
