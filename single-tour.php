@@ -172,12 +172,23 @@ get_header(); ?>
             <?php if (!empty($reviews) && is_array($reviews)) : ?>
             <h3>Reviews</h3>
             <ul>
-            <?php foreach ($reviews as $review) : ?>
-                <?php if (!empty($review)) : // Only display non-empty Plans ?>
-                <?php echo esc_html($review); ?>
-                |
-                <?php endif; ?>
-                <?php endforeach; ?>
+            <?php if (!empty($reviews) && is_array($reviews)) : ?>
+    <h3>Reviews</h3>
+    <ul>
+        <?php foreach ($reviews as $review) : ?>
+            <?php if (!empty($review['name']) || !empty($review['content']) || !empty($review['score'])) : ?>
+                <li>
+                    <strong>Name:</strong> <?php echo esc_html($review['name']); ?><br>
+                    <strong>Score:</strong> <?php echo esc_html($review['score']); ?>/10<br>
+                    <strong>Content:</strong> <?php echo esc_html($review['content']); ?>
+                </li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </ul>
+<?php else : ?>
+    <p>No reviews available for this tour.</p>
+<?php endif; ?>
+
             </ul>
             <?php endif; ?>
 
