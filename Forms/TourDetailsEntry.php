@@ -149,7 +149,7 @@ function display_tour_meta_box($post) {
     <h3 class="form-title">Day Plans</h3>
     <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
         <div class="form-group" style="color:black;">
-            <label for="day_plans<?php echo $i; ?>">Highlight for Day <?php echo $i; ?></label>
+            <label for="day_plans<?php echo $i; ?>">Plan for Day <?php echo $i; ?></label>
             <input 
                 type="text" 
                 id="day_plans<?php echo $i; ?>" 
