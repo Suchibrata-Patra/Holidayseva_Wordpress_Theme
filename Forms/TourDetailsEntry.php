@@ -32,6 +32,7 @@ function display_tour_meta_box($post) {
         </span>
         <a href="#" class="tab-link active" data-target="basic_info">Basic Info</a>
         <a href="#" class="tab-link" data-target="highlights">Highlights</a>
+        <a href="#" class="tab-link" data-target="day_plans">Day Plans</a>
         <a href="#" class="tab-link" data-target="itinerary">Itinerary</a>
         <a href="#" class="tab-link" data-target="included">Included (New)</a>
         <a href="#" class="tab-link" data-target="excluded">Excluded (New)</a>
