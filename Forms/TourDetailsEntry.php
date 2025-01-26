@@ -168,7 +168,7 @@ function display_tour_meta_box($post) {
             <h3 class="form-title">Reviews</h3>
             <div id="reviews-container">
                 <?php foreach ($reviews as $index => $review) : ?>
-                <div class="review-set" data-index="<?php echo $index; ?>" style="border:2px solid red;">
+                <div class="review-set" data-index="<?php echo $index; ?>" style="border:2px solid blue;margin-top:10px;border-radius:4px;">
                     <div style="display:flex;">
                     <h4>Review
                         <?php echo $index + 1; ?>
@@ -218,7 +218,7 @@ function display_tour_meta_box($post) {
                 addReviewButton.addEventListener('click', function () {
                     const index = container.children.length;
                     const reviewHTML = `
-            <div class=\"review-set\" data-index=\"${index}\" style=\"border:2px solid red;margin-top:10px;\">
+            <div class=\"review-set\" data-index=\"${index}\" style=\"border:2px solid blue;margin-top:10px;border-radius:4px;\">
                 <h4>Review ${index + 1}</h4>
                 <div style=\"display:flex;\">
                 <div class=\"form-group\">
