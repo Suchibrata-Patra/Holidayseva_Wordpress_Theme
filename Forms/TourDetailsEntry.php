@@ -168,7 +168,7 @@ function display_tour_meta_box($post) {
             <h3 class="form-title">Reviews</h3>
             <div id="reviews-container">
                 <?php foreach ($reviews as $index => $review) : ?>
-                <div class="review-set" data-index="<?php echo $index; ?>" style="border:2px solid #2980b9;margin-top:10px;border-radius:4px;padding:5px;background-color: coral;">
+                <div class="review-set" data-index="<?php echo $index; ?>" style="border:2px solid #2980b9;margin-top:10px;border-radius:4px;padding:5px;background-color:grey;">
                     <div style="display:flex;">
                     <h4>Review
                         <?php echo $index + 1; ?>
