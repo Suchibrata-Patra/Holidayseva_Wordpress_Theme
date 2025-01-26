@@ -123,9 +123,22 @@ get_header(); ?>
                 <?php endif; ?>
 
                 <?php if (!empty($google_map_link)) : ?>
-                    <h3>Google Map:</h3>
-                    <iframe src="<?php echo esc_url($google_map_link); ?>" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <?php endif; ?>
+    <h3>Google Map:</h3>
+    <div class="google-map-container">
+        <iframe 
+            src="<?php echo esc_url($google_map_link); ?>" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen 
+            loading="lazy" 
+            aria-label="Google Map for this tour">
+        </iframe>
+    </div>
+<?php else : ?>
+    <p>Google Map is not available for this tour.</p>
+<?php endif; ?>
+
 
                 <?php if (!empty($tour_cover_images)) : ?>
                     <h3>Gallery:</h3>
