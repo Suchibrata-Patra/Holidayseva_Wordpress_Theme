@@ -103,7 +103,9 @@ function display_tour_meta_box($post) {
                     </div>
                     <div class="form-group" style="margin-left:10px;">
                         <label for="tour_note">Note:</label>
-                        <span name="tour_note">By Default, it will take <strong><i><u>Same Day tour Package.</u></i></strong> <br>For same day tour package choose Day = 1 and Nights = 0.</span>
+                        <span name="tour_note">By Default, it will take <strong><i><u>Same Day tour
+                                        Package.</u></i></strong> <br>For same day tour package choose Day = 1 and
+                            Nights = 0.</span>
                     </div>
 
                 </div>
@@ -150,12 +152,15 @@ function display_tour_meta_box($post) {
     </div>
 </div> -->
 
-<div class="form-group">
-        <label for="tour_cover_images">Slider Images</label>
-        <input type="hidden" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array) $tour_cover_images)); ?>" />
-        <button type="button" id="tour_cover_images_button" class="button" title="Click to select images for the slider">Select Images</button>
-        <div id="tour_cover_images_preview" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
-            <?php
+                <div class="form-group">
+                    <label for="tour_cover_images">Slider Images</label>
+                    <input type="hidden" name="tour_cover_images" id="tour_cover_images"
+                        value="<?php echo esc_attr(implode(',', (array) $tour_cover_images)); ?>" />
+                    <button type="button" id="tour_cover_images_button" class="button"
+                        title="Click to select images for the slider">Select Images</button>
+                    <div id="tour_cover_images_preview"
+                        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
+                        <?php
             if ($tour_cover_images) {
                 foreach ($tour_cover_images as $image_url) {
                     echo '<div class="image-preview">';
@@ -164,54 +169,54 @@ function display_tour_meta_box($post) {
                 }
             }
             ?>
-        </div>
-    </div>
-    <script>
-    jQuery(document).ready(function($) {
-        var mediaUploader;
+                    </div>
+                </div>
+                <script>
+                    jQuery(document).ready(function ($) {
+                        var mediaUploader;
 
-        $('#tour_cover_images_button').click(function(e) {
-            e.preventDefault();
+                        $('#tour_cover_images_button').click(function (e) {
+                            e.preventDefault();
 
-            // If the media uploader object hasn't been created yet, create it now
-            if (mediaUploader) {
-                mediaUploader.open();
-                return;
-            }
+                            // If the media uploader object hasn't been created yet, create it now
+                            if (mediaUploader) {
+                                mediaUploader.open();
+                                return;
+                            }
 
-            // Create the media uploader
-            mediaUploader = wp.media.frames.file_frame = wp.media({
-                title: 'Select Images for Slider',
-                button: {
-                    text: 'Select Images'
-                },
-                multiple: true  // Allow multiple images to be selected
-            });
+                            // Create the media uploader
+                            mediaUploader = wp.media.frames.file_frame = wp.media({
+                                title: 'Select Images for Slider',
+                                button: {
+                                    text: 'Select Images'
+                                },
+                                multiple: true  // Allow multiple images to be selected
+                            });
 
-            // When images are selected, set the input field value
-            mediaUploader.on('select', function() {
-                var selection = mediaUploader.state().get('selection');
-                var imageUrls = [];
+                            // When images are selected, set the input field value
+                            mediaUploader.on('select', function () {
+                                var selection = mediaUploader.state().get('selection');
+                                var imageUrls = [];
 
-                selection.each(function(attachment) {
-                    imageUrls.push(attachment.attributes.url);
-                });
+                                selection.each(function (attachment) {
+                                    imageUrls.push(attachment.attributes.url);
+                                });
 
-                // Update the hidden input field with the selected image URLs
-                $('#tour_cover_images').val(imageUrls.join(','));
+                                // Update the hidden input field with the selected image URLs
+                                $('#tour_cover_images').val(imageUrls.join(','));
 
-                // Preview the images
-                var previewHTML = '';
-                imageUrls.forEach(function(url) {
-                    previewHTML += '<div class="image-preview"><img src="' + url + '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" /></div>';
-                });
-                $('#tour_cover_images_preview').html(previewHTML);
-            });
+                                // Preview the images
+                                var previewHTML = '';
+                                imageUrls.forEach(function (url) {
+                                    previewHTML += '<div class="image-preview"><img src="' + url + '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" /></div>';
+                                });
+                                $('#tour_cover_images_preview').html(previewHTML);
+                            });
 
-            mediaUploader.open();
-        });
-    });
-    </script>                
+                            mediaUploader.open();
+                        });
+                    });
+                </script>
         </div>
 
         <!-- Highlights -->
@@ -228,72 +233,70 @@ function display_tour_meta_box($post) {
             <?php endfor; ?>
         </div> -->
         <div id="highlights" class="hidden">
-    <h3 class="form-title">Highlights</h3>
-    <div id="highlight-fields">
-        <?php if (!empty($tour_highlights)) : ?>
-            <?php foreach ($tour_highlights as $index => $highlight) : ?>
+            <h3 class="form-title">Highlights</h3>
+            <div id="highlight-fields">
+                <?php if (!empty($tour_highlights)) : ?>
+                <?php foreach ($tour_highlights as $index => $highlight) : ?>
                 <div class="form-group">
-                    <input type="text" name="tour_highlights[]" class="form-control" value="<?php echo esc_attr($highlight); ?>" />
+                    <input type="text" name="tour_highlights[]" class="form-control"
+                        value="<?php echo esc_attr($highlight); ?>" />
                     <button type="button" class="remove-highlight">Remove</button>
                 </div>
-            <?php endforeach; ?>
-        <?php else : ?>
-            <div class="form-group">
-                <input type="text" name="tour_highlights[]" class="form-control" placeholder="Enter highlight" />
-                <button type="button" class="remove-highlight">Remove</button>
+                <?php endforeach; ?>
+                <?php else : ?>
+                <div class="form-group">
+                    <input type="text" name="tour_highlights[]" class="form-control" placeholder="Enter highlight" />
+                    <button type="button" class="remove-highlight">Remove</button>
+                </div>
+                <?php endif; ?>
             </div>
-        <?php endif; ?>
-    </div>
-    <button type="button" id="add-highlight">Add Highlight</button>
-</div>
-<script>
-    document.getElementById('add-highlight').addEventListener('click', function () {
-        const container = document.getElementById('highlight-fields');
-        const newField = document.createElement('div');
-        newField.classList.add('form-group');
-        newField.innerHTML = `
+            <button type="button" id="add-highlight">Add Highlight</button>
+        </div>
+        <script>
+            document.getElementById('add-highlight').addEventListener('click', function () {
+                const container = document.getElementById('highlight-fields');
+                const newField = document.createElement('div');
+                newField.classList.add('form-group');
+                newField.innerHTML = `
             <input type="text" name="tour_highlights[]" class="form-control" placeholder="Enter highlight" />
             <button type="button" class="remove-highlight">Remove</button>
         `;
-        container.appendChild(newField);
-    });
+                container.appendChild(newField);
+            });
 
-    document.getElementById('highlight-fields').addEventListener('click', function (e) {
-        if (e.target.classList.contains('remove-highlight')) {
-            e.target.parentElement.remove();
-        }
-    });
-</script>
-
-
+            document.getElementById('highlight-fields').addEventListener('click', function (e) {
+                if (e.target.classList.contains('remove-highlight')) {
+                    e.target.parentElement.remove();
+                }
+            });
+        </script>
 
 
-<!-- Day Plans -->
-<div id="day_plans" class="hidden">
-    <h3 class="form-title">Day Plans</h3>
-    <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
-        <div class="form-group" style="color:black;">
-            <label for="day_plans<?php echo $i; ?>">Plan for Day <?php echo $i; ?></label>
-            <input 
-                type="text" 
-                id="day_plans<?php echo $i; ?>" 
-                name="day_plans[]" 
-                value="<?php echo isset($day_plans[$i - 1]) ? esc_attr($day_plans[$i - 1]) : ''; ?>" 
-                class="regular-text" 
-                style="width: 100%; color: black; background-color: white;"
-            />
+
+
+        <!-- Day Plans -->
+        <div id="day_plans" class="hidden">
+            <h3 class="form-title">Day Plans</h3>
+            <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
+            <div class="form-group" style="color:black;">
+                <label for="day_plans<?php echo $i; ?>">Plan for Day
+                    <?php echo $i; ?>
+                </label>
+                <input type="text" id="day_plans<?php echo $i; ?>" name="day_plans[]"
+                    value="<?php echo isset($day_plans[$i - 1]) ? esc_attr($day_plans[$i - 1]) : ''; ?>"
+                    class="regular-text" style="width: 100%; color: black; background-color: white;" />
+            </div>
+            <?php endfor; ?>
         </div>
-    <?php endfor; ?>
-</div>
 
-<style>
-    #day_plans input[type="text"] {
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        padding: 8px;
-        font-size: 14px;
-    }
-</style>
+        <style>
+            #day_plans input[type="text"] {
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                padding: 8px;
+                font-size: 14px;
+            }
+        </style>
 
 
 
@@ -310,47 +313,47 @@ function display_tour_meta_box($post) {
             </div>
             <?php endfor; ?>
         </div> -->
-                <!--Itinerary -->
+        <!--Itinerary -->
 
         <div id="itinerary">
-    <h3 class="form-title">Itinerary</h3>
-    <div id="itinerary-fields">
-        <?php if (!empty($itinerary)) : ?>
-            <?php foreach ($itinerary as $index => $item) : ?>
+            <h3 class="form-title">Itinerary</h3>
+            <div id="itinerary-fields">
+                <?php if (!empty($itinerary)) : ?>
+                <?php foreach ($itinerary as $index => $item) : ?>
                 <div class="form-group">
-                    <input type="text" name="itinerary[]" class="form-control" 
-                           value="<?php echo esc_attr($item); ?>" placeholder="Enter itinerary item" />
+                    <input type="text" name="itinerary[]" class="form-control" value="<?php echo esc_attr($item); ?>"
+                        placeholder="Enter itinerary item" />
                     <button type="button" class="remove-itinerary">Remove</button>
                 </div>
-            <?php endforeach; ?>
-        <?php else : ?>
-            <div class="form-group">
-                <input type="text" name="itinerary[]" class="form-control" placeholder="Enter itinerary item" />
-                <button type="button" class="remove-itinerary">Remove</button>
+                <?php endforeach; ?>
+                <?php else : ?>
+                <div class="form-group">
+                    <input type="text" name="itinerary[]" class="form-control" placeholder="Enter itinerary item" />
+                    <button type="button" class="remove-itinerary">Remove</button>
+                </div>
+                <?php endif; ?>
             </div>
-        <?php endif; ?>
-    </div>
-    <button type="button" id="add-itinerary">Add Itinerary Item</button>
-</div>
+            <button type="button" id="add-itinerary">Add Itinerary Item</button>
+        </div>
 
-<script>
-    document.getElementById('add-itinerary').addEventListener('click', function () {
-        const container = document.getElementById('itinerary-fields');
-        const newField = document.createElement('div');
-        newField.classList.add('form-group');
-        newField.innerHTML = `
+        <script>
+            document.getElementById('add-itinerary').addEventListener('click', function () {
+                const container = document.getElementById('itinerary-fields');
+                const newField = document.createElement('div');
+                newField.classList.add('form-group');
+                newField.innerHTML = `
             <input type="text" name="itinerary[]" class="form-control" placeholder="Enter itinerary item" />
             <button type="button" class="remove-itinerary">Remove</button>
         `;
-        container.appendChild(newField);
-    });
+                container.appendChild(newField);
+            });
 
-    document.getElementById('itinerary-fields').addEventListener('click', function (e) {
-        if (e.target.classList.contains('remove-itinerary')) {
-            e.target.parentElement.remove();
-        }
-    });
-</script>
+            document.getElementById('itinerary-fields').addEventListener('click', function (e) {
+                if (e.target.classList.contains('remove-itinerary')) {
+                    e.target.parentElement.remove();
+                }
+            });
+        </script>
 
 
 
