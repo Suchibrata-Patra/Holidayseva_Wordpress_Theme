@@ -165,7 +165,7 @@ function display_tour_meta_box($post) {
 
         <!-- Reviews -->
         <div id="reviews">
-            <div style="display:flex;width:300px;">
+            <div style="display:flex;width:900px;">
                 <h3 class="form-title">Reviews</h3>
                 <button type="button" id="add-review" style="border-radius:50px;background-color:green;color:white;border:none;margin-top:5%;margin-bottom:5%;margin-left:20px;padding:5px 10px;">Add +</button>
             </div>
