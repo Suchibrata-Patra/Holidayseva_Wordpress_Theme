@@ -170,7 +170,7 @@ function display_tour_meta_box($post) {
 
 
 <!-- Day Plans -->
-<!-- <div id="day_plans" class="hidden">
+<div id="day_plans" class="hidden">
     <h3 class="form-title">Day Plans</h3>
     <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
         <div class="form-group" style="color:black;">
@@ -194,55 +194,7 @@ function display_tour_meta_box($post) {
         padding: 8px;
         font-size: 14px;
     }
-</style> -->
-
-<!-- Day Plans -->
-<div id="day_plans" class="hidden">
-    <h3 class="form-title">Day Plans</h3>
-    <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
-        <div class="form-group" style="color:black;">
-            <label for="day_plans<?php echo $i; ?>">Plan for Day <?php echo $i; ?></label>
-            <textarea 
-                id="day_plans<?php echo $i; ?>" 
-                name="day_plans[]" 
-                class="regular-text" 
-                style="width: 100%; height: 150px; color: black; background-color: white;"
-            ><?php echo isset($day_plans[$i - 1]) ? esc_textarea($day_plans[$i - 1]) : ''; ?></textarea>
-        </div>
-    <?php endfor; ?>
-</div>
-
-<style>
-    #day_plans textarea {
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        padding: 8px;
-        font-size: 14px;
-    }
 </style>
-
-<!-- Add TinyMCE script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.10.0/tinymce.min.js"></script>
-<script type="text/javascript">
-    // Ensure that the script loads only after TinyMCE is initialized
-    jQuery(document).ready(function() {
-        // Initialize TinyMCE for all textareas inside the 'day_plans' div
-        tinymce.init({
-            selector: '#day_plans textarea', // Select all textareas inside the day_plans div
-            menubar: false, // Disable the menu bar
-            toolbar: 'bold italic underline | link | bullist numlist | alignleft aligncenter alignright | undo redo', // Customize the toolbar
-            plugins: 'lists link', // Include required plugins
-            statusbar: false, // Disable the status bar
-            height: 200, // Set the editor height
-            setup: function(editor) {
-                editor.on('change', function() {
-                    editor.save(); // Ensure content is saved when changed
-                });
-            }
-        });
-    });
-</script>
-
 
 
 
