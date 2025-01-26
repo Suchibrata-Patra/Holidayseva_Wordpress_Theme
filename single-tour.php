@@ -112,15 +112,27 @@ get_header(); ?>
     </ul>
 <?php endif; ?>
 
-                <?php if (!empty($included)) : ?>
-                    <h3>Included:</h3>
-                    <p><?php echo nl2br(esc_html($included)); ?></p>
-                <?php endif; ?>
+<?php if (!empty($included) && is_array($included)) : ?>
+    <h3>Included</h3>
+    <ul>
+        <?php foreach ($included as $items) : ?>
+            <?php if (!empty($items)) : // Only display non-empty Plans ?>
+                <?php echo esc_html($items); ?> |
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
 
-                <?php if (!empty($excluded)) : ?>
-                    <h3>Excluded:</h3>
-                    <p><?php echo nl2br(esc_html($excluded)); ?></p>
-                <?php endif; ?>
+<?php if (!empty($excluded) && is_array($excluded)) : ?>
+    <h3>Excluded</h3>
+    <ul>
+        <?php foreach ($excluded as $items) : ?>
+            <?php if (!empty($items)) : // Only display non-empty Plans ?>
+                <?php echo esc_html($items); ?> |
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
 
                 <?php if (!empty($google_map_link)) : ?>
                     <h3>Google Map:</h3>
@@ -144,14 +156,17 @@ get_header(); ?>
                     </div>
                 <?php endif; ?>
 
-                <?php if (!empty($reviews)) : ?>
-                    <h3>Reviews:</h3>
-                    <ul>
-                        <?php foreach ($reviews as $review) : ?>
-                            <li><?php echo esc_html($review); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
+
+                <?php if (!empty($reviews) && is_array($reviews)) : ?>
+    <h3>Reviews</h3>
+    <ul>
+        <?php foreach ($reviews as $review) : ?>
+            <?php if (!empty($review)) : // Only display non-empty Plans ?>
+                <?php echo esc_html($review); ?> |
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
 
                 <?php if (!empty($bookings)) : ?>
                     <h3>Bookings:</h3>
