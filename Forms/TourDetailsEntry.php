@@ -336,14 +336,6 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
         <div id="frequently_asked_questions" class="hidden">
             <h3 class="form-title">Frequently Asked Questions</h3>
         
-            <!-- Tour Cover Images Section -->
-            <div class="form-group">
-                <label for="tour_cover_images">Cover Images</label>
-                <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                    value="<?php echo esc_attr($tour_cover_images); ?>" />
-                <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
-            </div>
-        
             <!-- Profile Picture Section -->
             <div class="form-group">
                 <label for="profile_picture">Profile Picture</label>
