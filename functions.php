@@ -16,12 +16,10 @@ add_filter('rank_math/snippet/rich_snippet_data', function($data, $post) {
     return $data;
 }, 10, 2);
 
-function load_wp_editor_assets() {
-    wp_enqueue_script('editor');
-    wp_enqueue_script('quicktags');
-    wp_enqueue_style('editor-buttons');
+function custom_enqueue_tinymce_styles() {
+    add_editor_style('path-to-your-tinymce-styles.css');
 }
-add_action('admin_enqueue_scripts', 'load_wp_editor_assets');
+add_action('admin_init', 'custom_enqueue_tinymce_styles');
 
 // Register custom post types
 function register_custom_post_types() {
