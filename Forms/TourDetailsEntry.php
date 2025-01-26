@@ -166,20 +166,15 @@ function display_tour_meta_box($post) {
                 );
                 ?>
             </div>
-            <div class="form-group">
-                    <label for="tour_description">Tour Description</label>
-                    <?php
-                        $tour_description = isset($tour_description) ? $tour_description : ''; // Get existing value if exists
-                        wp_editor($tour_description, 'tour_description', array(
-                            'textarea_name' => 'tour_description',
-                            'textarea_rows' => 5,
-                            'media_buttons' => true, // Enable media buttons (images, etc.)
-                        ));
-                    ?>
-                </div>
-
         <?php endfor; ?>
     </div>
+    <style>
+        #day_plans .wp-editor-area {
+    color: black !important; /* Set text color explicitly */
+    background-color: white !important; /* Ensure background is white */
+}
+
+    </style>
 
 
         <!--Itinerary -->
