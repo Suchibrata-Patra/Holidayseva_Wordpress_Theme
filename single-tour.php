@@ -172,7 +172,7 @@ get_header(); ?>
             <?php if (!empty($reviews) && is_array($reviews)) : ?>
             <h3>Reviews</h3>
             <ul>
-                <?php foreach ($reviews as $review) : ?>
+            <?php foreach ($reviews as $review) : ?>
                 <?php if (!empty($review)) : // Only display non-empty Plans ?>
                 <?php echo esc_html($review); ?>
                 |
