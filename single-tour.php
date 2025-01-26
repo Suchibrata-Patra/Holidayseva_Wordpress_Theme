@@ -76,7 +76,7 @@ get_header(); ?>
 
 
 <?php if (!empty($day_plans) && is_array($day_plans)) : ?>
-    <h3>Highlights:</h3>
+    <h3>Day Plans:</h3>
     <ul>
         <?php foreach ($day_plans as $plans) : ?>
             <?php if (!empty($plans)) : // Only display non-empty Plans ?>
