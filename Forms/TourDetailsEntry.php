@@ -169,9 +169,12 @@ function display_tour_meta_box($post) {
             <div id="reviews-container">
                 <?php foreach ($reviews as $index => $review) : ?>
                 <div class="review-set" data-index="<?php echo $index; ?>">
+                    <div style="display:flex;">
                     <h4>Review
                         <?php echo $index + 1; ?>
                     </h4>
+                    <button type="button" class="remove-review">Remove</button>
+                    </div>
                     <div style="display:flex;">
                         <div class="form-group">
                             <label for="reviewer_name_<?php echo $index; ?>">Name</label>
@@ -201,7 +204,7 @@ function display_tour_meta_box($post) {
 
                     </div>
                     
-                    <button type="button" class="remove-review">Remove</button>
+                    <!-- <button type="button" class="remove-review">Remove</button> -->
                 </div>
                 <?php endforeach; ?>
             </div>
