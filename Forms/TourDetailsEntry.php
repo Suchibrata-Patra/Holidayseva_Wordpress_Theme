@@ -268,9 +268,8 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
 </style>
 
 
-
- <!-- Google Maps Iframes -->
- <div id="google_map_iframe">
+<!-- Google Maps iframes -->
+<div id="google_map_iframe">
     <h3 class="form-title">Google Maps Iframe Input</h3>
     <div class="form-group">
         <label for="google_map_link">Google Maps Iframe Link</label>
@@ -280,16 +279,6 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
             class="form-control" 
             placeholder="Paste your Google Maps iframe embed link here" 
             rows="4"><?php echo esc_textarea($google_map_link); ?></textarea>
-    </div>
-    <div class="form-group">
-        <label for="tour_price">Price</label>
-        <input 
-            type="number" 
-            name="tour_price" 
-            id="tour_price" 
-            class="form-control" 
-            value="<?php echo esc_attr($tour_price); ?>" 
-            placeholder="in INR" />
     </div>
     <div class="map-preview">
         <h4>Map Preview</h4>
@@ -303,23 +292,31 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
     document.addEventListener('DOMContentLoaded', function () {
         const googleMapInput = document.getElementById('google_map_link');
         const iframePreview = document.getElementById('iframe_preview');
+        
+        // Check if there's an iframe link saved in localStorage
+        const savedIframeCode = localStorage.getItem('googleMapIframe');
+        if (savedIframeCode) {
+            googleMapInput.value = savedIframeCode; // Load the saved value back into the textarea
+            iframePreview.innerHTML = savedIframeCode; // Show the saved iframe preview
+        }
 
         // Event listener for changes in the textarea
         googleMapInput.addEventListener('input', function () {
             const iframeCode = googleMapInput.value.trim();
-
             // Check if the input contains an iframe tag
             if (iframeCode.startsWith('<iframe') && iframeCode.endsWith('</iframe>')) {
                 iframePreview.innerHTML = iframeCode; // Update the preview with the iframe
+                localStorage.setItem('googleMapIframe', iframeCode); // Save the iframe code in localStorage
             } else {
                 iframePreview.innerHTML = '<p style="color: red;">Invalid iframe code. Please paste a valid Google Maps iframe embed link.</p>';
+                localStorage.removeItem('googleMapIframe'); // Clear the saved iframe if it's invalid
             }
         });
     });
 </script>
+<!-- End Google Maps iframe -->
 
 
-<!-- End Google Maps Iframes -->
 
 
 
