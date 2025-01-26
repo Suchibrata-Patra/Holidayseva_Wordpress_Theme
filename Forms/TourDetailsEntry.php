@@ -162,29 +162,39 @@ function display_tour_meta_box($post) {
                     'textarea_name' => 'day_plans[]',
                     'media_buttons' => true, // Enable media buttons
                     'textarea_rows' => 5,    // Adjust height
+                    'tinymce' => [
+                        'extended_valid_elements' => 'a[href|target|title|class|id],img[src|alt|class|id|width|height|style],div[class|id|style],p[class|id|style],span[class|id|style],iframe[src|width|height|frameborder|allowfullscreen|class|style]',
+                        'toolbar1' => 'formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link unlink | code',
+                        'toolbar2' => 'undo redo | styleselect | removeformat | visualblocks code',
+                        'valid_elements' => '*[*]', // Allow all valid HTML elements
+                        'paste_as_text' => false, // Allow pasting HTML content
+                        'plugins' => 'paste code visualblocks',
+                        'content_css' => get_stylesheet_directory_uri() . '/editor-style.css', // Optional: Load custom editor styles
+                    ],
                 ]
             );
             ?>
         </div>
     <?php endfor; ?>
 </div>
+
+<style>
+    #day_plans .wp-editor-area {
+        color: black !important; /* Set text color explicitly */
+        background-color: white !important; /* Ensure background is white */
+    }
+</style>
+
 <script>
-    // Ensure that TinyMCE is initialized after the page is fully loaded
+    // Dynamically reinitialize TinyMCE editors if needed
     document.addEventListener('DOMContentLoaded', function () {
-        // Loop through dynamically generated editors
-        <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
-            tinymce.init({
-                selector: '#day_plans<?php echo $i; ?>',
-                menubar: true, // Add menubar if needed
-                plugins: 'lists link image charmap preview anchor',
-                toolbar: 'undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-                setup: function (editor) {
-                    editor.on('change', function () {
-                        tinymce.triggerSave(); // Trigger saving the content
-                    });
-                }
-            });
-        <?php endfor; ?>
+        tinymce.init({
+            selector: 'textarea.wp-editor-area',
+            plugins: 'code visualblocks paste',
+            toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist | code',
+            valid_elements: '*[*]', // Allow all HTML tags and attributes
+            paste_as_text: false // Allow pasting raw HTML
+        });
     });
 </script>
 
