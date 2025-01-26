@@ -2,11 +2,10 @@
 /**
  * The template for displaying single Tour posts.
  *
- * @package YourThemeName
+ * @package HolidaySeva
  *
  * Template Name: Tour
  */
-
 
 get_header(); ?>
 
