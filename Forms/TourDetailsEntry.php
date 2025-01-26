@@ -278,17 +278,7 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
             class="form-control" 
             placeholder="Paste your Google Maps iframe embed link here" 
             rows="4"><?php echo esc_textarea($google_map_link); ?></textarea>
-    </div>
-    <div class="form-group">
-        <label for="tour_price">Price</label>
-        <input 
-            type="number" 
-            name="tour_price" 
-            id="tour_price" 
-            class="form-control" 
-            value="<?php echo esc_attr($tour_price); ?>" 
-            placeholder="in INR" />
-    </div>
+</div>
     <div class="map-preview">
         <h4>Map Preview</h4>
         <div id="iframe_preview" style="border: 1px solid #ddd; padding: 10px; height: 400px;">
