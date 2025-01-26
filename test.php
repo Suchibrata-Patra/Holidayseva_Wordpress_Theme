@@ -1,48 +1,33 @@
-<div id="google_map_iframe">
-    <h3 class="form-title">Google Maps Iframe Input</h3>
+<div id="frequently_asked_questions" class="hidden">
+    <h3 class="form-title">Frequently Asked Questions</h3>
+
+    <!-- Tour Cover Images Section -->
     <div class="form-group">
-        <label for="google_map_link">Google Maps Iframe Link</label>
-        <textarea 
-            name="google_map_link" 
-            id="google_map_link" 
-            class="form-control" 
-            placeholder="Paste your Google Maps iframe embed link here" 
-            rows="4"><?php echo esc_textarea($google_map_link); ?></textarea>
+        <label for="tour_cover_images">Cover Images</label>
+        <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+            value="<?php echo esc_attr($tour_cover_images); ?>" />
+        <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
     </div>
+
+    <!-- Profile Picture Section -->
     <div class="form-group">
-        <label for="tour_price">Price</label>
-        <input 
-            type="number" 
-            name="tour_price" 
-            id="tour_price" 
-            class="form-control" 
-            value="<?php echo esc_attr($tour_price); ?>" 
-            placeholder="in INR" />
+        <label for="profile_picture">Profile Picture</label>
+        <input type="text" name="profile_picture" id="profile_picture" class="form-control"
+            value="<?php echo esc_attr($profile_picture); ?>" />
+        <button type="button" id="profile_picture_button" class="form-button">Select Profile Picture</button>
     </div>
-    <div class="map-preview">
-        <h4>Map Preview</h4>
-        <div id="iframe_preview" style="border: 1px solid #ddd; padding: 10px; height: 400px;">
-            <!-- The iframe will load here -->
-        </div>
+
+    <!-- Customer Name Entry Section -->
+    <div class="form-group">
+        <label for="customer_name">Customer Name</label>
+        <input type="text" name="customer_name" id="customer_name" class="form-control"
+            value="<?php echo esc_attr($customer_name); ?>" />
     </div>
+
+    <!-- Review Entry Section -->
+    <div class="form-group">
+        <label for="customer_review">Customer Review</label>
+        <textarea name="customer_review" id="customer_review" class="form-control"><?php echo esc_textarea($customer_review); ?></textarea>
+    </div>
+
 </div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const googleMapInput = document.getElementById('google_map_link');
-        const iframePreview = document.getElementById('iframe_preview');
-
-        // Event listener for changes in the textarea
-        googleMapInput.addEventListener('input', function () {
-            const iframeCode = googleMapInput.value.trim();
-
-            // Check if the input contains an iframe tag
-            if (iframeCode.startsWith('<iframe') && iframeCode.endsWith('</iframe>')) {
-                iframePreview.innerHTML = iframeCode; // Update the preview with the iframe
-            } else {
-                iframePreview.innerHTML = '<p style="color: red;">Invalid iframe code. Please paste a valid Google Maps iframe embed link.</p>';
-            }
-        });
-    });
-</script>
-
