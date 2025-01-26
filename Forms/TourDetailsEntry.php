@@ -201,10 +201,10 @@ function display_tour_meta_box($post) {
                     </div>
                     
                     <button type="button" class="remove-review">Remove</button>
+                    <button type="button" id="add-review">Add Review</button>
                 </div>
                 <?php endforeach; ?>
             </div>
-            <button type="button" id="add-review">Add Review</button>
         </div>
 
         <script>
