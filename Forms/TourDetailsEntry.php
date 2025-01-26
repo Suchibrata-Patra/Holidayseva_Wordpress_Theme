@@ -339,9 +339,19 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
             <!-- Profile Picture Section -->
             <div class="form-group">
                 <label for="profile_picture">Profile Picture</label>
-                <input type="text" name="profile_picture" id="profile_picture" class="form-control"
-                    value="<?php echo esc_attr($profile_picture); ?>" />
-                <button type="button" id="profile_picture_button" class="form-button">Select Profile Picture</button>
+                <select name="profile_picture" id="profile_picture" class="form-control">
+                    <option value="" disabled selected>Select an Avatar</option>
+                    <option value="https://example.com/avatar1.jpg" <?php echo ($profile_picture === 'https://example.com/avatar1.jpg') ? 'selected' : ''; ?>>
+                        <img src="https://example.com/avatar1.jpg" alt="Avatar 1" style="width: 30px; height: 30px; border-radius: 50%;"> Avatar 1
+                    </option>
+                    <option value="https://example.com/avatar2.jpg" <?php echo ($profile_picture === 'https://example.com/avatar2.jpg') ? 'selected' : ''; ?>>
+                        <img src="https://example.com/avatar2.jpg" alt="Avatar 2" style="width: 30px; height: 30px; border-radius: 50%;"> Avatar 2
+                    </option>
+                    <option value="https://example.com/avatar3.jpg" <?php echo ($profile_picture === 'https://example.com/avatar3.jpg') ? 'selected' : ''; ?>>
+                        <img src="https://example.com/avatar3.jpg" alt="Avatar 3" style="width: 30px; height: 30px; border-radius: 50%;"> Avatar 3
+                    </option>
+                    <!-- Add more avatars as needed -->
+                </select>
             </div>
         
             <!-- Customer Name Entry Section -->
@@ -358,6 +368,7 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
             </div>
         
         </div>
+        
         
 
 
