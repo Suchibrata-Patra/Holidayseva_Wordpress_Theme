@@ -17,7 +17,11 @@ function display_tour_meta_box($post) {
     $excluded = get_post_meta($post->ID, '_excluded', true);
     // Fetch the saved Google Maps iframe
     $google_map_link = get_post_meta(get_the_ID(), '_google_map_link', true);
+    // $reviews = get_post_meta($post->ID, '_reviews', true);
+
     $reviews = get_post_meta($post->ID, '_reviews', true);
+    $reviews = is_array($reviews) ? $reviews : []; // Ensure it's an array
+
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
     var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
@@ -333,131 +337,83 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
 
 
         <!-- Reviews-->
-        <div id="reviews" class="hidden">
-            <h3 class="form-title">Frequently Asked Questions</h3>
-        
-            <!-- Profile Picture Section -->
-            <div class="form-group">
-                <label for="profile_picture">Profile Picture</label>
-                <div class="custom-dropdown">
-                    <div class="dropdown-selected" id="profile_picture_display">
-                        <img src="<?php echo esc_url($profile_picture); ?>" alt="Selected Avatar" class="avatar-preview">
-                        <span>Select Avatar</span>
-                    </div>
-                    <div class="dropdown-options" id="profile_picture_options">
-                        <div class="dropdown-option" data-value="https://imagedelivery.net/xE-VtsYZUS2Y8MtLMcbXAg/4f1eb366cecf8f69f61c/sm">
-                            <img src="https://imagedelivery.net/xE-VtsYZUS2Y8MtLMcbXAg/4f1eb366cecf8f69f61c/sm" alt="Avatar 1" class="avatar-img"> Avatar 1
-                        </div>
-                        <div class="dropdown-option" data-value="https://static.vecteezy.com/system/resources/previews/002/002/403/non_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg">
-                            <img src="https://static.vecteezy.com/system/resources/previews/002/002/403/non_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Avatar 2" class="avatar-img"> Avatar 2
-                        </div>
-                        <div class="dropdown-option" data-value="https://img.freepik.com/premium-photo/bearded-man-illustration_665280-67047.jpg">
-                            <img src="https://img.freepik.com/premium-photo/bearded-man-illustration_665280-67047.jpg" alt="Avatar 3" class="avatar-img"> Avatar 3
-                        </div>
-                        <!-- Add more avatars as needed -->
-                    </div>
+        <div id="reviews-container">
+        <h3 class="form-title">Customer Reviews</h3>
+
+        <div id="reviews-list">
+            <?php foreach ($reviews as $index => $review) : ?>
+                <div class="review-item" data-index="<?php echo $index; ?>">
+                    <h4>Review <?php echo $index + 1; ?></h4>
+                    <label>Profile Picture:</label>
+                    <input type="hidden" name="reviews[<?php echo $index; ?>][profile_picture]" value="<?php echo esc_url($review['profile_picture']); ?>" class="profile_picture">
+                    <img src="<?php echo esc_url($review['profile_picture']); ?>" class="avatar-preview" alt="Selected Avatar">
+                    <button type="button" class="change-avatar">Change Avatar</button>
+
+                    <label>Customer Name:</label>
+                    <input type="text" name="reviews[<?php echo $index; ?>][customer_name]" value="<?php echo esc_attr($review['customer_name']); ?>" class="customer_name">
+
+                    <label>Customer Review:</label>
+                    <textarea name="reviews[<?php echo $index; ?>][customer_review]" class="customer_review"><?php echo esc_textarea($review['customer_review']); ?></textarea>
+
+                    <button type="button" class="remove-review">Remove Review</button>
                 </div>
-                <input type="hidden" name="profile_picture" id="profile_picture" value="<?php echo esc_url($profile_picture); ?>" />
-            </div>
-        
-            <!-- Customer Name Entry Section -->
-            <div class="form-group">
-                <label for="customer_name">Customer Name</label>
-                <input type="text" name="customer_name" id="customer_name" class="form-control"
-                    value="<?php echo esc_attr($customer_name); ?>" />
-            </div>
-        
-            <!-- Review Entry Section -->
-            <div class="form-group">
-                <label for="customer_review">Customer Review</label>
-                <textarea name="customer_review" id="customer_review" class="form-control"><?php echo esc_textarea($customer_review); ?></textarea>
-            </div>
-        
+            <?php endforeach; ?>
         </div>
-        
-        <!-- Single Script for CSS and JS -->
-        <style>
-        .custom-dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .dropdown-selected {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-        }
-        
-        .avatar-preview {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-        
-        .dropdown-options {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background-color: white;
-            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            border-radius: 5px;
-            max-height: 200px;
-            overflow-y: auto;
-        }
-        
-        .dropdown-option {
-            padding: 10px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-        }
-        
-        .dropdown-option:hover {
-            background-color: #f0f0f0;
-        }
-        
-        .avatar-img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-        </style>
-        
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const dropdownSelected = document.getElementById('profile_picture_display');
-            const dropdownOptions = document.getElementById('profile_picture_options');
-            const profilePictureInput = document.getElementById('profile_picture');
-            
-            // Toggle the dropdown
-            dropdownSelected.addEventListener('click', function() {
-                dropdownOptions.style.display = dropdownOptions.style.display === 'block' ? 'none' : 'block';
-            });
-        
-            // Handle avatar selection
-            const options = document.querySelectorAll('.dropdown-option');
-            options.forEach(function(option) {
-                option.addEventListener('click', function() {
-                    const avatarUrl = option.getAttribute('data-value');
-                    profilePictureInput.value = avatarUrl; // Set the selected value
-                    dropdownSelected.innerHTML = '<img src="' + avatarUrl + '" alt="Selected Avatar" class="avatar-preview"><span>Select Avatar</span>';
-                    dropdownOptions.style.display = 'none'; // Close the dropdown
-                });
-            });
-        
-            // Close the dropdown if clicked outside
-            document.addEventListener('click', function(event) {
-                if (!dropdownSelected.contains(event.target)) {
-                    dropdownOptions.style.display = 'none';
-                }
-            });
+
+        <button type="button" id="add-review">Add New Review</button>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const reviewsContainer = document.getElementById('reviews-list');
+        const addReviewButton = document.getElementById('add-review');
+
+        addReviewButton.addEventListener('click', function () {
+            const index = reviewsContainer.children.length;
+            const template = `
+                <div class="review-item" data-index="${index}">
+                    <h4>Review ${index + 1}</h4>
+                    <label>Profile Picture:</label>
+                    <input type="hidden" name="reviews[${index}][profile_picture]" class="profile_picture">
+                    <img src="" class="avatar-preview" alt="Selected Avatar">
+                    <button type="button" class="change-avatar">Change Avatar</button>
+
+                    <label>Customer Name:</label>
+                    <input type="text" name="reviews[${index}][customer_name]" class="customer_name">
+
+                    <label>Customer Review:</label>
+                    <textarea name="reviews[${index}][customer_review]" class="customer_review"></textarea>
+
+                    <button type="button" class="remove-review">Remove Review</button>
+                </div>
+            `;
+            reviewsContainer.insertAdjacentHTML('beforeend', template);
         });
-        </script>
+
+        reviewsContainer.addEventListener('click', function (event) {
+            if (event.target.classList.contains('remove-review')) {
+                event.target.closest('.review-item').remove();
+            }
+        });
+    });
+    </script>
+
+    <style>
+        .review-item {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .avatar-preview {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .remove-review {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
         
         
 
@@ -805,6 +761,35 @@ function save_google_map_and_tour_price($post_id) {
     return $post_id;
 }
 add_action('save_post', 'save_google_map_and_tour_price');
+
+
+function save_tour_reviews($post_id) {
+    // Check if the nonce is valid
+    if (!isset($_POST['tour_reviews_nonce_field']) || 
+        !check_admin_referer('tour_reviews_nonce', 'tour_reviews_nonce_field')) {
+        return;
+    }
+
+    // Check if reviews are set
+    if (isset($_POST['reviews']) && is_array($_POST['reviews'])) {
+        $reviews = [];
+
+        foreach ($_POST['reviews'] as $review) {
+            $reviews[] = [
+                'profile_picture' => isset($review['profile_picture']) ? esc_url_raw($review['profile_picture']) : '',
+                'customer_name' => isset($review['customer_name']) ? sanitize_text_field($review['customer_name']) : '',
+                'customer_review' => isset($review['customer_review']) ? sanitize_textarea_field($review['customer_review']) : '',
+            ];
+        }
+
+        // Save reviews as serialized data
+        update_post_meta($post_id, '_reviews', $reviews);
+    } else {
+        // If no reviews, delete the meta
+        delete_post_meta($post_id, '_reviews');
+    }
+}
+add_action('save_post', 'save_tour_reviews');
 
 
 ?>
