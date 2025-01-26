@@ -1,4 +1,3 @@
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <?php
 function display_tour_meta_box($post) {
     // Retrieve existing custom fields values
@@ -174,7 +173,6 @@ function display_tour_meta_box($post) {
                     <h4>Review
                         <?php echo $index + 1; ?>
                     </h4>
-                    <button type="button" class="remove-review" style="padding:2px 5px;border-radius:50px;border:1px solid grey;ali">Remove<i class="material-icons">backspace</i></button>
                     </div>
                     <div style="display:flex;">
                         <div class="form-group">
@@ -205,7 +203,7 @@ function display_tour_meta_box($post) {
 
                     </div>
                     
-                    <!-- <button type="button" class="remove-review">Remove</button> -->
+                    <button type="button" class="remove-review">Remove</button>
                 </div>
                 <?php endforeach; ?>
             </div>
