@@ -15,6 +15,7 @@ function display_tour_meta_box($post) {
     $itinerary = get_post_meta($post->ID, '_itinerary', true);
     $included = get_post_meta($post->ID, '_included', true);
     $excluded = get_post_meta($post->ID, '_excluded', true);
+    $google_map_iframe = get_post_meta($post->ID, '_google_map_iframe', true);
     $reviews = get_post_meta($post->ID, '_reviews', true);
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
@@ -271,13 +272,13 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
  <div id="google_map_iframe">
     <h3 class="form-title">Google Maps Iframe Input</h3>
     <div class="form-group">
-        <label for="google_map_link">Google Maps Iframe Link</label>
+        <label for="google_map_iframe">Google Maps Iframe Link</label>
         <textarea 
-            name="google_map_link" 
-            id="google_map_link" 
+            name="google_map_iframe" 
+            id="google_map_iframe" 
             class="form-control" 
             placeholder="Paste your Google Maps iframe embed link here" 
-            rows="4"><?php echo esc_textarea($google_map_link); ?></textarea>
+            rows="4"><?php echo esc_textarea($google_map_iframe); ?></textarea>
 </div>
     <div class="map-preview">
         <h4>Map Preview</h4>
@@ -289,7 +290,7 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const googleMapInput = document.getElementById('google_map_link');
+        const googleMapInput = document.getElementById('google_map_iframe');
         const iframePreview = document.getElementById('iframe_preview');
 
         // Event listener for changes in the textarea
@@ -614,6 +615,11 @@ function save_tour_meta($post_id) {
     } else {
         // If highlights are empty, delete the meta to avoid clutter
         delete_post_meta($post_id, '_excluded');
+    }
+
+    // Google Maps Iframes
+    if (isset($_POST['google_map_iframe'])) {
+        update_post_meta($post_id, '_google_map_iframe', sanitize_text_field($_POST['google_map_iframe']));
     }
 
 }
