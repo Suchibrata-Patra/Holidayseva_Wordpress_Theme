@@ -90,13 +90,16 @@ function display_tour_meta_box($post) {
                         <div class="form-group">
     <label for="tour_duration_days">Duration (Days):</label>
     <input type="number" name="tour_duration_days" id="tour_duration_days" class="form-control"
-        value="<?php echo esc_attr($tour_duration_days); ?>" placeholder="7" />
+        value="<?php echo esc_attr($tour_duration_days); ?>" placeholder="1" />
 </div>
 
 <div class="form-group" style="margin-left:10px;">
     <label for="tour_duration_nights">Duration (Nights):</label>
     <input type="number" name="tour_duration_nights" id="tour_duration_nights" class="form-control"
-        value="<?php echo esc_attr($tour_duration_nights); ?>" placeholder="8" />
+        value="<?php echo esc_attr($tour_duration_nights); ?>" placeholder="0" />
+</div>
+<div class="form-group">
+    Note : By Default it will take Same Day tour Package. <br> If Tour is of SameDay, Choose Day as 1 and Nights as 0 
 </div>
 
                         </div>
