@@ -89,13 +89,16 @@ get_header(); ?>
 <?php if (!empty($tour_cover_images) && is_array($tour_cover_images)) : ?>
     <h3>Images:</h3>
     <ul>
-        <?php foreach ($tour_cover_images as $plans) : ?>
-            <?php if (!empty($image_url)) : // Only display non-empty Plans ?>
-                  <img src="<?php echo $image_url;?>" alt="" srcset="">
+        <?php foreach ($tour_cover_images as $image_url) : ?>
+            <?php if (!empty($image_url)) : // Only display non-empty images ?>
+                <li>
+                    <img src="<?php echo esc_url($image_url); ?>" alt="Tour Cover Image" />
+                </li>
             <?php endif; ?>
         <?php endforeach; ?>
     </ul>
 <?php endif; ?>
+
 
 
                 <?php if (!empty($itinerary)) : ?>
