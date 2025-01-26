@@ -568,10 +568,6 @@ function save_tour_meta($post_id) {
         return $post_id; // Nonce is invalid, do not save
     }
 
-    if (!empty($google_map_link)) {
-        echo '<div class="tour-map-preview">' . wp_kses_post($google_map_link) . '</div>';
-    }
-
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
     if (!current_user_can('edit_post', $post_id)) return $post_id;
     
@@ -675,5 +671,26 @@ function save_tour_pricing_data($post_id) {
     }
 }
 add_action('save_post', 'save_tour_pricing_data');
+
+
+
+// Save Google Map iframe and Tour Price when the post is saved
+function save_google_map_and_tour_price($post_id) {
+    // Ensure that we're not autosaving
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+    
+    // Only proceed if it's a valid post type (e.g., 'tour')
+    if ('tour' === get_post_type($post_id)) {
+        // Check if the google_map_link field is set and sanitize it
+        if (isset($_POST['google_map_link'])) {
+            $google_map_link = sanitize_textarea_field($_POST['google_map_link']);
+            update_post_meta($post_id, '_google_map_link', $google_map_link);
+        }
+        
+    }
+
+    return $post_id;
+}
+add_action('save_post', 'save_google_map_and_tour_price');
 
 ?>
