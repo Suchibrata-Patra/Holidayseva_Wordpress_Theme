@@ -128,7 +128,7 @@ function display_tour_meta_box($post) {
                 <div class="form-group">
     <label for="tour_cover_images">Slider Images</label>
     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-        style="display: none !important;" value="<?php echo esc_attr($tour_cover_images); ?>"
+         value="<?php echo esc_attr($tour_cover_images); ?>"
         placeholder="" />
     <button type="button" id="tour_cover_images_button" class="form-button"
         title="Click to select images for the slider">Select Images</button>
