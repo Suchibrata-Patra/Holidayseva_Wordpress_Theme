@@ -150,53 +150,27 @@ function display_tour_meta_box($post) {
     <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
         <div class="form-group" style="color:black;">
             <label for="day_plans<?php echo $i; ?>">Highlight for Day <?php echo $i; ?></label>
-            <?php
-            $content = isset($day_plans[$i - 1]) ? $day_plans[$i - 1] : ''; // Get the highlight for each day
-            $editor_id = 'day_plans' . $i; // Unique ID for each editor
-
-            // Add TinyMCE editor for each day
-            wp_editor(
-                $content,
-                $editor_id,
-                [
-                    'textarea_name' => 'day_plans[]',
-                    'media_buttons' => true, // Enable media buttons
-                    'textarea_rows' => 5,    // Adjust height
-                    'tinymce' => [
-                        'extended_valid_elements' => 'a[href|target|title|class|id],img[src|alt|class|id|width|height|style],div[class|id|style],p[class|id|style],span[class|id|style],iframe[src|width|height|frameborder|allowfullscreen|class|style]',
-                        'toolbar1' => 'formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link unlink | code',
-                        'toolbar2' => 'undo redo | styleselect | removeformat | visualblocks code',
-                        'valid_elements' => '*[*]', // Allow all valid HTML elements
-                        'paste_as_text' => false, // Allow pasting HTML content
-                        'plugins' => 'paste code visualblocks',
-                        'content_css' => get_stylesheet_directory_uri() . '/editor-style.css', // Optional: Load custom editor styles
-                    ],
-                ]
-            );
-            ?>
+            <textarea
+                name="day_plans[]"
+                id="day_plans<?php echo $i; ?>"
+                class="form-control"
+                rows="5"
+                placeholder="Enter highlights for Day <?php echo $i; ?>"
+                style="color: black; background-color: white;"
+            ><?php echo isset($day_plans[$i - 1]) ? esc_textarea($day_plans[$i - 1]) : ''; ?></textarea>
         </div>
     <?php endfor; ?>
 </div>
 
 <style>
-    #day_plans .wp-editor-area {
-        color: black !important; /* Set text color explicitly */
-        background-color: white !important; /* Ensure background is white */
+    #day_plans textarea.form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
     }
 </style>
-
-<script>
-    // Dynamically reinitialize TinyMCE editors if needed
-    document.addEventListener('DOMContentLoaded', function () {
-        tinymce.init({
-            selector: 'textarea.wp-editor-area',
-            plugins: 'code visualblocks paste',
-            toolbar: 'undo redo | formatselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist | code',
-            valid_elements: '*[*]', // Allow all HTML tags and attributes
-            paste_as_text: false // Allow pasting raw HTML
-        });
-    });
-</script>
 
 
         <!--Itinerary -->
