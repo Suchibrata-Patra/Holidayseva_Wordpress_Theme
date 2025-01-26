@@ -29,3 +29,5 @@ if (have_posts()) :
 endif;
 
 get_footer();
+
+echo 'THis is Single Tour page.php';
