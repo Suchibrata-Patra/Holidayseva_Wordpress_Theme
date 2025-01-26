@@ -160,7 +160,7 @@ function display_tour_meta_box($post) {
         </div>
 
         <!--Reviews -->
-        <div id="Reviews" class="hidden">
+        <div id="reviews" class="hidden">
             <h3 class="form-title">Reviews</h3>
             <?php for ($i = 1; $i <= 5; $i++) : ?>
             <div class="form-group">
@@ -321,18 +321,6 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-        <!-- Reviews-->
         
         
         
