@@ -165,87 +165,147 @@ function display_tour_meta_box($post) {
 
         <!-- Reviews -->
         <div id="reviews">
-            <h3 class="form-title">Reviews</h3>
-            <div id="reviews-container">
-                <?php foreach ($reviews as $index => $review) : ?>
-                <div class="review-set" data-index="<?php echo $index; ?>">
-                    <h4>Review
-                        <?php echo $index + 1; ?>
-                    </h4>
-                    <div style="display:flex;">
-                        <div class="form-group">
-                            <label for="reviewer_name_<?php echo $index; ?>">Reviewer Name</label>
-                            <input type="text" name="reviews[<?php echo $index; ?>][name]"
-                                id="reviewer_name_<?php echo $index; ?>" class="form-control"
-                                value="<?php echo esc_attr($review['name'] ?? ''); ?>" />
-                        </div>
-                        <div class="form-group" style="margin-left:30px;">
-                            <label for="review_score_<?php echo $index; ?>">Review Score</label>
-                            <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>"
-                                class="form-control" style="padding:10px 10px;">
-                                <?php for ($i = 1; $i <= 5; $i++) : ?>
-                                <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '' , $i); ?>>
-                                    <?php echo str_repeat('&#9733;', $i); ?>
-                                </option>
-                                <?php endfor; ?>
-                            </select>
-                        </div>
-
-                        <div class="form-group" style="margin-left:30px;">
-                        <label for="review_content_<?php echo $index; ?>">Review Content</label>
-                        <textarea name="reviews[<?php echo $index; ?>][content]"
-                            id="review_content_<?php echo $index; ?>"
-                            class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
-                    </div>
-
-                    </div>
-                    
-                    <button type="button" class="remove-review">Remove</button>
+    <h3 class="form-title">Reviews</h3>
+    <div id="reviews-container">
+        <?php foreach ($reviews as $index => $review) : ?>
+        <div class="review-set" data-index="<?php echo $index; ?>">
+            <h4>Review
+                <?php echo $index + 1; ?>
+            </h4>
+            <div style="display:flex;">
+                <div class="form-group">
+                    <label for="reviewer_name_<?php echo $index; ?>">Reviewer Name</label>
+                    <input type="text" name="reviews[<?php echo $index; ?>][name]"
+                        id="reviewer_name_<?php echo $index; ?>" class="form-control"
+                        value="<?php echo esc_attr($review['name'] ?? ''); ?>" />
                 </div>
-                <?php endforeach; ?>
-            </div>
-            <button type="button" id="add-review">Add Review</button>
-        </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const container = document.getElementById('reviews-container');
-                const addReviewButton = document.getElementById('add-review');
-
-                addReviewButton.addEventListener('click', function () {
-                    const index = container.children.length;
-                    const reviewHTML = `
-            <div class=\"review-set\" data-index=\"${index}\">
-                <h4>Review ${index + 1}</h4>
-                <div class=\"form-group\">
-                    <label for=\"reviewer_name_${index}\">Reviewer Name</label>
-                    <input type=\"text\" name=\"reviews[${index}][name]\" id=\"reviewer_name_${index}\" class=\"form-control\" />
-                </div>
-                <div class=\"form-group\">
-                    <label for=\"review_score_${index}\">Review Score</label>
-                    <select name=\"reviews[${index}][score]\" id=\"review_score_${index}\" class=\"form-control\">
-                        ${[1, 2, 3, 4, 5].map(i => `<option value=\"${i}\">${i}</option>`).join('')}
+                <div class="form-group" style="margin-left:30px;">
+                    <label for="review_score_<?php echo $index; ?>">Review Score</label>
+                    <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>"
+                        class="form-control" style="padding:10px 10px;">
+                        <?php for ($i = 1; $i <= 5; $i++) : ?>
+                        <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '' , $i); ?>>
+                            <?php echo str_repeat('&#9733;', $i); ?>
+                        </option>
+                        <?php endfor; ?>
                     </select>
                 </div>
-                <div class=\"form-group\">
-                    <label for=\"review_content_${index}\">Review Content</label>
-                    <textarea name=\"reviews[${index}][content]\" id=\"review_content_${index}\" class=\"form-control\"></textarea>
+
+                <div class="form-group" style="margin-left:30px;">
+                    <label for="review_content_<?php echo $index; ?>">Review Content</label>
+                    <textarea name="reviews[<?php echo $index; ?>][content]"
+                        id="review_content_<?php echo $index; ?>"
+                        class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
                 </div>
-                <button type=\"button\" class=\"remove-review\">Remove</button>
-            </div>`;
 
-                    const tempDiv = document.createElement('div');
-                    tempDiv.innerHTML = reviewHTML.trim();
-                    container.appendChild(tempDiv.firstChild);
-                });
+            </div>
 
-                container.addEventListener('click', function (event) {
-                    if (event.target.classList.contains('remove-review')) {
-                        event.target.closest('.review-set').remove();
-                    }
-                });
-            });
-        </script>
+            <!-- Button Container for Remove and Add Review -->
+            <div class="button-container" style="display: flex; gap: 10px;">
+                <button type="button" class="remove-review">Remove</button>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+    
+    <!-- Add Review Button, placed side by side with the Remove Button -->
+    <div class="button-container" style="display: flex; gap: 10px;">
+        <button type="button" id="add-review">Add Review</button>
+    </div>
+</div>
+
+<!-- Custom Styles and Script -->
+<style>
+    .button-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    #reviews .remove-review {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        border-radius: 4px;
+    }
+
+    #add-review {
+        background-color: #2ecc71;
+        color: white;
+        border: none;
+        border-radius: 4px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+</style>
+
+<script>
+    // Add new review functionality
+    document.getElementById('add-review').addEventListener('click', function() {
+        var reviewsContainer = document.getElementById('reviews-container');
+        var newReviewIndex = reviewsContainer.children.length;
+        
+        // Create new review element
+        var newReview = document.createElement('div');
+        newReview.classList.add('review-set');
+        newReview.setAttribute('data-index', newReviewIndex);
+        
+        // Review content HTML
+        newReview.innerHTML = `
+            <h4>Review ${newReviewIndex + 1}</h4>
+            <div style="display:flex;">
+                <div class="form-group">
+                    <label for="reviewer_name_${newReviewIndex}">Reviewer Name</label>
+                    <input type="text" name="reviews[${newReviewIndex}][name]" 
+                        id="reviewer_name_${newReviewIndex}" class="form-control" />
+                </div>
+                <div class="form-group" style="margin-left:30px;">
+                    <label for="review_score_${newReviewIndex}">Review Score</label>
+                    <select name="reviews[${newReviewIndex}][score]" 
+                        id="review_score_${newReviewIndex}" class="form-control">
+                        <option value="1">&#9733;</option>
+                        <option value="2">&#9733;&#9733;</option>
+                        <option value="3">&#9733;&#9733;&#9733;</option>
+                        <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
+                        <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-left:30px;">
+                    <label for="review_content_${newReviewIndex}">Review Content</label>
+                    <textarea name="reviews[${newReviewIndex}][content]" 
+                        id="review_content_${newReviewIndex}" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="button-container" style="display: flex; gap: 10px;">
+                <button type="button" class="remove-review">Remove</button>
+            </div>
+        `;
+        
+        // Append the new review to the container
+        reviewsContainer.appendChild(newReview);
+
+        // Add event listener to remove the review
+        newReview.querySelector('.remove-review').addEventListener('click', function() {
+            newReview.remove();
+        });
+    });
+
+    // Remove review functionality (for existing reviews)
+    document.querySelectorAll('.remove-review').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var reviewSet = button.closest('.review-set');
+            reviewSet.remove();
+        });
+    });
+</script>
+
 
 
 
