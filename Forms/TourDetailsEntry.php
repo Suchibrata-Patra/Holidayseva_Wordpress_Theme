@@ -144,41 +144,48 @@ function display_tour_meta_box($post) {
 
 
 
-                <!-- Day Plans -->
-    <div id="day_plans" class="hidden">
-        <h3 class="form-title">Day Plans</h3>
+              <!-- Day Plans -->
+<div id="day_plans" class="hidden">
+    <h3 class="form-title">Day Plans</h3>
+    <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
+        <div class="form-group" style="color:black;">
+            <label for="day_plans<?php echo $i; ?>">Highlight for Day <?php echo $i; ?></label>
+            <?php
+            $content = isset($day_plans[$i - 1]) ? $day_plans[$i - 1] : ''; // Get the highlight for each day
+            $editor_id = 'day_plans' . $i; // Unique ID for each editor
+
+            // Add TinyMCE editor for each day
+            wp_editor(
+                $content,
+                $editor_id,
+                [
+                    'textarea_name' => 'day_plans[]',
+                    'media_buttons' => true, // Enable media buttons
+                    'textarea_rows' => 5,    // Adjust height
+                ]
+            );
+            ?>
+        </div>
+    <?php endfor; ?>
+</div>
+<script>
+    // Ensure that TinyMCE is initialized after the page is fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+        // Loop through dynamically generated editors
         <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
-            <div class="form-group" style="color:black;">
-                <label for="day_plans<?php echo $i; ?>">Highlight for Day <?php echo $i; ?></label>
-                <?php
-                $content = isset($day_plans[$i - 1]) ? $day_plans[$i - 1] : ''; // Get the highlight for each day
-                $editor_id = 'day_plans' . $i; // Unique ID for each editor
-
-                // Add TinyMCE editor for each day
-                wp_editor(
-                    $content,
-                    $editor_id,
-                    [
-                        'textarea_name' => 'day_plans[]',
-                        'media_buttons' => true, // Enable media buttons
-                        'textarea_rows' => 5,    // Adjust height
-                    ]
-                );
-                ?>
-            </div>
+            tinymce.init({
+                selector: '#day_plans<?php echo $i; ?>',
+                menubar: true, // Add menubar if needed
+                plugins: 'lists link image charmap preview anchor',
+                toolbar: 'undo redo | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+                setup: function (editor) {
+                    editor.on('change', function () {
+                        tinymce.triggerSave(); // Trigger saving the content
+                    });
+                }
+            });
         <?php endfor; ?>
-    </div>
-    <style>
-        #day_plans .wp-editor-area {
-    color: black !important; /* Set text color explicitly */
-    background-color: white !important; /* Ensure background is white */
-}
-
-    </style>
-    <script>
-   tinymce.init({
-      selector: “.tinymce”
-  })
+    });
 </script>
 
 
