@@ -831,6 +831,8 @@ function save_day_plans_meta($post_id) {
         // Sanitize each day plan's content before saving
         $sanitized_plans = array_map('wp_kses_post', $_POST['day_plans']);
         update_post_meta($post_id, '_day_plans', $sanitized_plans);
+    }else{
+        delete_post_meta($post_id, '_day_plans');
     }
 }
 add_action('save_post', 'save_day_plans_meta');
