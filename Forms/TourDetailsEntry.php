@@ -199,7 +199,7 @@ function display_tour_meta_box($post) {
                     </div>
 
                     </div>
-                    <div style="display:flex;">
+                    
                     <button type="button" class="remove-review">Remove</button>
                 </div>
                 <?php endforeach; ?>
