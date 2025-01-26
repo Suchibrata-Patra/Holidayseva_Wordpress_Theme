@@ -164,7 +164,7 @@ function display_tour_meta_box($post) {
 
 
         <!-- Reviews -->
-        <div id="reviews">
+        <div id="reviews" class="hidden">
             <div style="display:flex;">
                 <h3 class="form-title">Reviews</h3>
                 <button type="button" id="add-review" style="border-radius:50px;background-color:green;color:white;border:none;margin-top:0%;margin-bottom:5%;margin-left:20px;padding:5px 10px;">Add +</button>
@@ -362,7 +362,7 @@ function display_tour_meta_box($post) {
 
 
         <!-- Google Maps iframes -->
-        <div id="google_map_iframe">
+        <div id="google_map_iframe" class="hidden">
             <h3 class="form-title">Google Maps Iframe Input</h3>
             <div class="form-group">
                 <label for="google_map_link">Google Maps iframe Link</label>
