@@ -345,14 +345,14 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
                         <span>Select Avatar</span>
                     </div>
                     <div class="dropdown-options" id="profile_picture_options">
-                        <div class="dropdown-option" data-value="https://example.com/avatar1.jpg">
-                            <img src="https://example.com/avatar1.jpg" alt="Avatar 1" class="avatar-img"> Avatar 1
+                        <div class="dropdown-option" data-value="https://imagedelivery.net/xE-VtsYZUS2Y8MtLMcbXAg/4f1eb366cecf8f69f61c/sm">
+                            <img src="https://imagedelivery.net/xE-VtsYZUS2Y8MtLMcbXAg/4f1eb366cecf8f69f61c/sm" alt="Avatar 1" class="avatar-img"> Avatar 1
                         </div>
-                        <div class="dropdown-option" data-value="https://example.com/avatar2.jpg">
-                            <img src="https://example.com/avatar2.jpg" alt="Avatar 2" class="avatar-img"> Avatar 2
+                        <div class="dropdown-option" data-value="https://static.vecteezy.com/system/resources/previews/002/002/403/non_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg">
+                            <img src="https://static.vecteezy.com/system/resources/previews/002/002/403/non_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Avatar 2" class="avatar-img"> Avatar 2
                         </div>
-                        <div class="dropdown-option" data-value="https://example.com/avatar3.jpg">
-                            <img src="https://example.com/avatar3.jpg" alt="Avatar 3" class="avatar-img"> Avatar 3
+                        <div class="dropdown-option" data-value="https://img.freepik.com/premium-photo/bearded-man-illustration_665280-67047.jpg">
+                            <img src="https://img.freepik.com/premium-photo/bearded-man-illustration_665280-67047.jpg" alt="Avatar 3" class="avatar-img"> Avatar 3
                         </div>
                         <!-- Add more avatars as needed -->
                     </div>
