@@ -15,7 +15,8 @@ function display_tour_meta_box($post) {
     $itinerary = get_post_meta($post->ID, '_itinerary', true);
     $included = get_post_meta($post->ID, '_included', true);
     $excluded = get_post_meta($post->ID, '_excluded', true);
-    $google_map_iframe = get_post_meta($post->ID, '_google_map_iframe', true);
+    // Fetch the saved Google Maps iframe
+    $google_map_iframe = get_post_meta(get_the_ID(), '_google_map_iframe', true);
     $reviews = get_post_meta($post->ID, '_reviews', true);
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
@@ -274,11 +275,12 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
     <div class="form-group">
         <label for="google_map_iframe">Google Maps Iframe Link</label>
         <textarea 
-            name="google_map_iframe" 
-            id="google_map_iframe" 
-            class="form-control" 
-            placeholder="Paste your Google Maps iframe embed link here" 
-            rows="4"><?php echo esc_textarea($google_map_iframe); ?></textarea>
+    name="google_map_iframe" 
+    id="google_map_iframe" 
+    class="form-control" 
+    placeholder="Paste your Google Maps iframe embed link here" 
+    rows="4"><?php echo esc_textarea($google_map_iframe); ?></textarea>
+
     </div>
     <div class="map-preview">
         <h4>Map Preview</h4>
@@ -287,25 +289,23 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
         </div>
     </div>
 </div>
-
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const googleMapInput = document.getElementById('google_map_iframe');
         const iframePreview = document.getElementById('iframe_preview');
+        const iframeCode = googleMapInput.value.trim();
 
-        // Event listener for changes in the textarea
-        googleMapInput.addEventListener('input', function () {
-            const iframeCode = googleMapInput.value.trim();
-
-            // Check if the input contains an iframe tag
-            if (iframeCode.startsWith('<iframe') && iframeCode.endsWith('</iframe>')) {
-                iframePreview.innerHTML = iframeCode; // Update the preview with the iframe
-            } else {
-                iframePreview.innerHTML = '<p style="color: red;">Invalid iframe code. Please paste a valid Google Maps iframe embed link.</p>';
-            }
-        });
+        // Check if the input contains an iframe tag
+        if (iframeCode.startsWith('<iframe') && iframeCode.endsWith('</iframe>')) {
+            iframePreview.innerHTML = iframeCode; // Update the preview with the iframe
+        } else if (iframeCode) {
+            iframePreview.innerHTML = '<p style="color: red;">Invalid iframe code. Please paste a valid Google Maps iframe embed link.</p>';
+        } else {
+            iframePreview.innerHTML = ''; // Clear preview if there's no iframe code
+        }
     });
 </script>
+
 <!-- End Google Maps Iframes -->
 
 
