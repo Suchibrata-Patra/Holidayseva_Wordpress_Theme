@@ -1,8 +1,6 @@
 <?php
 /*
-Template Name: Tour Details
+Template Name: Any Page Template
 */
-get_header(); ?>
-
-
-This Page is Comming from the Tours.php
+?>
+this is testlorem.php
