@@ -194,7 +194,6 @@ function display_tour_meta_box($post) {
                         <div class="form-group" style="margin-left:30px;">
                         <label for="review_content_<?php echo $index; ?>">Review Content</label>
                         <textarea name="reviews[<?php echo $index; ?>][content]"
-                        placeholder="Enter Review"
                             id="review_content_<?php echo $index; ?>"
                             class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
                     </div>
