@@ -281,11 +281,9 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
 </div>
     <div class="map-preview">
         <h4>Map Preview</h4>
-        <center>
-        <div id="iframe_preview" style="border: 1px solid #ddd; padding: 10px; height:auto;">
+        <div id="iframe_preview" style="border: 1px solid #ddd; padding: 10px; height:auto;width:auto;border-radius:10px;">
             <!-- The iframe will load here -->
         </div>
-        </center>
     </div>
 </div>
 
