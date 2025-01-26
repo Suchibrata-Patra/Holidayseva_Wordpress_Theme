@@ -78,13 +78,7 @@ function display_tour_meta_box($post) {
                     <input type="text" name="tour_duration" id="tour_duration" class="form-control"
                         value="<?php echo esc_attr($tour_duration); ?>" placeholder="7 Night 8 Days" />
                 </div>
-
-                <div class="form-group">
-                    <label for="tour_price">Price</label>
-                    <input type="number" name="tour_price" id="tour_price" class="form-control"
-                        value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR" />
-                </div>
-
+                
                 <div class="form-group">
                     <label for="tour_availability">Availability</label>
                     <input type="text" name="tour_availability" id="tour_availability" class="form-control"
