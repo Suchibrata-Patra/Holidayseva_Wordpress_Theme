@@ -105,6 +105,19 @@ function add_global_variables_menu() {
 }
 add_action('admin_menu', 'add_global_variables_menu');
 
+function add_global_variables_menu() {
+    add_menu_page(
+        'Global Variables',               // Page title
+        'Global Variables',               // Menu title
+        'manage_options',                 // Capability
+        'global-variables',               // Menu slug
+        'display_global_variables_page',  // Callback function
+        'dashicons-admin-generic',        // Icon
+        20                                // Position
+    );
+}
+add_action('admin_menu', 'add_global_variables_menu');
+
 // Display Global Variables page
 function display_global_variables_page() {
     // Handle form submission
