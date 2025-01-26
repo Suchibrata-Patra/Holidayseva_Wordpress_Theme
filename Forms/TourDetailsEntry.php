@@ -166,7 +166,7 @@ function display_tour_meta_box($post) {
             </div>
             <?php endfor; ?>
         </div> -->
-        <div id="highlights">
+        <div id="highlights" class="hidden">
     <h3 class="form-title">Highlights</h3>
     <div id="highlight-fields">
         <?php if (!empty($tour_highlights)) : ?>
