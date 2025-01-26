@@ -22,44 +22,7 @@ function custom_enqueue_tinymce_styles() {
 add_action('admin_init', 'custom_enqueue_tinymce_styles');
 
 // // Register custom post types
-// function register_custom_post_types() {
-//     $post_types = [
-//         'tour' => [
-//             'name' => 'Tours',
-//             'singular_name' => 'Tour',
-//             'slug' => 'tours',
-//             'icon' => 'dashicons-palmtree',
-//             'position' => 200, // Position for the "Tours" post type
-//         ],
-//     ];
-
-//     foreach ($post_types as $slug => $type) {
-//         register_post_type($slug, [
-//             'labels' => [
-//                 'name' => $type['name'],
-//                 'singular_name' => $type['singular_name'],
-//                 'add_new' => "Add New {$type['singular_name']}",
-//                 'add_new_item' => "Add New {$type['singular_name']}",
-//                 'edit_item' => "Edit {$type['singular_name']}",
-//                 'new_item' => "New {$type['singular_name']}",
-//                 'view_item' => "View {$type['singular_name']}",
-//                 'search_items' => "Search {$type['name']}",
-//                 'not_found' => "No {$type['name']} found",
-//                 'not_found_in_trash' => "No {$type['name']} found in Trash",
-//                 'all_items' => "All {$type['name']}",
-//             ],
-//             'public' => true,
-//             'supports' => ['title', 'editor', 'thumbnail', 'excerpt', 'comments'],
-//             'menu_icon' => $type['icon'],
-//             'show_in_rest' => true,
-//             'has_archive' => true,
-//             'rewrite' => ['slug' => $type['slug']],
-//         ]);
-//     }
-// }
-// add_action('init', 'register_custom_post_types');
-// Register custom post types as pages
-function register_custom_page_types() {
+function register_custom_post_types() {
     $post_types = [
         'tour' => [
             'name' => 'Tours',
@@ -86,16 +49,54 @@ function register_custom_page_types() {
                 'all_items' => "All {$type['name']}",
             ],
             'public' => true,
-            'supports' => ['title', 'thumbnail', 'excerpt'], // Removed 'editor' and 'comments'
+            'supports' => ['title', 'editor', 'thumbnail', 'excerpt', 'comments'],
             'menu_icon' => $type['icon'],
             'show_in_rest' => true,
-            'has_archive' => false, // Pages generally don't have archives
+            'has_archive' => true,
             'rewrite' => ['slug' => $type['slug']],
-            'hierarchical' => true, // Make it hierarchical like pages
         ]);
     }
 }
-add_action('init', 'register_custom_page_types');
+add_action('init', 'register_custom_post_types');
+// Register custom post types as pages
+
+// function register_custom_page_types() {
+//     $post_types = [
+//         'tour' => [
+//             'name' => 'Tours',
+//             'singular_name' => 'Tour',
+//             'slug' => 'tours',
+//             'icon' => 'dashicons-palmtree',
+//             'position' => 200, // Position for the "Tours" post type
+//         ],
+//     ];
+
+//     foreach ($post_types as $slug => $type) {
+//         register_post_type($slug, [
+//             'labels' => [
+//                 'name' => $type['name'],
+//                 'singular_name' => $type['singular_name'],
+//                 'add_new' => "Add New {$type['singular_name']}",
+//                 'add_new_item' => "Add New {$type['singular_name']}",
+//                 'edit_item' => "Edit {$type['singular_name']}",
+//                 'new_item' => "New {$type['singular_name']}",
+//                 'view_item' => "View {$type['singular_name']}",
+//                 'search_items' => "Search {$type['name']}",
+//                 'not_found' => "No {$type['name']} found",
+//                 'not_found_in_trash' => "No {$type['name']} found in Trash",
+//                 'all_items' => "All {$type['name']}",
+//             ],
+//             'public' => true,
+//             'supports' => ['title', 'thumbnail', 'excerpt'], // Removed 'editor' and 'comments'
+//             'menu_icon' => $type['icon'],
+//             'show_in_rest' => true,
+//             'has_archive' => false, // Pages generally don't have archives
+//             'rewrite' => ['slug' => $type['slug']],
+//             'hierarchical' => true, // Make it hierarchical like pages
+//         ]);
+//     }
+// }
+// add_action('init', 'register_custom_page_types');
 
 
 // Enqueue scripts for media uploader
