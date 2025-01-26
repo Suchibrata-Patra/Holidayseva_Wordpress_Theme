@@ -336,6 +336,30 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
         <div id="reviews" class="hidden">
             <h3 class="form-title">Frequently Asked Questions</h3>
         
+            <!-- Profile Picture Section -->
+            <div class="form-group">
+                <label for="profile_picture">Profile Picture</label>
+                <div class="custom-dropdown">
+                    <div class="dropdown-selected" id="profile_picture_display">
+                        <img src="<?php echo esc_url($profile_picture); ?>" alt="Selected Avatar" class="avatar-preview">
+                        <span>Select Avatar</span>
+                    </div>
+                    <div class="dropdown-options" id="profile_picture_options">
+                        <div class="dropdown-option" data-value="https://imagedelivery.net/xE-VtsYZUS2Y8MtLMcbXAg/4f1eb366cecf8f69f61c/sm">
+                            <img src="https://imagedelivery.net/xE-VtsYZUS2Y8MtLMcbXAg/4f1eb366cecf8f69f61c/sm" alt="Avatar 1" class="avatar-img"> Avatar 1
+                        </div>
+                        <div class="dropdown-option" data-value="https://static.vecteezy.com/system/resources/previews/002/002/403/non_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg">
+                            <img src="https://static.vecteezy.com/system/resources/previews/002/002/403/non_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg" alt="Avatar 2" class="avatar-img"> Avatar 2
+                        </div>
+                        <div class="dropdown-option" data-value="https://img.freepik.com/premium-photo/bearded-man-illustration_665280-67047.jpg">
+                            <img src="" alt="Avatar 3" class="avatar-img"> Avatar 3
+                        </div>
+                        <!-- Add more avatars as needed -->
+                    </div>
+                </div>
+                <input type="hidden" name="profile_picture" id="profile_picture" value="<?php echo esc_url($profile_picture); ?>" />
+            </div>
+        
             <!-- Customer Name Entry Section -->
             <div class="form-group">
                 <label for="customer_name">Customer Name</label>
