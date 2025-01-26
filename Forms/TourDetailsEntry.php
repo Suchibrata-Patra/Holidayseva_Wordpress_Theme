@@ -269,7 +269,7 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
 
 
  <!-- Google Maps Iframes -->
- <div id="google_map_iframe">
+<div id="google_map_iframe">
     <h3 class="form-title">Google Maps Iframe Input</h3>
     <div class="form-group">
         <label for="google_map_iframe">Google Maps Iframe Link</label>
@@ -279,7 +279,7 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
             class="form-control" 
             placeholder="Paste your Google Maps iframe embed link here" 
             rows="4"><?php echo esc_textarea($google_map_iframe); ?></textarea>
-</div>
+    </div>
     <div class="map-preview">
         <h4>Map Preview</h4>
         <div id="iframe_preview" style="height:auto;width:auto;border-radius:10px;">
@@ -306,6 +306,7 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
         });
     });
 </script>
+<!-- End Google Maps Iframes -->
 
 
 
@@ -619,8 +620,8 @@ function save_tour_meta($post_id) {
 
     // Google Maps Iframes
     if (isset($_POST['google_map_iframe'])) {
-        update_post_meta($post_id, '_google_map_iframe', sanitize_text_field($_POST['google_map_iframe']));
-    }
+        update_post_meta($post_id, '_google_map_iframe', wp_kses_post($_POST['google_map_iframe']));
+    }    
 
 }
 
