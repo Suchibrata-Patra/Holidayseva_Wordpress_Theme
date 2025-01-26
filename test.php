@@ -1,57 +1,48 @@
-<div id="basic_info">
-            <h3 class="form-title">Basic Info</h3>
-            <form method="post" action="" class="styled-form">
-                <div class="form-group">
-                    <label for="tour_name">Tour Package Name</label>
-                    <input type="text" name="tour_name" id="tour_name" class="form-control"
-                        value="<?php echo esc_attr($tour_name); ?>" />
-                </div>
-
-                <div class="form-group">
-                    <label for="tour_description">Tour Description</label>
-                    <?php
-                        $tour_description = isset($tour_description) ? $tour_description : ''; // Get existing value if exists
-                        wp_editor($tour_description, 'tour_description', array(
-                            'textarea_name' => 'tour_description',
-                            'textarea_rows' => 5,
-                            'media_buttons' => true, // Enable media buttons (images, etc.)
-                        ));
-                    ?>
-                </div>
-
-                <div class="form-group">
-                    <label for="tour_location">Location</label>
-                    <input type="text" name="tour_location" id="tour_location" class="form-control"
-                        value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA" />
-                </div>
-
-                <div class="form-group">
-                    <label for="tour_duration">Duration:</label>
-                    <input type="text" name="tour_duration" id="tour_duration" class="form-control"
-                        value="<?php echo esc_attr($tour_duration); ?>" placeholder="7 Night 8 Days" />
-                </div>
-
-                <div class="form-group">
-                    <label for="tour_price">Price</label>
-                    <input type="number" name="tour_price" id="tour_price" class="form-control"
-                        value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR" />
-                </div>
-
-                <div class="form-group">
-                    <label for="tour_availability">Availability</label>
-                    <input type="text" name="tour_availability" id="tour_availability" class="form-control"
-                        value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately" />
-                </div>
-
-                <div class="form-group">
-                    <label for="tour_cover_images">Slider Images</label>
-                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                        style="display: none !important;" value="<?php echo esc_attr($tour_cover_images); ?>"
-                        placeholder="" />
-                    <button type="button" id="tour_cover_images_button" class="form-button"
-                        title="Click to select images for the slider">Select Images</button>
-                    <div id="tour_cover_images_preview"
-                        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
-                </div>
-
+<div id="google_map_iframe">
+    <h3 class="form-title">Google Maps Iframe Input</h3>
+    <div class="form-group">
+        <label for="google_map_link">Google Maps Iframe Link</label>
+        <textarea 
+            name="google_map_link" 
+            id="google_map_link" 
+            class="form-control" 
+            placeholder="Paste your Google Maps iframe embed link here" 
+            rows="4"><?php echo esc_textarea($google_map_link); ?></textarea>
+    </div>
+    <div class="form-group">
+        <label for="tour_price">Price</label>
+        <input 
+            type="number" 
+            name="tour_price" 
+            id="tour_price" 
+            class="form-control" 
+            value="<?php echo esc_attr($tour_price); ?>" 
+            placeholder="in INR" />
+    </div>
+    <div class="map-preview">
+        <h4>Map Preview</h4>
+        <div id="iframe_preview" style="border: 1px solid #ddd; padding: 10px; height: 400px;">
+            <!-- The iframe will load here -->
         </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const googleMapInput = document.getElementById('google_map_link');
+        const iframePreview = document.getElementById('iframe_preview');
+
+        // Event listener for changes in the textarea
+        googleMapInput.addEventListener('input', function () {
+            const iframeCode = googleMapInput.value.trim();
+
+            // Check if the input contains an iframe tag
+            if (iframeCode.startsWith('<iframe') && iframeCode.endsWith('</iframe>')) {
+                iframePreview.innerHTML = iframeCode; // Update the preview with the iframe
+            } else {
+                iframePreview.innerHTML = '<p style="color: red;">Invalid iframe code. Please paste a valid Google Maps iframe embed link.</p>';
+            }
+        });
+    });
+</script>
+
