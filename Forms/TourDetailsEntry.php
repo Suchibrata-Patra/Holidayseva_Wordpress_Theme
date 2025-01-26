@@ -179,7 +179,7 @@ function display_tour_meta_box($post) {
     <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>" class="form-control">
         <?php for ($i = 1; $i <= 5; $i++) : ?>
             <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '', $i); ?>>
-                <?php echo str_repeat('★', $i); ?>
+                <?php echo str_repeat('&#9733;', $i); ?>
             </option>
         <?php endfor; ?>
     </select>
