@@ -178,6 +178,7 @@ function display_tour_meta_box($post) {
                                 id="reviewer_name_<?php echo $index; ?>" class="form-control"
                                 value="<?php echo esc_attr($review['name'] ?? ''); ?>" />
                         </div>
+
                         <div class="form-group" style="margin-left:10px;">
                             <label for="review_score_<?php echo $index; ?>">Rating</label>
                             <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>"
@@ -191,20 +192,20 @@ function display_tour_meta_box($post) {
                         </div>
 
                         <div class="form-group" style="margin-left:10px;width:80%;">
-                        <label for="review_content_<?php echo $index; ?>">Review</label>
-                        <textarea name="reviews[<?php echo $index; ?>][content]"
+                            <label for="review_content_<?php echo $index; ?>">Review</label>
+                            <textarea name="reviews[<?php echo $index; ?>][content]"
                             id="review_content_<?php echo $index; ?>"
                             style="border-radius:5px;"
                             class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
-                    </div>
+                        </div>
 
                     </div>
                     
-                    <button type="button" class="remove-review" style="border-radius:50px;background-color:red;color:white;border:none;padding:5px 8px;margin-top:-3px;">Remove</button>
+                    <button type="button" class="remove-review" style="border-radius:50px;background-color:red;color:white;border:none;padding:5px 8px;">Remove</button>
                 </div>
                 <?php endforeach; ?>
             </div>
-            <button type="button" id="add-review" style="margin-top:30px;">Add Review</button>
+            <button type="button" id="add-review" style="margin-top:30px;border-radius:50px;background-color:green;color:white;border:none;padding:5px 8px;">Add Review</button>
         </div>
 
         <script>
