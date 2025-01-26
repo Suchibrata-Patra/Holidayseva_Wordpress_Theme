@@ -351,7 +351,7 @@ function display_tour_meta_box($post) {
                 color: white;
                 border: none;
                 padding: 5px 10px;
-                border-radius: 5px;
+                border-radius: 2px;
                 cursor: pointer;
             }
 
