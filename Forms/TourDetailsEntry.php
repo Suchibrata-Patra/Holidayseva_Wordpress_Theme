@@ -201,7 +201,7 @@ function display_tour_meta_box($post) {
         </div>
 
         <div id="offers_section">
-    <h4>People-Based Offers</h4>
+    <h4>Discount by adult number booking</h4>
 
     <?php if (!empty($tour_offers)) : ?>
         <?php foreach ($tour_offers as $offer) : ?>
