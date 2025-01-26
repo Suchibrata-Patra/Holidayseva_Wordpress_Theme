@@ -133,6 +133,13 @@ function display_global_variables_page() {
     $marketing_banner = get_option('marketing_banner', '');
 
     ?>
+    <style>
+        /* Change the color of Dashicon */
+.dashicons-palmtree {
+    color: #FF6347; /* Change this to your desired color */
+}
+
+    </style>
     <div class="wrap">
         <h1>Manage Global Variables</h1>
         <form method="post" action="" enctype="multipart/form-data">
