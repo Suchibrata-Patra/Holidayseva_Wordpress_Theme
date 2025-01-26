@@ -152,22 +152,19 @@ get_header(); ?>
 
             
 
-            <?php if (!empty($tour_cover_images)) : ?>
-            <h3>Gallery:</h3>
-            <div class="gallery">
-                <?php
-                        $images = is_array($tour_cover_images) ? $tour_cover_images : explode(',', $tour_cover_images);
-                        foreach ($images as $image_url) :
-                            $trimmed_url = trim($image_url);
-                            if (!empty($trimmed_url)) :
-                                ?>
+            <?php
+$tour_cover_images = get_post_meta(get_the_ID(), '_tour_cover_images', true);
+if (!empty($tour_cover_images) && is_array($tour_cover_images)) : ?>
+    <h3>Gallery:</h3>
+    <div class="gallery">
+        <?php foreach ($tour_cover_images as $image_url) :
+            $trimmed_url = trim($image_url);
+            if (!empty($trimmed_url)) : ?>
                 <img src="<?php echo esc_url($trimmed_url); ?>" alt="Tour Image" class="tour-image" />
-                <?php
-                            endif;
-                        endforeach;
-                        ?>
-            </div>
-            <?php endif; ?>
+            <?php endif;
+        endforeach; ?>
+    </div>
+<?php endif; ?>
 
             <?php if (!empty($reviews) && is_array($reviews)) : ?>
             <h3>Reviews</h3>
