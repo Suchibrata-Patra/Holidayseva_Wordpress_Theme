@@ -191,7 +191,7 @@ function display_tour_meta_box($post) {
                             </select>
                         </div>
 
-                        <div class="form-group" style="margin-left:30px;">
+                        <div class="form-group" style="margin-left:30px;width:80%;">
                         <label for="review_content_<?php echo $index; ?>">Review</label>
                         <textarea name="reviews[<?php echo $index; ?>][content]"
                             id="review_content_<?php echo $index; ?>"
