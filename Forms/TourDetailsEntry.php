@@ -18,6 +18,7 @@ function display_tour_meta_box($post) {
     // Fetch the saved Google Maps iframe
     $google_map_link = get_post_meta(get_the_ID(), '_google_map_link', true);
     $reviews = get_post_meta($post->ID, '_reviews', true);
+    $reviews = is_array($reviews) ? $reviews : [];
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
     var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
@@ -159,19 +160,77 @@ function display_tour_meta_box($post) {
             <?php endfor; ?>
         </div>
 
-        <!--Reviews -->
-        <div id="reviews" class="hidden">
-            <h3 class="form-title">Reviews</h3>
-            <?php for ($i = 1; $i <= 5; $i++) : ?>
+
+
+        <!-- Reviews -->
+<div id="reviews">
+    <h3 class="form-title">Reviews</h3>
+    <div id="reviews-container">
+        <?php foreach ($reviews as $index => $review) : ?>
+        <div class="review-set" data-index="<?php echo $index; ?>">
+            <h4>Review <?php echo $index + 1; ?></h4>
             <div class="form-group">
-                <label for="reviews_<?php echo $i; ?>">Review Item
-                    <?php echo $i; ?>
-                </label>
-                <input type="text" name="reviews[]" id="reviews_<?php echo $i; ?>" class="form-control"
-                    value="<?php echo isset($reviews[$i - 1]) ? esc_attr($reviews[$i - 1]) : ''; ?>" />
+                <label for="reviewer_name_<?php echo $index; ?>">Reviewer Name</label>
+                <input type="text" name="reviews[<?php echo $index; ?>][name]" id="reviewer_name_<?php echo $index; ?>" class="form-control" value="<?php echo esc_attr($review['name'] ?? ''); ?>" />
             </div>
-            <?php endfor; ?>
+            <div class="form-group">
+                <label for="review_score_<?php echo $index; ?>">Review Score</label>
+                <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>" class="form-control">
+                    <?php for ($i = 1; $i <= 5; $i++) : ?>
+                    <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '', $i); ?>><?php echo $i; ?></option>
+                    <?php endfor; ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="review_content_<?php echo $index; ?>">Review Content</label>
+                <textarea name="reviews[<?php echo $index; ?>][content]" id="review_content_<?php echo $index; ?>" class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
+            </div>
+            <button type="button" class="remove-review">Remove</button>
         </div>
+        <?php endforeach; ?>
+    </div>
+    <button type="button" id="add-review">Add Review</button>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('reviews-container');
+    const addReviewButton = document.getElementById('add-review');
+
+    addReviewButton.addEventListener('click', function() {
+        const index = container.children.length;
+        const reviewHTML = `
+            <div class=\"review-set\" data-index=\"${index}\">
+                <h4>Review ${index + 1}</h4>
+                <div class=\"form-group\">
+                    <label for=\"reviewer_name_${index}\">Reviewer Name</label>
+                    <input type=\"text\" name=\"reviews[${index}][name]\" id=\"reviewer_name_${index}\" class=\"form-control\" />
+                </div>
+                <div class=\"form-group\">
+                    <label for=\"review_score_${index}\">Review Score</label>
+                    <select name=\"reviews[${index}][score]\" id=\"review_score_${index}\" class=\"form-control\">
+                        ${[1, 2, 3, 4, 5].map(i => `<option value=\"${i}\">${i}</option>`).join('')}
+                    </select>
+                </div>
+                <div class=\"form-group\">
+                    <label for=\"review_content_${index}\">Review Content</label>
+                    <textarea name=\"reviews[${index}][content]\" id=\"review_content_${index}\" class=\"form-control\"></textarea>
+                </div>
+                <button type=\"button\" class=\"remove-review\">Remove</button>
+            </div>`;
+
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = reviewHTML.trim();
+        container.appendChild(tempDiv.firstChild);
+    });
+
+    container.addEventListener('click', function(event) {
+        if (event.target.classList.contains('remove-review')) {
+            event.target.closest('.review-set').remove();
+        }
+    });
+});
+</script>
 
 
 
@@ -572,6 +631,22 @@ function save_tour_meta($post_id) {
     } else {
         // If highlights are empty, delete the meta to avoid clutter
         delete_post_meta($post_id, '_itinerary');
+    }
+
+
+    // Saving the Review Data
+    if (isset($_POST['reviews']) && is_array($_POST['reviews'])) {
+        $sanitized_reviews = array_map(function($review) {
+            return [
+                'name' => sanitize_text_field($review['name'] ?? ''),
+                'score' => intval($review['score'] ?? 0),
+                'content' => sanitize_textarea_field($review['content'] ?? '')
+            ];
+        }, $_POST['reviews']);
+
+        update_post_meta($post_id, '_reviews', $sanitized_reviews);
+    } else {
+        delete_post_meta($post_id, '_reviews');
     }
 
 
