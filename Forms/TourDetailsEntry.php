@@ -6,7 +6,8 @@ function display_tour_meta_box($post) {
     $tour_description = get_post_meta($post->ID, '_tour_description', true);
     $tour_details = get_post_meta($post->ID, '_tour_details', true);
     $tour_location = get_post_meta($post->ID, '_tour_location', true);
-    $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
+    $tour_duration_days = get_post_meta($post->ID, '_tour_duration_days', true);
+    $tour_duration_nights = get_post_meta($post->ID, '_tour_duration_nights', true);
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_offers = get_post_meta($post->ID, '_tour_offers', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
@@ -80,11 +81,24 @@ function display_tour_meta_box($post) {
                         value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA" />
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="tour_duration">Duration:</label>
                     <input type="text" name="tour_duration" id="tour_duration" class="form-control"
                         value="<?php echo esc_attr($tour_duration); ?>" placeholder="7 Night 8 Days" />
-                </div>
+                </div> -->
+                <div class="form-group">
+    <label for="tour_duration_days">Duration (Days):</label>
+    <input type="number" name="tour_duration_days" id="tour_duration_days" class="form-control"
+        value="<?php echo esc_attr($tour_duration_days); ?>" placeholder="7" />
+</div>
+
+<div class="form-group">
+    <label for="tour_duration_nights">Duration (Nights):</label>
+    <input type="number" name="tour_duration_nights" id="tour_duration_nights" class="form-control"
+        value="<?php echo esc_attr($tour_duration_nights); ?>" placeholder="8" />
+</div>
+
+                
 
                 <div class="form-group">
                     <label for="tour_availability">Availability</label>
@@ -625,8 +639,11 @@ function save_tour_meta($post_id) {
     if (isset($_POST['tour_location'])) {
         update_post_meta($post_id, '_tour_location', sanitize_text_field($_POST['tour_location']));
     }
-    if (isset($_POST['tour_duration'])) {
-        update_post_meta($post_id, '_tour_duration', sanitize_text_field($_POST['tour_duration']));
+    if (isset($_POST['tour_duration_days'])) {
+        update_post_meta($post_id, '_tour_duration_days', sanitize_text_field($_POST['tour_duration_days']));
+    }
+    if (isset($_POST['tour_duration_nights'])) {
+        update_post_meta($post_id, '_tour_duration_nights', sanitize_text_field($_POST['tour_duration_nights']));
     }
     if (isset($_POST['tour_price'])) {
         update_post_meta($post_id, '_tour_price', floatval($_POST['tour_price']));
