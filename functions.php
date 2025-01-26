@@ -136,7 +136,7 @@ function display_global_variables_page() {
     <style>
         /* Change the color of Dashicon */
 .dashicons-palmtree {
-    color: #FF6347; /* Change this to your desired color */
+    color: #FF6347 !important; /* Change this to your desired color */
 }
 
     </style>
