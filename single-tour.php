@@ -195,14 +195,31 @@ get_header(); ?>
             <p>No bookings available for this tour.</p>
             <?php endif; ?>
         </div>
+
         <?php if (!empty($google_map_link)) : ?>
     <h3>Google Map:</h3>
     <div class="google-map-container">
-<?php echo wp_kses_post($google_map_link); ?>
+        <?php
+        echo wp_kses(
+            $google_map_link,
+            [
+                'iframe' => [
+                    'src'             => true,
+                    'width'           => true,
+                    'height'          => true,
+                    'style'           => true,
+                    'allowfullscreen' => true,
+                    'loading'         => true,
+                    'frameborder'     => true,
+                ],
+            ]
+        );
+        ?>
     </div>
 <?php else : ?>
     <p>Google Map is not available for this tour.</p>
 <?php endif; ?>
+
 
     </article>
     <?php
