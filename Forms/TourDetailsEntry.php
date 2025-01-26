@@ -200,7 +200,7 @@ function display_tour_meta_box($post) {
 
                     </div>
                     
-                    <button type="button" class="remove-review" style="border-radius:50px;background-color:red;color:white;border:none;padding:5px 8px;">Remove</button>
+                    <button type="button" class="remove-review" style="border-radius:50px;background-color:red;color:white;border:none;padding:5px 8px;margin-top:0px;">Remove</button>
                 </div>
                 <?php endforeach; ?>
             </div>
