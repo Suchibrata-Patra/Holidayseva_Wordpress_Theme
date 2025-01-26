@@ -133,7 +133,7 @@ function display_tour_meta_box($post) {
     <button type="button" id="tour_cover_images_button" class="form-button"
         title="Click to select images for the slider">Select Images</button>
     <div id="tour_cover_images_preview"
-        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
+        style="margin-top: 10px; display: flex; gap: 10px;">
         <?php
         // Get the saved tour cover images (assuming this is a serialized array of image IDs or URLs)
         $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
