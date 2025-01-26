@@ -728,6 +728,7 @@ function save_google_map_and_tour_price($post_id) {
     return $post_id;
 }
 add_action('save_post', 'save_google_map_and_tour_price');
+
 // Save Reviews and Reviewers' Names as Pairs
 function save_reviews_meta($post_id) {
     // Verify nonce for security
