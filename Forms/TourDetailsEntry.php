@@ -12,6 +12,8 @@ function display_tour_meta_box($post) {
     $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
 
     $itinerary = get_post_meta($post->ID, '_itinerary', true);
+    $included = get_post_meta($post->ID, '_included', true);
+    $excluded = get_post_meta($post->ID, '_excluded', true);
     $reviews = get_post_meta($post->ID, '_reviews', true);
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
@@ -123,18 +125,22 @@ function display_tour_meta_box($post) {
                 </div>
         <?php endfor; ?>
 </div>
-        <!--Reviews -->
-        <!-- <div id="reviews" class="hidden">
-            <h3 class="form-title">Reviews</h3>
-            
+        <!--Included -->
+        <div id="included">
+<h3 class="form-title">included</h3>
+        <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
-                    <label for="tour_cover_images">Cover Images </label>
-                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                        value="<?php echo esc_attr($tour_cover_images); ?>" />
-                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
+                    <label for="included_<?php echo $i; ?>">Itinerary Item <?php echo $i; ?></label>
+                    <input type="text" 
+                           name="included[]" 
+                           id="included_<?php echo $i; ?>" 
+                           class="form-control" 
+                           value="<?php echo isset($included[$i - 1]) ? esc_attr($included[$i - 1]) : ''; ?>" />
                 </div>
-        </div> -->
+        <?php endfor; ?>
+</div>
 
+        <!--Reviews -->
         <div id="Reviews">
 <h3 class="form-title">Reviews</h3>
         <?php for ($i = 1; $i <= 5; $i++) : ?>
@@ -408,7 +414,7 @@ function save_tour_meta($post_id) {
     }
 
 
-    // Saving the POsts for the Tour Itinery
+    // Saving the Posts for the Tour Itinery
     if (isset($_POST['itinerary']) && is_array($_POST['itinerary'])) {
         // Sanitize each highlight
         $sanitized_highlights = array_map('sanitize_text_field', $_POST['itinerary']);
@@ -430,6 +436,18 @@ function save_tour_meta($post_id) {
     } else {
         // If highlights are empty, delete the meta to avoid clutter
         delete_post_meta($post_id, '_itinerary');
+    }
+
+    // Saving the Included
+    if (isset($_POST['included']) && is_array($_POST['included'])) {
+        // Sanitize each highlight
+        $sanitized_highlights = array_map('sanitize_text_field', $_POST['included']);
+        
+        // Save as post meta
+        update_post_meta($post_id, '_included', $sanitized_highlights);
+    } else {
+        // If highlights are empty, delete the meta to avoid clutter
+        delete_post_meta($post_id, '_included');
     }
 
 }
