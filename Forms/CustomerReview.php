@@ -1,8 +1,6 @@
-<?php
 function display_tour_meta_box($post) {
     $reviews = get_post_meta($post->ID, '_reviews', true);
     $reviews = is_array($reviews) ? $reviews : [];
-?>
 <div id="reviews">
             <div style="display:flex;">
                 <h3 class="form-title">Reviews</h3>
@@ -100,8 +98,6 @@ function display_tour_meta_box($post) {
             });
         </script>
 
-<?php
-}
 
 // Save custom fields values when the post is saved
 function save_tour_meta($post_id) {
@@ -126,5 +122,3 @@ function save_tour_meta($post_id) {
 }
 
 add_action('save_post', 'save_tour_meta');
-
-?>
