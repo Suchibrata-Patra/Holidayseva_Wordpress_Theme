@@ -125,7 +125,7 @@ function display_tour_meta_box($post) {
                     <div id="tour_cover_images_preview"
                         style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
                 </div> -->
-                <div class="form-group">
+                <!-- <div class="form-group">
     <label for="tour_cover_images">Slider Images</label>
     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
          value="<?php echo esc_attr($tour_cover_images); ?>"
@@ -148,9 +148,70 @@ function display_tour_meta_box($post) {
         }
         ?>
     </div>
-</div>
+</div> -->
 
-                
+<div class="form-group">
+        <label for="tour_cover_images">Slider Images</label>
+        <input type="hidden" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array) $tour_cover_images)); ?>" />
+        <button type="button" id="tour_cover_images_button" class="button" title="Click to select images for the slider">Select Images</button>
+        <div id="tour_cover_images_preview" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
+            <?php
+            if ($tour_cover_images) {
+                foreach ($tour_cover_images as $image_url) {
+                    echo '<div class="image-preview">';
+                    echo '<img src="' . esc_url($image_url) . '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" />';
+                    echo '</div>';
+                }
+            }
+            ?>
+        </div>
+    </div>
+    <script>
+    jQuery(document).ready(function($) {
+        var mediaUploader;
+
+        $('#tour_cover_images_button').click(function(e) {
+            e.preventDefault();
+
+            // If the media uploader object hasn't been created yet, create it now
+            if (mediaUploader) {
+                mediaUploader.open();
+                return;
+            }
+
+            // Create the media uploader
+            mediaUploader = wp.media.frames.file_frame = wp.media({
+                title: 'Select Images for Slider',
+                button: {
+                    text: 'Select Images'
+                },
+                multiple: true  // Allow multiple images to be selected
+            });
+
+            // When images are selected, set the input field value
+            mediaUploader.on('select', function() {
+                var selection = mediaUploader.state().get('selection');
+                var imageUrls = [];
+
+                selection.each(function(attachment) {
+                    imageUrls.push(attachment.attributes.url);
+                });
+
+                // Update the hidden input field with the selected image URLs
+                $('#tour_cover_images').val(imageUrls.join(','));
+
+                // Preview the images
+                var previewHTML = '';
+                imageUrls.forEach(function(url) {
+                    previewHTML += '<div class="image-preview"><img src="' + url + '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" /></div>';
+                });
+                $('#tour_cover_images_preview').html(previewHTML);
+            });
+
+            mediaUploader.open();
+        });
+    });
+    </script>                
         </div>
 
         <!-- Highlights -->
@@ -760,74 +821,6 @@ function display_tour_meta_box($post) {
 
 
 <?php
-}
-function display_tour_meta_box($post) {
-    // Retrieve existing custom fields values
-    $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
-    ?>
-    <div class="form-group">
-        <label for="tour_cover_images">Slider Images</label>
-        <input type="hidden" name="tour_cover_images" id="tour_cover_images" value="<?php echo esc_attr(implode(',', (array) $tour_cover_images)); ?>" />
-        <button type="button" id="tour_cover_images_button" class="button" title="Click to select images for the slider">Select Images</button>
-        <div id="tour_cover_images_preview" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
-            <?php
-            if ($tour_cover_images) {
-                foreach ($tour_cover_images as $image_url) {
-                    echo '<div class="image-preview">';
-                    echo '<img src="' . esc_url($image_url) . '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" />';
-                    echo '</div>';
-                }
-            }
-            ?>
-        </div>
-    </div>
-    <script>
-    jQuery(document).ready(function($) {
-        var mediaUploader;
-
-        $('#tour_cover_images_button').click(function(e) {
-            e.preventDefault();
-
-            // If the media uploader object hasn't been created yet, create it now
-            if (mediaUploader) {
-                mediaUploader.open();
-                return;
-            }
-
-            // Create the media uploader
-            mediaUploader = wp.media.frames.file_frame = wp.media({
-                title: 'Select Images for Slider',
-                button: {
-                    text: 'Select Images'
-                },
-                multiple: true  // Allow multiple images to be selected
-            });
-
-            // When images are selected, set the input field value
-            mediaUploader.on('select', function() {
-                var selection = mediaUploader.state().get('selection');
-                var imageUrls = [];
-
-                selection.each(function(attachment) {
-                    imageUrls.push(attachment.attributes.url);
-                });
-
-                // Update the hidden input field with the selected image URLs
-                $('#tour_cover_images').val(imageUrls.join(','));
-
-                // Preview the images
-                var previewHTML = '';
-                imageUrls.forEach(function(url) {
-                    previewHTML += '<div class="image-preview"><img src="' + url + '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" /></div>';
-                });
-                $('#tour_cover_images_preview').html(previewHTML);
-            });
-
-            mediaUploader.open();
-        });
-    });
-    </script>
-    <?php
 }
 
 // Save custom fields values when the post is saved
