@@ -55,6 +55,7 @@ get_header(); ?>
         </header>
 
         <div class="entry-content">
+
             <p>
                 <strong>Description:</strong>
                 <?php echo esc_html($tour_description); ?>
@@ -149,8 +150,7 @@ get_header(); ?>
             </ul>
             <?php endif; ?>
 
-            <h3>Google Map:</h3>
-            <?php $google_map_link; ?>
+            
 
             <?php if (!empty($tour_cover_images)) : ?>
             <h3>Gallery:</h3>
@@ -195,6 +195,8 @@ get_header(); ?>
             <p>No bookings available for this tour.</p>
             <?php endif; ?>
         </div>
+        <h3>Google Map:</h3>
+            <?php $google_map_link; ?>
     </article>
     <?php
     endwhile;
