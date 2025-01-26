@@ -222,11 +222,11 @@ function display_tour_meta_box($post) {
                 <h4>Review ${index + 1}</h4>
                 <div style=\"display:flex;\">
                 <div class=\"form-group\">
-                    <label for=\"reviewer_name_${index}\">Reviewer Name</label>
+                    <label for=\"reviewer_name_${index}\">Name</label>
                     <input type=\"text\" name=\"reviews[${index}][name]\" id=\"reviewer_name_${index}\" class=\"form-control\" />
                 </div>
                 <div class=\"form-group\">
-                    <label for=\"review_score_${index}\">Review Score</label>
+                    <label for=\"review_score_${index}\">Rating</label>
                     
                     <select name=\"reviews[${index}][score]\" id=\"review_score_${index}\"
                                 class="form-control" style="padding:10px 10px;border-radius:5px;">
@@ -241,7 +241,7 @@ function display_tour_meta_box($post) {
 
                 </div>
                 <div class=\"form-group\">
-                    <label for=\"review_content_${index}\" style=\"width:80%;\">Review Content</label>
+                    <label for=\"review_content_${index}\" style=\"width:80%;\">Review</label>
                     <textarea name=\"reviews[${index}][content]\" id=\"review_content_${index}\" class=\"form-control\"></textarea>
                 </div>
                 </div>
