@@ -196,7 +196,7 @@ function display_tour_meta_box($post) {
         <div class="form-group">
             <label for="tour_name">Tour Package Name</label>
             <input type="text" name="tour_name" id="tour_name" class="form-control"
-                value="<?php echo esc_attr($tour_name); ?>" />
+                value="<?php echo esc_attr($tour_name); ?>" readonly/>
         </div>
         <div class="form-group">
             <label for="tour_price">Price</label>
