@@ -22,16 +22,23 @@ function display_tour_meta_box($post) {
 <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
-        <span> <hr>Fundamenatal Details<hr> </span>
+        <span>
+            <hr>Fundamenatal Details
+            <hr>
+        </span>
         <a href="#" class="tab-link active" data-target="basic_info">Basic Info</a>
         <a href="#" class="tab-link" data-target="highlights">Highlights</a>
         <a href="#" class="tab-link" data-target="itinerary">Itinerary</a>
         <a href="#" class="tab-link" data-target="included">Included (New)</a>
         <a href="#" class="tab-link" data-target="excluded">Excluded (New)</a>
-        <a href="#" class="tab-link" data-target="pricing"> <strong style="font-weight:600!important;">Pricing</strong> </a>
+        <a href="#" class="tab-link" data-target="pricing"> <strong style="font-weight:600!important;">Pricing</strong>
+        </a>
         <a href="#" class="tab-link" data-target="reviews">Reviews</a>
         <a href="#" class="tab-link" data-target="frequently_asked_questions">FAQ</a>
-        <span> <hr> Dynamic Contents <hr> </span>
+        <span>
+            <hr> Dynamic Contents
+            <hr>
+        </span>
         <a href="#" class="tab-link" data-target="recommendation">Recommendation ENGINE</a>
     </div>
 
@@ -62,7 +69,7 @@ function display_tour_meta_box($post) {
                 <div class="form-group">
                     <label for="tour_location">Location</label>
                     <input type="text" name="tour_location" id="tour_location" class="form-control"
-                        value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA"/>
+                        value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA" />
                 </div>
 
                 <div class="form-group">
@@ -74,123 +81,212 @@ function display_tour_meta_box($post) {
                 <div class="form-group">
                     <label for="tour_price">Price</label>
                     <input type="number" name="tour_price" id="tour_price" class="form-control"
-                        value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR"/>
+                        value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR" />
                 </div>
 
                 <div class="form-group">
                     <label for="tour_availability">Availability</label>
                     <input type="text" name="tour_availability" id="tour_availability" class="form-control"
-                        value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately"/>
+                        value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately" />
                 </div>
 
                 <div class="form-group">
-    <label for="tour_cover_images">Slider Images</label>
-    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control" style="display: none !important;"
-        value="<?php echo esc_attr($tour_cover_images); ?>" placeholder=""/>
-    <button type="button" id="tour_cover_images_button" class="form-button" 
-        title="Click to select images for the slider">Select Images</button>
-    <div id="tour_cover_images_preview" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
-</div>
+                    <label for="tour_cover_images">Slider Images</label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                        style="display: none !important;" value="<?php echo esc_attr($tour_cover_images); ?>"
+                        placeholder="" />
+                    <button type="button" id="tour_cover_images_button" class="form-button"
+                        title="Click to select images for the slider">Select Images</button>
+                    <div id="tour_cover_images_preview"
+                        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
+                </div>
 
         </div>
 
         <!-- Highlights -->
-       <div id="highlights">
-<h3 class="form-title">Highlights</h3>
-        <?php for ($i = 1; $i <= 20; $i++) : ?>
+        <div id="highlights">
+            <h3 class="form-title">Highlights</h3>
+            <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
-                    <label for="tour_highlight_<?php echo $i; ?>">Highlight <?php echo $i; ?></label>
-                    <input type="text" 
-                           name="tour_highlights[]" 
-                           id="tour_highlight_<?php echo $i; ?>" 
-                           class="form-control" 
-                           value="<?php echo isset($tour_highlights[$i - 1]) ? esc_attr($tour_highlights[$i - 1]) : ''; ?>" />
-                </div>
-        <?php endfor; ?>
-</div>
+                <label for="tour_highlight_<?php echo $i; ?>">Highlight
+                    <?php echo $i; ?>
+                </label>
+                <input type="text" name="tour_highlights[]" id="tour_highlight_<?php echo $i; ?>" class="form-control"
+                    value="<?php echo isset($tour_highlights[$i - 1]) ? esc_attr($tour_highlights[$i - 1]) : ''; ?>" />
+            </div>
+            <?php endfor; ?>
+        </div>
 
 
 
         <!--Itinerary -->
         <div id="itinerary">
-<h3 class="form-title">itinerary</h3>
-        <?php for ($i = 1; $i <= 20; $i++) : ?>
+            <h3 class="form-title">itinerary</h3>
+            <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
-                    <label for="itinerary_<?php echo $i; ?>">Itinerary Item <?php echo $i; ?></label>
-                    <input type="text" 
-                           name="itinerary[]" 
-                           id="itinerary_<?php echo $i; ?>" 
-                           class="form-control" 
-                           value="<?php echo isset($itinerary[$i - 1]) ? esc_attr($itinerary[$i - 1]) : ''; ?>" />
-                </div>
-        <?php endfor; ?>
-</div>
+                <label for="itinerary_<?php echo $i; ?>">Itinerary Item
+                    <?php echo $i; ?>
+                </label>
+                <input type="text" name="itinerary[]" id="itinerary_<?php echo $i; ?>" class="form-control"
+                    value="<?php echo isset($itinerary[$i - 1]) ? esc_attr($itinerary[$i - 1]) : ''; ?>" />
+            </div>
+            <?php endfor; ?>
+        </div>
         <!--Included -->
         <div id="included">
-<h3 class="form-title">included</h3>
-        <?php for ($i = 1; $i <= 20; $i++) : ?>
+            <h3 class="form-title">included</h3>
+            <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
-                    <label for="included_<?php echo $i; ?>">Included Item <?php echo $i; ?></label>
-                    <input type="text" 
-                           name="included[]" 
-                           id="included_<?php echo $i; ?>" 
-                           class="form-control" 
-                           value="<?php echo isset($included[$i - 1]) ? esc_attr($included[$i - 1]) : ''; ?>" />
-                </div>
-        <?php endfor; ?>
-</div>
+                <label for="included_<?php echo $i; ?>">Included Item
+                    <?php echo $i; ?>
+                </label>
+                <input type="text" name="included[]" id="included_<?php echo $i; ?>" class="form-control"
+                    value="<?php echo isset($included[$i - 1]) ? esc_attr($included[$i - 1]) : ''; ?>" />
+            </div>
+            <?php endfor; ?>
+        </div>
 
         <!--Excluded -->
         <div id="excluded">
-<h3 class="form-title">excluded</h3>
-        <?php for ($i = 1; $i <= 20; $i++) : ?>
+            <h3 class="form-title">excluded</h3>
+            <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
-                    <label for="excluded_<?php echo $i; ?>">Excluded Item <?php echo $i; ?></label>
-                    <input type="text" 
-                           name="excluded[]" 
-                           id="excluded_<?php echo $i; ?>" 
-                           class="form-control" 
-                           value="<?php echo isset($excluded[$i - 1]) ? esc_attr($excluded[$i - 1]) : ''; ?>" />
-                </div>
-        <?php endfor; ?>
-</div>
+                <label for="excluded_<?php echo $i; ?>">Excluded Item
+                    <?php echo $i; ?>
+                </label>
+                <input type="text" name="excluded[]" id="excluded_<?php echo $i; ?>" class="form-control"
+                    value="<?php echo isset($excluded[$i - 1]) ? esc_attr($excluded[$i - 1]) : ''; ?>" />
+            </div>
+            <?php endfor; ?>
+        </div>
 
         <!--Reviews -->
         <div id="Reviews">
-<h3 class="form-title">Reviews</h3>
-        <?php for ($i = 1; $i <= 5; $i++) : ?>
+            <h3 class="form-title">Reviews</h3>
+            <?php for ($i = 1; $i <= 5; $i++) : ?>
             <div class="form-group">
-                    <label for="reviews_<?php echo $i; ?>">Review Item <?php echo $i; ?></label>
-                    <input type="text" 
-                           name="reviews[]" 
-                           id="reviews_<?php echo $i; ?>" 
-                           class="form-control" 
-                           value="<?php echo isset($reviews[$i - 1]) ? esc_attr($reviews[$i - 1]) : ''; ?>" />
-                </div>
-        <?php endfor; ?>
+                <label for="reviews_<?php echo $i; ?>">Review Item
+                    <?php echo $i; ?>
+                </label>
+                <input type="text" name="reviews[]" id="reviews_<?php echo $i; ?>" class="form-control"
+                    value="<?php echo isset($reviews[$i - 1]) ? esc_attr($reviews[$i - 1]) : ''; ?>" />
+            </div>
+            <?php endfor; ?>
+        </div>
+
+
+
+        <!-- Recommendation ENGINE -->
+        <div id="recommendation" class="hidden">
+            <h3 class="form-title">Recommended Tours</h3>
+            <span>Choose the Tour Pages [Maximum - 10, Min - 4] Such that the returning users can get to know about our
+                top selling tour packages...</span>
+            <span>
+                <h4>under Development</h4>
+            </span>
+        </div>
+
+
+
+        <!-- pricing Strategy -->
+        <div id="basic_info">
+    <h3 class="form-title">Basic Info</h3>
+    <form method="post" action="" class="styled-form">
+        <div class="form-group">
+            <label for="tour_name">Tour Package Name</label>
+            <input type="text" name="tour_name" id="tour_name" class="form-control"
+                value="<?php echo esc_attr($tour_name); ?>" />
+        </div>
+        <div class="form-group">
+            <label for="tour_price">Price</label>
+            <input type="number" name="tour_price" id="tour_price" class="form-control"
+                value="<?php echo esc_attr($tour_price); ?>" placeholder="in INR" />
+        </div>
+
+        <div id="offers_section">
+            <h4>People-Based Offers</h4>
+            <div class="offer-group">
+                <label>From</label>
+                <input type="number" name="offer[from][]" class="form-control" placeholder="Min People" />
+                <label>To</label>
+                <input type="number" name="offer[to][]" class="form-control" placeholder="Max People" />
+                <label>Discount (%)</label>
+                <input type="number" name="offer[discount][]" class="form-control" placeholder="Discount" />
+                <button type="button" class="remove-offer-btn">Remove</button>
+            </div>
+        </div>
+        <button type="button" id="add_offer_btn" class="btn btn-secondary">Add More Offers</button>
+        <br><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
 
+<script>
+document.getElementById('add_offer_btn').addEventListener('click', function () {
+    const offersSection = document.getElementById('offers_section');
+    const newOfferGroup = document.createElement('div');
+    newOfferGroup.classList.add('offer-group');
+
+    newOfferGroup.innerHTML = `
+        <label>From</label>
+        <input type="number" name="offer[from][]" class="form-control" placeholder="Min People" />
+        <label>To</label>
+        <input type="number" name="offer[to][]" class="form-control" placeholder="Max People" />
+        <label>Discount (%)</label>
+        <input type="number" name="offer[discount][]" class="form-control" placeholder="Discount" />
+        <button type="button" class="remove-offer-btn">Remove</button>
+    `;
+
+    offersSection.appendChild(newOfferGroup);
+
+    newOfferGroup.querySelector('.remove-offer-btn').addEventListener('click', function () {
+        newOfferGroup.remove();
+    });
+});
+
+document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+        btn.parentElement.remove();
+    });
+});
+</script>
+
+<style>
+.offer-group {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.remove-offer-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.remove-offer-btn:hover {
+    background-color: #ff1a1a;
+}
+</style>
 
 
-<!-- Recommendation ENGINE -->
-<div id="recommendation" class="hidden">
-<h3 class="form-title">Recommended Tours</h3>
-<span>Choose the Tour Pages [Maximum - 10, Min - 4] Such that the returning users can get to know about our top selling tour packages...</span>
-<span><h4>under Development</h4></span>
-</div>
+
+
 
 
 
         <!-- Frequently Asked Questions -->
         <div id="frequently_asked_questions" class="hidden">
             <h3 class="form-title">Frequently Asked Questions</h3>
-            
+
             <div class="form-group">
-                    <label for="tour_cover_images">Cover Images </label>
-                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                        value="<?php echo esc_attr($tour_cover_images); ?>" />
-                    <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
-                </div>
+                <label for="tour_cover_images">Cover Images </label>
+                <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                    value="<?php echo esc_attr($tour_cover_images); ?>" />
+                <button type="button" id="tour_cover_images_button" class="form-button">Select Images</button>
+            </div>
             </form>
         </div>
     </div>
@@ -205,7 +301,7 @@ function display_tour_meta_box($post) {
     .container {
         display: flex;
         min-height: 100vh;
-        background-color:rgb(255, 255, 255);
+        background-color: rgb(255, 255, 255);
     }
 
     /* Sidebar Styling */
@@ -232,7 +328,7 @@ function display_tour_meta_box($post) {
     }
 
     .sidebar a:hover {
-        background-color:rgb(210, 159, 77);
+        background-color: rgb(210, 159, 77);
     }
 
     /* Main Content Styling */
@@ -252,7 +348,7 @@ function display_tour_meta_box($post) {
     .styled-form {
         background-color: white;
         padding: 10px;
-        border-radius:0px;
+        border-radius: 0px;
         /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
     }
 
@@ -264,7 +360,7 @@ function display_tour_meta_box($post) {
         display: block;
         margin-bottom: 2px;
         font-weight: 600;
-        color:rgb(0, 0, 0);
+        color: rgb(0, 0, 0);
     }
 
     .form-group input,
