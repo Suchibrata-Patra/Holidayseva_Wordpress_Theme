@@ -162,7 +162,6 @@ function display_tour_meta_box($post) {
                         'textarea_name' => 'day_plans[]',
                         'media_buttons' => true, // Enable media buttons
                         'textarea_rows' => 5,    // Adjust height
-                        'editor_class' => 'form-control', // Add custom classes if needed
                     ]
                 );
                 ?>
