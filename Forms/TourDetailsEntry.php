@@ -326,7 +326,7 @@ document.querySelectorAll('.remove-offer-btn').forEach(function (btn) {
         
         <?php include_once get_template_directory() . '/Forms/CustomerReview.php'; ?>
 
-    <!-- </div> -->
+    </div>
 </div>
 
 
