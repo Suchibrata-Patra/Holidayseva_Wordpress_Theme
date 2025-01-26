@@ -101,10 +101,16 @@ get_header(); ?>
 
 
 
-                <?php if (!empty($itinerary)) : ?>
-                    <h3>Itinerary:</h3>
-                    <p><?php echo nl2br(esc_html($itinerary)); ?></p>
-                <?php endif; ?>
+<?php if (!empty($itinerary) && is_array($itinerary)) : ?>
+    <h3>Itinerary</h3>
+    <ul>
+        <?php foreach ($itinerary as $plans) : ?>
+            <?php if (!empty($plans)) : // Only display non-empty Plans ?>
+                <?php echo esc_html($plans); ?> |
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
 
                 <?php if (!empty($included)) : ?>
                     <h3>Included:</h3>
