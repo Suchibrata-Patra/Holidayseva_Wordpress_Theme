@@ -237,7 +237,7 @@ function display_tour_meta_box($post) {
 
 
         <!--Itinerary -->
-        <div id="itinerary" class="hidden">
+        <!-- <div id="itinerary" class="hidden">
             <h3 class="form-title">itinerary</h3>
             <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
@@ -248,7 +248,52 @@ function display_tour_meta_box($post) {
                     value="<?php echo isset($itinerary[$i - 1]) ? esc_attr($itinerary[$i - 1]) : ''; ?>" />
             </div>
             <?php endfor; ?>
-        </div>
+        </div> -->
+                <!--Itinerary -->
+
+        <div id="itinerary">
+    <h3 class="form-title">Itinerary</h3>
+    <div id="itinerary-fields">
+        <?php if (!empty($itinerary)) : ?>
+            <?php foreach ($itinerary as $index => $item) : ?>
+                <div class="form-group">
+                    <input type="text" name="itinerary[]" class="form-control" 
+                           value="<?php echo esc_attr($item); ?>" placeholder="Enter itinerary item" />
+                    <button type="button" class="remove-itinerary">Remove</button>
+                </div>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <div class="form-group">
+                <input type="text" name="itinerary[]" class="form-control" placeholder="Enter itinerary item" />
+                <button type="button" class="remove-itinerary">Remove</button>
+            </div>
+        <?php endif; ?>
+    </div>
+    <button type="button" id="add-itinerary">Add Itinerary Item</button>
+</div>
+
+<script>
+    document.getElementById('add-itinerary').addEventListener('click', function () {
+        const container = document.getElementById('itinerary-fields');
+        const newField = document.createElement('div');
+        newField.classList.add('form-group');
+        newField.innerHTML = `
+            <input type="text" name="itinerary[]" class="form-control" placeholder="Enter itinerary item" />
+            <button type="button" class="remove-itinerary">Remove</button>
+        `;
+        container.appendChild(newField);
+    });
+
+    document.getElementById('itinerary-fields').addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-itinerary')) {
+            e.target.parentElement.remove();
+        }
+    });
+</script>
+
+
+
+
 
         <!--Included -->
         <div id="included" class="hidden">
