@@ -75,10 +75,10 @@ get_header(); ?>
 <?php endif; ?>
 
 
-<?php if (!empty($days_plans) && is_array($days_plans)) : ?>
+<?php if (!empty($day_plans) && is_array($day_plans)) : ?>
     <h3>Highlights:</h3>
     <ul>
-        <?php foreach ($days_plans as $plans) : ?>
+        <?php foreach ($day_plans as $plans) : ?>
             <?php if (!empty($plans)) : // Only display non-empty Plans ?>
                 <?php echo esc_html($plans); ?> |
             <?php endif; ?>
