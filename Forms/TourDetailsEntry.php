@@ -173,7 +173,7 @@ function display_tour_meta_box($post) {
                         <?php echo $index + 1; ?>
                     </h4>
                     <div style="display:flex;">
-                        <div class="form-group">
+                        <div class="form-groups">
                             <label for="reviewer_name_<?php echo $index; ?>">Reviewer Name</label>
                             <input type="text" name="reviews[<?php echo $index; ?>][name]"
                                 id="reviewer_name_<?php echo $index; ?>" class="form-control"
