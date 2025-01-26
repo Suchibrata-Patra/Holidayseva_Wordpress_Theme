@@ -8,6 +8,7 @@ function display_tour_meta_box($post) {
     $tour_location = get_post_meta($post->ID, '_tour_location', true);
     $tour_duration = get_post_meta($post->ID, '_tour_duration', true);
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
+    $tour_offers = get_post_meta($post->ID, '_tour_offers', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
     $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
 
