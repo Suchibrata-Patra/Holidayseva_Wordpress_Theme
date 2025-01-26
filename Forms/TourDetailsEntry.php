@@ -237,9 +237,7 @@ function display_tour_meta_box($post) {
                                 <?php endfor; ?>
                     </select>
 
-                    // <select name=\"reviews[${index}][score]\" id=\"review_score_${index}\" class=\"form-control\">
-                    //     ${[1, 2, 3, 4, 5].map(i => `<option value=\"${i}\">${i}</option>`).join('')}
-                    // </select>
+                   
                 </div>
                 <div class=\"form-group\">
                     <label for=\"review_content_${index}\">Review Content</label>
