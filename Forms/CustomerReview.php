@@ -1,132 +1,130 @@
 <?php
-// Display the Reviews Meta Box
 function display_tour_meta_box($post) {
-    // Retrieve existing reviews
     $reviews = get_post_meta($post->ID, '_reviews', true);
-    $reviews = is_array($reviews) ? $reviews : []; // Ensure it's an array
+    $reviews = is_array($reviews) ? $reviews : [];
+?>
+<div id="reviews">
+            <div style="display:flex;">
+                <h3 class="form-title">Reviews</h3>
+                <button type="button" id="add-review" style="border-radius:50px;background-color:green;color:white;border:none;margin-top:5%;margin-bottom:5%;margin-left:20px;padding:5px 10px;">Add +</button>
+            </div>
+            <div id="reviews-container">
+                <?php foreach ($reviews as $index => $review) : ?>
+                <div class="review-set" data-index="<?php echo $index; ?>" style="border:2px solid #2980b9;margin-top:10px;border-radius:4px;padding:5px;background-color:#FBFBFB;">
+                    <h4 style="margin-bottom:3px;">Review No - <?php echo $index + 1; ?>
+                    </h4>
+                    <div style="display:flex;">
+                        <div class="form-group">
+                            <label for="reviewer_name_<?php echo $index; ?>">Name</label>
+                            <input type="text" name="reviews[<?php echo $index; ?>][name]"
+                                id="reviewer_name_<?php echo $index; ?>" class="form-control" style="border-radius:5px;"
+                                value="<?php echo esc_attr($review['name'] ?? ''); ?>" />
+                        </div>
 
-    wp_nonce_field('tour_reviews_nonce', 'tour_reviews_nonce_field');
-    ?>
-    <div class="reviews" class="hidden">
-    <div id="reviews-container">
-        <h3 class="form-title">Customer Reviews</h3>
+                        <div class="form-group" style="margin-left:10px;">
+                            <label for="review_score_<?php echo $index; ?>">Rating</label>
+                            <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>"
+                                class="form-control" style="padding:10px 10px;border-radius:5px;">
+                                <?php for ($i = 1; $i <= 5; $i++) : ?>
+                                <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '' , $i); ?>>
+                                    <?php echo str_repeat('&#x2B50;', $i); ?>
+                                </option>
+                                <?php endfor; ?>
+                            </select>
+                        </div>
 
-        <div id="reviews-list">
-            <?php foreach ($reviews as $index => $review) : ?>
-                <div class="review-item" data-index="<?php echo $index; ?>">
-                    <h4>Review <?php echo $index + 1; ?></h4>
-                    <label>Profile Picture:</label>
-                    <input type="hidden" name="reviews[<?php echo $index; ?>][profile_picture]" value="<?php echo esc_url($review['profile_picture']); ?>" class="profile_picture">
-                    <img src="<?php echo esc_url($review['profile_picture']); ?>" class="avatar-preview" alt="Selected Avatar">
-                    <button type="button" class="change-avatar">Change Avatar</button>
+                        <div class="form-group" style="margin-left:10px;width:80%;">
+                            <label for="review_content_<?php echo $index; ?>">Review</label>
+                            <textarea name="reviews[<?php echo $index; ?>][content]"
+                            id="review_content_<?php echo $index; ?>"
+                            style="border-radius:5px;"
+                            class="form-control"><?php echo esc_textarea($review['content'] ?? ''); ?></textarea>
+                        </div>
 
-                    <label>Customer Name:</label>
-                    <input type="text" name="reviews[<?php echo $index; ?>][customer_name]" value="<?php echo esc_attr($review['customer_name']); ?>" class="customer_name">
-
-                    <label>Customer Review:</label>
-                    <textarea name="reviews[<?php echo $index; ?>][customer_review]" class="customer_review"><?php echo esc_textarea($review['customer_review']); ?></textarea>
-
-                    <button type="button" class="remove-review">Remove Review</button>
+                    </div>
+                    
+                    <button type="button" class="remove-review" style="border-radius:50px;background-color:red;color:white;border:none;padding:5px 8px;">Remove</button>
                 </div>
-            <?php endforeach; ?>
+                <?php endforeach; ?>
+            </div>
         </div>
 
-        <button type="button" id="add-review">Add New Review</button>
-    </div>
-    </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const container = document.getElementById('reviews-container');
+                const addReviewButton = document.getElementById('add-review');
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const reviewsContainer = document.getElementById('reviews-list');
-        const addReviewButton = document.getElementById('add-review');
-
-        addReviewButton.addEventListener('click', function () {
-            const index = reviewsContainer.children.length;
-            const template = `
-                <div class="review-item" data-index="${index}">
-                    <h4>Review ${index + 1}</h4>
-                    <label>Profile Picture:</label>
-                    <input type="hidden" name="reviews[${index}][profile_picture]" class="profile_picture">
-                    <img src="" class="avatar-preview" alt="Selected Avatar">
-                    <button type="button" class="change-avatar">Change Avatar</button>
-
-                    <label>Customer Name:</label>
-                    <input type="text" name="reviews[${index}][customer_name]" class="customer_name">
-
-                    <label>Customer Review:</label>
-                    <textarea name="reviews[${index}][customer_review]" class="customer_review"></textarea>
-
-                    <button type="button" class="remove-review">Remove Review</button>
+                addReviewButton.addEventListener('click', function () {
+                    const index = container.children.length;
+                    const reviewHTML = `
+            <div class=\"review-set\" data-index=\"${index}\" style=\"border:2px solid #2980b9;margin-top:10px;border-radius:4px;padding:5px;background-color:#FBFBFB;\">
+                <h4>Review ${index + 1}</h4>
+                <div style=\"display:flex;\">
+                <div class=\"form-group\" style=\"margin-left:10px;\">
+                    <label for=\"reviewer_name_${index}\">Name</label>
+                    <input type=\"text\" name=\"reviews[${index}][name]\" id=\"reviewer_name_${index}\" class=\"form-control\" />
                 </div>
-            `;
-            reviewsContainer.insertAdjacentHTML('beforeend', template);
-        });
+                <div class=\"form-group\">
+                    <label for=\"review_score_${index}\">Rating</label>
+                    
+                    <select name=\"reviews[${index}][score]\" id=\"review_score_${index}\"
+                                class="form-control" style="padding:10px 10px;border-radius:5px;">
+                                <?php for ($i = 1; $i <= 5; $i++) : ?>
+                                <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '' , $i); ?>>
+                                    <?php echo str_repeat('&#x2B50;', $i); ?>
+                                </option>
+                                <?php endfor; ?>
+                    </select>
 
-        reviewsContainer.addEventListener('click', function (event) {
-            if (event.target.classList.contains('remove-review')) {
-                event.target.closest('.review-item').remove();
-            }
-        });
-    });
-    </script>
+                   
 
-    <style>
-        .review-item {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-        .avatar-preview {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-        .remove-review {
-            color: red;
-            cursor: pointer;
-        }
-    </style>
-    <?php
+                </div>
+                <div class=\"form-group\">
+                    <label for=\"review_content_${index}\" style=\"width:80%;\">Review</label>
+                    <textarea name=\"reviews[${index}][content]\" id=\"review_content_${index}\" class=\"form-control\"></textarea>
+                </div>
+                </div>
+                <button type=\"button\" class=\"remove-review\" style=\"border-radius:50px;background-color:red;color:white;border:none;padding:5px 8px;\">Remove</button>
+            </div>`;
+
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = reviewHTML.trim();
+                    container.appendChild(tempDiv.firstChild);
+                });
+
+                container.addEventListener('click', function (event) {
+                    if (event.target.classList.contains('remove-review')) {
+                        event.target.closest('.review-set').remove();
+                    }
+                });
+            });
+        </script>
+
+<?php
 }
 
-// Save the Reviews
-function save_tour_reviews($post_id) {
-    // Check if the nonce is valid
-    if (!isset($_POST['tour_reviews_nonce_field']) || 
-        !check_admin_referer('tour_reviews_nonce', 'tour_reviews_nonce_field')) {
-        return;
-    }
+// Save custom fields values when the post is saved
+function save_tour_meta($post_id) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+    if (!current_user_can('edit_post', $post_id)) return $post_id;
 
-    // Check if reviews are set
+    // Saving the Review Data
     if (isset($_POST['reviews']) && is_array($_POST['reviews'])) {
-        $reviews = [];
-
-        foreach ($_POST['reviews'] as $review) {
-            $reviews[] = [
-                'profile_picture' => isset($review['profile_picture']) ? esc_url_raw($review['profile_picture']) : '',
-                'customer_name' => isset($review['customer_name']) ? sanitize_text_field($review['customer_name']) : '',
-                'customer_review' => isset($review['customer_review']) ? sanitize_textarea_field($review['customer_review']) : '',
+        $sanitized_reviews = array_map(function($review) {
+            return [
+                'name' => sanitize_text_field($review['name'] ?? ''),
+                'score' => intval($review['score'] ?? 0),
+                'content' => sanitize_textarea_field($review['content'] ?? '')
             ];
-        }
+        }, $_POST['reviews']);
 
-        // Save reviews as serialized data
-        update_post_meta($post_id, '_reviews', $reviews);
+        update_post_meta($post_id, '_reviews', $sanitized_reviews);
     } else {
-        // If no reviews, delete the meta
         delete_post_meta($post_id, '_reviews');
     }
+
 }
 
-// Attach to WordPress hooks
-function setup_reviews_meta_box() {
-    add_meta_box(
-        'tour_reviews_meta',          // Meta box ID
-        'Tour Reviews',               // Title
-        'display_tour_meta_box',      // Callback function
-        'tour',                       // Post type
-        'normal',                     // Context
-        'default'                     // Priority
-    );
-}
-add_action('add_meta_boxes', 'setup_reviews_meta_box');
-add_action('save_post', 'save_tour_reviews');
+add_action('save_post', 'save_tour_meta');
+
+?>
