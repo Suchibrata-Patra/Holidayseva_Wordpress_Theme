@@ -105,7 +105,7 @@ function display_tour_meta_box($post) {
         </div>
 
         <!-- Highlights -->
-        <div id="highlights">
+        <div id="highlights" class="hidden">
             <h3 class="form-title">Highlights</h3>
             <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
@@ -121,7 +121,7 @@ function display_tour_meta_box($post) {
 
 
         <!--Itinerary -->
-        <div id="itinerary">
+        <div id="itinerary" class="hidden">
             <h3 class="form-title">itinerary</h3>
             <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
@@ -133,8 +133,9 @@ function display_tour_meta_box($post) {
             </div>
             <?php endfor; ?>
         </div>
+
         <!--Included -->
-        <div id="included">
+        <div id="included" class="hidden">
             <h3 class="form-title">included</h3>
             <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
@@ -148,7 +149,7 @@ function display_tour_meta_box($post) {
         </div>
 
         <!--Excluded -->
-        <div id="excluded">
+        <div id="excluded" class="hidden">
             <h3 class="form-title">excluded</h3>
             <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
@@ -162,7 +163,7 @@ function display_tour_meta_box($post) {
         </div>
 
         <!--Reviews -->
-        <div id="Reviews">
+        <div id="Reviews" class="hidden">
             <h3 class="form-title">Reviews</h3>
             <?php for ($i = 1; $i <= 5; $i++) : ?>
             <div class="form-group">
