@@ -75,14 +75,17 @@ get_header(); ?>
 <?php endif; ?>
 
 
-                <?php if (!empty($day_plans)) : ?>
-                    <h3>Day Plans:</h3>
-                    <ul>
-                        <?php foreach ($day_plans as $day => $plan) : ?>
-                            <li><strong>Day <?php echo esc_html($day + 1); ?>:</strong> <?php echo esc_html($plan); ?></li>
-                        <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
+<?php if (!empty($days_plans) && is_array($days_plans)) : ?>
+    <h3>Highlights:</h3>
+    <ul>
+        <?php foreach ($days_plans as $plans) : ?>
+            <?php if (!empty($plans)) : // Only display non-empty Plans ?>
+                <?php echo esc_html($plans); ?> |
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
 
                 <?php if (!empty($itinerary)) : ?>
                     <h3>Itinerary:</h3>
