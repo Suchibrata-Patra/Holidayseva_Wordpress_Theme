@@ -179,7 +179,7 @@ function display_tour_meta_box($post) {
                                 id="reviewer_name_<?php echo $index; ?>" class="form-control"
                                 value="<?php echo esc_attr($review['name'] ?? ''); ?>" />
                         </div>
-                        <div class="form-group" style="margin-left:30px;">
+                        <div class="form-group" style="margin-left:10px;">
                             <label for="review_score_<?php echo $index; ?>">Rating</label>
                             <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>"
                                 class="form-control" style="padding:10px 10px;border-radius:5px;">
