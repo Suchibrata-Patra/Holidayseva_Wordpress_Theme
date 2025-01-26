@@ -182,7 +182,7 @@ function display_tour_meta_box($post) {
                         <div class="form-group" style="margin-left:30px;">
                             <label for="review_score_<?php echo $index; ?>">Rating</label>
                             <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>"
-                                class="form-control" style="padding:10px 10px;border-radius:10px;">
+                                class="form-control" style="padding:10px 10px;border-radius:5px;">
                                 <?php for ($i = 1; $i <= 5; $i++) : ?>
                                 <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '' , $i); ?>>
                                     <?php echo str_repeat('&#x2B50;', $i); ?>
