@@ -38,7 +38,6 @@ get_header(); ?>
         $google_map_link = get_post_meta($post_id, '_google_map_link', true);
         $reviews = get_post_meta($post_id, '_reviews', true);
         $reviews = is_array($reviews) ? $reviews : [];
-        var_dump($google_map_link); // Check if it outputs the iframe HTML
 
         global $wpdb;
         $table_name = $wpdb->prefix . 'custom_bookings'; $bookings =
