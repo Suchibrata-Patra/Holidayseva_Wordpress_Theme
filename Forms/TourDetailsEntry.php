@@ -133,10 +133,10 @@ function display_tour_meta_box($post) {
             <h3 class="form-title">Highlights</h3>
             <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
-                <label for="tour_day_plans_<?php echo $i; ?>">Highlight
+                <label for="day_plans<?php echo $i; ?>">Highlight
                     <?php echo $i; ?>
                 </label>
-                <input type="text" name="tour_highlights[]" id="tour_day_plans_<?php echo $i; ?>" class="form-control"
+                <input type="text" name="tour_highlights[]" id="day_plans<?php echo $i; ?>" class="form-control"
                     value="<?php echo isset($tour_highlights[$i - 1]) ? esc_attr($tour_highlights[$i - 1]) : ''; ?>" />
             </div>
             <?php endfor; ?>
@@ -149,10 +149,10 @@ function display_tour_meta_box($post) {
     <h3 class="form-title">Day Plans</h3>
     <?php for ($i = 0; $i < $tour_duration_days; $i++) : ?>
         <div class="form-group">
-            <label for="tour_day_plans_<?php echo $i; ?>">Plans for Day <?php echo $i; ?></label>
+            <label for="day_plans<?php echo $i; ?>">Highlight for Day <?php echo $i; ?></label>
             <?php
             $content = isset($day_plans[$i - 1]) ? $day_plans[$i - 1] : ''; // Content for each day's highlight
-            $editor_id = 'tour_day_plans_' . $i; // Unique ID for each editor
+            $editor_id = 'day_plans' . $i; // Unique ID for each editor
             
             // Add TinyMCE editor for each day
             wp_editor(
