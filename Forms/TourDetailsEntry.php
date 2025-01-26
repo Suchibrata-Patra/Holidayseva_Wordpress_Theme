@@ -175,6 +175,11 @@ function display_tour_meta_box($post) {
 }
 
     </style>
+    <script>
+   tinymce.init({
+      selector: “.tinymce”
+  })
+</script>
 
 
         <!--Itinerary -->
