@@ -1,6 +1,6 @@
 <?php
 get_header();
-
+echo 'THis is Single Tour page.php';
 if (have_posts()) : 
     while (have_posts()) : the_post();
         // Display the tour title
@@ -30,4 +30,3 @@ endif;
 
 get_footer();
 
-echo 'THis is Single Tour page.php';
