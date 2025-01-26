@@ -25,7 +25,8 @@ function display_tour_meta_box($post) {
     $reviews = is_array($reviews) ? $reviews : [];
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
-    var_dump($tour_highlights); // This should display the value of `_tour_highlights`.
+    // var_dump($tour_highlights); 
+    // This should display the value of `_tour_highlights`.
 ?>
 <div class="container">
     <!-- Sidebar -->
