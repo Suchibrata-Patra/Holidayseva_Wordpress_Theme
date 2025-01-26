@@ -673,7 +673,6 @@ function save_tour_pricing_data($post_id) {
 add_action('save_post', 'save_tour_pricing_data');
 
 
-
 // Save Google Map iframe and Tour Price when the post is saved
 function save_google_map_and_tour_price($post_id) {
     // Ensure that we're not autosaving
@@ -681,9 +680,9 @@ function save_google_map_and_tour_price($post_id) {
     
     // Only proceed if it's a valid post type (e.g., 'tour')
     if ('tour' === get_post_type($post_id)) {
-        // Check if the google_map_link field is set and sanitize it
+        // Check if the google_map_link field is set and store it as is
         if (isset($_POST['google_map_link'])) {
-            $google_map_link = sanitize_textarea_field($_POST['google_map_link']);
+            $google_map_link = $_POST['google_map_link']; // No sanitization, storing raw input
             update_post_meta($post_id, '_google_map_link', $google_map_link);
         }
         
@@ -692,5 +691,6 @@ function save_google_map_and_tour_price($post_id) {
     return $post_id;
 }
 add_action('save_post', 'save_google_map_and_tour_price');
+
 
 ?>
