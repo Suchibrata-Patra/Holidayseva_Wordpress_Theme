@@ -145,7 +145,7 @@ function display_tour_meta_box($post) {
 
 
                 <!-- Day Plans -->
-    <div id="day_plans">
+    <div id="day_plans" class="hidden" style="color:black;">
         <h3 class="form-title">Day Plans</h3>
         <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
             <div class="form-group">
