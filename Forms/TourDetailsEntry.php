@@ -93,7 +93,7 @@ function display_tour_meta_box($post) {
         value="<?php echo esc_attr($tour_duration_days); ?>" placeholder="7" />
 </div>
 
-<div class="form-group">
+<div class="form-group" style="margin-left:10px;">
     <label for="tour_duration_nights">Duration (Nights):</label>
     <input type="number" name="tour_duration_nights" id="tour_duration_nights" class="form-control"
         value="<?php echo esc_attr($tour_duration_nights); ?>" placeholder="8" />
