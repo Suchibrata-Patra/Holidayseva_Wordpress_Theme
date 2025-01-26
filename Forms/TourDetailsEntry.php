@@ -115,7 +115,7 @@ function display_tour_meta_box($post) {
                         value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately" />
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="tour_cover_images">Slider Images</label>
                     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
                         style="display: none !important;" value="<?php echo esc_attr($tour_cover_images); ?>"
@@ -124,8 +124,33 @@ function display_tour_meta_box($post) {
                         title="Click to select images for the slider">Select Images</button>
                     <div id="tour_cover_images_preview"
                         style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
-                </div>
+                </div> -->
+                <div class="form-group">
+    <label for="tour_cover_images">Slider Images</label>
+    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+        style="display: none !important;" value="<?php echo esc_attr($tour_cover_images); ?>"
+        placeholder="" />
+    <button type="button" id="tour_cover_images_button" class="form-button"
+        title="Click to select images for the slider">Select Images</button>
+    <div id="tour_cover_images_preview"
+        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
+        <?php
+        // Get the saved tour cover images (assuming this is a serialized array of image IDs or URLs)
+        $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
 
+        if ($tour_cover_images) {
+            // If tour_cover_images is not empty, loop through the images and display them
+            foreach ($tour_cover_images as $image_url) {
+                echo '<div class="image-preview">';
+                echo '<img src="' . esc_url($image_url) . '" alt="Tour Image" style="max-width: 150px; height: auto;" />';
+                echo '</div>';
+            }
+        }
+        ?>
+    </div>
+</div>
+
+                
         </div>
 
         <!-- Highlights -->
