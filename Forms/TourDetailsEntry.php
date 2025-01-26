@@ -16,7 +16,7 @@ function display_tour_meta_box($post) {
     $included = get_post_meta($post->ID, '_included', true);
     $excluded = get_post_meta($post->ID, '_excluded', true);
     // Fetch the saved Google Maps iframe
-    $google_map_iframe = get_post_meta(get_the_ID(), '_google_map_iframe', true);
+    $google_map_link = get_post_meta(get_the_ID(), '_google_map_link', true);
     $reviews = get_post_meta($post->ID, '_reviews', true);
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
@@ -568,6 +568,10 @@ function save_tour_meta($post_id) {
         return $post_id; // Nonce is invalid, do not save
     }
 
+    if (!empty($google_map_link)) {
+        echo '<div class="tour-map-preview">' . wp_kses_post($google_map_link) . '</div>';
+    }
+
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
     if (!current_user_can('edit_post', $post_id)) return $post_id;
     
@@ -631,6 +635,8 @@ function save_tour_meta($post_id) {
         delete_post_meta($post_id, '_excluded');
     } 
 
+    
+
 }
 
 
@@ -669,20 +675,5 @@ function save_tour_pricing_data($post_id) {
     }
 }
 add_action('save_post', 'save_tour_pricing_data');
-
-// Save the iframe data
-function save_google_map_iframe($post_id) {
-    // Check if it's a valid save request and not an autosave
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
-    
-    // Check if it's the right post type (if applicable)
-    if (isset($_POST['google_map_iframe'])) {
-        $google_map_iframe = sanitize_text_field($_POST['google_map_iframe']);
-        update_post_meta($post_id, '_google_map_iframe', $google_map_iframe);
-    }
-    return $post_id;
-}
-add_action('save_post', 'save_google_map_iframe');
-
 
 ?>
