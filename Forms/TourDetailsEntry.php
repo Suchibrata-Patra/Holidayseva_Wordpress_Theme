@@ -315,8 +315,8 @@ function display_tour_meta_box($post) {
 
             <!-- Checkboxes -->
             <?php $checkbox_fields = ['hotel' => 'Hotel', 'breakfast' => 'Breakfast', 'lunch' => 'Lunch', 'dinner' => 'Dinner', 'cars' => 'Cars', 'flights' => 'Flights']; ?>
-            <div class="checkbox-group">
             <h3 class="form-title">Day Plans</h3>
+            <div class="checkbox-group">
     <?php foreach ($checkbox_fields as $field_key => $field_label) : ?>
         <div class="checkbox-container">
             <label>
