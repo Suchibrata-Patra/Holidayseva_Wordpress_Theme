@@ -91,6 +91,11 @@ function display_tour_meta_box($post) {
                         value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA" />
                 </div>
 
+                <!-- <div class="form-group">
+                    <label for="tour_duration">Duration:</label>
+                    <input type="text" name="tour_duration" id="tour_duration" class="form-control"
+                        value="<?php echo esc_attr($tour_duration); ?>" placeholder="7 Night 8 Days" />
+                </div> -->
                 <div style="display:flex;">
                     <div class="form-group">
                         <label for="tour_duration_days">Duration (Days):</label>
@@ -140,7 +145,7 @@ function display_tour_meta_box($post) {
                         value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately" />
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="tour_cover_images">Slider Images</label>
                     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
                         style="display: none !important;" value="<?php echo esc_attr($tour_cover_images); ?>"
@@ -149,7 +154,7 @@ function display_tour_meta_box($post) {
                         title="Click to select images for the slider">Select Images</button>
                     <div id="tour_cover_images_preview"
                         style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
-                </div>
+                </div> -->
                 <!-- <div class="form-group">
     <label for="tour_cover_images">Slider Images</label>
     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
@@ -173,7 +178,7 @@ function display_tour_meta_box($post) {
         }
         ?>
     </div>
-</div>
+</div> -->
 
                 <div class="form-group">
                     <label for="tour_cover_images">Slider Images</label>
