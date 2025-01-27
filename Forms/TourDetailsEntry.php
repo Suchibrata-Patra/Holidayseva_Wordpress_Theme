@@ -29,6 +29,8 @@ function display_tour_meta_box($post) {
     $reviews = is_array($reviews) ? $reviews : [];
 
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
+    wp_nonce_field('save_tour_meta_nonce_action', 'tour_meta_nonce');
+
     // var_dump($tour_highlights); 
     // This should display the value of `_tour_highlights`.
 ?>
@@ -979,16 +981,14 @@ function save_tour_meta($post_id) {
 
 }
 
-add_action('add_meta_boxes', function () {
-    add_meta_box(
-        'tour_meta_box', // ID
-        'Tour Services', // Title
-        'display_tour_meta_box', // Callback
-        'tour', // Post type
-        'normal', // Context
-        'default' // Priority
-    );
+add_action('init', function () {
+    register_post_type('tour', [
+        'label' => 'Tour',
+        'public' => true,
+        'supports' => ['title', 'editor', 'custom-fields'],
+    ]);
 });
+
 add_action('save_post', 'save_tour_meta');
 
 
