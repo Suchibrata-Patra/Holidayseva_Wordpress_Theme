@@ -379,10 +379,10 @@ function display_tour_meta_box($post) {
 
 
 
-        <!--Itinerary -->
+        <!-- Itinerary -->
         <div id="itinerary" class="hidden">
             <h3 class="form-title">Itinerary</h3>
-            <button type="button" id="add-itinerary">Add Itinerary Item</button>
+            <button type="button" id="add-itinerary" style="padding:10px;border:1px solid black;border-radius:5px;margin-top:20px;margin-bottom:20px;margin-left:5px;">Add Itinerar + </button>
             <div id="itinerary-fields">
                 <?php if (!empty($itinerary)) : ?>
                 <?php foreach ($itinerary as $index => $item) : ?>
