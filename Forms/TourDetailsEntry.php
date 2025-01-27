@@ -228,8 +228,10 @@ function display_tour_meta_box($post) {
             <?php endfor; ?>
         </div> -->
         <div id="highlights" class="hidden">
+            <div style="display:flex;">
             <h3 class="form-title">Highlights</h3>
             <button type="button" id="add-highlight">Add Highlight</button>
+            </div>
             <div id="highlight-fields">
                 <?php if (!empty($tour_highlights)) : ?>
                 <?php foreach ($tour_highlights as $index => $highlight) : ?>
