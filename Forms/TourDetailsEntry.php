@@ -298,7 +298,7 @@ function display_tour_meta_box($post) {
                 font-size: 14px;
             }
         </style> -->
-        <div id="day_plans">
+        <div id="day_plans" class="hidden">
     <h3 class="form-title">Day Plans</h3>
     <strong><u><i>Note</i></u></strong>: Select Which one of the followinggs will be provided on that day <br> <br>
     <?php for ($i = 0; $i < $tour_duration_days; $i++) : ?>
