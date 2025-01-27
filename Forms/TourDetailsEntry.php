@@ -386,7 +386,7 @@ function display_tour_meta_box($post) {
             <div id="itinerary-fields">
                 <?php if (!empty($itinerary)) : ?>
                 <?php foreach ($itinerary as $index => $item) : ?>
-                <div class="form-group">
+                <div class="form-group" style="display:flex;">
                     <input type="text" name="itinerary[]" class="form-control" value="<?php echo esc_attr($item); ?>"
                         placeholder="Enter itinerary item" />
                     <button type="button" class="remove-itinerary">Remove</button>
