@@ -380,22 +380,9 @@ function display_tour_meta_box($post) {
 
 
         <!--Itinerary -->
-        <!-- <div id="itinerary" class="hidden">
-            <h3 class="form-title">itinerary</h3>
-            <?php for ($i = 1; $i <= 20; $i++) : ?>
-            <div class="form-group">
-                <label for="itinerary_<?php echo $i; ?>">Itinerary Item
-                    <?php echo $i; ?>
-                </label>
-                <input type="text" name="itinerary[]" id="itinerary_<?php echo $i; ?>" class="form-control"
-                    value="<?php echo isset($itinerary[$i - 1]) ? esc_attr($itinerary[$i - 1]) : ''; ?>" />
-            </div>
-            <?php endfor; ?>
-        </div> -->
-        <!--Itinerary -->
-
         <div id="itinerary" class="hidden">
             <h3 class="form-title">Itinerary</h3>
+            <button type="button" id="add-itinerary">Add Itinerary Item</button>
             <div id="itinerary-fields">
                 <?php if (!empty($itinerary)) : ?>
                 <?php foreach ($itinerary as $index => $item) : ?>
@@ -406,13 +393,13 @@ function display_tour_meta_box($post) {
                 </div>
                 <?php endforeach; ?>
                 <?php else : ?>
-                <div class="form-group">
+                <div class="form-group" style="display:flex;">
                     <input type="text" name="itinerary[]" class="form-control" placeholder="Enter itinerary item" />
                     <button type="button" class="remove-itinerary">Remove</button>
                 </div>
                 <?php endif; ?>
             </div>
-            <button type="button" id="add-itinerary">Add Itinerary Item</button>
+            <!-- <button type="button" id="add-itinerary">Add Itinerary Item</button> -->
         </div>
 
         <script>
