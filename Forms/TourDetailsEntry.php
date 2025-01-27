@@ -31,7 +31,13 @@ function display_tour_meta_box($post) {
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
     // var_dump($tour_highlights); 
     // This should display the value of `_tour_highlights`.
+    function enqueue_bootstrap() {
+        wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
+    }
+    add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
+    
 ?>
+
 <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
@@ -125,7 +131,7 @@ function display_tour_meta_box($post) {
             <label><?php echo esc_html($service); ?></label><br>
         <?php endforeach; ?>
     </div> -->
-    <div class="form-group">
+<div class="form-group">
     <label for="service_availability" class="form-label">Select Service Availability</label><br>
     <div class="form-check">
         <?php foreach ($services as $service) : ?>
