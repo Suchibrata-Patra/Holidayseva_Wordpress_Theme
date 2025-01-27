@@ -229,6 +229,7 @@ function display_tour_meta_box($post) {
         </div> -->
         <div id="highlights" class="hidden">
             <h3 class="form-title">Highlights</h3>
+            <button type="button" id="add-highlight">Add Highlight</button>
             <div id="highlight-fields">
                 <?php if (!empty($tour_highlights)) : ?>
                 <?php foreach ($tour_highlights as $index => $highlight) : ?>
@@ -245,7 +246,7 @@ function display_tour_meta_box($post) {
                 </div>
                 <?php endif; ?>
             </div>
-            <button type="button" id="add-highlight">Add Highlight</button>
+            <!-- <button type="button" id="add-highlight">Add Highlight</button> -->
         </div>
         <script>
             document.getElementById('add-highlight').addEventListener('click', function () {
