@@ -346,7 +346,7 @@ function display_tour_meta_box($post) {
 
 .checkbox-container {
     display: inline-block; /* Keeps the checkboxes inline */
-    margin-bottom:10px;
+    /* margin-bottom:10px; */
 }
 
     #day_plans .day-plan {
