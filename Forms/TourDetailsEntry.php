@@ -115,7 +115,7 @@ function display_tour_meta_box($post) {
 
                 </div>
 
-                <div class="form-group" style="margin-bottom: 15px;">
+                <div class="form-group" style="margin-bottom: 15px;display:flex;">
     <label for="service_availability" style="display: block; font-weight: bold; margin-bottom: 8px;">Select Service Availability</label>
     <?php foreach ($services as $service) : ?>
         <div style="margin-bottom: 5px;">
