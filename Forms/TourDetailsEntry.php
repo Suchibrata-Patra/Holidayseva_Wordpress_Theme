@@ -91,11 +91,6 @@ function display_tour_meta_box($post) {
                         value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA" />
                 </div>
 
-                <!-- <div class="form-group">
-                    <label for="tour_duration">Duration:</label>
-                    <input type="text" name="tour_duration" id="tour_duration" class="form-control"
-                        value="<?php echo esc_attr($tour_duration); ?>" placeholder="7 Night 8 Days" />
-                </div> -->
                 <div style="display:flex;">
                     <div class="form-group">
                         <label for="tour_duration_days">Duration (Days):</label>
@@ -145,7 +140,7 @@ function display_tour_meta_box($post) {
                         value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately" />
                 </div>
 
-                <!-- <div class="form-group">
+                <div class="form-group">
                     <label for="tour_cover_images">Slider Images</label>
                     <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
                         style="display: none !important;" value="<?php echo esc_attr($tour_cover_images); ?>"
@@ -154,112 +149,11 @@ function display_tour_meta_box($post) {
                         title="Click to select images for the slider">Select Images</button>
                     <div id="tour_cover_images_preview"
                         style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
-                </div> -->
-                <!-- <div class="form-group">
-    <label for="tour_cover_images">Slider Images</label>
-    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-         value="<?php echo esc_attr($tour_cover_images); ?>"
-        placeholder="" />
-    <button type="button" id="tour_cover_images_button" class="form-button"
-        title="Click to select images for the slider">Select Images</button>
-    <div id="tour_cover_images_preview"
-        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
-        <?php
-        // Get the saved tour cover images (assuming this is a serialized array of image IDs or URLs)
-        $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
-
-        if ($tour_cover_images) {
-            // If tour_cover_images is not empty, loop through the images and display them
-            foreach ($tour_cover_images as $image_url) {
-                echo '<div class="image-preview">';
-                echo '<img src="' . esc_url($image_url) . '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" />';
-                echo '</div>';
-            }
-        }
-        ?>
-    </div>
-</div> -->
-
-                <div class="form-group">
-                    <label for="tour_cover_images">Slider Images</label>
-                    <input type="hidden" name="tour_cover_images" id="tour_cover_images"
-                        value="<?php echo esc_attr(implode(',', (array) $tour_cover_images)); ?>" />
-                    <button type="button" id="tour_cover_images_button" class="button"
-                        title="Click to select images for the slider">Select Images</button>
-                    <div id="tour_cover_images_preview"
-                        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
-                        <?php
-            if ($tour_cover_images) {
-                foreach ($tour_cover_images as $image_url) {
-                    echo '<div class="image-preview">';
-                    echo '<img src="' . esc_url($image_url) . '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" />';
-                    echo '</div>';
-                }
-            }
-            ?>
-                    </div>
                 </div>
-                <script>
-                    jQuery(document).ready(function ($) {
-                        var mediaUploader;
-
-                        $('#tour_cover_images_button').click(function (e) {
-                            e.preventDefault();
-
-                            // If the media uploader object hasn't been created yet, create it now
-                            if (mediaUploader) {
-                                mediaUploader.open();
-                                return;
-                            }
-
-                            // Create the media uploader
-                            mediaUploader = wp.media.frames.file_frame = wp.media({
-                                title: 'Select Images for Slider',
-                                button: {
-                                    text: 'Select Images'
-                                },
-                                multiple: true  // Allow multiple images to be selected
-                            });
-
-                            // When images are selected, set the input field value
-                            mediaUploader.on('select', function () {
-                                var selection = mediaUploader.state().get('selection');
-                                var imageUrls = [];
-
-                                selection.each(function (attachment) {
-                                    imageUrls.push(attachment.attributes.url);
-                                });
-
-                                // Update the hidden input field with the selected image URLs
-                                $('#tour_cover_images').val(imageUrls.join(','));
-
-                                // Preview the images
-                                var previewHTML = '';
-                                imageUrls.forEach(function (url) {
-                                    previewHTML += '<div class="image-preview"><img src="' + url + '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" /></div>';
-                                });
-                                $('#tour_cover_images_preview').html(previewHTML);
-                            });
-
-                            mediaUploader.open();
-                        });
-                    });
-                </script>
-        </div>
+                
 
         <!-- Highlights -->
-        <!-- <div id="highlights" class="hidden">
-            <h3 class="form-title">Highlights</h3>
-            <?php for ($i = 1; $i <= 20; $i++) : ?>
-            <div class="form-group">
-                <label for="day_plans<?php echo $i; ?>">Highlight
-                    <?php echo $i; ?>
-                </label>
-                <input type="text" name="tour_highlights[]" id="day_plans<?php echo $i; ?>" class="form-control"
-                    value="<?php echo isset($tour_highlights[$i - 1]) ? esc_attr($tour_highlights[$i - 1]) : ''; ?>" />
-            </div>
-            <?php endfor; ?>
-        </div> -->
+       
         <div id="highlights" class="hidden">
             <h3 class="form-title">Highlights</h3>
             <div id="highlight-fields">
