@@ -312,53 +312,17 @@ function display_tour_meta_box($post) {
                     class="regular-text" style="width: 100%;" />
             </div>
 
-            <!-- Hotels -->
-            <div class="form-group">
-                <label for="day_plans_hotel_<?php echo $i; ?>">Hotel</label>
-                <input type="text" id="day_plans_hotel_<?php echo $i; ?>" name="day_plans[<?php echo $i; ?>][hotel]"
-                    value="<?php echo isset($day_plans[$i]['hotel']) ? esc_attr($day_plans[$i]['hotel']) : ''; ?>"
-                    class="regular-text" style="width: 100%;" />
-            </div>
-
-            <!-- Breakfast -->
-            <div class="form-group">
-                <label for="day_plans_breakfast_<?php echo $i; ?>">Breakfast</label>
-                <input type="text" id="day_plans_breakfast_<?php echo $i; ?>" name="day_plans[<?php echo $i; ?>][breakfast]"
-                    value="<?php echo isset($day_plans[$i]['breakfast']) ? esc_attr($day_plans[$i]['breakfast']) : ''; ?>"
-                    class="regular-text" style="width: 100%;" />
-            </div>
-
-            <!-- Lunch -->
-            <div class="form-group">
-                <label for="day_plans_lunch_<?php echo $i; ?>">Lunch</label>
-                <input type="text" id="day_plans_lunch_<?php echo $i; ?>" name="day_plans[<?php echo $i; ?>][lunch]"
-                    value="<?php echo isset($day_plans[$i]['lunch']) ? esc_attr($day_plans[$i]['lunch']) : ''; ?>"
-                    class="regular-text" style="width: 100%;" />
-            </div>
-
-            <!-- Dinner -->
-            <div class="form-group">
-                <label for="day_plans_dinner_<?php echo $i; ?>">Dinner</label>
-                <input type="text" id="day_plans_dinner_<?php echo $i; ?>" name="day_plans[<?php echo $i; ?>][dinner]"
-                    value="<?php echo isset($day_plans[$i]['dinner']) ? esc_attr($day_plans[$i]['dinner']) : ''; ?>"
-                    class="regular-text" style="width: 100%;" />
-            </div>
-
-            <!-- Cars -->
-            <div class="form-group">
-                <label for="day_plans_cars_<?php echo $i; ?>">Cars</label>
-                <input type="text" id="day_plans_cars_<?php echo $i; ?>" name="day_plans[<?php echo $i; ?>][cars]"
-                    value="<?php echo isset($day_plans[$i]['cars']) ? esc_attr($day_plans[$i]['cars']) : ''; ?>"
-                    class="regular-text" style="width: 100%;" />
-            </div>
-
-            <!-- Flights -->
-            <div class="form-group">
-                <label for="day_plans_flights_<?php echo $i; ?>">Flights</label>
-                <input type="text" id="day_plans_flights_<?php echo $i; ?>" name="day_plans[<?php echo $i; ?>][flights]"
-                    value="<?php echo isset($day_plans[$i]['flights']) ? esc_attr($day_plans[$i]['flights']) : ''; ?>"
-                    class="regular-text" style="width: 100%;" />
-            </div>
+            <!-- Checkboxes -->
+            <?php $checkbox_fields = ['hotel' => 'Hotel', 'breakfast' => 'Breakfast', 'lunch' => 'Lunch', 'dinner' => 'Dinner', 'cars' => 'Cars', 'flights' => 'Flights']; ?>
+            <?php foreach ($checkbox_fields as $field_key => $field_label) : ?>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="day_plans_<?php echo $field_key; ?>_<?php echo $i; ?>" name="day_plans[<?php echo $i; ?>][<?php echo $field_key; ?>]"
+                            value="yes" <?php checked(isset($day_plans[$i][$field_key]) && $day_plans[$i][$field_key] === 'yes'); ?> />
+                        <?php echo $field_label; ?>
+                    </label>
+                </div>
+            <?php endforeach; ?>
 
             <!-- Special Note -->
             <div class="form-group">
@@ -387,6 +351,10 @@ function display_tour_meta_box($post) {
         font-size: 14px;
         background-color: white;
         color: black;
+    }
+
+    #day_plans input[type="checkbox"] {
+        margin-right: 8px;
     }
 </style>
 
@@ -1126,12 +1094,12 @@ function save_day_plans_meta($post_id) {
         $sanitized_plans = array_map(function($plan) {
             return [
                 'heading' => sanitize_text_field($plan['heading'] ?? ''),
-                'hotel' => sanitize_text_field($plan['hotel'] ?? ''),
-                'breakfast' => sanitize_text_field($plan['breakfast'] ?? ''),
-                'lunch' => sanitize_text_field($plan['lunch'] ?? ''),
-                'dinner' => sanitize_text_field($plan['dinner'] ?? ''),
-                'cars' => sanitize_text_field($plan['cars'] ?? ''),
-                'flights' => sanitize_text_field($plan['flights'] ?? ''),
+                'hotel' => isset($plan['hotel']) && $plan['hotel'] === 'yes' ? 'yes' : 'no',
+                'breakfast' => isset($plan['breakfast']) && $plan['breakfast'] === 'yes' ? 'yes' : 'no',
+                'lunch' => isset($plan['lunch']) && $plan['lunch'] === 'yes' ? 'yes' : 'no',
+                'dinner' => isset($plan['dinner']) && $plan['dinner'] === 'yes' ? 'yes' : 'no',
+                'cars' => isset($plan['cars']) && $plan['cars'] === 'yes' ? 'yes' : 'no',
+                'flights' => isset($plan['flights']) && $plan['flights'] === 'yes' ? 'yes' : 'no',
                 'note' => wp_kses_post($plan['note'] ?? ''),
             ];
         }, $_POST['day_plans']);
@@ -1142,5 +1110,4 @@ function save_day_plans_meta($post_id) {
     }
 }
 add_action('save_post', 'save_day_plans_meta');
-
 ?>
