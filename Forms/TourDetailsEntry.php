@@ -91,11 +91,6 @@ function display_tour_meta_box($post)
                         value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA" />
                 </div>
 
-                <!-- <div class="form-group">
-                    <label for="tour_duration">Duration:</label>
-                    <input type="text" name="tour_duration" id="tour_duration" class="form-control"
-                        value="<?php echo esc_attr($tour_duration); ?>" placeholder="7 Night 8 Days" />
-                </div> -->
                 <div style="display:flex;">
                     <div class="form-group">
                         <label for="tour_duration_days">Duration (Days):</label>
@@ -145,40 +140,7 @@ function display_tour_meta_box($post)
                         value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately" />
                 </div>
 
-                <!-- <div class="form-group">
-                    <label for="tour_cover_images">Slider Images</label>
-                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-                        style="display: none !important;" value="<?php echo esc_attr($tour_cover_images); ?>"
-                        placeholder="" />
-                    <button type="button" id="tour_cover_images_button" class="form-button"
-                        title="Click to select images for the slider">Select Images</button>
-                    <div id="tour_cover_images_preview"
-                        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
-                </div> -->
-                <!-- <div class="form-group">
-    <label for="tour_cover_images">Slider Images</label>
-    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
-         value="<?php echo esc_attr($tour_cover_images); ?>"
-        placeholder="" />
-    <button type="button" id="tour_cover_images_button" class="form-button"
-        title="Click to select images for the slider">Select Images</button>
-    <div id="tour_cover_images_preview"
-        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
-        <?php
-        // Get the saved tour cover images (assuming this is a serialized array of image IDs or URLs)
-        $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
-
-        if ($tour_cover_images) {
-            // If tour_cover_images is not empty, loop through the images and display them
-            foreach ($tour_cover_images as $image_url) {
-                echo '<div class="image-preview">';
-                echo '<img src="' . esc_url($image_url) . '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" />';
-                echo '</div>';
-            }
-        }
-        ?>
-    </div>
-</div> -->
+               
 
                 <div class="form-group">
                     <label for="tour_cover_images">Slider Images</label>
@@ -248,18 +210,6 @@ function display_tour_meta_box($post)
         </div>
 
         <!-- Highlights -->
-        <!-- <div id="highlights" class="hidden">
-            <h3 class="form-title">Highlights</h3>
-            <?php for ($i = 1; $i <= 20; $i++): ?>
-            <div class="form-group">
-                <label for="day_plans<?php echo $i; ?>">Highlight
-                    <?php echo $i; ?>
-                </label>
-                <input type="text" name="tour_highlights[]" id="day_plans<?php echo $i; ?>" class="form-control"
-                    value="<?php echo isset($tour_highlights[$i - 1]) ? esc_attr($tour_highlights[$i - 1]) : ''; ?>" />
-            </div>
-            <?php endfor; ?>
-        </div> -->
         <div id="highlights" class="hidden">
             <h3 class="form-title">Highlights</h3>
             <div id="highlight-fields">
@@ -329,20 +279,6 @@ function display_tour_meta_box($post)
 
 
         <!--Itinerary -->
-        <!-- <div id="itinerary" class="hidden">
-            <h3 class="form-title">itinerary</h3>
-            <?php for ($i = 1; $i <= 20; $i++): ?>
-            <div class="form-group">
-                <label for="itinerary_<?php echo $i; ?>">Itinerary Item
-                    <?php echo $i; ?>
-                </label>
-                <input type="text" name="itinerary[]" id="itinerary_<?php echo $i; ?>" class="form-control"
-                    value="<?php echo isset($itinerary[$i - 1]) ? esc_attr($itinerary[$i - 1]) : ''; ?>" />
-            </div>
-            <?php endfor; ?>
-        </div> -->
-        <!--Itinerary -->
-
         <div id="itinerary" class="hidden">
             <h3 class="form-title">Itinerary</h3>
             <div id="itinerary-fields">
