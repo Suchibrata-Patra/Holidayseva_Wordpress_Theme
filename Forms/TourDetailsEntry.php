@@ -1,6 +1,5 @@
 <?php
-function display_tour_meta_box($post)
-{
+function display_tour_meta_box($post) {
     // Retrieve existing custom fields values
     $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
     $tour_name = get_post_meta($post->ID, '_tour_name', true);
@@ -10,6 +9,7 @@ function display_tour_meta_box($post)
     $tour_duration_days = get_post_meta($post->ID, '_tour_duration_days', true);
     $tour_duration_nights = get_post_meta($post->ID, '_tour_duration_nights', true);
     $day_plans = get_post_meta($post->ID, '_day_plans', true) ?: [];
+
 
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_offers = get_post_meta($post->ID, '_tour_offers', true);
@@ -31,9 +31,9 @@ function display_tour_meta_box($post)
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
     wp_nonce_field('save_tour_meta_nonce_action', 'tour_meta_nonce');
 
-    // var_dump($tour_highlights);
+    // var_dump($tour_highlights); 
     // This should display the value of `_tour_highlights`.
-    ?>
+?>
 <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
@@ -76,12 +76,12 @@ function display_tour_meta_box($post)
                 <div class="form-group">
                     <label for="tour_description">Tour Description</label>
                     <?php
-                    $tour_description = isset($tour_description) ? $tour_description : '';  // Get existing value if exists
-                    wp_editor($tour_description, 'tour_description', array(
-                        'textarea_name' => 'tour_description',
-                        'textarea_rows' => 5,
-                        'media_buttons' => true,  // Enable media buttons (images, etc.)
-                    ));
+                        $tour_description = isset($tour_description) ? $tour_description : ''; // Get existing value if exists
+                        wp_editor($tour_description, 'tour_description', array(
+                            'textarea_name' => 'tour_description',
+                            'textarea_rows' => 5,
+                            'media_buttons' => true, // Enable media buttons (images, etc.)
+                        ));
                     ?>
                 </div>
 
@@ -91,6 +91,11 @@ function display_tour_meta_box($post)
                         value="<?php echo esc_attr($tour_location); ?>" placeholder="Ex: London, USA" />
                 </div>
 
+                <!-- <div class="form-group">
+                    <label for="tour_duration">Duration:</label>
+                    <input type="text" name="tour_duration" id="tour_duration" class="form-control"
+                        value="<?php echo esc_attr($tour_duration); ?>" placeholder="7 Night 8 Days" />
+                </div> -->
                 <div style="display:flex;">
                     <div class="form-group">
                         <label for="tour_duration_days">Duration (Days):</label>
@@ -114,7 +119,7 @@ function display_tour_meta_box($post)
 
                 <div class="form-group" style="margin-bottom: 15px;">
     <label for="service_availability" style="display: block; font-weight: bold; margin-bottom: 8px;">Select Service Availability</label>
-    <?php foreach ($services as $service): ?>
+    <?php foreach ($services as $service) : ?>
         <div style="margin-bottom: 5px;display:flex;">
             <input 
                 type="checkbox" 
@@ -140,7 +145,40 @@ function display_tour_meta_box($post)
                         value="<?php echo esc_attr($tour_availability); ?>" placeholder="Available Immediately" />
                 </div>
 
-               
+                <!-- <div class="form-group">
+                    <label for="tour_cover_images">Slider Images</label>
+                    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+                        style="display: none !important;" value="<?php echo esc_attr($tour_cover_images); ?>"
+                        placeholder="" />
+                    <button type="button" id="tour_cover_images_button" class="form-button"
+                        title="Click to select images for the slider">Select Images</button>
+                    <div id="tour_cover_images_preview"
+                        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;"></div>
+                </div> -->
+                <!-- <div class="form-group">
+    <label for="tour_cover_images">Slider Images</label>
+    <input type="text" name="tour_cover_images" id="tour_cover_images" class="form-control"
+         value="<?php echo esc_attr($tour_cover_images); ?>"
+        placeholder="" />
+    <button type="button" id="tour_cover_images_button" class="form-button"
+        title="Click to select images for the slider">Select Images</button>
+    <div id="tour_cover_images_preview"
+        style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
+        <?php
+        // Get the saved tour cover images (assuming this is a serialized array of image IDs or URLs)
+        $tour_cover_images = get_post_meta($post->ID, '_tour_cover_images', true);
+
+        if ($tour_cover_images) {
+            // If tour_cover_images is not empty, loop through the images and display them
+            foreach ($tour_cover_images as $image_url) {
+                echo '<div class="image-preview">';
+                echo '<img src="' . esc_url($image_url) . '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" />';
+                echo '</div>';
+            }
+        }
+        ?>
+    </div>
+</div> -->
 
                 <div class="form-group">
                     <label for="tour_cover_images">Slider Images</label>
@@ -151,14 +189,14 @@ function display_tour_meta_box($post)
                     <div id="tour_cover_images_preview"
                         style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
                         <?php
-                        if ($tour_cover_images) {
-                            foreach ($tour_cover_images as $image_url) {
-                                echo '<div class="image-preview">';
-                                echo '<img src="' . esc_url($image_url) . '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" />';
-                                echo '</div>';
-                            }
-                        }
-                        ?>
+            if ($tour_cover_images) {
+                foreach ($tour_cover_images as $image_url) {
+                    echo '<div class="image-preview">';
+                    echo '<img src="' . esc_url($image_url) . '" alt="Tour Image" style="max-width: 150px; height: auto;border-radius:6px;border:0.5px solid blue;width:100px;height:auto;" />';
+                    echo '</div>';
+                }
+            }
+            ?>
                     </div>
                 </div>
                 <script>
@@ -210,18 +248,30 @@ function display_tour_meta_box($post)
         </div>
 
         <!-- Highlights -->
+        <!-- <div id="highlights" class="hidden">
+            <h3 class="form-title">Highlights</h3>
+            <?php for ($i = 1; $i <= 20; $i++) : ?>
+            <div class="form-group">
+                <label for="day_plans<?php echo $i; ?>">Highlight
+                    <?php echo $i; ?>
+                </label>
+                <input type="text" name="tour_highlights[]" id="day_plans<?php echo $i; ?>" class="form-control"
+                    value="<?php echo isset($tour_highlights[$i - 1]) ? esc_attr($tour_highlights[$i - 1]) : ''; ?>" />
+            </div>
+            <?php endfor; ?>
+        </div> -->
         <div id="highlights" class="hidden">
             <h3 class="form-title">Highlights</h3>
             <div id="highlight-fields">
-                <?php if (!empty($tour_highlights)): ?>
-                <?php foreach ($tour_highlights as $index => $highlight): ?>
+                <?php if (!empty($tour_highlights)) : ?>
+                <?php foreach ($tour_highlights as $index => $highlight) : ?>
                 <div class="form-group">
                     <input type="text" name="tour_highlights[]" class="form-control"
                         value="<?php echo esc_attr($highlight); ?>" />
                     <button type="button" class="remove-highlight">Remove</button>
                 </div>
                 <?php endforeach; ?>
-                <?php else: ?>
+                <?php else : ?>
                 <div class="form-group">
                     <input type="text" name="tour_highlights[]" class="form-control" placeholder="Enter highlight" />
                     <button type="button" class="remove-highlight">Remove</button>
@@ -255,7 +305,7 @@ function display_tour_meta_box($post)
         <!-- Day Plans -->
         <div id="day_plans" class="hidden">
             <h3 class="form-title">Day Plans</h3>
-            <?php for ($i = 1; $i <= $tour_duration_days; $i++): ?>
+            <?php for ($i = 1; $i <= $tour_duration_days; $i++) : ?>
             <div class="form-group" style="color:black;">
                 <label for="day_plans<?php echo $i; ?>">Plan for Day
                     <?php echo $i; ?>
@@ -279,18 +329,32 @@ function display_tour_meta_box($post)
 
 
         <!--Itinerary -->
+        <!-- <div id="itinerary" class="hidden">
+            <h3 class="form-title">itinerary</h3>
+            <?php for ($i = 1; $i <= 20; $i++) : ?>
+            <div class="form-group">
+                <label for="itinerary_<?php echo $i; ?>">Itinerary Item
+                    <?php echo $i; ?>
+                </label>
+                <input type="text" name="itinerary[]" id="itinerary_<?php echo $i; ?>" class="form-control"
+                    value="<?php echo isset($itinerary[$i - 1]) ? esc_attr($itinerary[$i - 1]) : ''; ?>" />
+            </div>
+            <?php endfor; ?>
+        </div> -->
+        <!--Itinerary -->
+
         <div id="itinerary" class="hidden">
             <h3 class="form-title">Itinerary</h3>
             <div id="itinerary-fields">
-                <?php if (!empty($itinerary)): ?>
-                <?php foreach ($itinerary as $index => $item): ?>
+                <?php if (!empty($itinerary)) : ?>
+                <?php foreach ($itinerary as $index => $item) : ?>
                 <div class="form-group">
                     <input type="text" name="itinerary[]" class="form-control" value="<?php echo esc_attr($item); ?>"
                         placeholder="Enter itinerary item" />
                     <button type="button" class="remove-itinerary">Remove</button>
                 </div>
                 <?php endforeach; ?>
-                <?php else: ?>
+                <?php else : ?>
                 <div class="form-group">
                     <input type="text" name="itinerary[]" class="form-control" placeholder="Enter itinerary item" />
                     <button type="button" class="remove-itinerary">Remove</button>
@@ -326,7 +390,7 @@ function display_tour_meta_box($post)
         <!--Included -->
         <div id="included" class="hidden">
             <h3 class="form-title">included</h3>
-            <?php for ($i = 1; $i <= 20; $i++): ?>
+            <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
                 <label for="included_<?php echo $i; ?>">Included Item
                     <?php echo $i; ?>
@@ -340,7 +404,7 @@ function display_tour_meta_box($post)
         <!--Excluded -->
         <div id="excluded" class="hidden">
             <h3 class="form-title">excluded</h3>
-            <?php for ($i = 1; $i <= 20; $i++): ?>
+            <?php for ($i = 1; $i <= 20; $i++) : ?>
             <div class="form-group">
                 <label for="excluded_<?php echo $i; ?>">Excluded Item
                     <?php echo $i; ?>
@@ -362,7 +426,7 @@ function display_tour_meta_box($post)
                     +</button>
             </div>
             <div id="reviews-container">
-                <?php foreach ($reviews as $index => $review): ?>
+                <?php foreach ($reviews as $index => $review) : ?>
                 <div class="review-set" data-index="<?php echo $index; ?>"
                     style="border:2px solid #2980b9;margin-top:10px;border-radius:4px;padding:5px;background-color:#FBFBFB;">
                     <h4 style="margin-bottom:3px;">Review No -
@@ -381,8 +445,8 @@ function display_tour_meta_box($post)
                             <label for="review_score_<?php echo $index; ?>">Rating</label>
                             <select name="reviews[<?php echo $index; ?>][score]" id="review_score_<?php echo $index; ?>"
                                 class="form-control" style="padding:10px 10px;border-radius:5px;">
-                                <?php for ($i = 1; $i <= 5; $i++): ?>
-                                <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '', $i); ?>>
+                                <?php for ($i = 1; $i <= 5; $i++) : ?>
+                                <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '' , $i); ?>>
                                     <?php echo str_repeat('&#x2B50;', $i); ?>
                                 </option>
                                 <?php endfor; ?>
@@ -425,8 +489,8 @@ function display_tour_meta_box($post)
                     
                     <select name=\"reviews[${index}][score]\" id=\"review_score_${index}\"
                                 class="form-control" style="padding:10px 10px;border-radius:5px;">
-                                <?php for ($i = 1; $i <= 5; $i++): ?>
-                                <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '', $i); ?>>
+                                <?php for ($i = 1; $i <= 5; $i++) : ?>
+                                <option value="<?php echo $i; ?>" <?php selected($review['score'] ?? '' , $i); ?>>
                                     <?php echo str_repeat('&#x2B50;', $i); ?>
                                 </option>
                                 <?php endfor; ?>
@@ -481,8 +545,8 @@ function display_tour_meta_box($post)
 
             <div id="offers_section">
                 <h4>Discount by adult number booking</h4>
-                <?php if (!empty($tour_offers)): ?>
-                <?php foreach ($tour_offers as $offer): ?>
+                <?php if (!empty($tour_offers)) : ?>
+                <?php foreach ($tour_offers as $offer) : ?>
                 <div class="offer-group">
                     <label>From</label>
                     <input type="number" name="offer[from][]" class="form-control"
@@ -791,12 +855,10 @@ function display_tour_meta_box($post)
 }
 
 // Save custom fields values when the post is saved
-function save_tour_meta($post_id)
-{
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
-        return $post_id;
-    if (!current_user_can('edit_post', $post_id))
-        return $post_id;
+function save_tour_meta($post_id) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+    if (!current_user_can('edit_post', $post_id)) return $post_id;
+
 
     // Save custom fields values
     if (isset($_POST['tour_cover_images'])) {
@@ -814,7 +876,7 @@ function save_tour_meta($post_id)
     }
     // Save tour description (Visual Editor content)
     if (isset($_POST['tour_description'])) {
-        update_post_meta($post_id, '_tour_description', wp_kses_post($_POST['tour_description']));  // Sanitize HTML
+        update_post_meta($post_id, '_tour_description', wp_kses_post($_POST['tour_description'])); // Sanitize HTML
     }
 
     if (isset($_POST['tour_location'])) {
@@ -833,7 +895,7 @@ function save_tour_meta($post_id)
         update_post_meta($post_id, '_tour_availability', sanitize_text_field($_POST['tour_availability']));
     }
     if (isset($_POST['tour_highlights_nonce_field']) && !wp_verify_nonce($_POST['tour_highlights_nonce_field'], 'tour_highlights_nonce')) {
-        return $post_id;  // Nonce is invalid, do not save
+        return $post_id; // Nonce is invalid, do not save
     }
 
     if (isset($_POST['service_availability'])) {
@@ -843,19 +905,17 @@ function save_tour_meta($post_id)
 
         update_post_meta($post_id, '_service_availability', $service_availability);
     } else {
-        delete_post_meta($post_id, '_service_availability');  // Delete if none are selected
+        delete_post_meta($post_id, '_service_availability'); // Delete if none are selected
     }
 
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
-        return $post_id;
-    if (!current_user_can('edit_post', $post_id))
-        return $post_id;
-
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+    if (!current_user_can('edit_post', $post_id)) return $post_id;
+    
     // Savig these for Tour ighlights
     if (isset($_POST['tour_highlights']) && is_array($_POST['tour_highlights'])) {
         // Sanitize each highlight
         $sanitized_highlights = array_map('sanitize_text_field', $_POST['tour_highlights']);
-
+        
         // Save as post meta
         update_post_meta($post_id, '_tour_highlights', $sanitized_highlights);
     } else {
@@ -863,11 +923,12 @@ function save_tour_meta($post_id)
         delete_post_meta($post_id, '_tour_highlights');
     }
 
+
     // Saving the Posts for the Tour Itinery
     if (isset($_POST['itinerary']) && is_array($_POST['itinerary'])) {
         // Sanitize each highlight
         $sanitized_highlights = array_map('sanitize_text_field', $_POST['itinerary']);
-
+        
         // Save as post meta
         update_post_meta($post_id, '_itinerary', $sanitized_highlights);
     } else {
@@ -875,9 +936,10 @@ function save_tour_meta($post_id)
         delete_post_meta($post_id, '_itinerary');
     }
 
+
     // Saving the Review Data
     if (isset($_POST['reviews']) && is_array($_POST['reviews'])) {
-        $sanitized_reviews = array_map(function ($review) {
+        $sanitized_reviews = array_map(function($review) {
             return [
                 'name' => sanitize_text_field($review['name'] ?? ''),
                 'score' => intval($review['score'] ?? 0),
@@ -890,11 +952,13 @@ function save_tour_meta($post_id)
         delete_post_meta($post_id, '_reviews');
     }
 
+
+
     // Saving the Included
     if (isset($_POST['included']) && is_array($_POST['included'])) {
         // Sanitize each highlight
         $sanitized_highlights = array_map('sanitize_text_field', $_POST['included']);
-
+        
         // Save as post meta
         update_post_meta($post_id, '_included', $sanitized_highlights);
     } else {
@@ -905,13 +969,16 @@ function save_tour_meta($post_id)
     if (isset($_POST['excluded']) && is_array($_POST['excluded'])) {
         // Sanitize each highlight
         $sanitized_highlights = array_map('sanitize_text_field', $_POST['excluded']);
-
+        
         // Save as post meta
         update_post_meta($post_id, '_excluded', $sanitized_highlights);
     } else {
         // If highlights are empty, delete the meta to avoid clutter
         delete_post_meta($post_id, '_excluded');
-    }
+    } 
+
+    
+
 }
 
 add_action('init', function () {
@@ -924,18 +991,16 @@ add_action('init', function () {
 
 add_action('save_post', 'save_tour_meta');
 
-function save_tour_pricing_data($post_id)
-{
+
+function save_tour_pricing_data($post_id) {
     // Verify the nonce for security
     if (!isset($_POST['tour_highlights_nonce_field']) || !wp_verify_nonce($_POST['tour_highlights_nonce_field'], 'tour_highlights_nonce')) {
         return;
     }
 
     // Check for autosave and user permissions
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
-        return;
-    if (!current_user_can('edit_post', $post_id))
-        return;
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if (!current_user_can('edit_post', $post_id)) return;
 
     // Save pricing data (People-Based Offers)
     if (isset($_POST['offer']['from'], $_POST['offer']['to'], $_POST['offer']['discount'])) {
@@ -958,32 +1023,29 @@ function save_tour_pricing_data($post_id)
         update_post_meta($post_id, '_tour_offers', $offers);
     }
 }
-
 add_action('save_post', 'save_tour_pricing_data');
 
-// Save Google Map iframe and Tour Price when the post is saved
-function save_google_map_and_tour_price($post_id)
-{
-    // Ensure that we're not autosaving
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE)
-        return $post_id;
 
+// Save Google Map iframe and Tour Price when the post is saved
+function save_google_map_and_tour_price($post_id) {
+    // Ensure that we're not autosaving
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+    
     // Only proceed if it's a valid post type (e.g., 'tour')
     if ('tour' === get_post_type($post_id)) {
         // Check if the google_map_link field is set and store it as is
         if (isset($_POST['google_map_link'])) {
-            $google_map_link = $_POST['google_map_link'];  // No sanitization, storing raw input
+            $google_map_link = $_POST['google_map_link']; // No sanitization, storing raw input
             update_post_meta($post_id, '_google_map_link', $google_map_link);
         }
+        
     }
 
     return $post_id;
 }
-
 add_action('save_post', 'save_google_map_and_tour_price');
 
-function save_day_plans_meta($post_id)
-{
+function save_day_plans_meta($post_id) {
     if (isset($_POST['day_plans']) && is_array($_POST['day_plans'])) {
         $sanitized_plans = array_map('wp_kses_post', $_POST['day_plans']);
         update_post_meta($post_id, '_day_plans', $sanitized_plans);
@@ -991,7 +1053,7 @@ function save_day_plans_meta($post_id)
         delete_post_meta($post_id, '_day_plans');
     }
 }
-
 add_action('save_post', 'save_day_plans_meta');
+
 
 ?>
