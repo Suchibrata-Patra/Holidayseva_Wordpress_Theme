@@ -301,7 +301,7 @@ function display_tour_meta_box($post) {
         <div id="day_plans">
     <h3 class="form-title">Day Plans</h3>
     <?php for ($i = 0; $i < $tour_duration_days; $i++) : ?>
-        <div class="day-plan" style="margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        <div class="day-plan" style="margin-bottom: 20px; padding: 10px; border: 2px solid rgba(6, 0, 95, 0.896); border-radius: 7px;">
             <h4 style="color: black;">Day <?php echo $i + 1; ?></h4>
 
             <!-- Heading/Tagline -->
