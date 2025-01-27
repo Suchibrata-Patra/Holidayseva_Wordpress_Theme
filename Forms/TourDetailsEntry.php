@@ -306,7 +306,7 @@ function display_tour_meta_box($post) {
 
             <!-- Heading/Tagline -->
             <div class="form-group">
-                <label for="day_plans_heading_<?php echo $i; ?>">Heading/Tagline</label>
+                <label for="day_plans_heading_<?php echo $i; ?>">Tagline</label>
                 <input type="text" id="day_plans_heading_<?php echo $i; ?>" name="day_plans[<?php echo $i; ?>][heading]"
                     value="<?php echo isset($day_plans[$i]['heading']) ? esc_attr($day_plans[$i]['heading']) : ''; ?>"
                     class="regular-text" style="width: 100%;" />
