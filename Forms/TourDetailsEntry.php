@@ -329,7 +329,7 @@ function display_tour_meta_box($post) {
 
             <!-- Special Note -->
             <div class="form-group">
-                <label for="day_plans_note_<?php echo $i; ?>">Special Note</label>
+                <label for="day_plans_note_<?php echo $i; ?>">Special Note - </label>
                 <textarea id="day_plans_note_<?php echo $i; ?>" name="day_plans[<?php echo $i; ?>][note]"
                     class="regular-text" style="width: 100%; height: 80px;"><?php echo isset($day_plans[$i]['note']) ? esc_textarea($day_plans[$i]['note']) : ''; ?></textarea>
             </div>
@@ -346,7 +346,7 @@ function display_tour_meta_box($post) {
 
 .checkbox-container {
     display: inline-block; /* Keeps the checkboxes inline */
-    /* margin-bottom:10px; */
+    margin-bottom:5px;
 }
 
     #day_plans .day-plan {
