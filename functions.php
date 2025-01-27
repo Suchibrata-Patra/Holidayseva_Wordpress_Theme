@@ -16,15 +16,6 @@ add_filter('rank_math/snippet/rich_snippet_data', function($data, $post) {
     return $data;
 }, 10, 2);
 
-add_action('init', function () {
-    register_post_type('tour', [
-        'label' => 'Tour',
-        'public' => true,
-        'supports' => ['title', 'editor', 'custom-fields'],
-    ]);
-});
-
-add_action('save_post', 'save_tour_meta');
 
 
 
