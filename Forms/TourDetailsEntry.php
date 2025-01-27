@@ -124,7 +124,7 @@ function display_tour_meta_box($post) {
                 id="service_availability_<?php echo esc_attr($service); ?>" 
                 name="service_availability[<?php echo esc_attr($service); ?>]" 
                 value="yes" 
-                style="width: 20px; height: 20px; margin-right: 10px; cursor: pointer;" 
+                style="width: 20px; height: 20px; margin-right: 10px; cursor: pointer;display:flex;" 
                 <?php echo isset($service_availability[$service]) && $service_availability[$service] === 'yes' ? 'checked' : ''; ?> 
             />
             <label 
