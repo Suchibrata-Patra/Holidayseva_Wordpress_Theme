@@ -230,7 +230,7 @@ function display_tour_meta_box($post) {
         <div id="highlights" class="hidden">
             <div style="display:flex;">
             <h3 class="form-title">Highlights</h3>
-            <button type="button" id="add-highlight" style="padding:10px;border:none;border-radius:5px;">Add Highlight</button>
+            <button type="button" id="add-highlight" style="padding:10px;border:none;border-radius:5px;margin-top:20px;margin-bottom:20px;margin-left:5px;">Add Highlight</button>
             </div>
             <div id="highlight-fields">
                 <?php if (!empty($tour_highlights)) : ?>
