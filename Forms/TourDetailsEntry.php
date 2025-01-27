@@ -300,7 +300,7 @@ function display_tour_meta_box($post) {
         </style> -->
         <div id="day_plans">
     <h3 class="form-title">Day Plans</h3>
-    <strong><u><i>Note</i></u></strong>: Select Whichone of the followinggs will be provided on that day <br>
+    <strong><u><i>Note</i></u></strong>: Select Which one of the followinggs will be provided on that day <br> <br>
     <?php for ($i = 0; $i < $tour_duration_days; $i++) : ?>
         <div class="day-plan" style="margin-bottom: 20px; padding: 10px; border: 2px solid rgba(16, 8, 130, 0.9); border-radius: 10px;">
             <h4 style="color: black;">Day <?php echo $i + 1; ?></h4>
