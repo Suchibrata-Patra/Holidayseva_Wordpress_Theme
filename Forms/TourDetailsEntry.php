@@ -314,7 +314,7 @@ function display_tour_meta_box($post) {
             </div>
 
             <!-- Checkboxes -->
-            <?php $checkbox_fields = ['hotel' => 'Hotel', 'breakfast' => 'Breakfast', 'lunch' => 'Lunch', 'dinner' => 'Dinner', 'cars' => 'Cars', 'flights' => 'Flights']; ?>
+            <?php $checkbox_fields = ['hotel' => 'Hotel', 'breakfast' => 'Breakfast', 'lunch' => 'Lunch', 'dinner' => 'Dinner', 'cars' => 'Cars', 'flights' => 'Flights','guide' => 'Guide']; ?>
             <div class="checkbox-group">
     <?php foreach ($checkbox_fields as $field_key => $field_label) : ?>
         <div class="checkbox-container">
@@ -1120,6 +1120,7 @@ function save_day_plans_meta($post_id) {
                 'dinner' => isset($plan['dinner']) && $plan['dinner'] === 'yes' ? 'yes' : 'no',
                 'cars' => isset($plan['cars']) && $plan['cars'] === 'yes' ? 'yes' : 'no',
                 'flights' => isset($plan['flights']) && $plan['flights'] === 'yes' ? 'yes' : 'no',
+                'guide' => isset($plan['guide']) && $plan['guide'] === 'yes' ? 'yes' : 'no',
                 'note' => wp_kses_post($plan['note'] ?? ''),
             ];
         }, $_POST['day_plans']);
