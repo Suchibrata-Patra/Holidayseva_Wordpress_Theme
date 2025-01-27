@@ -408,8 +408,10 @@ function display_tour_meta_box($post) {
                 const newField = document.createElement('div');
                 newField.classList.add('form-group');
                 newField.innerHTML = `
+            <div style="display:flex;">
             <input type="text" name="itinerary[]" class="form-control" placeholder="Enter itinerary item" />
             <button type="button" class="remove-itinerary">Remove</button>
+            </div>
         `;
                 container.appendChild(newField);
             });
