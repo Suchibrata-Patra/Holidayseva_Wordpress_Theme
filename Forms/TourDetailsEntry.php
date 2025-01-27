@@ -115,8 +115,8 @@ function display_tour_meta_box($post) {
 
                 </div>
 
-
-               <div class="form-group" style="display:flex;">
+<!-- 
+               <div class="form-group">
         <label for="service_availability">Select Service Availability</label><br>
         <?php foreach ($services as $service) : ?>
             <input type="checkbox" name="service_availability[<?php echo esc_attr($service); ?>]" 
@@ -124,7 +124,25 @@ function display_tour_meta_box($post) {
                 <?php echo isset($service_availability[$service]) && $service_availability[$service] === 'yes' ? 'checked' : ''; ?> />
             <label><?php echo esc_html($service); ?></label><br>
         <?php endforeach; ?>
+    </div> -->
+    <div class="form-group">
+    <label for="service_availability" class="form-label">Select Service Availability</label><br>
+    <div class="form-check">
+        <?php foreach ($services as $service) : ?>
+            <input 
+                type="checkbox" 
+                class="form-check-input" 
+                id="service_availability_<?php echo esc_attr($service); ?>" 
+                name="service_availability[<?php echo esc_attr($service); ?>]" 
+                value="yes" 
+                <?php echo isset($service_availability[$service]) && $service_availability[$service] === 'yes' ? 'checked' : ''; ?>
+            />
+            <label class="form-check-label" for="service_availability_<?php echo esc_attr($service); ?>">
+                <?php echo esc_html($service); ?>
+            </label><br>
+        <?php endforeach; ?>
     </div>
+</div>
 
                 <div class="form-group">
                     <label for="tour_availability">Availability</label>
