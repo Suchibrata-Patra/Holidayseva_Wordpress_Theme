@@ -341,7 +341,7 @@ function display_tour_meta_box($post) {
         </div> -->
         <!--Itinerary -->
 
-        <div id="itinerary">
+        <div id="itinerary" class="hidden">
             <h3 class="form-title">Itinerary</h3>
             <div id="itinerary-fields">
                 <?php if (!empty($itinerary)) : ?>
