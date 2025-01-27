@@ -31,13 +31,7 @@ function display_tour_meta_box($post) {
     wp_nonce_field('tour_highlights_nonce', 'tour_highlights_nonce_field');
     // var_dump($tour_highlights); 
     // This should display the value of `_tour_highlights`.
-    function enqueue_bootstrap() {
-        wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
-    }
-    add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
-    
 ?>
-
 <div class="container">
     <!-- Sidebar -->
     <div class="sidebar">
@@ -121,34 +115,27 @@ function display_tour_meta_box($post) {
 
                 </div>
 
-<!-- 
-               <div class="form-group">
-        <label for="service_availability">Select Service Availability</label><br>
-        <?php foreach ($services as $service) : ?>
-            <input type="checkbox" name="service_availability[<?php echo esc_attr($service); ?>]" 
-                value="yes" 
-                <?php echo isset($service_availability[$service]) && $service_availability[$service] === 'yes' ? 'checked' : ''; ?> />
-            <label><?php echo esc_html($service); ?></label><br>
-        <?php endforeach; ?>
-    </div> -->
-<div class="form-group">
-    <label for="service_availability" class="form-label">Select Service Availability</label><br>
-    <div class="form-check">
-        <?php foreach ($services as $service) : ?>
+                <div class="form-group" style="margin-bottom: 15px;">
+    <label for="service_availability" style="display: block; font-weight: bold; margin-bottom: 8px;">Select Service Availability</label>
+    <?php foreach ($services as $service) : ?>
+        <div style="margin-bottom: 5px;">
             <input 
                 type="checkbox" 
-                class="form-check-input" 
                 id="service_availability_<?php echo esc_attr($service); ?>" 
                 name="service_availability[<?php echo esc_attr($service); ?>]" 
                 value="yes" 
-                <?php echo isset($service_availability[$service]) && $service_availability[$service] === 'yes' ? 'checked' : ''; ?>
+                style="width: 20px; height: 20px; margin-right: 10px; cursor: pointer;" 
+                <?php echo isset($service_availability[$service]) && $service_availability[$service] === 'yes' ? 'checked' : ''; ?> 
             />
-            <label class="form-check-label" for="service_availability_<?php echo esc_attr($service); ?>">
+            <label 
+                for="service_availability_<?php echo esc_attr($service); ?>" 
+                style="font-size: 16px; cursor: pointer;">
                 <?php echo esc_html($service); ?>
-            </label><br>
-        <?php endforeach; ?>
-    </div>
+            </label>
+        </div>
+    <?php endforeach; ?>
 </div>
+
 
                 <div class="form-group">
                     <label for="tour_availability">Availability</label>
