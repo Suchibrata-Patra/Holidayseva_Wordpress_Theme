@@ -1021,6 +1021,8 @@ function save_tour_pricing_data($post_id) {
 
         // Save offers array as JSON in post meta
         update_post_meta($post_id, '_tour_offers', $offers);
+    }else{
+        delete_post_meta($post_id,'_tour_offers');
     }
 }
 add_action('save_post', 'save_tour_pricing_data');
