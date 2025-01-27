@@ -116,7 +116,7 @@ function display_tour_meta_box($post) {
                 </div>
 
 
-               <div class="form-group">
+               <div class="form-group" style="display:flex;">
         <label for="service_availability">Select Service Availability</label><br>
         <?php foreach ($services as $service) : ?>
             <input type="checkbox" name="service_availability[<?php echo esc_attr($service); ?>]" 
