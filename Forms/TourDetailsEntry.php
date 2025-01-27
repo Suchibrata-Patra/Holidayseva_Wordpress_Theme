@@ -14,6 +14,10 @@ function display_tour_meta_box($post) {
     $tour_price = get_post_meta($post->ID, '_tour_price', true);
     $tour_offers = get_post_meta($post->ID, '_tour_offers', true);
     $tour_availability = get_post_meta($post->ID, '_tour_availability', true);
+
+    $service_availability = get_post_meta($post->ID, '_service_availability', true);
+    $services = ['Hotel', 'Sightseeing', 'Transfer', 'Meal'];
+
     $tour_highlights = get_post_meta($post->ID, '_tour_highlights', true);
 
     $itinerary = get_post_meta($post->ID, '_itinerary', true);
@@ -111,6 +115,16 @@ function display_tour_meta_box($post) {
 
                 </div>
 
+
+               <div class="form-group">
+        <label for="service_availability">Select Service Availability</label><br>
+        <?php foreach ($services as $service) : ?>
+            <input type="checkbox" name="service_availability[<?php echo esc_attr($service); ?>]" 
+                value="yes" 
+                <?php echo isset($service_availability[$service]) && $service_availability[$service] === 'yes' ? 'checked' : ''; ?> />
+            <label><?php echo esc_html($service); ?></label><br>
+        <?php endforeach; ?>
+    </div>
 
                 <div class="form-group">
                     <label for="tour_availability">Availability</label>
@@ -871,6 +885,16 @@ function save_tour_meta($post_id) {
         return $post_id; // Nonce is invalid, do not save
     }
 
+    if (isset($_POST['service_availability'])) {
+        $service_availability = array_map(function ($value) {
+            return $value === 'yes' ? 'yes' : 'no';
+        }, $_POST['service_availability']);
+
+        update_post_meta($post_id, '_service_availability', $service_availability);
+    } else {
+        delete_post_meta($post_id, '_service_availability'); // Delete if none are selected
+    }
+
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
     if (!current_user_can('edit_post', $post_id)) return $post_id;
     
@@ -944,7 +968,16 @@ function save_tour_meta($post_id) {
 
 }
 
-
+add_action('add_meta_boxes', function () {
+    add_meta_box(
+        'tour_meta_box', // ID
+        'Tour Services', // Title
+        'display_tour_meta_box', // Callback
+        'tour', // Post type
+        'normal', // Context
+        'default' // Priority
+    );
+});
 add_action('save_post', 'save_tour_meta');
 
 
@@ -1010,5 +1043,6 @@ function save_day_plans_meta($post_id) {
     }
 }
 add_action('save_post', 'save_day_plans_meta');
+
 
 ?>
