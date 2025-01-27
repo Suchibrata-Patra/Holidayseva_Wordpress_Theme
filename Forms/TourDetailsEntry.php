@@ -254,8 +254,10 @@ function display_tour_meta_box($post) {
                 const newField = document.createElement('div');
                 newField.classList.add('form-group');
                 newField.innerHTML = `
+           <div style="display:flex;">
             <input type="text" name="tour_highlights[]" class="form-control" placeholder="Enter highlight" />
             <button type="button" class="remove-highlight">Remove</button>
+           </div>
         `;
                 container.appendChild(newField);
             });
