@@ -232,7 +232,7 @@ function display_tour_meta_box($post) {
             <div id="highlight-fields">
                 <?php if (!empty($tour_highlights)) : ?>
                 <?php foreach ($tour_highlights as $index => $highlight) : ?>
-                <div class="form-group">
+                <div class="form-group" style="display:flex;">
                     <input type="text" name="tour_highlights[]" class="form-control"
                         value="<?php echo esc_attr($highlight); ?>" />
                     <button type="button" class="remove-highlight">Remove</button>
