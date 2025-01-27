@@ -355,6 +355,12 @@ function display_tour_meta_box($post) {
 
     #day_plans input[type="checkbox"] {
         margin-right: 8px;
+        width: 14px;
+        height: 14px;
+        border-radius: 0;
+        border: 1px solid #666;
+        background-color: #fff;
+        cursor: pointer;
     }
 </style>
 
