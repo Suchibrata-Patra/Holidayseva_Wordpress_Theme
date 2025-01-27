@@ -314,15 +314,17 @@ function display_tour_meta_box($post) {
 
             <!-- Checkboxes -->
             <?php $checkbox_fields = ['hotel' => 'Hotel', 'breakfast' => 'Breakfast', 'lunch' => 'Lunch', 'dinner' => 'Dinner', 'cars' => 'Cars', 'flights' => 'Flights']; ?>
-            <?php foreach ($checkbox_fields as $field_key => $field_label) : ?>
-                <div class="form-group">
-                    <label>
-                        <input type="checkbox" id="day_plans_<?php echo $field_key; ?>_<?php echo $i; ?>" name="day_plans[<?php echo $i; ?>][<?php echo $field_key; ?>]"
-                            value="yes" <?php checked(isset($day_plans[$i][$field_key]) && $day_plans[$i][$field_key] === 'yes'); ?> />
-                        <?php echo $field_label; ?>
-                    </label>
-                </div>
-            <?php endforeach; ?>
+            <div class="checkbox-group">
+    <?php foreach ($checkbox_fields as $field_key => $field_label) : ?>
+        <div class="checkbox-container">
+            <label>
+                <input type="checkbox" id="day_plans_<?php echo $field_key; ?>_<?php echo $i; ?>" name="day_plans[<?php echo $i; ?>][<?php echo $field_key; ?>]"
+                    value="yes" <?php checked(isset($day_plans[$i][$field_key]) && $day_plans[$i][$field_key] === 'yes'); ?> />
+                <?php echo $field_label; ?>
+            </label>
+        </div>
+    <?php endforeach; ?>
+</div>
 
             <!-- Special Note -->
             <div class="form-group">
@@ -335,6 +337,16 @@ function display_tour_meta_box($post) {
 </div>
 
 <style>
+    .checkbox-group {
+    display: flex;
+    flex-wrap: wrap; /* Ensures the checkboxes wrap to the next line if they exceed the container width */
+    gap: 10px; /* Adds spacing between checkboxes */
+}
+
+.checkbox-container {
+    display: inline-block; /* Keeps the checkboxes inline */
+}
+
     #day_plans .day-plan {
         background-color: #f9f9f9;
     }
