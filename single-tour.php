@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?php echo wp_get_uri();?>/Assets/style/Trip_Details_Page.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/style/Trip_Details_Page.css">
 <div class="hero_section_holidayseva_tour_package_name">
     <h3>Unforgettable Kashmir Tour Package</h3>
     by <strong><u><i>Holidayseva</i></u></strong>
