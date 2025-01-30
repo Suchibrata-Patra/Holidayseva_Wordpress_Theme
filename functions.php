@@ -25,14 +25,50 @@ function custom_enqueue_tinymce_styles() {
 add_action('admin_init', 'custom_enqueue_tinymce_styles');
 
 // // Register custom post types
+// function register_custom_post_types() {
+//     $post_types = [
+//         'tour' => [
+//             'name' => 'Tours',
+//             'singular_name' => 'Tour',
+//             'slug' => 'tours',
+//             'icon' => 'dashicons-palmtree',
+//             'position' => 200, // Position for the "Tours" post type
+//         ],
+//     ];
+
+//     foreach ($post_types as $slug => $type) {
+//         register_post_type($slug, [
+//             'labels' => [
+//                 'name' => $type['name'],
+//                 'singular_name' => $type['singular_name'],
+//                 'add_new' => "Add New {$type['singular_name']}",
+//                 'add_new_item' => "Add New {$type['singular_name']}",
+//                 'edit_item' => "Edit {$type['singular_name']}",
+//                 'new_item' => "New {$type['singular_name']}",
+//                 'view_item' => "View {$type['singular_name']}",
+//                 'search_items' => "Search {$type['name']}",
+//                 'not_found' => "No {$type['name']} found",
+//                 'not_found_in_trash' => "No {$type['name']} found in Trash",
+//                 'all_items' => "All {$type['name']}",
+//             ],
+//             'public' => true,
+//             'supports' => ['title', 'editor', 'thumbnail', 'excerpt', 'comments'],
+//             'menu_icon' => $type['icon'],
+//             'show_in_rest' => true,
+//             'has_archive' => true,
+//             'rewrite' => ['slug' => $type['slug']],
+//         ]);
+//     }
+// }
+// add_action('init', 'register_custom_post_types');
 function register_custom_post_types() {
     $post_types = [
         'tour' => [
-            'name' => 'Tours',
-            'singular_name' => 'Tour',
-            'slug' => 'tours',
+            'name' => 'Holidays',
+            'singular_name' => 'Holiday',
+            'slug' => 'holidays', // Change slug from 'tours' to 'holidays'
             'icon' => 'dashicons-palmtree',
-            'position' => 200, // Position for the "Tours" post type
+            'position' => 200, // Position in the admin menu
         ],
     ];
 
@@ -56,11 +92,12 @@ function register_custom_post_types() {
             'menu_icon' => $type['icon'],
             'show_in_rest' => true,
             'has_archive' => true,
-            'rewrite' => ['slug' => $type['slug']],
+            'rewrite' => ['slug' => $type['slug']], // Updated slug to 'holidays'
         ]);
     }
 }
 add_action('init', 'register_custom_post_types');
+
 
 
 
