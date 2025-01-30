@@ -1,6 +1,213 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/style/Trip_Details_Page.css">
+<style>
+        .hero_section_image-scroll-container-wrapper {
+        position: relative;
+        z-index: 1;
+        border-radius: 15px;
+        padding: 2px;
+    }
+
+    .hero_section_image-scroll-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .hero_section_image-scroll-container::-webkit-scrollbar {
+        display: none;
+        object-fit: cover;
+
+    }
+
+    .hero_section_image-card {
+        width: 100%;
+        height: 25vh;
+        flex: 0 0 auto;
+        background: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        scroll-snap-align: start;
+    }
+
+    .hero_section_image-card img {
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+        border-radius: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .hero_section_image-card {
+            height: 10vh;
+        }
+    }
+
+    .image-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        position: absolute;
+        top: 105%;
+        width: 100%;
+    }
+
+    .image-indicator {
+        width: 10px;
+        height: 10px;
+        background-color: #ededed;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .image-indicator.active {
+        background-color: #ff0000;
+    }
 
 
+/* CSS Styling For the Page Headings */
+
+.aux-container aux-fold{
+    padding: 0!important; 
+}
+    /* Default styles */
+.tour-package-container {
+    line-height: 1rem !important;
+}
+
+.tour-title {
+    font-size: 1.8rem !important;
+    color: black;
+    font-weight: 700;
+    line-height: 2.2rem;
+}
+
+.tour-author {
+    font-size: 1rem !important;
+    color: black;
+    font-weight: 500;
+}
+
+.tour-recommendation {
+    color: green;
+    font-weight: 600;
+}
+
+/* Media Query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .tour-title {
+        font-size: 1.5rem !important;
+        line-height: 2rem;
+    }
+    .tour-author {
+        font-size: 0.9rem;
+    }
+    .tour-recommendation {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Query for screens smaller than 480px */
+@media (max-width: 480px) {
+    .tour-title {
+        font-size: 1.6rem;
+        line-height: 1.85rem;
+        padding-left: 5px;
+        padding-right:7px;
+        font-weight: 700;
+    }
+    .tour-author {
+        font-size: 0.8rem;
+        padding-left: 5px;
+    }
+    .tour-recommendation {
+        font-size: 0.8rem;
+        padding-left: 5px;
+    }
+}
+
+
+
+/* Style Sheets For the Shorts Pages  */
+    .video-scroll-container {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px;
+        gap: 10px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .video-scroll-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .video-card {
+        width: 180px;
+        height: 300px;
+        flex: 0 0 auto;
+        background: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        scroll-snap-align: start;
+    }
+
+    .video-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .video-lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .video-lightbox iframe {
+        width: 90%;
+        height: 75%;
+        border: none;
+    }
+
+    .video-lightbox .close-btn {
+        position: absolute;
+        top:90%;
+        right: 45%;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        /* z-index: 1010; */
+        background: rgba(0, 0, 0);
+        border-radius: 50%;
+        padding: 3px 17px;
+    }
+    .video-lightbox img{
+        position:absolute;
+        top:10px;
+        width:60%;
+    }
+
+    .video-lightbox .close-btn:hover {
+        background: rgba(255, 0, 0, 0.6);
+    }
+
+</style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
 <div class="tour-package-container">
