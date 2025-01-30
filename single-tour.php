@@ -1,10 +1,9 @@
+<link rel="stylesheet" href="<?php echo wp_get_uri();?>/Assets/style/Trip_Details_Page.css">
 <div class="hero_section_holidayseva_tour_package_name">
     <h3>Unforgettable Kashmir Tour Package</h3>
     by <strong><u><i>Holidayseva</i></u></strong>
     Recommended by 95% travellers.
 </div>
-
-
 <div class="hero_section_image-scroll-container-wrapper">
     <div class="hero_section_image-scroll-container">
         <!-- Images will be dynamically cloned -->
