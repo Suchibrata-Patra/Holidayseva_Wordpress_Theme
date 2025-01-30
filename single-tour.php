@@ -47,6 +47,66 @@
     <div class="image-indicators"></div>
 </div>
 
+
+
+<strong style="font-size:1.7rem; color:black; border-left: 5px solid red; border-radius: 5px; padding-left: 5px;">
+    Know More &#8594;
+</strong>
+
+<div class="video-scroll-container">
+    <div class="video-card" data-video="https://www.youtube.com/embed/ZQWiZlqADe4">
+        <img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/gangasagar-tour-Packages.webp" alt="Thumbnail 1" style="border:1px solid black;">
+    </div>
+    <div class="video-card" data-video="https://www.youtube.com/embed/ZQWiZlqADe4">
+        <img src="https://static.wixstatic.com/media/9ed41c_f877ff9537614bf9b80e846bcfe4366f~mv2.jpg/v1/fill/w_980,h_1470,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/9ed41c_f877ff9537614bf9b80e846bcfe4366f~mv2.jpg" alt="Thumbnail 2">
+    </div>
+    <div class="video-card" data-video="https://www.youtube.com/embed/ZQWiZlqADe4">
+        <img src="https://www.laurewanders.com/wp-content/uploads/2021/03/Short-travel-captions-0101-683x1024.jpg" alt="Thumbnail 3">
+    </div>
+    <div class="video-card" data-video="https://www.youtube.com/embed/ZQWiZlqADe4">
+        <img src="https://escapetounknown.com/wp-content/uploads/2023/08/1-576x1024.webp" alt="Thumbnail 4">
+    </div>
+    <div class="video-card" data-video="https://www.youtube.com/embed/shorts/VIDEO_ID5">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSak2xZOdDWvOFSJlpCQ2YJHqamao7pzMNMsw&s" alt="Thumbnail 5">
+    </div>
+    <div class="video-card" data-video="https://www.youtube.com/embed/shorts/VIDEO_ID6">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDI9oFagkMhmDyJfwOUXStbnO9KzuMtYVXLg&s" alt="Thumbnail 6">
+    </div>
+</div>
+
+<div class="video-lightbox" id="videoLightbox">
+    <img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/logo.png" alt="">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <iframe id="videoLightboxVideo" src="" allowfullscreen></iframe>
+</div>
+
+<script>
+    const videoCards = document.querySelectorAll('.video-card');
+    const videoLightbox = document.getElementById('videoLightbox');
+    const videoLightboxVideo = document.getElementById('videoLightboxVideo');
+    const closeBtn = document.getElementById('closeBtn');
+
+    videoCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const videoSrc = card.getAttribute('data-video');
+            videoLightboxVideo.src = videoSrc;
+            videoLightbox.style.display = 'flex';
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        videoLightbox.style.display = 'none';
+        videoLightboxVideo.src = '';
+    });
+
+    videoLightbox.addEventListener('click', (e) => {
+        if (e.target === videoLightbox) {
+            videoLightbox.style.display = 'none';
+            videoLightboxVideo.src = '';
+        }
+    });
+</script>
+
 <script>
     const scrollContainer = document.querySelector('.hero_section_image-scroll-container');
     const cards = Array.from(document.querySelectorAll('.hero_section_image-card'));
