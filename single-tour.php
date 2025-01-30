@@ -1,9 +1,27 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/style/Trip_Details_Page.css">
-<div class="hero_section_holidayseva_tour_package_name">
-    <h3>Unforgettable Kashmir Tour Package</h3>
-    by <strong><u><i>Holidayseva</i></u></strong>
-    Recommended by 95% travellers.
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
+<div class="tour-package-container">
+    <h1 class="tour-title">Unforgettable Ganga Sagar Mela Tour Package From Kolkata</h1>
+    <div style="display: flex; align-items: center;">
+    <span style="font-size: 1rem; color: black; font-family: Poppins;
+    padding-left:7px;">by </span>
+    <h2 class="tour-author" style="margin: 0;">GangaSagar TOURISM</h2>
 </div>
+
+    <span style="display: flex; align-items: center;">
+        <span style="font-family: 'Material Icons'; font-size: 20px; color: green;background-color:greenyellow;border-radius: 50px;paddging-top:1px; padding: 0px; font-size: 16px; display: inline-flex; align-items: center; justify-content: center;">
+            <span class="material-symbols-outlined">
+                verified
+                </span>
+        </span>
+        <span style="margin-left: 8px;color: rgb(0, 150, 0);">Recommended by 94% Traveller</span>
+    </span>
+    
+</div>
+
 <div class="hero_section_image-scroll-container-wrapper">
     <div class="hero_section_image-scroll-container">
         <!-- Images will be dynamically cloned -->
