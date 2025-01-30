@@ -9,12 +9,36 @@
         <meta name="viewport"   content="initial-scale=1,user-scalable=no,width=device-width">
 
 <!-- outputs by wp_head -->
-			<!-- Google Analytics opt-out snippet added by Site Kit -->
-			<script>
-window["ga-disable-G-PHF5ZM106E"] = true;
-</script>
-						<!-- End Google Analytics opt-out snippet added by Site Kit -->
-				<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+<!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
+<title>Kolkata To Ganga Sagar Tour Package &raquo; 𝐆𝐚𝐧𝐠𝐚𝐒𝐚𝐠𝐚𝐫 𝐓𝐎𝐔𝐑𝐈𝐒𝐌</title>
+<meta name="description" content="by"/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://www.gangasagar-tourism.com/tours/kolkata-to-ganga-sagar-tour-package/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Kolkata To Ganga Sagar Tour Package &raquo; 𝐆𝐚𝐧𝐠𝐚𝐒𝐚𝐠𝐚𝐫 𝐓𝐎𝐔𝐑𝐈𝐒𝐌" />
+<meta property="og:description" content="by" />
+<meta property="og:url" content="https://www.gangasagar-tourism.com/tours/kolkata-to-ganga-sagar-tour-package/" />
+<meta property="og:site_name" content="Ganga Sagar TOURISM" />
+<meta property="og:updated_time" content="2025-01-19T15:36:15+00:00" />
+<meta property="og:image" content="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/Kolkata-To-Ganga-Sagar-Tour-Package-8145302135.webp" />
+<meta property="og:image:secure_url" content="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/Kolkata-To-Ganga-Sagar-Tour-Package-8145302135.webp" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="1024" />
+<meta property="og:image:alt" content="Kolkata To Ganga Sagar Tour Package 8145302135" />
+<meta property="og:image:type" content="image/webp" />
+<meta property="article:published_time" content="2024-12-04T07:41:49+00:00" />
+<meta property="article:modified_time" content="2025-01-19T15:36:15+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Kolkata To Ganga Sagar Tour Package &raquo; 𝐆𝐚𝐧𝐠𝐚𝐒𝐚𝐠𝐚𝐫 𝐓𝐎𝐔𝐑𝐈𝐒𝐌" />
+<meta name="twitter:description" content="by" />
+<meta name="twitter:image" content="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/Kolkata-To-Ganga-Sagar-Tour-Package-8145302135.webp" />
+<meta name="twitter:label1" content="Time to read" />
+<meta name="twitter:data1" content="5 minutes" />
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":"Place","@id":"https://www.gangasagar-tourism.com/#place","address":{"@type":"PostalAddress","streetAddress":"Harinbari","addressLocality":"Sagar","addressRegion":"Kakdwip","postalCode":"743373","addressCountry":"India"}},{"@type":"Organization","@id":"https://www.gangasagar-tourism.com/#organization","name":"Ganga Sagar TOURISM","url":"https://www.gangasagar-tourism.com","email":"gangasagarseva.com@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Harinbari","addressLocality":"Sagar","addressRegion":"Kakdwip","postalCode":"743373","addressCountry":"India"},"contactPoint":[{"@type":"ContactPoint","telephone":"+918583992988","contactType":"customer support"}],"description":"Ganga Sagar Tourism offers seamless travel experiences to the sacred island of Gangasagar, blending spirituality and adventure. Known for the annual Gangasagar Mela, this destination attracts pilgrims seeking blessings at the Kapil Muni Ashram. From Kolkata, the journey involves a scenic drive and a ferry ride, making it both convenient and memorable. With well-organized tour packages, Ganga Sagar Tourism ensures hassle-free travel, comfortable accommodations, and guided tours. Perfect for a spiritual retreat or a cultural exploration, Gangasagar promises a unique connection to heritage and nature.","legalName":"S N India Leisure And Holidays","location":{"@id":"https://www.gangasagar-tourism.com/#place"}},{"@type":"WebSite","@id":"https://www.gangasagar-tourism.com/#website","url":"https://www.gangasagar-tourism.com","name":"Ganga Sagar TOURISM","publisher":{"@id":"https://www.gangasagar-tourism.com/#organization"},"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/Kolkata-To-Ganga-Sagar-Tour-Package-8145302135.webp","url":"https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/Kolkata-To-Ganga-Sagar-Tour-Package-8145302135.webp","width":"1024","height":"1024","caption":"Kolkata To Ganga Sagar Tour Package 8145302135","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.gangasagar-tourism.com/tours/kolkata-to-ganga-sagar-tour-package/#webpage","url":"https://www.gangasagar-tourism.com/tours/kolkata-to-ganga-sagar-tour-package/","name":"Kolkata To Ganga Sagar Tour Package &raquo; \ud835\udc06\ud835\udc1a\ud835\udc27\ud835\udc20\ud835\udc1a\ud835\udc12\ud835\udc1a\ud835\udc20\ud835\udc1a\ud835\udc2b \ud835\udc13\ud835\udc0e\ud835\udc14\ud835\udc11\ud835\udc08\ud835\udc12\ud835\udc0c","datePublished":"2024-12-04T07:41:49+00:00","dateModified":"2025-01-19T15:36:15+00:00","isPartOf":{"@id":"https://www.gangasagar-tourism.com/#website"},"primaryImageOfPage":{"@id":"https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/Kolkata-To-Ganga-Sagar-Tour-Package-8145302135.webp"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://www.gangasagar-tourism.com/author/sumannayak/","name":"Ganga Sagar TOURISM Team","url":"https://www.gangasagar-tourism.com/author/sumannayak/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/3f6b029dc6b520fa72b2c6d8d2282cca?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/3f6b029dc6b520fa72b2c6d8d2282cca?s=96&amp;d=mm&amp;r=g","caption":"Ganga Sagar TOURISM Team","inLanguage":"en-US"},"sameAs":["https://www.gangasagar-tourism.com/"],"worksFor":{"@id":"https://www.gangasagar-tourism.com/#organization"}},{"@type":"Article","headline":"Kolkata To Ganga Sagar Tour Package &raquo; \ud835\udc06\ud835\udc1a\ud835\udc27\ud835\udc20\ud835\udc1a\ud835\udc12\ud835\udc1a\ud835\udc20\ud835\udc1a\ud835\udc2b \ud835\udc13\ud835\udc0e\ud835\udc14\ud835\udc11\ud835\udc08\ud835\udc12\ud835\udc0c","keywords":"Kolkata To Ganga Sagar Tour Package","datePublished":"2024-12-04T07:41:49+00:00","dateModified":"2025-01-19T15:36:15+00:00","author":{"@id":"https://www.gangasagar-tourism.com/author/sumannayak/","name":"Ganga Sagar TOURISM Team"},"publisher":{"@id":"https://www.gangasagar-tourism.com/#organization"},"description":"by","name":"Kolkata To Ganga Sagar Tour Package &raquo; \ud835\udc06\ud835\udc1a\ud835\udc27\ud835\udc20\ud835\udc1a\ud835\udc12\ud835\udc1a\ud835\udc20\ud835\udc1a\ud835\udc2b \ud835\udc13\ud835\udc0e\ud835\udc14\ud835\udc11\ud835\udc08\ud835\udc12\ud835\udc0c","@id":"https://www.gangasagar-tourism.com/tours/kolkata-to-ganga-sagar-tour-package/#richSnippet","isPartOf":{"@id":"https://www.gangasagar-tourism.com/tours/kolkata-to-ganga-sagar-tour-package/#webpage"},"image":{"@id":"https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/Kolkata-To-Ganga-Sagar-Tour-Package-8145302135.webp"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://www.gangasagar-tourism.com/tours/kolkata-to-ganga-sagar-tour-package/#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
 
 <link rel='dns-prefetch' href='//www.googletagmanager.com' />
 <link rel='dns-prefetch' href='//fonts.googleapis.com' />
@@ -25,18 +49,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 /*! This file is auto-generated */
 !function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
 </script>
-<link rel='stylesheet' id='dashicons-css' href='https://www.gangasagar-tourism.com/wp-includes/css/dashicons.min.css?ver=6.7.1' media='all' />
-<link rel='stylesheet' id='admin-bar-css' href='https://www.gangasagar-tourism.com/wp-includes/css/admin-bar.min.css?ver=6.7.1' media='all' />
-<style id='admin-bar-inline-css'>
-
-		@media screen { html { margin-top: 32px !important; } }
-		@media screen and ( max-width: 782px ) { html { margin-top: 46px !important; } }
-	
-@media print { #wpadminbar { display:none; } }
-</style>
-<link rel='stylesheet' id='elementor-icons-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.32.0' media='all' />
-<link rel='stylesheet' id='elementor-common-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/css/common.min.css?ver=3.25.10' media='all' />
-<link rel='stylesheet' id='e-theme-ui-light-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/css/theme-light.min.css?ver=3.25.10' media='all' />
 <style id='wp-emoji-styles-inline-css'>
 
 	img.wp-smiley, img.emoji {
@@ -73,7 +85,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 :where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
 :root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
 </style>
-<link rel='stylesheet' id='rank-math-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/seo-by-rank-math/assets/front/css/rank-math.css?ver=1.0.236' media='all' />
 <link rel='stylesheet' id='auxin-base-css' href='https://www.gangasagar-tourism.com/wp-content/themes/phlox/css/base.css?ver=2.17.0' media='all' />
 <link rel='stylesheet' id='auxin-front-icon-css' href='https://www.gangasagar-tourism.com/wp-content/themes/phlox/css/auxin-icon.css?ver=2.17.0' media='all' />
 <link rel='stylesheet' id='auxin-main-css' href='https://www.gangasagar-tourism.com/wp-content/themes/phlox/css/main.css?ver=2.17.0' media='all' />
@@ -85,7 +96,6 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <link rel='stylesheet' id='elementor-post-24-css' href='https://www.gangasagar-tourism.com/wp-content/uploads/elementor/css/post-24.css?ver=1737301179' media='all' />
 <link rel='stylesheet' id='swiper-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' media='all' />
 <link rel='stylesheet' id='e-swiper-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.25.10' media='all' />
-<link rel='stylesheet' id='elementor-wp-admin-bar-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/css/admin-bar.min.css?ver=3.25.10' media='all' />
 <link rel='stylesheet' id='elementor-post-4-css' href='https://www.gangasagar-tourism.com/wp-content/uploads/elementor/css/post-4.css?ver=1737293967' media='all' />
 <link rel='stylesheet' id='auxin-elementor-widgets-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/auxin-elements/admin/assets/css/elementor-widgets.css?ver=2.17.2' media='all' />
 <link rel='stylesheet' id='mediaelement-css' href='https://www.gangasagar-tourism.com/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' media='all' />
@@ -93,14 +103,12 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15
 <link rel='stylesheet' id='widget-heading-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.25.10' media='all' />
 <link rel='stylesheet' id='widget-text-editor-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/css/widget-text-editor.min.css?ver=3.25.10' media='all' />
 <link rel='stylesheet' id='widget-icon-list-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.25.10' media='all' />
-<link rel='stylesheet' id='elementor-post-5939-css' href='https://www.gangasagar-tourism.com/wp-content/uploads/elementor/css/post-5939.css?ver=1738241913' media='all' />
-<link rel='stylesheet' id='googlesitekit-fonts-css' href='https://fonts.googleapis.com/css?family=Google+Sans+Text:400,500|Google+Sans+Display:400,500,700&#038;subset=latin-ext&#038;display=fallback' media='all' />
-<link rel='stylesheet' id='googlesitekit-adminbar-css-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/css/googlesitekit-adminbar-css-281d66e21d2b87430998.min.css' media='all' />
+<link rel='stylesheet' id='elementor-post-1594-css' href='https://www.gangasagar-tourism.com/wp-content/uploads/elementor/css/post-1594.css?ver=1737300988' media='all' />
 <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.7.1' media='all' />
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><script src="https://www.gangasagar-tourism.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
 <script src="https://www.gangasagar-tourism.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
 <script id="auxin-modernizr-js-extra">
-var auxin = {"ajax_url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin-ajax.php","is_rtl":"","is_reponsive":"1","is_framed":"","frame_width":"20","wpml_lang":"en","uploadbaseurl":"https:\/\/www.gangasagar-tourism.com\/wp-content\/uploads","nonce":"276d024b99"};
+var auxin = {"ajax_url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin-ajax.php","is_rtl":"","is_reponsive":"1","is_framed":"","frame_width":"20","wpml_lang":"en","uploadbaseurl":"https:\/\/www.gangasagar-tourism.com\/wp-content\/uploads","nonce":"0723f14e7d"};
 </script>
 <script id="auxin-modernizr-js-before">
 /* < ![CDATA[ */
@@ -123,14 +131,14 @@ gtag("config", "GT-KTPK6KZW");
 </script>
 
 <!-- End Google tag (gtag.js) snippet added by Site Kit -->
-<link rel="https://api.w.org/" href="https://www.gangasagar-tourism.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.gangasagar-tourism.com/wp-json/wp/v2/pages/5939" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.gangasagar-tourism.com/xmlrpc.php?rsd" />
+<link rel="https://api.w.org/" href="https://www.gangasagar-tourism.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.gangasagar-tourism.com/wp-json/wp/v2/pages/1594" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.gangasagar-tourism.com/xmlrpc.php?rsd" />
 <meta name="generator" content="WordPress 6.7.1" />
-<link rel='shortlink' href='https://www.gangasagar-tourism.com/?p=5939' />
-<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.gangasagar-tourism.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.gangasagar-tourism.com%2Fganga-sagar-mela%2F" />
-<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.gangasagar-tourism.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.gangasagar-tourism.com%2Fganga-sagar-mela%2F&#038;format=xml" />
-    <meta name="title"       content="Unforgettable Ganga Sagar Mela Tour Package From Kolkata" />
-    <meta name="description" content="Holidayseva Choice Unforgettable Ganga Sagar Mela Tour Package From Kolkata by GangaSagar TOURISM verified Recommended by 94% Traveller Share Tour Details Embark on a spiritual journey to one of India’s most sacred events—the Ganga Sagar Mela! This carefully curated tour package ensures a seamless and memorable pilgrimage, allowing you to witness the divine confluence of [&hellip;]" />
-        <link rel="image_src"    href="https://www.gangasagar-tourism.com/wp-content/uploads/2025/01/Ganga-Sagar-Mela-Tour-Package-90x90.jpg" />
+<link rel='shortlink' href='https://www.gangasagar-tourism.com/?p=1594' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.gangasagar-tourism.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.gangasagar-tourism.com%2Ftours%2Fkolkata-to-ganga-sagar-tour-package%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.gangasagar-tourism.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.gangasagar-tourism.com%2Ftours%2Fkolkata-to-ganga-sagar-tour-package%2F&#038;format=xml" />
+    <meta name="title"       content="Kolkata To Ganga Sagar Tour Package" />
+    <meta name="description" content="Holidayseva Choice Exclusive 1 Day GangaSagar Tour Package From Kolkata by GangaSagar TOURISM verified Recommended by 94% Traveller Share Tour Details Embark on a sacred journey to Gangasagar, one of India’s most revered pilgrimage sites.Our Gangasagar Tour Package from Kolkata ensures a smooth and spiritual experience as you explore the tranquil meeting point of the [&hellip;]" />
+        <link rel="image_src"    href="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/Kolkata-To-Ganga-Sagar-Tour-Package-8145302135-90x90.webp" />
     <meta name="generator" content="Site Kit by Google 1.144.0" /><!-- Chrome, Firefox OS and Opera -->
 <meta name="theme-color" content="rgb(52, 224, 161)" />
 <!-- Windows Phone -->
@@ -170,47 +178,9 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 </head>
 
 
-<body class="page-template-default page page-id-5939 logged-in admin-bar no-customize-support elementor-default elementor-kit-4 elementor-page elementor-page-5939 phlox aux-dom-unready aux-full-width aux-resp aux-s-fhd  aux-page-animation-off _auxels"  data-framed="">
+<body class="page-template-default page page-id-1594 page-child parent-pageid-897 elementor-default elementor-kit-4 elementor-page elementor-page-1594 phlox aux-dom-unready aux-full-width aux-resp aux-s-fhd  aux-page-animation-off _auxels"  data-framed="">
 
-<script>
-		(function() {
-			var request, b = document.body, c = 'className', cs = 'customize-support', rcs = new RegExp('(^|\\s+)(no-)?'+cs+'(\\s+|$)');
 
-				request = true;
-	
-			b[c] = b[c].replace( rcs, ' ' );
-			// The customizer requires postMessage and CORS (if the site is cross domain).
-			b[c] += ( window.postMessage && request ? ' ' : ' no-' ) + cs;
-		}());
-	
-</script>
-		<div id="wpadminbar" class="nojq nojs">
-						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
-				<ul role='menu' id='wp-admin-bar-root-default' class="ab-top-menu"><li role='group' id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://www.gangasagar-tourism.com/wp-admin/about.php'><span class="ab-icon" aria-hidden="true"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul role='menu' aria-label='About WordPress' id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li role='group' id='wp-admin-bar-about'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/about.php'>About WordPress</a></li><li role='group' id='wp-admin-bar-contribute'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/contribute.php'>Get Involved</a></li></ul><ul role='menu' aria-label='About WordPress' id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li role='group' id='wp-admin-bar-wporg'><a class='ab-item' role="menuitem" href='https://wordpress.org/'>WordPress.org</a></li><li role='group' id='wp-admin-bar-documentation'><a class='ab-item' role="menuitem" href='https://wordpress.org/documentation/'>Documentation</a></li><li role='group' id='wp-admin-bar-learn'><a class='ab-item' role="menuitem" href='https://learn.wordpress.org/'>Learn WordPress</a></li><li role='group' id='wp-admin-bar-support-forums'><a class='ab-item' role="menuitem" href='https://wordpress.org/support/forums/'>Support</a></li><li role='group' id='wp-admin-bar-feedback'><a class='ab-item' role="menuitem" href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li role='group' id='wp-admin-bar-site-name' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://www.gangasagar-tourism.com/wp-admin/'>𝐆𝐚𝐧𝐠𝐚𝐒𝐚𝐠𝐚𝐫 𝐓𝐎𝐔𝐑𝐈𝐒𝐌</a><div class="ab-sub-wrapper"><ul role='menu' aria-label='𝐆𝐚𝐧𝐠𝐚𝐒𝐚𝐠𝐚𝐫 𝐓𝐎𝐔𝐑𝐈𝐒𝐌' id='wp-admin-bar-site-name-default' class="ab-submenu"><li role='group' id='wp-admin-bar-dashboard'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/'>Dashboard</a></li><li role='group' id='wp-admin-bar-plugins'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/plugins.php'>Plugins</a></li></ul><ul role='menu' aria-label='𝐆𝐚𝐧𝐠𝐚𝐒𝐚𝐠𝐚𝐫 𝐓𝐎𝐔𝐑𝐈𝐒𝐌' id='wp-admin-bar-appearance' class="ab-submenu"><li role='group' id='wp-admin-bar-themes'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/themes.php'>Themes</a></li><li role='group' id='wp-admin-bar-widgets'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/widgets.php'>Widgets</a></li><li role='group' id='wp-admin-bar-menus'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/nav-menus.php'>Menus</a></li></ul></div></li><li role='group' id='wp-admin-bar-customize' class="hide-if-no-customize"><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/customize.php?url=https%3A%2F%2Fwww.gangasagar-tourism.com%2Fganga-sagar-mela%2F'>Customize</a></li><li role='group' id='wp-admin-bar-updates'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/update-core.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label" aria-hidden="true">3</span><span class="screen-reader-text updates-available-text">3 updates available</span></a></li><li role='group' id='wp-admin-bar-comments'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/edit-comments.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label awaiting-mod pending-count count-0" aria-hidden="true">0</span><span class="screen-reader-text comments-in-moderation-text">0 Comments in moderation</span></a></li><li role='group' id='wp-admin-bar-new-content' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://www.gangasagar-tourism.com/wp-admin/post-new.php'><span class="ab-icon" aria-hidden="true"></span><span class="ab-label">New</span></a><div class="ab-sub-wrapper"><ul role='menu' aria-label='New' id='wp-admin-bar-new-content-default' class="ab-submenu"><li role='group' id='wp-admin-bar-new-post'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/post-new.php'>Post</a></li><li role='group' id='wp-admin-bar-new-media'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/media-new.php'>Media</a></li><li role='group' id='wp-admin-bar-new-page'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/post-new.php?post_type=page'>Page</a></li><li role='group' id='wp-admin-bar-new-e-floating-buttons'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/edit.php?action=elementor_new_post&#038;post_type=e-floating-buttons&#038;template_type=floating-buttons&#038;_wpnonce=35c5699c22#library'>Floating Element</a></li><li role='group' id='wp-admin-bar-new-elementor_library'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/post-new.php?post_type=elementor_library'>Template</a></li><li role='group' id='wp-admin-bar-new-user'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/user-new.php'>User</a></li></ul></div></li><li role='group' id='wp-admin-bar-edit'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/post.php?post=5939&#038;action=edit'>Edit Page</a></li><li role='group' id='wp-admin-bar-google-site-kit' class="menupop googlesitekit-wp-adminbar"><a class='ab-item' role="menuitem" href='#'><span class="googlesitekit-wp-adminbar__icon"></span> <span class="googlesitekit-wp-adminbar__label">Site Kit</span></a>		<div class="googlesitekit-plugin ab-sub-wrapper">
-						<noscript>
-				<div class="googlesitekit-noscript notice notice-warning">
-					<div class="mdc-layout-grid">
-						<div class="mdc-layout-grid__inner">
-							<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-								<p class="googlesitekit-noscript__text">
-									The Site Kit by Google plugin requires JavaScript to be enabled in your browser.								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</noscript>
-		
-			<div id="js-googlesitekit-adminbar" data-view-only="" class="googlesitekit-adminbar">
-
-				
-				<section id="js-googlesitekit-adminbar-modules" class="googlesitekit-adminbar-modules"></section>
-
-							</div>
-		</div>
-		</li><li role='group' id='wp-admin-bar-aux-header-footer' class="menupop"><div class="ab-item ab-empty-item" role="menuitem" aria-expanded="false"><div class="aux-header-footer-edit-links">Edit Header & Footer</div></div><div class="ab-sub-wrapper"><ul role='menu' id='wp-admin-bar-aux-header-footer-default' class="ab-submenu"><li role='group' id='wp-admin-bar-aux-current-header'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/post.php?post=23&#038;action=edit' target='_blank'><span>header</span><span class="aux-state">current header</span></a></li><li role='group' id='wp-admin-bar-aux-current-footer'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/post.php?post=24&#038;action=edit' target='_blank'><span>footer</span><span class="aux-state">current footer</span></a></li><li role='group' id='wp-admin-bar-aux-global-header'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/post.php?post=23&#038;action=edit' target='_blank'><span>header</span><span class="aux-state">header</span></a></li><li role='group' id='wp-admin-bar-aux-global-footer'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/post.php?post=24&#038;action=edit' target='_blank'><span>footer</span><span class="aux-state">footer</span></a></li></ul></div></li><li role='group' id='wp-admin-bar-rank-math' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://www.gangasagar-tourism.com/wp-admin/admin.php?page=rank-math' title='Rank Math Dashboard'><span class="rank-math-icon"><svg viewBox="0 0 462.03 462.03" xmlns="http://www.w3.org/2000/svg" width="20"><g><path d="m462 234.84-76.17 3.43 13.43 21-127 81.18-126-52.93-146.26 60.97 10.14 24.34 136.1-56.71 128.57 54 138.69-88.61 13.43 21z"/><path d="m54.1 312.78 92.18-38.41 4.49 1.89v-54.58h-96.67zm210.9-223.57v235.05l7.26 3 89.43-57.05v-181zm-105.44 190.79 96.67 40.62v-165.19h-96.67z"/></g></svg></span><span class="rank-math-text">Rank Math SEO</span></a><div class="ab-sub-wrapper"><ul role='menu' id='wp-admin-bar-rank-math-default' class="ab-submenu"><li role='group' id='wp-admin-bar-rank-math-dashboard'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/admin.php?page=rank-math' title='Dashboard'>Dashboard</a></li><li role='group' id='wp-admin-bar-rank-math-analytics'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/admin.php?page=rank-math-analytics' title='Review analytics and sitemaps'>Analytics<span class="rm-menu-new update-plugins" style="background: #11ac84;margin-left: 5px;min-width: 10px;height: 10px;margin-bottom: -1px;display: inline-block;border-radius: 5px;"><span class="plugin-count"></span></span></a></li><li role='group' id='wp-admin-bar-rank-math-posttype'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/admin.php?page=rank-math-options-titles#setting-panel-post-type-page' title='Edit default SEO settings for this post type'>SEO Settings for Pages</a></li><li role='group' id='wp-admin-bar-rank-math-content-ai-page' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://www.gangasagar-tourism.com/wp-admin/admin.php?page=rank-math-content-ai-page'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>Content AI</a><div class="ab-sub-wrapper"><ul role='menu' id='wp-admin-bar-rank-math-content-ai-page-default' class="ab-submenu"><li role='group' id='wp-admin-bar-rank-math-content-ai-tools'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/admin.php?page=rank-math-content-ai-page#ai-tools' title='Content AI Tools'>AI Tools</a></li><li role='group' id='wp-admin-bar-rank-math-content-ai-editor'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/admin.php?page=rank-math-content-ai-page#content-editor' title='Content AI Editor'>Content Editor</a></li><li role='group' id='wp-admin-bar-rank-math-content-ai-chat'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/admin.php?page=rank-math-content-ai-page#chat' title='Content AI Chat'>Chat</a></li><li role='group' id='wp-admin-bar-rank-math-content-ai-history'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/admin.php?page=rank-math-content-ai-page#history' title='Content AI History'>History</a></li></ul></div></li><li role='group' id='wp-admin-bar-rank-math-mark-me' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='#'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>Mark this page</a><div class="ab-sub-wrapper"><ul role='menu' id='wp-admin-bar-rank-math-mark-me-default' class="ab-submenu"><li role='group' id='wp-admin-bar-rank-math-pillar-content' class="mark-page-as"><a class='ab-item' role="menuitem" href='#pillar_content'>As Pillar Content</a></li><li role='group' id='wp-admin-bar-rank-math-no-index' class="mark-page-as"><a class='ab-item' role="menuitem" href='#noindex'>As NoIndex</a></li><li role='group' id='wp-admin-bar-rank-math-no-follow' class="mark-page-as"><a class='ab-item' role="menuitem" href='#nofollow'>As NoFollow</a></li></ul></div></li><li role='group' id='wp-admin-bar-rank-math-third-party' class="menupop"><a class='ab-item' role="menuitem" aria-expanded="false" href='#'><span class="wp-admin-bar-arrow" aria-hidden="true"></span>External Tools</a><div class="ab-sub-wrapper"><ul role='menu' id='wp-admin-bar-rank-math-third-party-default' class="ab-submenu"><li role='group' id='wp-admin-bar-rank-math-google-pagespeed'><a class='ab-item' role="menuitem" href='https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fwww.gangasagar-tourism.com%2Fganga-sagar-mela%2F' target='_blank' title='Google PageSpeed Insights'>Google PageSpeed</a></li><li role='group' id='wp-admin-bar-rank-math-google-richresults-mobile'><a class='ab-item' role="menuitem" href='https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.gangasagar-tourism.com%2Fganga-sagar-mela%2F&#038;user_agent=1' target='_blank' title='Google Rich Results Test - Googlebot Smartphone'>Google Rich Results (Mobile)</a></li><li role='group' id='wp-admin-bar-rank-math-google-richresults-desktop'><a class='ab-item' role="menuitem" href='https://search.google.com/test/rich-results?url=https%3A%2F%2Fwww.gangasagar-tourism.com%2Fganga-sagar-mela%2F&#038;user_agent=2' target='_blank' title='Google Rich Results Test - Googlebot Desktop'>Google Rich Results (Desktop)</a></li><li role='group' id='wp-admin-bar-rank-math-fb-debugger'><a class='ab-item' role="menuitem" href='https://developers.facebook.com/tools/debug/sharing/?q=https%3A%2F%2Fwww.gangasagar-tourism.com%2Fganga-sagar-mela%2F' target='_blank' title='Facebook Sharing Debugger'>Facebook Debugger</a></li></ul></div></li></ul></div></li></ul><ul role='menu' id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li role='group' id='wp-admin-bar-my-account' class="menupop with-avatar"><a class='ab-item' role="menuitem" aria-expanded="false" href='https://www.gangasagar-tourism.com/wp-admin/profile.php'>Howdy, <span class="display-name">Ganga Sagar TOURISM Team</span><img alt='' src='https://secure.gravatar.com/avatar/3f6b029dc6b520fa72b2c6d8d2282cca?s=26&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/3f6b029dc6b520fa72b2c6d8d2282cca?s=52&#038;d=mm&#038;r=g 2x' class='avatar avatar-26 photo' height='26' width='26' decoding='async'/></a><div class="ab-sub-wrapper"><ul role='menu' aria-label='Howdy, Ganga Sagar TOURISM Team' id='wp-admin-bar-user-actions' class="ab-submenu"><li role='group' id='wp-admin-bar-user-info'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-admin/profile.php'><img alt='' src='https://secure.gravatar.com/avatar/3f6b029dc6b520fa72b2c6d8d2282cca?s=64&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/3f6b029dc6b520fa72b2c6d8d2282cca?s=128&#038;d=mm&#038;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' decoding='async'/><span class='display-name'>Ganga Sagar TOURISM Team</span><span class='username'>Sumannayak</span><span class='display-name edit-profile'>Edit Profile</span></a></li><li role='group' id='wp-admin-bar-logout'><a class='ab-item' role="menuitem" href='https://www.gangasagar-tourism.com/wp-login.php?action=logout&#038;_wpnonce=25b0403435'>Log Out</a></li></ul></div></li><li role='group' id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1" role="menuitem"><form action="https://www.gangasagar-tourism.com/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search" /></form></div></li></ul>			</div>
-		</div>
-
-		
 <div id="inner-body">
 
     <header class="aux-elementor-header" id="site-elementor-header" itemscope="itemscope" itemtype="https://schema.org/WPHeader" data-sticky-height="80"  >
@@ -984,7 +954,7 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
         </div><!-- end of wrapper -->
     </header><!-- end header -->
 
-    <main id="main" class="aux-main aux-territory  aux-single aux-page aux-boxed-container no-sidebar aux-sidebar-style-border aux-user-entry" >
+    <main id="main" class="aux-main aux-territory  aux-single aux-page aux-full-container aux-content-top-margin no-sidebar aux-sidebar-style-border aux-user-entry" >
         <div class="aux-wrapper">
             <div class="aux-container aux-fold">
 
@@ -994,16 +964,16 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
                         
                 
                         
-                        <article id="post-5939" class="post-5939 page type-page status-publish has-post-thumbnail hentry">
+                        <article id="post-1594" class="post-1594 page type-page status-publish has-post-thumbnail hentry">
 
                             <div class="entry-main">
 
                                 <div class="entry-content">
 
-                                    		<div data-elementor-type="wp-page" data-elementor-id="5939" class="elementor elementor-5939">
-				<div class="elementor-element elementor-element-51b9eb84 e-flex e-con-boxed e-con e-parent" data-id="51b9eb84" data-element_type="container">
+                                    		<div data-elementor-type="wp-page" data-elementor-id="1594" class="elementor elementor-1594">
+				<div class="elementor-element elementor-element-369fbd3c e-flex e-con-boxed e-con e-parent" data-id="369fbd3c" data-element_type="container">
 					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-341cb1ab elementor-widget elementor-widget-html" data-id="341cb1ab" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-60b3f206 elementor-widget elementor-widget-html" data-id="60b3f206" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			<div style="display: inline-block; background-color: #232f3e; color: white; padding: 3px 20px; font-family: Arial, sans-serif; font-size:1rem; border-radius: 2px; position: relative;font-weight:600 !important;margin-left:-15px;margin-bottom:-50px;">
   <span style="color: white;">Holidayseva</span> 
@@ -1011,23 +981,19 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 </div>
 		</div>
 				</div>
-				<div class="elementor-element elementor-element-e7b7d84 elementor-widget elementor-widget-html" data-id="e7b7d84" data-element_type="widget" data-widget_type="html.default">
-				<div class="elementor-widget-container">
-			<meta name="keywords" content="Gangasagar Mela 2026, Gangasagar ecotourism, Gangasagar pilgrimage, Gangasagar mela tour package, Sagar Island tourism, Gangasagar festival 2026, Gangasagar travel guide, Gangasagar accommodation, Gangasagar boat services, Gangasagar tourist attractions, Gangasagar eco-friendly travel, Gangasagar Mela dates 2026, Gangasagar festival history, Gangasagar travel tips, Visit Gangasagar Mela, Gangasagar local culture, Gangasagar Mela guide 2026, Eco tourism in Gangasagar, Gangasagar travel packages, Gangasagar pilgrimage tour, Gangasagar beach tourism, Gangasagar Mela information, Gangasagar event calendar, Gangasagar festival guide, Gangasagar tours and travels, Gangasagar cultural sites, Sagar Island ecotourism, Gangasagar ferry services, Gangasagar festival activities, Gangasagar heritage tourism,2026 gangasagar mela, gangasagar gangasagar dham, gangasagar hotel, gangasagar mela, gangasagar mela, kolkata gangasagar mela lighting, gangasagar mela makar sankranti date, gangasagar mela ride riders gangasagar tour gangasagar yatra, How To Reach GangaSagar kolkata to gangasagar, kolkata to gangasagar by cruise ,makar sankranti mela gangasagar, Ganga Sagar tour package, Ganga Sagar Mela tour, Ganga Sagar pilgrimage package, Ganga Sagar tourism, Ganga Sagar Mela travel, Ganga Sagar festival tour, Ganga Sagar yatra package, Ganga Sagar Mela 2026, Ganga Sagar tour operator, Kolkata to Ganga Sagar tour, Ganga Sagar tourist visit, Ganga Sagar Mela guide, Affordable Ganga Sagar tour, Ganga Sagar Mela itinerary, Ganga Sagar holiday package, Ganga Sagar Mela trip, Ganga Sagar temple visit, Ganga Sagar weekend tour, Best Ganga Sagar tour deals, Ganga Sagar travel tips, Ganga Sagar trip planner, Ganga Sagar festival celebration, How to reach Ganga Sagar, Ganga Sagar Mela accommodation, Ganga Sagar Mela pilgrimage tour, Ganga Sagar travel agency, Ganga Sagar festival package, Ganga Sagar boat tour, Ganga Sagar religious tour, Ganga Sagar group travel,Gangasagar Mela tour package, Gangasagar eco tourism, Standard cruise package Gangasagar, Gangasagar Mela 2026, Sagar Island tour, Gangasagar pilgrimage tour, West Bengal eco tourism, Gangasagar cruise package, Kolkata to Gangasagar tour, Gangasagar Mela travel package, Sundarbans tour with Gangasagar, Gangasagar tour itinerary, Gangasagar festival tour, Kolkata to Sagar Island travel, Gangasagar temple tour, Gangasagar Mela travel guide, Gangasagar boat tour, Cruise to Gangasagar, Gangasagar religious tour, Gangasagar sightseeing package, Gangasagar tour booking, Gangasagar tour operator, Gangasagar pilgrimage package, Eco-friendly tour Gangasagar, Gangasagar trip from Kolkata, Gangasagar spiritual journey, Gangasagar travel deals, Gangasagar holiday package, Gangasagar Mela cruise booking, Gangasagar accommodations,Gangasagar Mela tour package, Gangasagar Mela deluxe package, Gangasagar pilgrimage tour, Gangasagar Mela 5 days tour, Gangasagar eco tourism, Gangasagar Mela 2026, Gangasagar tour package, Gangasagar Mela travel guide, Gangasagar Mela itinerary, How to reach Gangasagar Mela, Gangasagar yatra package, Gangasagar boat services, Gangasagar Mela accommodation, Gangasagar Mela festival, Visit Gangasagar Mela, Gangasagar Mela booking, Gangasagar Mela travel tips, Gangasagar religious tour, Gangasagar Mela online booking, Gangasagar Mela travel agency, Gangasagar Mela holiday package, Gangasagar Mela guided tour, Gangasagar sea beach tour, Gangasagar Mela tour guide, Gangasagar island tour, Gangasagar Mela experience, Gangasagar Mela 5-day package, Gangasagar Mela visitor information, Gangasagar cultural festival, Gangasagar tour guide services,Diamond Harbour to Gangasagar cruise schedule, Gangasagar cruise timetable, Gangasagar ferry timings, cruise from Diamond Harbour to Gangasagar, Diamond Harbour ferry schedule, Gangasagar travel itinerary, how to get to Gangasagar from Diamond Harbour, Diamond Harbour boat timings, Gangasagar cruise package, Gangasagar pilgrimage cruise, cruise tickets Diamond Harbour to Gangasagar, Gangasagar tour schedule, ferry schedule Diamond Harbour, Gangasagar sightseeing cruise, Gangasagar waterway travel, Diamond Harbour to Gangasagar ferry service, Gangasagar cruise tours, Diamond Harbour boat services, Gangasagar sailing timetable, Gangasagar religious ferry, Diamond Harbour to Gangasagar route, Gangasagar boat journey, Gangasagar ferry booking,Kolkata to Gangasagar cruise, Gangasagar cruise schedule, Cruise from Kolkata to Gangasagar, Gangasagar cruise timings, Kolkata Gangasagar ferry service, Gangasagar boat timetable, Gangasagar pilgrimage cruise, Kolkata to Gangasagar travel, Gangasagar cruise booking, Gangasagar on Ganges cruise, Kolkata river cruise to Gangasagar, Kolkata to Gangasagar ferry timings, Gangasagar trip by cruise, Gangasagar cruise package, Kolkata to Sagar Island cruise, Gangasagar ferry schedule, Gangasagar journey by river, Gangasagar cruise cost, Gangasagar tour on cruise, Sagar Island cruise from Kolkata, Kolkata to Gangasagar ferry service, Gangasagar cruise itinerary, Gangasagar marine journey, Gangasagar travel by water, Gangasagar cruise availability, Gangasagar cruise details, Kolkata to Sagar Island ferry,Gangasagar tour package, Gangasagar trip from Kolkata, Gangasagar pilgrimage tour, Gangasagar travel package, Gangasagar yatra from Kolkata, Gangasagar Mela tour, Gangasagar excursion from Kolkata, Kolkata to Gangasagar tour, Gangasagar tour operators, Gangasagar pilgrimage packages, Gangasagar tour deals, Kolkata to Gangasagar trip, Gangasagar travel agency, Gangasagar boat ride from Kolkata, Gangasagar yatra package, Affordable Gangasagar package, Gangasagar tour booking, Gangasagar sightseeing tour, Gangasagar package cost, Gangasagar travel guide, Guided Gangasagar tour, Best Gangasagar package, Gangasagar special tour, Gangasagar weekend trip, Gangasagar holiday package, Gangasagar tour itinerary, Cheap Gangasagar tour, Gangasagar day trip, Family tour to Gangasagar, Gangasagar tour reviews,Gangasagar Mela 2026 schedule, Gangasagar Mela 2026 dates, Gangasagar Mela 2026 timing, Gangasagar Mela 2026 plan, Gangasagar Mela 2026 calendar, Gangasagar Mela 2026 event timing, Gangasagar Mela 2026 opening hours, Gangasagar Mela 2026 festival dates, Gangasagar Mela 2026 time table, Gangasagar Mela 2026 duration, Gangasagar Mela 2026 visitor information, Gangasagar Mela 2026 event schedule, Gangasagar Mela 2026 commencement date, Gangasagar Mela 2026 end date, Gangasagar Mela 2026 key dates, Gangasagar Mela 2026 itinerary, Gangasagar Mela 2026 event timings, Gangasagar Mela 2026 attendance times, Gangasagar Mela 2026 main events, Gangasagar Mela 2026 important dates, Gangasagar Mela 2026 highlight events, Gangasagar Mela 2026 travel tips, When is Gangasagar Mela 2026, Gangasagar Mela 2026 celebrations, Gangasagar Mela 2026 locations, Gangasagar Mela 2026 time schedule, Gangasagar Mela 2026 pilgrimage timing, Gangasagar Mela 2026 religious events, Gangasagar Mela 2026 visitor guide, Gangasagar Mela 2026 important events,Gangasagar mela 2026, Gangasagar mela venue, Gangasagar festival location, Gangasagar mela schedule 2026, Gangasagar mela date 2026, Gangasagar pilgrimage 2026, Gangasagar fair 2026, Gangasagar 2026 event details, Gangasagar festival 2026 guide, How to reach Gangasagar mela 2026, Gangasagar mela 2026 events, Gangasagar mela accommodation 2026, Gangasagar mela travel tips 2026, Gangasagar holy dip 2026, Gangasagar 2026 pilgrimage, Sundarban to Gangasagar 2026, Gangasagar mela preparations 2026, Gangasagar mela official website, Gangasagar mela tour packages 2026, Gangasagar 2026 travel guide, Gangasagar fair timing 2026, Kolkata to Gangasagar 2026, Gangasagar event bookings 2026, Gangasagar festival information, Gangasagar mela organizers 2026, Gangasagar mela history, Gangasagar beach festival 2026, Gangasagar 2026 itinerary,Gangasagar mela 2026 accommodation, Gangasagar mela 2026 hotel booking, Gangasagar mela hotel contact, Hotels near Gangasagar mela 2026, Gangasagar mela stay options, Gangasagar pilgrimage hotel contacts, Gangasagar 2026 hotel deals, Accommodation near Gangasagar mela, Gangasagar mela lodging, Where to stay in Gangasagar mela 2026, Gangasagar mela 2026 hotel number, Book hotel for Gangasagar mela 2026, Gangasagar mela room booking, Gangasagar festival 2026 hotels, Hotels around Gangasagar mela, Gangasagar mela hotel reservation, Budget hotels near Gangasagar mela, Luxury hotels in Gangasagar mela, Gangasagar mela accommodation contact, Best hotels for Gangasagar mela 2026, Contact number for hotels in Gangasagar, Hotel guide for Gangasagar mela 2026, Places to stay Gangasagar mela, Gangasagar mela travel accommodation, Gangasagar mela 2026 tourism hotels, Gangasagar mela hotel inquiry, Hotels with view Gangasagar mela, Stay near Gangasagar mela sacred site,Gangasagar Mela 2026 accommodation, Gangasagar Mela 2026 hotel deals, Hotels near Gangasagar Mela 2026, Gangasagar Mela 2026 lodging, Best hotels for Gangasagar Mela 2026, Cheap hotels Gangasagar Mela 2026, Gangasagar pilgrimage 2026 hotels, Gangasagar Mela hotel booking 2026, Affordable stay Gangasagar Mela 2026, Luxury hotels Gangasagar Mela 2026, Budget hotels at Gangasagar Mela 2026, Gangasagar Mela 2026 hotel price, Book accommodation Gangasagar Mela 2026, Gangasagar Mela 2026 hotel packages, Gangasagar Mela stay options, Where to stay during Gangasagar Mela 2026, Gangasagar Mela 2026 hotel reservation, Hotel rates Gangasagar Mela 2026, Accommodation near Gangasagar Mela 2026, Gangasagar Mela 2026 hotel price list, Gangasagar Mela 2026 special hotel rates, Hotel guide for Gangasagar Mela 2026, Hotel discounts Gangasagar Mela 2026, Booking hotels for Gangasagar Mela 2026, Hotel rooms for Gangasagar Mela 2026,Gangasagar Mela 2026 hotel booking, Gangasagar Mela 2026 accommodation, Hotels near Gangasagar Mela 2026, Best hotels for Gangasagar Mela 2026, Book room for Gangasagar Mela 2026, Gangasagar Mela hotel packages 2026, Stay near Gangasagar Mela 2026, Gangasagar pilgrimage hotel booking, Lodging for Gangasagar Mela 2026, Gangasagar Mela travel accommodation, Budget hotels for Gangasagar Mela 2026, Luxury hotels near Gangasagar Mela, Gangasagar Mela 2026 stay options, Ganga Sagar Mela rooms booking, Accommodation near Ganga Sagar Mela, Gangasagar 2026 hotel reservations, Where to stay for Gangasagar Mela 2026, Gangasagar Mela lodging guide, Hotels with shuttle for Gangasagar Mela, Bookings for Gangasagar Mela, Online hotel booking Gangasagar Mela 2026, Gangasagar Mela hotel deals 2026, Travel packages for Gangasagar Mela 2026, Budget accommodation Gangasagar Mela, Premium hotels Gangasagar Mela 2026, Gangasagar Mela early bird hotel booking, Family hotels Gangasagar Mela 2026, Last minute hotels Gangasagar Mela 2026, Best places to stay for Gangasagar Mela,Gangasagar Mela Hotel Booking, Gangasagar Accommodation, Hotels near Gangasagar Mela, Gangasagar Mela 2026 dates, Gangasagar pilgrimage lodging, Budget hotels in Gangasagar, Gangasagar Mela travel guide, Book rooms for Gangasagar Mela, Gangasagar Mela pilgrimage tour, Where to stay in Gangasagar Mela, Gangasagar Mela facilities, Visit Gangasagar Mela, Gangasagar island hotels, Gangasagar tourism, Travel to Gangasagar Mela, Gangasagar Mela rituals, Sagar Island accommodation, Accommodation near Kapil Muni Temple, Best time to visit Gangasagar Mela, Gangasagar Mela transport options, Gangasagar Mela booking online, Kapil Muni Ashram stay, Gangasagar Yatra, Gangasagar Mela tips, Affordable lodging in Gangasagar, Gangasagar Mela experience, Kapil Muni Temple visit, Gangasagar Mela package, Hotels and guest houses in Gangasagar, ,Gangasagar Mela 2026, Gangasagar Mela hotel booking, Gangasagar tour packages 2026, Gangasagar pilgrimage tour, Hotels near Gangasagar Mela, Gangasagar Mela accommodation, Gangasagar island hotels, Book stay for Gangasagar Mela, Gangasagar Mela travel guide, Hindu pilgrimage Gangasagar, Gangasagar Mela dates 2026, Visit Gangasagar Mela 2026, Gangasagar tourism packages, Where to stay in Gangasagar Mela, Gangasagar temple tour, Sagar Island travel packages, Religious tour packages India, Kapil Muni temple Gangasagar, Gangasagar Mela festival tour, Gangasagar Mela rituals, Gangasagar Mela travel tips, Ganga Sagar budget hotels, Luxury accommodation in Gangasagar, How to reach Gangasagar Mela, Best time to visit Gangasagar, Gangasagar Mela special tours, Spiritual journey to Gangasagar, Gangasagar Mela booking online, Gangasagar event 2026, Gangasagar Mela activities,private budget camp, budget camp tent, ecotourism camping, Ganga Sagar camp tents, affordable eco-friendly camping, budget-friendly camping experience, private camping sites, eco-friendly tents for camping, camping near Ganga Sagar, Ganga Sagar eco tourism, budget camping accommodations, private tent rentals, outdoor camping experiences, nature-friendly camping, sustainable camping sites, ecological camp stays, green camping solutions, environmental camping experiences, budget tented camps, camping holiday packages, budget camping for families, private camping holiday, eco camping adventures, tent camping reservations, budget wilderness camps, eco-conscious camping sites, low-cost camping tents, private camping experiences,Gangasagar Mela 2026, Gangasagar Pilgrimage 2026, Hindu Religious Festivals 2026, Ganges River Fair, West Bengal Religious Tourism, Kapil Muni Temple, Sagar Island Pilgrimage, Indian Spiritual Tours 2026, Kumbh Mela of Bengal, Gangasagar Bathing Festival, Sagar Island Tourism, Holy Dip in Ganges 2026, Gangasagar Mela Dates 2026, Spiritual Journey to Gangasagar, Hindu Pilgrimage Sites in India, Sagar Mela 2026, Kapil Muni Fair 2026, Gangasagar Yatra 2026, Ganga Sagar Snan 2026, Hindu Festivals in January, Gangasagar Tour Packages 2026, Sagar Mela Camping, Religious Tourism in India 2026, Where is Gangasagar Mela, How to reach Gangasagar, Gangasagar Mela History, Gangasagar Mela significance, Ganga Sagar Mela rituals, West Bengal Tourism, Sagar Island Ferry Service,Gangasagar Mela, Gangasagar pilgrimage, Gangasagar fair 2026, Gangasagar Mela dates, Hindu religious fairs India, Kapil Muni Temple, Ganga Sagar Island festival, Indian cultural festivals, Bathing in Ganges festival, Large religious gathering India, Gangasagar tour packages, Sagar Island tourism, Gangasagar Mela rituals, Holy dips in India, Kumbh Mela of Bengal, Spiritual festivals India, West Bengal religious events, Gangasagar Mela accommodation, How to reach Gangasagar, Gangasagar Mela history, Religious tourism in India, Major Hindu festivals, Rituals of Gangasagar Mela, Pilgrimage sites in India, Sagar Mela safety tips, Travel guide to Gangasagar, Best time to visit Gangasagar, Gangasagar Mela photography, Ganga river festivals, Indian festivals and fairs,Gangasagar Mela Deluxe Package, Gangasagar Mela 2026, Gangasagar Eco Tourism, Sagar Island Tour Package, Makar Sankranti Festival Tour, Hindu Pilgrimage Tour India, 5 Days Gangasagar Tour, Deluxe Tour Packages Gangasagar, Ganga Sagar Mela Accommodation, Eco-friendly Tour Packages India, Spiritual Tours in India, West Bengal Religious Tourism, Holy River Ganges Tour, Kapil Muni Temple Tour, Gangasagar Budget Tour Packages, Gangasagar Pilgrimage Tour, Indian Cultural Festivals Tour, Religious Tourism in Ganga Sagar, Eco Tourism in West Bengal, Sagar Island Pilgrimage, Makar Sankranti in Gangasagar, Gangasagar Mela Pilgrim Package, Best Time to Visit Gangasagar, Hindu Religious Tour Packages, Sagar Mela 2026 Dates, Gangasagar Yatra Package, Customized Tour Package Gangasagar, Gangasagar Group Tour Package, Travel to Gangasagar, Gangasagar Hotel Booking,Gangasagar Mela 2026 also known as Ganga Sagar Yatra or Ganga Snan, is the annual gathering of Hindu pilgrims to take holy dip in River Ganga before She merges in the Bay of Bengal Sea during Makar Sankranti at Sagar Island or Sagardwip in West Bengal, India, Ganga Sagar Mela 2026 date is January 14,गंगा सागर मेला (2026), जिसे गंगा सागर यात्रा या गंगा स्नान के रूप में भी जाना जाता है, सागर द्वीप या सागरदीप में मकर संक्रांति के दौरान बंगाल की खाड़ी में विलीन होने से पहले गंगा नदी में पवित्र डुबकी लगाने के लिए हिंदू तीर्थयात्रियों की वार्षिक सभा है। बंगाल, भारत। गंगा सागर मेला 2026 की तारीख 14 जनवरी है।, Sunrise Ritual: Begin the day with a visit to the Gangasagar beach to witness the mesmerizing sunrise., Gangasagar Mela 2026 Tour Package from Kolkata: One Night, Two Days, Kolkata To GangaSagar Tour Package, GangaSagar Tourism, GangaSagar Mela Package, Gangasagar Mela 2026 Tour Package from Kolkata: One Night, Two Days** Embark on a spiritual journey to Gangasagar Mela, one of the largest religious gatherings in India. This exclusive two-day tour package from Kolkata ensures a seamless and enriching experience as you witness the confluence of spirituality and culture at the sacred Gangasagar Island, Kolkata to Gangasagar cruise, Gangasagar cruise fare, Kolkata Gangasagar boat service, Gangasagar pilgrimage cruise, Cruise to Gangasagar from Kolkata, Kolkata to Gangasagar cruise booking, Kolkata to Gangasagar cruise price, Kolkata to Gangasagar cruise cost, Gangasagar cruise package, Kolkata to Gangasagar cruise schedule, Gangasagar cruise ticket, Cruise services to Gangasagar, Kolkata to Gangasagar ferry service, Gangasagar cruise trip, Kolkata to Gangasagar cruise route, Gangasagar mela cruise package, Kolkata to Gangasagar luxury cruise, Kolkata to Gangasagar cruise timing, Kolkata to Gangasagar cruise travel, Kolkata to Gangasagar water travel, Kolkata river cruise to Gangasagar, Gangasagar cruise deals, Kolkata to Gangasagar cruise tour, Kolkata to Gangasagar spiritual cruise tour, Kolkata to Gangasagar cruise online booking, How to book Kolkata to Gangasagar cruise, Kolkata to Gangasagar cruise trip cost, Gangasagar cruise from Kolkata price, Best cruise for Gangasagar from Kolkata, Gangasagar cruise advice,Diamond Harbour to Gangasagar Cruise, Gangasagar Cruise price, Diamond Harbour Cruise booking, Gangasagar trip from Diamond Harbour, Cruise service Diamond Harbour to Gangasagar, Book Gangasagar Cruise, Cruise cost Diamond Harbour to Gangasagar, Best cruise to Gangasagar, Gangasagar pilgrimage cruise, Diamond Harbour to Gangasagar cruise deals, Gangasagar cruise packages, Luxury cruise to Gangasagoar from Diamond Harbour, Day cruise Diamond Harbour to Gangasagar, How to reach Gangasagar from Diamond Harbour, Diamond Harbour to Gangasagar ferry service, Affordable Gangasagar cruise, Gangasagar cruise schedule, Family cruise to Gangasagar, Group cruise deals to Gangasagar, Cruising guide Diamond Harbour to Gangasagar, Experience Gangasagar by cruise, Sunset cruise Gangasagar, Customized Gangasagar cruise trip, Eco-friendly cruise to Gangasagar, Gangasagar spiritual cruise journey, Adventure cruise to Gangasagar, Seasonal cruise offers Gangasagar, Gangasagar cruise tour operators,Gangasagar Mela Tour Package, Gangasagar pilgrimage tour, Gangasagar Mela 2026 dates, Best tours for Gangasagar Mela, Gangasagar Mela travel guide, How to reach Gangasagar Mela, Gangasagar Mela accommodations, Gangasagar Yatra package, Gangasagar tour operators, Hindu pilgrimage tours India, Spiritual journey Gangasagar, Gangasagar Mela bathing dates, Cost of Gangasagar Mela tour, Kapil Muni temple tour, Gangasagar Mela rituals guide, Safe travels to Gangasagar Mela, Gangasagar Mela photography tour, Gangasagar Mela group tours, Gangasagar Mela solo travel guide, Tips for visiting Gangasagar Mela, Customized Gangasagar Mela trip, Family package for Gangasagar Mela, Gangasagar Mela cultural experiences, Festival tour packages in India, Gangasagar Mela sightseeing tours, Places to visit near Gangasagar Mela, Gangasagar Mela budget trips, Gangasagar eco-friendly tours, Gangasagar Mela exclusive deals,Kolkata Gangasagar Mela, Gangasagar Pilgrimage Tour, Gangasagar Fair, Hindu Pilgrimage Sites in India, Ganga Sagar Kapil Muni Temple, Gangasagar Bathing Festival, Sagar Island Tour, West Bengal Religious Tourism, Kapil Muni Ashram Gangasagar, Gangasagar Mela Accommodation, Gangasagar Yatra, Kolkata to Gangasagar Tour Packages, Gangasagar Mela Dates, Holy Dip in Ganges Festival, Kolkata Religious Attractions, Gangasagar Snan, Gangasagar Mela Photography, Kolkata to Gangasagar Travel Guide, Ganga Sagar Mela History, Places to Visit in Gangasagar, Gangasagar Pilgrims Guide, Spiritual Festivals in India, Gangasagar Mela Booking, Kolkata Heritage Tour, Gangasagar Mela Videos, Gangasagar Mela Rituals, Travel to Gangasagar from Kolkata, Gangasagar Mela Highlights, Gangasagar Island Tourism,Gangasagar Mela 2026 booking online, Gangasagar Mela 2026 online registration, Gangasagar pilgrimage booking 2026, Book Gangasagar Mela trip 2026, Gangasagar 2026 accommodation booking, How to visit Gangasagar Mela 2026, Gangasagar Mela 2026 packages, Gangasagar Mela dates 2026, Gangasagar Mela tickets 2026, Gangasagar Mela tour packages 2026, Online registration for Gangasagar Mela 2026, Gangasagar Mela 2026 schedule, Best way to book Gangasagar Mela 2026, Gangasagar Mela 2026 booking portal, Gangasagar Mela pilgrimage services 2026, Visit Gangasagar Mela 2026, Gangasagar Mela 2026 travel guide, Gangasagar Mela 2026 hotel booking, Gangasagar festival 2026 online booking, Book Gangasagar Mela packages online 2026, Gangasagar Mela 2026 special offers, Gangasagar Mela 2026 early bird registrations, Bookings open for Gangasagar Mela 2026, Gangasagar Fair 2026 online booking, Gangasagar Mela 2026 VIP passes, Gangasagar Mela 2026026 accommodation packages, Gangasagar Mela 2026 pilgrimage offers,Gangasagar Mela 2026, Gangasagar Mela dates 2026, Gangasagar Pilgrimage 2026, Gangasagar Fair West Bengal, Gangasagar Mela accommodations, How to reach Gangasagar Mela, Gangasagar Mela rituals, Gangasagar Mela tour packages, Gangasagar bathing dates 2026, Gangasagar Mela travel guide, Sagar Island festival 2026, Gangasagar Mela COVID-19 guidelines, Gangasagar Mela booking, Gangasagar Mela history, Gangasagar tourism, Kapil Muni Temple Gangasagar, Places to visit in Gangasagar, Gangasagar Mela drone show, Gangasagar Mela photography, Gangasagar Mela security, Gangasagar Mela pilgrimage benefits, Gangasagar Mela ferry service, Gangasagar Mela cultural programs, Gangasagar Mela food stalls, Gangasagar Mela volunteer, Gangasagar Mela charity work, Gangasagar Mela ngo participation, Things to do at Gangasagar Mela, Gangasagar Mela local transport, Gangasagar Mela live,Gangasagar Mela, Gangasagar Pilgrimage, Hindu Festivals, Kapil Muni Temple, Sagar Island Festival, Indian Religious Fairs, Gangasagar Yatra 2026, Spiritual Journey in India, Holy Dip in Ganges, Makar Sankranti Festival, Religious Tourism in India, West Bengal Festivals, Ganga Sagar Mela Dates, Pilgrimage Sites in India, Kumbh Mela of Bengal, Hindu Pilgrimage Bath, Ganges Worship, Indian Cultural Festivals, Sagar Island Pilgrimage, Gangasagar Tour Packages, Religious Ceremonies in India, Spiritual Festivals of India, Hindu Holy Places, Ganga Sagar Snan, Gangasagar Mela History, Sacred Rivers of India, Pilgrimage Tourism in India, Gangasagar Mela Accommodation, Indian Festivals Calendar, Hindu Mythology,Gangasagar Mela 2026, Gangasagar pilgrimage 2026, Gangasagar tourism, Hindu festivals in India, Kapil Muni Temple, River Ganges pilgrimage, Sagar Island tourism, Religious fairs in India, Gangasagar Mela dates, Spiritual journeys India, Bathing in the Ganges, Holy dips in India, Gangasagar accommodation, Travel to Gangasagar, Gangasagar Mela guide, How to reach Gangasagar, Gangasagar Mela rituals, Gangasagar Mela history, Places to visit in Gangasagar, Gangasagar travel packages, Kapil Muni fair, Ganga Sagar Snan, Pilgrimage sites in West Bengal, Indian cultural festivals, Gangasagar Mela photos, Best time to visit Gangasagar, Gangasagar pilgrimage route, Gangasagar Mela stories, Gangasagar Mela significance, Gangasagar tourists guide,Gangasagar Mela package, Gangasagar Eco Tourism, Pilgrimage Tour to Gangasagar, Sagar Island Tourism, Hindu Pilgrimage Tour India, Gangasagar Tour Package, Gangasagar Bathing Festival, Capricorn Festival India, Makar Sankranti Festival Tour, Religious Tourism in India, Gangasagar Mela 2026, Kapil Muni Temple Tour, Gangasagar Budget Tour, Gangasagar Yatra Package, Holy Dip in Ganga, Gangasagar Pilgrimage Tour Package, Spiritual Journey to Gangasagar, West Bengal Religious Tour, Indian Cultural Festival Tour, Visit Gangasagar Island, Eco-Friendly Tour Gangasagar, Faith Tourism India, Gangasagar Mela Travel Guide, Gangasagar Accommodation, Transport to Gangasagar Mela, Heritage Tour Gangasagar, Sagar Island Ferry Service, Gangasagar Pilgrim Bath, Gangasagar Hindu Festival, Snana Yatra Gangasagar,Gangasagar Mela tour package, Gangasagar Eco Tourism, Kolkata to Gangasagar tour, Hindu pilgrimage tour India, Gangasagar Mela 2026 dates, 4 days Gangasagar tour, Gangasagar bathing festival, Gangasagar pilgrimage tour package, Eco-friendly tours in India, Religious tourism in West Bengal, Spiritual trip to Gangasagar, Gangasagar tour cost, Gangasagar Mela travel guide, Where to stay in Gangasagar Mela, Best time to visit Gangasagar, Gangasagar tour itinerary, Custom Gangasagar travel package, Kapil Muni Temple Gangasagar, Boat ride to Gangasagar island, Sagar Island tourism, Holy dip in Ganges tour, Gangasagar Yatra package, Eco-tourism packages India, West Bengal cultural tours, Family package Gangasagar Mela, Gangasagar Mela VIP darshan, Traditional festivals of West Bengal, Religious events in India 2026, Gangasagar eco-friendly stay, Gangasagar Mela special package,Gangasagar Mela, Gangasagar pilgrimage, Sagar Island festival, Hindu festivals in India, Religious tourism in India, Ganga Sagar Mela dates, Kumbh Mela of Bengal, Gangasagar bathing festival, Gangasagar Mela accommodation, West Bengal religious events, Sagar Island tourism, Gangasaga mela how to reach, Gangasagar Mela rituals, Capricorn festival India, Makar Sankranti festival, Religious fairs in India, Spiritual journey to Gangasagar, Gangasagar Mela history, Holy dip in Ganges festival, Gangasagar Mela travel guide, Places to visit in Gangasagar, Gangasagar Mela photography, Indian cultural festivals, Annual religious gatherings India, Gangasagar Mela tips, Gangasagar Mela stories, Sagar Island holy dip, Gangasagar Mela charity, Pilgrimage sites in India, Gangasagar Mela significance,Gangasagar Mela 2026, गंगा सागर मेला 2026, Gangasagar pilgrimage 2026, Gangasagar fair 2026, Gangasagar Mela dates 2026, Gangasagar Mela tour packages, Gangasagar Mela how to reach, Hotels near Gangasagar Mela, Gangasagar Mela rituals, Gangasagar Mela history, Sagar Island festival 2026, Kapil Muni Temple Gangasagar, Gangasagar bathing 2026, Gangasagar Mela accommodation, Gangasagar Mela COVID guidelines, West Bengal religious festivals, Sagar Mela 2026 dates, Gangasagar pilgrimage safety tips, Gangasagar Mela travel guide, Gangasagar Mela photography, Holy dip in Ganges 2026, Sagar Snan 2026, Gangasagar Mela drone view, Virtual tour of Gangasagar Mela, Gangasagar Mela live streaming, Gangasagar Mela stories, Gangasagar Mela charity work, Gangasagar eco-tourism,Kolkata to Gangasagar one day trip, Gangasagar trip by cab from Kolkata, Kolkata to Gangasagar cab service, One day Gangasagar tour package, Gangasagar pilgrimage tour from Kolkata, Kolkata to Gangasagar taxi fare, Best cab service for Gangasagar, Gangasagar day trip, Kolkata to Gangasagar car rental, Visit Gangasagar from Kolkata, Gangasagar tour by car, How to reach Gangasagar from Kolkata, Kolkata to Gangasagar tour cost, One day trip to Gangasagar, Gangasagar trip package, Kolkata Gangasagar road trip, Gangasagar one day tour, Kolkata to Gangasagar travel guide, Kolkata to Gangasagar distance by car, Book cab for Gangasagar from Kolkata, Gangasagar one day itinerary, Kolkata to Gangasagar day tour packages, Private cab to Gangasagar, Kolkata to Gangasagar pilgrimage trip, Day trip to Gangasagar from Kolkata, Gangasagar cab booking, Gangasagar tourism from Kolkata, Visit Gangasagar by car, Gangasagar express cab service, Kolkata to Gangasagar trip planner,Gangasagar one day tour, Gangasagar pilgrimage, One day trip to Gangasagar, Gangasagar tour packages, Gangasagar island tours, Sagar Island day tour, Gangasagar Mela visit, Visit Gangasagar from Kolkata, Day trip to Sagar Island, Gangasagar travel guide, Kapil Muni Temple tour, Gangasagar Yatra, Gangasagar pilgrimage tour packages, Best time to visit Gangasagar, How to reach Gangasagar, Gangasagar ferry services, Gangasagar bathing ghats, Holy dip in Gangasagar, Ganga Sagar Snan Yatra, Sagar Island pilgrimage, Gangasagar budget tours, Gangasagar temple visits, Explore Gangasagar, Gangasagar religious tour, Gangasagar Hindu pilgrimage, Sagar Mela tour, Cultural tours Gangasagar, Gangasagar travel plan, Solo trip to Gangasagar, Family trip to Gangasagar,Gangasagar mela 2026, Best time to visit Gangasagar Mela 2026, Gangasagar Mela 2026 dates, Gangasagar Mela 2026 registration, Gangasagar Mela 2026 accommodation, Gangasagar Mela 2026 history, Gangasagar Mela 2026 rituals, Gangasagar Mela 2026 significance, Gangasagar Mela 2026 highlights, Gangasagar Mela 2026 travel tips, Gangasagar Mela 2026 transportation, Gangasagar Mela 2026 safety measures, Gangasagar Mela 2026 photography, Gangasagar Mela 2026 volunteer opportunities, Gangasagar Mela 2026 cultural experience, Gangasagar Mela 2026 pilgrimage, Gangasagar Mela 2026 crowd management, Gangasagar Mela 2026 boat ride, Gangasagar Mela 2026 nearby attractions, Gangasagar Mela 2026 spiritual retreat, Gangasagar Mela 2026 sustainable practices, Gangasagar Mela 2026 local cuisine, Gangasagar Mela 2026 traditional attire, Gangasagar Mela 2026 religious customs, Gangasagar Mela 2026 group travel packages, Gangasagar Mela 2026 cultural exchange, Gangasagar Mela 2026 spiritual healing, Gangasagar Mela 2026 pilgrimage stories, Gangasagar Mela 2026 first-timer guide, Gangasagar Mela 2026 event schedule, Kolkata To Gangasagar Tour Package 2 Days, Gangasagar Mela 2026 Hotel Booking, Puri Jagannath Dham with Gangasagar Tour Package, गंगासागर मेला 2026 आवास बुकिंग, Gangasagar Mela 2026 Hotel Booking, Gangasagar Mela 2026 Accommodation Near Kapilmuni Ashram, Gangasagar Mela 2026 Date Archives, Gangasagar mela 2026 venue, Gangasagar mela 2026 start date, Gangasagar mela 2026, date and time gangasagar mela 2026, गंगासागर मेला, गंगासागर मेला | गंगासागर मेला 2026 तिथि | मंगलवार, 14 जनवरी, गंगा सागर स्नान 2026">		</div>
-				</div>
 					</div>
 				</div>
-		<div class="elementor-element elementor-element-487c194e e-con-full e-flex e-con e-parent" data-id="487c194e" data-element_type="container">
-		<div class="elementor-element elementor-element-6189dccc e-con-full e-flex e-con e-child" data-id="6189dccc" data-element_type="container">
-				<div class="elementor-element elementor-element-29e468e0 elementor-widget__width-inherit elementor-widget elementor-widget-html" data-id="29e468e0" data-element_type="widget" data-widget_type="html.default">
+		<div class="elementor-element elementor-element-66b5917c e-con-full e-flex e-con e-parent" data-id="66b5917c" data-element_type="container">
+		<div class="elementor-element elementor-element-4f9c1e4c e-con-full e-flex e-con e-child" data-id="4f9c1e4c" data-element_type="container">
+				<div class="elementor-element elementor-element-46aac090 elementor-widget__width-inherit elementor-widget elementor-widget-html" data-id="46aac090" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
 <div class="tour-package-container">
-    <h1 class="tour-title">Unforgettable Ganga Sagar Mela Tour Package From Kolkata</h1>
+    <h1 class="tour-title">Exclusive 1 Day GangaSagar Tour Package From Kolkata</h1>
     <div style="display: flex; align-items: center;">
     <span style="font-size: 1rem; color: black; font-family: Poppins;
-    padding-left:7px;">by </span>
+    padding-left:7px;">by</span>
     <h2 class="tour-author" style="margin: 0;">GangaSagar TOURISM</h2>
 </div>
 
@@ -1042,12 +1008,9 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
     
 </div>
 <style>
-.aux-container aux-fold{
-    padding: 0!important; 
-}
     /* Default styles */
 .tour-package-container {
-    line-height: 1rem !important;
+    line-height: 1rem;
 }
 
 .tour-title {
@@ -1058,7 +1021,7 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 }
 
 .tour-author {
-    font-size: 1rem !important;
+    font-size: 1rem;
     color: black;
     font-weight: 500;
 }
@@ -1071,7 +1034,7 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 /* Media Query for screens smaller than 768px */
 @media (max-width: 768px) {
     .tour-title {
-        font-size: 1.5rem !important;
+        font-size: 0.8rem;
         line-height: 2rem;
     }
     .tour-author {
@@ -1085,7 +1048,7 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 /* Media Query for screens smaller than 480px */
 @media (max-width: 480px) {
     .tour-title {
-        font-size: 1.6rem;
+        font-size: 1rem !important;
         line-height: 1.85rem;
         padding-left: 5px;
         padding-right:7px;
@@ -1103,10 +1066,10 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 </style>		</div>
 				</div>
 				</div>
-		<div class="elementor-element elementor-element-2ae7a3bf e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child" data-id="2ae7a3bf" data-element_type="container">
+		<div class="elementor-element elementor-element-75f60e21 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child" data-id="75f60e21" data-element_type="container">
 				</div>
-		<div class="elementor-element elementor-element-2d7421a9 e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child" data-id="2d7421a9" data-element_type="container">
-				<div class="elementor-element elementor-element-28f33ca0 elementor-widget elementor-widget-aux_modern_button" data-id="28f33ca0" data-element_type="widget" data-widget_type="aux_modern_button.default">
+		<div class="elementor-element elementor-element-3c30d73e e-con-full elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child" data-id="3c30d73e" data-element_type="container">
+				<div class="elementor-element elementor-element-7568effd elementor-widget elementor-widget-aux_modern_button" data-id="7568effd" data-element_type="widget" data-widget_type="aux_modern_button.default">
 				<div class="elementor-widget-container">
 			    <div class="aux-modern-button-wrapper aux-modern-button-align-center" >
                     <a class="aux-modern-button aux-black aux-modern-button-md aux-modern-button-normal aux-modern-button-outline aux-icon-" href="https://www.gangasagar-tourism.com/tours/">
@@ -1123,8 +1086,8 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 				</div>
 				</div>
 				</div>
-		<div class="elementor-element elementor-element-528681de e-con-full e-flex e-con e-parent" data-id="528681de" data-element_type="container">
-				<div class="elementor-element elementor-element-60ec8d65 elementor-widget elementor-widget-html" data-id="60ec8d65" data-element_type="widget" data-widget_type="html.default">
+		<div class="elementor-element elementor-element-6fe3d4e e-con-full e-flex e-con e-parent" data-id="6fe3d4e" data-element_type="container">
+				<div class="elementor-element elementor-element-210be62b elementor-widget elementor-widget-html" data-id="210be62b" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			<style>
     .hero_section_image-scroll-container-wrapper {
@@ -1271,9 +1234,9 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 		</div>
 				</div>
 				</div>
-		<div class="elementor-element elementor-element-21b94adc e-con-full e-flex e-con e-parent" data-id="21b94adc" data-element_type="container">
-		<div class="elementor-element elementor-element-76286665 e-con-full e-flex e-con e-child" data-id="76286665" data-element_type="container">
-				<div class="elementor-element elementor-element-3e8fafd1 elementor-widget elementor-widget-html" data-id="3e8fafd1" data-element_type="widget" data-widget_type="html.default">
+		<div class="elementor-element elementor-element-25bc3991 e-con-full e-flex e-con e-parent" data-id="25bc3991" data-element_type="container">
+		<div class="elementor-element elementor-element-3eab1c35 e-con-full e-flex e-con e-child" data-id="3eab1c35" data-element_type="container">
+				<div class="elementor-element elementor-element-7c4e2c5c elementor-widget elementor-widget-html" data-id="7c4e2c5c" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			<div class="gangasagar-read_more_content" style="font-family: poppins; color: black;">
     <strong style="font-size:1.7rem; color:black; border-left: 5px solid red; border-radius: 5px; padding-left: 5px;">
@@ -1281,7 +1244,11 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
     </strong>
     <br>
     <p id="read_more_content" style="display: inline;line-height:6px !important; font-size:1.1rem;padding-left:10px;">
-        Embark on a spiritual journey to one of India’s most sacred events—the Ganga Sagar Mela! This carefully curated tour package ensures a seamless and memorable pilgrimage, allowing you to witness the divine confluence of the Ganges River and the Bay of Bengal.</p>
+        Embark on a sacred journey to Gangasagar, one of India’s most revered pilgrimage sites.Our Gangasagar Tour Package from Kolkata ensures a smooth and spiritual experience as you explore the tranquil meeting point of the holy Ganges and the Bay of Bengal.Spiritual Experience: Take a holy dip at the sacred confluence and seek blessings at the
+        historic Kapil Muni Ashram.Scenic Beauty: Admire serene beaches, peaceful waters, and picturesque landscapes perfect for relaxation and meditation.Cultural Insight: Witness
+        local traditions, vibrant festivities, and the simplicity of life at Gangasagar.Hassle-Free Travel: Enjoy a well-organized itinerary with comfortable transport, ferry
+        transfers, and expert guidance to key locations.Whether visiting during the spiritual fervor of Makar Sankranti or at any time of the year, Gangasagar promises an unforgettable experience.Book now to begin a journey blending spirituality, culture, and nature, all wrapped into one exceptional tour.
+    </p>
     <br>
     <center>
         <button id="read-more-btn" style="background-color: rgb(245, 245, 245); color: rgb(0, 0, 0); font-weight: 300; padding: 8px 15px; border-radius: 50px; border: none;">
@@ -1311,7 +1278,7 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 </script>
 		</div>
 				</div>
-				<div class="elementor-element elementor-element-1db03660 elementor-widget elementor-widget-html" data-id="1db03660" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-26cc7244 elementor-widget elementor-widget-html" data-id="26cc7244" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
 <style>
@@ -1388,38 +1355,37 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
     <div>
        <div style="display:flex;">
            <span class="material-symbols-outlined feature-icon meal-icon" style="padding: 0px;">check_circle</span>
-           <p style="justify-content: left;">Take a sacred dip where the Ganges meets the sea.</p>
+           <p style="justify-content: left;">Enjoy a smooth and comfortable ride from Kolkata to Ganga Sagar and back.</p>
        </div>
        <div style="display: flex;" style="padding-top: -2px;">
-        <span class="material-symbols-outlined feature-icon meal-icon" style="padding: 0px;">check_circle</span>
-        <p>Pray at Kapil Muni Ashram.</p>
-    </div>
-    <div style="display: flex;" style="padding-top: -2px;">
-        <span class="material-symbols-outlined feature-icon meal-icon" style="padding: 0px;">check_circle</span>
-        <p>Enjoy the colorful fair and spiritual vibes.</p>
-    </div>
-       <div style="display: flex;" style="padding-top: -2px;">
            <span class="material-symbols-outlined feature-icon meal-icon" style="padding: 0px;">check_circle</span>
-           <p>Smooth road and ferry transfers.</p>
+           <p>Experience a peaceful boat ride across the Ganges.</p>
        </div>
        <div style="display: flex;">
            <span class="material-symbols-outlined feature-icon meal-icon" style="padding: 0px;">check_circle</span>
-           <p>Relax in nearby guest houses.</p>
+           <p>Visit the holy ashram and learn about its spiritual importance.</p>
        </div>
        <div style="display: flex;">
-        <span class="material-symbols-outlined feature-icon meal-icon" style="padding: 0px;">check_circle</span>
-        <p>Try simple and delicious Bengali meals.</p>
-    </div>
-       <div style="display: flex;">
            <span class="material-symbols-outlined feature-icon meal-icon" style="padding: 0px;">check_circle</span>
-           <p>Learn about the mela’s importance.
+           <p>Take a dip at the meeting point of the Ganges and the Bay of Bengal for blessings.
         </p>
        </div>
+       <div style="display: flex;">
+        <span class="material-symbols-outlined feature-icon meal-icon" style="padding: 0px;">check_circle</span>
+        <p>Everything is taken care of, from transport to ferry rides and guidance.
+     </p>
+    </div>
+    <div style="display: flex;">
+        <span class="material-symbols-outlined feature-icon meal-icon" style="padding: 0px;">check_circle</span>
+        <p>Complete your trip in just one day, ideal for a short getaway.
+     </p>
+    </div>
+    
     </div>
 </div>
 		</div>
 				</div>
-				<div class="elementor-element elementor-element-6ea1d6aa elementor-widget elementor-widget-html" data-id="6ea1d6aa" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-33ac18fa elementor-widget elementor-widget-html" data-id="33ac18fa" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
 <style>
@@ -1442,7 +1408,7 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding: 15px;
+    padding: 15px 15px 15px 2px;
     /* background-color: rgb(245, 245, 245); */
 }
 
@@ -1509,36 +1475,36 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
         <div class="card-icon-wrapper">
             <span class="material-symbols-outlined card-icon">hotel</span>
         </div>
-        <div class="card-description">Accommodation at Pakhi Guest House (1 night).</div>
+        <div class="card-description">We can book your Kolkata accommodation as part of the tour package.</div>
     </div>
     <div class="card-item">
         <div class="card-icon-wrapper">
             <span class="material-symbols-outlined card-icon">restaurant</span>
         </div>
-        <div class="card-description">Meals: Dinner (Day 1), Breakfast (Day 2).</div>
+        <div class="card-description">Light veg Bengali meals (optional, add-on).</div>
     </div>
     <div class="card-item">
         <div class="card-icon-wrapper">
             <span class="material-symbols-outlined card-icon">photo_camera</span>
         </div>
-        <div class="card-description">Assistance for ferry transfers and local sightseeing.</div>
+        <div class="card-description">Enjoy the calm beauty of Ganga Sagar's beach and peaceful surroundings.</div>
     </div>
     <div class="card-item">
         <div class="card-icon-wrapper">
             <span class="material-symbols-outlined card-icon">directions_car</span>
         </div>
-        <div class="card-description">AC transportation (Kolkata to GangaSagar and back).</div>
+        <div class="card-description">Comfortable round-trip transport from Kolkata to Ganga Sagar.</div>
     </div>
     <div class="card-item">
         <div class="card-icon-wrapper">
             <span class="material-symbols-outlined card-icon">flight</span>
         </div>
-        <div class="card-description">Flight Tickets (on request)</div>
+        <div class="card-description">For those traveling by air, you can take a flight to (CCU)</div>
     </div>
 </div>
 		</div>
 				</div>
-				<div class="elementor-element elementor-element-164a1fdd elementor-widget elementor-widget-html" data-id="164a1fdd" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-7266ce14 elementor-widget elementor-widget-html" data-id="7266ce14" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			<div class="gangasagar-tour-content">
     <strong class="itinerary-title">What's Excluded ?</strong>
@@ -1566,7 +1532,7 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
     </div>
 </div>		</div>
 				</div>
-				<div class="elementor-element elementor-element-521a30bc elementor-widget elementor-widget-html" data-id="521a30bc" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-43dfb2df elementor-widget elementor-widget-html" data-id="43dfb2df" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
 <style>
@@ -1659,10 +1625,9 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 </div>
 		</div>
 				</div>
-				<div class="elementor-element elementor-element-5335e679 elementor-widget elementor-widget-html" data-id="5335e679" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-6bf493ba elementor-widget elementor-widget-html" data-id="6bf493ba" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
-			
-<!-- Include Google Material Icons -->
+			<!-- Include Google Material Icons -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1675,38 +1640,20 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
     <div class="my_tour_info_accordion-item active">
         <div class="my_tour_info_accordion_title">
             <div style="display: flex;">
-                <button style="background-color: red;border: none;color:white;border-radius: 50px;padding: 2px 7px;margin-right: 10px;font-weight: 800;margin-bottom: 3px;">Day<br>1</button><span style="margin-top:10px;">Arrival in Kolkata & Transfer to Ganga Sagar</span>
+                <button style="background-color: red;border: none;color:white;border-radius: 50px;padding: 5px 7px;margin-right: 10px;font-weight: 800;margin-bottom: 3px;">Day<br>1</button><span style="margin-top:10px;">Kolkata to gangaSagar Yatra</span>
             </div>
             <span class="material-icons arrow-icon" style="color:black;background-color: rgb(245, 245, 245);border-radius: 50px ;font-weight: 200;padding: 7px;">keyboard_arrow_down</span>
         </div>
         <div class="my_tour_info_accordion-content">
-            <ul style="font-weight: 0.7rem !important; line-height: 0.8rem; margin-top: 1.03rem;">
-                <li style="font-weight: 0.7rem !important; line-height: 0.8rem;"> <strong style="font-weight: 1rem;">Morning :</strong> Pick up from Kolkata (Airport/Hotel/Station).</li>
-                <li style="font-weight: 0.7rem !important; line-height: 0.8rem;"> <strong style="font-weight: 1rem;">Journey : </strong> Scenic drive to Kakdwip, followed by a ferry ride to Ganga Sagar Island.</li>
-                <li style="font-weight: 0.7rem !important; line-height: 0.8rem;"> <strong style="font-weight: 1rem;">Evening :</strong> Visit <strong>Kapil Muni Ashram,</strong>  the heart of Ganga Sagar.
-                </li>
-                <li style="font-weight: 0.7rem !important; line-height: 0.8rem;"> <strong style="font-weight: 1rem;">Overnight Stay :</strong>  At a comfortable accommodation near Ganga Sagar.
-                </li>
-            </ul>
+            <p><strong>05:30 AM</strong>: Pickup from Kolkata and transfer to Harwood Point.</p>
+            <p><strong>08:30 AM</strong>: Ferry ride to Kachuberia and road transfer to Ganga Sagar.</p>
+            <p><strong>11:00 AM</strong>: Visit Kapil Muni Temple and take a holy dip in the Ganges.</p>
+            <p><strong>01:00 PM</strong>: Lunch at a local restaurant in Ganga Sagar.</p>
+            <p><strong>02:00 PM</strong>: Visit the Ganga Sagar Mela ground and explore local markets.</p>
+            <p><strong>04:00 PM</strong>: Return journey to Kolkata, via ferry and AC vehicle.</p>
+            <p><strong>07:30 PM</strong>: Drop-off in Kolkata.</p>
         </div>
     </div>
-
-    <div class="my_tour_info_accordion-item">
-        <div class="my_tour_info_accordion_title">
-            <div style="display: flex;">
-                <button style="background-color: red;border: none;color:white;border-radius: 50px;padding: 5px 7px;margin-right: 10px;font-weight: 800;margin-bottom: 3px;">Day<br>2</button><span style="margin-top:10px;">Visit the Ganga Sagar Mela</span>
-            </div>
-            <span class="material-icons arrow-icon" style="color:black;background-color: rgb(245, 245, 245);border-radius: 50px ;font-weight: 200;padding: 7px;">keyboard_arrow_down</span>
-        </div>
-        <div class="my_tour_info_accordion-content">
-            <ul style="font-weight: 0.7rem !important; line-height: 0.8rem; margin-top: 1.03rem;">
-                <li style="font-weight: 0.7rem !important; line-height: 0.8rem;"> <strong style="font-weight: 1rem;">Morning :</strong> Participate in the holy rituals, take a dip in the sacred waters, and explore the vibrant mela.</li>
-                <li style="font-weight: 0.7rem !important; line-height: 0.8rem;"> <strong style="font-weight: 1rem;">Journey : </strong> After breakfast,lunch back to kolkata with sweet memory of Ganga Sagar.</li>
-                    </ul>
-                </div>
-    </div>
-
-    
 </div>
 
 <style>
@@ -1728,9 +1675,7 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
         justify-content: space-between;
         align-items: center;
         background: none;
-        /* padding: 1px 0px; */
         font-size: 16px;
-        /* margin-top:10px; */
         font-weight: 500!important;
         cursor: pointer;
         text-align: left;
@@ -1738,7 +1683,6 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
     }
 
     .my_tour_info_accordion_title:hover {
-        font-family: poppins;
         background-color: rgb(252,252,252);
         text-decoration: none;
     }
@@ -1756,7 +1700,6 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
         display: block;
         max-height: 0;
         margin-top: 0px;
-        /* margin-bottom: 10px; */
         font-size: 14px;
         color: #000000;
         margin-left:50px;
@@ -1765,11 +1708,11 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
     }
 
     .my_tour_info_accordion-item.active .my_tour_info_accordion-content {
-        font-family: poppins;
         max-height: 700px;
         padding: 0px 0;
     }
-    .material-icons arrow-icon :hover{
+
+    .material-icons.arrow-icon:hover {
         text-decoration: underline;
     }
 </style>
@@ -1801,7 +1744,7 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 </script>
 		</div>
 				</div>
-				<div class="elementor-element elementor-element-3c1cc0dd elementor-widget elementor-widget-html" data-id="3c1cc0dd" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-ba1312b elementor-widget elementor-widget-html" data-id="ba1312b" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			
 <!-- Include Google Material Icons -->
@@ -2009,25 +1952,25 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 		</div>
 				</div>
 				</div>
-		<div class="elementor-element elementor-element-25d2bb19 e-con-full e-flex e-con e-child" data-id="25d2bb19" data-element_type="container">
-				<div class="elementor-element elementor-element-1f9e106c elementor-widget-mobile__width-inherit elementor-widget elementor-widget-aux_modern_heading" data-id="1f9e106c" data-element_type="widget" id="tour_price" data-widget_type="aux_modern_heading.default">
+		<div class="elementor-element elementor-element-390d4761 e-con-full e-flex e-con e-child" data-id="390d4761" data-element_type="container">
+				<div class="elementor-element elementor-element-2e697fba elementor-widget-mobile__width-inherit elementor-widget elementor-widget-aux_modern_heading" data-id="2e697fba" data-element_type="widget" id="tour_price" data-widget_type="aux_modern_heading.default">
 				<div class="elementor-widget-container">
 			<section class="aux-widget-modern-heading">
-            <div class="aux-widget-inner"><div class="aux-modern-heading-primary">From ₹10,500.00</div></div>
+            <div class="aux-widget-inner"><div class="aux-modern-heading-primary">From ₹2,250.00</div></div>
         </section>		</div>
 				</div>
-				<div class="elementor-element elementor-element-36e1674c elementor-widget-mobile__width-inherit elementor-widget elementor-widget-aux_modern_heading" data-id="36e1674c" data-element_type="widget" data-widget_type="aux_modern_heading.default">
+				<div class="elementor-element elementor-element-5a5364b0 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-aux_modern_heading" data-id="5a5364b0" data-element_type="widget" data-widget_type="aux_modern_heading.default">
 				<div class="elementor-widget-container">
 			<section class="aux-widget-modern-heading">
             <div class="aux-widget-inner"><div class="aux-modern-heading-primary"></div><h3 class="aux-modern-heading-secondary"><span class="aux-head-before">per adult (price varies by group size)</span></h3><div class="aux-modern-heading-description"><div class="biGQs _P fiohW mowmC fOtGX">Select date and travellers</div></div></div>
         </section>		</div>
 				</div>
-		<div class="elementor-element elementor-element-2804c3fc e-con-full e-flex e-con e-child" data-id="2804c3fc" data-element_type="container">
-				<div class="elementor-element elementor-element-17085bfe elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-id="17085bfe" data-element_type="widget" data-widget_type="heading.default">
+		<div class="elementor-element elementor-element-37435e05 e-con-full e-flex e-con e-child" data-id="37435e05" data-element_type="container">
+				<div class="elementor-element elementor-element-696127eb elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-id="696127eb" data-element_type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
 			<h2 class="elementor-heading-title elementor-size-default">Show up at starting point</h2>		</div>
 				</div>
-				<div class="elementor-element elementor-element-211e4444 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-aux_modern_button" data-id="211e4444" data-element_type="widget" data-widget_type="aux_modern_button.default">
+				<div class="elementor-element elementor-element-76d45974 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-aux_modern_button" data-id="76d45974" data-element_type="widget" data-widget_type="aux_modern_button.default">
 				<div class="elementor-widget-container">
 			    <div class="aux-modern-button-wrapper aux-modern-button-align-left" >
                     <a class="aux-modern-button aux-black aux-modern-button-md aux-modern-button-normal aux-modern-button-default aux-icon-">
@@ -2042,19 +1985,19 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 
     		</div>
 				</div>
-				<div class="elementor-element elementor-element-51fee4 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-aux_modern_heading" data-id="51fee4" data-element_type="widget" data-widget_type="aux_modern_heading.default">
+				<div class="elementor-element elementor-element-2da00e47 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-aux_modern_heading" data-id="2da00e47" data-element_type="widget" data-widget_type="aux_modern_heading.default">
 				<div class="elementor-widget-container">
 			<section class="aux-widget-modern-heading">
-            <div class="aux-widget-inner"><div class="aux-modern-heading-primary"></div><h3 class="aux-modern-heading-secondary"><span class="aux-head-before">Duration : 2 days 1 night.<br>Embark on a one night two days Ganga Sagar tour from Kolkata, exploring the sacred confluence of the Ganges and Bay of Bengal with smooth transfers and darshan.</span></h3><div class="aux-modern-heading-description"><p><span style="font-weight: 400">2 Adults x ₹10,500.00</span><br /><strong>Total ₹21,000.00</strong></p></div></div>
+            <div class="aux-widget-inner"><div class="aux-modern-heading-primary"></div><h3 class="aux-modern-heading-secondary"><span class="aux-head-before">Duration : 5 hours.<br>Embark on a one-day Ganga Sagar tour from Kolkata, exploring the sacred confluence of the Ganges and Bay of Bengal with smooth transfers and darshan.</span></h3><div class="aux-modern-heading-description"><p><span style="font-weight: 400">4 Adults x ₹2,250.00</span><br /><strong>Total ₹9,000.00</strong></p></div></div>
         </section>		</div>
 				</div>
-				<div class="elementor-element elementor-element-5b35c8ca elementor-widget-mobile__width-inherit elementor-widget elementor-widget-text-editor" data-id="5b35c8ca" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-element elementor-element-6743707a elementor-widget-mobile__width-inherit elementor-widget elementor-widget-text-editor" data-id="6743707a" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
 							<p>(Price includes taxes and booking fees)</p>						</div>
 				</div>
 				</div>
-		<div class="elementor-element elementor-element-7a8fe3a7 e-con-full e-flex e-con e-child" data-id="7a8fe3a7" data-element_type="container">
-				<div class="elementor-element elementor-element-49df9ad1 elementor-widget-mobile__width-inherit elementor-widget__width-initial elementor-widget elementor-widget-html" data-id="49df9ad1" data-element_type="widget" data-widget_type="html.default">
+		<div class="elementor-element elementor-element-21d912f2 e-con-full e-flex e-con e-child" data-id="21d912f2" data-element_type="container">
+				<div class="elementor-element elementor-element-31a0808b elementor-widget-mobile__width-inherit elementor-widget__width-initial elementor-widget elementor-widget-html" data-id="31a0808b" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			<style>
     #main-container {
@@ -2089,7 +2032,7 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 
     #input-container input,
     #input-container select {
-        width: 140px;
+        width: 130px;
         padding: 10px;
         font-size: 14px;
         border: 1px solid #000000;
@@ -2099,7 +2042,7 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
 
     #input-container #numPersons,
     #input-container #numPersons {
-        width: 160px;
+        width: 136px;
     }
 
     #input-container #pickupLocation {
@@ -2113,9 +2056,9 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
     }
 
     #whatsapp-link-container a {
-        background-color: #e6373d;
+        background-color: #F6BD38;
         padding: 15px 100px;
-        color: rgb(255, 255, 255);
+        color: black;
         font-size: 14px;
         text-decoration: none;
         border-radius: 5px;
@@ -2123,7 +2066,7 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
     }
 
     #whatsapp-link-container a:hover {
-        background-color: #d83036;
+        background-color: #ffc848;
     }
 
     #row {
@@ -2154,32 +2097,30 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
     }
 </style>
 
-<strong style="font-size:1.7rem; color:black; border-left: 5px solid red; border-radius: 5px; padding-left: 5px;">
-    Connect &#8594;
-</strong>
 <div id="main-container">
+    <!-- Travel Time and Date in Single Line -->
     <div id="input-container" style="display: flex; justify-content: center; gap: 1px;">
         <div style="position: relative; width: 170px; display:flex;">
             <label for="travelDate">Date of Journey</label>
             <input type="date" id="travelDate" name="travelDate"
-                style="border: 1.5px solid #efb9b9;border-radius: 10px;background-color: none;" required>
+                style="border: 1.5px solid #000000;border-radius: 5px;" required>
         </div>
         <div style="position: relative; width: 115px; display:flex;align-items: center;">
             <!-- Text Field -->
-            <label for="numPersons" style="margin-left:-30px !important;">No of Persons</label>
+            <label for="numPersons" style="margin-left:-70px !important;  ">Adults</label>
 
             <input type="text" id="numPersons" name="numPersons" value="2"
-                style="width: 100%; text-align: center; border: 1.5px solid #efb9b9; border-radius: 10px; outline: none; font-size: 16px; padding: 10px 0;">
+                style="width: 100%; text-align: center; border: 1.5px solid #000000; border-radius: 5px; outline: none; font-size: 16px; padding: 10px 0;">
 
             <!-- Minus Button -->
             <button type="button" onclick="decrementAdults()"
-                style="position: absolute; left: 5px; top: 65%; transform: translateY(-50%); border: none; background:none; color:#efb9b9 ;padding: 6px 12px; cursor: pointer; border-radius: 10px; font-size: 16px;font-weight: 300;">
+                style="position: absolute; left: 5px; top: 65%; transform: translateY(-50%); border: none; background:none; color:rgb(0, 0, 0) ;padding: 6px 12px; cursor: pointer; border-radius: 50px; font-size: 16px;font-weight: 300;">
                 -
             </button>
 
             <!-- Plus Button -->
             <button type="button" onclick="incrementAdults()"
-                style="position: absolute; right: 5px;top: 70%;  transform: translateY(-50%); border: none; background:none;color:#efb9b9 ; padding: 6px 10px; cursor: pointer; border-radius: 5px; font-size: 16px;font-weight: 300;">
+                style="position: absolute; right: 5px;top: 70%;  transform: translateY(-50%); border: none; background:none;color:rgb(0, 0, 0) ; padding: 6px 10px; cursor: pointer; border-radius: 5px; font-size: 16px;font-weight: 300;">
                 +
             </button>
         </div>
@@ -2190,9 +2131,9 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
     <div id="input-container">
 
         <div style="position: relative;">
-            <label for="pickupLocation">Pickup Location in Kolkata</label>
+            <label for="pickupLocation">Pickup Location:</label>
             <input type="text" id="pickupLocation" placeholder="Enter a pickupLocation" autocomplete="off"
-                style="border: 1.5px solid #efb9b9;border-radius: 10px;">
+                style="border: 1.5px solid #000000;border-radius: 5px;">
             <div id="suggestions"></div>
         </div>
     </div>
@@ -2202,7 +2143,7 @@ window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(argumen
         <div>
             <label for="furtherRequirements">Further Requirements:</label>
             <input type="text" id="furtherRequirements" name="furtherRequirements"
-                placeholder="Enter any further requirements" style="border: 1.5px solid #efb9b9;border-radius: 10px;height:50px;width: 280px;">
+                placeholder="Enter any further requirements" style="border: 1.5px solid #000000;border-radius: 5px;height:50px;width: 280px;">
         </div>
     </div>
 
@@ -2388,7 +2329,7 @@ function validateForm(event) {
 </script>		</div>
 				</div>
 				</div>
-				<div class="elementor-element elementor-element-65ef2b10 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="65ef2b10" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-element elementor-element-f9b86e5 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="f9b86e5" data-element_type="widget" data-widget_type="icon-list.default">
 				<div class="elementor-widget-container">
 					<ul class="elementor-icon-list-items">
 							<li class="elementor-icon-list-item">
@@ -2401,9 +2342,9 @@ function validateForm(event) {
 				</div>
 				</div>
 				</div>
-		<div class="elementor-element elementor-element-1e4bdb9e e-con-full e-flex e-con e-parent" data-id="1e4bdb9e" data-element_type="container">
-		<div class="elementor-element elementor-element-73b25c36 e-con-full e-flex e-con e-child" data-id="73b25c36" data-element_type="container">
-				<div class="elementor-element elementor-element-7efe9ed9 elementor-widget elementor-widget-html" data-id="7efe9ed9" data-element_type="widget" data-widget_type="html.default">
+		<div class="elementor-element elementor-element-1188a4bb e-con-full e-flex e-con e-parent" data-id="1188a4bb" data-element_type="container">
+		<div class="elementor-element elementor-element-6081edf7 e-con-full e-flex e-con e-child" data-id="6081edf7" data-element_type="container">
+				<div class="elementor-element elementor-element-6b9481d0 elementor-widget elementor-widget-html" data-id="6b9481d0" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			<style>
     .video-scroll-container {
@@ -2542,12 +2483,12 @@ function validateForm(event) {
 				</div>
 				</div>
 				</div>
-		<div class="elementor-element elementor-element-252d8f43 e-flex e-con-boxed e-con e-parent" data-id="252d8f43" data-element_type="container">
+		<div class="elementor-element elementor-element-53da4daa e-flex e-con-boxed e-con e-parent" data-id="53da4daa" data-element_type="container">
 					<div class="e-con-inner">
-		<div class="elementor-element elementor-element-25513ff1 e-con-full e-flex e-con e-child" data-id="25513ff1" data-element_type="container">
+		<div class="elementor-element elementor-element-2d0a08ba e-con-full e-flex e-con e-child" data-id="2d0a08ba" data-element_type="container">
 				</div>
-		<div class="elementor-element elementor-element-335290b6 e-con-full e-flex e-con e-child" data-id="335290b6" data-element_type="container">
-				<div class="elementor-element elementor-element-2ce34dc4 elementor-widget elementor-widget-html" data-id="2ce34dc4" data-element_type="widget" data-widget_type="html.default">
+		<div class="elementor-element elementor-element-4f81e0d6 e-con-full e-flex e-con e-child" data-id="4f81e0d6" data-element_type="container">
+				<div class="elementor-element elementor-element-59f2725e elementor-widget elementor-widget-html" data-id="59f2725e" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			<div class="gangasagar-tour-content">
     <strong class="itinerary-title">Reviews  &#8594;</strong>
@@ -2795,21 +2736,21 @@ function validateForm(event) {
 		</div>
 				</div>
 				</div>
-		<div class="elementor-element elementor-element-6771adaa e-con-full e-flex e-con e-child" data-id="6771adaa" data-element_type="container">
+		<div class="elementor-element elementor-element-4c7bd9f4 e-con-full e-flex e-con e-child" data-id="4c7bd9f4" data-element_type="container">
 				</div>
 					</div>
 				</div>
-		<div class="elementor-element elementor-element-7cf6f251 e-flex e-con-boxed e-con e-parent" data-id="7cf6f251" data-element_type="container">
+		<div class="elementor-element elementor-element-795d9fdc e-flex e-con-boxed e-con e-parent" data-id="795d9fdc" data-element_type="container">
 					<div class="e-con-inner">
-		<div class="elementor-element elementor-element-24b59f3c e-con-full e-flex e-con e-child" data-id="24b59f3c" data-element_type="container">
+		<div class="elementor-element elementor-element-6ccec827 e-con-full e-flex e-con e-child" data-id="6ccec827" data-element_type="container">
 				</div>
-		<div class="elementor-element elementor-element-28948b5 e-con-full e-flex e-con e-child" data-id="28948b5" data-element_type="container">
+		<div class="elementor-element elementor-element-2fec7694 e-con-full e-flex e-con e-child" data-id="2fec7694" data-element_type="container">
 				</div>
 					</div>
 				</div>
-		<div class="elementor-element elementor-element-5f9543aa e-flex e-con-boxed e-con e-parent" data-id="5f9543aa" data-element_type="container">
+		<div class="elementor-element elementor-element-36acab8e e-flex e-con-boxed e-con e-parent" data-id="36acab8e" data-element_type="container">
 					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-5168fabc elementor-widget elementor-widget-html" data-id="5168fabc" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-element elementor-element-2729269f elementor-widget elementor-widget-html" data-id="2729269f" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 			<style>
     /* body {
@@ -3877,9 +3818,6 @@ please be sure to check their site for a full disclosure of all applicable fees.
 
     <div class="aux-goto-top-btn aux-align-btn-right"><div class="aux-hover-slide aux-arrow-nav aux-round aux-outline">    <span class="aux-overlay"></span>    <span class="aux-svg-arrow aux-h-small-up"></span>    <span class="aux-hover-arrow aux-svg-arrow aux-h-small-up aux-white"></span></div></div>
 <!-- outputs by wp_footer -->
-<script id="rank-math-json">
-var rankMath = {"version":"1.0.236","ajaxurl":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin-ajax.php","adminurl":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php","endpoint":"https:\/\/www.gangasagar-tourism.com\/wp-json\/rankmath\/v1","security":"e1a6b9aa2c","restNonce":"e483ad85a1","modules":{"0":"link-counter","1":"analytics","2":"seo-analysis","3":"sitemap","4":"rich-snippet","10":"content-ai","11":"instant-indexing","12":"local-seo"},"objectID":5939,"objectType":"post"};
-</script>
 			<script type='text/javascript'>
 				const lazyloadRunObserver = () => {
 					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
@@ -3906,74 +3844,7 @@ var rankMath = {"version":"1.0.236","ajaxurl":"https:\/\/www.gangasagar-tourism.
 					document.addEventListener( event, lazyloadRunObserver );
 				} );
 			</script>
-			<script type="text/template" id="tmpl-elementor-templates-modal__header">
-	<div class="elementor-templates-modal__header__logo-area"></div>
-	<div class="elementor-templates-modal__header__menu-area"></div>
-	<div class="elementor-templates-modal__header__items-area">
-		<# if ( closeType ) { #>
-			<div class="elementor-templates-modal__header__close elementor-templates-modal__header__close--{{{ closeType }}} elementor-templates-modal__header__item">
-				<# if ( 'skip' === closeType ) { #>
-				<span>Skip</span>
-				<# } #>
-				<i class="eicon-close"
-				   aria-hidden="true"
-				   title="{{{ $e.components?.get( 'document/elements' )?.utils?.getTitleForLibraryClose() }}}"></i>
-				<span class="elementor-screen-only">{{{ $e.components?.get( 'document/elements' )?.utils?.getTitleForLibraryClose() }}}</span>
-			</div>
-		<# } #>
-		<div id="elementor-template-library-header-tools"></div>
-	</div>
-</script>
-
-<script type="text/template" id="tmpl-elementor-templates-modal__header__logo">
-	<span class="elementor-templates-modal__header__logo__icon-wrapper e-logo-wrapper">
-		<i class="eicon-elementor"></i>
-	</span>
-	<span class="elementor-templates-modal__header__logo__title">{{{ title }}}</span>
-</script>
-<script type="text/template" id="tmpl-elementor-finder">
-	<div id="elementor-finder__search">
-		<i class="eicon-search" aria-hidden="true"></i>
-		<input id="elementor-finder__search__input" placeholder="Type to find anything in Elementor" autocomplete="off">
-	</div>
-	<div id="elementor-finder__content"></div>
-</script>
-
-<script type="text/template" id="tmpl-elementor-finder-results-container">
-	<div id="elementor-finder__no-results">No Results Found</div>
-	<div id="elementor-finder__results"></div>
-</script>
-
-<script type="text/template" id="tmpl-elementor-finder__results__category">
-	<div class="elementor-finder__results__category__title">{{{ title }}}</div>
-	<div class="elementor-finder__results__category__items"></div>
-</script>
-
-<script type="text/template" id="tmpl-elementor-finder__results__item">
-	<a href="{{ url }}" class="elementor-finder__results__item__link">
-		<div class="elementor-finder__results__item__icon">
-			<i class="eicon-{{{ icon }}}" aria-hidden="true"></i>
-		</div>
-		<div class="elementor-finder__results__item__title">{{{ title }}}</div>
-		<# if ( description ) { #>
-			<div class="elementor-finder__results__item__description">- {{{ description }}}</div>
-		<# } #>
-
-		<# if ( lock ) { #>
-		<div class="elementor-finder__results__item__badge"><i class="{{{ lock.badge.icon }}}"></i>{{ lock.badge.text }}</div>
-		<# } #>
-	</a>
-	<# if ( actions.length ) { #>
-		<div class="elementor-finder__results__item__actions">
-		<# jQuery.each( actions, function() { #>
-			<a class="elementor-finder__results__item__action elementor-finder__results__item__action--{{ this.name }}" href="{{ this.url }}" target="_blank">
-				<i class="eicon-{{{ this.icon }}}"></i>
-			</a>
-		<# } ); #>
-		</div>
-	<# } #>
-</script>
-<link rel='stylesheet' id='widget-social-icons-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.25.10' media='all' />
+			<link rel='stylesheet' id='widget-social-icons-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.25.10' media='all' />
 <link rel='stylesheet' id='e-apple-webkit-css' href='https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=3.25.10' media='all' />
 <script src="https://www.gangasagar-tourism.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
 <script src="https://www.gangasagar-tourism.com/wp-includes/js/masonry.min.js?ver=4.2.2" id="masonry-js"></script>
@@ -3991,101 +3862,14 @@ var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPr
 <script src="https://www.gangasagar-tourism.com/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=6.7.1" id="wp-mediaelement-js"></script>
 <script src="https://www.gangasagar-tourism.com/wp-content/plugins/auxin-elements/public/assets/js/plugins.min.js?ver=2.17.2" id="auxin-elements-plugins-js"></script>
 <script src="https://www.gangasagar-tourism.com/wp-content/plugins/auxin-elements/public/assets/js/scripts.js?ver=2.17.2" id="auxin-elements-scripts-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/seo-by-rank-math/assets/front/js/rank-math.js?ver=1.0.236" id="rank-math-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3" id="jquery-ui-mouse-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.3" id="jquery-ui-draggable-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-includes/js/underscore.min.js?ver=1.13.7" id="underscore-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-includes/js/backbone.min.js?ver=1.6.0" id="backbone-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/lib/backbone/backbone.marionette.min.js?ver=2.4.5.e1" id="backbone-marionette-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/lib/backbone/backbone.radio.min.js?ver=1.0.4" id="backbone-radio-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/js/common-modules.min.js?ver=3.25.10" id="elementor-common-modules-js"></script>
-<script id="elementor-web-cli-js-before">
-var elementorWebCliConfig = {"isDebug":false,"urls":{"rest":"https:\/\/www.gangasagar-tourism.com\/wp-json\/","assets":"https:\/\/www.gangasagar-tourism.com\/wp-content\/plugins\/elementor\/assets\/"},"nonce":"e483ad85a1","version":"3.25.10"};
-var elementorWebCliConfig = {"isDebug":false,"urls":{"rest":"https:\/\/www.gangasagar-tourism.com\/wp-json\/","assets":"https:\/\/www.gangasagar-tourism.com\/wp-content\/plugins\/elementor\/assets\/"},"nonce":"e483ad85a1","version":"3.25.10"};
-</script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/js/web-cli.min.js?ver=3.25.10" id="elementor-web-cli-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.3" id="elementor-dialog-js"></script>
-<script id="wp-api-request-js-extra">
-var wpApiSettings = {"root":"https:\/\/www.gangasagar-tourism.com\/wp-json\/","nonce":"e483ad85a1","versionString":"wp\/v2\/"};
-</script>
-<script src="https://www.gangasagar-tourism.com/wp-includes/js/api-request.min.js?ver=6.7.1" id="wp-api-request-js"></script>
-<script id="elementor-dev-tools-js-before">
-var elementorDevToolsConfig = {"isDebug":false,"urls":{"assets":"https:\/\/www.gangasagar-tourism.com\/wp-content\/plugins\/elementor\/assets\/"},"deprecation":{"soft_notices":[],"soft_version_count":4,"hard_version_count":8,"current_version":"3.25.10"}};
-var elementorDevToolsConfig = {"isDebug":false,"urls":{"assets":"https:\/\/www.gangasagar-tourism.com\/wp-content\/plugins\/elementor\/assets\/"},"deprecation":{"soft_notices":[],"soft_version_count":4,"hard_version_count":8,"current_version":"3.25.10"}};
-var elementorDevToolsConfig = {"isDebug":false,"urls":{"assets":"https:\/\/www.gangasagar-tourism.com\/wp-content\/plugins\/elementor\/assets\/"},"deprecation":{"soft_notices":[],"soft_version_count":4,"hard_version_count":8,"current_version":"3.25.10"}};
-</script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/js/dev-tools.min.js?ver=3.25.10" id="elementor-dev-tools-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
-<script id="wp-i18n-js-after">
-wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-</script>
-<script id="elementor-common-js-before">
-var elementorCommonConfig = {"version":"3.25.10","isRTL":false,"isDebug":false,"isElementorDebug":false,"activeModules":["ajax","finder","connect","event-tracker"],"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_optimized_control_loading":true,"e_onboarding":true,"e_css_smooth_scroll":true,"home_screen":true,"nested-elements":true,"editor_v2":true,"link-in-bio":true,"floating-buttons":true},"urls":{"assets":"https:\/\/www.gangasagar-tourism.com\/wp-content\/plugins\/elementor\/assets\/","rest":"https:\/\/www.gangasagar-tourism.com\/wp-json\/"},"filesUpload":{"unfilteredFiles":true},"library_connect":{"is_connected":false,"subscription_plans":{"free":{"label":null,"promotion_url":null,"color":null},"essential":{"label":"Pro","promotion_url":"https:\/\/elementor.com\/pro\/?utm_source=template-library&utm_medium=wp-dash&utm_campaign=gopro","color":"#92003B"},"essential-oct2023":{"label":"Advanced","promotion_url":"https:\/\/elementor.com\/pro\/?utm_source=template-library&utm_medium=wp-dash&utm_campaign=gopro","color":"#92003B"},"advanced":{"label":"Advanced","promotion_url":"https:\/\/elementor.com\/pro\/?utm_source=template-library&utm_medium=wp-dash&utm_campaign=gopro","color":"#92003B"},"expert":{"label":"Expert","promotion_url":"https:\/\/elementor.com\/pro\/?utm_source=template-library&utm_medium=wp-dash&utm_campaign=gopro","color":"#92003B"},"agency":{"label":"Agency","promotion_url":"https:\/\/elementor.com\/pro\/?utm_source=template-library&utm_medium=wp-dash&utm_campaign=gopro","color":"#92003B"}},"base_access_level":0,"base_access_tier":"free","current_access_level":0,"current_access_tier":"free"},"ajax":{"url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin-ajax.php","nonce":"ffb759f12f"},"finder":{"data":{"edit":{"title":"Edit","dynamic":true,"name":"edit"},"general":{"title":"General","dynamic":false,"items":{"saved-templates":{"title":"Saved Templates","icon":"library-save","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/edit.php?post_type=elementor_library&tabs_group=library","keywords":["template","section","page","library"]},"system-info":{"title":"System Info","icon":"info-circle-o","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-system-info","keywords":["system","info","environment","elementor"]},"role-manager":{"title":"Role Manager","icon":"person","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-role-manager","keywords":["role","manager","user","elementor"]},"knowledge-base":{"title":"Knowledge Base","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=go_knowledge_base_site","keywords":["help","knowledge","docs","elementor"]},"theme-builder":{"title":"Theme Builder","icon":"library-save","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-app&ver=3.25.10#site-editor\/promotion","keywords":["template","header","footer","single","archive","search","404","library"]},"kit-library":{"title":"Kit Library","icon":"kit-parts","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-app&ver=3.25.10#\/kit-library","keywords":["kit library","kit","library","site parts","parts","assets","templates"]}},"name":"general"},"create":{"title":"Create","dynamic":false,"items":{"page":{"title":"Add New Page Template","icon":"plus-circle-o","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/edit.php?action=elementor_new_post&post_type=elementor_library&template_type=page&_wpnonce=35c5699c22","keywords":["Add New Page Template","post","page","template","new","create"]},"section":{"title":"Add New Section","icon":"plus-circle-o","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/edit.php?action=elementor_new_post&post_type=elementor_library&template_type=section&_wpnonce=35c5699c22","keywords":["Add New Section","post","page","template","new","create"]},"container":{"title":"Add New Container","icon":"plus-circle-o","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/edit.php?action=elementor_new_post&post_type=elementor_library&template_type=container&_wpnonce=35c5699c22","keywords":["Add New Container","post","page","template","new","create"]},"wp-post":{"title":"Add New Post","icon":"plus-circle-o","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/edit.php?action=elementor_new_post&post_type=post&template_type=wp-post&_wpnonce=35c5699c22","keywords":["Add New Post","post","page","template","new","create"]},"wp-page":{"title":"Add New Page","icon":"plus-circle-o","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/edit.php?action=elementor_new_post&post_type=page&template_type=wp-page&_wpnonce=35c5699c22","keywords":["Add New Page","post","page","template","new","create"]},"header":{"title":"Add New Header","icon":"plus-circle-o","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/edit.php?action=elementor_new_post&post_type=elementor_library&template_type=stack&_wpnonce=35c5699c22","keywords":["Add New Header","post","page","template","new","create"]},"footer":{"title":"Add New Footer","icon":"plus-circle-o","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/edit.php?action=elementor_new_post&post_type=elementor_library&template_type=stack&_wpnonce=35c5699c22","keywords":["Add New Footer","post","page","template","new","create"]},"floating-buttons":{"title":"Add New Floating Element","icon":"plus-circle-o","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/edit.php?action=elementor_new_post&post_type=e-floating-buttons&template_type=floating-buttons&_wpnonce=35c5699c22#library","keywords":["Add New Floating Element","post","page","template","new","create"]},"themo_tour":false,"themo_portfolio":false,"themo_room":false,"mphb_room_type":false,"mphb_room_service":false,"themo_hole":false,"product":false,"elementor-thhf":false},"name":"create"},"site":{"title":"Site","dynamic":false,"items":{"homepage":{"title":"Homepage","url":"https:\/\/www.gangasagar-tourism.com","icon":"home-heart","keywords":["home","page"]},"wordpress-dashboard":{"title":"Dashboard","icon":"dashboard","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/","keywords":["dashboard","wordpress"]},"wordpress-menus":{"title":"Menus","icon":"wordpress","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/nav-menus.php","keywords":["menu","wordpress"]},"wordpress-themes":{"title":"Themes","icon":"wordpress","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/themes.php","keywords":["themes","wordpress"]},"wordpress-customizer":{"title":"Customizer","icon":"wordpress","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/customize.php","keywords":["customizer","wordpress"]},"wordpress-plugins":{"title":"Plugins","icon":"wordpress","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/plugins.php","keywords":["plugins","wordpress"]},"wordpress-users":{"title":"Users","icon":"wordpress","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/users.php","keywords":["users","profile","wordpress"]},"apps":{"title":"Add-ons","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-apps","icon":"apps","keywords":["apps","addon","plugin","extension","integration"]}},"name":"site"},"settings":{"title":"Settings","dynamic":false,"items":{"general-settings":{"title":"General Settings","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-settings#tab-general","keywords":["general","settings","elementor"]},"integrations":{"title":"Integrations","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-settings#tab-integrations","keywords":["integrations","settings","elementor"]},"advanced":{"title":"Advanced","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-settings#tab-advanced","keywords":["advanced","settings","elementor"]},"performance":{"title":"Performance","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-settings#tab-performance","keywords":["performance","settings","elementor"]},"experiments":{"title":"Experiments","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-settings#tab-experiments","keywords":["settings","elementor","experiments"]},"features":{"title":"Features","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-settings#tab-experiments","keywords":["settings","elementor","features"]},"element-manager":{"title":"Element Manager","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-element-manager","keywords":["settings","elements","widgets","manager"]}},"name":"settings"},"tools":{"title":"Tools","dynamic":false,"items":{"tools":{"title":"Tools","icon":"tools","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-tools","keywords":["tools","regenerate css","safe mode","debug bar","sync library","elementor"]},"replace-url":{"title":"Replace URL","icon":"tools","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-tools#tab-replace_url","keywords":["tools","replace url","domain","elementor"]},"maintenance-mode":{"title":"Maintenance Mode","icon":"tools","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-tools#tab-maintenance_mode","keywords":["tools","maintenance","coming soon","elementor"]},"import-export":{"title":"Import Export","icon":"import-export","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-tools#tab-import-export-kit","keywords":["tools","import export","import","export","kit"]},"version-control":{"title":"Version Control","icon":"time-line","url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-tools#tab-versions","keywords":["tools","version","control","rollback","beta","elementor"]}},"name":"tools"}}},"connect":[],"event-tracker":{"isUserDataShared":false}};
-</script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/js/common.min.js?ver=3.25.10" id="elementor-common-js"></script>
-<script id="elementor-app-loader-js-before">
-var elementorAppConfig = {"menu_url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-app&ver=3.25.10#site-editor\/promotion","assets_url":"https:\/\/www.gangasagar-tourism.com\/wp-content\/plugins\/elementor\/assets\/","pages_url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/edit.php?post_type=page","return_url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/","hasPro":false,"admin_url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/","login_url":"https:\/\/www.gangasagar-tourism.com\/wp-login.php","base_url":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-app&ver=3.25.10","promotion":{"upgrade_url":"https:\/\/go.elementor.com\/go-pro-theme-builder\/"},"site-editor":[],"import-export":[],"kit-library":[],"onboarding":[]};
-</script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/js/app-loader.min.js?ver=3.25.10" id="elementor-app-loader-js"></script>
 <script src="https://www.gangasagar-tourism.com/wp-content/uploads/phlox/custom.js?ver=3.6" id="auxin-custom-js-js"></script>
-<script id="googlesitekit-tracking-data-js-extra">
-var _googlesitekitTrackingData = {"referenceSiteURL":"https:\/\/www.gangasagar-tourism.com\/","userIDHash":"3786f0fd8224cd5916c539d42b04ce8a","isAuthenticated":true,"userRoles":["administrator"],"activeModules":["search-console","analytics-4","pagespeed-insights"],"isSiteKitScreen":false,"trackingEnabled":false,"trackingID":"G-EQDN3BWDSD"};
-</script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/runtime-518bc5e73f2edcab1efb.js" id="googlesitekit-runtime-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-i18n-33cdd2dee5d1d1f4fb34.js" id="googlesitekit-i18n-js"></script>
-<script id="googlesitekit-base-data-js-extra">
-var _googlesitekitBaseData = {"homeURL":"https:\/\/www.gangasagar-tourism.com\/","referenceSiteURL":"https:\/\/www.gangasagar-tourism.com\/","adminURL":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/","assetsURL":"https:\/\/www.gangasagar-tourism.com\/wp-content\/plugins\/google-site-kit\/dist\/assets\/","widgetsAdminURL":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/widgets.php","blogPrefix":"wp_","ampMode":false,"isNetworkMode":false,"timezone":"","siteName":"\ud835\udc06\ud835\udc1a\ud835\udc27\ud835\udc20\ud835\udc1a\ud835\udc12\ud835\udc1a\ud835\udc20\ud835\udc1a\ud835\udc2b \ud835\udc13\ud835\udc0e\ud835\udc14\ud835\udc11\ud835\udc08\ud835\udc12\ud835\udc0c","enabledFeatures":["audienceSegmentation","signInWithGoogleModule"],"webStoriesActive":false,"postTypes":[{"slug":"post","label":"Posts"},{"slug":"page","label":"Pages"},{"slug":"attachment","label":"Media"},{"slug":"e-floating-buttons","label":"Floating Elements"},{"slug":"elementor_library","label":"My Templates"}],"storagePrefix":"b786d79ba90d602c2aa3fd02dcdbe2f0","referenceDate":null,"productPostType":null,"anyoneCanRegister":false,"isMultisite":false,"isOwner":true,"splashURL":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=googlesitekit-splash","proxySetupURL":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/index.php?action=googlesitekit_proxy_setup_start&nonce=561806be7f","proxyPermissionsURL":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/index.php?action=googlesitekit_proxy_permissions&nonce=b5c27bdc9a","usingProxy":true,"isAuthenticated":true,"setupErrorCode":null,"setupErrorMessage":null,"setupErrorRedoURL":null,"proxySupportLinkURL":"https:\/\/sitekit.withgoogle.com\/support","updateCoreURL":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/update-core.php","wpVersion":{"version":"6.7.1","major":6,"minor":7},"pluginBasename":"google-site-kit\/google-site-kit.php","userRoles":["administrator"],"activeModules":["search-console","analytics-4","pagespeed-insights"],"keyMetricsSetupNew":false,"keyMetricsSetupCompletedBy":0,"consentModeRegions":["AT","BE","BG","CH","CY","CZ","DE","DK","EE","ES","FI","FR","GB","GR","HR","HU","IE","IS","IT","LI","LT","LU","LV","MT","NL","NO","PL","PT","RO","SE","SI","SK"]};
-</script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-polyfills-90629f74b8ef58ed7ba4.js" id="googlesitekit-polyfills-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-vendor-d03243ae7abfad569b54.js" id="googlesitekit-vendor-js"></script>
-<script id="googlesitekit-commons-js-extra">
-var _googlesitekitLegacyData = {"admin":{"siteURL":"https:\/\/www.gangasagar-tourism.com","resetSession":null,"newSitePosts":false,"connectURL":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/index.php?action=googlesitekit_connect&nonce=251eaed497","disconnectURL":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/index.php?action=googlesitekit_disconnect&nonce=23a0bee561"},"locale":"en_US","setup":{"isSiteKitConnected":true,"isResettable":true,"isAuthenticated":true,"requiredScopes":["openid","https:\/\/www.googleapis.com\/auth\/userinfo.profile","https:\/\/www.googleapis.com\/auth\/userinfo.email","https:\/\/www.googleapis.com\/auth\/siteverification","https:\/\/www.googleapis.com\/auth\/webmasters","https:\/\/www.googleapis.com\/auth\/analytics.readonly","https:\/\/www.googleapis.com\/auth\/tagmanager.readonly"],"grantedScopes":["https:\/\/www.googleapis.com\/auth\/webmasters","https:\/\/www.googleapis.com\/auth\/analytics.readonly","openid","https:\/\/www.googleapis.com\/auth\/userinfo.email","https:\/\/www.googleapis.com\/auth\/tagmanager.readonly","https:\/\/www.googleapis.com\/auth\/userinfo.profile","https:\/\/www.googleapis.com\/auth\/siteverification"],"unsatisfiedScopes":[],"needReauthenticate":false,"isVerified":true,"hasSearchConsoleProperty":true}};
-</script>
-<script id="googlesitekit-apifetch-data-js-extra">
-var _googlesitekitAPIFetchData = {"nonce":"e483ad85a1","nonceEndpoint":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin-ajax.php?action=rest-nonce","preloadedData":{"\/google-site-kit\/v1\/core\/site\/data\/connection":{"body":{"connected":true,"resettable":true,"setupCompleted":true,"hasConnectedAdmins":true,"hasMultipleAdmins":false,"ownerID":1},"headers":{"Allow":"GET"}},"\/google-site-kit\/v1\/core\/user\/data\/authentication":{"body":{"authenticated":true,"requiredScopes":["openid","https:\/\/www.googleapis.com\/auth\/userinfo.profile","https:\/\/www.googleapis.com\/auth\/userinfo.email","https:\/\/www.googleapis.com\/auth\/siteverification","https:\/\/www.googleapis.com\/auth\/webmasters","https:\/\/www.googleapis.com\/auth\/analytics.readonly","https:\/\/www.googleapis.com\/auth\/tagmanager.readonly"],"grantedScopes":["https:\/\/www.googleapis.com\/auth\/webmasters","https:\/\/www.googleapis.com\/auth\/analytics.readonly","openid","https:\/\/www.googleapis.com\/auth\/userinfo.email","https:\/\/www.googleapis.com\/auth\/tagmanager.readonly","https:\/\/www.googleapis.com\/auth\/userinfo.profile","https:\/\/www.googleapis.com\/auth\/siteverification"],"unsatisfiedScopes":[],"needsReauthentication":false,"disconnectedReason":"","connectedProxyURL":"https:\/\/www.gangasagar-tourism.com\/"},"headers":{"Allow":"GET"}},"\/google-site-kit\/v1\/core\/user\/data\/user-input-settings":{"body":{"purpose":{"scope":"site","values":[]},"postFrequency":{"scope":"user","values":[]},"goals":{"scope":"user","values":[]},"includeConversionEvents":{"scope":"site","values":[]}},"headers":{"Allow":"GET, POST"}},"\/google-site-kit\/v1\/core\/user\/data\/audience-settings":{"body":{"configuredAudiences":null,"isAudienceSegmentationWidgetHidden":false,"didSetAudiences":false},"headers":{"Allow":"GET, POST, PUT, PATCH"}},"\/google-site-kit\/v1\/core\/modules\/data\/list":{"body":[{"slug":"site-verification","name":"Site Verification","description":"Google Site Verification allows you to manage ownership of your site.","homepage":"https:\/\/www.google.com\/webmasters\/verification\/home","internal":true,"order":0,"forceActive":true,"recoverable":false,"shareable":false,"active":true,"connected":true,"dependencies":[],"dependants":[],"owner":null},{"slug":"search-console","name":"Search Console","description":"Google Search Console and helps you understand how Google views your site and optimize its performance in search results.","homepage":"https:\/\/search.google.com\/search-console","internal":false,"order":1,"forceActive":true,"recoverable":false,"shareable":true,"active":true,"connected":true,"dependencies":[],"dependants":[],"owner":{"id":1,"login":"Sumannayak"}},{"slug":"ads","name":"Ads","description":"Track conversions for your existing Google Ads campaigns","homepage":"https:\/\/google.com\/ads","internal":false,"order":10,"forceActive":false,"recoverable":false,"shareable":false,"active":false,"connected":false,"dependencies":[],"dependants":[],"owner":null},{"slug":"analytics-4","name":"Analytics","description":"Get a deeper understanding of your customers. Google Analytics gives you the free tools you need to analyze data for your business in one place.","homepage":"https:\/\/analytics.google.com\/analytics\/web","internal":false,"order":10,"forceActive":false,"recoverable":false,"shareable":true,"active":true,"connected":true,"dependencies":[],"dependants":[],"owner":{"id":1,"login":"Sumannayak"}},{"slug":"tagmanager","name":"Tag Manager","description":"Tag Manager creates an easy to manage way to create tags on your site without updating code","homepage":"https:\/\/tagmanager.google.com\/","internal":false,"order":10,"forceActive":false,"recoverable":false,"shareable":false,"active":false,"connected":false,"dependencies":[],"dependants":[],"owner":null},{"slug":"adsense","name":"AdSense","description":"Earn money by placing ads on your website. It\u2019s free and easy.","homepage":"https:\/\/adsense.google.com\/start?source=site-kit&url=https:\/\/www.gangasagar-tourism.com","internal":false,"order":10,"forceActive":false,"recoverable":false,"shareable":false,"active":false,"connected":false,"dependencies":[],"dependants":[],"owner":null},{"slug":"pagespeed-insights","name":"PageSpeed Insights","description":"Google PageSpeed Insights gives you metrics about performance, accessibility, SEO and PWA","homepage":"https:\/\/pagespeed.web.dev","internal":false,"order":10,"forceActive":false,"recoverable":false,"shareable":true,"active":true,"connected":true,"dependencies":[],"dependants":[],"owner":null},{"slug":"sign-in-with-google","name":"Sign in with Google","description":"Improve user engagement, trust and data privacy, while creating a simple, secure and personalized experience for your visitors","homepage":"https:\/\/developers.google.com\/identity\/gsi\/web\/guides\/overview","internal":false,"order":10,"forceActive":false,"recoverable":false,"shareable":false,"active":false,"connected":false,"dependencies":[],"dependants":[],"owner":null}],"headers":{"Allow":"GET"}},"\/google-site-kit\/v1\/modules\/search-console\/data\/settings":{"body":{"propertyID":"https:\/\/www.gangasagar-tourism.com\/","ownerID":1},"headers":{"Allow":"GET, POST, PUT, PATCH"}},"\/google-site-kit\/v1\/modules\/analytics-4\/data\/settings":{"body":{"ownerID":1,"accountID":"337960472","adsConversionID":"","propertyID":"468976962","webDataStreamID":"10007161710","measurementID":"G-PHF5ZM106E","trackingDisabled":["loggedinUsers"],"useSnippet":true,"googleTagID":"GT-KTPK6KZW","googleTagAccountID":"6260086312","googleTagContainerID":"201261248","googleTagContainerDestinationIDs":["G-PHF5ZM106E"],"googleTagLastSyncedAtMs":1735466903129,"availableCustomDimensions":null,"propertyCreateTime":1733141338465,"adSenseLinked":false,"adSenseLinkedLastSyncedAt":0,"adsConversionIDMigratedAtMs":0,"adsLinked":false,"adsLinkedLastSyncedAt":1736685387,"availableAudiences":[{"name":"properties\/468976962\/audiences\/10007262182","displayName":"All visitors","description":"All users","audienceType":"DEFAULT_AUDIENCE","audienceSlug":"all-users"},{"name":"properties\/468976962\/audiences\/10007262183","displayName":"Purchasers","description":"Users who have purchased in the last 540 days","audienceType":"DEFAULT_AUDIENCE","audienceSlug":"purchasers"}],"availableAudiencesLastSyncedAt":0,"audienceSegmentationSetupCompletedBy":null,"detectedEvents":[],"newConversionEventsLastUpdateAt":0,"lostConversionEventsLastUpdateAt":0},"headers":{"Allow":"GET, POST, PUT, PATCH"}},"\/google-site-kit\/v1\/modules\/pagespeed-insights\/data\/settings":{"body":{"ownerID":0},"headers":{"Allow":"GET, POST, PUT, PATCH"}},"\/google-site-kit\/v1\/core\/user\/data\/dismissed-items":{"body":[],"headers":{"Allow":"GET, DELETE"}},"\/google-site-kit\/v1\/core\/user\/data\/expirable-items":{"body":[],"headers":{"Allow":"GET"}},"\/google-site-kit\/v1\/core\/user\/data\/permissions":{"body":{"googlesitekit_authenticate":true,"googlesitekit_setup":true,"googlesitekit_view_posts_insights":true,"googlesitekit_view_dashboard":true,"googlesitekit_manage_options":true,"googlesitekit_update_plugins":true,"googlesitekit_view_splash":true,"googlesitekit_view_authenticated_dashboard":true,"googlesitekit_view_wp_dashboard_widget":true,"googlesitekit_view_admin_bar_menu":true,"googlesitekit_view_shared_dashboard":false,"googlesitekit_read_shared_module_data::[\"search-console\"]":false,"googlesitekit_read_shared_module_data::[\"analytics-4\"]":false,"googlesitekit_read_shared_module_data::[\"pagespeed-insights\"]":false,"googlesitekit_manage_module_sharing_options::[\"search-console\"]":true,"googlesitekit_manage_module_sharing_options::[\"analytics-4\"]":true,"googlesitekit_manage_module_sharing_options::[\"pagespeed-insights\"]":true,"googlesitekit_delegate_module_sharing_management::[\"search-console\"]":true,"googlesitekit_delegate_module_sharing_management::[\"analytics-4\"]":true,"googlesitekit_delegate_module_sharing_management::[\"pagespeed-insights\"]":false},"headers":{"Allow":"GET"}},"\/google-site-kit\/v1\/core\/user\/data\/nonces":{"body":{"updates":"9381403fa0"},"headers":{"Allow":"GET"}},"\/google-site-kit\/v1\/core\/user\/data\/survey-timeouts":{"body":[],"headers":{"Allow":"GET"}},"\/google-site-kit\/v1\/core\/user\/data\/tracking":{"body":{"enabled":false},"headers":{"Allow":"GET, POST"}},"\/google-site-kit\/v1\/core\/site\/data\/admin-bar-settings":{"body":{"enabled":true},"headers":{"Allow":"GET, POST"}},"\/google-site-kit\/v1\/core\/user\/data\/dismissed-tours":{"body":[],"headers":{"Allow":"GET"}},"\/google-site-kit\/v1\/core\/user\/data\/key-metrics":{"body":{"widgetSlugs":[],"isWidgetHidden":false},"headers":{"Allow":"GET, POST"}},"\/google-site-kit\/v1\/core\/user\/data\/dismissed-prompts":{"body":{"consent-mode-setup-cta-widget":{"expires":0,"count":1}},"headers":{"Allow":"GET"}},"\/google-site-kit\/v1\/core\/site\/data\/consent-mode":{"body":{"enabled":false,"regions":["AT","BE","BG","CH","CY","CZ","DE","DK","EE","ES","FI","FR","GB","GR","HR","HU","IE","IS","IT","LI","LT","LU","LV","MT","NL","NO","PL","PT","RO","SE","SI","SK"]},"headers":{"Allow":"GET, POST, PUT, PATCH"}},"\/google-site-kit\/v1\/core\/site\/data\/consent-api-info":{"body":{"hasConsentAPI":false,"wpConsentPlugin":{"installed":false,"activateURL":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/plugins.php?action=activate&plugin=wp-consent-api%2Fwp-consent-api.php&_wpnonce=bd0f9a3b46","installURL":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/update.php?action=install-plugin&plugin=wp-consent-api&_wpnonce=aefecdaca6"}},"headers":{"Allow":"GET"}},"\/google-site-kit\/v1\/core\/site\/data\/conversion-tracking":{"body":{"enabled":true},"headers":{"Allow":"GET, POST, PUT, PATCH"}}},"rootURL":"https:\/\/www.gangasagar-tourism.com\/wp-json\/"};
-</script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-api-8af9ef8f4fbc9c572801.js" id="googlesitekit-api-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-data-2a3e54206716c38b1d81.js" id="googlesitekit-data-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-datastore-forms-c07f5742f6b5511cdc1a.js" id="googlesitekit-datastore-forms-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-datastore-location-d30857162ffddc13c031.js" id="googlesitekit-datastore-location-js"></script>
-<script id="googlesitekit-entity-data-js-extra">
-var _googlesitekitEntityData = {"currentEntityURL":"https:\/\/www.gangasagar-tourism.com\/ganga-sagar-mela\/","currentEntityType":"post","currentEntityTitle":"Unforgettable Ganga Sagar Mela Tour Package From Kolkata","currentEntityID":5939};
-</script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-datastore-site-591244e140dd6c4b716d.js" id="googlesitekit-datastore-site-js"></script>
-<script id="googlesitekit-user-data-js-extra">
-var _googlesitekitUserData = {"user":{"id":1,"email":"sumannayakyt@gmail.com","name":"Ganga Sagar TOURISM Team","picture":"https:\/\/lh3.googleusercontent.com\/a\/ACg8ocJcVr4_BeqENmExQPSdJ0-zP7m7UvEbk4SaWcNPCEgtdzLuKQ=s100","full_name":"Suman Nayak YT"},"connectURL":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/index.php?action=googlesitekit_connect&nonce=251eaed497","hasMultipleAdmins":false,"initialVersion":"1.142.0","isUserInputCompleted":false,"verified":true};
-</script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-datastore-user-c76b612b20a4d1ea2781.js" id="googlesitekit-datastore-user-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-datastore-ui-b46f8ff8d0f431237ac8.js" id="googlesitekit-datastore-ui-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-components-gm2-1f9aa347dfbcc93399e5.js" id="googlesitekit-components-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-widgets-bb76a1c5a149ee16485a.js" id="googlesitekit-widgets-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-notifications-86d5f7326de5ac167d14.js" id="googlesitekit-notifications-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-adminbar-c048e8e614fc061806e7.js" id="googlesitekit-adminbar-js" defer></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-modules-067dc309cdcda1a39b2d.js" id="googlesitekit-modules-js"></script>
-<script id="googlesitekit-modules-data-js-extra">
-var _googlesitekitModulesData = {"analytics-4":{"customDimensionsDataAvailable":{"googlesitekit_post_date":false,"googlesitekit_post_author":false,"googlesitekit_post_categories":false,"googlesitekit_post_type":false},"resourceAvailabilityDates":{"audience":[],"customDimension":[],"property":[]},"tagIDMismatch":false},"data_available_search-console":true,"data_available_analytics-4":true};
-</script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-modules-search-console-126bdca347282fef9fcd.js" id="googlesitekit-modules-search-console-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-modules-ads-9eb874e73b69cc77e625.js" id="googlesitekit-modules-ads-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-modules-analytics-4-bdacd75b9b64e64b9e46.js" id="googlesitekit-modules-analytics-4-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-modules-tagmanager-016ba677d98130c56c86.js" id="googlesitekit-modules-tagmanager-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-modules-adsense-64cc4d2004f5b4cb0798.js" id="googlesitekit-modules-adsense-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-modules-pagespeed-insights-c788a2937d888d62b918.js" id="googlesitekit-modules-pagespeed-insights-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-modules-sign-in-with-google-12ef012c3e650c5cec12.js" id="googlesitekit-modules-sign-in-with-google-js"></script>
 <script src="https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.25.10" id="elementor-webpack-runtime-js"></script>
 <script src="https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.25.10" id="elementor-frontend-modules-js"></script>
+<script src="https://www.gangasagar-tourism.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
 <script id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.25.10","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_optimized_control_loading":true,"e_onboarding":true,"e_css_smooth_scroll":true,"home_screen":true,"nested-elements":true,"editor_v2":true,"link-in-bio":true,"floating-buttons":true},"urls":{"assets":"https:\/\/www.gangasagar-tourism.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/www.gangasagar-tourism.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"87b9148687"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":5939,"title":"Unforgettable%20Ganga%20Sagar%20Mela%20Tour%20Package%20From%20Kolkata","excerpt":"","featuredImage":"https:\/\/www.gangasagar-tourism.com\/wp-content\/uploads\/2025\/01\/Ganga-Sagar-Mela-Tour-Package-1024x1024.jpg"},"user":{"roles":["administrator"]}};
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.25.10","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_optimized_control_loading":true,"e_onboarding":true,"e_css_smooth_scroll":true,"home_screen":true,"nested-elements":true,"editor_v2":true,"link-in-bio":true,"floating-buttons":true},"urls":{"assets":"https:\/\/www.gangasagar-tourism.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/www.gangasagar-tourism.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"bfd134d03c"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":1594,"title":"Kolkata%20To%20Ganga%20Sagar%20Tour%20Package%20%C2%BB%20%F0%9D%90%86%F0%9D%90%9A%F0%9D%90%A7%F0%9D%90%A0%F0%9D%90%9A%F0%9D%90%92%F0%9D%90%9A%F0%9D%90%A0%F0%9D%90%9A%F0%9D%90%AB%20%F0%9D%90%93%F0%9D%90%8E%F0%9D%90%94%F0%9D%90%91%F0%9D%90%88%F0%9D%90%92%F0%9D%90%8C","excerpt":"","featuredImage":"https:\/\/www.gangasagar-tourism.com\/wp-content\/uploads\/2024\/12\/Kolkata-To-Ganga-Sagar-Tour-Package-8145302135.webp"}};
 </script>
 <script src="https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.10" id="elementor-frontend-js"></script>
-<script id="elementor-admin-bar-js-before">
-var elementorAdminBarConfig = {"elementor_edit_page":{"id":"elementor_edit_page","title":"Edit with Elementor","href":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/post.php?post=5939&action=elementor","children":{"23":{"id":"elementor_edit_doc_23","title":"header","sub_title":"Header","href":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/post.php?post=23&action=elementor"},"24":{"id":"elementor_edit_doc_24","title":"footer","sub_title":"Footer","href":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/post.php?post=24&action=elementor"},"25":{"id":"elementor_site_settings","title":"Site Settings","sub_title":"Site","href":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/post.php?post=5939&action=elementor&active-document=4","class":"elementor-site-settings","parent_class":"elementor-second-section"},"26":{"id":"elementor_app_site_editor","title":"Theme Builder","sub_title":"Site","href":"https:\/\/www.gangasagar-tourism.com\/wp-admin\/admin.php?page=elementor-app&ver=3.25.10#site-editor\/promotion","class":"elementor-app-link","parent_class":"elementor-second-section"}}}};
-</script>
-<script src="https://www.gangasagar-tourism.com/wp-content/plugins/elementor/assets/js/elementor-admin-bar.min.js?ver=3.25.10" id="elementor-admin-bar-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-includes/js/hoverintent-js.min.js?ver=2.2.1" id="hoverintent-js-js"></script>
-<script src="https://www.gangasagar-tourism.com/wp-includes/js/admin-bar.min.js?ver=6.7.1" id="admin-bar-js"></script>
 <!-- end wp_footer -->
 </body>
 </html>
