@@ -1,72 +1,9 @@
-<style>
-    .hero_section_image-scroll-container-wrapper {
-        position: relative;
-        z-index: 1;
-        border-radius: 15px;
-        padding: 2px;
-    }
+<div class="hero_section_holidayseva_tour_package_name">
+    <h3>Unforgettable Kashmir Tour Package</h3>
+    by <strong><u><i>Holidayseva</i></u></strong>
+    Recommended by 95% travellers.
+</div>
 
-    .hero_section_image-scroll-container {
-        display: flex;
-        overflow-x: auto;
-        gap: 10px;
-        scroll-snap-type: x mandatory;
-    }
-
-    .hero_section_image-scroll-container::-webkit-scrollbar {
-        display: none;
-        object-fit: cover;
-
-    }
-
-    .hero_section_image-card {
-        width: 100%;
-        height: 25vh;
-        flex: 0 0 auto;
-        background: #f0f0f0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border-radius: 5px;
-        cursor: pointer;
-        scroll-snap-align: start;
-    }
-
-    .hero_section_image-card img {
-        width: 100%;
-        height: 100%;
-        object-fit:fill;
-        border-radius: 5px;
-    }
-
-    @media screen and (max-width: 768px) {
-        .hero_section_image-card {
-            height: 10vh;
-        }
-    }
-
-    .image-indicators {
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-        position: absolute;
-        top: 105%;
-        width: 100%;
-    }
-
-    .image-indicator {
-        width: 10px;
-        height: 10px;
-        background-color: #ededed;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    .image-indicator.active {
-        background-color: #ff0000;
-    }
-</style>
 
 <div class="hero_section_image-scroll-container-wrapper">
     <div class="hero_section_image-scroll-container">
@@ -74,7 +11,7 @@
         <div class="hero_section_image-card">
             <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/36/9e/ba/gangasagar.jpg?w=1000&h=-1&s=1" alt="Thumbnail 1">
         </div>
-        <div class="hero_section_image-card">
+        <div class="hero_section_image-4%ard">
             <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/2c/b5/ab/caption.jpg?w=1000&h=-1&s=1" alt="Thumbnail 2">
         </div>
         <div class="hero_section_image-card">
