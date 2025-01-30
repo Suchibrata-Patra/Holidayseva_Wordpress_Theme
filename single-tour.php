@@ -42,7 +42,7 @@
 
     @media screen and (max-width: 768px) {
         .hero_section_image-card {
-            height: 25vh;
+            height: 10vh;
         }
     }
 
