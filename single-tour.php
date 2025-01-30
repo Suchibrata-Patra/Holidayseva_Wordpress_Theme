@@ -48,6 +48,81 @@
 </div>
 
 
+<style>
+    .video-scroll-container {
+        display: flex;
+        overflow-x: auto;
+        padding: 10px;
+        gap: 10px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .video-scroll-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .video-card {
+        width: 180px;
+        height: 300px;
+        flex: 0 0 auto;
+        background: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        scroll-snap-align: start;
+    }
+
+    .video-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .video-lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .video-lightbox iframe {
+        width: 90%;
+        height: 75%;
+        border: none;
+    }
+
+    .video-lightbox .close-btn {
+        position: absolute;
+        top:90%;
+        right: 45%;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        /* z-index: 1010; */
+        background: rgba(0, 0, 0);
+        border-radius: 50%;
+        padding: 3px 17px;
+    }
+    .video-lightbox img{
+        position:absolute;
+        top:10px;
+        width:60%;
+    }
+
+    .video-lightbox .close-btn:hover {
+        background: rgba(255, 0, 0, 0.6);
+    }
+</style>
 
 <strong style="font-size:1.7rem; color:black; border-left: 5px solid red; border-radius: 5px; padding-left: 5px;">
     Know More &#8594;
