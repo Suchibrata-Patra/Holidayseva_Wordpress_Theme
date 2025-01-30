@@ -1,246 +1,142 @@
-<?php
-/**
- * The template for displaying single Tour posts.
- *
- * @package HolidaySeva
- *
- * Template Name: Tour
- */
+<style>
+    .hero_section_image-scroll-container-wrapper {
+        position: relative;
+        z-index: 1;
+        border-radius: 15px;
+        padding: 2px;
+    }
 
-get_header(); ?>
+    .hero_section_image-scroll-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        scroll-snap-type: x mandatory;
+    }
 
-<main id="primary" class="site-main">
-    <?php
-    while (have_posts()) :
-        the_post();
+    .hero_section_image-scroll-container::-webkit-scrollbar {
+        display: none;
+        object-fit: cover;
 
-        $post_id = get_the_ID();
+    }
 
-        // Collect data
-        $tour_cover_images = get_post_meta($post_id, '_tour_cover_images', true);
-        $tour_name = get_post_meta($post_id, '_tour_name', true);
-        $tour_description = get_post_meta($post_id, '_tour_description', true);
-        $tour_details = get_post_meta($post_id, '_tour_details', true);
-        $tour_location = get_post_meta($post_id, '_tour_location', true);
-        $tour_duration_days = get_post_meta($post_id, '_tour_duration_days', true);
-        $tour_duration_nights = get_post_meta($post_id, '_tour_duration_nights', true);
-        $day_plans = get_post_meta($post_id, '_day_plans', true) ?: [];
+    .hero_section_image-card {
+        width: 100%;
+        height: 60vh;
+        flex: 0 0 auto;
+        background: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        scroll-snap-align: start;
+    }
 
-        $tour_price = get_post_meta($post_id, '_tour_price', true);
-        $tour_offers = get_post_meta($post_id, '_tour_offers', true);
-        $tour_availability = get_post_meta($post_id, '_tour_availability', true);
-        $tour_highlights = get_post_meta($post_id, '_tour_highlights', true);
+    .hero_section_image-card img {
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+        border-radius: 5px;
+    }
 
-        $itinerary = get_post_meta($post_id, '_itinerary', true);
-        $included = get_post_meta($post_id, '_included', true);
-        $excluded = get_post_meta($post_id, '_excluded', true);
+    @media screen and (max-width: 768px) {
+        .hero_section_image-card {
+            height: 25vh;
+        }
+    }
 
-        $google_map_link = get_post_meta($post_id, '_google_map_link', true);
-        $reviews = get_post_meta($post_id, '_reviews', true);
-        $reviews = is_array($reviews) ? $reviews : [];
+    .image-indicators {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        position: absolute;
+        top: 105%;
+        width: 100%;
+    }
 
-        global $wpdb;
-        $table_name = $wpdb->prefix . 'custom_bookings'; $bookings =
-$wpdb->get_results( $wpdb->prepare("SELECT * FROM $table_name WHERE tour_id =
-  %d", $post_id) ); // Display data ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>
-        >
-        <header class="entry-header">
-            <h1 class="entry-title">
-                <?php echo esc_html($tour_name ? $tour_name : get_the_title()); ?>
-            </h1>
-            <div class="tour-thumbnail">
-                <?php echo get_the_post_thumbnail($post_id, 'large'); ?>
-            </div>
-        </header>
+    .image-indicator {
+        width: 10px;
+        height: 10px;
+        background-color: #ededed;
+        border-radius: 50%;
+        cursor: pointer;
+    }
 
-        <div class="entry-content">
+    .image-indicator.active {
+        background-color: #ff0000;
+    }
+</style>
 
-            <p>
-                <strong>Description:</strong>
-                <?php echo esc_html($tour_description); ?>
-            </p>
-            <p>
-                <strong>Location:</strong>
-                <?php echo esc_html($tour_location); ?>
-            </p>
-            <p>
-                <strong>Duration:</strong>
-                <?php echo esc_html("$tour_duration_days Days, $tour_duration_nights Nights"); ?>
-            </p>
-            <p>
-                <strong>Price:</strong>
-                <?php echo esc_html($tour_price); ?>
-            </p>
-            <p>
-                <strong>Availability:</strong>
-                <?php echo esc_html($tour_availability); ?>
-            </p>
-
-            <?php if (!empty($tour_highlights) && is_array($tour_highlights)) : ?>
-            <h3>Highlights:</h3>
-            <ul>
-                <?php foreach ($tour_highlights as $highlight) : ?>
-                <?php if (!empty($highlight)) : // Only display non-empty highlights ?>
-                <?php echo esc_html($highlight); ?>
-                |
-                <?php endif; ?>
-                <?php endforeach; ?>
-            </ul>
-            <?php endif; ?>
-
-            <?php if (!empty($day_plans) && is_array($day_plans)) : ?>
-            <h3>Day Plans:</h3>
-            <ul>
-                <?php foreach ($day_plans as $plans) : ?>
-                <?php if (!empty($plans)) : // Only display non-empty Plans ?>
-                <?php echo esc_html($plans); ?>
-                |
-                <?php endif; ?>
-                <?php endforeach; ?>
-            </ul>
-            <?php endif; ?>
-
-            <?php if (!empty($tour_cover_images) && is_array($tour_cover_images)) : ?>
-            <h3>Images:</h3>
-            <ul>
-                <?php foreach ($tour_cover_images as $image_url) : ?>
-                <?php if (!empty($image_url)) : // Only display non-empty images ?>
-                <li>
-                    <img src="<?php echo esc_url($image_url); ?>" alt="Tour Cover Image" />
-                </li>
-                <?php endif; ?>
-                <?php endforeach; ?>
-            </ul>
-            <?php endif; ?>
-
-            <?php if (!empty($itinerary) && is_array($itinerary)) : ?>
-            <h3>Itinerary</h3>
-            <ul>
-                <?php foreach ($itinerary as $plans) : ?>
-                <?php if (!empty($plans)) : // Only display non-empty Plans ?>
-                <?php echo esc_html($plans); ?>
-                |
-                <?php endif; ?>
-                <?php endforeach; ?>
-            </ul>
-            <?php endif; ?>
-
-            <?php if (!empty($included) && is_array($included)) : ?>
-            <h3>Included</h3>
-            <ul>
-                <?php foreach ($included as $items) : ?>
-                <?php if (!empty($items)) : // Only display non-empty Plans ?>
-                <?php echo esc_html($items); ?>
-                |
-                <?php endif; ?>
-                <?php endforeach; ?>
-            </ul>
-            <?php endif; ?>
-
-            <?php if (!empty($excluded) && is_array($excluded)) : ?>
-            <h3>Excluded</h3>
-            <ul>
-                <?php foreach ($excluded as $items) : ?>
-                <?php if (!empty($items)) : // Only display non-empty Plans ?>
-                <?php echo esc_html($items); ?>
-                |
-                <?php endif; ?>
-                <?php endforeach; ?>
-            </ul>
-            <?php endif; ?>
-
-            
-
-            <?php
-$tour_cover_images = get_post_meta(get_the_ID(), '_tour_cover_images', true);
-if (!empty($tour_cover_images) && is_array($tour_cover_images)) : ?>
-    <h3>Gallery:</h3>
-    <div class="gallery">
-        <?php foreach ($tour_cover_images as $image_url) :
-            $trimmed_url = trim($image_url);
-            if (!empty($trimmed_url)) : ?>
-                <img src="<?php echo esc_url($trimmed_url); ?>" alt="Tour Image" class="tour-image" />
-            <?php endif;
-        endforeach; ?>
-    </div>
-<?php endif; ?>
-
-            <?php if (!empty($reviews) && is_array($reviews)) : ?>
-            <h3>Reviews</h3>
-            <ul>
-            <?php if (!empty($reviews) && is_array($reviews)) : ?>
-    <h3>Reviews</h3>
-    <ul>
-        <?php foreach ($reviews as $review) : ?>
-            <?php if (!empty($review['name']) || !empty($review['content']) || !empty($review['score'])) : ?>
-                <li>
-                    <strong>Name:</strong> <?php echo esc_html($review['name']); ?><br>
-                    <strong>Score:</strong>
-                    <?php
-                    $score = intval($review['score']);
-                    // Display stars
-                    for ($i = 0; $i < $score; $i++) {
-                        echo '⭐';
-                    }
-                    ?><br>
-                    <strong>Content:</strong> <?php echo esc_html($review['content']); ?>
-                </li>
-            <?php endif; ?>
-        <?php endforeach; ?>
-    </ul>
-<?php else : ?>
-    <p>No reviews available for this tour.</p>
-<?php endif; ?>
-
-
-            </ul>
-            <?php endif; ?>
-
-            <?php if (!empty($bookings)) : ?>
-            <h3>Bookings:</h3>
-            <ul>
-                <?php foreach ($bookings as $booking) : ?>
-                <li>
-                    <?php echo esc_html($booking->customer_name . ' - ' .
-          $booking->booking_date . ' - ' . $booking->payment_status); ?>
-                </li>
-                <?php endforeach; ?>
-            </ul>
-            <?php else : ?>
-            <p>No bookings available for this tour.</p>
-            <?php endif; ?>
+<div class="hero_section_image-scroll-container-wrapper">
+    <div class="hero_section_image-scroll-container">
+        <!-- Images will be dynamically cloned -->
+        <div class="hero_section_image-card">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/36/9e/ba/gangasagar.jpg?w=1000&h=-1&s=1" alt="Thumbnail 1">
         </div>
-
-        <?php if (!empty($google_map_link)) : ?>
-    <h3>Google Map:</h3>
-    <div class="google-map-container">
-        <?php
-        echo wp_kses(
-            $google_map_link,
-            [
-                'iframe' => [
-                    'src'             => true,
-                    'width'           => true,
-                    'height'          => true,
-                    'style'           => true,
-                    'allowfullscreen' => true,
-                    'loading'         => true,
-                    'frameborder'     => true,
-                ],
-            ]
-        );
-        ?>
+        <div class="hero_section_image-card">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/2c/b5/ab/caption.jpg?w=1000&h=-1&s=1" alt="Thumbnail 2">
+        </div>
+        <div class="hero_section_image-card">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/68/2d/b6/gangasagar.jpg?w=1000&h=-1&s=1" alt="Thumbnail 3">
+        </div>
+        <div class="hero_section_image-card">
+            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/21/68/2d/b4/gangasagar.jpg?w=1000&h=-1&s=1" alt="Thumbnail 4">
+        </div>
+        <div class="hero_section_image-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSak2xZOdDWvOFSJlpCQ2YJHqamao7pzMNMsw&s" alt="Thumbnail 5">
+        </div>
+        <div class="hero_section_image-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDI9oFagkMhmDyJfwOUXStbnO9KzuMtYVXLg&s" alt="Thumbnail 6">
+        </div>
     </div>
-<?php else : ?>
-    <p>Google Map is not available for this tour.</p>
-<?php endif; ?>
+    <div class="image-indicators"></div>
+</div>
 
+<script>
+    const scrollContainer = document.querySelector('.hero_section_image-scroll-container');
+    const cards = Array.from(document.querySelectorAll('.hero_section_image-card'));
+    const indicatorsContainer = document.querySelector('.image-indicators');
 
-    </article>
-    <?php
-    endwhile;
-    ?>
-</main>
-<!-- #main -->
-<?php get_footer(); ?>
+    // Clone first and last slides for infinite scroll
+    const firstClone = cards[0].cloneNode(true);
+    const lastClone = cards[cards.length - 1].cloneNode(true);
+    scrollContainer.appendChild(firstClone);
+    scrollContainer.insertBefore(lastClone, cards[0]);
+
+    // Adjust initial scroll position to the first actual image
+    scrollContainer.scrollLeft = cards[0].offsetWidth;
+
+    // Create indicators
+    cards.forEach((_, index) => {
+        const indicator = document.createElement('div');
+        indicator.classList.add('image-indicator');
+        if (index === 0) indicator.classList.add('active');
+        indicator.addEventListener('click', () => {
+            scrollContainer.scrollTo({
+                left: (index + 1) * cards[0].offsetWidth,
+                behavior: 'smooth',
+            });
+        });
+        indicatorsContainer.appendChild(indicator);
+    });
+
+    // Update active indicator and handle infinite scroll
+    scrollContainer.addEventListener('scroll', () => {
+        const scrollPosition = scrollContainer.scrollLeft;
+        const containerWidth = cards[0].offsetWidth;
+
+        // Wrap around logic
+        if (scrollPosition >= (cards.length + 1) * containerWidth) {
+            scrollContainer.scrollLeft = containerWidth;
+        } else if (scrollPosition <= 0) {
+            scrollContainer.scrollLeft = cards.length * containerWidth;
+        }
+
+        // Update active indicator
+        const activeIndex = Math.round(scrollContainer.scrollLeft / containerWidth) - 1;
+        document.querySelectorAll('.image-indicator').forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === (activeIndex + cards.length) % cards.length);
+        });
+    });
+</script>
