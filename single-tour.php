@@ -21,7 +21,7 @@
 
     .hero_section_image-card {
         width: 100%;
-        height: 60vh;
+        height: 25vh;
         flex: 0 0 auto;
         background: #f0f0f0;
         display: flex;
