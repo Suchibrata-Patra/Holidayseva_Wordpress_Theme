@@ -41,7 +41,7 @@ get_header(); ?>
 
         global $wpdb;
         $table_name = $wpdb->prefix . 'custom_bookings'; $bookings =
-  $wpdb->get_results( $wpdb->prepare("SELECT * FROM $table_name WHERE tour_id =
+$wpdb->get_results( $wpdb->prepare("SELECT * FROM $table_name WHERE tour_id =
   %d", $post_id) ); // Display data ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>
         >
@@ -243,5 +243,4 @@ if (!empty($tour_cover_images) && is_array($tour_cover_images)) : ?>
     ?>
 </main>
 <!-- #main -->
-
 <?php get_footer(); ?>
