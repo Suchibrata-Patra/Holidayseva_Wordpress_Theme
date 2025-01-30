@@ -233,6 +233,348 @@
         });
     });
 </script>
+
+<!-- Include Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<div class="gangasagar-tour-content">
+    <strong class="itinerary-title">Tour Info</strong>
+</div>
+<div class="my_tour_info_accordion" style="font-family: poppins;color: black;">
+    <div class="my_tour_info_accordion-item active">
+        <div class="my_tour_info_accordion_title">
+            <div style="display: flex;">
+                <button style="background-color: red;border: none;color:white;border-radius: 50px;padding: 2px 7px;margin-right: 10px;font-weight: 800;margin-bottom: 3px;">Day<br>1</button><span style="margin-top:10px;">Arrival in Kolkata & Transfer to Ganga Sagar</span>
+            </div>
+            <span class="material-icons arrow-icon" style="color:black;background-color: rgb(245, 245, 245);border-radius: 50px ;font-weight: 200;padding: 7px;">keyboard_arrow_down</span>
+        </div>
+        <div class="my_tour_info_accordion-content">
+            <ul style="font-weight: 0.7rem !important; line-height: 0.8rem; margin-top: 1.03rem;">
+                <li style="font-weight: 0.7rem !important; line-height: 0.8rem;"> <strong style="font-weight: 1rem;">Morning :</strong> Pick up from Kolkata (Airport/Hotel/Station).</li>
+                <li style="font-weight: 0.7rem !important; line-height: 0.8rem;"> <strong style="font-weight: 1rem;">Journey : </strong> Scenic drive to Kakdwip, followed by a ferry ride to Ganga Sagar Island.</li>
+                <li style="font-weight: 0.7rem !important; line-height: 0.8rem;"> <strong style="font-weight: 1rem;">Evening :</strong> Visit <strong>Kapil Muni Ashram,</strong>  the heart of Ganga Sagar.
+                </li>
+                <li style="font-weight: 0.7rem !important; line-height: 0.8rem;"> <strong style="font-weight: 1rem;">Overnight Stay :</strong>  At a comfortable accommodation near Ganga Sagar.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="my_tour_info_accordion-item">
+        <div class="my_tour_info_accordion_title">
+            <div style="display: flex;">
+                <button style="background-color: red;border: none;color:white;border-radius: 50px;padding: 5px 7px;margin-right: 10px;font-weight: 800;margin-bottom: 3px;">Day<br>2</button><span style="margin-top:10px;">Visit the Ganga Sagar Mela</span>
+            </div>
+            <span class="material-icons arrow-icon" style="color:black;background-color: rgb(245, 245, 245);border-radius: 50px ;font-weight: 200;padding: 7px;">keyboard_arrow_down</span>
+        </div>
+        <div class="my_tour_info_accordion-content">
+            <ul style="font-weight: 0.7rem !important; line-height: 0.8rem; margin-top: 1.03rem;">
+                <li style="font-weight: 0.7rem !important; line-height: 0.8rem;"> <strong style="font-weight: 1rem;">Morning :</strong> Participate in the holy rituals, take a dip in the sacred waters, and explore the vibrant mela.</li>
+                <li style="font-weight: 0.7rem !important; line-height: 0.8rem;"> <strong style="font-weight: 1rem;">Journey : </strong> After breakfast,lunch back to kolkata with sweet memory of Ganga Sagar.</li>
+                    </ul>
+                </div>
+    </div>
+
+    
+</div>
+
+<style>
+    .my_tour_info_accordion {
+        font-family: poppins;
+        width: 98%;
+        max-width: 600px;
+        margin: 0px 0px 0px 1px !important;
+    }
+
+    .my_tour_info_accordion-item {
+        font-family: poppins;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .my_tour_info_accordion_title {
+        font-family: poppins;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        /* padding: 1px 0px; */
+        font-size: 16px;
+        /* margin-top:10px; */
+        font-weight: 500!important;
+        cursor: pointer;
+        text-align: left;
+        transition: background 0.1s;
+    }
+
+    .my_tour_info_accordion_title:hover {
+        font-family: poppins;
+        background-color: rgb(252,252,252);
+        text-decoration: none;
+    }
+
+    .arrow-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .my_tour_info_accordion-item.active .arrow-icon {
+        transform: rotate(-90deg);
+    }
+
+    .my_tour_info_accordion-content {
+        font-family: poppins;
+        display: block;
+        max-height: 0;
+        margin-top: 0px;
+        /* margin-bottom: 10px; */
+        font-size: 14px;
+        color: #000000;
+        margin-left:50px;
+        overflow: hidden;
+        transition: max-height 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), padding 0.3s ease;
+    }
+
+    .my_tour_info_accordion-item.active .my_tour_info_accordion-content {
+        font-family: poppins;
+        max-height: 700px;
+        padding: 0px 0;
+    }
+    .material-icons arrow-icon :hover{
+        text-decoration: underline;
+    }
+</style>
+
+<!-- Smooth JavaScript -->
+<script>
+    const items = document.querySelectorAll('.my_tour_info_accordion-item');
+
+    items.forEach(item => {
+        const title = item.querySelector('.my_tour_info_accordion_title');
+        const content = item.querySelector('.my_tour_info_accordion-content');
+
+        title.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all accordion items
+            document.querySelectorAll('.my_tour_info_accordion-item').forEach(i => {
+                i.classList.remove('active');
+                i.querySelector('.my_tour_info_accordion-content').style.maxHeight = null;
+            });
+
+            // Toggle the clicked item
+            if (!isActive) {
+                item.classList.add('active');
+                content.style.maxHeight = `${content.scrollHeight}px`; // Dynamically set max-height
+            }
+        });
+    });
+</script>
+
+<!-- Include Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<div class="gangasagar-tour-content">
+    <strong class="itinerary-title">FAQ</strong>
+</div>
+<div class="my_custom_accordion" style="font-family: poppins;color: black;">
+    <div class="my_custom_accordion-item">
+        <div class="my_custom_accordion_title">
+            What's included
+            <span class="material-icons arrow-icon" style="color:black;font-weight: 200;">keyboard_arrow_down</span>
+        </div>
+        <div class="my_custom_accordion-content">
+            <ul>
+                <b>1. Transportation</b>
+                <li>AC vehicle for the entire journey (Kolkata ↔ Lot 8 ↔ Ganga Sagar).</li>
+                <li>Ferry Tickets (Lot 8 ↔ Kachuberia).</li>
+                <li>Road transfers within Ganga Sagar (Kachuberia ↔ Hotel ↔ Kapil Muni Temple).</li>
+                <b>2. Meals</b>
+                <li>Day 1: Dinner.</li>
+                <li>Day 2: Breakfast.</li>
+                <b>3. Assistance</b>
+                <li>Professional guide to assist throughout the trip.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="my_custom_accordion-item">
+        <div class="my_custom_accordion_title">
+            Itinerary
+            <span class="material-icons arrow-icon" style="color:black;font-weight: 200;">keyboard_arrow_down</span>
+        </div>
+        <div class="my_custom_accordion-content">
+            <p><strong>05:30 AM</strong>: Pickup from Kolkata and transfer to Harwood Point.</p>
+            <p><strong>08:30 AM</strong>: Ferry ride to Kachuberia and road transfer to Ganga Sagar.</p>
+            <p><strong>11:00 AM</strong>: Visit Kapil Muni Temple and take a holy dip in the Ganges.</p>
+            <p><strong>01:00 PM</strong>: Lunch at a local restaurant in Ganga Sagar.</p>
+            <p><strong>02:00 PM</strong>: Visit the Ganga Sagar Mela ground and explore local markets.</p>
+            <p><strong>04:00 PM</strong>: Return journey to Kolkata, via ferry and AC vehicle.</p>
+            <p><strong>07:30 PM</strong>: Drop-off in Kolkata.</p>
+        </div>
+    </div>
+
+    <div class="my_custom_accordion-item">
+        <div class="my_custom_accordion_title">
+            Departure and return
+            <span class="material-icons arrow-icon" style="color:black;font-weight: 200;">keyboard_arrow_down</span>
+        </div>
+        <div class="my_custom_accordion-content">
+            <button style="background-color: #e0e0e0;color: #202020;padding:7px 13px;font-size:13px;font-weight:500;border-radius:3px;margin-top: 5px;">Start</button> Multiple pickup locations offered in Kolkata.
+            <br>
+            <button style="background-color: #e0e0e0;color: #202020;padding:7px 13px;font-size:13px;font-weight:500;border-radius:3px;margin-top: 5px;">End</button> Drop-off at selected location in Kolkata.
+        </div>
+    </div>
+
+    <div class="my_custom_accordion-item">
+        <div class="my_custom_accordion_title">
+            Accessibility
+            <span class="material-icons arrow-icon" style="color:black;font-weight: 200;">keyboard_arrow_down</span>
+        </div>
+        <div class="my_custom_accordion-content">
+            <ul>
+                <li>Not wheelchair accessible</li>
+                <li>Near public transportation</li>
+                <li>Infants must sit on laps</li>
+            </ul>
+            If you have questions about accessibility, we’d be happy to help. Just call the number below.<br>
+            +91 8145302135
+        </div>
+    </div>
+
+    <div class="my_custom_accordion-item">
+        <div class="my_custom_accordion_title">
+            Additional Information
+            <span class="material-icons arrow-icon" style="color:black;font-weight: 200;">keyboard_arrow_down</span>
+        </div>
+        <div class="my_custom_accordion-content">
+            <ul>
+                <li>Confirmation will be received at time of booking</li>
+                <li>Most travellers can participate</li>
+                <li>This experience requires good weather. If it’s cancelled due to poor weather, you’ll be offered a different date or a full refund</li>
+                <li>This experience requires a minimum number of travellers. If it’s cancelled because the minimum isn’t met, you’ll be offered a different date/experience or a full refund</li>
+                <li>This tour/activity will have a maximum of 15 travellers</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="my_custom_accordion-item">
+        <div class="my_custom_accordion_title">
+            Cancellation Policy
+            <span class="material-icons arrow-icon" style="color:black;font-weight: 200;">keyboard_arrow_down</span>
+        </div>
+        <div class="my_custom_accordion-content">
+            For a full refund, cancel at least 24 hours in advance of the start date of the experience.
+        </div>
+    </div>
+
+    <div class="my_custom_accordion-item">
+        <div class="my_custom_accordion_title">
+            Help
+            <span class="material-icons arrow-icon" style="color:black;font-weight: 200;">keyboard_arrow_down</span>
+        </div>
+        <div class="my_custom_accordion-content">
+            If you have questions about this tour or need help making your booking, we'd be happy to help.<br>
+            8145302135
+        </div>
+    </div>
+</div>
+
+<!-- Smooth CSS -->
+<style>
+    .my_custom_accordion {
+        font-family: poppins;
+        width: 98%;
+        max-width: 600px;
+        margin: 10px 0px 0px 10px !important;
+    }
+
+    .my_custom_accordion-item {
+        font-family: poppins;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .my_custom_accordion_title {
+        font-family: poppins;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        padding: 1px 0px;
+        font-size: 16px;
+        margin-top:10px;
+        font-weight: 500;
+        cursor: pointer;
+        text-align: left;
+        transition: background 0.1s;
+    }
+
+    .my_custom_accordion_title:hover {
+        font-family: poppins;
+        background-color: rgb(252,252,252);
+        text-decoration: underline;
+    }
+
+    .arrow-icon {
+        transition: transform 0.3s ease;
+    }
+
+    .my_custom_accordion-item.active .arrow-icon {
+        transform: rotate(-90deg);
+    }
+
+    .my_custom_accordion-content {
+        font-family: poppins;
+        display: block;
+        max-height: 0;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        padding: 0 0px;
+        font-size: 14px;
+        color: #000000;
+        overflow: hidden;
+        transition: max-height 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), padding 0.3s ease;
+    }
+
+    .my_custom_accordion-item.active .my_custom_accordion-content {
+        font-family: poppins;
+        max-height: 700px;
+        padding: 0px 0;
+    }
+    .material-icons arrow-icon :hover{
+        text-decoration: underline;
+    }
+</style>
+
+<!-- Smooth JavaScript -->
+<script>
+    const accordion_items = document.querySelectorAll('.my_custom_accordion-item');
+
+    accordion_items.forEach(item => {
+        const title = item.querySelector('.my_custom_accordion_title');
+        const content = item.querySelector('.my_custom_accordion-content');
+
+        title.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all accordion accordion_items
+            document.querySelectorAll('.my_custom_accordion-item').forEach(i => {
+                i.classList.remove('active');
+                i.querySelector('.my_custom_accordion-content').style.maxHeight = null;
+            });
+
+            // Toggle the clicked item
+            if (!isActive) {
+                item.classList.add('active');
+                content.style.maxHeight = `${content.scrollHeight}px`; // Dynamically set max-height
+            }
+        });
+    });
+</script>
+
 <div class="gangasagar-tour-content">
     <strong class="itinerary-title">Reviews  &#8594;</strong>
 </div><div class="card-section">
@@ -475,3 +817,4 @@
         });
     }
 </script>
+
