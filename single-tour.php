@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/Assets/TourDetailsEntry.css">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/Assets/Centreal_styling.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/Assets/Central_styling.css">
 
 <div class="holidayseva_Theme_Main_Wrapper">
     <div class="heading_container">
