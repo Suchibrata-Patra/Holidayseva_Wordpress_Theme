@@ -17,3 +17,8 @@
 .main_package_name{
     color: var(--holidayseva_black);
 }
+
+.holidayseva_Holidays_Main_Wrapper{
+    padding-left:5%;
+    padding-right: 5%;
+}
