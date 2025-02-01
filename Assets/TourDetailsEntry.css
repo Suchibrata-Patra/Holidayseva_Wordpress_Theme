@@ -1,7 +1,7 @@
 :root{
  --holidayseva_black:rgb(0,0,0);
  --holidayseva-white:rgb(255,255,255);
- --holidayseva_grey_color:#ececec;
+ --holidayseva_grey_color:grey;
  --holidayseva_light_grey:rgb(240, 240, 240);
  --holidayseva_dark_grey:rgb(120, 120, 120);
  --holidayseva_blue_primary:#2980b9;
@@ -29,10 +29,51 @@
     gap: 10px;
     list-style-type:none;
     padding-left: 0px;
+    color: var(--holidayseva_dark_grey);
 }
 .quickpanel_buttons{
-    border: 1px solid var(--holidayseva_black);
+    border: 1px solid var(--holidayseva_dark_grey);
     background:none;
-    padding: 3px 5px;
-    border-radius: 5px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    color: var(--holidayseva_dark_grey);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+.featured-image {
+    grid-row: span 2;
+}
+.package-highlights {
+    background: #ffe4b5;
+    padding: 10px;
+    border-radius: 8px;
+}
+.video {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.activities, .property-photos {
+    display: flex;
+    flex-direction: column;
+}
+.grid-item {
+    border-radius: 8px;
+    overflow: hidden;
 }
