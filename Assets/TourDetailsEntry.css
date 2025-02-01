@@ -19,8 +19,7 @@
 }
 
 .holidayseva_Holidays_Main_Wrapper{
-    /* width: 80%; */
     margin-left:5%;
     margin-right: 5%;
-    background-color: #16404d;
+    background-color: var(--holidayseva_grey_color);
 }
