@@ -41,11 +41,12 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 10px;
     width: 100%;
     max-width: 1200px;
+    height: 300px;
     margin: auto;
 }
 .featured-image {
@@ -56,6 +57,10 @@
     padding: 10px;
     border-radius: 8px;
 }
+.package-highlights ul{
+    padding-left: 0px;
+}
+
 .video {
     background: #000;
     display: flex;
@@ -63,7 +68,7 @@
     justify-content: center;
     color: white;
 }
-.grid-item img {
+.tour_page_grid_item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -73,7 +78,7 @@
     display: flex;
     flex-direction: column;
 }
-.grid-item {
+.tour_page_grid_item {
     border-radius: 8px;
     overflow: hidden;
 }

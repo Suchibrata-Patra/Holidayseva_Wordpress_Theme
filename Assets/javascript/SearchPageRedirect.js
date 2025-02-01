@@ -17,7 +17,6 @@
         }
     });
 
-
     // Voice Search Functionality
     const searchInput = document.getElementById('searchInput');
     const micButton = document.getElementById('micButton');
@@ -57,7 +56,4 @@
         alert('Speech Recognition API is not supported in your browser.');
     }
 
-
-
     /// Modified Fuzzy Logic
-    
