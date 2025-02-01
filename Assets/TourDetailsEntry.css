@@ -1,8 +1,9 @@
 :root{
  --holidayseva_black:rgb(0,0,0);
  --holidayseva-white:rgb(255,255,255);
- --holidayseva_grey_color:#bdc3c7;
- --holidayseva_grey:rgb(120, 120, 120);
+ --holidayseva_grey_color:#ececec;
+ --holidayseva_light_grey:rgb(240, 240, 240);
+ --holidayseva_dark_grey:rgb(120, 120, 120);
  --holidayseva_blue_primary:#2980b9;
  --holidayseva_blue_light:#2980b9;
  --holidayseva_blue_darker:#34495e;
@@ -19,7 +20,19 @@
 }
 
 .holidayseva_Holidays_Main_Wrapper{
-    margin-left:5%;
-    margin-right: 5%;
-    background-color: var(--holidayseva_grey_color);
+    margin-left:7%;
+    margin-right:7%;
+}
+
+.quick_details_navigation_bar ul{
+    display: flex;
+    gap: 10px;
+    list-style-type:none;
+    padding-left: 0px;
+}
+.quickpanel_buttons{
+    border: 1px solid var(--holidayseva_black);
+    background:none;
+    padding: 3px 5px;
+    border-radius: 5px;
 }
