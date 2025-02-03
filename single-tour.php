@@ -102,7 +102,7 @@
             <div class="tour_page_grid_highlights_items">
                 <ul style="font-size:13px;">
                     <li>
-                        <div style="display:flex;line-height: 1rem;">
+                        <div style="display:flex;">
                             <span class="material-symbols-outlined" style="font-size:15px;line-height: 1rem;">
                                 check_circle
                                 </span> Gulmarg Gondola Cable Car..
