@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/TourDetailsEntry.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/Central_styling.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
 
-<!-- <link rel="stylesheet" href="Assets/Central_styling.css">
-<link rel="stylesheet" href="Assets/TourDetailsEntry.css"> -->
+<!-- <link rel="stylesheet" href="Assets/Central_styling.css"> -->
+<!-- <link rel="stylesheet" href="Assets/TourDetailsEntry.css"> -->
 
 <div class="main_search_filter_container" style="background-color: #0a223d; margin:0px -8px 10px -8px !important;padding:3px;">
     <ul style="display: flex;list-style:none;gap:20px;margin-left:40px;">
