@@ -17,7 +17,7 @@
 <div class="holidayseva_Holidays_Main_Wrapper">
     <div class="heading_container">
     <span class="main_package_name holidayseva_h2">
-        Most Wanted Kashmir Package
+        Most Wanted Kashmir Packages
     </span>
     <div class="quick_details_navigation_bar">
         <ul>
