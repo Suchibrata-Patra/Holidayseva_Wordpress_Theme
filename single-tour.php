@@ -5,6 +5,15 @@
 <!-- <link rel="stylesheet" href="Assets/Central_styling.css">
 <link rel="stylesheet" href="Assets/TourDetailsEntry.css"> -->
 
+<div class="main_search_filter_container" style="background-color: #0a223d; margin:0px -8px 10px -8px !important;padding:3px;">
+    <ul style="display: flex;list-style:none;gap:20px;margin-left:40px;">
+        <li style="font-size: 25px!important;"><button style="background:#233951 ;color:#0188f8;border: none;padding: 7px 20px;border-radius: 7px;">STATING FORM <br> <span style="color:white;">New Delhi</span></button></li>
+        <li style="font-size: 25px!important;"><button style="background:#233951 ;color:#0188f8;border: none;padding: 7px 20px;border-radius: 7px;">TRAVELLING ON<br> <span style="color:white;">Wed, 2 Apr 2025</span></button></li>
+        <li style="font-size: 25px!important;"><button style="background:#233951 ;color:#0188f8;border: none;padding: 7px 20px;border-radius: 7px;">ROOM & GUESTS<br> <span style="color:white;">2 Adults</span></button></li>
+        <li style="font-size: 25px!important;"><button style="background: linear-gradient(90deg, #50affd, #065bf2);color:#ffffff;border: none;padding: 10px 35px;border-radius: 50px;font-weight:400;font-size:20px;">Search</button></li>
+    </ul>
+</div>
+
 <div class="holidayseva_Holidays_Main_Wrapper">
     <div class="heading_container">
     <span class="main_package_name holidayseva_h2">
@@ -15,27 +24,134 @@
             <li><button class="quickpanel_buttons">Customizable</button></li>
             <li><button class="quickpanel_buttons">6N/7D</button></li>
             <li>1N Srinagar Houseboat</li>
-            <li>2N Pahalgam</li>
-            <li>2N Srinagar</li>
+            <li class="holidayseva_header_navbar_with_ul">2N Pahalgam</li>
+            <li class="holidayseva_header_navbar_with_ul">2N Srinagar</li> 
         </ul>
     </div>
     </div>
     <div class="grid-container">
-        <div class="tour_page_grid_item featured-image">
-            <img src="https://cdn.pixabay.com/photo/2023/12/16/00/06/mountain-8451604_640.jpg" alt="Featured">
+        <div class="image-container">
+            <img src="/Assets/Images/Local_Storage_only/House-boat.avif" alt="Featured">
+            <div class="image-overlay">
+                <a href="#" class="overlay-button">
+                    <span class="icon"></span> VIEW GALLERY →
+                </a>
+            </div>
         </div>
-        <div class="tour_page_grid_item package-highlights holidayseva_h6">
+        
+<style>
+   .image-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    /* display: block; */
+    border-radius: 7px;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom:1%;
+    left:20%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 50px;
+    border: 1px solid grey;
+    text-align: center;
+}
+
+.overlay-button {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.overlay-button:hover {
+    text-decoration: underline;
+}
+
+
+</style>      
+
+                
+
+        <!-- <div class="tour_page_grid_item package-highlights holidayseva_h6">
             <h3>Package Highlights</h3>
             <ul>
                 <li>Gulmarg Gondola Cable Car Ride</li>
                 <li>Photoshoot in Kashmiri Attire</li>
                 <li>Day Excursion to Sonmarg</li>
+                <li>Day Excursion to Sonmarg</li>
+                <li>Day Excursion to Sonmarg</li>
+                <li>Day Excursion to Sonmarg</li>
+                <li>Day Excursion to Sonmdsljklarg</li>
             </ul>
-            <img src="https://cdn.pixabay.com/photo/2023/12/16/00/06/mountain-8451604_640.jpg">
+            <center><img src="https://cdn.pixabay.com/photo/2023/12/16/00/06/mountain-8451604_640.jpg" style="width:96%;height:35%;border-radius:2px;margin-top:15px;border-radius:5px;"></center>
+        </div> -->
+
+        <div class="tour_page_grid_item package-highlights" style="border-radius: 5px;background-color: #fff0da;border: 1px solid #ffddaa;">
+            <button id="tour_package_highilights_button">PACKAGE HIGHLIGHTS</button>
+            <div class="tour_page_grid_highlights_items">
+                <ul style="font-size:13px;">
+                    <li>
+                        <div style="display:flex;line-height: 0.5rem;">
+                            <span class="material-symbols-outlined" style="font-size:15px;line-height: 0.5rem;">
+                                check_circle
+                                </span> Gulmarg Gondola Cable Car..
+                        </div>
+                        <span class="tour_highlights_display_day">Day 2 - Gulmarg</span>
+                    </li>
+                    <li> <div style="display:flex;">
+                        <span class="material-symbols-outlined" style="font-size:15px;line-height: 0.5rem;">
+                            check_circle
+                            </span> Gulmarg Gondola Cable Car ..
+                    </div>
+                        <span class="tour_highlights_display_day">Day 1 - Srinagar Houseboat</span>
+                    </li>
+                    <li> <div style="display:flex;">
+                        <span class="material-symbols-outlined" style="font-size:15px;line-height: 0.5rem;">
+                            check_circle
+                            </span> Gulmarg Gondola Cable Car ..
+                    </div>
+                        <span class="tour_highlights_display_day">Day 6 - Srinagar</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="tour_page_grid_highlights_items">
+                <span class="holidayseva_h6" style="color:#008cff;font-weight: 500;">View All Highlights</span>
+                <div class="tour_page_video_highlights" style="margin-top: 10px;">
+                    <img src="https://hldak.mmtcdn.com/prod-s3-activity-templates/activitiesImagesFinal/activity/XGU/ACT10000000000371_3.jpeg">
+                </div>
+            </div>
         </div>
-        <div class="tour_page_grid_item video">Video Placeholder</div>
+
+        <!-- <div class="tour_page_grid_item video">Video Placeholder</div> -->
         <div class="tour_page_grid_item activities">
-            <img src="activities.jpg" alt="Activities & Sightseeing">
+            <div class="topight_top_video" style="padding-bottom:5px;">
+                <iframe width="225px" height="auto" src="https://www.youtube.com/embed/0K0cDY7miEc" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
+            <div class="topight_bottom_video" style="padding-top:5px;">
+                <img src="https://cdn.pixabay.com/photo/2023/12/16/00/06/mountain-8451604_640.jpg" alt="">
+                <div class="overlay">Activities & Sightseeing</div>
+
+            </div>
+            <!-- <img src="https://cdn.pixabay.com/photo/2023/12/16/00/06/mountain-8451604_640.jpg" alt="Activities & Sightseeing"> -->
         </div>
+
+        <div class="tour_page_grid_item activities">
+            <img src="https://r1imghtlak.mmtcdn.com/c2a2b289-4950-4e04-947e-68416babcc67.jpg" alt="Activities & Sightseeing">
+            <div class="overlay">Property Photos</div>
+        </div>
+        
     </div>
 </div>
+

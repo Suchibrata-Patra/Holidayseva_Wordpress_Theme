@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/suchibratapatra/Desktop/wp_theme/Assets",
-      "program": "/Users/suchibratapatra/Desktop/wp_theme/Assets/build/Debug/outDebug"
+      "cwd": "/Users/suchibratapatra/Desktop/wp_theme",
+      "program": "/Users/suchibratapatra/Desktop/wp_theme/build/Debug/outDebug"
     }
   ]
 }
