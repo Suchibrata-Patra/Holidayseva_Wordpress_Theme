@@ -102,22 +102,22 @@
             <div class="tour_page_grid_highlights_items">
                 <ul style="font-size:13px;">
                     <li>
-                        <div style="display:flex;line-height: 0.8rem;">
-                            <span class="material-symbols-outlined" style="font-size:15px;line-height: 0.8rem;">
+                        <div style="display:flex;line-height: 1rem;">
+                            <span class="material-symbols-outlined" style="font-size:15px;line-height: 1rem;">
                                 check_circle
                                 </span> Gulmarg Gondola Cable Car..
                         </div>
                         <span class="tour_highlights_display_day">Day 2 - Gulmarg</span>
                     </li>
                     <li> <div style="display:flex;">
-                        <span class="material-symbols-outlined" style="font-size:15px;line-height: 0.8rem;">
+                        <span class="material-symbols-outlined" style="font-size:15px;line-height: 1rem;">
                             check_circle
                             </span> Gulmarg Gondola Cable Car ..
                     </div>
                         <span class="tour_highlights_display_day">Day 1 - Srinagar Houseboat</span>
                     </li>
                     <li> <div style="display:flex;">
-                        <span class="material-symbols-outlined" style="font-size:15px;line-height: 0.8rem;">
+                        <span class="material-symbols-outlined" style="font-size:15px;line-height: 1rem;">
                             check_circle
                             </span> Gulmarg Gondola Cable Car ..
                     </div>
