@@ -80,7 +80,7 @@
                 </ul>
             </div>
             <div class="tour_page_grid_highlights_items">
-                <span class="holidayseva_h6" style="color:#008cff;font-weight: 500;">View All Highlights</span>
+                <span class="holidayseva_h6" style="color:#008cff;font-weight: 500;">VIEW ALL HIGHLIGHTS</span>
                 <div class="tour_page_video_highlights" style="margin-top: 10px;">
                     <img
                         src="https://hldak.mmtcdn.com/prod-s3-activity-templates/activitiesImagesFinal/activity/XGU/ACT10000000000371_3.jpeg">
