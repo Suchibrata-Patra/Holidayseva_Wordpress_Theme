@@ -110,7 +110,7 @@
             <div class="overlay">Property Photos</div>
         </div>
     </div>
-    <div class="main_header_wrapper_navigation_bar">
+    <div class="main_header_wrapper_navigation_bar" style="color:black;">
         <ul style="display:flex;flex-direction:column;gap:10px;">
             <li>ITINERARY</li>
             <li>POLICIES</li>
