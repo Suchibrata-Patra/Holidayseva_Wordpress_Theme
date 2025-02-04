@@ -111,7 +111,7 @@
         </div>
     </div>
     <div class="main_header_wrapper_navigation_bar" style="color:black;">
-        <ul style="display:flex;flex-direction:column;gap:10px;">
+        <ul style="display:flex;gap:10px;">
             <li>ITINERARY</li>
             <li>POLICIES</li>
             <li>SUMMARY</li>
