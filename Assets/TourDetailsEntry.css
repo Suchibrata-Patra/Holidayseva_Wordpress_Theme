@@ -53,7 +53,7 @@
     grid-template-rows: 330px;
     gap: 10px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     height: 0px;
     margin: auto;
 }
@@ -189,3 +189,8 @@
     text-decoration: underline;
 }
 
+
+.heading_container{
+    position: sticky;
+  top: 0;
+}
