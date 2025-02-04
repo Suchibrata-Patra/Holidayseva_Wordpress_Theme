@@ -25,7 +25,7 @@
 </div>
 
 
-<div class="holidayseva_Holidays_Main_Wrapper" style="border:2px solid black;">
+<div class="holidayseva_Holidays_Main_Wrapper">
     <div class="heading_container" style="position:sticky!important;top:0!important;padding:3px;background-color:white;z-index:10;">
         <span class="main_package_name holidayseva_h2">
             Most Wanted Kashmir Packages
@@ -40,7 +40,7 @@
             </ul>
         </div>
     </div>
-    <div class="grid-container">
+    <div class="grid-container"  style="border:2px solid black;">
         <div class="image-container">
             <!-- <img src="/Assets/Images/Local_Storage_only/House-boat.avif" alt="Featured"> -->
             <img src="<?php echo get_template_directory_uri();?>/Assets/Images/Local_Storage_only/House-boat.avif" alt="Featured">
