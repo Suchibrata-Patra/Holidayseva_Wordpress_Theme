@@ -24,10 +24,6 @@
     </ul>
 </div>
 
-<div class="container_style_modiifed">
-    Things to be develoepd by the model of the thngs of the thigs of the model
-</div>
-
 <div class="holidayseva_Holidays_Main_Wrapper">
     <div class="heading_container" style="position:sticky!important;top:0!important;padding:3px;background-color:white;z-index:10;">
         <span class="main_package_name holidayseva_h2">
