@@ -42,8 +42,8 @@
 <div class="holidayseva_Holidays_Main_Wrapper">
     <div class="grid-container">
         <div class="image-container">
-            <img src="/Assets/Images/Local_Storage_only/House-boat.avif" alt="Featured">
-            <!-- <img src="<?php echo get_template_directory_uri();?>/Assets/Images/Local_Storage_only/House-boat.avif" alt="Featured"> -->
+            <!-- <img src="/Assets/Images/Local_Storage_only/House-boat.avif" alt="Featured"> -->
+            <img src="<?php echo get_template_directory_uri();?>/Assets/Images/Local_Storage_only/House-boat.avif" alt="Featured">
             <div class="image-overlay">
                 <a href="#" class="overlay-button">
                     <span class="icon"></span> VIEW GALLERY →
