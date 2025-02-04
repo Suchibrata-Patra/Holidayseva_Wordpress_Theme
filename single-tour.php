@@ -23,7 +23,7 @@
     </ul>
 </div>
 
-<div class="holidayseva_Holidays_Main_Wrapper" style="display:inline-block;">
+<div class="holidayseva_Holidays_Main_Wrapper">
     <div class="heading_container" style="position:sticky!important;top:0!important;padding:3px;background-color:white;z-index:10;">
         <span class="main_package_name holidayseva_h2">
             Most Wanted Kashmir Packages
@@ -38,7 +38,7 @@
             </ul>
         </div>
     </div>
-    <div class="grid-container">
+    <div class="grid-container" style="display:inline-block;">
         <div class="image-container">
             <!-- <img src="/Assets/Images/Local_Storage_only/House-boat.avif" alt="Featured"> -->
             <img src="<?php echo get_template_directory_uri(); ?>/Assets/Images/Local_Storage_only/House-boat.avif" alt="Featured">
@@ -109,7 +109,5 @@
             <div class="overlay">Property Photos</div>
         </div>
     </div>
-</div>
-<br>
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nisi, voluptatem vitae veritatis repellendus, asperiores iure enim quis laborum, modi hic culpa dolore voluptate minima. Repudiandae numquam cumque, voluptatibus similique iusto sint illum eligendi voluptatum. Necessitatibus recusandae voluptatibus sequi atque fugiat dolorem dolorum neque. Pariatur, optio dolorum. Similique odio est aut, aspernatur perspiciatis facilis ipsum inventore facere! Ab, nostrum nihil placeat, praesentium eos eveniet quidem officia soluta impedit similique illum, pariatur commodi veniam id esse labore velit perferendis minus. Tempora laborum perferendis reprehenderit blanditiis et, soluta id, iste culpa voluptas aliquid dignissimos fuga facilis praesentium cumque modi sed, debitis veritatis sit deserunt aliquam. Nobis recusandae nemo iusto quibusdam error quam tempore, animi blanditiis consequuntur dolorum ad, iure asperiores facilis cupiditate facere et modi hic ipsum illum minima laborum! Earum hic esse assumenda et ex perferendis consectetur error praesentium obcaecati? Debitis optio fuga veritatis hic nisi. Magnam inventore numquam sed! Voluptatem, ullam esse. At, laudantium velit omnis aut accusantium optio fuga, fugit voluptates sequi distinctio quis amet corrupti, itaque odit. Ipsa fugit adipisci dolorum odio. Repellat recusandae magnam eius ab dolore quibusdam, temporibus quasi veritatis fugiat iure aut harum ratione atque saepe consequatur quis sit minima asperiores quaerat mollitia amet! Officiis?
 </div>
