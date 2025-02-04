@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/TourDetailsEntry.css">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/Central_styling.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/TourDetailsEntry.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/Central_styling.css">
 <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -42,7 +42,7 @@
     <div class="grid-container">
         <div class="image-container">
             <!-- <img src="/Assets/Images/Local_Storage_only/House-boat.avif" alt="Featured"> -->
-            <img src="<?php echo get_template_directory_uri();?>/Assets/Images/Local_Storage_only/House-boat.avif" alt="Featured">
+            <img src="<?php echo get_template_directory_uri(); ?>/Assets/Images/Local_Storage_only/House-boat.avif" alt="Featured">
             <div class="image-overlay">
                 <a href="#" class="overlay-button">
                     <span class="icon"></span> VIEW GALLERY →
