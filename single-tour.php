@@ -110,5 +110,4 @@
             <div class="overlay">Property Photos</div>
         </div>
     </div>
-    </div>
 </div>
