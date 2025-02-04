@@ -24,6 +24,7 @@
 .holidayseva_Holidays_Main_Wrapper {
     margin-left: 5%;
     margin-right: 5%;
+    display: block;
 }
 
 .holidayseva_header_navbar_with_ul{
