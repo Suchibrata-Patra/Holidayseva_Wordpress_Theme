@@ -24,22 +24,22 @@
     </ul>
 </div>
 
-<div class="heading_container" style="position: sticky;margin-left:5%;z-index:2;background-color: white;padding: 3px;">
-    <span class="main_package_name holidayseva_h2">
-        Most Wanted Kashmir Packages
-    </span>
-    <div class="quick_details_navigation_bar">
-        <ul>
-            <li><button class="quickpanel_buttons">Customizable</button></li>
-            <li><button class="quickpanel_buttons">6N/7D</button></li>
-            <li>1N Srinagar Houseboat</li>
-            <li class="holidayseva_header_navbar_with_ul">2N Pahalgam</li>
-            <li class="holidayseva_header_navbar_with_ul">2N Srinagar</li>
-        </ul>
-    </div>
-</div>
 
 <div class="holidayseva_Holidays_Main_Wrapper">
+    <div class="heading_container" style="position: sticky;margin-left:5%;z-index:2;background-color: white;padding: 3px;">
+        <span class="main_package_name holidayseva_h2">
+            Most Wanted Kashmir Packages
+        </span>
+        <div class="quick_details_navigation_bar">
+            <ul>
+                <li><button class="quickpanel_buttons">Customizable</button></li>
+                <li><button class="quickpanel_buttons">6N/7D</button></li>
+                <li>1N Srinagar Houseboat</li>
+                <li class="holidayseva_header_navbar_with_ul">2N Pahalgam</li>
+                <li class="holidayseva_header_navbar_with_ul">2N Srinagar</li>
+            </ul>
+        </div>
+    </div>
     <div class="grid-container">
         <div class="image-container">
             <!-- <img src="/Assets/Images/Local_Storage_only/House-boat.avif" alt="Featured"> -->
