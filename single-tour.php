@@ -10,13 +10,13 @@
     style="background-color: #0a223d; margin:0px -8px 10px -8px !important;padding:3px;">
     <ul style="display: flex;list-style:none;gap:20px;margin-left:40px;">
         <li style="font-size: 25px!important;"><button
-                style="background:#233951 ;color:#0188f8;border: none;padding: 7px 20px;border-radius: 7px;">STATING
+                style="background:#233951 ;color:#0188f8;border: none;padding: 7px 20px;border-radius: 4px;">STATING
                 FORM <br> <span style="color:white;">New Delhi</span></button></li>
         <li style="font-size: 25px!important;"><button
-                style="background:#233951 ;color:#0188f8;border: none;padding: 7px 20px;border-radius: 7px;">TRAVELLING
+                style="background:#233951 ;color:#0188f8;border: none;padding: 7px 20px;border-radius: 4px;">TRAVELLING
                 ON<br> <span style="color:white;">Wed, 2 Apr 2025</span></button></li>
         <li style="font-size: 25px!important;"><button
-                style="background:#233951 ;color:#0188f8;border: none;padding: 7px 20px;border-radius: 7px;">ROOM &
+                style="background:#233951 ;color:#0188f8;border: none;padding: 7px 20px;border-radius: 4px;">ROOM &
                 GUESTS<br> <span style="color:white;">2 Adults</span></button></li>
         <li style="font-size: 25px!important;"><button
                 style="background: linear-gradient(90deg, #50affd, #065bf2);color:#ffffff;border: none;padding: 8px 55px;border-radius: 50px;font-weight:400;font-size:20px;">Search</button>
