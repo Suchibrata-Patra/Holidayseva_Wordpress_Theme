@@ -23,7 +23,7 @@
                 style="background: linear-gradient(90deg, #50affd, #065bf2);color:#ffffff;border: none;padding: 8px 55px;border-radius: 50px;font-weight:400;font-size:20px;">Search</button>
         </li>
     </ul>
-</div>
+</div> 
 
 <div class="holidayseva_Holidays_Main_Wrapper">
     <div class="heading_container" style="z-index:2;position: sticky;display:flex;top: 0;background-color: white;padding: 3px;">
