@@ -196,11 +196,3 @@
     position: sticky;
   top: 0;
 }
-.holidayseva_primary_button_size_1{
-    padding: 7px;
-    border-radius:50px;
-    border: none;
-    background: linear-gradient(90deg, #50affd, #065bf2);
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-}

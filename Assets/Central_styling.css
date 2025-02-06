@@ -33,11 +33,18 @@
 }
 
 /* Centralised Buttno Styling */
-.holidayseva_primary_button_size_1{
-    padding: 7px;
+.holidayseva_primary_button{
     border-radius:50px;
     border: none;
     background: linear-gradient(90deg, #50affd, #065bf2);
     color: rgb(255, 255, 255);
+   
+}
+
+.button_size_1{
     padding: 10px 20px;
+}
+
+.button_size_2{
+    padding: 12px 25px;
 }
