@@ -51,7 +51,7 @@
         </div>
         <div class="Header_TopRighttPortion" style="margin-left:15%;padding:2rem;">
             <span class="holidayseva_h3">Rs. 1999/-</span>
-            <button class="holidayseva_primary_button button_size_2" style="margin-left: 2rem;"> Book Now</button>
+            <button class="holidayseva_primary_button button_size_1" style="margin-left: 2rem;"> Book Now</button>
         </div>
     </div>
     <div class="grid-container">
