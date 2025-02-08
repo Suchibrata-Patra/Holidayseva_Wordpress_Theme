@@ -28,7 +28,7 @@
 
 <div class="holidayseva_main_content_container">
     <div class="heading_container"
-        style="z-index:2;position: sticky;display:flex;top: 0;background-color: white;padding:0% 5% 0% 5%;">
+        style="z-index:2;position: sticky;display:flex;top: 0;background-color: white;padding:2rem 5% 0% 5%;">
         <div class="Header_TopLeftPortion">
             <span class="main_package_name holidayseva_h2">
                 Most Wanted Kashmir Packages
