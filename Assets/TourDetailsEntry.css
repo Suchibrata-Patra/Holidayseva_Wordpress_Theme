@@ -21,10 +21,10 @@
     color: var(--holidayseva_black);
 }
 
-.holidayseva_Holidays_Main_Wrapper {
-    margin-left: 5%;
-    margin-right: 5%;
-    display: block;
+.holidayseva_wrapper_header {
+    padding:0% 5% 1% 5%;
+    background-color: #ffffff;
+    /* display: block; */
 }
 
 .holidayseva_header_navbar_with_ul{
@@ -195,4 +195,8 @@
 .heading_container{
     position: sticky;
   top: 0;
+}
+
+section{
+    background-color: white;padding:1rem 3rem 2rem 3rem;border-radius: 10px;margin-top:10px;
 }
