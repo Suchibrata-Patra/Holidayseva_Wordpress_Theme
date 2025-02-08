@@ -28,7 +28,7 @@
 
 <div class="holidayseva_main_content_container">
     <div class="heading_container"
-        style="z-index:2;position: sticky;display:flex;top: 0;background-color: white;padding:1rem 5% 0% 5%;">
+        style="z-index:2;position: sticky;display:flex;top: 0;background-color: white;padding:1.3rem 5% 0% 5%;">
         <div class="Header_TopLeftPortion">
             <span class="main_package_name holidayseva_h2">
                 Most Wanted Kashmir Packages
@@ -133,7 +133,7 @@
     <div style="justify-content: center;padding: 5%;padding-top: 0%;">
         <div class="tour_Details_navbar" style="position: sticky;top:80px;background-color:#f2f2f2;">
             <ul
-                style="display: flex;list-style: none;font-weight: 500;font-size:1rem;color:rgb(95, 95, 95);padding:2.5rem 0px 10px 0px;">
+                style="display: flex;list-style: none;font-weight: 500;font-size:1rem;color:rgb(95, 95, 95);padding:3rem 0px 10px 0px;">
                 <li style="padding: 10px; padding:10px;"><a href="#highlights"
                         style="color: #008cff;border-bottom: 3px solid #008cff;text-decoration: none;">ITINERARY</a>
                 </li>
