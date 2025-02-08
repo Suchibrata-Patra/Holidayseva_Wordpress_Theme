@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Right Click Menu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
         /* General Styles */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background: #f4f4f4;
         }
 
         /* Custom Context Menu */
@@ -28,8 +28,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            background: #007bff;
-            color: white;
+            background: white;
+            color: rgb(0, 0, 0);
             border: none;
             padding: 12px;
             width: 100%;
@@ -41,12 +41,12 @@
         }
 
         .menu-btn:hover {
-            background: #0056b3;
+            background: rgb(238, 238, 238);
         }
 
         /* Button Icons */
-        .menu-btn span {
-            font-size: 18px;
+        .menu-btn .material-icons {
+            font-size: 20px;
         }
     </style>
 </head>
@@ -54,13 +54,13 @@
 
     <div class="custom-menu" id="contextMenu">
         <button class="menu-btn" onclick="bookTour()">
-            <span>📅</span> Book Tours
+            <span class="material-icons">event</span> Book Tours
         </button>
         <button class="menu-btn" onclick="chatWithUs()">
-            <span>💬</span> Chat with Us
+            <span class="material-icons">chat</span> Chat with Us
         </button>
         <button class="menu-btn" onclick="pickRandomSpot()">
-            <span>🎯</span> Pick a Random Spot
+            <span class="material-icons">place</span> Pick a Random Spot
         </button>
     </div>
 
@@ -72,13 +72,11 @@
             let x = event.pageX;
             let y = event.pageY;
 
-            // Position menu near click
             contextMenu.style.left = x + "px";
             contextMenu.style.top = y + "px";
             contextMenu.style.display = "block";
         });
 
-        // Hide menu on click anywhere
         document.addEventListener("click", () => {
             contextMenu.style.display = "none";
         });
