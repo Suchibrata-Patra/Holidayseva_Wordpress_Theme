@@ -1,4 +1,4 @@
-<!-- <?php require get_template_directory() . '/dropdownmenu.php'; ?> -->
+<?php require get_template_directory() . '/dropdownmenu.php'; ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/TourDetailsEntry.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/Central_styling.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
