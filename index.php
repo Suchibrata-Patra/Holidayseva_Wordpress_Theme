@@ -84,7 +84,7 @@ get_header(); ?>
     <div style="width: 70%; height: auto; display: flex; align-items: center; justify-content: center; background-color:none;">
         <img src="https://a0.muscache.com/im/pictures/canvas/Canvas-1727297260081/original/e97a2325-f789-49df-b474-25c77476d433.jpeg" 
              alt="Landing Visual" 
-             style="max-width: 100%; max-height: 100%; object-fit: contain;">
+             style="max-width: 100%; max-height: 80%; object-fit: contain;">
     </div>
 
     <!-- Right: Text Centered -->
