@@ -1,3 +1,4 @@
+<?php get_header(); ?>
 <!-- <?php require get_template_directory() . '/dropdownmenu.php'; ?> -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/TourDetailsEntry.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/Central_styling.css">
