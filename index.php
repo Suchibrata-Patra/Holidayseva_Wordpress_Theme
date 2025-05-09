@@ -77,5 +77,8 @@ get_header(); ?>
 <?php
 // get_footer();
 ?>
+<span style="width:80%;margin:5%;">
 <img src="https://a0.muscache.com/im/pictures/canvas/Canvas-1727297260081/original/e97a2325-f789-49df-b474-25c77476d433.jpeg?im_w=1680" alt="" srcset="">
+</span>
+
 <!-- This is index.php -->
