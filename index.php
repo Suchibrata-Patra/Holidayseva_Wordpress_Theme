@@ -80,7 +80,7 @@ get_header(); ?>
 
 <div style="display: flex; height: 100vh; width: 100vw;">
     <!-- Left: Image -->
-    <div style="width: 50%; height: 100vh; overflow: hidden;">
+    <div style="width: 50%; height:auto;">
         <img src="https://a0.muscache.com/im/pictures/canvas/Canvas-1727297260081/original/e97a2325-f789-49df-b474-25c77476d433.jpeg" 
              alt="Landing Visual" 
              style="width: 100%; height: 100%; object-fit: cover;">
