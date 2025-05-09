@@ -77,14 +77,17 @@ get_header(); ?>
 <?php
 // get_footer();
 ?>
-<div style="display:flex;">
+<div style="display: flex; align-items: center; gap: 2rem;">
 
-    <div style="width:30%;margin-top:5%;">
-    <img src="https://a0.muscache.com/im/pictures/canvas/Canvas-1727297260081/original/e97a2325-f789-49df-b474-25c77476d433.jpeg" alt="" srcset="">
+    <div style="width: 30%;">
+        <img src="https://a0.muscache.com/im/pictures/canvas/Canvas-1727297260081/original/e97a2325-f789-49df-b474-25c77476d433.jpeg" alt="" style="width: 100%; height: auto;">
     </div>
-    <div style="font-size:2rem;">
-        We're Comming.. 
+
+    <div style="font-size: 2rem;">
+        We're Coming..
     </div>
+
 </div>
+
 
 <!-- This is index.php -->
