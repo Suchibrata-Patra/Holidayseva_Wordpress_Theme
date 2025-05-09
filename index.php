@@ -77,22 +77,20 @@ get_header(); ?>
 <?php
 // get_footer();
 ?>
-<div style="display: flex; height: 100vh; width: 100vw;">
 
+<div style="display: flex; height: 100vh; width: 100vw;">
     <!-- Left: Image -->
     <div style="width: 50%; height: 100vh; overflow: hidden;">
         <img src="https://a0.muscache.com/im/pictures/canvas/Canvas-1727297260081/original/e97a2325-f789-49df-b474-25c77476d433.jpeg" 
              alt="Landing Visual" 
              style="width: 100%; height: 100%; object-fit: cover;">
     </div>
-
     <!-- Right: Text -->
     <div style="width: 50%; background-color: #f9f9f9; display: flex; align-items: center; justify-content: center;">
         <div style="font-size: 3rem; font-weight: bold; text-align: center;">
             We're Coming...
         </div>
     </div>
-
 </div>
 
 
