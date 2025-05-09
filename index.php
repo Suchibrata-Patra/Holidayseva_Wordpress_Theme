@@ -89,7 +89,7 @@ get_header(); ?>
 
     <!-- Right: Text Centered -->
     <div style="width: 50%; background-color:rgb(255, 255, 255); display: flex; align-items: center; justify-content: center;">
-        <div style="font-size: 3rem; font-weight: bold; text-align: center;">
+        <div style="font-size: 3rem; font-weight: bold; text-align: left;">
             We're Coming...
         </div>
     </div>
