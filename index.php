@@ -88,7 +88,7 @@ get_header(); ?>
     </div>
 
     <!-- Right: Text Centered -->
-    <div style="width: 50%; background-color: #f9f9f9; display: flex; align-items: center; justify-content: center;">
+    <div style="width: 50%; background-color:rgb(255, 255, 255); display: flex; align-items: center; justify-content: center;">
         <div style="font-size: 3rem; font-weight: bold; text-align: center;">
             We're Coming...
         </div>
