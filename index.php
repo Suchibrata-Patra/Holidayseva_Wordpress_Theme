@@ -79,18 +79,21 @@ get_header(); ?>
 ?>
 
 <div style="display: flex; height: 100vh; width: 100vw;">
-    <!-- Left: Image -->
-    <div style="width: 50%; height:auto;">
+
+    <!-- Left: Full Image, Fit Inside -->
+    <div style="width: 50%; height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #000;">
         <img src="https://a0.muscache.com/im/pictures/canvas/Canvas-1727297260081/original/e97a2325-f789-49df-b474-25c77476d433.jpeg" 
              alt="Landing Visual" 
-             style="width: 100%; height: 100%; object-fit: cover;">
+             style="max-width: 100%; max-height: 100%; object-fit: contain;">
     </div>
-    <!-- Right: Text -->
+
+    <!-- Right: Text Centered -->
     <div style="width: 50%; background-color: #f9f9f9; display: flex; align-items: center; justify-content: center;">
         <div style="font-size: 3rem; font-weight: bold; text-align: center;">
             We're Coming...
         </div>
     </div>
+
 </div>
 
 
