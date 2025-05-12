@@ -111,8 +111,8 @@
             <!-- <div class="tour_page_grid_item video">Video Placeholder</div> -->
             <div class="tour_page_grid_item activities">
                 <div class="topight_top_video" style="padding-bottom:5px;">
-                    <iframe width="225px" height="auto" src="https://www.youtube.com/embed/0K0cDY7miEc" frameborder="0"
-                        allowfullscreen></iframe>
+                    <!-- <iframe width="225px" height="auto" src="https://www.youtube.com/embed/0K0cDY7miEc" frameborder="0"
+                        allowfullscreen></iframe> -->
                 </div>
 
                 <div class="topight_bottom_video" style="padding-top:5px;">
