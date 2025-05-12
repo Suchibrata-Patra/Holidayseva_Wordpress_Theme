@@ -7,7 +7,7 @@
 
 get_header(); ?>
 <main id="primary" class="site-main">
-<link rel="stylesheet" href="<?php echo $template_uri;?>/Assets/Central_styling.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/Central_styling.css">
 <?php
 // while (have_posts()) :
 //     the_post();
