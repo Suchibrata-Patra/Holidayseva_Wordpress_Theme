@@ -170,7 +170,7 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    margin:0% 10% 0% 10%;
+    margin:0% 8% 0% 8%;
   }
 
   .header {
