@@ -161,7 +161,155 @@ get_header(); ?>
 }
 </style>
 Model of the thigs to be develoed by the model of the things to be doe by the thing is nothing but 
-
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .tab {
+      color: #666;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .tab.active {
+      color: #007bff;
+      border-bottom: 2px solid #007bff;
+    }
+    .offers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .offer-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s;
+    }
+    .offer-card:hover {
+      transform: translateY(-5px);
+    }
+    .offer-image {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+    .offer-content {
+      padding: 15px;
+    }
+    .offer-type {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 5px;
+    }
+    .offer-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .offer-description {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .offer-link {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .footer-nav {
+      text-align: right;
+      margin-top: 10px;
+    }
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .tabs {
+        gap: 10px;
+      }
+    }
+  </style>
+  <div class="container">
+    <div class="header">
+      <h2>Offers</h2>
+      <div class="tabs">
+        <div class="tab active">All Offers</div>
+        <div class="tab">Bank Offers</div>
+        <div class="tab">Flights</div>
+        <div class="tab">Hotels</div>
+        <div class="tab">Holidays</div>
+        <div class="tab">Trains</div>
+        <div class="tab">Cabs</div>
+        <div class="tab">Bus</div>
+        <div class="tab">Forex</div>
+      </div>
+    </div>
+    <div class="offers">
+      <div class="offer-card">
+        <img src="https://via.placeholder.com/400x200?text=Akasa+Air" alt="Akasa Air" class="offer-image" />
+        <div class="offer-content">
+          <div class="offer-type">DOM FLIGHTS</div>
+          <div class="offer-title">LIVE NOW: Getaway Sale by Akasa Air</div>
+          <div class="offer-description">with flight fares starting @ ₹1,599*</div>
+          <a href="#" class="offer-link">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="https://via.placeholder.com/400x200?text=Hotels" alt="Hotels" class="offer-image" />
+        <div class="offer-content">
+          <div class="offer-type">DOM HOTELS</div>
+          <div class="offer-title">Hotels in Spotlight</div>
+          <div class="offer-description">Luxury Stays Chosen by our Experts for your next relaxing break!</div>
+          <a href="#" class="offer-link">EXPLORE NOW</a>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="https://via.placeholder.com/400x200?text=Taj+Hotel" alt="Taj" class="offer-image" />
+        <div class="offer-content">
+          <div class="offer-type">DOM HOTELS</div>
+          <div class="offer-title">FOR MEMORABLE STAYS AT THE TAJ:</div>
+          <div class="offer-description">Get FLAT 15% Savings* on Stays & More!</div>
+          <a href="#" class="offer-link">VIEW DETAILS</a>
+        </div>
+      </div>
+      <div class="offer-card">
+        <img src="https://via.placeholder.com/400x200?text=Axis+Bank+EMI" alt="Axis Bank" class="offer-image" />
+        <div class="offer-content">
+          <div class="offer-type">INTL FLIGHTS</div>
+          <div class="offer-title">Up to 25% OFF* + Additional Savings on EMI</div>
+          <div class="offer-description">for flights, hotels, holiday packages, cabs & buses.</div>
+          <a href="#" class="offer-link">VIEW DETAILS</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-nav">
+      <a href="#" class="offer-link">VIEW ALL →</a>
+    </div>
+  </div>
 <div style="display: flex; height: 100vh; width: 100vw;">
 
     <!-- Left: Full Image, Fit Inside -->
