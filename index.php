@@ -75,9 +75,6 @@ get_header(); ?>
 // endwhile; // End of the loop.
 ?>
 </main><!-- #main -->
-<?php
-// get_footer();
-?>
 
 <div style="display: flex; height: 100vh; width: 100vw;">
 
@@ -97,3 +94,6 @@ get_header(); ?>
 
 </div>
 <!-- This is index.php -->
+<?php
+get_footer();
+?>
