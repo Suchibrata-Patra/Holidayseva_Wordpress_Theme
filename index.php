@@ -134,10 +134,10 @@ get_header(); ?>
 
 .hotel-card {
   position: relative;
-  width: 240px;
+  width: 220px;
   height: 160px;
   border-radius: 10px;
-  overflow: hidden;
+  overflow:auto;
   background-size: cover;
   background-position: center;
   color: #fff;
