@@ -98,6 +98,7 @@ get_header(); ?>
 <style>
     .hotel-store-row {
   display: flex;
+  margin:0% 25% 0% 25%;
   align-items: center;
   background: #eaf6ff;
   padding: 20px 30px;
