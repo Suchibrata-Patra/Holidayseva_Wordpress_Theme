@@ -35,10 +35,9 @@
 
 <style>
 .site-footer {
-    background-color: #1f1f1f;
+    background-color:rgb(0, 0, 0);
     color: #f0f0f0;
     padding: 40px 20px 20px;
-    font-family: Arial, sans-serif;
 }
 .footer-container {
     display: flex;
