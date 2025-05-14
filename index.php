@@ -211,8 +211,8 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
 
   .offer-card {
     flex: 0 0 auto;
-    min-width: 280px;
-    max-width: 300px;
+    min-width: 250px;
+    max-width: 380px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
