@@ -82,17 +82,14 @@ get_header(); ?>
 
   <div class="hotel-store-cards">
     <div class="hotel-card" style="background-image: url('https://platforms.makemytrip.com/contents/7300a7ec-9452-4c2b-b2aa-e8b2ebee7f12');">
-      <div class="hotel-logo"><img src="https://platforms.makemytrip.com/contents/7300a7ec-9452-4c2b-b2aa-e8b2ebee7f12" alt="CGH Earth"></div>
       <div class="hotel-card-text">CGH Earth Experience Hotels</div>
     </div>
 
     <div class="hotel-card" style="background-image: url('https://platforms.makemytrip.com/contents/e80a34da-1263-4ba1-939c-186311e7cf49');">
-      <div class="hotel-logo"><img src="https://platforms.makemytrip.com/contents/e80a34da-1263-4ba1-939c-186311e7cf49" alt="Tamara Hotels"></div>
       <div class="hotel-card-text">Tamara Hotels</div>
     </div>
 
     <div class="hotel-card" style="background-image: url('https://platforms.makemytrip.com/contents/b945fe53-f41e-419a-9718-f36bbb6e23fe');">
-      <div class="hotel-logo"><img src="https://platforms.makemytrip.com/contents/b945fe53-f41e-419a-9718-f36bbb6e23fe" alt="Polo Towers"></div>
       <div class="hotel-card-text">Polo Towers</div>
     </div>
   </div>
@@ -153,25 +150,6 @@ get_header(); ?>
   font-weight: bold;
   font-size: 14px;
 }
-
-.hotel-logo {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 36px;
-  height: 36px;
-  background: #fff;
-  border-radius: 50%;
-  padding: 5px;
-  z-index: 2;
-}
-
-.hotel-logo img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-}
-
 </style>
 Model of the thigs to be develoed by the model of the things to be doe by the thing is nothing but 
 
