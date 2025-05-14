@@ -38,7 +38,7 @@
 
 <style>
 .site-footer {
-    background-color:rgb(0, 0, 0);
+    background-color:rgb(174, 174, 174);
     color: #f0f0f0;
     padding: 40px 20px 20px;
 }
@@ -82,7 +82,7 @@
     border-top: 1px solid #333;
     margin-top: 20px;
     padding-top: 20px;
-    font-size: 14px;
+    font-size: 1rem;
 }
 @media screen and (max-width: 768px) {
     .footer-container {
