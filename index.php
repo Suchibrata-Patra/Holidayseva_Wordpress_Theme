@@ -98,16 +98,21 @@ get_header(); ?>
     #primary{
     margin:0% 8% 0% 8%;
     }
-    .hotel-store-row {
+.hotel-store-row {
   display: flex;
-  align-items: center;
-  justify-item:center;
+  align-items: center; /* aligns items vertically center */
+  justify-content: space-between; /* spreads text & cards horizontally */
   background: #eaf6ff;
   padding: 20px 30px;
   border-radius: 10px;
   gap: 30px;
   overflow-x: auto;
   white-space: nowrap;
+}
+
+
+.model_of_the_things{
+    things_t
 }
 
 .hotel-store-heading {
