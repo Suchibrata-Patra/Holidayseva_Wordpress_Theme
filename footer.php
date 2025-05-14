@@ -7,6 +7,9 @@
 
         <div class="footer-nav">
             <h3>Quick Links</h3>
+            <a href="#" aria-label="Facebook">Facebook</a> |
+            <a href="#" aria-label="Twitter">Twitter</a> |
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
             <?php wp_nav_menu(array(
                 'theme_location' => 'footer-menu',
                 'menu_class' => 'footer-menu',
