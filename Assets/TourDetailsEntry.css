@@ -22,12 +22,12 @@
 }
 
 .holidayseva_wrapper_header {
-    padding:0% 5% 0% 5%;
+    padding: 0% 5% 0% 5%;
     background-color: #ffffff;
     /* display: block; */
 }
 
-.holidayseva_header_navbar_with_ul{
+.holidayseva_header_navbar_with_ul {
     list-style-type: disc;
     padding-left: -20px;
     margin-left: 10px;
@@ -77,7 +77,8 @@
 .package-highlights ul {
     padding-left: 0px;
 }
-.package-highlights img{
+
+.package-highlights img {
     height: auto !important;
     margin-bottom: -10px;
 }
@@ -137,19 +138,19 @@
     overflow: hidden;
 }
 
-#tour_package_highilights_button{
-    background: linear-gradient(0.65turn,#d00023,hsl(19, 100%, 71%));
-    color:white;
-    font-size:10px;
+#tour_package_highilights_button {
+    background: linear-gradient(0.65turn, #d00023, hsl(19, 100%, 71%));
+    color: white;
+    font-size: 10px;
     border-radius: 50px;
     border: none;
     padding: 3px 7px;
 }
 
-.tour_highlights_display_day{
+.tour_highlights_display_day {
     font-size: 10px;
     color: #535351;
-    margin-left:1.1rem;
+    margin-left: 1.1rem;
     line-height: 0.5rem;
 }
 
@@ -168,8 +169,8 @@
 
 .image-overlay {
     position: absolute;
-    bottom:1%;
-    left:20%;
+    bottom: 1%;
+    left: 20%;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.6);
     color: white;
@@ -192,14 +193,14 @@
 }
 
 
-.heading_container{
+.heading_container {
     position: sticky;
-  top: 0;
+    top: 0;
 }
 
-.section{
+.section {
     background-color: white;
-    padding:1rem 3rem 2rem 3rem;
+    padding: 1rem 3rem 2rem 3rem;
     border-radius: 10px;
-    margin-top:10px;
+    margin-top: 10px;
 }

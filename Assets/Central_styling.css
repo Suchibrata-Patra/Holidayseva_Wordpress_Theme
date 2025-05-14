@@ -1,10 +1,12 @@
 /* poppins-100 - latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 100;
-  src: url('<?php echo get_template_directory_uri(); ?>/Assets/fonts/poppins-v23-latin-100.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url('<?php echo get_template_directory_uri(); ?>/Assets/fonts/poppins-v23-latin-100.woff2') format('woff2');
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
 /* poppins-100italic - latin */
@@ -162,53 +164,53 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  margin:0px !important;
+  margin: 0px !important;
 }
 
 
 .holidayseva_h1 {
-    font-size: 32px;
-    font-weight: bold;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .holidayseva_h2 {
-    font-size: 26px;
-    font-weight: bold;
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .holidayseva_h3 {
-    font-size: 22px;
-    font-weight: semi-bold;
+  font-size: 22px;
+  font-weight: semi-bold;
 }
 
 .holidayseva_h4 {
-    font-size: 18px;
-    font-weight: semi-bold;
+  font-size: 18px;
+  font-weight: semi-bold;
 }
 
 .holidayseva_h5 {
-    font-size: 16px;
-    font-weight: normal;
+  font-size: 16px;
+  font-weight: normal;
 }
 
 .holidayseva_h6 {
-    font-size: 14px;
-    font-weight: normal;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 /* Centralised Buttno Styling */
-.holidayseva_primary_button{
-    border-radius:50px;
-    border: none;
-    background: linear-gradient(90deg, #50affd, #065bf2);
-    color: rgb(255, 255, 255);
-   
+.holidayseva_primary_button {
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(90deg, #50affd, #065bf2);
+  color: rgb(255, 255, 255);
+
 }
 
-.button_size_1{
-    padding: 10px 20px;
+.button_size_1 {
+  padding: 10px 20px;
 }
 
-.button_size_2{
-    padding: 12px 25px;
+.button_size_2 {
+  padding: 12px 25px;
 }
