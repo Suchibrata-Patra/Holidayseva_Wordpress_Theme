@@ -75,57 +75,67 @@ get_header(); ?>
 // endwhile; // End of the loop.
 ?>
 </main>
-<div class="hotel-store-banner">
-  <div class="hotel-store-title">Flagship Hotel Stores on MakeMyTrip</div>
+<div class="hotel-store-row">
+  <div class="hotel-store-heading">
+    Flagship Hotel Stores<br>on MakeMyTrip
+  </div>
+
   <div class="hotel-store-cards">
-    <div class="hotel-card" style="background-image: url('https://example.com/cgh-earth.jpg');">
-      <div class="hotel-logo"><img src="https://example.com/cgh-logo.png" alt="CGH Earth"></div>
+    <div class="hotel-card" style="background-image: url('https://platforms.makemytrip.com/contents/7300a7ec-9452-4c2b-b2aa-e8b2ebee7f12');">
+      <div class="hotel-logo"><img src="https://platforms.makemytrip.com/contents/7300a7ec-9452-4c2b-b2aa-e8b2ebee7f12" alt="CGH Earth"></div>
       <div class="hotel-card-text">CGH Earth Experience Hotels</div>
     </div>
 
-    <div class="hotel-card" style="background-image: url('https://example.com/tamara.jpg');">
-      <div class="hotel-logo"><img src="https://example.com/tamara-logo.png" alt="Tamara Hotels"></div>
+    <div class="hotel-card" style="background-image: url('https://platforms.makemytrip.com/contents/e80a34da-1263-4ba1-939c-186311e7cf49');">
+      <div class="hotel-logo"><img src="https://platforms.makemytrip.com/contents/e80a34da-1263-4ba1-939c-186311e7cf49" alt="Tamara Hotels"></div>
       <div class="hotel-card-text">Tamara Hotels</div>
     </div>
 
-    <div class="hotel-card" style="background-image: url('https://example.com/polo-towers.jpg');">
-      <div class="hotel-logo"><img src="https://example.com/polo-logo.png" alt="Polo Towers"></div>
+    <div class="hotel-card" style="background-image: url('https://platforms.makemytrip.com/contents/b945fe53-f41e-419a-9718-f36bbb6e23fe');">
+      <div class="hotel-logo"><img src="https://platforms.makemytrip.com/contents/b945fe53-f41e-419a-9718-f36bbb6e23fe" alt="Polo Towers"></div>
       <div class="hotel-card-text">Polo Towers</div>
     </div>
   </div>
 </div>
+
 <style>
-    .hotel-store-banner {
+    .hotel-store-row {
+  display: flex;
+  align-items: center;
   background: #eaf6ff;
-  padding: 30px;
+  padding: 20px 30px;
   border-radius: 10px;
-  margin: 40px 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  gap: 30px;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
-.hotel-store-title {
-  font-size: 26px;
+.hotel-store-heading {
+  font-size: 24px;
   font-weight: 700;
   color: #000;
-  margin-bottom: 20px;
+  flex-shrink: 0;
+  white-space: normal;
+  line-height: 1.4;
+  min-width: 240px;
 }
 
 .hotel-store-cards {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
+  flex-shrink: 0;
 }
 
 .hotel-card {
   position: relative;
-  flex: 1 1 30%;
+  width: 220px;
+  height: 150px;
   border-radius: 10px;
   overflow: hidden;
-  min-width: 250px;
-  height: 180px;
   background-size: cover;
   background-position: center;
   color: #fff;
+  flex-shrink: 0;
 }
 
 .hotel-card::after {
@@ -137,19 +147,19 @@ get_header(); ?>
 
 .hotel-card-text {
   position: absolute;
-  bottom: 12px;
-  left: 16px;
+  bottom: 10px;
+  left: 12px;
   z-index: 2;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .hotel-logo {
   position: absolute;
   top: 10px;
   left: 10px;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background: #fff;
   border-radius: 50%;
   padding: 5px;

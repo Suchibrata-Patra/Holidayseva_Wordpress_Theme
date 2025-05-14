@@ -1,130 +1,98 @@
-<div style="justify-content: center;padding: 5%;padding-top: 0%;">
-  <div class="tour_Details_navbar" style="position: sticky;top:80px;background-color:#f2f2f2;">
-      <ul
-          style="display: flex;list-style: none;font-weight: 500;font-size:1rem;color:rgb(95, 95, 95);padding:2rem 0px 10px 0px;">
-          <li style="padding: 10px; padding:10px;"><a href="#highlights"
-                  style="color: #008cff;border-bottom: 3px solid #008cff;text-decoration: none;" class="activated_item">ITINERARY</a>
-          </li>
-          <li style="padding: 10px; padding:10px;"><a href="#itinerary"
-                  style="padding: 10px; padding:10px;color: rgb(95,95,95);text-decoration: none;">ITINERARY</a>
-          </li>
-          <li style="padding: 10px; padding:10px;"><a href="#hotels"
-                  style="padding: 10px; padding:10px;color: rgb(95,95,95);text-decoration: none;">HOTELS</a></li>
-          <li style="padding: 10px; padding:10px;"><a href="#policy"
-                  style="padding: 10px; padding:10px;color: rgb(95,95,95);text-decoration: none;">POLICY</a></li>
-          <li style="padding: 10px; padding:10px;"><a href="#reviews"
-                  style="padding: 10px; padding:10px;color: rgb(95,95,95);text-decoration: none;">REVIEWS</a></li>
-          <li style="padding: 10px; padding:10px;"><a href="#faq"
-                  style="padding: 10px; padding:10px;color: rgb(95,95,95);text-decoration: none;">FAQ</a></li>
-      </ul>
+<div class="hotel-store-row">
+  <div class="hotel-store-heading">
+    Flagship Hotel Stores<br>on MakeMyTrip
   </div>
 
-  <div class="container">
-      <div class="main-content">
-          <!-- Main content goes here -->
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore optio aut repudiandae, hic dicta
-          nesciunt praesentium veritatis. Molestias et laboriosam unde ipsam ab cum dolores doloremque blanditiis
-          eius cupiditate molestiae, laudantium alias voluptates perferendis temporibus placeat quod adipisci
-          praesentium exercitationem assumenda natus explicabo? Quasi ducimus explicabo suscipit facere esse.
-          Officiis distinctio eaque fuga aspernatur autem repellat deserunt perspiciatis cumque, exercitationem
-          lorem10000
+  <div class="hotel-store-cards">
+    <div class="hotel-card" style="background-image: url('https://platforms.makemytrip.com/contents/7300a7ec-9452-4c2b-b2aa-e8b2ebee7f12');">
+      <div class="hotel-logo"><img src="https://platforms.makemytrip.com/contents/7300a7ec-9452-4c2b-b2aa-e8b2ebee7f12" alt="CGH Earth"></div>
+      <div class="hotel-card-text">CGH Earth Experience Hotels</div>
+    </div>
 
-      </div>
-      <aside class="sidebar">
-          <div class="tour-info departure-card">
-              <h2>Munnar Periyar Alleppey Super</h2>
-              <p>5 Nights / 6 Days</p>
-              <p><strong>Starts From ₹21,000*</strong></p>
-              <button class="enquire-btn">Enquire Now</button>
-              <p><a href="#" style="text-decoration: none;">Tour Price Inclusions and Exclusions*</a></p>
-          </div>
-          <div class="departure-info">
-              <h3>Select a departure month</h3>
-              <button
-                  style="background-color:rgb(230,230,230);color: black;padding: 5px;border: none;border-radius: 5px;">Mar</button>
-              <button
-                  style="background-color:rgb(230,230,230);color: black;padding: 5px;border: none;border-radius: 5px;">Apr</button>
-              <button
-                  style="background-color:rgb(230,230,230);color: black;padding: 5px;border: none;border-radius: 5px;">May</button>
-              <button
-                  style="background-color:rgb(230,230,230);color: black;padding: 5px;border: none;border-radius: 5px;">Aug</button>
-              <button
-                  style="background-color:rgb(230,230,230);color: black;padding: 5px;border: none;border-radius: 5px;">Sep</button>
-              <div class="departure-card">
-                  <h4>Munnar Periyar Alleppey Super</h4>
-                  <p>Starts Monday, Mar 3, 2025 - Ends Saturday, Mar 8, 2025</p>
-                  <p><strong>₹30,990*</strong></p>
-                  <button class="book-now">Book Now</button>
-                  <p>Include JFM Offer 2025 ₹2,000</p>
-              </div>
-          </div>
-      </aside>
+    <div class="hotel-card" style="background-image: url('https://platforms.makemytrip.com/contents/e80a34da-1263-4ba1-939c-186311e7cf49');">
+      <div class="hotel-logo"><img src="https://platforms.makemytrip.com/contents/e80a34da-1263-4ba1-939c-186311e7cf49" alt="Tamara Hotels"></div>
+      <div class="hotel-card-text">Tamara Hotels</div>
+    </div>
+
+    <div class="hotel-card" style="background-image: url('https://platforms.makemytrip.com/contents/b945fe53-f41e-419a-9718-f36bbb6e23fe');">
+      <div class="hotel-logo"><img src="https://platforms.makemytrip.com/contents/b945fe53-f41e-419a-9718-f36bbb6e23fe" alt="Polo Towers"></div>
+      <div class="hotel-card-text">Polo Towers</div>
+    </div>
   </div>
-  <style>
-      body {
-          font-family: Arial, sans-serif;
-          margin: 0;
-          padding: 0;
-          background: #f2f2f2;
-      }
+</div>
 
+<style>
+    .hotel-store-row {
+  display: flex;
+  align-items: center;
+  background: #eaf6ff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  gap: 30px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
 
+.hotel-store-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  flex-shrink: 0;
+  white-space: normal;
+  line-height: 1.4;
+  min-width: 240px;
+}
 
-      .main-content {
-          flex: 2;
-          /* Takes more space */
-          /* background: #f9f9f9; */
-          padding: 20px;
-      }
+.hotel-store-cards {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
 
-      .container {
-          display: flex;
-          justify-content: space-between;
-          align-items: flex-start;
-          /* Ensures sidebar does not expand */
-          margin: 0 auto;
-      }
+.hotel-card {
+  position: relative;
+  width: 220px;
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  flex-shrink: 0;
+}
 
-      .sidebar {
-          background: #fff;
-          padding: 20px;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-          border-radius: 8px;
-          width: 300px;
-          /* Set a fixed width or max-width */
-          flex-shrink: 0;
-          /* Prevent sidebar from shrinking */
-      }
+.hotel-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
 
+.hotel-card-text {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 14px;
+}
 
-      .enquire-btn,
-      .book-now {
-          display: block;
-          width: 100%;
-          padding: 10px;
-          margin-top: 10px;
-          background: #d9302e;
-          color: white;
-          border: none;
-          cursor: pointer;
-          font-size: 16px;
-          border-radius: 5px;
-      }
+.hotel-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 2;
+}
 
-      button {
-          padding: 8px 12px;
-          margin: 5px;
-          border: 1px solid #ccc;
-          background: #f1f1f1;
-          cursor: pointer;
-      }
+.hotel-logo img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
 
-      .departure-card {
-          background: #f8f8f8;
-          padding: 15px;
-          margin-top: 10px;
-          border-radius: 5px;
-          box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-      }
-  </style>
-</div> <!-- End of the Description Things -->
+</style>
