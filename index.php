@@ -74,7 +74,96 @@ get_header(); ?>
 
 // endwhile; // End of the loop.
 ?>
-</main><!-- #main -->
+</main>
+<div class="hotel-store-banner">
+  <div class="hotel-store-title">Flagship Hotel Stores on MakeMyTrip</div>
+  <div class="hotel-store-cards">
+    <div class="hotel-card" style="background-image: url('https://example.com/cgh-earth.jpg');">
+      <div class="hotel-logo"><img src="https://example.com/cgh-logo.png" alt="CGH Earth"></div>
+      <div class="hotel-card-text">CGH Earth Experience Hotels</div>
+    </div>
+
+    <div class="hotel-card" style="background-image: url('https://example.com/tamara.jpg');">
+      <div class="hotel-logo"><img src="https://example.com/tamara-logo.png" alt="Tamara Hotels"></div>
+      <div class="hotel-card-text">Tamara Hotels</div>
+    </div>
+
+    <div class="hotel-card" style="background-image: url('https://example.com/polo-towers.jpg');">
+      <div class="hotel-logo"><img src="https://example.com/polo-logo.png" alt="Polo Towers"></div>
+      <div class="hotel-card-text">Polo Towers</div>
+    </div>
+  </div>
+</div>
+<style>
+    .hotel-store-banner {
+  background: #eaf6ff;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 40px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hotel-store-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.hotel-store-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hotel-card {
+  position: relative;
+  flex: 1 1 30%;
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 250px;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.hotel-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.hotel-card-text {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.hotel-logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 2;
+}
+
+.hotel-logo img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+</style>
+Model of the thigs to be develoed by the model of the things to be doe by the thing is nothing but 
 
 <div style="display: flex; height: 100vh; width: 100vw;">
 
