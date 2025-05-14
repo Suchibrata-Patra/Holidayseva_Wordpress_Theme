@@ -209,19 +209,20 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
     padding-bottom: 10px;
   }
 
-  .offer-card {
-    flex: 0 0 auto;
-    min-width: 250px;
-    max-width: 280px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    scroll-snap-align: start;
-    transition: transform 0.2s;
-  }
+.offer-card {
+  flex: 0 0 auto;
+  min-width: 250px;
+  max-width: 280px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Mild shadow */
+}
 
   .offer-card:hover {
     transform: translateY(-1px);
