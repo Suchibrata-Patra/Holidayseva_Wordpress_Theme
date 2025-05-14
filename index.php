@@ -134,8 +134,8 @@ get_header(); ?>
 
 .hotel-card {
   position: relative;
-  width: 220px;
-  height: 150px;
+  width: 250px;
+  height: 160px;
   border-radius: 10px;
   overflow: hidden;
   background-size: cover;
