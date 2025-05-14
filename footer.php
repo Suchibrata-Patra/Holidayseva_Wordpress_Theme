@@ -53,7 +53,7 @@
 .site-footer h2,
 .site-footer h3 {
     margin-top: 0;
-    color:grey;
+    color:rgb(35, 35, 35);
 }
 .site-footer a {
     color:grey;
