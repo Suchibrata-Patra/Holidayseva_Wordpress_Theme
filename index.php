@@ -89,11 +89,6 @@ get_header(); ?>
     <div class="hotel-card" style="background-image: url('https://platforms.makemytrip.com/contents/7300a7ec-9452-4c2b-b2aa-e8b2ebee7f12');">
       <div class="hotel-card-text">CGH Earth Experience Hotels</div>
     </div>
-
-    <div class="hotel-card" style="background-image: url('https://platforms.makemytrip.com/contents/e80a34da-1263-4ba1-939c-186311e7cf49');">
-      <div class="hotel-card-text">Tamara Hotels</div>
-    </div>
-
     <div class="hotel-card" style="background-image: url('https://platforms.makemytrip.com/contents/b945fe53-f41e-419a-9718-f36bbb6e23fe');">
       <div class="hotel-card-text">Polo Towers</div>
     </div>
