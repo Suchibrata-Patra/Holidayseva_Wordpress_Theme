@@ -124,6 +124,7 @@ get_header(); ?>
   display: flex;
   gap: 20px;
   flex-shrink: 0;
+  margin:0% 5% 0% 5%;
 }
 
 .hotel-card {
