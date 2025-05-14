@@ -101,6 +101,7 @@ get_header(); ?>
     .hotel-store-row {
   display: flex;
   align-items: center;
+  justify-item:center;
   background: #eaf6ff;
   padding: 20px 30px;
   border-radius: 10px;
