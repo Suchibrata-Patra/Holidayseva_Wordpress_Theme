@@ -96,7 +96,7 @@ get_header(); ?>
 </main>
 
 <style>
-    main{
+    #primary{
     margin:0% 8% 0% 8%;
     }
     .hotel-store-row {
