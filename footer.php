@@ -53,10 +53,10 @@
 .site-footer h2,
 .site-footer h3 {
     margin-top: 0;
-    color:rgb(0, 0, 0);
+    color:grey;
 }
 .site-footer a {
-    color:rgb(0, 0, 0);
+    color:grey;
     text-decoration: none;
 }
 .site-footer a:hover {
