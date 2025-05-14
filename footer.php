@@ -59,6 +59,7 @@
 .site-footer a {
     color:grey;
     text-decoration: none;
+    font-weight: 300;
 }
 .site-footer a:hover {
     text-decoration: underline;
