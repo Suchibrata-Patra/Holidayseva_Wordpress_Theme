@@ -1,159 +1,93 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @package YourThemeName
- */
-?>
-
 <footer id="site-footer" class="site-footer">
-    <div class="footer-wrapper">
-        <div class="footer-grid">
-
-            <div class="footer-brand">
-                <h2 class="brand-title"><?php bloginfo('name'); ?></h2>
-                <p class="brand-description"><?php bloginfo('description'); ?></p>
-            </div>
-
-            <div class="footer-section">
-                <h3 class="section-title">Company</h3>
-                <?php wp_nav_menu(array(
-                    'theme_location' => 'footer-menu',
-                    'menu_class' => 'footer-menu',
-                    'container' => false,
-                    'fallback_cb' => false
-                )); ?>
-            </div>
-
-            <div class="footer-section">
-                <h3 class="section-title">Contact</h3>
-                <ul class="contact-info">
-                    <li>Email: <a href="mailto:info@example.com">info@example.com</a></li>
-                    <li>Phone: <a href="tel:+911234567890">+91 123 456 7890</a></li>
-                    <li>Address: 123 Business St, Kolkata, IN</li>
-                </ul>
-            </div>
-
-            <div class="footer-section">
-                <h3 class="section-title">Follow Us</h3>
-                <ul class="social-links">
-                    <li><a href="#" aria-label="Facebook">Facebook</a></li>
-                    <li><a href="#" aria-label="Twitter">Twitter</a></li>
-                    <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
-                </ul>
-            </div>
-
+    <div class="footer-container">
+        <div class="footer-brand">
+            <h2><?php bloginfo('name'); ?></h2>
+            <p><?php bloginfo('description'); ?></p>
         </div>
 
-        <div class="footer-bottom">
-            <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
-            <p class="credit-line">Crafted with strategy & style.</p>
+        <div class="footer-nav">
+            <h3>Quick Links</h3>
+            <?php wp_nav_menu(array(
+                'theme_location' => 'footer-menu',
+                'menu_class' => 'footer-menu',
+                'fallback_cb' => false
+            )); ?>
         </div>
+
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
+            <p>Phone: <a href="tel:+911234567890">+91 123 456 7890</a></p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <a href="#" aria-label="Facebook">Facebook</a> |
+            <a href="#" aria-label="Twitter">Twitter</a> |
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
     </div>
 </footer>
 
 <style>
 .site-footer {
-    background-color: #0f0f0f;
-    color: #ccc;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    padding-top: 60px;
-    padding-bottom: 40px;
-    line-height: 1.6;
+    background-color:rgb(0, 0, 0);
+    color: #f0f0f0;
+    padding: 40px 20px 20px;
 }
-
-.footer-wrapper {
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
 }
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 40px;
-    margin-bottom: 40px;
+.site-footer h2,
+.site-footer h3 {
+    margin-top: 0;
+    color: #ffffff;
 }
-
-.footer-brand {
-    grid-column: span 2;
+.site-footer a {
+    color: #f0f0f0;
+    text-decoration: none;
 }
-
-.brand-title {
-    font-size: 22px;
-    color: #fff;
-    margin-bottom: 10px;
+.site-footer a:hover {
+    text-decoration: underline;
 }
-
-.brand-description {
-    font-size: 14px;
-    color: #aaa;
-}
-
-.footer-section {
-    display: flex;
-    flex-direction: column;
-}
-
-.section-title {
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 15px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.footer-menu,
-.contact-info,
-.social-links {
+.footer-nav .footer-menu {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
-.footer-menu li,
-.contact-info li,
-.social-links li {
-    margin-bottom: 8px;
+.footer-nav .footer-menu li {
+    margin: 5px 0;
 }
-
-.footer-menu li a,
-.contact-info a,
-.social-links a {
-    color: #ccc;
-    text-decoration: none;
-    transition: color 0.2s ease;
+.footer-contact,
+.footer-brand,
+.footer-nav,
+.footer-social {
+    flex: 1 1 200px;
+    min-width: 200px;
 }
-
-.footer-menu li a:hover,
-.contact-info a:hover,
-.social-links a:hover {
-    color: #ffffff;
-}
-
 .footer-bottom {
-    border-top: 1px solid #333;
-    padding-top: 20px;
     text-align: center;
-    font-size: 13px;
-    color: #888;
+    border-top: 1px solid #333;
+    margin-top: 20px;
+    padding-top: 20px;
+    font-size: 14px;
 }
-
-.credit-line {
-    margin-top: 5px;
-    font-style: italic;
-}
-
 @media screen and (max-width: 768px) {
-    .footer-brand {
-        grid-column: span 1;
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 </style>
-
 <?php wp_footer(); ?>
 </body>
 </html>
