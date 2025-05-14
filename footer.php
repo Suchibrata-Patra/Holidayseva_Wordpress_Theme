@@ -5,7 +5,7 @@
             <p><?php bloginfo('description'); ?></p>
         </div>
 
-        <div class="footer-nav" style="display:flex;flex-direction:horizontal;">
+        <div class="footer-nav">
             <h3>Quick Links</h3>
             <a href="#" aria-label="Facebook">Facebook</a> |
             <a href="#" aria-label="Twitter">Twitter</a> |
