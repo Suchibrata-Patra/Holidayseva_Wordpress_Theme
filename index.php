@@ -95,9 +95,9 @@ get_header(); ?>
 </main>
 
 <style>
-    #primary{
+    /* #primary{
     margin:0% 8% 0% 8%;
-    }
+    } */
 .hotel-store-row {
   display: flex;
   align-items: center; /* aligns items vertically center */
@@ -129,7 +129,7 @@ get_header(); ?>
   display: flex;
   gap: 20px;
   flex-shrink: 0;
-  margin:0% 5% 0% 5%;
+  /* margin:0% 5% 0% 5%; */
 }
 
 .hotel-card {
