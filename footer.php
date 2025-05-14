@@ -38,8 +38,8 @@
 
 <style>
 .site-footer {
-    background-color:rgb(174, 174, 174);
-    color: #f0f0f0;
+    background-color:#F5F5F7;
+    color:black;
     padding: 40px 20px 20px;
 }
 .footer-container {
@@ -53,10 +53,10 @@
 .site-footer h2,
 .site-footer h3 {
     margin-top: 0;
-    color: #ffffff;
+    color:rgb(0, 0, 0);
 }
 .site-footer a {
-    color: #f0f0f0;
+    color:rgb(0, 0, 0);
     text-decoration: none;
 }
 .site-footer a:hover {
