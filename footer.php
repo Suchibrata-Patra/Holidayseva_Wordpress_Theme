@@ -54,6 +54,7 @@
 .site-footer h3 {
     margin-top: 0;
     color:rgb(35, 35, 35);
+    font-weight: 400;
 }
 .site-footer a {
     color:grey;
