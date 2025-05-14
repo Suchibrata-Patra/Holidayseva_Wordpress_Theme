@@ -19,8 +19,8 @@
 
         <div class="footer-contact">
             <h3>Contact</h3>
-            <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-            <p>Phone: <a href="tel:+911234567890">+91 123 456 7890</a></p>
+            <p>Email: <a href="mailto:info@example.com">info.offial@holidayseva.com</a></p>
+            <p>Phone: <a href="tel:+911234567890">+91 8145302135</a></p>
         </div>
 
         <div class="footer-social">
@@ -31,9 +31,9 @@
         </div>
     </div>
 
-    <div class="footer-bottom">
+    <!-- <div class="footer-bottom">
         <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
-    </div>
+    </div> -->
 </footer>
 
 <style>
