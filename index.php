@@ -74,7 +74,6 @@ get_header(); ?>
 
 // endwhile; // End of the loop.
 ?>
-</main>
 <div class="hotel-store-row">
   <div class="hotel-store-heading">
     Flagship Hotel Stores<br>on MakeMyTrip
@@ -94,9 +93,10 @@ get_header(); ?>
     </div>
   </div>
 </div>
+</main>
 
 <style>
-    body{
+    main{
     margin:0% 8% 0% 8%;
     }
     .hotel-store-row {
