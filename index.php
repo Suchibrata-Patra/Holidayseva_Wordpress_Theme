@@ -114,14 +114,14 @@ get_header(); ?>
         font-size:20px !important;
       }
       .hotel-card{
-        width: 140px !important;
-        height: 80px !important;
+        width: 170px !important;
+        height:100px !important;
       }
       .hotel-store-row{
         gap:0px !important;
         row:0px;
         overflow:hidden;
-        padding-left:5px !important;
+        padding-left:10px !important;
       }
       .hotel-store-cards{
         margin-left:-10px !important;
