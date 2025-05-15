@@ -103,9 +103,9 @@ get_header(); ?>
     #primary{
     margin:0% 8% 0% 8%;
     }
-    .mobile-only {
+    /* .mobile-only {
   display: none;
-}
+} */
      @media (max-width: 768px) {
       #primary{
         margin:0px;
