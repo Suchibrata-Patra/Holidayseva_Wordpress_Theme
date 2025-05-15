@@ -178,7 +178,6 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
     flex-wrap: wrap;
   }
 
