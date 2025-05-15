@@ -127,7 +127,7 @@ get_header(); ?>
     display: inline-block;
   }
   .desktop_only{
-    disply:none;
+    display:none;
   }
      }
 
