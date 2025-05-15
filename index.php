@@ -127,6 +127,7 @@ get_header(); ?>
         margin-left:0px !important;
         gap:0px;
         overflow:hidden;
+        margin:0px;
       }
       .hotel-card-text{
         font-size:0.7rem !important;
