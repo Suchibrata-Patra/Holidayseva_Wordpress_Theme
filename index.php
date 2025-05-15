@@ -76,7 +76,7 @@ get_header(); ?>
 ?>
 <div class="hotel-store-row">
   <div class="hotel-store-heading">
-    Flagship Hotel Stores<br>on MakeMyTrip
+    Flagship Hotel Stores<br>on HolidaySeva
   </div>
 
   <div class="hotel-store-cards">
@@ -101,6 +101,9 @@ get_header(); ?>
      @media (max-width: 768px) {
       #primary{
         margin:0px;
+      }
+      .hotel-store-heading{
+        font-size:15px;
       }
      }
 
