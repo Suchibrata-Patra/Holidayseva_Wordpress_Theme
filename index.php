@@ -303,8 +303,8 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
         <div class="offer-type">DOM HOTELS</div>
         <div class="offer-title">Hotels in Spotlight</div>
         <div class="offer-description">Luxury Stays Chosen by our Experts for your next relaxing break!</div>
-        <a href="#" class="offer-link">EXPLORE NOW</a>
       </div>
+      <a href="#" class="offer-link">EXPLORE →</a>
     </div>
 
     <div class="offer-card">
@@ -313,7 +313,7 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
         <div class="offer-type">DOM HOTELS</div>
         <div class="offer-title">FOR MEMORABLE STAYS AT THE TAJ:</div>
         <div class="offer-description">Get FLAT 15% Savings* on Stays & More!</div>
-        <a href="#" class="offer-link">VIEW DETAILS</a>
+        <a href="#" class="offer-link">VIEW DETAILS  →</a>
       </div>
     </div>
     <div class="offer-card">
@@ -322,7 +322,7 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
         <div class="offer-type">DOM HOTELS</div>
         <div class="offer-title">FOR MEMORABLE STAYS AT THE TAJ:</div>
         <div class="offer-description">Get FLAT 15% Savings* on Stays & More!</div>
-        <a href="#" class="offer-link">VIEW DETAILS</a>
+        <a href="#" class="offer-link">VIEW DETAILS  →</a>
       </div>
     </div>
     <div class="offer-card">
@@ -331,7 +331,7 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
         <div class="offer-type">DOM HOTELS</div>
         <div class="offer-title">FOR MEMORABLE STAYS AT THE TAJ:</div>
         <div class="offer-description">Get FLAT 15% Savings* on Stays & More!</div>
-        <a href="#" class="offer-link">VIEW DETAILS</a>
+        <a href="#" class="offer-link">VIEW DETAILS  →</a>
       </div>
     </div>
 
@@ -341,7 +341,7 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
         <div class="offer-type">INTL FLIGHTS</div>
         <div class="offer-title">Up to 25% OFF* + Additional Savings on EMI</div>
         <div class="offer-description">for flights, hotels, holiday packages, cabs & buses.</div>
-        <a href="#" class="offer-link">VIEW DETAILS</a>
+        <a href="#" class="offer-link">VIEW DETAILS  →</a>
       </div>
     </div>
   </div>
