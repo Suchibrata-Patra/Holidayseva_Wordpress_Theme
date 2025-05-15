@@ -347,7 +347,7 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
   </div>
 
   <!-- <div class="footer-nav"> -->
-    <a href="#" class="offer-link" style="font-size:0.8rem;">VIEW ALL →</a>
+    <a href="#" class="offer-link" style="font-size:1rem !important;">VIEW ALL →</a>
   <!-- </div> -->
 </div>
 
