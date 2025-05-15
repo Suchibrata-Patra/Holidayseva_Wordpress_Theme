@@ -119,6 +119,7 @@ get_header(); ?>
       }
       .hotel-store-row{
         row:0px;
+        overflow:hidden;
       }
       .hotel-store-cards{
         margin-left:-10px !important;
