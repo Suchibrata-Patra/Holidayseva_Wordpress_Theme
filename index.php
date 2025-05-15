@@ -114,8 +114,8 @@ get_header(); ?>
         font-size:20px !important;
       }
       .hotel-card{
-        width: 260px !important;
-        height: 170px !important;
+        width: 200px !important;
+        height: 150px !important;
       }
       .hotel-store-row{
         gap:0px !important;
