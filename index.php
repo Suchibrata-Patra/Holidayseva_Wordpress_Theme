@@ -183,7 +183,9 @@ get_header(); ?>
 }
 </style>
 <br>
-Model of the thigs to be develoed by the model of the things to be doe by the thing is nothing but 
+
+
+
 <!-- Beginning of the Important Cards Swipes -->
  <style>
     .card_big-section {
