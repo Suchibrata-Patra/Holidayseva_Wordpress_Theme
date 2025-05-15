@@ -287,7 +287,7 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
     </div>
   </div>
 
-  <div class="offers">
+  <div class="offers" style="border-radius:10px;">
     <div class="offer-card">
       <img src="https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Akasa Air" class="offer-image">
       <div class="offer-content">
