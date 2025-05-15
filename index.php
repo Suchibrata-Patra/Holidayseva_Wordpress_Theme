@@ -257,8 +257,8 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
   .offer-link {
     color: #007bff;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 1.4rem;
   }
 
   .footer-nav {
