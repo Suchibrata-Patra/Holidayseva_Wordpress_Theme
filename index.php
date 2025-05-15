@@ -332,7 +332,7 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
         <div class="offer-title">FOR MEMORABLE STAYS AT THE TAJ:</div>
         <div class="offer-description">Get FLAT 15% Savings* on Stays & More!</div>
       </div>
-      <a href="#" class="offer-link">VIEW DETAILS  →</a>
+      <a href="#" class="offer-link" style="margin-left:10px;">VIEW DETAILS  →</a>
     </div>
 
     <div class="offer-card">
