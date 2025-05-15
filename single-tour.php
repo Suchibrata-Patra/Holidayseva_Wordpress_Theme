@@ -56,6 +56,8 @@
             <button class="holidayseva_primary_button button_size_1" style="margin-left: 2rem;"> Book Now</button>
         </div>
     </div>
+
+
     <div class="holidayseva_wrapper_header">
         <div class="grid-container">
             <div class="image-container">
