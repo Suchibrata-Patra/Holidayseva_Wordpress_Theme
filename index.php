@@ -119,6 +119,7 @@ get_header(); ?>
       }
       .hotel-store-cards{
         margin-left:-10px !important;
+        gap:0px;
       }
       .hotel-card-text{
         font-size:0.7rem !important;
