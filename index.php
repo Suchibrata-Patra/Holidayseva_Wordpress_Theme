@@ -77,7 +77,9 @@ get_header(); ?>
 <div class="hotel-store-row">
   <div class="hotel-store-heading">
     Flagship Hotel Stores<br>on HolidaySeva <br>
-  <button id="explore_button" class="mobile-only" style="color:black;text-decoration:none;background-color:black;border:none;color:white;border-radius:50px;padding:6px 20px;display:none;">Explore →</button>
+<button id="explore_button" class="mobile-only" style="color:black;text-decoration:none;background-color:black;border:none;color:white;border-radius:50px;padding:6px 20px;">
+  Explore →
+</button>
   
   </div>
 
@@ -101,6 +103,9 @@ get_header(); ?>
     #primary{
     margin:0% 8% 0% 8%;
     }
+    .mobile-only {
+  display: none;
+}
      @media (max-width: 768px) {
       #primary{
         margin:0px;
@@ -118,9 +123,9 @@ get_header(); ?>
       .hotel-card-text{
         font-size:0.7rem !important;
       }
-      .mobile-only{
-        display: inline-block;
-      }
+      .mobile-only {
+    display: inline-block;
+  }
      }
 
 .hotel-store-row {
