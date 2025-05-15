@@ -370,11 +370,11 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
     </div>
 
     <!-- Right: Text Centered -->
-    <div style="width: 50%; background-color:rgb(255, 255, 255); display: flex; align-items: center; justify-content: left;">
+    <!-- <div style="width: 50%; background-color:rgb(255, 255, 255); display: flex; align-items: center; justify-content: left;">
         <div style="font-size: 3rem; font-weight: bold; text-align: left;">
             Comming Soon... 
         </div>
-    </div>
+    </div> -->
 
 </div>
 <!-- This is index.php -->
