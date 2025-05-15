@@ -117,6 +117,9 @@ get_header(); ?>
         width: 260px !important;
         height: 170px !important;
       }
+      .hotel-store-row{
+        row:0px;
+      }
       .hotel-store-cards{
         margin-left:-10px !important;
         gap:0px;
