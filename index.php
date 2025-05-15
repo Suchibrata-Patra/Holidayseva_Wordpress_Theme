@@ -118,7 +118,7 @@ get_header(); ?>
         height: 170px !important;
       }
       .hotel-store-row{
-        gap:0px;
+        gap:0px !important;
         row:0px;
         overflow:hidden;
       }
