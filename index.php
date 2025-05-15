@@ -110,9 +110,6 @@ Explore →
       #primary{
         margin:0px;
       }
-      .hotel-store-heading{
-        font-size:20px !important;
-      }
       .hotel-card{
         width: 170px !important;
         height:100px !important;
