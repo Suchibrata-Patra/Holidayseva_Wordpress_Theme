@@ -162,7 +162,7 @@ get_header(); ?>
   flex-shrink: 0;
   white-space: normal;
   line-height: 1.4;
-  min-width: 240px;
+  min-width: 150px;
 }
 
 .hotel-store-cards {
