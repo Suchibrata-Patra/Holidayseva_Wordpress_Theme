@@ -100,7 +100,7 @@ get_header(); ?>
     }
      @media (max-width: 768px) {
       #primary{
-        margin:0px;
+        margin:10px;
       }
       .hotel-store-heading{
         font-size:20px !important;
