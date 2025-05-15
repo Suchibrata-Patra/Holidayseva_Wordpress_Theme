@@ -101,7 +101,7 @@ get_header(); ?>
     #primary{
     margin:0% 8% 0% 8%;
     }
-     @media (max-width: 600px) {
+     @media (max-width: 768px) {
       #primary{
         margin:0px;
       }
