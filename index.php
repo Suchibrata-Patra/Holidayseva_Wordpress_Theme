@@ -398,6 +398,12 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
     margin:0% 8% 0% 8%;
   }
 
+ @media (max-width: 600px) {
+  .offer_container {
+    margin: 0;
+  }
+ }
+
   .header {
     display: flex;
     justify-content: space-between;
