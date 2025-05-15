@@ -103,7 +103,11 @@ get_header(); ?>
         margin:0px;
       }
       .hotel-store-heading{
-        font-size:15px;
+        font-size:10px;
+      }
+      .hotel-card{
+        width: 180px;
+        height: 140px;
       }
      }
 
