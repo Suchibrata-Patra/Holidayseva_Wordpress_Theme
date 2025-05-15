@@ -258,7 +258,7 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
     color: #007bff;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 
   .footer-nav {
