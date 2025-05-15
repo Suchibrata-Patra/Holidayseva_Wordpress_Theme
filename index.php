@@ -98,6 +98,10 @@ get_header(); ?>
     #primary{
     margin:0% 8% 0% 8%;
     }
+     @media (max-width: 768px) {
+      
+     }
+
 .hotel-store-row {
   display: flex;
   align-items: center; /* aligns items vertically center */
