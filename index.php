@@ -76,8 +76,8 @@ get_header(); ?>
 ?>
 <div class="hotel-store-row">
   <div class="hotel-store-heading">
-    Flagship Hotel Stores<br>on HolidaySeva
-  <button style="color:black;text-decoration:none;">Swipe →</button>
+    Flagship Hotel Stores<br>on HolidaySeva <br>
+  <button style="color:black;text-decoration:none;background-color:black;border:none;color:white;">Swipe →</button>
   </div>
 
 
