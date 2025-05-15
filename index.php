@@ -303,8 +303,8 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
         <div class="offer-type">DOM HOTELS</div>
         <div class="offer-title">Hotels in Spotlight</div>
         <div class="offer-description">Luxury Stays Chosen by our Experts for your next relaxing break!</div>
+        <a href="#" class="offer-link">EXPLORE →</a>
       </div>
-      <a href="#" class="offer-link">EXPLORE →</a>
     </div>
 
     <div class="offer-card">
@@ -322,8 +322,8 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
         <div class="offer-type">DOM HOTELS</div>
         <div class="offer-title">FOR MEMORABLE STAYS AT THE TAJ:</div>
         <div class="offer-description">Get FLAT 15% Savings* on Stays & More!</div>
+        <a href="#" class="offer-link">VIEW DETAILS  →</a>
       </div>
-      <a href="#" class="offer-link">VIEW DETAILS  →</a>
     </div>
     <div class="offer-card">
       <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8fDB8fHww" alt="Taj" class="offer-image" />
@@ -331,8 +331,8 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
         <div class="offer-type">DOM HOTELS</div>
         <div class="offer-title">FOR MEMORABLE STAYS AT THE TAJ:</div>
         <div class="offer-description">Get FLAT 15% Savings* on Stays & More!</div>
+        <a href="#" class="offer-link" style="margin-left:10px;">VIEWdd DETAILS  →</a>
       </div>
-      <a href="#" class="offer-link" style="margin-left:10px;">VIEWdd DETAILS  →</a>
     </div>
 
     <div class="offer-card">
