@@ -99,7 +99,9 @@ get_header(); ?>
     margin:0% 8% 0% 8%;
     }
      @media (max-width: 768px) {
-      
+      #primary{
+        margin:0px;
+      }
      }
 
 .hotel-store-row {
