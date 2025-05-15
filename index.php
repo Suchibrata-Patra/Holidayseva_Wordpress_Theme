@@ -225,7 +225,7 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
 }
 
   .offer-card:hover {
-    transform: translateY(-1px);
+    transform: translateY(-0.5px);
   }
 
   .offer-image {
