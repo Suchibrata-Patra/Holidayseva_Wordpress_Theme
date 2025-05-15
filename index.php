@@ -121,8 +121,7 @@ get_header(); ?>
         gap:0px !important;
         row:0px;
         overflow:hidden;
-        padding-left:5px;
-        padding-right:5px;
+        padding-left:4px !important;
       }
       .hotel-store-cards{
         margin-left:-10px !important;
