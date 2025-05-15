@@ -53,7 +53,6 @@
     } else {
         micButton.disabled = true;
         micButton.title = "Your browser doesn't support Speech Recognition.";
-        // alert('Speech Recognition API is not supported in your browser.');
     }
 
     /// Modified Fuzzy Logic
