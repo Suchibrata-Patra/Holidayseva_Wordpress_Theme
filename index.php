@@ -555,7 +555,7 @@ Explore →
 
 <div class="offer_container">
   <div class="header">
-    <h2 style="margin-top:0px; margin-bottom:0px;font-size:1.2rem;">Offers</h2>
+    <!-- <h2 style="margin-top:0px; margin-bottom:0px;font-size:1.2rem;">Offers</h2> -->
     <div class="tabs">
       <!-- <div class="tab active">All Offers</div> -->
     </div>
