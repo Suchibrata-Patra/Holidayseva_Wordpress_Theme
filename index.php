@@ -221,7 +221,7 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
   flex-direction: column;
   scroll-snap-align: start;
   transition: transform 0.2s;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* Mild shadow */
+  box-shadow:0 3px 30px 0 rgb(0 0 0 / 10%);
 }
 
   .offer-card:hover {
