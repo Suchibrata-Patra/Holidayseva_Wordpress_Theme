@@ -350,3 +350,7 @@
     </div> <!-- End of the Description Things -->
 </div>
 </div>
+<!-- This is index.php -->
+<?php
+get_footer();
+?>
