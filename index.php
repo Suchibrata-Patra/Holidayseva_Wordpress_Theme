@@ -112,6 +112,9 @@ get_header(); ?>
       .hotel-store-cards{
         margin:5px !important;
       }
+      .hotel-card-text{
+        font-size:0.7rem;
+      }
      }
 
 .hotel-store-row {
