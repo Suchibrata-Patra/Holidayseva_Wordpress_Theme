@@ -555,10 +555,11 @@ Explore →
 
 <div class="offer_container">
   <div class="header">
-    <div style="display:flex;">
-      <h2 style="margin-top:0px; margin-bottom:0px;font-size:1.2rem;">Offers</h2>
-    <a href="#" class="offer-link" style="font-size:1rem !important;right:0px;">VIEW ALL →</a>
-    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+  <h2 style="margin: 0; font-size: 1.2rem;">Offers</h2>
+  <a href="#" class="offer-link" style="font-size: 1rem !important;">VIEW ALL →</a>
+</div>
+
     <div class="tabs">
       <!-- <div class="tab active">All Offers</div> -->
     </div>
