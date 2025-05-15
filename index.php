@@ -280,7 +280,7 @@ Model of the thigs to be develoed by the model of the things to be doe by the th
 
 <div class="offer_container">
   <div class="header">
-    <h2>Offers</h2>
+    <h2 style="margin:0px auto 0px auto;">Offers</h2>
     <div class="tabs">
       <!-- <div class="tab active">All Offers</div> -->
     </div>
