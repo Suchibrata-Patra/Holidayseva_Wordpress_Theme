@@ -338,7 +338,6 @@ get_header(); ?>
 }
 
   </style>
-   &#8377; <span style="color:rgb(176, 176, 176);">|</span> INR
   <section class="card_big-section">
     <div class="card_big-container-wrapper">
         <h1 style="text-align: left;" class="scrollbar-header-text">Treat yourself an award-winning trip</h1>
