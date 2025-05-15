@@ -109,6 +109,9 @@ get_header(); ?>
         width: 180px;
         height: 140px;
       }
+      .hotel-store-cards{
+        margin:5px;
+      }
      }
 
 .hotel-store-row {
