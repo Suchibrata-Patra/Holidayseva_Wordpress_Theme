@@ -77,7 +77,9 @@ get_header(); ?>
 <div class="hotel-store-row">
   <div class="hotel-store-heading">
     Flagship Hotel Stores<br>on HolidaySeva
+  <button style="color:black;text-decoration:none;">Swipe →</button>
   </div>
+
 
   <div class="hotel-store-cards">
     
@@ -100,7 +102,7 @@ get_header(); ?>
     }
      @media (max-width: 768px) {
       #primary{
-        margin:10px;
+        margin:0px;
       }
       .hotel-store-heading{
         font-size:20px !important;
