@@ -127,7 +127,7 @@ Explore →
         margin:0px;
       }
       .hotel-store-heading{
-        font-size:0.8rem;
+        font-size:10px;
         line-height:0.8rem;
       }
       .hotel-card-text{
