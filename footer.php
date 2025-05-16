@@ -230,7 +230,7 @@
 </section>
 
 <section class="footer_third_part"
-  style="background-color: #f2f2f2; display: flex; padding: 1% 10% 2% 10%; align-items: center; flex-wrap: wrap;">
+  style="background-color: #f2f2f2; display: flex; padding: 1% 10% 2% 10%; align-items: left; flex-wrap: wrap;">
   <div style="flex: 0 0 60%;font-weight: 200;font-size:0.9rem">
     <br><br>
     <u>Terms & Conditions:</u><br>
