@@ -1,10 +1,4 @@
 <style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-  }
-
   .holidayseva_main_footer {
     padding: 5% 10% 2% 10%;
     display: flex;
@@ -27,6 +21,9 @@
 
   .footer_column {
     flex: 1;
+  }
+  .holidayseva_main_footer a{
+    color:black;
   }
 
   .footer_column strong {
