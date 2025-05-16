@@ -1,4 +1,5 @@
 <main id="primary" class="site-main">
+<?php include_once get_template_directory() . '/header.php'; ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/Central_styling.css">
 <?php
 // while (have_posts()) :
