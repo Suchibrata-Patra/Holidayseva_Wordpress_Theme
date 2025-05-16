@@ -136,8 +136,8 @@
   .footer_third_part {
     flex-direction: column;
     padding: 20px 5%;
-    text-align: center;
-    align-items: center;
+    text-align: left;
+    align-items: left;
     gap: 20px;
   }
 
