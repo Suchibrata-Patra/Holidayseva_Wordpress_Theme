@@ -237,7 +237,7 @@
 
 
 <div class="footer_third_part"
-  style="background-color: #f2f2f2; display: flex; padding: 0px 10% 10% 2%; align-items: center; flex-wrap: wrap;">
+  style="background-color: #f2f2f2; display: flex; padding: 0px 10% 2% 10%; align-items: center; flex-wrap: wrap;">
   <!-- Left Section: 60% -->
   <div style="flex: 0 0 60%;font-weight: 200;font-size:0.8rem">
     <br>
