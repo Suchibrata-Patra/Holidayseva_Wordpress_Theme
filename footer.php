@@ -192,7 +192,7 @@
         <li>Leadership</li>
         <li>Business and Analytics</li>
         <li>Contact Us</li>
-        <li>Accessibility Statement</li>
+        <li>Whitepaper</li>
       </ul>
     </div>
     <div class="footer_column">
