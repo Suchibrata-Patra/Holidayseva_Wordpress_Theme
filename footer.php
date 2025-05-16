@@ -242,7 +242,7 @@
   <div style="flex: 0 0 60%;font-weight: 200;font-size:0.9rem">
     <br><br>
     <u>Terms& conditions:</u><br>
-    <a href="https://holidayseva.com" style="color:black;">Holidayseva</a> makes no guarantees for availability of prices advertised on our sites and applications. Listed prices may require a stay of a particular length or have blackout dates, qualifications or other applicable restrictions. Holidayseva LLC is not responsible for any content on external web sites that are not owned or operated by Holidayseva.
+    <a href="https://holidayseva.com" style="color:black;text-decoration:none;">Holidayseva</a> makes no guarantees for availability of prices advertised on our sites and applications. Listed prices may require a stay of a particular length or have blackout dates, qualifications or other applicable restrictions. Holidayseva LLC is not responsible for any content on external web sites that are not owned or operated by Holidayseva.
     <br>
     <br>
     <a href="https://holidayseva.com" style="color:black;">Holidayseva</a> LLC is not a booking agent or tour operator. When you book with one of our partners, please be sure to check their site for a full disclosure of all applicable fees.
