@@ -250,6 +250,8 @@
 
   <!-- Right Section: 40% -->
   <div style="flex: 0 0 40%; display: flex; justify-content: center; gap: 10px;">
-   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/holidayseva_facebook.png" alt="" style="width:10px;height:10px;">
+   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/holidayseva_facebook.png" alt="" style="width:30px;height:30px;">
+   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/holidayseva_facebook.png" alt="" style="width:30px;height:30px;">
+   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/holidayseva_facebook.png" alt="" style="width:30px;height:30px;">
   </div>
 </div>
