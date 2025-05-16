@@ -61,26 +61,103 @@
     /* max-height: 80px; */
   }
 
-  @media (max-width: 768px) {
-    .holidayseva_main_footer {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .footer_columns_group {
-      flex-direction: column;
-      flex: 100%;
-      gap: 16px;
-      align-items: center;
-    }
-
-    .footer_logo {
-      margin-top: 20px;
-      text-align: center;
-      flex: 100%;
-    }
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
   }
+
+  .holidayseva_main_footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 8% 5% 4% 5%;
+  }
+
+  .footer_columns_group {
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .footer_column {
+    width: 100%;
+  }
+
+  .footer_column strong {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+
+  .footer_column li {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+
+  .footer_logo {
+    margin-top: 25px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer_logo img {
+    max-width: 180px;
+  }
+
+  .footer_second_part {
+    flex-direction: column;
+    padding: 20px 5%;
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .footer_second_part > div:first-child {
+    flex: 100%;
+  }
+
+  .horizontal_button_bar {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.85rem;
+  }
+
+  .footer_second_part > div:last-child {
+    flex: 100%;
+    justify-content: center;
+  }
+
+  .footer_third_part {
+    flex-direction: column;
+    padding: 20px 5%;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer_third_part > div:first-child {
+    flex: 100%;
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .footer_third_part > div:last-child {
+    flex: 100%;
+    justify-content: center;
+  }
+
+  .footer_third_part button img {
+    width: 16px;
+    height: 16px;
+  }
+
+  button {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
+}
+
 </style>
 <div class="holidayseva_main_footer">
   <div class="footer_columns_group">
