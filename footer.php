@@ -237,9 +237,9 @@
 
 
 <div class="footer_third_part"
-  style="background-color: #f2f2f2; display: flex; padding: 0px 10% 10% 5%; align-items: center; flex-wrap: wrap;">
+  style="background-color: #f2f2f2; display: flex; padding: 0px 10% 10% 2%; align-items: center; flex-wrap: wrap;">
   <!-- Left Section: 60% -->
-  <div style="flex: 0 0 70%;font-weight: 200;font-size:0.8rem">
+  <div style="flex: 0 0 60%;font-weight: 200;font-size:0.8rem">
     <br>
     This is the version of our website addressed to speakers of English in India. If you are a resident of another country or region, please select the appropriate version of Holidayseva for your country or region. <br><br>
     Holidayseva LLC makes no guarantees for availability of prices advertised on our sites and applications. Listed prices may require a stay of a particular length or have blackout dates, qualifications or other applicable restrictions. Holidayseva LLC is not responsible for any content on external web sites that are not owned or operated by Holidayseva.
@@ -249,7 +249,7 @@
   </div>
 
   <!-- Right Section: 40% -->
-  <div style="flex: 0 0 30%; display: flex; justify-content: center; gap: 10px;">
+  <div style="flex: 0 0 40%; display: flex; justify-content: center; gap: 10px;">
     <button style="padding: 8px 20px; background-color: white; border: 1px solid grey; border-radius: 50px;"><img src="<?php echo get_template_directory_uri();?>/Assets/Images/holidayseva_facebook.png" alt="" style="width:10px;height:10px;"></button>
   </div>
 </div>
