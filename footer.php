@@ -23,7 +23,7 @@
     flex: 1;
   }
   .holidayseva_main_footer a{
-    color:black;
+    color:black
   }
 
   .footer_column strong {
@@ -123,6 +123,9 @@
     flex-wrap: wrap;
     gap: 8px;
     font-size: 0.85rem;
+  }
+  .horizontal_button_bar a{
+    color:black;
   }
 
   .footer_second_part > div:last-child {
