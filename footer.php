@@ -165,87 +165,94 @@
 
 
 </style>
-<footer id="site-footer" class="holidayseva_main_footer" role="contentinfo">
-  <div class="footer_top">
-    <div class="footer_columns_group">
-      <div class="footer_column">
-        <strong>About Holidayseva</strong>
-        <ul>
-          <li><a href="<?php echo home_url('/about-us'); ?>" title="About Us">About Us</a></li>
-          <li><a href="<?php echo home_url('/trust-and-safety'); ?>" title="Trust and Safety">Trust And Safety</a></li>
-          <li><a href="<?php echo home_url('/contact'); ?>" title="Contact Us">Contact Us</a></li>
-          <li><a href="<?php echo home_url('/accessibility'); ?>" title="Accessibility Statement">Accessibility Statement</a></li>
-        </ul>
-      </div>
-
-      <div class="footer_column">
-        <strong>Explore</strong>
-        <ul>
-          <li><a href="<?php echo home_url('/write-review'); ?>" title="Write a Review">Write a Review</a></li>
-          <li><a href="<?php echo home_url('/request-package'); ?>" title="Request a Package">Request a Package</a></li>
-          <li><a href="<?php echo home_url('/join'); ?>" title="Join Us">Join</a></li>
-          <li><a href="<?php echo home_url('/help'); ?>" title="Help Centre">Help Centre</a></li>
-          <li><a href="<?php echo home_url('/articles'); ?>" title="Read Articles">Articles</a></li>
-        </ul>
-      </div>
-
-      <div class="footer_column">
-        <strong>Partner With Us</strong>
-        <ul>
-          <li><a href="<?php echo home_url('/leadership'); ?>" title="Leadership">Leadership</a></li>
-          <li><a href="<?php echo home_url('/analytics'); ?>" title="Business and Analytics">Business and Analytics</a></li>
-          <li><a href="<?php echo home_url('/contact'); ?>" title="Contact Us">Contact Us</a></li>
-          <li><a href="<?php echo home_url('/whitepaper'); ?>" title="Whitepaper">Whitepaper</a></li>
-        </ul>
-      </div>
-
-      <div class="footer_column">
-        <strong>Quick Links</strong>
-        <ul>
-          <li><a href="<?php echo home_url('/posts'); ?>" title="All Posts">All Posts</a></li>
-          <li><a href="<?php echo home_url('/blog'); ?>" title="Read Blog">Blog</a></li>
-        </ul>
-      </div>
+<div class="holidayseva_main_footer">
+  <div class="footer_columns_group">
+    <div class="footer_column">
+      <strong>About Holidayseva</strong>
+      <ul>
+        <li>About Us</li>
+        <li>Trust And Safety</li>
+        <li>Contact Us</li>
+        <li>Accessibility Statement</li>
+      </ul>
     </div>
+    <div class="footer_column">
+      <strong>Explore</strong>
+      <ul>
+        <li>Write a Review</li>
+        <li>Request a Package</li>
+        <li>Join</li>
+        <li>Help Centre</li>
+        <li>Articles</li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <strong>Partner With Us</strong>
+      <ul>
+        <li>Leadership</li>
+        <li>Business and Analytics</li>
+        <li>Contact Us</li>
+        <li>Whitepaper</li>
+      </ul>
+    </div>
+    <div class="footer_column">
+      <strong>Quick Links</strong>
+      <ul>
+        <li>All Posts</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer_logo">
+    <img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/gangasagar-tourism.com_logo.svg"
+      alt="Gangasagar Tourism Logo">
+  </div>
+</div>
 
-    <div class="footer_logo">
-      <img src="<?php echo get_template_directory_uri(); ?>/Assets/Images/logo.svg" alt="Holidayseva Logo">
+
+<div class="footer_second_part"
+  style="background-color: #f2f2f2; display: flex; padding: 0px 10%; align-items: center; flex-wrap: wrap;">
+  <!-- Left Section: 60% -->
+  <div style="flex: 0 0 70%;">
+    <p style="margin: 0;">&copy; 2025 <a href="https://holidayseva.com" style="color:black;text-decoration:none;"><i>Holidayseva</i></a> - All rights reserved.</p>
+    <div class="horizontal_button_bar"
+      style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;font-weight:500;text-decoration: underline;">
+      <a href="#" style="text-decoration: none; color: inherit;">Terms of Use</a>
+      <a href="#" style="text-decoration: none; color: inherit;">Privacy and Cookies Statement</a>
+      <a href="#" style="text-decoration: none; color: inherit;">Cookie Consent</a>
+      <a href="#" style="text-decoration: none; color: inherit;">Site Map</a>
+      <a href="#" style="text-decoration: none; color: inherit;">How the Site Works</a>
+      <a href="#" style="text-decoration: none; color: inherit;">Contact Us</a>
     </div>
   </div>
 
-  <div class="footer_second_part">
-    <div class="footer_left">
-      <p>&copy; <?php echo date('Y'); ?> <a href="<?php echo esc_url(home_url()); ?>"><i>Holidayseva</i></a> - All rights reserved.</p>
-      <nav class="horizontal_button_bar" aria-label="Footer Navigation">
-        <a href="<?php echo home_url('/terms'); ?>">Terms of Use</a>
-        <a href="<?php echo home_url('/privacy'); ?>">Privacy & Cookies</a>
-        <a href="<?php echo home_url('/cookie-consent'); ?>">Cookie Consent</a>
-        <a href="<?php echo home_url('/site-map'); ?>">Site Map</a>
-        <a href="<?php echo home_url('/how-it-works'); ?>">How the Site Works</a>
-        <a href="<?php echo home_url('/contact'); ?>">Contact Us</a>
-      </nav>
-    </div>
+  <!-- Right Section: 40% -->
+  <div style="flex: 0 0 30%; display: flex; justify-content: center; gap: 10px;">
+    <button style="padding: 8px 20px; background-color: white; border: 1px solid grey; border-radius: 50px;">₹
+      INR</button>
+    <button
+      style="padding: 8px 20px; background-color: white; border: 1px solid grey; border-radius: 50px;">INDIA</button>
+  </div>
+</div>
 
-    <div class="footer_right">
-      <button aria-label="Currency: INR">₹ INR</button>
-      <button aria-label="Region: India">INDIA</button>
-    </div>
+
+<div class="footer_third_part"
+  style="background-color: #f2f2f2; display: flex; padding: 1% 10% 2% 10%; align-items: center; flex-wrap: wrap;">
+  <!-- Left Section: 60% -->
+  <div style="flex: 0 0 60%;font-weight: 200;font-size:0.9rem">
+    <br><br>
+    <u>Terms& conditions:</u><br>
+    <a href="https://holidayseva.com" style="color:black;text-decoration:none;"><i>Holidayseva</i></a> makes no guarantees for availability of prices advertised on our sites and applications. Listed prices may require a stay of a particular length or have blackout dates, qualifications or other applicable restrictions. Holidayseva LLC is not responsible for any content on external web sites that are not owned or operated by Holidayseva.
+    <br>
+    <br>
+    <a href="https://holidayseva.com" style="color:black;text-decoration:none;"><i>Holidayseva</i></a> LLC is not a booking agent or tour operator. When you book with one of our partners, please be sure to check their site for a full disclosure of all applicable fees.
   </div>
 
-  <div class="footer_third_part">
-    <div class="footer_terms">
-      <u>Terms & Conditions:</u><br>
-      Holidayseva makes no guarantees for availability of prices advertised. Prices may require a specific stay length, have blackout dates or other conditions. <br><br>
-      Holidayseva LLC is not a booking agent or tour operator. Please check partner sites for all applicable fees and disclosures.
-    </div>
-
-    <div class="footer_social">
-      <a href="#" title="Facebook"><img src="<?php echo get_template_directory_uri(); ?>/Assets/Images/facebook.svg" alt="Facebook Icon" width="20" height="20"></a>
-      <a href="#" title="Instagram"><img src="<?php echo get_template_directory_uri(); ?>/Assets/Images/instagram.svg" alt="Instagram Icon" width="20" height="20"></a>
-      <a href="#" title="Pinterest"><img src="<?php echo get_template_directory_uri(); ?>/Assets/Images/pinterest.svg" alt="Pinterest Icon" width="20" height="20"></a>
-      <a href="#" title="Twitter"><img src="<?php echo get_template_directory_uri(); ?>/Assets/Images/twitter.svg" alt="Twitter Icon" width="20" height="20"></a>
-    </div>
+  <!-- Right Section: 40% -->
+  <div style="flex: 0 0 40%; display: flex; justify-content: center; gap:10px;">
+   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/facebook.svg" alt="FaceBook Icon" style="width:20px;height:20px;">
+   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/instagram.svg" alt="Instagram Icon" style="width:20px;height:20px;">
+   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/pinterest.svg" alt="Pinterest Icon" style="width:20px;height:20px;">
+   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/twitter.svg" alt="Twitter Icon" style="width:20px;height:20px;">
   </div>
-</footer>
-</body>
-</html>
+</div>
