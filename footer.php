@@ -240,9 +240,9 @@
   style="background-color: #f2f2f2; display: flex; padding: 1% 10% 2% 10%; align-items: center; flex-wrap: wrap;">
   <!-- Left Section: 60% -->
   <div style="flex: 0 0 60%;font-weight: 200;font-size:0.9rem">
-    <br>
-    This is the version of our website addressed to speakers of English in India. If you are a resident of another country or region, please select the appropriate version of Holidayseva for your country or region. <br><br>
-    Holidayseva LLC makes no guarantees for availability of prices advertised on our sites and applications. Listed prices may require a stay of a particular length or have blackout dates, qualifications or other applicable restrictions. Holidayseva LLC is not responsible for any content on external web sites that are not owned or operated by Holidayseva.
+    <br><br>
+    <u>Terms& conditions:</u>
+    Holidayseva llc. makes no guarantees for availability of prices advertised on our sites and applications. Listed prices may require a stay of a particular length or have blackout dates, qualifications or other applicable restrictions. Holidayseva LLC is not responsible for any content on external web sites that are not owned or operated by Holidayseva.
     <br>
     <br>
     Holidayseva LLC is not a booking agent or tour operator. When you book with one of our partners, please be sure to check their site for a full disclosure of all applicable fees.
