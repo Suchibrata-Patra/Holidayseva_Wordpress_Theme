@@ -233,12 +233,6 @@
     <button
       style="padding: 8px 20px; background-color: white; border: 1px solid grey; border-radius: 50px;">INDIA</button>
   </div>
-   <div style="flex: 0 0 40%; display: flex; justify-content: center; gap: 10px;">
-   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/facebook.svg" alt="FaceBook Icon" style="width:20px;height:20px;">
-   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/instagram.svg" alt="Instagram Icon" style="width:20px;height:20px;">
-   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/pinterest.svg" alt="Pinterest Icon" style="width:20px;height:20px;">
-   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/twitter.svg" alt="Twitter Icon" style="width:20px;height:20px;">
-  </div>
 </div>
 
 
@@ -255,5 +249,10 @@
   </div>
 
   <!-- Right Section: 40% -->
- 
+  <div style="flex: 0 0 40%; display: flex; justify-content: center; gap:10px;">
+   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/facebook.svg" alt="FaceBook Icon" style="width:20px;height:20px;">
+   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/instagram.svg" alt="Instagram Icon" style="width:20px;height:20px;">
+   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/pinterest.svg" alt="Pinterest Icon" style="width:20px;height:20px;">
+   <img src="<?php echo get_template_directory_uri();?>/Assets/Images/twitter.svg" alt="Twitter Icon" style="width:20px;height:20px;">
+  </div>
 </div>
