@@ -195,6 +195,13 @@
         <li>Accessibility Statement</li>
       </ul>
     </div>
+    <div class="footer_column">
+      <strong>Quick Links</strong>
+      <ul>
+        <li>All Posts</li>
+        <li>Blog</li>
+      </ul>
+    </div>
   </div>
   <div class="footer_logo">
     <img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/gangasagar-tourism.com_logo.svg"
