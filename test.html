@@ -1,223 +1,117 @@
-<style>
-    .card_big-section {
-      text-align: center;
-      padding: 20px;
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    .card_big-section h1 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .card_big-section p {
-      color: #666;
-      margin-bottom: 20px;
-    }
-
-    .card_big-container-wrapper {
-      position: relative;
-      margin-left: 6%;
-      margin-right: 6%;
-    }
-    .card_big-container {
-  display: flex;
-  overflow-x: scroll;
-  gap: 20px;
-  padding: 10px;
-  scrollbar-width: none; /* For Firefox */
-}
-
-.card_big-container::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Edge */
-}
-
-    .card_big {
-      flex: 0 0 auto;
-      width: 300px;
-      border-radius: 8px;
-      overflow: hidden;
-      position: relative;
-      background-color: #fff;
-      text-align: left;
-    }
-
-    .card_big img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-
-    .card_big-content {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      padding: 10px;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-      color: #fff;
-    }
-
-    .card_big h3 {
-      margin: 10px 0 0;
-      font-size: 30px;
-    }
-
-    .award {
-      background-color: #ffcc00;
-      color: #000;
-      font-size: 12px;
-      font-weight: bold;
-      padding: 5px;
-      border-radius: 3px;
-      position: absolute;
-      top: -10px;
-      left: 10px;
-    }
-
-    .card_big-container::-webkit-scrollbar {
-      height: 8px;
-    }
-
-    .card_big-container::-webkit-scrollbar-thumb {
-      background-color: #ccc;
-      border-radius: 4px;
-    }
-
-    
-    .card_big-container::-webkit-scrollbar-track {
-      background-color: #f1f1f1;
-    }
-
-    /* Arrows */
-    .arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-      border: 1px solid #ddd;
+    .holidayseva_main_footer {
+      padding:5% 10%;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      z-index: 1000;
+      justify-content: space-between;
+      align-items: flex-start;
+      background-color: #f2f2f2;
     }
-
-    .arrow-left {
-      left: -20px;
-    }
-
-    .arrow-right {
-      right: -20px;
-    }
-
-    .arrow svg {
-      width: 20px;
-      height: 20px;
-      fill: #000;
-    }
-    .scrollbar-header-text{
-        color: black;
-    }
-    @media (max-width: 768px) {
-  .card_big-container-wrapper {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .card_big {
-    width: 250px; /* Slightly smaller card_bigs */
-  }
-
-  .card_big img {
-    height: 250px; /* Adjusted height */
-  }
-
-  .arrow {
-    display: none;
-  }
-
-  .scrollbar-header-text {
-    font-size: 18px; /* Adjust font size for smaller screens */
-  }
-
-  .scroll-bar-main-text {
-    font-size: 10px;
-  }
+.holidayseva_main_footer a:hover {
+  text-decoration: none;
 }
 
+    .footer_columns_group {
+      display: flex;
+      flex: 0 0 60%;
+      gap: 20px; /* Reduced gap for tighter layout */
+    }
+
+    .footer_column {
+      flex: 1;
+    }
+
+    .footer_column strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+      color: #1a1a1a;
+    }
+
+    .footer_column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer_column li {
+      margin-bottom: 4px;
+      font-size: 1rem;
+      color: #000000;
+      cursor: pointer;
+      font-weight: 300;
+    }
+
+    .footer_logo {
+      flex: 0 0 40%;
+      text-align: right;
+    }
+
+    .footer_logo img {
+      max-width: 100%;
+      height: auto;
+      /* max-height: 80px; */
+    }
+
+    @media (max-width: 768px) {
+      .holidayseva_main_footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer_columns_group {
+        flex-direction: column;
+        flex: 100%;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .footer_logo {
+        margin-top: 20px;
+        text-align: center;
+        flex: 100%;
+      }
+    }
   </style>
-   &#8377; <span style="color:rgb(176, 176, 176);">|</span> INR
-  <section class="card_big-section">
-    <div class="card_big-container-wrapper">
-        <h1 style="text-align: left;" class="scrollbar-header-text">Treat yourself an award-winning trip</h1>
-        <p style="text-align: left;">2024's Top' Choice Awards Best of the Best Tour Packages</p>    
-      <div class="arrow arrow-left" onclick="scrollLeft()">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"></path>
-        </svg>
+  <div class="holidayseva_main_footer">
+    <div class="footer_columns_group">
+      <div class="footer_column">
+        <strong>About Holidayseva</strong>
+        <ul>
+          <li>About Us</li>
+          <li>Trust And Safety</li>
+          <li>Contact Us</li>
+          <li>Accessibility Statement</li>
+        </ul>
       </div>
-      <div class="card_big-container" id="card_bigContainer">
-        <div class="card_big">
-          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e6/26/caption.jpg?w=300&h=-1&s=1" alt="Gangasagar Tour Packages">
-          <div class="card_big-content">
-            <span class="award">2024</span>
-            <h3 class="scroll-bar-main-text">Gangasagar</h3>
-          </div>
-        </div>
-        <div class="card_big">
-          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e6/06/caption.jpg?w=300&h=-1&s=1" alt="Kolkata Tour Packages">
-          <div class="card_big-content">
-            <span class="award">2024</span>
-            <h3 class="scroll-bar-main-text">Kolkata</h3>
-          </div>
-        </div>
-        <div class="card_big">
-          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e6/5e/caption.jpg?w=300&h=-1&s=1" alt="Mayapur Tour Packages">
-          <div class="card_big-content">
-            <span class="award">2024</span>
-            <h3 class="scroll-bar-main-text">Mayapur</h3>
-          </div>
-        </div>
-        <div class="card_big">
-          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e6/df/caption.jpg?w=300&h=-1&s=1" alt="Puri tour Packages">
-          <div class="card_big-content">
-            <span class="award">2024</span>
-            <h3 class="scroll-bar-main-text">Puri</h3>
-          </div>
-        </div>
-        <div class="card_big">
-          <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e7/3c/caption.jpg?w=300&h=-1&s=1" alt="Darjeeling Tour Packages">
-          <div class="card_big-content">
-            <span class="award">2024</span>
-            <h3 class="scroll-bar-main-text">Darjeeling</h3>
-          </div>
-        </div>
+      <div class="footer_column">
+        <strong>Explore</strong>
+        <ul>
+          <li>Write a Review</li>
+          <li>Request a Package</li>
+          <li>Join</li>
+          <li>Help Centre</li>
+          <li>Articles</li>
+        </ul>
       </div>
-      <div class="arrow arrow-right" onclick="scrollRight()">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M8.59 16.59L13.17 12l-4.58-4.59L10 6l6 6-6 6z"></path>
-        </svg>
+      <div class="footer_column">
+        <strong>Partner With Us</strong>
+        <ul>
+          <li>Leadership</li>
+          <li>Business and Analytics</li>
+          <li>Contact Us</li>
+          <li>Accessibility Statement</li>
+        </ul>
       </div>
     </div>
-  </section>
-  <script>
-    const card_bigContainer = document.getElementById("card_bigContainer");
-  
-    function scrollLeft() {
-      // Ensure scrolling to the left works by using a larger negative value
-      card_bigContainer.scrollBy({
-        left: -300, // Scroll left by 300px
-        behavior: "smooth",
-      });
-    }
-  
-    function scrollRight() {
-      card_bigContainer.scrollBy({
-        left: 300, // Scroll right by 300px
-        behavior: "smooth",
-      });
-    }
-  </script>
+    <div class="footer_logo">
+      <img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/gangasagar-tourism.com_logo.svg" alt="Gangasagar Tourism Logo">
+    </div>
+    
+  </div>

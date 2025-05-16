@@ -1,112 +1,117 @@
-<footer id="site-footer" class="site-footer">
-    <div class="footer-container">
-        <div class="footer-brand">
-            <h2>
-                <?php bloginfo('name'); ?>
-            </h2>
-            <p>
-                <?php bloginfo('description'); ?>
-            </p>
-        </div>
-
-        <div class="footer-nav">
-            <h3>Quick Links</h3>
-            <a href="#" aria-label="Facebook">Facebook</a> |
-            <a href="#" aria-label="Twitter">Twitter</a> |
-            <a href="#" aria-label="LinkedIn">LinkedIn</a>
-            <?php wp_nav_menu(array(
-                'theme_location' => 'footer-menu',
-                'menu_class' => 'footer-menu',
-                'fallback_cb' => false
-            )); ?>
-        </div>
-
-        <div class="footer-contact">
-            <h3>Contact</h3>
-            <p>Email: <a href="mailto:info@example.com">info.offial@holidayseva.com</a></p>
-            <p>Phone: <a href="tel:+911234567890">+91 8145302135</a></p>
-        </div>
-
-        <div class="footer-social">
-            <h3>Follow Us</h3>
-            <a href="#" aria-label="Facebook">Facebook</a> |
-            <a href="#" aria-label="Twitter">Twitter</a> |
-            <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        </div>
-    </div>
-
-    <!-- <div class="footer-bottom">
-        <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. All rights reserved.</p>
-    </div> -->
-</footer>
-
-<style>
-    .site-footer {
-        background-color: #F5F5F7;
-        color: black;
-        padding: 40px 20px 20px;
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
     }
 
-    .footer-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto;
+    .holidayseva_main_footer {
+      padding:5% 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      background-color: #f2f2f2;
+    }
+.holidayseva_main_footer a:hover {
+  text-decoration: none;
+}
+
+    .footer_columns_group {
+      display: flex;
+      flex: 0 0 60%;
+      gap: 20px; /* Reduced gap for tighter layout */
     }
 
-    .site-footer h2,
-    .site-footer h3 {
-        margin-top: 0;
-        color: rgb(35, 35, 35);
-        font-weight: 400;
+    .footer_column {
+      flex: 1;
     }
 
-    .site-footer a {
-        color: grey;
-        text-decoration: none;
-        font-weight: 300;
+    .footer_column strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+      color: #1a1a1a;
     }
 
-    .site-footer a:hover {
-        text-decoration: underline;
+    .footer_column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
-    .footer-nav .footer-menu {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+    .footer_column li {
+      margin-bottom: 4px;
+      font-size: 1rem;
+      color: #000000;
+      cursor: pointer;
+      font-weight: 300;
     }
 
-    .footer-nav .footer-menu li {
-        margin: 5px 0;
+    .footer_logo {
+      flex: 0 0 40%;
+      text-align: right;
     }
 
-    .footer-contact,
-    .footer-brand,
-    .footer-nav,
-    .footer-social {
-        flex: 1 1 200px;
-        min-width: 200px;
+    .footer_logo img {
+      max-width: 100%;
+      height: auto;
+      /* max-height: 80px; */
     }
 
-    .footer-bottom {
+    @media (max-width: 768px) {
+      .holidayseva_main_footer {
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        border-top: 1px solid #333;
+      }
+
+      .footer_columns_group {
+        flex-direction: column;
+        flex: 100%;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .footer_logo {
         margin-top: 20px;
-        padding-top: 20px;
-        font-size: 1rem;
+        text-align: center;
+        flex: 100%;
+      }
     }
-
-    @media screen and (max-width: 768px) {
-        .footer-container {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    }
-</style>
-<?php wp_footer(); ?>
-</body>
-
-</html>
+  </style>
+  <div class="holidayseva_main_footer">
+    <div class="footer_columns_group">
+      <div class="footer_column">
+        <strong>About Holidayseva</strong>
+        <ul>
+          <li>About Us</li>
+          <li>Trust And Safety</li>
+          <li>Contact Us</li>
+          <li>Accessibility Statement</li>
+        </ul>
+      </div>
+      <div class="footer_column">
+        <strong>Explore</strong>
+        <ul>
+          <li>Write a Review</li>
+          <li>Request a Package</li>
+          <li>Join</li>
+          <li>Help Centre</li>
+          <li>Articles</li>
+        </ul>
+      </div>
+      <div class="footer_column">
+        <strong>Partner With Us</strong>
+        <ul>
+          <li>Leadership</li>
+          <li>Business and Analytics</li>
+          <li>Contact Us</li>
+          <li>Accessibility Statement</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer_logo">
+      <img src="https://www.gangasagar-tourism.com/wp-content/uploads/2024/12/gangasagar-tourism.com_logo.svg" alt="Gangasagar Tourism Logo">
+    </div>
+    
+  </div>
