@@ -214,7 +214,7 @@
   style="background-color: #f2f2f2; display: flex; padding: 0px 10%; align-items: center; flex-wrap: wrap;">
   <!-- Left Section: 60% -->
   <div style="flex: 0 0 70%;">
-    <p style="margin: 0;">&copy; 2025 <a href="https://holidayseva.com" style="color:black;text-decoration:none;">Holidayseva</a> - All rights reserved.</p>
+    <p style="margin: 0;">&copy; 2025 <a href="https://holidayseva.com" style="color:black;text-decoration:none;"><i>Holidayseva</i></a> - All rights reserved.</p>
     <div class="horizontal_button_bar"
       style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;font-weight:500;text-decoration: underline;">
       <a href="#" style="text-decoration: none; color: inherit;">Terms of Use</a>
