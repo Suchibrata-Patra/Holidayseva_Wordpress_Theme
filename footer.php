@@ -106,7 +106,7 @@
   }
 
   .footer_logo img {
-    max-width: 180px;
+    max-width: 70%;
   }
 
   .footer_second_part {
