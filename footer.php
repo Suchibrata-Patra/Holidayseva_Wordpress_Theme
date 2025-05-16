@@ -214,7 +214,7 @@
   style="background-color: #f2f2f2; display: flex; padding: 0px 10%; align-items: center; flex-wrap: wrap;">
   <!-- Left Section: 60% -->
   <div style="flex: 0 0 70%;">
-    <p style="margin: 0;">&copy; 2025 Holidayseva.com - All rights reserved.</p>
+    <p style="margin: 0;">&copy; 2025 <a href="https://holidayseva.com">Holidayseva</a> - All rights reserved.</p>
     <div class="horizontal_button_bar"
       style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;font-weight:500;text-decoration: underline;">
       <a href="#" style="text-decoration: none; color: inherit;">Terms of Use</a>
@@ -241,11 +241,11 @@
   <!-- Left Section: 60% -->
   <div style="flex: 0 0 60%;font-weight: 200;font-size:0.9rem">
     <br><br>
-    <u>Terms& conditions:</u>
-    Holidayseva llc. makes no guarantees for availability of prices advertised on our sites and applications. Listed prices may require a stay of a particular length or have blackout dates, qualifications or other applicable restrictions. Holidayseva LLC is not responsible for any content on external web sites that are not owned or operated by Holidayseva.
+    <u>Terms& conditions:</u><br>
+    <a href="https://holidayseva.com">Holidayseva</a>makes no guarantees for availability of prices advertised on our sites and applications. Listed prices may require a stay of a particular length or have blackout dates, qualifications or other applicable restrictions. Holidayseva LLC is not responsible for any content on external web sites that are not owned or operated by Holidayseva.
     <br>
     <br>
-    Holidayseva LLC is not a booking agent or tour operator. When you book with one of our partners, please be sure to check their site for a full disclosure of all applicable fees.
+    <a href="https://holidayseva.com">Holidayseva</a> LLC is not a booking agent or tour operator. When you book with one of our partners, please be sure to check their site for a full disclosure of all applicable fees.
   </div>
 
   <!-- Right Section: 40% -->
