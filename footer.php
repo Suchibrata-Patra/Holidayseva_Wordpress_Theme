@@ -77,7 +77,7 @@
     flex-direction: column;
     width: 100%;
     gap: 24px;
-    align-items: center;
+    align-items: left;
   }
 
   .footer_column {
