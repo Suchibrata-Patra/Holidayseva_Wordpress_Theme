@@ -160,6 +160,6 @@
 
   <!-- Right Section: 40% -->
   <div style="flex: 0 0 30%; display: flex; justify-content: center; gap: 10px;">
-    <button style="padding: 8px 20px; background-color: white; border: 1px solid grey; border-radius: 50px;"><img src="<?php echo get_template_directory_uri();?>/Assets/Images/holidayseva_facebook.png" alt=""></button>
+    <button style="padding: 8px 20px; background-color: white; border: 1px solid grey; border-radius: 50px;"><img src="<?php echo get_template_directory_uri();?>/Assets/Images/holidayseva_facebook.png" alt="" style="width:10px;height:10px;"></button>
   </div>
 </div>
