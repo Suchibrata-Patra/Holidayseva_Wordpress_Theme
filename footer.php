@@ -144,7 +144,6 @@
 
   .footer_third_part > div:first-child {
     flex: 100%;
-    font-size: 0.75rem;
     line-height: 1.5;
   }
 
