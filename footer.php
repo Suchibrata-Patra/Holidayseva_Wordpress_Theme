@@ -74,19 +74,24 @@
   }
 
   .footer_columns_group {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
-    gap: 24px;
-    align-items: left;
+    gap: 16px;
   }
 
   .footer_column {
-    width: 100%;
+    flex: 1 1 45%;
+    min-width: 140px;
+    max-width: 250px;
+    text-align: left;
   }
 
   .footer_column strong {
     font-size: 1.1rem;
     margin-bottom: 6px;
+    display: block;
   }
 
   .footer_column li {
@@ -157,6 +162,7 @@
     padding: 6px 14px;
   }
 }
+
 
 </style>
 <div class="holidayseva_main_footer">
