@@ -60,7 +60,7 @@
 
 @media (max-width: 768px) {
   body {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .holidayseva_main_footer {
@@ -135,7 +135,7 @@
 
   .footer_third_part {
     flex-direction: column;
-    font-size:0.7rem;
+    font-size:0.5rem !important;
     padding: 20px 5%;
     text-align: left;
     align-items:left;
