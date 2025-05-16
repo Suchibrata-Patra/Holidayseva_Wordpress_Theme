@@ -44,7 +44,7 @@
 
   .footer_column li {
     margin-bottom: 4px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #000000;
     cursor: pointer;
     font-weight: 300;
