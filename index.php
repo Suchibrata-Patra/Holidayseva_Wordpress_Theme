@@ -19,7 +19,7 @@
     flex: 1;
     color:black;
     font-weight:500;
-    letter-spacing:2px;
+    letter-spacing:1px;
   }
 
   .hero_right_division {
