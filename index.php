@@ -19,7 +19,7 @@
     flex: 1;
     color:black;
     font-weight:500;
-    line-height:0.8rem;
+    line-height:1rem;
     letter-spacing:2px;
   }
 
