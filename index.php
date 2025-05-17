@@ -16,23 +16,20 @@
 
   .hero_left_division {
     font-size: 5rem;
-    flex: 1;
     color:black;
     font-weight:500;
     letter-spacing:-3px;
   }
 
-  .hero_right_division {
-    flex: 1;
-  }
+  
 </style>
 
 <div class="holidayseva_landing_page_hero_section">
   <div class="hero_left_division">
     Dare to Wander
-  </div>
-  <div class="hero_right_division">
-    Hello
+    <div class="search_functionalities">
+      
+    </div>
   </div>
 </div>
 
