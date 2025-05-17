@@ -191,9 +191,9 @@
 
 <div class="layout-wrapper">
   <div class="nav-tabs">
+    <div class="nav-tab is-active">Holidays</div>
     <div class="nav-tab">Flights</div>
     <div class="nav-tab">Hotels</div>
-    <div class="nav-tab is-active">Holidays</div>
     <div class="nav-tab">Bus</div>
     <div class="nav-tab">Trains</div>
   </div>
