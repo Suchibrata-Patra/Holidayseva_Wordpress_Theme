@@ -19,7 +19,8 @@
     flex: 1;
     color:black;
     font-weight:500;
-    line-height:0.3rem;
+    line-height:0.8rem;
+    letter-spacing:2px;
   }
 
   .hero_right_division {
