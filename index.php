@@ -100,6 +100,133 @@
 
 // endwhile; // End of the loop.
 ?>
+<style>
+  .layout-wrapper {
+    max-width: 1200px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .nav-tabs {
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+  }
+
+  .nav-tab {
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    background: #f6f6f6;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .nav-tab.is-active {
+    background: #ffefef;
+    color: #ff3e3e;
+  }
+
+  .form-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+
+  .input-group {
+    flex: 1 1 200px;
+    min-width: 200px;
+    position: relative;
+  }
+
+  label {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  .editable-input {
+    font-size: 24px;
+    font-weight: 700;
+    cursor: text;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    font-family: inherit;
+    color: #000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .editable-input:focus {
+    border-bottom-color: #ff3e3e;
+  }
+
+  .btn-primary {
+    background: #d32f2f;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  input[type="month"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.5);
+    cursor: pointer;
+  }
+</style>
+
+<div class="layout-wrapper">
+  <div class="nav-tabs">
+    <div class="nav-tab">Flights</div>
+    <div class="nav-tab">Hotels</div>
+    <div class="nav-tab is-active">Holidays</div>
+    <div class="nav-tab">Bus</div>
+    <div class="nav-tab">Trains</div>
+    <div class="nav-tab">Cabs</div>
+  </div>
+  <div class="form-section">
+    <div class="input-group">
+      <label for="departInput">Depart From</label>
+      <input type="text" id="departInput" class="editable-input" value="New Delhi" spellcheck="false" />
+    </div>
+    <div class="input-group">
+      <label for="goingInput">Going To</label>
+      <input type="text" id="goingInput" class="editable-input" value="Ladakh" spellcheck="false" />
+    </div>
+    <div class="input-group">
+      <label for="monthInput">Month of Travel (Optional)</label>
+      <input type="month" id="monthInput" class="editable-input" placeholder="Select Month" />
+    </div>
+    <div class="input-group" style="flex: none;">
+      <button class="btn-primary">Search</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Set default value to current month
+  const monthInput = document.getElementById('monthInput');
+  const today = new Date();
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const year = today.getFullYear();
+  monthInput.value = `${year}-${month}`;
+</script>
+
 <div class="hotel-store-row">
   <div class="hotel-store-heading">
     Flagship Hotel Stores<br>on HolidaySeva <br>
