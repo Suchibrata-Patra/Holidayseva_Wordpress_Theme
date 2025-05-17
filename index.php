@@ -196,7 +196,6 @@
     <div class="nav-tab is-active">Holidays</div>
     <div class="nav-tab">Bus</div>
     <div class="nav-tab">Trains</div>
-    <div class="nav-tab">Cabs</div>
   </div>
   <div class="form-section">
     <div class="input-group">
