@@ -29,7 +29,7 @@
 
 <div class="holidayseva_landing_page_hero_section">
   <div class="hero_left_division">
-    Explore <br>The World
+    Dare to Wander
   </div>
   <div class="hero_right_division">
     Hello
