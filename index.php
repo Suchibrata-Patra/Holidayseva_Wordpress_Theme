@@ -102,7 +102,7 @@
 <style>
   .layout-wrapper {
     max-width: 1200px;
-    margin: 5px auto 50px auto;
+    margin: 5px auto 0px auto;
     background: white;
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
