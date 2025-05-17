@@ -127,7 +127,7 @@
   }
 
   .nav-tab.is-active {
-    background: #ffefef;
+    background-color:#eaf6ff;
     color: #ff3e3e;
   }
 
