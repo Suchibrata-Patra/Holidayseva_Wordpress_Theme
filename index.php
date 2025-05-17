@@ -15,8 +15,10 @@
   }
 
   .hero_left_division {
-    font-size: 2rem;
+    font-size: 5rem;
     flex: 1;
+    color:black;
+    font-weight:500;
   }
 
   .hero_right_division {
