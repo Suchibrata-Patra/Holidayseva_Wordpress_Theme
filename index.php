@@ -2,14 +2,37 @@
 <?php include_once get_template_directory() . '/header.php'; ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/Central_styling.css">
 
-<div class="holidayseva_landing_page_hero_section" style="display:flex;margin-left:-10%;margin-right:-10%;">
-  <div class="hero_left_division" style="font-size:2rem;">
+<style>
+  .holidayseva_landing_page_hero_section {
+    background: url('<?php echo get_template_directory_uri(); ?>/Assets/Images/holidayseva_landing_page_hero_section.jpg') no-repeat center center;
+    background-size: cover;
+    margin-left: -10%;
+    margin-right: -10%;
+    display: flex;
+    align-items: center; /* vertically center content */
+    padding: 2rem;
+    color: white; /* so text shows on bg */
+  }
+
+  .hero_left_division {
+    font-size: 2rem;
+    flex: 1;
+  }
+
+  .hero_right_division {
+    flex: 1;
+  }
+</style>
+
+<div class="holidayseva_landing_page_hero_section">
+  <div class="hero_left_division">
     Explore <br>The World
   </div>
   <div class="hero_right_division">
     Hello
   </div>
 </div>
+
 
 <?php
 // while (have_posts()) :
