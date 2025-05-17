@@ -4,7 +4,7 @@
 
 <style>
   .holidayseva_landing_page_hero_section {
-    background: url('<?php echo get_template_directory_uri(); ?>/Assets/Images/holidayseva_landing_page_hero_section.jpg') no-repeat center center;
+    background: url('<?php echo get_template_directory_uri(); ?>/Assets/Images/hero_section_background_doodle.webp') no-repeat center center;
     background-size: cover;
     margin-left: -10%;
     margin-right: -10%;
