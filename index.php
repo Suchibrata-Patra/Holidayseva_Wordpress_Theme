@@ -177,9 +177,9 @@
     background: #d32f2f;
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 20px 40px;
     font-size: 16px;
-    border-radius: 6px;
+    border-radius: 50px;
     cursor: pointer;
   }
 
