@@ -128,7 +128,7 @@
 
   .nav-tab.is-active {
     background-color:#eaf6ff;
-    color: #ff3e3e;
+    color:rgb(0, 0, 0);
   }
 
   .form-section {
