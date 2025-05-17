@@ -2,7 +2,7 @@
 <?php include_once get_template_directory() . '/header.php'; ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/Central_styling.css">
 
-<style>
+<!-- <style>
   .holidayseva_landing_page_hero_section {
     background: url('<?php echo get_template_directory_uri(); ?>/Assets/Images/hero_section_background_doodle.webp') no-repeat center center;
     background-size: cover;
@@ -22,16 +22,16 @@
   }
 
   
-</style>
+</style> -->
 
-<div class="holidayseva_landing_page_hero_section">
+<!-- <div class="holidayseva_landing_page_hero_section">
   <div class="hero_left_division">
     Dare to Wander
     <div class="search_functionalities">
-      
+
     </div>
   </div>
-</div>
+</div> -->
 
 
 <?php
