@@ -1,3 +1,7 @@
+<main id="primary" class="site-main">
+<?php include_once get_template_directory() . '/header.php'; ?>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/Central_styling.css">
+
 <div class="holidayseva_landing_page_hero_section" style="display:flex;">
   <div class="hero_left_division" style="font-size:2rem;">
     Explore <br>The World
@@ -6,13 +10,6 @@
     Hello
   </div>
 </div>
-
-
-<main id="primary" class="site-main">
-<?php include_once get_template_directory() . '/header.php'; ?>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/Central_styling.css">
-
-
 
 <?php
 // while (have_posts()) :
