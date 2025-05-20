@@ -546,14 +546,14 @@ Explore →
           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e6/df/caption.jpg?w=300&h=-1&s=1" alt="Puri tour Packages">
           <div class="card_big-content">
             <span class="award">2024</span>
-            <h3 class="scroll-bar-main-text">Puri</h3>
+            <h3 class="scroll-bar-main-text">Lorem</h3>
           </div>
         </div>
         <div class="card_big">
           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e7/3c/caption.jpg?w=300&h=-1&s=1" alt="Darjeeling Tour Packages">
           <div class="card_big-content">
             <span class="award">2024</span>
-            <h3 class="scroll-bar-main-text">Darjeeling</h3>
+            <h3 class="scroll-bar-main-text">Lorem</h3>
           </div>
         </div>
       </div>
