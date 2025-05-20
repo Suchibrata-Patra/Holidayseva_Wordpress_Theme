@@ -16,9 +16,6 @@ add_filter('rank_math/snippet/rich_snippet_data', function($data, $post) {
     return $data;
 }, 10, 2);
 
-
-
-
 function custom_enqueue_tinymce_styles() {
     add_editor_style('path-to-your-tinymce-styles.css');
 }
@@ -140,7 +137,6 @@ add_action('init', 'register_custom_post_types');
 //     }
 // }
 // add_action('init', 'register_custom_page_types');
-
 
 // Enqueue scripts for media uploader
 function enqueue_tour_scripts($hook) {

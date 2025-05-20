@@ -525,21 +525,21 @@ Explore →
           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e6/26/caption.jpg?w=300&h=-1&s=1" alt="Gangasagar Tour Packages">
           <div class="card_big-content">
             <span class="award">2024</span>
-            <h3 class="scroll-bar-main-text">Gangasagar</h3>
+            <h3 class="scroll-bar-main-text">Lorem</h3>
           </div>
         </div>
         <div class="card_big">
           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e6/06/caption.jpg?w=300&h=-1&s=1" alt="Kolkata Tour Packages">
           <div class="card_big-content">
             <span class="award">2024</span>
-            <h3 class="scroll-bar-main-text">Kolkata</h3>
+            <h3 class="scroll-bar-main-text">Lorem</h3>
           </div>
         </div>
         <div class="card_big">
           <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/6d/e6/5e/caption.jpg?w=300&h=-1&s=1" alt="Mayapur Tour Packages">
           <div class="card_big-content">
             <span class="award">2024</span>
-            <h3 class="scroll-bar-main-text">Mayapur</h3>
+            <h3 class="scroll-bar-main-text">Lorem</h3>
           </div>
         </div>
         <div class="card_big">
