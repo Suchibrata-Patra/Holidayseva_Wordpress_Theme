@@ -1,93 +1,151 @@
-<style>
-  .layout-wrapper {
-    max-width: 1200px;
-    margin: 10px auto 10px auto;
-    background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
+  <style>
+    .layout-wrapper {
+      max-width: 1200px;
+      margin: 10px auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
 
-  .nav-tabs {
-    display: flex;
-    padding: 10px 20px;
-    border-bottom: 1px solid #eee;
-    background: #fff;
-  }
+    .nav-tabs {
+      display: flex;
+      padding: 10px 20px;
+      border-bottom: 1px solid #eee;
+      background: #fff;
+    }
 
-  .nav-tab {
-    padding: 10px 20px;
-    border-radius: 20px;
-    margin-right: 10px;
-    background: #f6f6f6;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background 0.3s ease, color 0.3s ease;
-  }
+    .nav-tab {
+      padding: 10px 20px;
+      border-radius: 20px;
+      margin-right: 10px;
+      background: #f6f6f6;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
 
-  .nav-tab.is-active {
-    background-color:#eaf6ff;
-    color:#2A4759;
-  }
+    .nav-tab.is-active {
+      background-color: #eaf6ff;
+      color: #2A4759;
+    }
 
-  .form-section {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 30px 20px;
-    gap: 20px;
-    justify-content: flex-start;
-  }
+    .form-section {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px 20px;
+      gap: 20px;
+      justify-content: flex-start;
+    }
 
-  .input-group {
-    flex: 1 1 200px;
-    min-width: 200px;
-    position: relative;
-  }
+    .input-group {
+      flex: 1 1 200px;
+      min-width: 200px;
+      position: relative;
+    }
 
-  label {
-    font-size: 13px;
-    color: #666;
-    margin-bottom: 5px;
-    display: block;
-  }
+    label {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 5px;
+      display: block;
+    }
 
-  .editable-input {
-    font-size: 24px;
-    font-weight: 700;
-    cursor: text;
-    padding: 5px 0;
-    border: none;
-    border-bottom: 1px solid #ccc;
-    background: transparent;
-    width: 100%;
-    outline: none;
-    font-family: inherit;
-    color: #000;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  }
+    .editable-input {
+      font-size: 24px;
+      font-weight: 700;
+      cursor: text;
+      padding: 5px 0;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      background: transparent;
+      width: 100%;
+      outline: none;
+      font-family: inherit;
+      color: #000;
+    }
 
-  .editable-input:focus {
-    border-bottom-color: #ff3e3e;
-  }
+    .editable-input:focus {
+      border-bottom-color: #ff3e3e;
+    }
 
-  .btn-primary {
-    background:rgb(0, 0, 0);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 50px;
-    cursor: pointer;
-  }
+    .btn-primary {
+      background: rgb(0, 0, 0);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 50px;
+      cursor: pointer;
+    }
 
-  input[type="month"]::-webkit-calendar-picker-indicator {
-    filter: invert(0.5);
-    cursor: pointer;
-  }
-</style>
+    input[type="month"]::-webkit-calendar-picker-indicator {
+      filter: invert(0.5);
+      cursor: pointer;
+    }
 
+    /* Floating dropdown panel OUTSIDE layout-wrapper */
+    .dropdown-panel {
+      position: fixed;
+      z-index: 9999;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      display: none;
+      max-height: 300px;
+      overflow-y: auto;
+      animation: fadeIn 0.2s ease;
+      width: 300px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .dropdown-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 15px;
+    }
+
+    .dropdown-item {
+      background: #fff;
+      border: 1px solid transparent;
+      padding: 10px;
+      text-align: left;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .dropdown-item:hover {
+      background: #f1f5f9;
+      border-color: #e0e0e0;
+    }
+
+    .dropdown-empty {
+      padding: 10px;
+      text-align: center;
+      color: #888;
+      font-style: italic;
+      grid-column: span 2;
+    }
+  </style>
 <div class="layout-wrapper">
   <div class="nav-tabs">
     <div class="nav-tab is-active">Holidays</div>
@@ -99,11 +157,11 @@
   <div class="form-section">
     <div class="input-group">
       <label for="departInput">Depart From</label>
-      <input type="text" id="departInput" class="editable-input" value="New Delhi" spellcheck="false" />
+      <input type="text" id="departInput" class="editable-input" placeholder="Enter city" spellcheck="false" />
     </div>
     <div class="input-group">
       <label for="goingInput">Going To</label>
-      <input type="text" id="goingInput" class="editable-input" value="Ladakh" spellcheck="false" />
+      <input type="text" id="goingInput" class="editable-input" placeholder="Enter destination" spellcheck="false" />
     </div>
     <div class="input-group">
       <label for="monthInput">Month of Travel (Optional)</label>
@@ -114,83 +172,83 @@
     </div>
   </div>
 </div>
-<style>
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 10;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 5px;
-    width: 100%;
-    display: none;
-    max-height: 200px;
-    overflow-y: auto;
-  }
 
-  .dropdown-item {
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #333;
-    transition: background 0.2s;
-  }
-
-  .dropdown-item:hover {
-    background: #f0f0f0;
-  }
-
-  .input-group {
-    position: relative; /* To position dropdown correctly */
-  }
-</style>
+<!-- Floating Dropdown container -->
+<div id="floatingDropdown" class="dropdown-panel">
+  <div class="dropdown-grid" id="dropdownGrid"></div>
+</div>
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const inputsWithDropdown = [
+    const dropdown = document.getElementById("floatingDropdown");
+    const dropdownGrid = document.getElementById("dropdownGrid");
+
+    const config = [
       {
         input: document.getElementById("departInput"),
-        options: ["New Delhi", "Mumbai", "Chennai", "Bangalore", "Hyderabad"]
+        suggestions: ["New Delhi", "Mumbai", "Chennai", "Bangalore", "Hyderabad", "Kolkata", "Pune", "Ahmedabad"]
       },
       {
         input: document.getElementById("goingInput"),
-        options: ["Ladakh", "Manali", "Shimla", "Goa", "Jaipur"]
+        suggestions: ["Ladakh", "Manali", "Shimla", "Goa", "Jaipur", "Kerala", "Andaman", "Udaipur"]
       }
     ];
 
-    inputsWithDropdown.forEach(({ input, options }) => {
-      const dropdown = document.createElement("div");
-      dropdown.className = "dropdown-menu";
-
-      options.forEach(option => {
-        const item = document.createElement("div");
-        item.className = "dropdown-item";
-        item.textContent = option;
-        item.addEventListener("click", () => {
-          input.value = option;
-          dropdown.style.display = "none";
-        });
-        dropdown.appendChild(item);
+    config.forEach(({ input, suggestions }) => {
+      input.addEventListener("input", () => {
+        showDropdown(input, suggestions, input.value);
       });
 
-      input.parentNode.appendChild(dropdown);
-
       input.addEventListener("focus", () => {
-        dropdown.style.display = "block";
+        showDropdown(input, suggestions, input.value);
       });
 
       input.addEventListener("click", () => {
-        dropdown.style.display = "block";
+        showDropdown(input, suggestions, input.value);
       });
+    });
 
-      document.addEventListener("click", (e) => {
-        if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+    function showDropdown(input, suggestions, query) {
+      const rect = input.getBoundingClientRect();
+      dropdown.style.left = rect.left + "px";
+      dropdown.style.top = rect.bottom + window.scrollY + "px";
+      dropdown.style.width = rect.width + "px";
+      dropdown.style.display = "block";
+
+      const filtered = suggestions.filter(city =>
+        city.toLowerCase().includes(query.toLowerCase())
+      );
+
+      dropdownGrid.innerHTML = "";
+
+      if (filtered.length === 0) {
+        const emptyMsg = document.createElement("div");
+        emptyMsg.className = "dropdown-empty";
+        emptyMsg.textContent = "No suggestions";
+        dropdownGrid.appendChild(emptyMsg);
+        return;
+      }
+
+      filtered.forEach(city => {
+        const item = document.createElement("div");
+        item.className = "dropdown-item";
+        item.textContent = city;
+        item.addEventListener("click", () => {
+          input.value = city;
           dropdown.style.display = "none";
-        }
+        });
+        dropdownGrid.appendChild(item);
       });
+    }
+
+    // Hide on outside click
+    document.addEventListener("click", (e) => {
+      if (
+        !e.target.classList.contains("editable-input") &&
+        !dropdown.contains(e.target)
+      ) {
+        dropdown.style.display = "none";
+      }
     });
   });
 </script>
