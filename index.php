@@ -782,15 +782,8 @@ Explore →
   <!-- </div> -->
 </div>
 
+<div style="display: flex; width: 100vw;">
 
-
-
-
-
-
-
-
-<div>
     <!-- Left: Full Image, Fit Inside -->
     <div style="width: 70%; height: auto; display: flex; align-items: center; justify-content: center; background-color:none;">
         <img src="https://a0.muscache.com/im/pictures/canvas/Canvas-1727297260081/original/e97a2325-f789-49df-b474-25c77476d433.jpeg" 
@@ -804,6 +797,7 @@ Explore →
             Comming Soon... 
         </div>
     </div> -->
+
 </div>
 <!-- This is index.php -->
 <?php
