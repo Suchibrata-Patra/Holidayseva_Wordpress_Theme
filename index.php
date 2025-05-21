@@ -782,23 +782,13 @@ Explore →
   <!-- </div> -->
 </div>
 
-<div>
-
     <!-- Left: Full Image, Fit Inside -->
-    <div style="width: 70%; height: auto; display: flex; align-items: center; justify-content: center; background-color:none;">
+    <div style="width: 60%; height: auto;margin:20px;">
         <img src="https://a0.muscache.com/im/pictures/canvas/Canvas-1727297260081/original/e97a2325-f789-49df-b474-25c77476d433.jpeg" 
              alt="Landing Visual" 
              style="max-width: 100%; max-height: 80%; object-fit: contain;">
     </div>
 
-    <!-- Right: Text Centered -->
-    <!-- <div style="width: 50%; background-color:rgb(255, 255, 255); display: flex; align-items: center; justify-content: left;">
-        <div style="font-size: 3rem; font-weight: bold; text-align: left;">
-            Comming Soon... 
-        </div>
-    </div> -->
-
-</div>
 <!-- This is index.php -->
 <?php
 get_footer();
