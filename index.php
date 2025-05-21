@@ -782,7 +782,7 @@ Explore →
   <!-- </div> -->
 </div>
 
-<div style="display: flex; width: 100vw;">
+<div style="display:flex;">
 
     <!-- Left: Full Image, Fit Inside -->
     <div style="width: 70%; height: auto; display: flex; align-items: center; justify-content: center; background-color:none;">
