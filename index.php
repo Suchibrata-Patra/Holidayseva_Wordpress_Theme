@@ -212,7 +212,6 @@
     </div>
     <div class="input-group" style="flex: none;">
       <button class="btn-primary">Search</button>
-      <button class="btn-primary">Q</button>
     </div>
   </div>
 </div>
