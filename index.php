@@ -264,7 +264,7 @@
        <input type="text" id="departInput" class="editable-input" value="Kolkata" placeholder="Enter city" spellcheck="false" />
     </div>
     <div class="input-group">
-      <label for="goingInput">Going To</label>
+      <label for="goingInput">Going To</label> 
       <input type="text" id="goingInput" class="editable-input" value="Kashmir" placeholder="Enter destination" spellcheck="false" />
     </div>
     <div class="input-group">
