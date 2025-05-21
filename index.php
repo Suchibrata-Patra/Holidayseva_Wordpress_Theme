@@ -215,6 +215,87 @@
     </div>
   </div>
 </div>
+<style>
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    width: 100%;
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  .dropdown-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background 0.2s;
+  }
+
+  .dropdown-item:hover {
+    background: #f0f0f0;
+  }
+
+  .input-group {
+    position: relative; /* To position dropdown correctly */
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const inputsWithDropdown = [
+      {
+        input: document.getElementById("departInput"),
+        options: ["New Delhi", "Mumbai", "Chennai", "Bangalore", "Hyderabad"]
+      },
+      {
+        input: document.getElementById("goingInput"),
+        options: ["Ladakh", "Manali", "Shimla", "Goa", "Jaipur"]
+      }
+    ];
+
+    inputsWithDropdown.forEach(({ input, options }) => {
+      const dropdown = document.createElement("div");
+      dropdown.className = "dropdown-menu";
+
+      options.forEach(option => {
+        const item = document.createElement("div");
+        item.className = "dropdown-item";
+        item.textContent = option;
+        item.addEventListener("click", () => {
+          input.value = option;
+          dropdown.style.display = "none";
+        });
+        dropdown.appendChild(item);
+      });
+
+      input.parentNode.appendChild(dropdown);
+
+      input.addEventListener("focus", () => {
+        dropdown.style.display = "block";
+      });
+
+      input.addEventListener("click", () => {
+        dropdown.style.display = "block";
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+          dropdown.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
 
 <script>
   // Set default value to current month

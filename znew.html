@@ -1,141 +1,196 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Styled Location Input</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f6f6f6;
-    }
+<style>
+  .layout-wrapper {
+    max-width: 1200px;
+    margin: 10px auto 10px auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
 
-    .container {
-      max-width: 1200px;
-      margin: 50px auto;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
+  .nav-tabs {
+    display: flex;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+  }
 
-    .tabs {
-      display: flex;
-      padding: 10px 20px;
-      border-bottom: 1px solid #eee;
-      background: #fff;
-    }
+  .nav-tab {
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    background: #f6f6f6;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
 
-    .tab {
-      padding: 10px 20px;
-      border-radius: 20px;
-      margin-right: 10px;
-      background: #f6f6f6;
-      cursor: pointer;
-      font-weight: 500;
-    }
+  .nav-tab.is-active {
+    background-color:#eaf6ff;
+    color:#2A4759;
+  }
 
-    .tab.active {
-      background: #ffefef;
-      color: #ff3e3e;
-    }
+  .form-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    gap: 20px;
+    justify-content: flex-start;
+  }
 
-    .form-row {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 30px 20px;
-      gap: 20px;
-      justify-content: flex-start;
-    }
+  .input-group {
+    flex: 1 1 200px;
+    min-width: 200px;
+    position: relative;
+  }
 
-    .form-group {
-      flex: 1 1 200px;
-      min-width: 200px;
-      position: relative;
-    }
+  label {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+    display: block;
+  }
 
-    label {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 5px;
-      display: block;
-    }
+  .editable-input {
+    font-size: 24px;
+    font-weight: 700;
+    cursor: text;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    font-family: inherit;
+    color: #000;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
 
-    /* This input will replace the .display-text div */
-    .display-input {
-      font-size: 24px;
-      font-weight: 700;
-      cursor: text;
-      padding: 5px 0;
-      border: none;
-      border-bottom: 1px solid #ccc;
-      background: transparent;
-      width: 100%;
-      outline: none;
-      font-family: inherit;
-      /* To mimic the text color and selection */
-      color: #000;
-      /* Remove default input styling in some browsers */
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    }
+  .editable-input:focus {
+    border-bottom-color: #ff3e3e;
+  }
 
-    .display-input:focus {
-      border-bottom-color: #ff3e3e;
-    }
+  .btn-primary {
+    background:rgb(0, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+  }
 
-    .search-button {
-      background: #d32f2f;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      font-size: 16px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="tabs">
-      <div class="tab">Flights</div>
-      <div class="tab">Hotels</div>
-      <div class="tab active">Holidays</div>
-      <div class="tab">Bus</div>
-      <div class="tab">Trains</div>
-      <div class="tab">Cabs</div>
+  input[type="month"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.5);
+    cursor: pointer;
+  }
+</style>
+
+<div class="layout-wrapper">
+  <div class="nav-tabs">
+    <div class="nav-tab is-active">Holidays</div>
+    <div class="nav-tab">Flights</div>
+    <div class="nav-tab">Hotels</div>
+    <div class="nav-tab">Bus</div>
+    <div class="nav-tab">Trains</div>
+  </div>
+  <div class="form-section">
+    <div class="input-group">
+      <label for="departInput">Depart From</label>
+      <input type="text" id="departInput" class="editable-input" value="New Delhi" spellcheck="false" />
     </div>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="departInput">Depart From</label>
-        <input
-          type="text"
-          id="departInput"
-          class="display-input"
-          value="New Delhi"
-          spellcheck="false"
-        />
-      </div>
-      <div class="form-group">
-        <label for="goingInput">Going To</label>
-        <input
-          type="text"
-          id="goingInput"
-          class="display-input"
-          value="Ladakh"
-          spellcheck="false"
-        />
-      </div>
-      <div class="form-group">
-        <label>Month of Travel(Optional)</label>
-        <div class="display-text">Select Month</div>
-      </div>
-      <div class="form-group" style="flex: none;">
-        <button class="search-button">Search</button>
-      </div>
+    <div class="input-group">
+      <label for="goingInput">Going To</label>
+      <input type="text" id="goingInput" class="editable-input" value="Ladakh" spellcheck="false" />
+    </div>
+    <div class="input-group">
+      <label for="monthInput">Month of Travel (Optional)</label>
+      <input type="month" id="monthInput" class="editable-input" placeholder="Select Month" />
+    </div>
+    <div class="input-group" style="flex: none;">
+      <button class="btn-primary">Search</button>
     </div>
   </div>
-</body>
-</html>
+</div>
+<style>
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 5px;
+    width: 100%;
+    display: none;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  .dropdown-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background 0.2s;
+  }
+
+  .dropdown-item:hover {
+    background: #f0f0f0;
+  }
+
+  .input-group {
+    position: relative; /* To position dropdown correctly */
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const inputsWithDropdown = [
+      {
+        input: document.getElementById("departInput"),
+        options: ["New Delhi", "Mumbai", "Chennai", "Bangalore", "Hyderabad"]
+      },
+      {
+        input: document.getElementById("goingInput"),
+        options: ["Ladakh", "Manali", "Shimla", "Goa", "Jaipur"]
+      }
+    ];
+
+    inputsWithDropdown.forEach(({ input, options }) => {
+      const dropdown = document.createElement("div");
+      dropdown.className = "dropdown-menu";
+
+      options.forEach(option => {
+        const item = document.createElement("div");
+        item.className = "dropdown-item";
+        item.textContent = option;
+        item.addEventListener("click", () => {
+          input.value = option;
+          dropdown.style.display = "none";
+        });
+        dropdown.appendChild(item);
+      });
+
+      input.parentNode.appendChild(dropdown);
+
+      input.addEventListener("focus", () => {
+        dropdown.style.display = "block";
+      });
+
+      input.addEventListener("click", () => {
+        dropdown.style.display = "block";
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+          dropdown.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
