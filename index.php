@@ -265,7 +265,7 @@
     </div>
     <div class="input-group">
       <label for="goingInput">Going To</label>
-      <input type="text" id="goingInput" class="editable-input" placeholder="Enter destination" spellcheck="false" />
+      <input type="text" id="goingInput" class="editable-input" value="Kashmir" placeholder="Enter destination" spellcheck="false" />
     </div>
     <div class="input-group">
       <label for="monthInput">Month of Travel (Optional)</label>
