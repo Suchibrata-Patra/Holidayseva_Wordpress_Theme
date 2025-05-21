@@ -288,7 +288,7 @@
     const config = [
       {
         input: document.getElementById("departInput"),
-        suggestions: ["New Delhi", "Mumbai", "Chennai", "Bangalore", "Hyderabad", "Kolkata", "Pune", "Ahmedabad"]
+        suggestions: ["Mumbai", "Bangalore", "Kolkata", "Hydrabad", "Pune", "Ahmedabad", "Lucknow", "Indore"]
       },
       {
         input: document.getElementById("goingInput"),
