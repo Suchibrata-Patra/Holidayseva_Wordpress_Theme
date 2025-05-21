@@ -652,7 +652,7 @@ Explore →
 }
 
   .offer-card:hover {
-    transform: translateY(-0.2px);
+    transform: translateY(-0.3px);
   }
 
   .offer-image {
