@@ -283,19 +283,52 @@
  </div>
 
  <script>
-  if ("geolocation" in navigator) {
+//   if ("geolocation" in navigator) {
+//   navigator.geolocation.getCurrentPosition(
+//     async function (position) {
+//       const lat = position.coords.latitude;
+//       const lon = position.coords.longitude;
+
+//       // Using OpenStreetMap Nominatim API for reverse geocoding
+//       const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
+      
+//       try {
+//         const response = await fetch(url);
+//         const data = await response.json();
+//         const city = data.address.city || data.address.town || data.address.village || data.address.state;
+
+//         if (city) {
+//           document.getElementById("departInput").value = city;
+//         }
+//       } catch (error) {
+//         console.warn("Could not fetch city name:", error);
+//       }
+//     },
+//     function (error) {
+//       console.warn("Geolocation failed or was denied:", error.message);
+//     }
+//   );
+// }
+if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(
     async function (position) {
       const lat = position.coords.latitude;
       const lon = position.coords.longitude;
 
-      // Using OpenStreetMap Nominatim API for reverse geocoding
       const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
-      
+
       try {
         const response = await fetch(url);
         const data = await response.json();
-        const city = data.address.city || data.address.town || data.address.village || data.address.state;
+
+        // Intelligent fallback hierarchy
+        const address = data.address;
+        const city = address.city ||
+                     address.town ||
+                     address.village ||
+                     address.county ||   // for rural areas
+                     address.state_district ||
+                     address.state;
 
         if (city) {
           document.getElementById("departInput").value = city;
@@ -309,6 +342,7 @@
     }
   );
 }
+
 
   document.addEventListener("DOMContentLoaded", () => {
     const dropdown = document.getElementById("floatingDropdown");
