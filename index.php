@@ -783,7 +783,7 @@ Explore →
 </div>
 
     <!-- Left: Full Image, Fit Inside -->
-    <div style="width: 60%; height: auto;margin:20px;">
+    <div style="width: 60%; height: auto;margin:20px 20px 0px 20px;">
         <img src="https://a0.muscache.com/im/pictures/canvas/Canvas-1727297260081/original/e97a2325-f789-49df-b474-25c77476d433.jpeg" 
              alt="Landing Visual" 
              style="max-width: 100%; max-height: 80%; object-fit: contain;">
