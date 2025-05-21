@@ -225,7 +225,7 @@
     .dropdown-item {
       background:rgb(240, 240, 240);
       padding: 10px;
-      text-align: left;
+      text-align: center;
       border-radius: 20px;
       transition: all 1s ease;
       white-space: nowrap;
