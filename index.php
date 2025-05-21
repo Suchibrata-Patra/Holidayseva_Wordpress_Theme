@@ -223,7 +223,8 @@
     }
 
     .dropdown-item {
-      background:rgb(240, 240, 240);
+      background:rgb(255, 255, 255);
+      border:0.2px solidrgb(248, 67, 67);
       padding: 10px;
       text-align: center;
       border-radius: 20px;
