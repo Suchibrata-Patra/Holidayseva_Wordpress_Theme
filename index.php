@@ -344,6 +344,19 @@ if ("geolocation" in navigator) {
 }
 
 
+
+
+
+
+
+
+
+
+
+// End of the Geolocation Api Fetching for the Location 
+
+
+
   document.addEventListener("DOMContentLoaded", () => {
     const dropdown = document.getElementById("floatingDropdown");
     const dropdownGrid = document.getElementById("dropdownGrid");
