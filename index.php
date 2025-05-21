@@ -638,8 +638,8 @@ Explore →
 
 .offer-card {
   flex: 0 0 auto;
-  min-width: 250px;
-  max-width: 280px;
+  min-width: 220px;
+  max-width: 250px;
   background: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
