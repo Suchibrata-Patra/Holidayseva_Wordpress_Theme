@@ -237,7 +237,7 @@
     }
 
     .dropdown-item:hover {
-      background: rgb(159, 159, 159);
+      background: rgb(201, 201, 201);
       border-color: rgb(0, 0, 0);;
     }
 
