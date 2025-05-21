@@ -597,6 +597,8 @@ Explore →
  @media (max-width: 600px) {
   .offer_container {
     margin: 0;
+    box-shadow: none;
+    background-color: none;
   }
  }
 
