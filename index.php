@@ -223,8 +223,8 @@
     }
 
     .dropdown-item {
-      background: #fff;
-      border: 1px solid transparent;
+      background:rgb(255, 255, 255);
+      border: 1px solid rgb(176, 176, 176);
       padding: 10px;
       text-align: left;
       border-radius: 8px;
@@ -237,8 +237,8 @@
     }
 
     .dropdown-item:hover {
-      background: #f1f5f9;
-      border-color: #e0e0e0;
+      background: rgb(159, 159, 159);
+      border-color: rgb(0, 0, 0);;
     }
 
     .dropdown-empty {
