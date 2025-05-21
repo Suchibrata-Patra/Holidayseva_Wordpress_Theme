@@ -224,11 +224,10 @@
 
     .dropdown-item {
       background:rgb(255, 255, 255);
-      border: 1px solid rgb(176, 176, 176);
       padding: 10px;
       text-align: left;
-      border-radius: 50px;
-      transition: all 0.2s ease;
+      border-radius: 8px;
+      transition: all 1s ease;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -237,8 +236,8 @@
     }
 
     .dropdown-item:hover {
-      background: rgb(236, 236, 236);
-      border-color: rgb(0, 0, 0);;
+      background: rgb(255, 255, 255);
+      border-color: rgb(246, 246, 246);;
     }
 
     .dropdown-empty {
@@ -249,7 +248,7 @@
       grid-column: span 2;
     }
   </style>
-<div class="layout-wrapper">
+ <div class="layout-wrapper">
   <div class="nav-tabs">
     <div class="nav-tab is-active">Holidays</div>
     <div class="nav-tab">Flights</div>
@@ -274,14 +273,14 @@
       <button class="btn-primary">Search</button>
     </div>
   </div>
-</div>
+ </div>
 
-<!-- Floating Dropdown container -->
-<div id="floatingDropdown" class="dropdown-panel">
+ <!-- Floating Dropdown container -->
+ <div id="floatingDropdown" class="dropdown-panel">
   <div class="dropdown-grid" id="dropdownGrid"></div>
-</div>
+ </div>
 
-<script>
+ <script>
   document.addEventListener("DOMContentLoaded", () => {
     const dropdown = document.getElementById("floatingDropdown");
     const dropdownGrid = document.getElementById("dropdownGrid");
@@ -355,129 +354,14 @@
     });
     window.addEventListener("scroll", () => {
   dropdown.style.display = "none";
-}, { passive: true });
+ }, { passive: true });
 
   });
-</script>
+ </script>
 
 <!-- End of the Search Bar -->
 
-  <!-- <style>
-    .layout-wrapper {
-      max-width: 1200px;
-      margin: 10px auto 10px auto;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
 
-    .nav-tabs {
-      display: flex;
-      padding: 10px 20px;
-      border-bottom: 1px solid #eee;
-      background: #fff;
-    }
-
-    .nav-tab {
-      padding: 10px 20px;
-      border-radius: 20px;
-      margin-right: 10px;
-      background: #f6f6f6;
-      cursor: pointer;
-      font-weight: 500;
-      transition: background 0.3s ease, color 0.3s ease;
-    }
-
-    .nav-tab.is-active {
-      background-color: #eaf6ff;
-      color: #2A4759;
-    }
-
-    .form-section {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 30px 20px;
-      gap: 20px;
-      justify-content: flex-start;
-    }
-
-    .input-group {
-      flex: 1 1 200px;
-      min-width: 200px;
-      position: relative;
-    }
-
-    label {
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 5px;
-      display: block;
-    }
-
-    .editable-input {
-      font-size: 24px;
-      font-weight: 700;
-      cursor: text;
-      padding: 5px 0;
-      border: none;
-      border-bottom: 1px solid #ccc;
-      background: transparent;
-      width: 100%;
-      outline: none;
-      font-family: inherit;
-      color: #000;
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-    }
-
-    .editable-input:focus {
-      border-bottom-color: #ff3e3e;
-    }
-
-    .btn-primary {
-      background: rgb(0, 0, 0);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 50px;
-      cursor: pointer;
-    }
-
-    input[type="month"]::-webkit-calendar-picker-indicator {
-      filter: invert(0.5);
-      cursor: pointer;
-    }
-  </style>
-
-  <div class="layout-wrapper">
-    <div class="nav-tabs">
-      <div class="nav-tab is-active">Holidays</div>
-      <div class="nav-tab">Flights</div>
-      <div class="nav-tab">Hotels</div>
-      <div class="nav-tab">Bus</div>
-      <div class="nav-tab">Trains</div>
-    </div>
-    <div class="form-section">
-      <div class="input-group">
-        <label for="departInput">Depart From</label>
-        <input type="text" id="departInput" class="editable-input" value="New Delhi" spellcheck="false" />
-      </div>
-      <div class="input-group">
-        <label for="goingInput">Going To</label>
-        <input type="text" id="goingInput" class="editable-input" value="Ladakh" spellcheck="false" />
-      </div>
-      <div class="input-group">
-        <label for="monthInput">Month of Travel (Optional)</label>
-        <input type="month" id="monthInput" class="editable-input" placeholder="Select Month" />
-      </div>
-      <div class="input-group" style="flex: none;">
-        <button class="btn-primary">Search</button>
-      </div>
-    </div>
-  </div> -->
 
   <script>
     // Set default value to current month
@@ -495,10 +379,7 @@
         style="color:black;text-decoration:none;background-color:black;border:none;color:white;border-radius:50px;padding:4px 10px;">
         Explore →
       </button>
-
     </div>
-
-
     <div class="hotel-store-cards">
 
       <div class="hotel-card"
