@@ -2,105 +2,7 @@
   <?php include_once get_template_directory() . '/header.php'; ?>
   <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/Central_styling.css">
 
-  <!-- <style>
-  .holidayseva_landing_page_hero_section {
-    background: url('<?php echo get_template_directory_uri(); ?>/Assets/Images/hero_section_background_doodle.webp') no-repeat center center;
-    background-size: cover;
-    margin-left: -10%;
-    margin-right: -10%;
-    display: flex;
-    align-items: center; /* vertically center content */
-    padding: 2rem;
-    color: white; /* so text shows on bg */
-  }
-
-  .hero_left_division {
-    font-size: 5rem;
-    color:black;
-    font-weight:500;
-    letter-spacing:-3px;
-  }
-
-  
-</style> -->
-
-  <!-- <div class="holidayseva_landing_page_hero_section">
-  <div class="hero_left_division">
-    Dare to Wander
-    <div class="search_functionalities">
-
-    </div>
-  </div>
-</div> -->
-
-  <?php
-// while (have_posts()) :
-//     the_post();
-
-//     // Display the title
-//     echo '<h1 class="tour-title">' . get_the_title() . '</h1>';
-
-//     // Display the featured image
-//     if (has_post_thumbnail()) {
-//         echo '<div class="tour-featured-image">';
-//         the_post_thumbnail('large');
-//         echo '</div>';
-//     }
-
-//     // Display the tour details
-//     $tour_details = array(
-//         'Location' => get_post_meta(get_the_ID(), '_tour_location', true),
-//         'Duration' => get_post_meta(get_the_ID(), '_tour_duration', true),
-//         'Price' => get_post_meta(get_the_ID(), '_tour_price', true),
-//         'Availability' => get_post_meta(get_the_ID(), '_tour_availability', true),
-//     );
-
-//     echo '<div class="tour-details">';
-//     foreach ($tour_details as $key => $value) {
-//         if (!empty($value)) {
-//             echo '<p><strong>' . esc_html($key) . ':</strong> ' . esc_html($value) . '</p>';
-//         }
-//     }
-//     echo '</div>';
-
-//     // Display the tour content
-//     echo '<div class="tour-content">';
-//     the_content();
-//     echo '</div>';
-
-//     // Display the cover images (if any)
-//     $tour_cover_images = get_post_meta(get_the_ID(), '_tour_cover_images', true);
-    
-//     if (!empty($tour_cover_images)) {
-//         // Explode the comma-separated string into an array of image URLs
-//         $images = is_string($tour_cover_images) ? explode(',', $tour_cover_images) : [];
-
-//         echo '<div class="tour-cover-images">';
-//         echo '<h3>Gallery</h3>';
-
-//         // Ensure that $images is an array and loop through it
-//         if (is_array($images) && !empty($images)) {
-//             foreach ($images as $image_url) {
-//                 echo '<img src="' . esc_url(trim($image_url)) . '" alt="Tour Image" class="tour-image" />';
-//             }
-//         } else {
-//             // If no valid images are available, you can display a fallback message
-//             echo '<p>No images available for this tour.</p>';
-//         }
-
-//         echo '</div>';
-//     }
-
-//     // Display navigation to next and previous posts
-//     echo '<div class="tour-navigation">';
-//     previous_post_link('<span class="prev-link">%link</span>', '&laquo; Previous Tour');
-//     next_post_link('<span class="next-link">%link</span>', 'Next Tour &raquo;');
-//     echo '</div>';
-
-// endwhile; // End of the loop.
-?>
-
-<!-- Beginning of the Search Bar -->
+  <!-- Beginning of the Search Bar -->
   <style>
     .layout-wrapper {
       max-width: 1200px;
@@ -210,6 +112,7 @@
         opacity: 0;
         transform: translateY(-5px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -223,8 +126,8 @@
     }
 
     .dropdown-item {
-      background:rgb(255, 251, 251);
-      border:0.2px solid rgb(255, 255, 255);
+      background: rgb(255, 251, 251);
+      border: 0.2px solid rgb(255, 255, 255);
       padding: 10px;
       text-align: center;
       border-radius: 10px;
@@ -249,150 +152,143 @@
       grid-column: span 2;
     }
   </style>
- <div class="layout-wrapper">
-  <div class="nav-tabs">
-    <div class="nav-tab is-active">Holidays</div>
-    <div class="nav-tab">Flights</div>
-    <div class="nav-tab">Hotels</div>
-    <div class="nav-tab">Bus</div>
-    <div class="nav-tab">Trains</div>
+  <div class="layout-wrapper">
+    <div class="nav-tabs">
+      <div class="nav-tab is-active">Holidays</div>
+      <div class="nav-tab">Flights</div>
+      <div class="nav-tab">Hotels</div>
+      <div class="nav-tab">Bus</div>
+      <div class="nav-tab">Trains</div>
+    </div>
+    <div class="form-section">
+      <div class="input-group">
+        <label for="departInput">Depart From</label>
+        <!-- <input type="text" id="departInput" class="editable-input" placeholder="Enter city" spellcheck="false" /> -->
+        <input type="text" id="departInput" class="editable-input" value="Kolkata" placeholder="Enter city"
+          spellcheck="false" />
+      </div>
+      <div class="input-group">
+        <label for="goingInput">Going To</label>
+        <input type="text" id="goingInput" class="editable-input" value="Kashmir" placeholder="Enter destination"
+          spellcheck="false" />
+      </div>
+      <div class="input-group">
+        <label for="monthInput">Month of Travel (Optional)</label>
+        <input type="month" id="monthInput" class="editable-input" placeholder="Select Month" />
+      </div>
+      <div class="input-group" style="flex: none;">
+        <button class="btn-primary">Search</button>
+      </div>
+    </div>
   </div>
-  <div class="form-section">
-    <div class="input-group">
-      <label for="departInput">Depart From</label>
-      <!-- <input type="text" id="departInput" class="editable-input" placeholder="Enter city" spellcheck="false" /> -->
-       <input type="text" id="departInput" class="editable-input" value="Kolkata" placeholder="Enter city" spellcheck="false" />
-    </div>
-    <div class="input-group">
-      <label for="goingInput">Going To</label> 
-      <input type="text" id="goingInput" class="editable-input" value="Kashmir" placeholder="Enter destination" spellcheck="false" />
-    </div>
-    <div class="input-group">
-      <label for="monthInput">Month of Travel (Optional)</label>
-      <input type="month" id="monthInput" class="editable-input" placeholder="Select Month" />
-    </div>
-    <div class="input-group" style="flex: none;">
-      <button class="btn-primary">Search</button>
-    </div>
+  <!-- Floating Dropdown container -->
+  <div id="floatingDropdown" class="dropdown-panel">
+    <div class="dropdown-grid" id="dropdownGrid"></div>
   </div>
- </div>
 
- <!-- Floating Dropdown container -->
- <div id="floatingDropdown" class="dropdown-panel">
-  <div class="dropdown-grid" id="dropdownGrid"></div>
- </div>
-
- <script>
-  if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition(
-    async function (position) {
-      const lat = position.coords.latitude;
-      const lon = position.coords.longitude;
-
-      // Using OpenStreetMap Nominatim API for reverse geocoding
-      const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
-      
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
-        const city = data.address.city || data.address.town || data.address.village || data.address.state;
-
-        if (city) {
-          document.getElementById("departInput").value = city;
+  <script>
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        async function (position) {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          // Using OpenStreetMap Nominatim API for reverse geocoding
+          const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`;
+          try {
+            const response = await fetch(url);
+            const data = await response.json();
+            const city = data.address.city || data.address.town || data.address.village || data.address.state;
+            if (city) {
+              document.getElementById("departInput").value = city;
+            }
+          } catch (error) {
+            console.warn("Could not fetch city name:", error);
+          }
+        },
+        function (error) {
+          console.warn("Geolocation failed or was denied:", error.message);
         }
-      } catch (error) {
-        console.warn("Could not fetch city name:", error);
-      }
-    },
-    function (error) {
-      console.warn("Geolocation failed or was denied:", error.message);
-    }
-  );
-}
-
-// End of the Geolocation Api Fetching for the Location 
-
-
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const dropdown = document.getElementById("floatingDropdown");
-    const dropdownGrid = document.getElementById("dropdownGrid");
-
-    const config = [
-      {
-        input: document.getElementById("departInput"),
-        suggestions: ["Mumbai", "Bangalore", "Kolkata", "Hydrabad", "Pune", "Ahmedabad", "Lucknow", "Indore"]
-      },
-      {
-        input: document.getElementById("goingInput"),
-        suggestions: ["Ladakh", "Manali", "Shimla", "Goa", "Jaipur", "Kerala", "Andaman", "Udaipur"]
-      }
-    ];
-
-    config.forEach(({ input, suggestions }) => {
-      input.addEventListener("input", () => {
-        showDropdown(input, suggestions, input.value);
-      });
-
-      input.addEventListener("focus", () => {
-        showDropdown(input, suggestions, input.value);
-      });
-
-      input.addEventListener("click", () => {
-        showDropdown(input, suggestions, input.value);
-      });
-    });
-
-    function showDropdown(input, suggestions, query) {
-      const rect = input.getBoundingClientRect();
-      dropdown.style.left = rect.left + "px";
-      dropdown.style.top = rect.bottom + window.scrollY + "px";
-      dropdown.style.width = rect.width + "px";
-      dropdown.style.display = "block";
-
-      const filtered = suggestions.filter(city =>
-        city.toLowerCase().includes(query.toLowerCase())
       );
-
-      dropdownGrid.innerHTML = "";
-
-      if (filtered.length === 0) {
-        const emptyMsg = document.createElement("div");
-        emptyMsg.className = "dropdown-empty";
-        emptyMsg.textContent = "Searching ...";
-        dropdownGrid.appendChild(emptyMsg);
-        return;
-      }
-
-      filtered.forEach(city => {
-        const item = document.createElement("div");
-        item.className = "dropdown-item";
-        item.textContent = city;
-        item.addEventListener("click", () => {
-          input.value = city;
-          dropdown.style.display = "none";
-        });
-        dropdownGrid.appendChild(item);
-      });
     }
+    // End of the Geolocation Api Fetching for the Location 
+    document.addEventListener("DOMContentLoaded", () => {
+      const dropdown = document.getElementById("floatingDropdown");
+      const dropdownGrid = document.getElementById("dropdownGrid");
+      const config = [
+        {
+          input: document.getElementById("departInput"),
+          suggestions: ["Mumbai", "Bangalore", "Kolkata", "Hydrabad", "Pune", "Ahmedabad", "Lucknow", "Indore"]
+        },
+        {
+          input: document.getElementById("goingInput"),
+          suggestions: ["Ladakh", "Manali", "Shimla", "Goa", "Jaipur", "Kerala", "Andaman", "Udaipur"]
+        }
+      ];
 
-    // Hide on outside click
-    document.addEventListener("click", (e) => {
-      if (
-        !e.target.classList.contains("editable-input") &&
-        !dropdown.contains(e.target)
-      ) {
-        dropdown.style.display = "none";
+      config.forEach(({ input, suggestions }) => {
+        input.addEventListener("input", () => {
+          showDropdown(input, suggestions, input.value);
+        });
+
+        input.addEventListener("focus", () => {
+          showDropdown(input, suggestions, input.value);
+        });
+
+        input.addEventListener("click", () => {
+          showDropdown(input, suggestions, input.value);
+        });
+      });
+
+      function showDropdown(input, suggestions, query) {
+        const rect = input.getBoundingClientRect();
+        dropdown.style.left = rect.left + "px";
+        dropdown.style.top = rect.bottom + window.scrollY + "px";
+        dropdown.style.width = rect.width + "px";
+        dropdown.style.display = "block";
+
+        const filtered = suggestions.filter(city =>
+          city.toLowerCase().includes(query.toLowerCase())
+        );
+
+        dropdownGrid.innerHTML = "";
+
+        if (filtered.length === 0) {
+          const emptyMsg = document.createElement("div");
+          emptyMsg.className = "dropdown-empty";
+          emptyMsg.textContent = "Searching ...";
+          dropdownGrid.appendChild(emptyMsg);
+          return;
+        }
+
+        filtered.forEach(city => {
+          const item = document.createElement("div");
+          item.className = "dropdown-item";
+          item.textContent = city;
+          item.addEventListener("click", () => {
+            input.value = city;
+            dropdown.style.display = "none";
+          });
+          dropdownGrid.appendChild(item);
+        });
       }
+
+      // Hide on outside click
+      document.addEventListener("click", (e) => {
+        if (
+          !e.target.classList.contains("editable-input") &&
+          !dropdown.contains(e.target)
+        ) {
+          dropdown.style.display = "none";
+        }
+      });
+      window.addEventListener("scroll", () => {
+        dropdown.style.display = "none";
+      }, { passive: true });
+
     });
-    window.addEventListener("scroll", () => {
-  dropdown.style.display = "none";
- }, { passive: true });
+  </script>
 
-  });
- </script>
-
-<!-- End of the Search Bar -->
+  <!-- End of the Search Bar -->
 
 
 
@@ -908,7 +804,6 @@
     /* Firefox */
   }
 </style>
-
 <div class="offer_container">
   <div class="header">
     <div style="display:flex;">
@@ -978,7 +873,6 @@
         <a href="#" class="offer-link" style="margin-left:10px;">VIEWdd DETAILS →</a>
       </div>
     </div>
-
     <div class="offer-card">
       <img
         src="https://images.unsplash.com/photo-1614082813462-d763a404cbb7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fFRhaiUyMGhvdGVsfGVufDB8fDB8fHww"
@@ -991,19 +885,16 @@
       </div>
     </div>
   </div>
-
   <!-- <div class="footer-nav"> -->
   <a href="#" class="offer-link" style="font-size:1rem !important;">VIEW ALL →</a>
   <!-- </div> -->
 </div>
-
 <!-- Left: Full Image, Fit Inside -->
 <div style="width: 60%; height: auto;margin:20px 20px 0px 20px;">
   <img
     src="https://a0.muscache.com/im/pictures/canvas/Canvas-1727297260081/original/e97a2325-f789-49df-b474-25c77476d433.jpeg"
     alt="Landing Visual" style="max-width: 100%; max-height: 80%; object-fit: contain;">
 </div>
-
 <!-- This is index.php -->
 <?php
 get_footer();
