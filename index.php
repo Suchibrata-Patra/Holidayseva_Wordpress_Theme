@@ -227,7 +227,7 @@
       border:0.2px solid rgb(255, 255, 255);
       padding: 10px;
       text-align: center;
-      border-radius: 20px;
+      border-radius: 10px;
       transition: all 1s ease;
       white-space: nowrap;
       overflow: hidden;
