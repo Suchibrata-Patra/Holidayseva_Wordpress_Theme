@@ -709,7 +709,7 @@ Explore →
 <div class="offer_container">
   <div class="header">
     <div style="display:flex;">
-      <h2 style="margin-top:0px; margin-bottom:0px;font-size:1.2rem;">Offers</h2>
+      <h2 style="margin-top:10px; margin-bottom:10px;font-size:1.2rem;">Offers</h2>
     <a href="#" class="offer-link" style="font-size:1rem !important;right"><span style="justify-content:end;">VIEW ALL →</span></a>
     </div>
     <div class="tabs">
