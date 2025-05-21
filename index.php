@@ -652,7 +652,7 @@ Explore →
 }
 
   .offer-card:hover {
-    transform: translateY(-0.5px);
+    transform: translateY(-0.2px);
   }
 
   .offer-image {
@@ -778,7 +778,7 @@ Explore →
   </div>
 
   <!-- <div class="footer-nav"> -->
-    <a href="#" class="offer-link" style="font-size:1rem !important;">VIEW ALL →</a>
+    <!-- <a href="#" class="offer-link" style="font-size:1rem !important;">VIEW ALL →</a> -->
   <!-- </div> -->
 </div>
 
