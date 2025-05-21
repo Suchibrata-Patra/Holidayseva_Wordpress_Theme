@@ -177,7 +177,7 @@
     background: #d32f2f;
     color: white;
     border: none;
-    padding: 20px 40px;
+    padding: 15px 40px;
     font-size: 16px;
     border-radius: 50px;
     cursor: pointer;

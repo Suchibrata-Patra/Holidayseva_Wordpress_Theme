@@ -1,3 +1,4 @@
+
 <?php
 // Include meta box logic
 require_once get_template_directory() . '/Forms/TourDetailsEntry.php';
@@ -95,9 +96,6 @@ function register_custom_post_types() {
 }
 add_action('init', 'register_custom_post_types');
 
-
-
-
 // Register custom post types as pages
 
 // function register_custom_page_types() {
@@ -166,6 +164,7 @@ function add_tour_meta_boxes() {
     );
 }
 add_action('add_meta_boxes', 'add_tour_meta_boxes');
+
 
 
 
@@ -244,3 +243,5 @@ function display_global_variables_page() {
     </div>
     <?php
 }
+
+
