@@ -220,7 +220,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 10;
+    z-index: 1000;
     background: white;
     border: 1px solid #ccc;
     border-radius: 10px;
