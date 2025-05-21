@@ -227,7 +227,7 @@
       border: 1px solid rgb(176, 176, 176);
       padding: 10px;
       text-align: left;
-      border-radius: 8px;
+      border-radius: 50px;
       transition: all 0.2s ease;
       white-space: nowrap;
       overflow: hidden;
