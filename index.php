@@ -327,7 +327,7 @@
       if (filtered.length === 0) {
         const emptyMsg = document.createElement("div");
         emptyMsg.className = "dropdown-empty";
-        emptyMsg.textContent = "No suggestions";
+        emptyMsg.textContent = "Searching ...";
         dropdownGrid.appendChild(emptyMsg);
         return;
       }
