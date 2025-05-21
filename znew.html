@@ -250,5 +250,9 @@
         dropdown.style.display = "none";
       }
     });
+    window.addEventListener("scroll", () => {
+  dropdown.style.display = "none";
+}, { passive: true });
+
   });
 </script>

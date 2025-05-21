@@ -101,7 +101,6 @@
 ?>
 
 <!-- Beginning of the Search Bar -->
-
   <style>
     .layout-wrapper {
       max-width: 1200px;
@@ -354,8 +353,13 @@
         dropdown.style.display = "none";
       }
     });
+    window.addEventListener("scroll", () => {
+  dropdown.style.display = "none";
+}, { passive: true });
+
   });
 </script>
+
 <!-- End of the Search Bar -->
 
   <!-- <style>
