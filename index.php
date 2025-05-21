@@ -174,10 +174,10 @@
   }
 
   .btn-primary {
-    background: #d32f2f;
+    background:rgb(0, 0, 0);
     color: white;
     border: none;
-    padding: 15px 40px;
+    padding: 10px 20px;
     font-size: 16px;
     border-radius: 50px;
     cursor: pointer;
