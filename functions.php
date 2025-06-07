@@ -215,8 +215,6 @@ function display_global_variables_page() {
 
 
 
-
-
 function register_travel_guide_cpt() {
     $labels = array(
         'name'               => _x('Travel Guides', 'post type general name', 'your-textdomain'),
@@ -238,17 +236,12 @@ function register_travel_guide_cpt() {
     $args = array(
         'labels'             => $labels,
         'public'             => true,
-        'publicly_queryable' => true,
         'show_ui'            => true,
-        'show_in_menu'       => true,
-        'query_var'          => true,
-        'rewrite'            => array('slug' => 'travel-guide'), // THIS slug is crucial for your URLs
-        'capability_type'    => 'post',
+        'show_in_menu'       => true, // THIS makes it appear in the WP admin sidebar
+        'menu_icon'          => 'dashicons-location-alt',
+        'supports'           => array('title', 'editor', 'thumbnail', 'excerpt'),
+        'rewrite'            => array('slug' => 'travel-guide'),
         'has_archive'        => true,
-        'hierarchical'       => false,
-        'menu_position'      => 5,
-        'menu_icon'          => 'dashicons-location-alt', // travel-like icon
-        'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments')
     );
 
     register_post_type('travel_guide', $args);
@@ -256,6 +249,8 @@ function register_travel_guide_cpt() {
 add_action('init', 'register_travel_guide_cpt');
 
 
+
+    
 
     ?>
     <div class="wrap">
