@@ -134,6 +134,51 @@ function register_travel_guide_cpt() {
 add_action('init', 'register_travel_guide_cpt');
 
 
+
+function travel_guide_block_template() {
+    $post_type_object = get_post_type_object('travel_guide');
+    $post_type_object->template = [
+        [ 'core/cover', [
+            'url' => '', // Cover image
+            'dimRatio' => 50,
+            'overlayColor' => 'black',
+        ], [
+            [ 'core/heading', ['placeholder' => 'Enter your main heading...'] ],
+            [ 'core/paragraph', ['placeholder' => 'A short subheading or intro...'] ],
+        ]],
+        [ 'core/columns', [], [
+            [ 'core/column', [], [
+                [ 'core/heading', ['placeholder' => 'Day 1'] ],
+                [ 'core/paragraph', ['placeholder' => 'What happens on Day 1?'] ],
+            ]],
+            [ 'core/column', [], [
+                [ 'core/heading', ['placeholder' => 'Day 2'] ],
+                [ 'core/paragraph', ['placeholder' => 'What happens on Day 2?'] ],
+            ]],
+        ]],
+        [ 'core/gallery', [] ],
+        [ 'core/buttons', [], [
+            [ 'core/button', ['text' => 'Book Now'] ]
+        ]],
+    ];
+}
+add_action('init', 'travel_guide_block_template');
+
+
+function travel_guide_custom_styles() {
+    if (is_singular('travel_guide')) {
+        wp_enqueue_style('travel-guide-style', get_template_directory_uri() . '/css/travel-guide.css');
+    }
+}
+add_action('wp_enqueue_scripts', 'travel_guide_custom_styles');
+
+function travel_guide_editor_style() {
+    add_editor_style('css/travel-guide-editor.css');
+}
+add_action('admin_init', 'travel_guide_editor_style');
+
+
+
 // Register custom post types as pages
 
 // function register_custom_page_types() {
