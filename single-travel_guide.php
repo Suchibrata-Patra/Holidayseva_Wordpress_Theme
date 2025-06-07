@@ -18,11 +18,3 @@ if (have_rows('travel_guide_builder')) :
     endwhile;
 endif;
 ?>
-
-<?php
-$sections = get_post_meta(get_the_ID(), '_travel_guide_sections', true) ?: [];
-
-foreach ($sections as $section) {
-    get_template_part("travel-blocks/{$section}");
-}
-?>
