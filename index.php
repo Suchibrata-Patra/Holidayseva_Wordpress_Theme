@@ -221,7 +221,7 @@
         },
         {
           input: document.getElementById("goingInput"),
-          suggestions: ["Ladakh", "Manali", "Shimla", "Goa", "Jaipur", "Kerala", "Andaman", "Udaipur"]
+          suggestions: ["Ladakh", "Manali", "Shimla", "Goa", "Jaipur", "Kerala", "Andaman", "Udaipur","Kashmir"]
         }
       ];
 
