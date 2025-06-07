@@ -132,6 +132,17 @@ function register_travel_guide_cpt() {
     register_post_type('travel_guide', $args);
 }
 add_action('init', 'register_travel_guide_cpt');
+function add_travel_guide_meta_boxes() {
+    add_meta_box(
+        'travel_guide_details_meta_box',
+        'Travel Guide Details',
+        'display_travel_guide_meta_box', // your callback function to display meta box form fields
+        'travel_guide',
+        'normal',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'add_travel_guide_meta_boxes');
 
 
 // Register custom post types as pages
