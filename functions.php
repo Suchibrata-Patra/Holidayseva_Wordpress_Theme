@@ -138,39 +138,57 @@ add_action('init', 'register_travel_guide_cpt');
 //  Section To add Custom template for the Writting of the Blogs Posts
 
 function travel_guide_block_template() {
-    // Get the post type object
     $post_type_object = get_post_type_object('travel_guide');
-
-    // Bail early if the post type doesn't exist
     if (!$post_type_object) {
         return;
     }
 
-    // Define the default block template
     $post_type_object->template = [
+        // Hero Cover Section
         [
             'core/cover',
             [
-                'url'        => '', // Optional default cover image
-                'dimRatio'   => 50,
+                'dimRatio'     => 60,
                 'overlayColor' => 'black',
-                'align'      => 'full',
+                'minHeight'    => 450,
+                'align'        => 'full',
             ],
             [
                 [
                     'core/heading',
                     [
-                        'placeholder' => 'Enter your main heading...',
-                        'level' => 1,
+                        'placeholder' => 'Your breathtaking title here...',
+                        'textAlign'   => 'center',
+                        'level'       => 1,
                     ]
                 ],
                 [
                     'core/paragraph',
                     [
-                        'placeholder' => 'A short subheading or intro...',
+                        'placeholder' => 'One-liner teaser or quote that captures the essence of your journey...',
                         'align'       => 'center',
+                        'fontSize'    => 'medium',
                     ]
                 ],
+            ]
+        ],
+
+        // Intro Text
+        [
+            'core/paragraph',
+            [
+                'placeholder' => 'Write a captivating intro to your travel story...',
+                'align'       => 'left',
+                'fontSize'    => 'large',
+            ]
+        ],
+
+        // Day-by-Day Itinerary
+        [
+            'core/heading',
+            [
+                'content' => 'Itinerary Overview',
+                'level'   => 2,
             ]
         ],
         [
@@ -183,11 +201,11 @@ function travel_guide_block_template() {
                     [
                         [
                             'core/heading',
-                            [ 'placeholder' => 'Day 1' ]
+                            [ 'placeholder' => 'Day 1: Arrival' ]
                         ],
                         [
                             'core/paragraph',
-                            [ 'placeholder' => 'What happens on Day 1?' ]
+                            [ 'placeholder' => 'Describe Day 1 activities...' ]
                         ],
                     ]
                 ],
@@ -197,14 +215,23 @@ function travel_guide_block_template() {
                     [
                         [
                             'core/heading',
-                            [ 'placeholder' => 'Day 2' ]
+                            [ 'placeholder' => 'Day 2: Exploration' ]
                         ],
                         [
                             'core/paragraph',
-                            [ 'placeholder' => 'What happens on Day 2?' ]
+                            [ 'placeholder' => 'Describe Day 2 fun...' ]
                         ],
                     ]
                 ],
+            ]
+        ],
+
+        // Full Width Image Gallery
+        [
+            'core/heading',
+            [
+                'content' => 'Photo Diary',
+                'level'   => 2,
             ]
         ],
         [
@@ -214,27 +241,46 @@ function travel_guide_block_template() {
                 'align'   => 'wide',
             ]
         ],
+
+        // Call to Action
+        [
+            'core/separator',
+            [
+                'align' => 'wide'
+            ]
+        ],
+        [
+            'core/heading',
+            [
+                'content' => 'Ready to explore it yourself?',
+                'level'   => 3,
+                'align'   => 'center'
+            ]
+        ],
         [
             'core/buttons',
-            [],
+            [
+                'align' => 'center'
+            ],
             [
                 [
                     'core/button',
                     [
-                        'text'  => 'Book Now',
-                        'url'   => '#',
-                        'align' => 'center',
-                        'className' => 'is-style-outline',
+                        'text'       => 'Book This Trip',
+                        'url'        => '#',
+                        'className'  => 'is-style-fill',
+                        'backgroundColor' => 'primary',
+                        'textColor'  => 'white',
                     ]
                 ]
             ]
         ],
     ];
 
-    // Optional: Lock template to restrict freeform editing
-    $post_type_object->template_lock = false; // Set to 'all' if you want to restrict it
+    $post_type_object->template_lock = false; // Let editors add/remove freely
 }
 add_action('init', 'travel_guide_block_template');
+
 
 function travel_guide_custom_styles() {
     if (is_singular('travel_guide')) {
