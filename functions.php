@@ -137,10 +137,6 @@ add_action('init', 'register_travel_guide_cpt');
 
 //  Section To add Custom template for the Writting of the Blogs Posts
 
-<?php
-/**
- * Apply a default block template to the 'travel_guide' custom post type.
- */
 function travel_guide_block_template() {
     // Get the post type object
     $post_type_object = get_post_type_object('travel_guide');
