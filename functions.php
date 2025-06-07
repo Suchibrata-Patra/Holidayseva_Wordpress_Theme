@@ -135,35 +135,110 @@ add_action('init', 'register_travel_guide_cpt');
 
 
 
+//  Section To add Custom template for the Writting of the Blogs Posts
+
+<?php
+/**
+ * Apply a default block template to the 'travel_guide' custom post type.
+ */
 function travel_guide_block_template() {
+    // Get the post type object
     $post_type_object = get_post_type_object('travel_guide');
+
+    // Bail early if the post type doesn't exist
+    if (!$post_type_object) {
+        return;
+    }
+
+    // Define the default block template
     $post_type_object->template = [
-        [ 'core/cover', [
-            'url' => '', // Cover image
-            'dimRatio' => 50,
-            'overlayColor' => 'black',
-        ], [
-            [ 'core/heading', ['placeholder' => 'Enter your main heading...'] ],
-            [ 'core/paragraph', ['placeholder' => 'A short subheading or intro...'] ],
-        ]],
-        [ 'core/columns', [], [
-            [ 'core/column', [], [
-                [ 'core/heading', ['placeholder' => 'Day 1'] ],
-                [ 'core/paragraph', ['placeholder' => 'What happens on Day 1?'] ],
-            ]],
-            [ 'core/column', [], [
-                [ 'core/heading', ['placeholder' => 'Day 2'] ],
-                [ 'core/paragraph', ['placeholder' => 'What happens on Day 2?'] ],
-            ]],
-        ]],
-        [ 'core/gallery', [] ],
-        [ 'core/buttons', [], [
-            [ 'core/button', ['text' => 'Book Now'] ]
-        ]],
+        [
+            'core/cover',
+            [
+                'url'        => '', // Optional default cover image
+                'dimRatio'   => 50,
+                'overlayColor' => 'black',
+                'align'      => 'full',
+            ],
+            [
+                [
+                    'core/heading',
+                    [
+                        'placeholder' => 'Enter your main heading...',
+                        'level' => 1,
+                    ]
+                ],
+                [
+                    'core/paragraph',
+                    [
+                        'placeholder' => 'A short subheading or intro...',
+                        'align'       => 'center',
+                    ]
+                ],
+            ]
+        ],
+        [
+            'core/columns',
+            [],
+            [
+                [
+                    'core/column',
+                    [],
+                    [
+                        [
+                            'core/heading',
+                            [ 'placeholder' => 'Day 1' ]
+                        ],
+                        [
+                            'core/paragraph',
+                            [ 'placeholder' => 'What happens on Day 1?' ]
+                        ],
+                    ]
+                ],
+                [
+                    'core/column',
+                    [],
+                    [
+                        [
+                            'core/heading',
+                            [ 'placeholder' => 'Day 2' ]
+                        ],
+                        [
+                            'core/paragraph',
+                            [ 'placeholder' => 'What happens on Day 2?' ]
+                        ],
+                    ]
+                ],
+            ]
+        ],
+        [
+            'core/gallery',
+            [
+                'columns' => 3,
+                'align'   => 'wide',
+            ]
+        ],
+        [
+            'core/buttons',
+            [],
+            [
+                [
+                    'core/button',
+                    [
+                        'text'  => 'Book Now',
+                        'url'   => '#',
+                        'align' => 'center',
+                        'className' => 'is-style-outline',
+                    ]
+                ]
+            ]
+        ],
     ];
+
+    // Optional: Lock template to restrict freeform editing
+    $post_type_object->template_lock = false; // Set to 'all' if you want to restrict it
 }
 add_action('init', 'travel_guide_block_template');
-
 
 function travel_guide_custom_styles() {
     if (is_singular('travel_guide')) {
@@ -179,45 +254,9 @@ add_action('admin_init', 'travel_guide_editor_style');
 
 
 
-// Register custom post types as pages
+//  End of the Section To add Custom template for the Writting of the Blogs Posts
 
-// function register_custom_page_types() {
-//     $post_types = [
-//         'tour' => [
-//             'name' => 'Tours',
-//             'singular_name' => 'Tour',
-//             'slug' => 'tours',
-//             'icon' => 'dashicons-palmtree',
-//             'position' => 200, // Position for the "Tours" post type
-//         ],
-//     ];
 
-//     foreach ($post_types as $slug => $type) {
-//         register_post_type($slug, [
-//             'labels' => [
-//                 'name' => $type['name'],
-//                 'singular_name' => $type['singular_name'],
-//                 'add_new' => "Add New {$type['singular_name']}",
-//                 'add_new_item' => "Add New {$type['singular_name']}",
-//                 'edit_item' => "Edit {$type['singular_name']}",
-//                 'new_item' => "New {$type['singular_name']}",
-//                 'view_item' => "View {$type['singular_name']}",
-//                 'search_items' => "Search {$type['name']}",
-//                 'not_found' => "No {$type['name']} found",
-//                 'not_found_in_trash' => "No {$type['name']} found in Trash",
-//                 'all_items' => "All {$type['name']}",
-//             ],
-//             'public' => true,
-//             'supports' => ['title', 'thumbnail', 'excerpt'], // Removed 'editor' and 'comments'
-//             'menu_icon' => $type['icon'],
-//             'show_in_rest' => true,
-//             'has_archive' => false, // Pages generally don't have archives
-//             'rewrite' => ['slug' => $type['slug']],
-//             'hierarchical' => true, // Make it hierarchical like pages
-//         ]);
-//     }
-// }
-// add_action('init', 'register_custom_page_types');
 
 // Enqueue scripts for media uploader
 function enqueue_tour_scripts($hook) {
