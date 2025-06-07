@@ -22,6 +22,7 @@ function custom_enqueue_tinymce_styles() {
 }
 add_action('admin_init', 'custom_enqueue_tinymce_styles');
 
+
 // // Register custom post types
 // function register_custom_post_types() {
 //     $post_types = [
@@ -209,6 +210,52 @@ function display_global_variables_page() {
     $secondary_whatsapp_number = get_option('secondary_whatsapp_number', '');
     $third_number = get_option('third_number', '');
     $marketing_banner = get_option('marketing_banner', '');
+
+
+
+
+
+
+
+function register_travel_guide_cpt() {
+    $labels = array(
+        'name'               => _x('Travel Guides', 'post type general name', 'your-textdomain'),
+        'singular_name'      => _x('Travel Guide', 'post type singular name', 'your-textdomain'),
+        'menu_name'          => _x('Travel Guides', 'admin menu', 'your-textdomain'),
+        'name_admin_bar'     => _x('Travel Guide', 'add new on admin bar', 'your-textdomain'),
+        'add_new'            => _x('Add New', 'travel guide', 'your-textdomain'),
+        'add_new_item'       => __('Add New Travel Guide', 'your-textdomain'),
+        'new_item'           => __('New Travel Guide', 'your-textdomain'),
+        'edit_item'          => __('Edit Travel Guide', 'your-textdomain'),
+        'view_item'          => __('View Travel Guide', 'your-textdomain'),
+        'all_items'          => __('All Travel Guides', 'your-textdomain'),
+        'search_items'       => __('Search Travel Guides', 'your-textdomain'),
+        'parent_item_colon'  => __('Parent Travel Guides:', 'your-textdomain'),
+        'not_found'          => __('No travel guides found.', 'your-textdomain'),
+        'not_found_in_trash' => __('No travel guides found in Trash.', 'your-textdomain')
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'travel-guide'), // THIS slug is crucial for your URLs
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => 5,
+        'menu_icon'          => 'dashicons-location-alt', // travel-like icon
+        'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments')
+    );
+
+    register_post_type('travel_guide', $args);
+}
+add_action('init', 'register_travel_guide_cpt');
+
+
 
     ?>
     <div class="wrap">
