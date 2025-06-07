@@ -7,7 +7,7 @@
 
 <style>
     .travel-guide-container {
-        max-width: 800px;
+        max-width: 90%;
         margin: 0 auto;
         padding: 40px 20px;
         line-height: 1.7;
