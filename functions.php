@@ -132,6 +132,60 @@ function register_travel_guide_cpt() {
     register_post_type('travel_guide', $args);
 }
 add_action('init', 'register_travel_guide_cpt');
+add_action('add_meta_boxes', function() {
+    add_meta_box(
+        'travel_guide_builder',
+        'Travel Guide Builder',
+        'render_travel_guide_builder',
+        'travel_guide',
+        'normal',
+        'high'
+    );
+});
+
+function render_travel_guide_builder($post) {
+    $sections = get_post_meta($post->ID, '_travel_guide_sections', true) ?: [];
+
+    // Available block types
+    $available_blocks = ['hero', 'highlights', 'faq', 'map'];
+
+    echo '<div id="travel-builder">';
+    echo '<ul id="travel-builder-list">';
+
+    foreach ($sections as $index => $block) {
+        echo '<li>';
+        echo '<select name="travel_guide_sections[]">';
+        foreach ($available_blocks as $ab) {
+            $selected = ($ab === $block) ? 'selected' : '';
+            echo "<option value=\"$ab\" $selected>" . ucfirst($ab) . "</option>";
+        }
+        echo '</select>';
+        echo '</li>';
+    }
+
+    echo '</ul>';
+    echo '<button type="button" id="add-section">+ Add Section</button>';
+    echo '</div>';
+
+    // Tiny script to clone and add new sections
+    ?>
+    <script>
+    document.getElementById('add-section').addEventListener('click', function() {
+        const list = document.getElementById('travel-builder-list');
+        const li = document.createElement('li');
+        li.innerHTML = `<?php
+            $opts = '';
+            foreach ($available_blocks as $ab) {
+                $opts .= "<option value=\"$ab\">".ucfirst($ab)."</option>";
+            }
+            echo "<select name='travel_guide_sections[]'>$opts</select>";
+        ?>`;
+        list.appendChild(li);
+    });
+    </script>
+    <?php
+}
+
 
 
 // Register custom post types as pages
