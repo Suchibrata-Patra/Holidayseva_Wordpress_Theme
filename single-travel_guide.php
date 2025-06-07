@@ -1,3 +1,8 @@
+<title> Holidayseva </title>
+<!-- <?php require get_template_directory() . '/dropdownmenu.php'; ?> -->
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/TourDetailsEntry.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/Central_styling.css">
+<link rel="icon" type="image/x-icon" href="<?php echo get_template_directory_uri(); ?>/Assets/Images/favicon.svg">  
 <?php get_header(); ?>
 
 <style>
@@ -5,7 +10,6 @@
         max-width: 800px;
         margin: 0 auto;
         padding: 40px 20px;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         line-height: 1.7;
         color: #333;
     }
