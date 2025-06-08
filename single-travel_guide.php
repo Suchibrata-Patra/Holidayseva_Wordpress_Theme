@@ -32,7 +32,7 @@ if (have_posts()) :
 .travel-guide-container {
     /* max-width: 99%; */
     margin: 80px auto;
-    padding: 0 24px;
+    padding: 0 2px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     /* line-height: 1.8; */
     color: #1c1c1e;
