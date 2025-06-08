@@ -92,7 +92,6 @@ foreach ($all_fields as $field) {
             </div>
         </div>
 
-        <h2>Section Images</h2>
         <?php foreach ($fields as $field): ?>
             <?php $img_id = $meta["{$field}_image"]; ?>
             <div class="tg-sidebar-section">
