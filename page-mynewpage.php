@@ -1,3 +1,10 @@
+<?php
+/**
+ * Template Name: My New Page
+ * Template Post Type: page
+ */
+
+get_header(); ?>
 <div class="hero-section">
   <div class="overlay"></div>
   <div class="hero-content">
