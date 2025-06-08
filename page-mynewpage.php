@@ -17,6 +17,7 @@ get_header(); ?>
     </div>
 </div>
 
+<div style="align-content:justify;">
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis velit eius saepe, odio suscipit distinctio cupiditate. Soluta provident sequi quidem iusto dolor excepturi unde magnam nesciunt dolorem vel? Repellendus quaerat cumque blanditiis aperiam, voluptas impedit possimus, illum deserunt fugit ex ipsum temporibus. Nobis, delectus optio magnam in labore similique quidem assumenda aperiam amet sint reprehenderit libero eius doloremque ut vero odio harum aut! Ipsum corrupti eos molestiae impedit aperiam magnam quod hic quis numquam magni illo ipsa recusandae dolore iure, repellendus ad nostrum eveniet error. Optio nulla dolor iure quasi eius enim nam cum soluta illum, repudiandae quia minima magni rem, ad fugit id vero modi aut, magnam laudantium in officia odit voluptatem! Recusandae aliquid dolores rerum magni, quaerat veniam nostrum ab ipsam libero minima cum accusamus amet facere! Impedit delectus minima, reiciendis molestiae aperiam recusandae dolore architecto praesentium expedita cumque nulla. Doloribus quos commodi temporibus iusto. Sequi modi quis, porro earum inventore animi corrupti iste natus explicabo laudantium, reprehenderit accusamus minus dolore sint laborum aliquam consequuntur provident distinctio eaque numquam facere quaerat magnam. Fuga ea rerum ratione,
 distinctio est vitae reprehenderit pariatur. Adipisci deserunt obcaecati rerum natus aliquid, veniam neque saepe
 exercitationem optio sapiente odio blanditiis enim. Sit similique voluptate doloribus expedita, quisquam et recusandae
@@ -40,6 +41,7 @@ dignissimos! Vero, aspernatur ratione officia inventore nobis fugiat? Amet maxim
 asperiores placeat quibusdam neque sed officia laboriosam ratione. Architecto adipisci earum aliquid pariatur explicabo
 facere cum similique vel, numquam, quibusdam tenetur corporis, cumque aspernatur obcaecati. Magnam tenetur accusantium
 inventore, quam esse deleniti aut alias!
+</div>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
