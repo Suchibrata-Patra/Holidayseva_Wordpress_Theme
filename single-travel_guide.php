@@ -34,7 +34,7 @@ if (have_posts()) :
         <div class="breadcrumb">HolidaySeva > Travel Guide > <span>Surprise Me!</span></div>
         <h1 class="hero-title">Experience the Soul-Stirring<br> Treasures of Kakadu National Park</h1>
         <div class="author-box">
-            <div class="author-name">Swechchha Roy</div>
+            <div class="author-name">Suchana Chakaborty</div>
             <div class="author-date">Last updated: May 26, 2025</div>
         </div>
     </div>
@@ -185,6 +185,7 @@ get_footer();
 
     .author-name {
         font-weight: bold;
+        font-size:2rem;
     }
 
     .author-date {
