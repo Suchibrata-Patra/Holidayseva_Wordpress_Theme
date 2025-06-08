@@ -30,7 +30,7 @@ if (have_posts()) :
 
 <style>
 .travel-guide-container {
-    /* max-width: 850px; */
+    max-width: 80%;
     margin: 50px auto;
     padding: 0 20px;
     font-family: 'Segoe UI', sans-serif;
