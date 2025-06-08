@@ -134,8 +134,6 @@ add_action('save_post_travel_guide', function($post_id) {
 
 
 
-
-
 add_action('add_meta_boxes', 'add_travel_guide_meta_box');
 
 function add_travel_guide_meta_box() {
