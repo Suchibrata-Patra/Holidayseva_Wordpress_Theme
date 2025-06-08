@@ -1,5 +1,6 @@
-<?php 
-/* Apply to full page */
+<html>
+    <style>
+        /* Apply to full page */
 body, html {
   margin: 0;
   padding: 0;
@@ -33,4 +34,6 @@ body::before {
     background-position: 0% 50%;
   }
 }
-?>
+    </style>
+
+</html>
