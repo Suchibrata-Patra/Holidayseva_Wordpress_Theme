@@ -34,7 +34,7 @@ if (have_posts()) :
     margin: 80px auto;
     padding: 0 24px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.8;
+    /* line-height: 1.8; */
     color: #1c1c1e;
     background: #ffffff;
 }
