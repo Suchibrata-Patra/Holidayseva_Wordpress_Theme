@@ -79,7 +79,7 @@ inventore, quam esse deleniti aut alias!
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 1rem;
         /* line-height: ; */
         /* margin-bottom: 10px; */
     }
