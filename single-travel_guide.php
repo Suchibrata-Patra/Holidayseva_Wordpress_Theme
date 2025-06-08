@@ -43,6 +43,73 @@ if (have_posts()) :
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+<div class="travel-guide-container">
+
+    <?php if ($image_url): ?>
+        <img class="featured-img" src="<?php echo esc_url($image_url); ?>" alt="Featured Image">
+    <?php endif; ?>
+
+    <h1><?php the_title(); ?></h1>
+
+    <div class="travel-guide-meta">
+        <?php if ($meta['location']) : ?><p>📍 <strong><?php echo esc_html($meta['location']); ?></strong></p><?php endif; ?>
+        <?php if ($meta['duration']) : ?><p>⏳ Duration: <?php echo esc_html($meta['duration']); ?></p><?php endif; ?>
+        <?php if ($meta['best_season']) : ?><p>🌤️ Best Season: <?php echo esc_html($meta['best_season']); ?></p><?php endif; ?>
+    </div>
+
+    <?php
+    $sections = [
+        'intro'           => '✨ Introduction',
+        'overview'        => '🌍 Destination Overview',
+        'how_to_get'      => '🚗 How to Get There',
+        'top_attractions' => '🏞️ Top Attractions',
+        'where_to_stay'   => '🏨 Where to Stay',
+        'eat_drink'       => '🍽️ Eat & Drink',
+        'top_reasons'     => '🌟 Top 5 Reasons to Visit',
+        'cultural_tips'   => '🧭 Cultural Etiquette',
+        'budget'          => '💸 Budget Breakdown',
+        'itinerary'       => '🗺️ Itinerary',
+        'personal_exp'    => '📸 Personal Experiences',
+        'travel_tips'     => '🧳 Travel Tips & Safety',
+        'resources'       => '🔗 Useful Resources',
+        'conclusion'      => '✍️ Final Thoughts'
+    ];
+
+    foreach ($sections as $key => $label) :
+        if (!empty($meta[$key])) :
+    ?>
+        <div class="travel-guide-section">
+            <h2><?php echo esc_html($label); ?></h2>
+            <?php
+                $img_id = $meta["{$key}_image"];
+                if ($img_id) {
+                    $img_url = wp_get_attachment_url($img_id);
+                    if ($img_url) {
+                        echo '<div class="section-img"><img src="' . esc_url($img_url) . '" alt="' . esc_attr($label) . ' Image"></div>';
+                    }
+                }
+            ?>
+            <p><?php echo esc_html($meta[$key]); ?></p>
+        </div>
+    <?php
+        endif;
+    endforeach;
+    ?>
+
+    <div class="travel-guide-section">
+        <h2>📜 Full Travel Story</h2>
+        <div class="entry-content">
+            <?php the_content(); ?>
+        </div>
+    </div>
+
+</div>
+
+<?php
+    endwhile;
+endif;
+get_footer();
+?>
 <style>
     * {
         margin: 0px;
@@ -50,16 +117,18 @@ if (have_posts()) :
     }
 
     .hero-section {
-        position: relative;
-        height: 100vh;
-        background: url('https://images.unsplash.com/photo-1460627390041-532a28402358?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        text-align: center;
-        font-family: 'Georgia', serif;
-    }
+    position: relative;
+    height: 100vh;
+    background: url('<?php echo esc_url($image_url); ?>') no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    font-family: Georgia, serif;
+    padding: 0 20px; /* mobile breathing space */
+    overflow: hidden; /* just in case of absolute children */
+}
 
     .overlay {
         position: absolute;
@@ -190,71 +259,3 @@ if (have_posts()) :
         margin-right: auto;
     }
 </style>
-
-<div class="travel-guide-container">
-
-    <?php if ($image_url): ?>
-        <img class="featured-img" src="<?php echo esc_url($image_url); ?>" alt="Featured Image">
-    <?php endif; ?>
-
-    <h1><?php the_title(); ?></h1>
-
-    <div class="travel-guide-meta">
-        <?php if ($meta['location']) : ?><p>📍 <strong><?php echo esc_html($meta['location']); ?></strong></p><?php endif; ?>
-        <?php if ($meta['duration']) : ?><p>⏳ Duration: <?php echo esc_html($meta['duration']); ?></p><?php endif; ?>
-        <?php if ($meta['best_season']) : ?><p>🌤️ Best Season: <?php echo esc_html($meta['best_season']); ?></p><?php endif; ?>
-    </div>
-
-    <?php
-    $sections = [
-        'intro'           => '✨ Introduction',
-        'overview'        => '🌍 Destination Overview',
-        'how_to_get'      => '🚗 How to Get There',
-        'top_attractions' => '🏞️ Top Attractions',
-        'where_to_stay'   => '🏨 Where to Stay',
-        'eat_drink'       => '🍽️ Eat & Drink',
-        'top_reasons'     => '🌟 Top 5 Reasons to Visit',
-        'cultural_tips'   => '🧭 Cultural Etiquette',
-        'budget'          => '💸 Budget Breakdown',
-        'itinerary'       => '🗺️ Itinerary',
-        'personal_exp'    => '📸 Personal Experiences',
-        'travel_tips'     => '🧳 Travel Tips & Safety',
-        'resources'       => '🔗 Useful Resources',
-        'conclusion'      => '✍️ Final Thoughts'
-    ];
-
-    foreach ($sections as $key => $label) :
-        if (!empty($meta[$key])) :
-    ?>
-        <div class="travel-guide-section">
-            <h2><?php echo esc_html($label); ?></h2>
-            <?php
-                $img_id = $meta["{$key}_image"];
-                if ($img_id) {
-                    $img_url = wp_get_attachment_url($img_id);
-                    if ($img_url) {
-                        echo '<div class="section-img"><img src="' . esc_url($img_url) . '" alt="' . esc_attr($label) . ' Image"></div>';
-                    }
-                }
-            ?>
-            <p><?php echo esc_html($meta[$key]); ?></p>
-        </div>
-    <?php
-        endif;
-    endforeach;
-    ?>
-
-    <div class="travel-guide-section">
-        <h2>📜 Full Travel Story</h2>
-        <div class="entry-content">
-            <?php the_content(); ?>
-        </div>
-    </div>
-
-</div>
-
-<?php
-    endwhile;
-endif;
-get_footer();
-?>
