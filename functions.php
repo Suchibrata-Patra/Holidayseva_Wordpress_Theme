@@ -281,32 +281,7 @@ function travel_guide_block_template() {
 }
 add_action('init', 'travel_guide_block_template');
 
-add_action('add_meta_boxes', 'add_travel_guide_meta_box');
-function add_travel_guide_meta_box() {
-    add_meta_box(
-        'travel_guide_details',
-        'Travel Guide Details',
-        'render_travel_guide_meta_form',
-        'travel_guide',
-        'normal',
-        'default'
-    );
-}
 
-function render_travel_guide_meta_form($post) {
-    // Retrieve current values
-    $meta = [
-        'location'    => get_post_meta($post->ID, '_tg_location', true),
-        'duration'    => get_post_meta($post->ID, '_tg_duration', true),
-        'best_season' => get_post_meta($post->ID, '_tg_best_season', true),
-    ];
-
-    // Nonce for security
-    wp_nonce_field('travel_guide_nonce_action', 'travel_guide_nonce');
-
-    // Load the form from a separate PHP file
-    include __DIR__ . '/Forms/tour_form.php';
-}
 
 
 
