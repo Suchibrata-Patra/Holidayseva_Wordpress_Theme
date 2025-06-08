@@ -5,23 +5,41 @@ if (!defined('ABSPATH') || !isset($post)) return;
 // Security nonce
 wp_nonce_field('travel_guide_nonce_action', 'travel_guide_nonce');
 
-add_action('save_post_travel_guide', function($post_id) {
-    if (!isset($_POST['travel_guide_nonce']) || 
-        !wp_verify_nonce($_POST['travel_guide_nonce'], 'travel_guide_nonce_action')) return;
+add_action('save_post_travel_guide', 'tg_save_meta_fields');
+function tg_save_meta_fields($post_id) {
+    // Verify nonce
+    if (
+        !isset($_POST['travel_guide_nonce']) || 
+        !wp_verify_nonce($_POST['travel_guide_nonce'], 'travel_guide_nonce_action')
+    ) {
+        return;
+    }
 
+    // Autosave check
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+
+    // Permissions check
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    // Sanitize and save each field
     $fields = [
-        '_tg_location'        => sanitize_text_field($_POST['tg_location'] ?? ''),
-        '_tg_duration'        => sanitize_text_field($_POST['tg_duration'] ?? ''),
-        '_tg_best_season'     => sanitize_text_field($_POST['tg_best_season'] ?? ''),
-        '_tg_where_to_stay'   => sanitize_textarea_field($_POST['tg_where_to_stay'] ?? ''),
-        '_tg_top_reasons'     => sanitize_textarea_field($_POST['tg_top_reasons'] ?? ''),
-        '_tg_featured_image'  => intval($_POST['tg_featured_image'] ?? 0),
+        '_tg_location'       => sanitize_text_field($_POST['tg_location'] ?? ''),
+        '_tg_duration'       => sanitize_text_field($_POST['tg_duration'] ?? ''),
+        '_tg_best_season'    => sanitize_text_field($_POST['tg_best_season'] ?? ''),
+        '_tg_where_to_stay'  => sanitize_textarea_field($_POST['tg_where_to_stay'] ?? ''),
+        '_tg_top_reasons'    => sanitize_textarea_field($_POST['tg_top_reasons'] ?? ''),
+        '_tg_featured_image' => intval($_POST['tg_featured_image'] ?? 0),
     ];
 
     foreach ($fields as $key => $value) {
         update_post_meta($post_id, $key, $value);
     }
-});
+}
+
 
 // Retrieve saved meta values
 $meta = [
