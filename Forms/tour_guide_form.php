@@ -1,11 +1,10 @@
 <?php
-// Ensure this runs only within WP admin edit screen context
 if (!defined('ABSPATH') || !isset($post)) return;
 
 // Security nonce
 wp_nonce_field('travel_guide_nonce_action', 'travel_guide_nonce');
 
-// Define section fields
+// Define content sections
 $fields = [
     'location', 'duration', 'best_season', 'where_to_stay', 'top_reasons', 'featured_image',
     'intro', 'overview', 'how_to_get', 'eat_drink', 'cultural_tips', 'budget', 'itinerary',
@@ -16,7 +15,7 @@ $fields = [
 $image_fields = array_map(fn($field) => "{$field}_image", $fields);
 $all_fields = array_merge($fields, $image_fields);
 
-// Retrieve all meta values
+// Retrieve all meta
 $meta = [];
 foreach ($all_fields as $field) {
     $meta[$field] = get_post_meta($post->ID, "_tg_$field", true);
@@ -45,29 +44,16 @@ foreach ($all_fields as $field) {
 }
 .tg-image-wrapper img {
     border: 1px solid #ccc;
-    margin-bottom: 10px;
+    margin-top: 10px;
     border-radius: 6px;
+    max-width: 100%;
+    height: auto;
 }
 </style>
 
 <div class="tg-meta-container">
-    <!-- Featured Image Upload -->
-<hr><h2>Featured Image</h2>
-<div style="margin-bottom: 25px;">
-    <input type="hidden" name="tg_featured_image" id="tg_featured_image" value="<?php echo esc_attr($meta['featured_image']); ?>">
-    <div class="tg-image-wrapper">
-        <?php if ($meta['featured_image']) : ?>
-            <img id="tg_featured_preview" src="<?php echo esc_url(wp_get_attachment_url($meta['featured_image'])); ?>" style="max-width: 40%; height: auto;">
-        <?php else : ?>
-            <p><em>No featured image selected yet.</em></p>
-            <img id="tg_featured_preview" style="max-width: 40%; height: auto; display: none;">
-        <?php endif; ?>
-        <button type="button" class="button upload_image_button" data-target="featured">Upload Featured Image</button>
-        <button type="button" class="button remove_image_button" data-target="featured" style="margin-top: 5px;">Remove</button>
-    </div>
-</div>
-
     <div class="tg-main">
+        <h2>General Information</h2>
         <?php foreach ($fields as $field): ?>
             <?php if ($field === 'featured_image') continue; ?>
             <p>
@@ -80,24 +66,41 @@ foreach ($all_fields as $field) {
                 <?php endif; ?>
             </p>
         <?php endforeach; ?>
-        
+
         <hr><h2>Section-wise Image Uploads</h2>
         <?php foreach ($fields as $field): ?>
+            <?php $image_id = $meta["{$field}_image"]; ?>
             <div style="margin-bottom: 25px;">
                 <p><strong><?php echo ucwords(str_replace('_', ' ', $field)); ?> Image:</strong></p>
-                <input type="hidden" name="tg_<?php echo $field; ?>_image" id="tg_<?php echo $field; ?>_image" value="<?php echo esc_attr($meta["{$field}_image"]); ?>">
+                <input type="hidden" name="tg_<?php echo $field; ?>_image" id="tg_<?php echo $field; ?>_image" value="<?php echo esc_attr($image_id); ?>">
                 <div class="tg-image-wrapper">
-                    <?php if ($meta["{$field}_image"]) : ?>
-                        <img id="tg_<?php echo $field; ?>_preview" src="<?php echo esc_url(wp_get_attachment_url($meta["{$field}_image"])); ?>" style="max-width: 20%; height: auto;">
-                    <?php else : ?>
+                    <?php if ($image_id): ?>
+                        <img id="tg_<?php echo $field; ?>_preview" src="<?php echo esc_url(wp_get_attachment_url($image_id)); ?>">
+                    <?php else: ?>
+                        <img id="tg_<?php echo $field; ?>_preview" style="display:none;">
                         <p><em>No image selected yet.</em></p>
-                        <img id="tg_<?php echo $field; ?>_preview" style="max-width: 100%; height: auto; display: none;">
                     <?php endif; ?>
                     <button type="button" class="button upload_image_button" data-target="<?php echo $field; ?>">Upload Image</button>
                     <button type="button" class="button remove_image_button" data-target="<?php echo $field; ?>" style="margin-top: 5px;">Remove</button>
                 </div>
             </div>
         <?php endforeach; ?>
+    </div>
+
+    <div class="tg-sidebar">
+        <h2>Featured Image</h2>
+        <?php $feat_id = $meta['featured_image']; ?>
+        <input type="hidden" name="tg_featured_image" id="tg_featured_image" value="<?php echo esc_attr($feat_id); ?>">
+        <div class="tg-image-wrapper">
+            <?php if ($feat_id): ?>
+                <img id="tg_featured_preview" src="<?php echo esc_url(wp_get_attachment_url($feat_id)); ?>">
+            <?php else: ?>
+                <img id="tg_featured_preview" style="display:none;">
+                <p><em>No featured image selected yet.</em></p>
+            <?php endif; ?>
+            <button type="button" class="button upload_image_button" data-target="featured">Upload Featured Image</button>
+            <button type="button" class="button remove_image_button" data-target="featured" style="margin-top: 5px;">Remove</button>
+        </div>
     </div>
 </div>
 
@@ -106,16 +109,18 @@ jQuery(document).ready(function($){
     let mediaUploader;
 
     function openMediaUploader(target) {
-        mediaUploader = wp.media.frames.file_frame = wp.media({
+        mediaUploader = wp.media({
             title: 'Select Image for ' + target.replace(/_/g, ' '),
             button: { text: 'Use this image' },
             multiple: false
         });
+
         mediaUploader.on('select', function() {
             const attachment = mediaUploader.state().get('selection').first().toJSON();
             $(`#tg_${target}_image`).val(attachment.id);
             $(`#tg_${target}_preview`).attr('src', attachment.url).show();
         });
+
         mediaUploader.open();
     }
 
