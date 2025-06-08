@@ -28,7 +28,87 @@ if (have_posts()) :
         $meta["{$field}_image"] = get_post_meta(get_the_ID(), "_tg_{$field}_image", true);
     }
 ?>
+<div class="hero-section">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <div class="breadcrumb">HolidaySeva > Travel Guide > <span>Surprise Me!</span></div>
+        <h1 class="hero-title">Experience the Soul-Stirring<br> Treasures of Kakadu National Park</h1>
+        <div class="author-box">
+            <div class="author-name">Swechchha Roy</div>
+            <div class="author-date">Last updated: May 26, 2025</div>
+        </div>
+    </div>
+</div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+<style>
+    * {
+        margin: 0px;
+        font-family: Roboto;
+    }
 
+    .hero-section {
+        position: relative;
+        height: 100vh;
+        background: url('https://images.unsplash.com/photo-1460627390041-532a28402358?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+        font-family: 'Georgia', serif;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+        z-index: 1;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        padding: 0 1px;
+    }
+
+    .breadcrumb {
+        font-size: 14px;
+        color: #ddd;
+        margin-bottom: 10px;
+    }
+
+    .breadcrumb span {
+        font-weight: bold;
+        color: #f55;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .author-box {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .author-name {
+        font-weight: bold;
+    }
+
+    .author-date {
+        font-style: italic;
+        font-size: 14px;
+        color: #ccc;
+    }
+</style>
 <style>
     .travel-guide-container {
         margin: 80px auto;
