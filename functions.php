@@ -307,23 +307,8 @@ function add_travel_guide_meta_box() {
 }
 
 function render_travel_guide_meta_form($post) {
-    // Security nonce
-    wp_nonce_field('travel_guide_nonce_action', 'travel_guide_nonce');
-
-    // Retrieve current meta values
-    $meta = [
-        'location'    => get_post_meta($post->ID, '_tg_location', true),
-        'duration'    => get_post_meta($post->ID, '_tg_duration', true),
-        'best_season' => get_post_meta($post->ID, '_tg_best_season', true),
-    ];
-
-    // Make variables available to the form
-    $current_post = $post; // Optional, if you want access inside the form
     include __DIR__ . '/Forms/tour_form.php';
 }
-
-
-
 
 //  End of the Section To add Custom template for the Writting of the Blogs Posts
 

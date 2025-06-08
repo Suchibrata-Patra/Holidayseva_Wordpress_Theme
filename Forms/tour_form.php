@@ -1,10 +1,18 @@
 <?php
-// tour_form.php
+// Ensure this runs only within WP admin edit screen context
+if (!defined('ABSPATH') || !isset($post)) return;
 
-// Access $meta['location'], $meta['duration'], $meta['best_season']
-// Optionally access $current_post
+// Security nonce
+wp_nonce_field('travel_guide_nonce_action', 'travel_guide_nonce');
 
+// Retrieve current meta values
+$meta = [
+    'location'    => get_post_meta($post->ID, '_tg_location', true),
+    'duration'    => get_post_meta($post->ID, '_tg_duration', true),
+    'best_season' => get_post_meta($post->ID, '_tg_best_season', true),
+];
 ?>
+
 <p>
     <label for="tg_location"><strong>Location:</strong></label><br>
     <input type="text" name="tg_location" id="tg_location" value="<?php echo esc_attr($meta['location'] ?? ''); ?>" class="widefat">
