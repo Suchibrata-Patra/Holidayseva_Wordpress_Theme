@@ -69,7 +69,7 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis velit eius saepe
 
 .hero-title {
   font-size: 2rem;
-  line-height: 1rem;
+  /* line-height: ; */
   margin-bottom: 10px;
 }
 
