@@ -79,9 +79,9 @@ inventore, quam esse deleniti aut alias!
     }
 
     .hero-title {
-        font-size: 1rem;
-        /* line-height: ; */
-        /* margin-bottom: 10px; */
+        font-size: 3rem;
+        line-height:1.1rem;
+        margin-bottom: 10px;
     }
 
     .author-box {
