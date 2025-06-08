@@ -30,38 +30,72 @@ if (have_posts()) :
 
 <style>
 .travel-guide-container {
-    max-width: 80%;
-    margin-top:2px !important;
-    margin: 50px auto;
-    padding: 0 20px;
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.7;
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 0 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+    color: #1c1c1e;
+    background: #ffffff;
 }
+
 .travel-guide-container img {
     max-width: 100%;
-    border-radius: 12px;
-    margin: 30px 0;
+    height: auto;
+    border-radius: 16px;
+    margin: 40px 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
 }
+.travel-guide-container img:hover {
+    transform: scale(1.015);
+}
+
 .travel-guide-container h1 {
-    font-size: 38px;
-    margin-bottom: 5px;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+    letter-spacing: -1px;
 }
+
 .travel-guide-meta {
     text-align: center;
-    margin-bottom: 40px;
-    color: #666;
+    font-size: 15px;
+    color: #888;
+    margin-bottom: 50px;
+    font-weight: 500;
 }
+
+.travel-guide-meta p {
+    margin: 5px 0;
+}
+
 .travel-guide-section {
-    margin-bottom: 40px;
+    margin-bottom: 64px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 48px;
 }
+
 .travel-guide-section h2 {
-    font-size: 24px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 8px;
-    margin-bottom: 15px;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    color: #111;
 }
+
 .travel-guide-section p {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.9;
     white-space: pre-line;
+    margin: 0;
+}
+
+.entry-content {
+    font-size: 17px;
+    color: #2c2c2c;
+    line-height: 1.9;
 }
 </style>
 
@@ -79,103 +113,35 @@ if (have_posts()) :
         <?php if ($meta['best_season']) : ?><p>🌤️ Best Season: <?php echo esc_html($meta['best_season']); ?></p><?php endif; ?>
     </div>
 
-    <?php if ($meta['intro']) : ?>
-        <div class="travel-guide-section">
-            <h2>✨ Introduction</h2>
-            <p><?php echo esc_html($meta['intro']); ?></p>
-        </div>
-    <?php endif; ?>
+    <?php
+    $sections = [
+        'intro'           => ['✨ Introduction'],
+        'overview'        => ['🌍 Destination Overview'],
+        'how_to_get'      => ['🚗 How to Get There'],
+        'top_attractions' => ['🏞️ Top Attractions'],
+        'where_to_stay'   => ['🏨 Where to Stay'],
+        'eat_drink'       => ['🍽️ Eat & Drink'],
+        'top_reasons'     => ['🌟 Top 5 Reasons to Visit'],
+        'cultural_tips'   => ['🧭 Cultural Etiquette'],
+        'budget'          => ['💸 Budget Breakdown'],
+        'itinerary'       => ['🗺️ Itinerary'],
+        'personal_exp'    => ['📸 Personal Experiences'],
+        'travel_tips'     => ['🧳 Travel Tips & Safety'],
+        'resources'       => ['🔗 Useful Resources'],
+        'conclusion'      => ['✍️ Final Thoughts']
+    ];
 
-    <?php if ($meta['overview']) : ?>
+    foreach ($sections as $key => $label) :
+        if (!empty($meta[$key])) :
+    ?>
         <div class="travel-guide-section">
-            <h2>🌍 Destination Overview</h2>
-            <p><?php echo esc_html($meta['overview']); ?></p>
+            <h2><?php echo $label[0]; ?></h2>
+            <p><?php echo esc_html($meta[$key]); ?></p>
         </div>
-    <?php endif; ?>
-
-    <?php if ($meta['how_to_get']) : ?>
-        <div class="travel-guide-section">
-            <h2>🚗 How to Get There</h2>
-            <p><?php echo esc_html($meta['how_to_get']); ?></p>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($meta['top_attractions']) : ?>
-        <div class="travel-guide-section">
-            <h2>🏞️ Top Attractions</h2>
-            <p><?php echo esc_html($meta['top_attractions']); ?></p>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($meta['where_to_stay']) : ?>
-        <div class="travel-guide-section">
-            <h2>🏨 Where to Stay</h2>
-            <p><?php echo esc_html($meta['where_to_stay']); ?></p>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($meta['eat_drink']) : ?>
-        <div class="travel-guide-section">
-            <h2>🍽️ Eat & Drink</h2>
-            <p><?php echo esc_html($meta['eat_drink']); ?></p>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($meta['top_reasons']) : ?>
-        <div class="travel-guide-section">
-            <h2>🌟 Top 5 Reasons to Visit</h2>
-            <p><?php echo esc_html($meta['top_reasons']); ?></p>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($meta['cultural_tips']) : ?>
-        <div class="travel-guide-section">
-            <h2>🧭 Cultural Etiquette</h2>
-            <p><?php echo esc_html($meta['cultural_tips']); ?></p>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($meta['budget']) : ?>
-        <div class="travel-guide-section">
-            <h2>💸 Budget Breakdown</h2>
-            <p><?php echo esc_html($meta['budget']); ?></p>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($meta['itinerary']) : ?>
-        <div class="travel-guide-section">
-            <h2>🗺️ Itinerary</h2>
-            <p><?php echo esc_html($meta['itinerary']); ?></p>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($meta['personal_exp']) : ?>
-        <div class="travel-guide-section">
-            <h2>📸 Personal Experiences</h2>
-            <p><?php echo esc_html($meta['personal_exp']); ?></p>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($meta['travel_tips']) : ?>
-        <div class="travel-guide-section">
-            <h2>🧳 Travel Tips & Safety</h2>
-            <p><?php echo esc_html($meta['travel_tips']); ?></p>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($meta['resources']) : ?>
-        <div class="travel-guide-section">
-            <h2>🔗 Useful Resources</h2>
-            <p><?php echo esc_html($meta['resources']); ?></p>
-        </div>
-    <?php endif; ?>
-
-    <?php if ($meta['conclusion']) : ?>
-        <div class="travel-guide-section">
-            <h2>✍️ Final Thoughts</h2>
-            <p><?php echo esc_html($meta['conclusion']); ?></p>
-        </div>
-    <?php endif; ?>
+    <?php
+        endif;
+    endforeach;
+    ?>
 
     <div class="travel-guide-section">
         <h2>📜 Full Travel Story</h2>
