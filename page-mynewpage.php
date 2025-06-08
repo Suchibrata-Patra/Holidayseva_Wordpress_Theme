@@ -8,7 +8,7 @@ get_header(); ?>
 <div class="hero-section">
     <div class="overlay"></div>
     <div class="hero-content">
-        <div class="breadcrumb">MakeMyTrip > Travel Blog > <span>Surprise Me!</span></div>
+        <div class="breadcrumb">HolidaySeva > Travel Guide > <span>Surprise Me!</span></div>
         <h1 class="hero-title">Experience the Soul-Stirring<br> Treasures of Kakadu National Park</h1>
         <div class="author-box">
             <div class="author-name">Swechchha Roy</div>
