@@ -51,6 +51,22 @@ foreach ($all_fields as $field) {
 </style>
 
 <div class="tg-meta-container">
+    <!-- Featured Image Upload -->
+<hr><h2>Featured Image</h2>
+<div style="margin-bottom: 25px;">
+    <input type="hidden" name="tg_featured_image" id="tg_featured_image" value="<?php echo esc_attr($meta['featured_image']); ?>">
+    <div class="tg-image-wrapper">
+        <?php if ($meta['featured_image']) : ?>
+            <img id="tg_featured_preview" src="<?php echo esc_url(wp_get_attachment_url($meta['featured_image'])); ?>" style="max-width: 40%; height: auto;">
+        <?php else : ?>
+            <p><em>No featured image selected yet.</em></p>
+            <img id="tg_featured_preview" style="max-width: 40%; height: auto; display: none;">
+        <?php endif; ?>
+        <button type="button" class="button upload_image_button" data-target="featured">Upload Featured Image</button>
+        <button type="button" class="button remove_image_button" data-target="featured" style="margin-top: 5px;">Remove</button>
+    </div>
+</div>
+
     <div class="tg-main">
         <?php foreach ($fields as $field): ?>
             <?php if ($field === 'featured_image') continue; ?>
