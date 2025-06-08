@@ -59,7 +59,7 @@ foreach ($all_fields as $field) {
 
     <!-- TEXT INPUT COLUMN -->
     <div class="tg-main">
-        <h2>Travel Guide Content</h2>
+        <h1>Travel Guide Content</h1>
         <?php foreach ($fields as $field): ?>
             <?php if ($field === 'featured_image') continue; ?>
             <p>
