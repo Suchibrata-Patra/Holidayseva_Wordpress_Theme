@@ -76,7 +76,7 @@ foreach ($all_fields as $field) {
 
     <!-- IMAGE UPLOAD COLUMN -->
     <div class="tg-sidebar">
-        <h2>🖼️ Featured Image</h2>
+        <h2>Featured Image</h2>
         <?php $feat_id = $meta['featured_image']; ?>
         <div class="tg-sidebar-section">
             <input type="hidden" name="tg_featured_image" id="tg_featured_image" value="<?php echo esc_attr($feat_id); ?>">
@@ -92,7 +92,7 @@ foreach ($all_fields as $field) {
             </div>
         </div>
 
-        <h2>🖼️ Section Images</h2>
+        <h2>Section Images</h2>
         <?php foreach ($fields as $field): ?>
             <?php $img_id = $meta["{$field}_image"]; ?>
             <div class="tg-sidebar-section">
