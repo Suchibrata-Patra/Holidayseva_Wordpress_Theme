@@ -165,7 +165,7 @@ get_footer();
 
     .breadcrumb {
         font-size: 1.1rem;
-        color: grey;
+        color: white;
         margin-bottom: 10px;
     }
 
