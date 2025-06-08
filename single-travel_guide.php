@@ -26,9 +26,31 @@ if (have_posts()) :
     $meta['top_attractions']= get_post_meta(get_the_ID(), '_tg_top_attractions', true);
 
     $image_url = $meta['featured_image'] ? wp_get_attachment_url($meta['featured_image']) : '';
+
+    $image_fields = [
+    'intro', 'overview', 'how_to_get', 'top_attractions', 'where_to_stay', 'eat_drink',
+    'top_reasons', 'cultural_tips', 'budget', 'itinerary', 'personal_exp',
+    'travel_tips', 'resources', 'conclusion'
+];
+
+foreach ($image_fields as $field) {
+    $meta["{$field}_image"] = get_post_meta(get_the_ID(), "_tg_{$field}_image", true);
+}
+
 ?>
 
 <style>
+    .section-img {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.section-img img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
 .travel-guide-container {
     /* max-width: 99%; */
     margin: 80px auto;
@@ -136,7 +158,19 @@ if (have_posts()) :
     ?>
         <div class="travel-guide-section">
             <h2><?php echo $label[0]; ?></h2>
-            <p><?php echo esc_html($meta[$key]); ?></p>
+<div class="travel-guide-section">
+    <h2><?php echo $label[0]; ?></h2>
+    <?php
+        $img_id = $meta["{$key}_image"];
+        if ($img_id) {
+            $img_url = wp_get_attachment_url($img_id);
+            if ($img_url) {
+                echo '<div class="section-img"><img src="' . esc_url($img_url) . '" alt="' . esc_attr($label[0]) . ' Image"></div>';
+            }
+        }
+    ?>
+    <p><?php echo esc_html($meta[$key]); ?></p>
+</div>
         </div>
     <?php
         endif;
