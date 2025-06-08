@@ -80,7 +80,6 @@ inventore, quam esse deleniti aut alias!
 
     .hero-title {
         font-size: 3rem;
-        line-height:1.1rem;
         margin-bottom: 10px;
     }
 
