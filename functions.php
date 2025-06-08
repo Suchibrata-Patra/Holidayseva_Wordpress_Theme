@@ -137,162 +137,191 @@ add_action('init', 'register_travel_guide_cpt');
 
 //  Section To add Custom template for the Writting of the Blogs Posts
 
-function travel_guide_block_template() {
-    $post_type_object = get_post_type_object('travel_guide');
-    if (!$post_type_object) {
-        return;
-    }
+// function travel_guide_block_template() {
+//     $post_type_object = get_post_type_object('travel_guide');
+//     if (!$post_type_object) {
+//         return;
+//     }
 
-    $post_type_object->template = [
-        // Hero Cover Section
-        [
-            'core/cover',
-            [
-                'dimRatio'     => 60,
-                'overlayColor' => 'black',
-                'minHeight'    => 450,
-                'align'        => 'full',
-            ],
-            [
-                [
-                    'core/heading',
-                    [
-                        'placeholder' => 'Your breathtaking title here...',
-                        'textAlign'   => 'center',
-                        'level'       => 1,
-                    ]
-                ],
-                [
-                    'core/paragraph',
-                    [
-                        'placeholder' => 'One-liner teaser or quote that captures the essence of your journey...',
-                        'align'       => 'center',
-                        'fontSize'    => 'medium',
-                    ]
-                ],
-            ]
-        ],
+//     $post_type_object->template = [
+//         // Hero Cover Section
+//         [
+//             'core/cover',
+//             [
+//                 'dimRatio'     => 60,
+//                 'overlayColor' => 'black',
+//                 'minHeight'    => 450,
+//                 'align'        => 'full',
+//             ],
+//             [
+//                 [
+//                     'core/heading',
+//                     [
+//                         'placeholder' => 'Your breathtaking title here...',
+//                         'textAlign'   => 'center',
+//                         'level'       => 1,
+//                     ]
+//                 ],
+//                 [
+//                     'core/paragraph',
+//                     [
+//                         'placeholder' => 'One-liner teaser or quote that captures the essence of your journey...',
+//                         'align'       => 'center',
+//                         'fontSize'    => 'medium',
+//                     ]
+//                 ],
+//             ]
+//         ],
 
-        // Intro Text
-        [
-            'core/paragraph',
-            [
-                'placeholder' => 'Write a captivating intro to your travel story...',
-                'align'       => 'left',
-                'fontSize'    => 'large',
-            ]
-        ],
+//         // Intro Text
+//         [
+//             'core/paragraph',
+//             [
+//                 'placeholder' => 'Write a captivating intro to your travel story...',
+//                 'align'       => 'left',
+//                 'fontSize'    => 'large',
+//             ]
+//         ],
 
-        // Day-by-Day Itinerary
-        [
-            'core/heading',
-            [
-                'content' => 'Itinerary Overview',
-                'level'   => 2,
-            ]
-        ],
-        [
-            'core/columns',
-            [],
-            [
-                [
-                    'core/column',
-                    [],
-                    [
-                        [
-                            'core/heading',
-                            [ 'placeholder' => 'Day 1: Arrival' ]
-                        ],
-                        [
-                            'core/paragraph',
-                            [ 'placeholder' => 'Describe Day 1 activities...' ]
-                        ],
-                    ]
-                ],
-                [
-                    'core/column',
-                    [],
-                    [
-                        [
-                            'core/heading',
-                            [ 'placeholder' => 'Day 2: Exploration' ]
-                        ],
-                        [
-                            'core/paragraph',
-                            [ 'placeholder' => 'Describe Day 2 fun...' ]
-                        ],
-                    ]
-                ],
-            ]
-        ],
+//         // Day-by-Day Itinerary
+//         [
+//             'core/heading',
+//             [
+//                 'content' => 'Itinerary Overview',
+//                 'level'   => 2,
+//             ]
+//         ],
+//         [
+//             'core/columns',
+//             [],
+//             [
+//                 [
+//                     'core/column',
+//                     [],
+//                     [
+//                         [
+//                             'core/heading',
+//                             [ 'placeholder' => 'Day 1: Arrival' ]
+//                         ],
+//                         [
+//                             'core/paragraph',
+//                             [ 'placeholder' => 'Describe Day 1 activities...' ]
+//                         ],
+//                     ]
+//                 ],
+//                 [
+//                     'core/column',
+//                     [],
+//                     [
+//                         [
+//                             'core/heading',
+//                             [ 'placeholder' => 'Day 2: Exploration' ]
+//                         ],
+//                         [
+//                             'core/paragraph',
+//                             [ 'placeholder' => 'Describe Day 2 fun...' ]
+//                         ],
+//                     ]
+//                 ],
+//             ]
+//         ],
 
-        // Full Width Image Gallery
-        [
-            'core/heading',
-            [
-                'content' => 'Photo Diary',
-                'level'   => 2,
-            ]
-        ],
-        [
-            'core/gallery',
-            [
-                'columns' => 3,
-                'align'   => 'wide',
-            ]
-        ],
+//         // Full Width Image Gallery
+//         [
+//             'core/heading',
+//             [
+//                 'content' => 'Photo Diary',
+//                 'level'   => 2,
+//             ]
+//         ],
+//         [
+//             'core/gallery',
+//             [
+//                 'columns' => 3,
+//                 'align'   => 'wide',
+//             ]
+//         ],
 
-        // Call to Action
-        [
-            'core/separator',
-            [
-                'align' => 'wide'
-            ]
-        ],
-        [
-            'core/heading',
-            [
-                'content' => 'Ready to explore it yourself?',
-                'level'   => 3,
-                'align'   => 'center'
-            ]
-        ],
-        [
-            'core/buttons',
-            [
-                'align' => 'center'
-            ],
-            [
-                [
-                    'core/button',
-                    [
-                        'text'       => 'Book This Trip',
-                        'url'        => '#',
-                        'className'  => 'is-style-fill',
-                        'backgroundColor' => 'primary',
-                        'textColor'  => 'white',
-                    ]
-                ]
-            ]
-        ],
+//         // Call to Action
+//         [
+//             'core/separator',
+//             [
+//                 'align' => 'wide'
+//             ]
+//         ],
+//         [
+//             'core/heading',
+//             [
+//                 'content' => 'Ready to explore it yourself?',
+//                 'level'   => 3,
+//                 'align'   => 'center'
+//             ]
+//         ],
+//         [
+//             'core/buttons',
+//             [
+//                 'align' => 'center'
+//             ],
+//             [
+//                 [
+//                     'core/button',
+//                     [
+//                         'text'       => 'Book This Trip',
+//                         'url'        => '#',
+//                         'className'  => 'is-style-fill',
+//                         'backgroundColor' => 'primary',
+//                         'textColor'  => 'white',
+//                     ]
+//                 ]
+//             ]
+//         ],
+//     ];
+
+//     $post_type_object->template_lock = false; // Let editors add/remove freely
+// }
+// add_action('init', 'travel_guide_block_template');
+
+
+// function travel_guide_custom_styles() {
+//     if (is_singular('travel_guide')) {
+//         wp_enqueue_style('travel-guide-style', get_template_directory_uri() . '/css/travel-guide.css');
+//     }
+// }
+// add_action('wp_enqueue_scripts', 'travel_guide_custom_styles');
+
+// function travel_guide_editor_style() {
+//     add_editor_style('css/travel-guide-editor.css');
+// }
+// add_action('admin_init', 'travel_guide_editor_style');
+add_action('add_meta_boxes', 'add_travel_guide_meta_box');
+
+function add_travel_guide_meta_box() {
+    add_meta_box(
+        'travel_guide_details',
+        'Travel Guide Details',
+        'render_travel_guide_meta_form',
+        'travel_guide',
+        'normal',
+        'default'
+    );
+}
+
+function render_travel_guide_meta_form($post) {
+    // Security nonce
+    wp_nonce_field('travel_guide_nonce_action', 'travel_guide_nonce');
+
+    // Retrieve current meta values
+    $meta = [
+        'location'    => get_post_meta($post->ID, '_tg_location', true),
+        'duration'    => get_post_meta($post->ID, '_tg_duration', true),
+        'best_season' => get_post_meta($post->ID, '_tg_best_season', true),
     ];
 
-    $post_type_object->template_lock = false; // Let editors add/remove freely
+    // Make variables available to the form
+    $current_post = $post; // Optional, if you want access inside the form
+    include __DIR__ . '/Forms/tour_form.php';
 }
-add_action('init', 'travel_guide_block_template');
 
-
-function travel_guide_custom_styles() {
-    if (is_singular('travel_guide')) {
-        wp_enqueue_style('travel-guide-style', get_template_directory_uri() . '/css/travel-guide.css');
-    }
-}
-add_action('wp_enqueue_scripts', 'travel_guide_custom_styles');
-
-function travel_guide_editor_style() {
-    add_editor_style('css/travel-guide-editor.css');
-}
-add_action('admin_init', 'travel_guide_editor_style');
 
 
 
