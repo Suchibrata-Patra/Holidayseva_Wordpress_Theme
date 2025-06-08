@@ -171,7 +171,7 @@ get_footer();
 
     .breadcrumb span {
         font-weight: bold;
-        color: #f55;
+        color: rgb(255, 0, 0);
     }
 
     .hero-title {
