@@ -21,6 +21,7 @@
   </style>
 </head>
 <body>
-  <h1>This page is under development.</h1>
+  <h1>Under Development</h1>
+  <h6>powered by HolidaySeva.com</h6>
 </body>
 </html>
