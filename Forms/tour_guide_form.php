@@ -72,7 +72,7 @@ foreach ($all_fields as $field) {
                 <input type="hidden" name="tg_<?php echo $field; ?>_image" id="tg_<?php echo $field; ?>_image" value="<?php echo esc_attr($meta["{$field}_image"]); ?>">
                 <div class="tg-image-wrapper">
                     <?php if ($meta["{$field}_image"]) : ?>
-                        <img id="tg_<?php echo $field; ?>_preview" src="<?php echo esc_url(wp_get_attachment_url($meta["{$field}_image"])); ?>" style="max-width: 100%; height: auto;">
+                        <img id="tg_<?php echo $field; ?>_preview" src="<?php echo esc_url(wp_get_attachment_url($meta["{$field}_image"])); ?>" style="max-width: 20%; height: auto;">
                     <?php else : ?>
                         <p><em>No image selected yet.</em></p>
                         <img id="tg_<?php echo $field; ?>_preview" style="max-width: 100%; height: auto; display: none;">
