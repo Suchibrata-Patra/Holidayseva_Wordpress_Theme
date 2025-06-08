@@ -48,7 +48,7 @@ if (have_posts()) :
     transition: transform 0.3s ease;
 }
 .travel-guide-container img:hover {
-    transform: scale(1.015);
+    transform: scale(1.0001);
 }
 
 .travel-guide-container h1 {
