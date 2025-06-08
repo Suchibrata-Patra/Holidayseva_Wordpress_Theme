@@ -87,7 +87,7 @@ if (have_posts()) :
 .travel-guide-section p {
     font-size: 17px;
     color: #333;
-    line-height: 1.9;
+    /* line-height: 1.9; */
     white-space: pre-line;
     margin: 0;
 }
@@ -95,7 +95,7 @@ if (have_posts()) :
 .entry-content {
     font-size: 17px;
     color: #2c2c2c;
-    line-height: 1.9;
+    /* line-height: 1.9; */
 }
 </style>
 
