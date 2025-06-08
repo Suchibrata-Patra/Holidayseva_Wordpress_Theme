@@ -23,6 +23,9 @@ foreach ($all_fields as $field) {
 ?>
 
 <style>
+*{
+    color: black;
+}
 .tg-meta-container {
     display: flex;
     flex-wrap: wrap;
