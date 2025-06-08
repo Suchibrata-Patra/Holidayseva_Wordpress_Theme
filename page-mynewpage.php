@@ -68,9 +68,9 @@ Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis velit eius saepe
 }
 
 .hero-title {
-  font-size: 3rem;
-  line-height: 1.3;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  line-height: 0.9rem;
+  margin-bottom: 10px;
 }
 
 .author-box {
