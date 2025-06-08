@@ -73,7 +73,7 @@ if (have_posts()) :
 
 .travel-guide-section {
     margin-bottom: 64px;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
     padding-bottom: 48px;
 }
 
