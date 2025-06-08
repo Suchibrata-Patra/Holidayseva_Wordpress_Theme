@@ -96,7 +96,7 @@ if (have_posts()) :
     }
 
     .section-img img:hover {
-        transform: scale(1.01);
+        transform: scale(1.0001);
     }
 
     .featured-img {
