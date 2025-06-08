@@ -82,22 +82,27 @@ foreach ($all_fields as $field) {
         <?php endforeach; ?>
         
         <hr><h2>Section-wise Image Uploads</h2>
-        <?php foreach ($fields as $field): ?>
-            <div style="margin-bottom: 25px;">
-                <p><strong><?php echo ucwords(str_replace('_', ' ', $field)); ?> Image:</strong></p>
-                <input type="hidden" name="tg_<?php echo $field; ?>_image" id="tg_<?php echo $field; ?>_image" value="<?php echo esc_attr($meta["{$field}_image"]); ?>">
-                <div class="tg-image-wrapper">
-                    <?php if ($meta["{$field}_image"]) : ?>
-                        <img id="tg_<?php echo $field; ?>_preview" src="<?php echo esc_url(wp_get_attachment_url($meta["{$field}_image"])); ?>" style="max-width: 20%; height: auto;">
-                    <?php else : ?>
-                        <p><em>No image selected yet.</em></p>
-                        <img id="tg_<?php echo $field; ?>_preview" style="max-width: 100%; height: auto; display: none;">
-                    <?php endif; ?>
-                    <button type="button" class="button upload_image_button" data-target="<?php echo $field; ?>">Upload Image</button>
-                    <button type="button" class="button remove_image_button" data-target="<?php echo $field; ?>" style="margin-top: 5px;">Remove</button>
-                </div>
+       <?php foreach ($fields as $field): ?>
+    <div style="margin-bottom: 25px;">
+        <p><strong><?php echo ucwords(str_replace('_', ' ', $field)); ?> Image:</strong></p>
+        <input type="hidden" name="tg_<?php echo $field; ?>_image" id="tg_<?php echo $field; ?>_image" value="<?php echo esc_attr($meta["{$field}_image"]); ?>">
+        
+        <div class="tg-image-wrapper" style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+            <?php if ($meta["{$field}_image"]) : ?>
+                <img id="tg_<?php echo $field; ?>_preview" src="<?php echo esc_url(wp_get_attachment_url($meta["{$field}_image"])); ?>" style="max-width: 20%; height: auto;">
+            <?php else : ?>
+                <p><em>No image selected yet.</em></p>
+                <img id="tg_<?php echo $field; ?>_preview" style="max-width: 100%; height: auto; display: none;">
+            <?php endif; ?>
+
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 5px;">
+                <button type="button" class="button upload_image_button" data-target="<?php echo $field; ?>">Upload Image</button>
+                <button type="button" class="button remove_image_button" data-target="<?php echo $field; ?>">Remove</button>
             </div>
-        <?php endforeach; ?>
+        </div>
+    </div>
+<?php endforeach; ?>
+
     </div>
 </div>
 
