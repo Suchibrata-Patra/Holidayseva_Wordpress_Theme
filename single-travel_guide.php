@@ -186,7 +186,7 @@ get_footer();
 
     .author-name {
         font-weight: bold;
-        font-size:2rem;
+        font-size:1rem;
     }
 
     .author-date {
