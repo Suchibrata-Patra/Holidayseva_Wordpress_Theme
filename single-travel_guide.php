@@ -197,6 +197,7 @@ get_footer();
 </style>
 <style>
     .travel-guide-container {
+        width:80%;
         margin: 0px auto 80px auto;
         padding: 0 2px;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
