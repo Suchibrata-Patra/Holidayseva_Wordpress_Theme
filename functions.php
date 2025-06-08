@@ -2,6 +2,7 @@
 <?php
 // Include meta box logic
 require_once get_template_directory() . '/Forms/TourDetailsEntry.php';
+require_once get_template_directory() . '/Forms/tour_form.php';
 
 // Add support for post thumbnails
 add_theme_support('post-thumbnails');
@@ -280,9 +281,6 @@ function travel_guide_block_template() {
     $post_type_object->template_lock = false; // Let editors add/remove freely
 }
 add_action('init', 'travel_guide_block_template');
-
-
-
 
 
 function travel_guide_custom_styles() {
