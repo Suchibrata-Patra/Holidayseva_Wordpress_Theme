@@ -50,17 +50,17 @@ if (have_posts()) :
 
     <div class="travel-guide-meta">
         <?php if ($meta['location']) : ?>
-        <p>📍 <strong>
+        <p><strong>
                 <?php echo esc_html($meta['location']); ?>
             </strong></p>
         <?php endif; ?>
         <?php if ($meta['duration']) : ?>
-        <p>⏳ Duration:
+        <p>Duration:
             <?php echo esc_html($meta['duration']); ?>
         </p>
         <?php endif; ?>
         <?php if ($meta['best_season']) : ?>
-        <p>🌤️ Best Season:
+        <p>Best Season:
             <?php echo esc_html($meta['best_season']); ?>
         </p>
         <?php endif; ?>
