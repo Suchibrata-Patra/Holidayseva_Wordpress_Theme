@@ -6,9 +6,9 @@ wp_nonce_field('travel_guide_nonce_action', 'travel_guide_nonce');
 
 // Define content sections
 $fields = [
-    'location', 'duration', 'best_season', 'where_to_stay', 'top_reasons', 'featured_image',
-    'intro', 'overview', 'how_to_get', 'eat_drink', 'cultural_tips', 'budget', 'itinerary',
-    'personal_exp', 'travel_tips', 'resources', 'conclusion', 'top_attractions'
+   'intro', 'overview', 'how_to_get', 'top_attractions', 'where_to_stay', 'eat_drink',
+        'top_reasons', 'cultural_tips', 'budget', 'itinerary', 'personal_exp',
+        'travel_tips', 'resources', 'conclusion'
 ];
 
 // Create image field names
