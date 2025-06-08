@@ -164,7 +164,7 @@ get_footer();
     }
 
     .breadcrumb {
-        font-size: 14px;
+        font-size: 1rem;
         color: #ddd;
         margin-bottom: 10px;
     }
