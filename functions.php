@@ -101,36 +101,25 @@ add_action('init', 'register_travel_guide_cpt');
 
 //  Section To add Custom template for the Writting of the Blogs Posts
 add_action('save_post_travel_guide', function($post_id) {
-    if (!isset($_POST['travel_guide_nonce']) || 
-        !wp_verify_nonce($_POST['travel_guide_nonce'], 'travel_guide_nonce_action')) return;
+    if (!isset($_POST['travel_guide_nonce']) || !wp_verify_nonce($_POST['travel_guide_nonce'], 'travel_guide_nonce_action')) return;
 
     $fields = [
-        '_tg_location'        => sanitize_text_field($_POST['tg_location'] ?? ''),
-        '_tg_duration'        => sanitize_text_field($_POST['tg_duration'] ?? ''),
-        '_tg_best_season'     => sanitize_text_field($_POST['tg_best_season'] ?? ''),
-        '_tg_where_to_stay'   => sanitize_textarea_field($_POST['tg_where_to_stay'] ?? ''),
-        '_tg_top_reasons'     => sanitize_textarea_field($_POST['tg_top_reasons'] ?? ''),
-        '_tg_featured_image'  => intval($_POST['tg_featured_image'] ?? 0),
-
-        // New Fields
-        '_tg_intro'           => sanitize_textarea_field($_POST['tg_intro'] ?? ''),
-        '_tg_overview'        => sanitize_textarea_field($_POST['tg_overview'] ?? ''),
-        '_tg_how_to_get'      => sanitize_textarea_field($_POST['tg_how_to_get'] ?? ''),
-        '_tg_top_attractions' => sanitize_textarea_field($_POST['tg_top_attractions'] ?? ''),
-        '_tg_eat_drink'       => sanitize_textarea_field($_POST['tg_eat_drink'] ?? ''),
-        '_tg_cultural_tips'   => sanitize_textarea_field($_POST['tg_cultural_tips'] ?? ''),
-        '_tg_budget'          => sanitize_textarea_field($_POST['tg_budget'] ?? ''),
-        '_tg_itinerary'       => sanitize_textarea_field($_POST['tg_itinerary'] ?? ''),
-        '_tg_personal_exp'    => sanitize_textarea_field($_POST['tg_personal_exp'] ?? ''),
-        '_tg_travel_tips'     => sanitize_textarea_field($_POST['tg_travel_tips'] ?? ''),
-        '_tg_resources'       => sanitize_textarea_field($_POST['tg_resources'] ?? ''),
-        '_tg_conclusion'      => sanitize_textarea_field($_POST['tg_conclusion'] ?? ''),
+        'location', 'duration', 'best_season', 'where_to_stay', 'top_reasons', 'featured_image',
+        'intro', 'overview', 'how_to_get', 'eat_drink', 'cultural_tips', 'budget', 'itinerary',
+        'personal_exp', 'travel_tips', 'resources', 'conclusion', 'top_attractions'
     ];
 
-    foreach ($fields as $key => $value) {
-        update_post_meta($post_id, $key, $value);
+    foreach ($fields as $field) {
+        if (isset($_POST["tg_$field"])) {
+            update_post_meta($post_id, "_tg_$field", sanitize_text_field($_POST["tg_$field"]));
+        }
+        $image_field = "tg_{$field}_image";
+        if (isset($_POST[$image_field])) {
+            update_post_meta($post_id, "_$image_field", intval($_POST[$image_field]));
+        }
     }
 });
+
 
 
 
