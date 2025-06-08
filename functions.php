@@ -135,27 +135,6 @@ function render_travel_guide_meta_form($post) {
     include __DIR__ . '/Forms/tour_guide_form.php';
 }
 
-add_action('save_post_travel_guide', function($post_id) {
-    if (!isset($_POST['travel_guide_nonce']) || !wp_verify_nonce($_POST['travel_guide_nonce'], 'travel_guide_nonce_action')) return;
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
-    if (!current_user_can('edit_post', $post_id)) return;
-
-    $fields = [
-        '_tg_location' => 'tg_location',
-        '_tg_duration' => 'tg_duration',
-        '_tg_best_season' => 'tg_best_season',
-        '_tg_where_to_stay' => 'tg_where_to_stay',
-        '_tg_top_reasons' => 'tg_top_reasons',
-        '_tg_featured_image' => 'tg_featured_image',
-    ];
-
-    foreach ($fields as $meta_key => $form_key) {
-        if (isset($_POST[$form_key])) {
-            update_post_meta($post_id, $meta_key, sanitize_text_field($_POST[$form_key]));
-        }
-    }
-});
-
 
 //  End of the Section To add Custom template for the Writting of the Blogs Posts
 
