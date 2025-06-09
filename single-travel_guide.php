@@ -197,7 +197,7 @@ get_footer();
     }
     .travel-guide-container {
         width:98%;
-        font-weight:400;
+        font-weight:300;
         margin: 0px auto 20px auto;
         padding: 0 2px;
         color:rgb(0, 0, 0);
