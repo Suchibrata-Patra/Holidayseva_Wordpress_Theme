@@ -249,7 +249,7 @@ get_footer();
     }
 
     .section-img {
-        margin: 30px 0;
+        margin: 10px 0;
         text-align: center;
     }
 
@@ -269,7 +269,7 @@ get_footer();
         max-width: 100%;
         height: auto;
         border-radius: 16px;
-        margin: 10px 0;
+        margin: 40px 0;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
         display: block;
         margin-left: auto;
