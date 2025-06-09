@@ -128,6 +128,7 @@ get_footer();
     * {
         margin: 0px;
         font-family: Roboto;
+        
     }
 
     .holidayseva_blog_hero_section {
@@ -196,10 +197,10 @@ get_footer();
     }
     .travel-guide-container {
         width:98%;
-        margin: 0px auto 80px auto;
+        font-weight:400;
+        margin: 0px auto 20px auto;
         padding: 0 2px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        color: #1c1c1e;
+        color:rgb(0, 0, 0);
         background: #ffffff;
     }
 
