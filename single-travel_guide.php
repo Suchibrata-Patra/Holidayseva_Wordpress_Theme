@@ -140,7 +140,7 @@ get_footer();
         color: #fff;
         text-align: center;
         font-family: Georgia, serif;
-        padding: 0 20px;
+        padding: 0 5px;
         /* mobile breathing space */
         overflow: hidden;
         /* just in case of absolute children */
@@ -159,7 +159,7 @@ get_footer();
     .holidayseva_hero-content {
         position: relative;
         z-index: 2;
-        max-width: 900px;
+        /* max-width: 900px; */
         padding: 0 1px;
     }
 
