@@ -197,7 +197,7 @@ get_footer();
     }
     .travel-guide-container {
         width:98%;
-        font-weight:300;
+        font-weight:400;
         margin: 0px auto 20px auto;
         padding: 0 2px;
         color:rgb(0, 0, 0);
@@ -254,9 +254,9 @@ get_footer();
     }
 
     .section-img img {
-        max-width: 40%;
+        max-width: 80%;
         height: auto;
-        border-radius: 12px;
+        border-radius: 5px;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
     }
