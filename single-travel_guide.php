@@ -254,7 +254,7 @@ get_footer();
     }
 
     .section-img img {
-        max-width: 80%;
+        max-width: 99%;
         height: auto;
         border-radius: 5px;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
