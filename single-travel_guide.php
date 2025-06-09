@@ -195,7 +195,7 @@ get_footer();
         color: #ccc;
     }
     .travel-guide-container {
-        width:80%;
+        width:98%;
         margin: 0px auto 80px auto;
         padding: 0 2px;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
