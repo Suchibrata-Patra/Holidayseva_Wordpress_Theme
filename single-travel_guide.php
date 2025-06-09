@@ -28,15 +28,15 @@ if (have_posts()) :
         $meta["{$field}_image"] = get_post_meta(get_the_ID(), "_tg_{$field}_image", true);
     }
 ?>
-<div class="hero-section">
+<div class="holidayseva_blog_hero_section">
     <div class="overlay"></div>
-    <div class="hero-content">
-        <div class="breadcrumb">HolidaySeva > Travel Guide > <span>Surprise Me!</span></div>
-        <h1 class="hero-title">Experience the Soul-Stirring<br> Treasures of Kakadu National Park</h1>
-        <div class="author-box">
+    <div class="holidayseva_hero-content">
+        <div class="holidayseva_tour_guide_breadcrumb">HolidaySeva > Travel Guide > <span>Surprise Me!</span></div>
+        <h1 class="holidayseva_travel_guide_hero_title">Experience the Soul-Stirring<br> Treasures of Kakadu National Park</h1>
+        <div class="holidayseva_travel_guide_author-box">
             
-            <div class="author-name">Suchana Chakraborty</div>
-            <div class="author-date">Last updated: May 26, 2025</div>
+            <div class="holidayseva_travel_guide_author-name">Suchana Chakraborty</div>
+            <div class="holidayseva_travel_guide_author-date">Last updated: May 26, 2025</div>
         </div>
     </div>
 </div>
@@ -69,20 +69,20 @@ if (have_posts()) :
 
     <?php
     $sections = [
-        'intro'           => '✨ Introduction',
-        'overview'        => '🌍 Destination Overview',
-        'how_to_get'      => '🚗 How to Get There',
-        'top_attractions' => '🏞️ Top Attractions',
-        'where_to_stay'   => '🏨 Where to Stay',
-        'eat_drink'       => '🍽️ Eat & Drink',
-        'top_reasons'     => '🌟 Top 5 Reasons to Visit',
-        'cultural_tips'   => '🧭 Cultural Etiquette',
-        'budget'          => '💸 Budget Breakdown',
-        'itinerary'       => '🗺️ Itinerary',
-        'personal_exp'    => '📸 Personal Experiences',
-        'travel_tips'     => '🧳 Travel Tips & Safety',
-        'resources'       => '🔗 Useful Resources',
-        'conclusion'      => '✍️ Final Thoughts'
+        'intro'           => 'Introduction',
+        'overview'        => 'Destination Overview',
+        'how_to_get'      => 'How to Get There',
+        'top_attractions' => 'Top Attractions',
+        'where_to_stay'   => 'Where to Stay',
+        'eat_drink'       => 'Eat & Drink',
+        'top_reasons'     => 'Top 5 Reasons to Visit',
+        'cultural_tips'   => 'Cultural Etiquette',
+        'budget'          => 'Budget Breakdown',
+        'itinerary'       => 'Itinerary',
+        'personal_exp'    => 'Personal Experiences',
+        'travel_tips'     => 'Travel Tips & Safety',
+        'resources'       => 'Useful Resources',
+        'conclusion'      => 'Final Thoughts'
     ];
 
     foreach ($sections as $key => $label) :
@@ -130,7 +130,7 @@ get_footer();
         font-family: Roboto;
     }
 
-    .hero-section {
+    .holidayseva_blog_hero_section {
         position: relative;
         height: 100vh;
         background: url('<?php echo esc_url($image_url); ?>') no-repeat center center / cover;
@@ -156,46 +156,44 @@ get_footer();
         z-index: 1;
     }
 
-    .hero-content {
+    .holidayseva_hero-content {
         position: relative;
         z-index: 2;
         max-width: 900px;
         padding: 0 1px;
     }
 
-    .breadcrumb {
+    .holidayseva_tour_guide_breadcrumb {
         font-size: 1rem;
         color: rgb(184, 184, 184);
         margin-bottom: 10px;
     }
 
-    .breadcrumb span {
+    .holidayseva_tour_guide_breadcrumb span {
         font-weight: bold;
         color: rgb(255, 0, 0);
     }
 
-    .hero-title {
+    .holidayseva_travel_guide_hero_title {
         font-size: 3rem;
         margin-bottom: 10px;
     }
 
-    .author-box {
+    .holidayseva_travel_guide_author-box {
         font-size: 16px;
         margin-top: 20px;
     }
 
-    .author-name {
+    .holidayseva_travel_guide_author-name {
         font-weight: bold;
         font-size:1rem;
     }
 
-    .author-date {
+    .holidayseva_travel_guide_author-date {
         font-style: italic;
         font-size: 14px;
         color: #ccc;
     }
-</style>
-<style>
     .travel-guide-container {
         width:80%;
         margin: 0px auto 80px auto;
