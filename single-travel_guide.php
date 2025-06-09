@@ -141,7 +141,7 @@ get_footer();
         color: #fff;
         text-align: center;
         font-family: Georgia, serif;
-        padding: 0 5px;
+        padding: 0 0px;
         /* mobile breathing space */
         overflow: hidden;
         /* just in case of absolute children */
