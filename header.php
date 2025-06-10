@@ -60,11 +60,12 @@
     'menu_class'=>'new-menu'
     ));
     ?>
+    f
         </nav>
         <!-- Currency and Sign-In Buttons -->
         <div class="new-buttons">
             <a href="#" class="inr-btn">₹ INR</a>
-            <a href="#" class="new-btn">Signs in</a>
+            <a href="#" class="new-btn">Sign in</a>
         </div>
         <!-- Hamburger Icon -->
         <div class="new-hamburger">
