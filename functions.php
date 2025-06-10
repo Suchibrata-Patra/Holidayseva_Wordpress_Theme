@@ -1,11 +1,11 @@
 
 <?php
-function yourtheme_register_menus() {
+function holidayseva_register_menus() {
     register_nav_menus(array(
         'primary_menu' => __('Primary Menu'),
     ));
 }
-add_action('after_setup_theme', 'yourtheme_register_menus');
+add_action('after_setup_theme', 'holidayseva_register_menus');
 add_theme_support('menus'); // Fallback support
 
 // Include meta box logic
