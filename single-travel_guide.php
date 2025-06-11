@@ -112,7 +112,7 @@ if (have_posts()) :
     ?>
 
     <div class="travel-guide-section">
-        <h2>📜 Full Travel Story</h2>
+        <h2>Full Travel Story</h2>
         <div class="entry-content">
             <?php the_content(); ?>
         </div>
