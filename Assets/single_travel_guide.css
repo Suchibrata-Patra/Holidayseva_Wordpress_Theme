@@ -1,0 +1,150 @@
+* {
+        margin: 0px;
+        font-family: Roboto;
+        
+    }
+
+    .holidayseva_blog_hero_section {
+        position: relative;
+        height: 100vh;
+        background: url('<?php echo esc_url($image_url); ?>') no-repeat center center / cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+        font-family: Georgia, serif;
+        padding: 0 0px;
+        /* mobile breathing space */
+        overflow: hidden;
+        /* just in case of absolute children */
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+        z-index: 1;
+    }
+
+    .holidayseva_hero-content {
+        position: relative;
+        z-index: 2;
+        /* max-width: 900px; */
+        padding: 0 1px;
+    }
+
+    .holidayseva_tour_guide_breadcrumb {
+        font-size: 1rem;
+        color: rgb(184, 184, 184);
+        margin-bottom: 10px;
+    }
+
+    .holidayseva_tour_guide_breadcrumb span {
+        font-weight: bold;
+        color: rgb(255, 0, 0);
+    }
+
+    .holidayseva_travel_guide_hero_title {
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .holidayseva_travel_guide_author-box {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .holidayseva_travel_guide_author-name {
+        font-weight: bold;
+        font-size:1rem;
+    }
+
+    .holidayseva_travel_guide_author-date {
+        font-style: italic;
+        font-size: 14px;
+        color: #ccc;
+    }
+    .travel-guide-container {
+        width:98%;
+        font-weight:400;
+        margin: 0px auto 20px auto;
+        padding: 0 2px;
+        color:rgb(0, 0, 0);
+        background: #ffffff;
+    }
+
+    .travel-guide-container h1 {
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #000;
+        letter-spacing: -1px;
+    }
+
+    .travel-guide-meta {
+        text-align: center;
+        font-size: 15px;
+        color: #888;
+        margin-bottom: 50px;
+        font-weight: 500;
+    }
+
+    .travel-guide-meta p {
+        margin: 5px 0;
+    }
+
+    .travel-guide-section {
+        margin-bottom: 64px;
+        padding-bottom: 48px;
+    }
+
+    .travel-guide-section h2 {
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 18px;
+        color: #111;
+    }
+
+    .travel-guide-section p {
+        font-size: 17px;
+        color: #333;
+        white-space: pre-line;
+        margin: 0;
+    }
+
+    .entry-content {
+        font-size: 17px;
+        color: #2c2c2c;
+    }
+
+    .section-img {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .section-img img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .section-img img:hover {
+        transform: scale(1.0001);
+    }
+
+    .featured-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 16px;
+        margin: 40px 0;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
