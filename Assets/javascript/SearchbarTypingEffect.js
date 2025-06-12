@@ -61,3 +61,13 @@
 
     // Start the typing effect
     typeEffect();
+
+    function typeEffect(){
+        const inputField = document.getElementById('Searchinput');
+        const baseText = "Search For";
+        const currentText = placeholders[placeholderIndex];
+
+        if(isDeleting){
+            inputField.placeholder = baseText
+        }
+    }
