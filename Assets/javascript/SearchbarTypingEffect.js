@@ -61,3 +61,4 @@
 
     // Start the typing effect
     typeEffect();
+    

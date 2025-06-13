@@ -125,7 +125,6 @@ if (have_posts()) :
 endif;
 get_footer();
 ?>
-
 <style>
         .holidayseva_blog_hero_section {
         position: relative;
