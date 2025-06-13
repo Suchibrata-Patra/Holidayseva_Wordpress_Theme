@@ -50,7 +50,7 @@ if (have_posts()) :
         <?php the_title(); ?>
     </h1>
 
-    <div class="travel-guide-meta">
+    <!-- <div class="travel-guide-meta">
         <?php if ($meta['location']) : ?>
         <p><strong>
                 <?php echo esc_html($meta['location']); ?>
@@ -66,7 +66,7 @@ if (have_posts()) :
             <?php echo esc_html($meta['best_season']); ?>
         </p>
         <?php endif; ?>
-    </div>
+    </div> -->
 
     <?php
     $sections = [
