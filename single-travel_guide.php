@@ -141,3 +141,15 @@ get_footer();
         overflow: hidden;
     }
 </style>
+
+This is just for the testing Purpose
+<?php
+    $img_id = $meta["intro_image"];
+                if ($img_id) {
+                    $img_url = wp_get_attachment_url($img_id);
+                    if ($img_url) {
+                        echo '<div class="section-img"><img src="' . esc_url($img_url) . '" alt="' . esc_attr($label) . ' Image"></div>';
+                    }
+                }
+?>
+Image Pasting Succesful
