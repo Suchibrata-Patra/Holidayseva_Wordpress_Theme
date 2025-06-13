@@ -17,7 +17,7 @@ if (have_posts()) :
     }
 
     // Main Featured Image
-    $image_url = $meta['featured_image'] ? wp_get_attachment_url($meta['featured_image']) : '';
+$featured_image_url = $meta['featured_image'] ? wp_get_attachment_url($meta['featured_image']) : '';
 
     // Section-specific images
     $image_fields = [
@@ -29,6 +29,7 @@ if (have_posts()) :
         $meta["{$field}_image"] = get_post_meta(get_the_ID(), "_tg_{$field}_image", true);
     }
 ?>
+
 <div class="holidayseva_blog_hero_section">
     <div class="overlay"></div>
     <div class="holidayseva_hero-content">
@@ -41,6 +42,8 @@ if (have_posts()) :
         </div>
     </div>
 </div>
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -130,7 +133,7 @@ get_footer();
         .holidayseva_blog_hero_section {
         position: relative;
         height: 100vh;
-        background: url('<?php echo esc_url($image_url); ?>') no-repeat center center / cover;
+        background: url('<?php echo esc_url($featured_image_url); ?>') no-repeat center center / cover;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -142,14 +145,3 @@ get_footer();
     }
 </style>
 
-This is just for the testing Purpose
-<?php
-    $img_id = $meta["intro_image"];
-                if ($img_id) {
-                    $img_url = wp_get_attachment_url($img_id);
-                    if ($img_url) {
-                        echo '<div class="section-img"><img src="' . esc_url($img_url) . '" alt="' . esc_attr($label) . ' Image"></div>';
-                    }
-                }
-?>
-Image Pasting Succesful
