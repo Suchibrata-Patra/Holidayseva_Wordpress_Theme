@@ -17,7 +17,7 @@ if (have_posts()) :
     }
 
     // Main Featured Image
-$featured_image_url = $meta['featured_image'] ? wp_get_attachment_url($meta['featured_image']) : '';
+    $featured_image_url = $meta['featured_image'] ? wp_get_attachment_url($meta['featured_image']) : '';
 
     // Section-specific images
     $image_fields = [
