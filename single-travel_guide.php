@@ -50,7 +50,7 @@ if (have_posts()) :
     rel="stylesheet">
 <div class="travel-guide-container">
     <h1>
-        <?php the_title(); ?>
+        <?php the_title(); ?> [test title Section]
     </h1>
 
     <!-- <div class="travel-guide-meta">
