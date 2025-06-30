@@ -31,7 +31,7 @@ if (have_posts()) :
     }
 ?>
 
-<div class="holidayseva_blog_hero_section">
+<div class="holidayseva_blog_hero_section" style="font-style:arial;">
     <div class="overlay"></div>
     <div class="holidayseva_hero-content">
         <div class="holidayseva_tour_guide_breadcrumb">HolidaySeva > Travel Guide > <span>Surprise Me!</span></div>
