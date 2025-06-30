@@ -1,6 +1,6 @@
+<!-- This Code is responsible for generating the Travel Blog Page -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/Central_styling.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/single_travel_guide.css">
-test Code
 <?php
 get_header();
 if (have_posts()) :
