@@ -48,6 +48,10 @@
         font-size: 14px;
         color: #ccc;
     }
+    .holidayseva_travel_guide_author-icon {
+        width:10px;
+        height: 10px;
+    }
     .travel-guide-container {
         width:98%;
         font-weight:400;
