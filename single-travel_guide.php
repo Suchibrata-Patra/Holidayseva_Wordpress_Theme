@@ -39,7 +39,7 @@ if (have_posts()) :
         <div class="holidayseva_travel_guide_author-box">
             <div class="holidayseva_travel_guide_author-name">Suchana Chakraborty</div>
             <div class="holidayseva_travel_guide_author-date">Last updated: May 26, 2025</div>
-            <div class="holidayseva_travel_guide_author-icon"><img src="<?php echo get_template_directory_uri();?>/Assets/icons/down_arrow.svg" alt="Get Down to the trip details" style="width:30px;height:auto;margin-top:40px;"></div>
+            <div class="holidayseva_travel_guide_author-icon"><img src="<?php echo get_template_directory_uri();?>/Assets/icons/down_arrow.svg" alt="Get Down to the trip details"></div>
         </div>
     </div>
 </div>
@@ -50,7 +50,7 @@ if (have_posts()) :
     rel="stylesheet">
 <div class="travel-guide-container">
     <h1>
-        <?php the_title(); ?> [test title Section]
+        <?php the_title(); ?>
     </h1>
 
     <!-- <div class="travel-guide-meta">
