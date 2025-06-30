@@ -62,18 +62,19 @@
     }
 
     .travel-guide-container h1 {
-        font-size: 48px;
+        font-size: 64px;
         font-weight: 700;
         margin-bottom: 10px;
         color: #000;
         letter-spacing: -1px;
+        width: 87.5%;
     }
 
     .travel-guide-meta {
         text-align: center;
         font-size: 15px;
         color: #888;
-        margin-bottom: 50px;
+        margin-bottom:11px;
         font-weight: 500;
     }
 
@@ -87,9 +88,10 @@
     }
 
     .travel-guide-section h2 {
-        font-size: 26px;
-        font-weight: 600;
-        margin-bottom: 18px;
+        font-size: 21px;
+        font-weight: bold;
+        line-height: 1.1904761905;
+        margin-bottom: 16px;
         color: #111;
     }
 
