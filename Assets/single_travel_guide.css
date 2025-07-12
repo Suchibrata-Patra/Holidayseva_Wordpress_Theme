@@ -96,12 +96,32 @@
     .travel-guide-section {
         margin-bottom: 64px;
         padding-bottom: 48px;
-        align-items: center;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin: 40px 0;
     }
+    .section-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.section-divider h2 {
+  flex: none;
+  padding: 0 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  position: relative;
+  z-index: 1;
+  background-color: #fff; /* match your site's background */
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+}
+
 
     .travel-guide-section h2 {
         font-size: 24px;

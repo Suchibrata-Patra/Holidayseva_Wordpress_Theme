@@ -122,7 +122,10 @@ if (have_posts()) :
     ?>
 
     <div class="travel-guide-section">
-        <h2>Related Articles</h2>
+        <div class="section-divider">
+            <h2>Related Articles</h2>
+        </div>
+
         <div class="entry-content">
             <?php the_content(); ?>
         </div>
