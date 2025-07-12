@@ -157,21 +157,22 @@ get_footer();
 </style>
 
 <?php
-$travel_guides = new WP_Query(array(
-    'post_type'      => 'travel-guide',
-    'posts_per_page' => -1,
+$travel_posts = new WP_Query(array(
+    'category_name'  => 'travel-guide',  // Slug of the category
+    'posts_per_page' => -1,              // All posts
     'post_status'    => 'publish'
 ));
 
-if ($travel_guides->have_posts()) {
+if ($travel_posts->have_posts()) {
     echo '<ul>';
-    while ($travel_guides->have_posts()) {
-        $travel_guides->the_post();
+    while ($travel_posts->have_posts()) {
+        $travel_posts->the_post();
         echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
     }
     echo '</ul>';
     wp_reset_postdata();
 } else {
-    echo 'No travel guides found.';
+    echo 'No travel blogs found in this category.';
 }
 ?>
+
