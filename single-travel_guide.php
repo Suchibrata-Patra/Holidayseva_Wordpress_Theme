@@ -160,6 +160,7 @@ get_footer();
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const shareButton = document.querySelector('.share_buttons');
+    const hideTrigger = document.querySelector('holidayseva_blog_hero_section'); 
     const hideTrigger = document.querySelector('footer'); // OR any other bottom section (e.g. .travel-guide-container)
 
     const observer = new IntersectionObserver(entries => {
