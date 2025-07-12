@@ -196,4 +196,5 @@ get_footer();
             Follow on LinkedIn
         </button>
     </div>
+    <div>X</div>
 </div>
