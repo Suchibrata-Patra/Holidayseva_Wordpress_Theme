@@ -37,7 +37,8 @@ if (have_posts()):
     <div class="overlay"></div>
     <div class="holidayseva_hero-content">
         <!-- <div class="holidayseva_tour_guide_breadcrumb">HolidaySeva > Travel Guide > <span>Surprise Me!</span></div> -->
-        <h1 class="holidayseva_travel_guide_hero_title">Experience the Soul-Stirring<br> Treasures of Kakadu National Park</h1>
+        <h1 class="holidayseva_travel_guide_hero_title">Experience the Soul-Stirring<br> Treasures of Kakadu National
+            Park</h1>
         <div class="holidayseva_travel_guide_author-box">
             <div class="holidayseva_travel_guide_author-name">S.Chakraborty 😊 </div>
             <div class="holidayseva_travel_guide_author-date">Last updated: 12th July 2025</div>
@@ -51,13 +52,21 @@ if (have_posts()):
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
+<div>
+    <div class="content_left_side">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi maxime illo, inventore dolorum, quas saepe, maiores ab molestiae dignissimos quo vitae quibusdam doloremque. Voluptatibus maiores accusantium, laudantium, odit sapiente modi nihil quaerat ducimus perferendis atque quasi sed quia cumque amet facilis obcaecati mollitia delectus vel deserunt voluptatem doloribus nobis? Dolor cumque rem nobis reiciendis, nemo itaque aperiam architecto maxime necessitatibus molestias ducimus praesentium doloribus exercitationem dolorem, non porro, perspiciatis ad pariatur incidunt distinctio aliquid. Esse possimus laudantium, ipsum quidem rem aut vitae, voluptatem suscipit eum nam nisi illo quo. Ex ad quo debitis soluta porro? Non quaerat architecto quidem quisquam, modi dignissimos rerum ullam incidunt est tempore molestiae, alias eligendi itaque repellat qui provident reiciendis accusamus. Iste fugiat soluta vitae ex quas, nisi non voluptates et odit libero tempore omnis magni fugit totam atque quidem natus veniam cum, quis, dignissimos unde quisquam dolor! Quasi vel quae suscipit sed doloribus obcaecati, sequi in quis iusto. Quia voluptas impedit optio iure, maxime officia nobis esse consequuntur voluptates. Perspiciatis voluptas a repudiandae numquam officiis tempore temporibus iste quae. Sint libero quis tempora! Atque velit, necessitatibus consequuntur autem, cum neque molestiae in beatae aliquid nemo ducimus iusto qui magni earum architecto omnis vel aperiam odit! Neque impedit quasi nobis vitae, soluta animi assumenda, nesciunt ducimus, quas modi quod ipsum cupiditate commodi minima amet doloremque ut voluptate consequatur et optio? Qui adipisci commodi quo voluptate tempora nulla delectus assumenda, iste quibusdam distinctio ipsa animi. Doloribus nihil doloremque ut sint quod commodi impedit eos corporis delectus magni? Soluta iure cum eligendi nam nostrum! Velit eaque voluptatibus deleniti eligendi fugiat et, obcaecati maxime, nostrum itaque debitis porro? Ipsa placeat modi doloremque nam, libero laborum voluptatem quibusdam excepturi in labore vitae consequuntur doloribus reiciendis dignissimos harum optio eius maiores nulla inventore sit qui dolor sint repellat eveniet! Temporibus!
+
+    </div>
+
     <div class="travel-guide-container">
-    <span style="font-size:14px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering <span style="color:rgb(94, 94, 94);">, Backend, Data / ML</span></span>
+    <span style="font-size:14px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering <span
+            style="color:rgb(94, 94, 94);">, Backend, Data / ML</span></span>
     <h1>
         <!-- <?php the_title(); ?> -->
-         Migrating Large-Scale Interactive Compute Workloads to Kubernetes Without Disruption
+        Migrating Large-Scale Interactive Compute Workloads to Kubernetes Without Disruption
     </h1>
-    <span style="font-size:12px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering, Backend, Data / ML</span>
+    <span style="font-size:12px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering, Backend, Data /
+        ML</span>
     <br>
     <!-- <div class="travel-guide-meta">
         <?php if ($meta['location']): ?>
@@ -98,7 +107,7 @@ if (have_posts()):
     foreach ($sections as $key => $label):
         if (!empty($meta[$key])):
             ?>
-     <div class="travel-guide-section">
+    <div class="travel-guide-section">
         <h2>
             <?php echo esc_html($label); ?>
         </h2>
@@ -119,6 +128,11 @@ if (have_posts()):
         endif;
     endforeach;
     ?>
+</div>
+
+    <div class="content_right_side">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, sit sint tempore commodi cupiditate veniam culpa consequatur maxime minus rem voluptate tempora ratione repudiandae, quae maiores, eos quasi beatae placeat quidem inventore vel quam. Ea et doloribus dolorem! Voluptatibus eveniet voluptas quis aspernatur adipisci dignissimos doloribus nobis iure molestiae nam? Dolorum repellendus nesciunt ullam est, omnis atque at sunt laboriosam distinctio qui, alias culpa eos praesentium accusantium natus fugiat nihil facere dicta a itaque accusamus! Facilis aspernatur inventore labore ex quo tempore sint temporibus enim nobis illo architecto, earum vitae consectetur expedita perferendis veniam, sunt illum fugiat! Ipsa magni ipsam, facere doloremque tenetur rem! Aut maxime molestiae voluptates deserunt vitae quibusdam animi sed? Nemo sapiente molestias explicabo quasi accusantium, recusandae, vero accusamus, laudantium suscipit sit dolores laboriosam voluptates magni. Atque earum illum saepe veniam totam et voluptates, dolorem officia eligendi voluptate pariatur, adipisci hic enim quas quod quam alias placeat animi cum modi! Illum distinctio maiores voluptate voluptatibus obcaecati sit excepturi neque, iusto veritatis, doloremque libero corporis praesentium unde et officiis qui. Eaque repellat repudiandae, eos error enim, at voluptates nemo neque nisi optio in quod ea tempora cum, explicabo accusantium illo a fugiat laboriosam quam est libero odit natus velit. Ullam quas molestiae natus doloremque praesentium voluptas nobis est dolor? Magni asperiores tenetur eveniet aliquam repellendus, fuga ipsam maiores, quod non soluta aut, culpa laborum fugit! Saepe ipsa quaerat veritatis temporibus suscipit velit, pariatur esse repudiandae fuga vel earum fugiat? Eligendi recusandae alias quibusdam, voluptates ea obcaecati vel fuga, distinctio commodi illo minus maiores enim, nobis reiciendis earum! Mollitia perferendis, magnam explicabo facilis dolores asperiores facere eos nostrum dolor dignissimos ea sapiente distinctio saepe ad consequatur impedit officiis. Non ratione dicta iure dolor quaerat autem placeat beatae quasi numquam? Quaerat vel eveniet impedit necessitatibus sed consequuntur ipsam! Qui, dignissimos.
+    </div>
 </div>
 
 <!-- Related Article Content  -->
@@ -149,23 +163,30 @@ if (have_posts()):
                     $image_html = '<img src="' . esc_url($featured_image_url) . '" alt="Default image">';
                 }
                 ?>
-                <div class="travel-guide-card">
-                    <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
-                        <div class="related_content_card_image">
-                            <?php echo $image_html; ?>
-                        </div>
-                        <div class="related_content_card_content">
-                            <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel Guide</span>
-                            <p class="related_content_card_meta"><?php echo esc_html($categories_list); ?></p>
-                            <h3 class="related_content_card_title"><?php the_title(); ?></h3>
-                            <p class="related_content_card_date"><?php echo get_the_date(); ?> / Global</p>
-                        </div>
-                    </a>
+        <div class="travel-guide-card">
+            <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
+                <div class="related_content_card_image">
+                    <?php echo $image_html; ?>
                 </div>
-            <?php endwhile;
+                <div class="related_content_card_content">
+                    <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel
+                        Guide</span>
+                    <p class="related_content_card_meta">
+                        <?php echo esc_html($categories_list); ?>
+                    </p>
+                    <h3 class="related_content_card_title">
+                        <?php the_title(); ?>
+                    </h3>
+                    <p class="related_content_card_date">
+                        <?php echo get_the_date(); ?> / Global
+                    </p>
+                </div>
+            </a>
+        </div>
+        <?php endwhile;
             wp_reset_postdata();
         else: ?>
-            <p>No travel guides found.</p>
+        <p>No travel guides found.</p>
         <?php endif; ?>
     </div>
 </section>
@@ -176,7 +197,7 @@ endif;
 get_footer();
 ?>
 <style>
-        .holidayseva_blog_hero_section {
+    .holidayseva_blog_hero_section {
         position: relative;
         height: 70vh;
         background: url('<?php echo esc_url($featured_image_url); ?>') no-repeat center center / cover;
@@ -192,10 +213,10 @@ get_footer();
 <div style="display: flex; align-items: center; gap: 20px; background-color: rgb(229, 229, 229); padding: 20px;">
     <div>Stay up to date with the latest from Uber Engineering</div>
     <div>
-        <button style="border: none; padding: 20px 30px; background-color: black; color: white; border-radius: 10px; font-size: 20px;">
+        <button
+            style="border: none; padding: 20px 30px; background-color: black; color: white; border-radius: 10px; font-size: 20px;">
             Follow on LinkedIn
         </button>
     </div>
     <div style="margin-left: auto; cursor: pointer; font-weight: bold;">X</div>
 </div>
-
