@@ -156,4 +156,24 @@ get_footer();
         overflow: hidden;
     }
 </style>
+<script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const shareButton = document.querySelector(".share_buttons");
+    const guideContainer = document.querySelector(".travel-guide-container");
 
+    function toggleShareButton() {
+        const rect = guideContainer.getBoundingClientRect();
+        if (rect.top <= 0) {
+            shareButton.classList.add("hidden");
+        } else {
+            shareButton.classList.remove("hidden");
+        }
+    }
+
+    window.addEventListener("scroll", toggleShareButton);
+    toggleShareButton(); // initial check
+});
+</script>
+
+</script>
