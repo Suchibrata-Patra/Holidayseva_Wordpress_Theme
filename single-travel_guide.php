@@ -51,6 +51,7 @@ if (have_posts()) :
     rel="stylesheet">
 
     <div class="travel-guide-container">
+    <span style="font-size:0.8rem;color:grey;">Engineering, Backend, Data / ML</span>
     <h1>
         <?php the_title(); ?>
     </h1>
@@ -93,7 +94,7 @@ if (have_posts()) :
     foreach ($sections as $key => $label) :
         if (!empty($meta[$key])) :
     ?>
-    <span style="font-size:0.8rem;color:grey;">Loream Ipsum</span>
+ 
     This is th beginning of the Travel Guide Section
     <div class="travel-guide-section">
         <h2>
