@@ -1,36 +1,37 @@
 <!-- This Code is responsible for generating the Travel Blog Page -->
-<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/Central_styling.css">
-<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/Assets/single_travel_guide.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/Central_styling.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/single_travel_guide.css">
 <?php
 get_header();
-if (have_posts()) :
-    while (have_posts()) : the_post();
+if (have_posts()):
+    while (have_posts()):
+        the_post();
 
-    // Meta Text Fields
-    $meta_keys = [
-        'location', 'duration', 'best_season', 'where_to_stay', 'top_reasons', 'featured_image',
-        'intro', 'overview', 'how_to_get', 'eat_drink', 'cultural_tips', 'budget',
-        'itinerary', 'personal_exp', 'travel_tips', 'resources', 'conclusion', 'top_attractions'
-    ];
-    $meta = [];
-    foreach ($meta_keys as $key) {
-        $meta[$key] = get_post_meta(get_the_ID(), "_tg_$key", true);
-    }
+        // Meta Text Fields
+        $meta_keys = [
+            'location', 'duration', 'best_season', 'where_to_stay', 'top_reasons', 'featured_image',
+            'intro', 'overview', 'how_to_get', 'eat_drink', 'cultural_tips', 'budget',
+            'itinerary', 'personal_exp', 'travel_tips', 'resources', 'conclusion', 'top_attractions'
+        ];
+        $meta = [];
+        foreach ($meta_keys as $key) {
+            $meta[$key] = get_post_meta(get_the_ID(), "_tg_$key", true);
+        }
 
-    // Main Featured Image
-    #$featured_image_url = $meta['featured_image'] ? wp_get_attachment_url($meta['featured_image']) : '';
-    $featured_image_url = 'https://images.unsplash.com/photo-1751013781844-fa6a78089e49?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+        // Main Featured Image
+        // $featured_image_url = $meta['featured_image'] ? wp_get_attachment_url($meta['featured_image']) : '';
+        $featured_image_url = 'https://images.unsplash.com/photo-1751013781844-fa6a78089e49?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
-    // Section-specific images
-    $image_fields = [
-        'intro', 'overview', 'how_to_get', 'top_attractions', 'where_to_stay', 'eat_drink',
-        'top_reasons', 'cultural_tips', 'budget', 'itinerary', 'personal_exp',
-        'travel_tips', 'resources', 'conclusion'
-    ];
-    foreach ($image_fields as $field) {
-        $meta["{$field}_image"] = get_post_meta(get_the_ID(), "_tg_{$field}_image", true);
-    }
-?>
+        // Section-specific images
+        $image_fields = [
+            'intro', 'overview', 'how_to_get', 'top_attractions', 'where_to_stay', 'eat_drink',
+            'top_reasons', 'cultural_tips', 'budget', 'itinerary', 'personal_exp',
+            'travel_tips', 'resources', 'conclusion'
+        ];
+        foreach ($image_fields as $field) {
+            $meta["{$field}_image"] = get_post_meta(get_the_ID(), "_tg_{$field}_image", true);
+        }
+        ?>
 
 <div class="holidayseva_blog_hero_section" style="font-family: Arial;">
     <div class="overlay"></div>
@@ -40,7 +41,7 @@ if (have_posts()) :
         <div class="holidayseva_travel_guide_author-box">
             <div class="holidayseva_travel_guide_author-name">S.Chakraborty 😊 </div>
             <div class="holidayseva_travel_guide_author-date">Last updated: 12th July 2025</div>
-            <!-- <div class="holidayseva_travel_guide_author-icon"><center><img src="<?php echo get_template_directory_uri();?>/Assets/icons/down_arrow.svg" alt="Get Down to the trip details"></center></div> -->
+            <!-- <div class="holidayseva_travel_guide_author-icon"><center><img src="<?php echo get_template_directory_uri(); ?>/Assets/icons/down_arrow.svg" alt="Get Down to the trip details"></center></div> -->
         </div>
     </div>
 </div>
@@ -59,17 +60,17 @@ if (have_posts()) :
     <span style="font-size:12px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering, Backend, Data / ML</span>
     <br>
     <!-- <div class="travel-guide-meta">
-        <?php if ($meta['location']) : ?>
+        <?php if ($meta['location']): ?>
         <p><strong>
                 <?php echo esc_html($meta['location']); ?>
             </strong></p>
         <?php endif; ?>
-        <?php if ($meta['duration']) : ?>
+        <?php if ($meta['duration']): ?>
         <p>Duration:
             <?php echo esc_html($meta['duration']); ?>
         </p>
         <?php endif; ?>
-        <?php if ($meta['best_season']) : ?>
+        <?php if ($meta['best_season']): ?>
         <p>Best Season:
             <?php echo esc_html($meta['best_season']); ?>
         </p>
@@ -78,25 +79,25 @@ if (have_posts()) :
 
     <?php
     $sections = [
-        'intro'           => 'Introduction',
-        'overview'        => 'Destination Overview',
-        'how_to_get'      => 'How to Get There',
+        'intro' => 'Introduction',
+        'overview' => 'Destination Overview',
+        'how_to_get' => 'How to Get There',
         'top_attractions' => 'Top Attractions',
-        'where_to_stay'   => 'Where to Stay',
-        'eat_drink'       => 'Eat & Drink',
-        'top_reasons'     => 'Top 5 Reasons to Visit',
-        'cultural_tips'   => 'Cultural Etiquette',
-        'budget'          => 'Budget Breakdown',
-        'itinerary'       => 'Itinerary',
-        'personal_exp'    => 'Personal Experiences',
-        'travel_tips'     => 'Travel Tips & Safety',
-        'resources'       => 'Useful Resources',
-        'conclusion'      => 'Final Thoughts'
+        'where_to_stay' => 'Where to Stay',
+        'eat_drink' => 'Eat & Drink',
+        'top_reasons' => 'Top 5 Reasons to Visit',
+        'cultural_tips' => 'Cultural Etiquette',
+        'budget' => 'Budget Breakdown',
+        'itinerary' => 'Itinerary',
+        'personal_exp' => 'Personal Experiences',
+        'travel_tips' => 'Travel Tips & Safety',
+        'resources' => 'Useful Resources',
+        'conclusion' => 'Final Thoughts'
     ];
 
-    foreach ($sections as $key => $label) :
-        if (!empty($meta[$key])) :
-    ?>
+    foreach ($sections as $key => $label):
+        if (!empty($meta[$key])):
+            ?>
  
     This is th beginning of the Travel Guide Section
     <div class="travel-guide-section">
@@ -104,14 +105,14 @@ if (have_posts()) :
             <?php echo esc_html($label); ?>
         </h2>
         <?php
-                $img_id = $meta["{$key}_image"];
-                if ($img_id) {
-                    $img_url = wp_get_attachment_url($img_id);
-                    if ($img_url) {
-                        echo '<div class="section-img"><img src="' . esc_url($img_url) . '" alt="' . esc_attr($label) . ' Image"></div>';
-                    }
-                }
-            ?>
+        $img_id = $meta["{$key}_image"];
+        if ($img_id) {
+            $img_url = wp_get_attachment_url($img_id);
+            if ($img_url) {
+                echo '<div class="section-img"><img src="' . esc_url($img_url) . '" alt="' . esc_attr($label) . ' Image"></div>';
+            }
+        }
+        ?>
         <p>
             <?php echo esc_html($meta[$key]); ?>
         </p>
@@ -166,21 +167,28 @@ get_footer();
             'post_status'    => 'publish'
         ));
 
-        if ($travel_guides->have_posts()) :
-            while ($travel_guides->have_posts()) : $travel_guides->the_post();
+        if ($travel_guides->have_posts()):
+            while ($travel_guides->have_posts()):
+                $travel_guides->the_post();
                 $categories = get_the_category();
                 $category_names = array_map(function ($cat) {
                     return $cat->name;
                 }, $categories);
                 $categories_list = implode(', ', $category_names);
+
+                // Check if the post has thumbnail
+                $image_html = '';
+                if (has_post_thumbnail()) {
+                    $image_html = get_the_post_thumbnail(null, 'medium_large');
+                } else {
+                    $image_html = '<img src="' . esc_url($featured_image_url) . '" alt="Default image">';
+                }
                 ?>
                 <div class="travel-guide-card">
                     <a href="<?php the_permalink(); ?>">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <div class="card-image">
-                                <?php the_post_thumbnail('medium_large'); ?>
-                            </div>
-                        <?php endif; ?>
+                        <div class="card-image">
+                            <?php echo $image_html; ?>
+                        </div>
                         <div class="card-content">
                             <p class="card-meta"><?php echo esc_html($categories_list); ?></p>
                             <h3 class="card-title"><?php the_title(); ?></h3>
@@ -190,11 +198,12 @@ get_footer();
                 </div>
             <?php endwhile;
             wp_reset_postdata();
-        else : ?>
+        else: ?>
             <p>No travel guides found.</p>
         <?php endif; ?>
     </div>
 </section>
+
 
 <style>
     .related-articles {
