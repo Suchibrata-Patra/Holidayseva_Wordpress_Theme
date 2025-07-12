@@ -157,23 +157,21 @@ get_footer();
 </style>
 
 <?php
-$posts = new WP_Query(array(
-    'post_type' => 'post', // or custom post type
-    'tax_query' => array(
-        array(
-            'taxonomy' => 'travel-guide', // taxonomy slug
-            'field'    => 'slug',
-            'terms'    => 'manali-travel-guide',
-        ),
-    ),
-    'posts_per_page' => -1
+$travel_guides = new WP_Query(array(
+    'post_type'      => 'travel-guide',
+    'posts_per_page' => -1,
+    'post_status'    => 'publish'
 ));
 
-if ($posts->have_posts()) {
-    while ($posts->have_posts()) {
-        $posts->the_post();
+if ($travel_guides->have_posts()) {
+    echo '<ul>';
+    while ($travel_guides->have_posts()) {
+        $travel_guides->the_post();
         echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
     }
+    echo '</ul>';
     wp_reset_postdata();
+} else {
+    echo 'No travel guides found.';
 }
 ?>
