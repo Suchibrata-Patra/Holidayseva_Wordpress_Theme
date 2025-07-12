@@ -155,34 +155,40 @@ get_footer();
         overflow: hidden;
     }
 </style>
-----------
-<div class="travel-guide-container">
-    <h1>All Travel Guides</h1>
+-----------
 
-    <?php
-    // Define the query
-    $args = array(
-        'post_type' => 'post',
-        'category_name' => 'travel-guide', // Replace with your category slug
-        'posts_per_page' => -1 // Show all posts
-    );
+<div class="travel-guide-section">
+    <div class="section-divider">
+        <h2>Related Articles</h2>
+    </div>
 
-    $query = new WP_Query($args);
+    <div class="entry-content">
+        <?php the_content(); ?>
 
-    // Loop through posts
-    if ($query->have_posts()) :
-        echo '<ul class="travel-guide-list">';
-        while ($query->have_posts()) : $query->the_post();
-            ?>
-            <li>
-                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </li>
+        <?php
+        $args = array(
+            'post_type' => 'post',
+            'category_name' => 'travel-guide',
+            'posts_per_page' => 6,
+            'post__not_in' => array(get_the_ID())
+        );
+        $related_blogs = new WP_Query($args);
+
+        if ($related_blogs->have_posts()) :
+            echo '<div class="related-travel-guides">';
+            while ($related_blogs->have_posts()) : $related_blogs->the_post(); ?>
+                <div class="related-article">
+                    <a href="<?php the_permalink(); ?>">
+                        <h3><?php the_title(); ?></h3>
+                    </a>
+                </div>
             <?php
-        endwhile;
-        echo '</ul>';
-        wp_reset_postdata();
-    else :
-        echo '<p>No travel guides found.</p>';
-    endif;
-    ?>
+            endwhile;
+            echo '</div>';
+            wp_reset_postdata();
+        else :
+            echo '<p>No related travel guides found.</p>';
+        endif;
+        ?>
+    </div>
 </div>
