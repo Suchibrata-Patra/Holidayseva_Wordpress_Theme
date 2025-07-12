@@ -188,7 +188,7 @@ get_footer();
                 }
                 ?>
                 <div class="travel-guide-card">
-                    <a href="<?php the_permalink(); ?>">
+                    <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
                         <div class="related_content_card_image">
                             <?php echo $image_html; ?>
                         </div>
