@@ -52,13 +52,7 @@ if (have_posts()):
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
-<div style="display:flex;">
-    <div class="content_left_side" style="max-width:10%;padding:0px 20px;">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi maxime illo, inventore dolorum, quas saepe, maiores ab molestiae dignissimos quo vitae quibusdam doloremque. Voluptatibus maiores accusantium, laudantium, odit sapiente modi nihil quaerat ducimus perferendis atque quasi sed quia cumque amet facilis obcaecati mollitia delectus vel deserunt voluptatem doloribus nobis? Dolor cumque rem nobis reiciendis, nemo itaque aperiam architecto maxime necessitatibus molestias ducimus praesentium doloribus exercitationem dolorem, non porro, perspiciatis ad pariatur incidunt distinctio aliquid. Esse possimus laudantium, ipsum quidem rem aut vitae, voluptatem suscipit eum nam nisi illo quo. Ex ad quo debitis soluta porro? Non quaerat architecto quidem quisquam, modi dignissimos rerum ullam incidunt est tempore molestiae, alias eligendi itaque repellat qui provident reiciendis accusamus. Iste fugiat soluta vitae ex quas, nisi non voluptates et odit libero tempore omnis magni fugit totam atque quidem natus veniam cum, quis, dignissimos unde quisquam dolor! Quasi vel quae suscipit sed doloribus obcaecati, sequi in quis iusto. Quia voluptas impedit optio iure, maxime officia nobis esse consequuntur voluptates. Perspiciatis voluptas a repudiandae numquam officiis tempore temporibus iste quae. Sint libero quis tempora! Atque velit, necessitatibus consequuntur autem, cum neque molestiae in beatae aliquid nemo ducimus iusto qui magni earum architecto omnis vel aperiam odit! Neque impedit quasi nobis vitae, soluta animi assumenda, nesciunt ducimus, quas modi quod ipsum cupiditate commodi minima amet doloremque ut voluptate consequatur et optio? Qui adipisci commodi quo voluptate tempora nulla delectus assumenda, iste quibusdam distinctio ipsa animi. Doloribus nihil doloremque ut sint quod commodi impedit eos corporis delectus magni? Soluta iure cum eligendi nam nostrum! Velit eaque voluptatibus deleniti eligendi fugiat et, obcaecati maxime, nostrum itaque debitis porro? Ipsa placeat modi doloremque nam, libero laborum voluptatem quibusdam excepturi in labore vitae consequuntur doloribus reiciendis dignissimos harum optio eius maiores nulla inventore sit qui dolor sint repellat eveniet! Temporibus!
-
-    </div>
-
-    <div class="travel-guide-container" style="width:80%">
+<div class="travel-guide-container">
     <span style="font-size:14px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering <span
             style="color:rgb(94, 94, 94);">, Backend, Data / ML</span></span>
     <h1>
@@ -128,11 +122,6 @@ if (have_posts()):
         endif;
     endforeach;
     ?>
-</div>
-
-    <div class="content_right_side" style="max-width:10%;padding:0px 20px;">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, sit sint tempore commodi cupiditate veniam culpa consequatur maxime minus rem voluptate tempora ratione repudiandae, quae maiores, eos quasi beatae placeat quidem inventore vel quam. Ea et doloribus dolorem! Voluptatibus eveniet voluptas quis aspernatur adipisci dignissimos doloribus nobis iure molestiae nam? Dolorum repellendus nesciunt ullam est, omnis atque at sunt laboriosam distinctio qui, alias culpa eos praesentium accusantium natus fugiat nihil facere dicta a itaque accusamus! Facilis aspernatur inventore labore ex quo tempore sint temporibus enim nobis illo architecto, earum vitae consectetur expedita perferendis veniam, sunt illum fugiat! Ipsa magni ipsam, facere doloremque tenetur rem! Aut maxime molestiae voluptates deserunt vitae quibusdam animi sed? Nemo sapiente molestias explicabo quasi accusantium, recusandae, vero accusamus, laudantium suscipit sit dolores laboriosam voluptates magni. Atque earum illum saepe veniam totam et voluptates, dolorem officia eligendi voluptate pariatur, adipisci hic enim quas quod quam alias placeat animi cum modi! Illum distinctio maiores voluptate voluptatibus obcaecati sit excepturi neque, iusto veritatis, doloremque libero corporis praesentium unde et officiis qui. Eaque repellat repudiandae, eos error enim, at voluptates nemo neque nisi optio in quod ea tempora cum, explicabo accusantium illo a fugiat laboriosam quam est libero odit natus velit. Ullam quas molestiae natus doloremque praesentium voluptas nobis est dolor? Magni asperiores tenetur eveniet aliquam repellendus, fuga ipsam maiores, quod non soluta aut, culpa laborum fugit! Saepe ipsa quaerat veritatis temporibus suscipit velit, pariatur esse repudiandae fuga vel earum fugiat? Eligendi recusandae alias quibusdam, voluptates ea obcaecati vel fuga, distinctio commodi illo minus maiores enim, nobis reiciendis earum! Mollitia perferendis, magnam explicabo facilis dolores asperiores facere eos nostrum dolor dignissimos ea sapiente distinctio saepe ad consequatur impedit officiis. Non ratione dicta iure dolor quaerat autem placeat beatae quasi numquam? Quaerat vel eveniet impedit necessitatibus sed consequuntur ipsam! Qui, dignissimos.
-    </div>
 </div>
 
 <!-- Related Article Content  -->
