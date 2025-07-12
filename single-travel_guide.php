@@ -193,7 +193,7 @@ get_footer();
                             <?php echo $image_html; ?>
                         </div>
                         <div class="related_content_card_content">
-                            lorem
+                            <span style="background-color:#002d33;color:yellow;">Holidayseva Originals</span>
                             <p class="related_content_card_meta"><?php echo esc_html($categories_list); ?></p>
                             <h3 class="related_content_card_title"><?php the_title(); ?></h3>
                             <p class="related_content_card_date"><?php echo get_the_date(); ?> / Global</p>
