@@ -157,23 +157,23 @@ get_footer();
 </style>
 
 <?php
-// Get the parent page object
-$parent_page = get_page_by_path('travel-guide');
+$posts = new WP_Query(array(
+    'post_type' => 'post', // or custom post type
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'travel-guide', // taxonomy slug
+            'field'    => 'slug',
+            'terms'    => 'manali-travel-guide',
+        ),
+    ),
+    'posts_per_page' => -1
+));
 
-// Fetch all child pages under 'travel-guide'
-if ($parent_page) {
-    $child_pages = get_pages(array(
-        'child_of'    => $parent_page->ID,
-        'sort_column' => 'menu_order',
-        'sort_order'  => 'asc'
-    ));
-
-    echo '<ul>';
-    foreach ($child_pages as $page) {
-        echo '<li><a href="' . get_permalink($page->ID) . '">' . esc_html($page->post_title) . '</a></li>';
+if ($posts->have_posts()) {
+    while ($posts->have_posts()) {
+        $posts->the_post();
+        echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
     }
-    echo '</ul>';
-} else {
-    echo 'Parent page "travel-guide" not found.';
+    wp_reset_postdata();
 }
 ?>
