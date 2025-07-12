@@ -189,12 +189,9 @@ get_footer();
     }
 </style>
 
-
-
- 
-
-
-<style>
-   
-
-</style>
+<div style="display:flex;">
+    <div>This is the Sample Text</div>
+    <div>
+        <button>FOllow on Linkedin</button>
+    </div>
+</div>
