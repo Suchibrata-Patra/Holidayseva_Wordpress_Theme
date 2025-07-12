@@ -209,10 +209,6 @@
     transition: all 0.3s ease;
 }
 
-.travel-guide-card:hover {
-    transform: translateY(-1px);
-    text-decoration:none;
-}
 
 .related_content_card_image img {
     width: 420px;
