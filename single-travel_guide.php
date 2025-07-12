@@ -110,7 +110,7 @@ if (have_posts()):
         if ($img_id) {
             $img_url = wp_get_attachment_url($img_id);
             if ($img_url) {
-                echo '<div class="section-img"><img src="' . esc_url($img_url) . '" alt="' . esc_attr($label) . ' Image"></div>';
+                echo '<div class="section-img"><img src="' . esc_url($img_url) . '" alt="' . esc_attr($label) . ' Image" style="width:150px;"></div>';
             }
         }
         ?>
