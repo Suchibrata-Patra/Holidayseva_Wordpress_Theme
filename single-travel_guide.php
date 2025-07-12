@@ -159,25 +159,24 @@ get_footer();
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const shareButton = document.querySelector(".share_buttons");
-    const target = document.querySelector(".travel-guide-container"); // or use 'footer', etc.
+    const shareButton = document.querySelector('.share_buttons');
+    const hideTrigger = document.querySelector('footer'); // OR any other bottom section (e.g. .travel-guide-container)
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Target is in view → hide the button
-                shareButton.classList.add("hidden");
+                shareButton.classList.add('hide-share');
             } else {
-                // Target is out of view → show the button
-                shareButton.classList.remove("hidden");
+                shareButton.classList.remove('hide-share');
             }
         });
     }, {
         root: null,
-        threshold: 0.1 // Adjust sensitivity (0.0 = trigger on pixel, 1.0 = fully visible)
+        threshold: 0.1
     });
 
-    observer.observe(target);
+    if (hideTrigger) {
+        observer.observe(hideTrigger);
+    }
 });
 </script>
-

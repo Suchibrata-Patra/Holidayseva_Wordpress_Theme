@@ -146,16 +146,16 @@
     }
 
 
-    .share_buttons {
+.share_buttons {
     position: fixed;
     top: 20px;
     left: 20px;
-    z-index: 999;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 9999;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.share_buttons.hidden {
+.share_buttons.hide-share {
     opacity: 0;
-    visibility: hidden;
+    transform: translateY(-10px);
     pointer-events: none;
 }
