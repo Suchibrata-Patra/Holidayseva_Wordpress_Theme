@@ -99,12 +99,18 @@
     }
 
     .travel-guide-section h2 {
-        font-size: 44px;
+        font-size: 24px;
         font-weight: 700;
         line-height: 64px;
         margin-bottom: 1rem;
         margin-top: 1rem;
         color: #111;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
     }
 
     .travel-guide-section p {
