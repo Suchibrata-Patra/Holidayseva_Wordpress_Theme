@@ -157,6 +157,9 @@ get_footer();
     }
 </style>
 
+
+
+ <!-- Related Article Content  -->
 <section class="related-articles">
     <h2 class="section-title">Related articles</h2>
     <div class="travel-guide-grid">
@@ -186,14 +189,14 @@ get_footer();
                 ?>
                 <div class="travel-guide-card">
                     <a href="<?php the_permalink(); ?>">
-                        <div class="card-image">
+                        <div class="related_content_card_image">
                             <?php echo $image_html; ?>
                         </div>
-                        <div class="card-content">
+                        <div class="related_content_card_content">
                             lorem
-                            <p class="card-meta"><?php echo esc_html($categories_list); ?></p>
-                            <h3 class="card-title"><?php the_title(); ?></h3>
-                            <p class="card-date"><?php echo get_the_date(); ?> / Global</p>
+                            <p class="related_content_card_meta"><?php echo esc_html($categories_list); ?></p>
+                            <h3 class="related_content_card_title"><?php the_title(); ?></h3>
+                            <p class="related_content_card_date"><?php echo get_the_date(); ?> / Global</p>
                         </div>
                     </a>
                 </div>
@@ -241,26 +244,26 @@ get_footer();
     text-decoration:none;
 }
 
-.card-image img {
+.related_content_card_image img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     display: block;
 }
 
-.card-content {
+.related_content_card_content {
     padding: 15px;
     max-width:99%;
 }
 
-.card-meta {
+.related_content_card_meta {
     font-size: 12px;
     color: #999;
     margin-bottom: 5px;
     text-transform: uppercase;
 }
 
-.card-title {
+.related_content_card_title {
     font-size: 24px;
     color: #111;
     margin: 0 0 10px;
@@ -268,7 +271,7 @@ get_footer();
     font-weight:500;
 }
 
-.card-date {
+.related_content_card_date {
     font-size: 13px;
     color: #666;
 }
