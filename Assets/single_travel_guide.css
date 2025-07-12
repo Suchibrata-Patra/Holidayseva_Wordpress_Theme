@@ -108,8 +108,9 @@
     }
 
     .travel-guide-section p {
-        font-size: 2rem;
+        font-size: 1.3rem;
         color: #000000;
+        font-weight:400;
         white-space: pre-line;
         margin: 0;
     }
