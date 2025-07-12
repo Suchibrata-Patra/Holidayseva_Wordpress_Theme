@@ -122,15 +122,7 @@ if (have_posts()):
     endforeach;
     ?>
 
-    <div class="travel-guide-section">
-        <div class="section-divider">
-            <h2>Related Articles</h2>
-        </div>
-
-        <div class="entry-content">
-            <?php the_content(); ?>
-        </div>
-    </div>
+    <!--  -->
 
 </div>
 
@@ -141,7 +133,12 @@ if (have_posts()):
 
 <!-- Related Article Content  -->
 <section class="related-articles">
-    <h2 class="section-title">Related articles</h2>
+    <h2 class="section-title">
+                <div class="section-divider">
+            <h2>Related Articles</h2>
+        </div>
+
+    </h2>
     <div class="travel-guide-grid">
         <?php
         $travel_guides = new WP_Query(array(
