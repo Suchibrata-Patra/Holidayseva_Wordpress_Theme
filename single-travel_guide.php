@@ -160,23 +160,23 @@ get_footer();
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const shareButton = document.querySelector('.share_buttons');
-    const hideTrigger = document.querySelector('footer'); // or '.holidayseva_blog_hero_section'
+    const targetContainer = document.querySelector('.travel-guide-container');
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                shareButton.classList.add('hide-share');
-            } else {
                 shareButton.classList.remove('hide-share');
+            } else {
+                shareButton.classList.add('hide-share');
             }
         });
     }, {
         root: null,
-        threshold: 0.1
+        threshold: 0.1 // You can increase this if you want more % of visibility to be required
     });
 
-    if (hideTrigger) {
-        observer.observe(hideTrigger);
+    if (targetContainer) {
+        observer.observe(targetContainer);
     }
 });
 </script>
