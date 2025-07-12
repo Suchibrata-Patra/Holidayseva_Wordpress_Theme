@@ -268,7 +268,7 @@ get_footer();
     color: #111;
     margin: 0 0 10px;
     line-height:32px;
-    font-weight:600;
+    font-weight:500;
 }
 
 .related_content_card_date {
