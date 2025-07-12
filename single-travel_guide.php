@@ -54,8 +54,6 @@ if (have_posts()) :
     <h1>
         <?php the_title(); ?>
     </h1>
-    lroem
-
     <!-- <div class="travel-guide-meta">
         <?php if ($meta['location']) : ?>
         <p><strong>
@@ -95,6 +93,7 @@ if (have_posts()) :
     foreach ($sections as $key => $label) :
         if (!empty($meta[$key])) :
     ?>
+    <span style="font-size:0.8rem;color:black;">Loream Ipsum</span>
     This is th beginning of the Travel Guide Section
     <div class="travel-guide-section">
         <h2>
