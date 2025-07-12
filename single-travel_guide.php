@@ -53,7 +53,7 @@ if (have_posts()) :
 
 <div class="main_body_container" style="display:flex;">
     <div class="share_buttons">
-skjkh
+        <img src="<?php echo get_template_directory_uri();?>/Assets/Images/share_button.png" alt="" srcset="">
     </div>
     <div class="travel-guide-container">
     <h1>
