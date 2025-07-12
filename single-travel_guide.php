@@ -125,6 +125,12 @@ if (have_posts()) :
 
 </div>
 
+
+<div class="get_personalised_recommendation" style="margin:10px 10%;backgronud-color:black;">
+    
+</div>
+
+
 <?php
     endwhile;
 endif;
