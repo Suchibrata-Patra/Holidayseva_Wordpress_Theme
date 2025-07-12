@@ -39,7 +39,7 @@ if (have_posts()) :
         <h1 class="holidayseva_travel_guide_hero_title">Experience the Soul-Stirring<br> Treasures of Kakadu National Park</h1>
         <div class="holidayseva_travel_guide_author-box">
             <div class="holidayseva_travel_guide_author-name">S.Chakraborty 😊 </div>
-            <div class="holidayseva_travel_guide_author-date">Last updated: May 26, 2025</div>
+            <div class="holidayseva_travel_guide_author-date">Last updated: 12th July 2025</div>
             <!-- <div class="holidayseva_travel_guide_author-icon"><center><img src="<?php echo get_template_directory_uri();?>/Assets/icons/down_arrow.svg" alt="Get Down to the trip details"></center></div> -->
         </div>
     </div>
