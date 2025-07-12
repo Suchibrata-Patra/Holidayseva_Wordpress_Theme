@@ -237,6 +237,7 @@ get_footer();
 
 .card-content {
     padding: 15px;
+    max-width:25%;
 }
 
 .card-meta {
