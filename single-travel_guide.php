@@ -195,7 +195,7 @@ get_footer();
                         <div class="related_content_card_content">
                             <p class="related_content_card_meta"><?php echo esc_html($categories_list); ?></p>
                             <!-- <h3 class="related_content_card_title"><?php the_title(); ?></h3> -->
-                            <h3 class="related_content_card_title">Building Uber’s Multi-Cloud Secrets Management Platform to Enhance Security</h3>
+                            <h3 class="related_content_card_title">Reinforcement learning for Modelling Marketplace Balance</h3>
                             <p class="related_content_card_date"><?php echo get_the_date(); ?> / Global</p>
                         </div>
                     </a>
