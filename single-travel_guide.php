@@ -35,7 +35,7 @@ if (have_posts()) :
 <div class="holidayseva_blog_hero_section" style="font-family: Arial;">
     <div class="overlay"></div>
     <div class="holidayseva_hero-content">
-        <div class="holidayseva_tour_guide_breadcrumb">HolidaySeva > Travel Guide > <span>Surprise Me!</span></div>
+        <!-- <div class="holidayseva_tour_guide_breadcrumb">HolidaySeva > Travel Guide > <span>Surprise Me!</span></div> -->
         <h1 class="holidayseva_travel_guide_hero_title">Experience the Soul-Stirring<br> Treasures of Kakadu National Park</h1>
         <div class="holidayseva_travel_guide_author-box">
             <div class="holidayseva_travel_guide_author-name">Suchana Chakraborty</div>
