@@ -81,22 +81,22 @@ if (have_posts()):
     </div> -->
 
     <?php
-    // $sections = [
-    //     'intro' => 'Introduction',
-    //     'overview' => 'Destination Overview',
-    //     'how_to_get' => 'How to Get There',
-    //     'top_attractions' => 'Top Attractions',
-    //     'where_to_stay' => 'Where to Stay',
-    //     'eat_drink' => 'Eat & Drink',
-    //     'top_reasons' => 'Top 5 Reasons to Visit',
-    //     'cultural_tips' => 'Cultural Etiquette',
-    //     'budget' => 'Budget Breakdown',
-    //     'itinerary' => 'Itinerary',
-    //     'personal_exp' => 'Personal Experiences',
-    //     'travel_tips' => 'Travel Tips & Safety',
-    //     'resources' => 'Useful Resources',
-    //     'conclusion' => 'Final Thoughts'
-    // ];
+    $sections = [
+        'intro' => 'Introduction',
+        'overview' => 'Destination Overview',
+        'how_to_get' => 'How to Get There',
+        'top_attractions' => 'Top Attractions',
+        'where_to_stay' => 'Where to Stay',
+        'eat_drink' => 'Eat & Drink',
+        'top_reasons' => 'Top 5 Reasons to Visit',
+        'cultural_tips' => 'Cultural Etiquette',
+        'budget' => 'Budget Breakdown',
+        'itinerary' => 'Itinerary',
+        'personal_exp' => 'Personal Experiences',
+        'travel_tips' => 'Travel Tips & Safety',
+        'resources' => 'Useful Resources',
+        'conclusion' => 'Final Thoughts'
+    ];
 
     foreach ($sections as $key => $label):
         if (!empty($meta[$key])):
