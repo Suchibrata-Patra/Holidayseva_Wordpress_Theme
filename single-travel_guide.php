@@ -51,7 +51,7 @@ if (have_posts()) :
     rel="stylesheet">
 
     <div class="travel-guide-container">
-    <span style="font-size:0.8rem;color:grey;margin-top:80px !important;">Engineering, Backend, Data / ML</span>
+    <span style="font-size:12px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering, Backend, Data / ML</span>
     <h1>
         <?php the_title(); ?>
     </h1>
