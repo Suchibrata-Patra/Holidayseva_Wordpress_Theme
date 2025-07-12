@@ -268,7 +268,7 @@ get_footer();
     font-size: 24px;
     color: #111;
     margin: 0 0 10px;
-    line-height:32px;
+    line-height:25px;
     font-weight:500;
 }
 
