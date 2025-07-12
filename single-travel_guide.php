@@ -53,7 +53,8 @@ if (have_posts()) :
     <div class="travel-guide-container">
     <span style="font-size:12px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering, Backend, Data / ML</span>
     <h1>
-        <?php the_title(); ?>
+        <!-- <?php the_title(); ?> -->
+         Migrating Large-Scale Interactive Compute Workloads to Kubernetes Without Disruption
     </h1>
     <span style="font-size:12px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering, Backend, Data / ML</span>
     <br>
