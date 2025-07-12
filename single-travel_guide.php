@@ -190,9 +190,9 @@ get_footer();
 </style>
 
 <div style="display: flex; align-items: center; gap: 20px; background-color: rgb(229, 229, 229); padding: 20px; white-space: nowrap;">
-    <div>This is the Sample Text</div>
+    <div>Stay up to date with the latest from Uber Engineering</div>
     <div>
-        <button style="border: none; padding: 10px 20px; background-color: black; color: white; border-radius: 5px;">
+        <button style="border: none; padding: 30px 50px; background-color: black; color: white; border-radius: 5px;">
             Follow on LinkedIn
         </button>
     </div>
