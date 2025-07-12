@@ -137,7 +137,6 @@ if (have_posts()) :
 
 </div>
 
-
 <?php
     endwhile;
 endif;
@@ -156,3 +155,34 @@ get_footer();
         overflow: hidden;
     }
 </style>
+----------
+<div class="travel-guide-container">
+    <h1>All Travel Guides</h1>
+
+    <?php
+    // Define the query
+    $args = array(
+        'post_type' => 'post',
+        'category_name' => 'travel-guide', // Replace with your category slug
+        'posts_per_page' => -1 // Show all posts
+    );
+
+    $query = new WP_Query($args);
+
+    // Loop through posts
+    if ($query->have_posts()) :
+        echo '<ul class="travel-guide-list">';
+        while ($query->have_posts()) : $query->the_post();
+            ?>
+            <li>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </li>
+            <?php
+        endwhile;
+        echo '</ul>';
+        wp_reset_postdata();
+    else :
+        echo '<p>No travel guides found.</p>';
+    endif;
+    ?>
+</div>
