@@ -49,7 +49,13 @@ if (have_posts()) :
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-<div class="travel-guide-container">
+
+
+<div class="main_body_container" style="display:flex;">
+    <div class="share_buttons">
+skjkh
+    </div>
+    <div class="travel-guide-container">
     <h1>
         <?php the_title(); ?>
     </h1>
@@ -124,10 +130,11 @@ if (have_posts()) :
     </div>
 
 </div>
+</div>
 
 
 <div class="get_personalised_recommendation" style="margin:10px 10%;backgronud-color:black;">
-    
+
 </div>
 
 
