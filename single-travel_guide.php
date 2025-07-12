@@ -189,7 +189,7 @@ get_footer();
     }
 </style>
 
-<div style="display:flex;gap:20px;background-color:grey;padding:20px;">
+<div style="display:flex;gap:20px;background-color:rgb(229, 229, 229);padding:20px;">
     <div>This is the Sample Text</div>
     <div>
         <button style="border:none;padding:10px 20px;background-color:black;color:white;">FOllow on Linkedin</button>
