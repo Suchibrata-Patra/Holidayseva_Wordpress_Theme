@@ -18,9 +18,12 @@
     }
 
     .holidayseva_tour_guide_breadcrumb {
-        font-size: 1rem;
         color: rgb(184, 184, 184);
         margin-bottom: 10px;
+        font-size: 19px;
+        line-height: 1.4211026316;
+        font-weight: 600;
+        letter-spacing: .012em;
     }
 
     .holidayseva_tour_guide_breadcrumb span {
