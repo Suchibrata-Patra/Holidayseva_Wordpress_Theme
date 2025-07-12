@@ -228,6 +228,7 @@ get_footer();
 .travel-guide-card {
     background: #fff;
     border-radius: 0px;
+    background-color:#f6f6f6;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
