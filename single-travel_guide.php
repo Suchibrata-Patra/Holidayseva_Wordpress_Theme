@@ -98,9 +98,7 @@ if (have_posts()):
     foreach ($sections as $key => $label):
         if (!empty($meta[$key])):
             ?>
- 
-    This is th beginning of the Travel Guide Section
-    <div class="travel-guide-section">
+     <div class="travel-guide-section">
         <h2>
             <?php echo esc_html($label); ?>
         </h2>
