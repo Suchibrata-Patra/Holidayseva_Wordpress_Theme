@@ -96,6 +96,7 @@
     .travel-guide-section {
         margin-bottom: 64px;
         padding-bottom: 48px;
+        justify-content: center;
     }
 
     .travel-guide-section h2 {
