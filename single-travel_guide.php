@@ -193,6 +193,7 @@ get_footer();
                             <?php echo $image_html; ?>
                         </div>
                         <div class="related_content_card_content">
+                            <span>Holidayseva Travel Guide</span>
                             <p class="related_content_card_meta"><?php echo esc_html($categories_list); ?></p>
                             <!-- <h3 class="related_content_card_title"><?php the_title(); ?></h3> -->
                             <h3 class="related_content_card_title">Reinforcement learning for Modelling Marketplace Balance</h3>
