@@ -175,5 +175,3 @@ if ($travel_guides->have_posts()) {
     echo 'No travel guides found.';
 }
 ?>
-
-
