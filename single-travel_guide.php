@@ -166,29 +166,30 @@ get_footer();
         <?php the_content(); ?>
 
         <?php
-        $args = array(
-            'post_type' => 'post',
-            'category_name' => 'travel-guide',
-            'posts_per_page' => 6
-            //'post__not_in' => array(get_the_ID())
-        );
-        $related_blogs = new WP_Query($args);
+$args = array(
+    'post_type' => 'post',
+    'category_name' => 'travel-guide',
+    'posts_per_page' => 6 // make sure the comma is here!
+    // 'post__not_in' => array(get_the_ID()) // optional
+);
 
-        if ($related_blogs->have_posts()) :
-            echo '<div class="related-travel-guides">';
-            while ($related_blogs->have_posts()) : $related_blogs->the_post(); ?>
-                <div class="related-article">
-                    <a href="<?php the_permalink(); ?>">
-                        <h3><?php the_title(); ?></h3>
-                    </a>
-                </div>
-            <?php
-            endwhile;
-            echo '</div>';
-            wp_reset_postdata();
-        else :
-            echo '<p>No related travel guides found.</p>';
-        endif;
-        ?>
+$related_blogs = new WP_Query($args);
+
+if ($related_blogs->have_posts()) :
+    echo '<div class="related-travel-guides">';
+    while ($related_blogs->have_posts()) : $related_blogs->the_post(); ?>
+        <div class="related-article">
+            <a href="<?php the_permalink(); ?>">
+                <h3><?php the_title(); ?></h3>
+            </a>
+        </div>
+    <?php endwhile;
+    echo '</div>';
+    wp_reset_postdata();
+else :
+    echo '<p>No related travel guides found.</p>';
+endif;
+?>
+
     </div>
 </div>
