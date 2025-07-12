@@ -140,7 +140,6 @@ get_footer();
         justify-content: center;
         color: #fff;
         text-align: center;
-        margin:0 2%;
         overflow: hidden;
     }
 </style>
