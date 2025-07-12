@@ -156,24 +156,28 @@ get_footer();
         overflow: hidden;
     }
 </style>
+
 <script>
-    <script>
 document.addEventListener("DOMContentLoaded", function () {
     const shareButton = document.querySelector(".share_buttons");
-    const guideContainer = document.querySelector(".travel-guide-container");
+    const target = document.querySelector(".travel-guide-container"); // or use 'footer', etc.
 
-    function toggleShareButton() {
-        const rect = guideContainer.getBoundingClientRect();
-        if (rect.top <= 0) {
-            shareButton.classList.add("hidden");
-        } else {
-            shareButton.classList.remove("hidden");
-        }
-    }
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Target is in view → hide the button
+                shareButton.classList.add("hidden");
+            } else {
+                // Target is out of view → show the button
+                shareButton.classList.remove("hidden");
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.1 // Adjust sensitivity (0.0 = trigger on pixel, 1.0 = fully visible)
+    });
 
-    window.addEventListener("scroll", toggleShareButton);
-    toggleShareButton(); // initial check
+    observer.observe(target);
 });
 </script>
 
-</script>
