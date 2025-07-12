@@ -55,7 +55,8 @@ if (have_posts()) :
     <h1>
         <?php the_title(); ?>
     </h1>
-        <span style="font-size:12px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering, Backend, Data / ML</span>
+    <span style="font-size:12px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering, Backend, Data / ML</span>
+    <br>
     <!-- <div class="travel-guide-meta">
         <?php if ($meta['location']) : ?>
         <p><strong>
