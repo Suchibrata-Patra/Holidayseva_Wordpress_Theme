@@ -133,17 +133,14 @@ get_footer();
 <style>
         .holidayseva_blog_hero_section {
         position: relative;
-        height: 100vh;
+        height: 70vh;
         background: url('<?php echo esc_url($featured_image_url); ?>') no-repeat center center / cover;
         display: flex;
         align-items: center;
         justify-content: center;
         color: #fff;
         text-align: center;
-        font-family: Georgia, serif;
-        padding: 0 10%;
         margin:0 2%;
-        border-radius:5px;
         overflow: hidden;
     }
 </style>
