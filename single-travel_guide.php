@@ -245,8 +245,9 @@ get_footer();
 }
 
 .related_content_card_image img {
-    width: 100%;
-    height: 200px;
+    width: 420px;
+    min-width:420px;
+    height: 180px;
     object-fit: cover;
     display: block;
 }
