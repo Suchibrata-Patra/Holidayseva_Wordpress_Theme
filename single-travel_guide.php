@@ -235,8 +235,9 @@ get_footer();
 }
 
 .travel-guide-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-1px);
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    text-decoration:none;
 }
 
 .card-image img {
