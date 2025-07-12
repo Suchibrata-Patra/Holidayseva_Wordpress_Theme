@@ -29,8 +29,12 @@
     }
 
     .holidayseva_travel_guide_hero_title {
-        font-size: 2rem;
+        font-size: 56px;
         margin-bottom: 10px;
+        font-size: 56px;
+    line-height: 1.0714285714;
+    font-weight: 600;
+    letter-spacing: -.005em;
     }
 
     .holidayseva_travel_guide_author-box {
