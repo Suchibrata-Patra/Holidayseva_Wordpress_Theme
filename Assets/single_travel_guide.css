@@ -144,18 +144,3 @@
         margin-left: auto;
         margin-right: auto;
     }
-
-
-.share_buttons {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 9999;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.share_buttons.hide-share {
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-}

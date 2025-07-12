@@ -156,28 +156,3 @@ get_footer();
         overflow: hidden;
     }
 </style>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const shareButton = document.querySelector('.share_buttons');
-    const targetContainer = document.querySelector('.travel-guide-container');
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                shareButton.classList.remove('hide-share');
-            } else {
-                shareButton.classList.add('hide-share');
-            }
-        });
-    }, {
-        root: null,
-        threshold: 0.1 // You can increase this if you want more % of visibility to be required
-    });
-
-    if (targetContainer) {
-        observer.observe(targetContainer);
-    }
-});
-</script>
-
