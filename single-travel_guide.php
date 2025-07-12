@@ -159,8 +159,7 @@ if (have_posts()):
                         <div class="related_content_card_content">
                             <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel Guide</span>
                             <p class="related_content_card_meta"><?php echo esc_html($categories_list); ?></p>
-                            <!-- <h3 class="related_content_card_title"><?php the_title(); ?></h3> -->
-                            <h3 class="related_content_card_title">Reinforcement learning for Modelling Marketplace Balance</h3>
+                            <h3 class="related_content_card_title"><?php the_title(); ?></h3>
                             <p class="related_content_card_date"><?php echo get_the_date(); ?> / Global</p>
                         </div>
                     </a>
