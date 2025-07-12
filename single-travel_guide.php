@@ -190,6 +190,7 @@ get_footer();
                             <?php echo $image_html; ?>
                         </div>
                         <div class="card-content">
+                            lorem
                             <p class="card-meta"><?php echo esc_html($categories_list); ?></p>
                             <h3 class="card-title"><?php the_title(); ?></h3>
                             <p class="card-date"><?php echo get_the_date(); ?> / Global</p>
