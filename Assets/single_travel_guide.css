@@ -125,6 +125,7 @@
 .travel-guide-section h2 {
     font-size: 34px;
     font-weight: 700;
+    margin-bottom: 0px;
     margin-top: 1rem;
     color: #111;
     unicode-bidi: isolate;
