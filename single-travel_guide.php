@@ -19,7 +19,8 @@ if (have_posts()) :
     }
 
     // Main Featured Image
-    $featured_image_url = $meta['featured_image'] ? wp_get_attachment_url($meta['featured_image']) : '';
+    #$featured_image_url = $meta['featured_image'] ? wp_get_attachment_url($meta['featured_image']) : '';
+    $featured_image_url = 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
     // Section-specific images
     $image_fields = [
