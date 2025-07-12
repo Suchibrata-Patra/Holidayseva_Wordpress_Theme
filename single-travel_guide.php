@@ -142,7 +142,8 @@ get_footer();
         color: #fff;
         text-align: center;
         font-family: Georgia, serif;
-        padding: 0 0px;
+        padding: 0 20px;
+        border-radius:5px;
         overflow: hidden;
     }
 </style>
