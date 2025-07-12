@@ -58,7 +58,7 @@ if (have_posts()):
 
     </div>
 
-    <div class="travel-guide-container">
+    <div class="travel-guide-container" style="width:80%">
     <span style="font-size:14px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering <span
             style="color:rgb(94, 94, 94);">, Backend, Data / ML</span></span>
     <h1>
@@ -130,7 +130,7 @@ if (have_posts()):
     ?>
 </div>
 
-    <div class="content_right_side">
+    <div class="content_right_side" style="max-width:10%;padding:0px 20px;">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, sit sint tempore commodi cupiditate veniam culpa consequatur maxime minus rem voluptate tempora ratione repudiandae, quae maiores, eos quasi beatae placeat quidem inventore vel quam. Ea et doloribus dolorem! Voluptatibus eveniet voluptas quis aspernatur adipisci dignissimos doloribus nobis iure molestiae nam? Dolorum repellendus nesciunt ullam est, omnis atque at sunt laboriosam distinctio qui, alias culpa eos praesentium accusantium natus fugiat nihil facere dicta a itaque accusamus! Facilis aspernatur inventore labore ex quo tempore sint temporibus enim nobis illo architecto, earum vitae consectetur expedita perferendis veniam, sunt illum fugiat! Ipsa magni ipsam, facere doloremque tenetur rem! Aut maxime molestiae voluptates deserunt vitae quibusdam animi sed? Nemo sapiente molestias explicabo quasi accusantium, recusandae, vero accusamus, laudantium suscipit sit dolores laboriosam voluptates magni. Atque earum illum saepe veniam totam et voluptates, dolorem officia eligendi voluptate pariatur, adipisci hic enim quas quod quam alias placeat animi cum modi! Illum distinctio maiores voluptate voluptatibus obcaecati sit excepturi neque, iusto veritatis, doloremque libero corporis praesentium unde et officiis qui. Eaque repellat repudiandae, eos error enim, at voluptates nemo neque nisi optio in quod ea tempora cum, explicabo accusantium illo a fugiat laboriosam quam est libero odit natus velit. Ullam quas molestiae natus doloremque praesentium voluptas nobis est dolor? Magni asperiores tenetur eveniet aliquam repellendus, fuga ipsam maiores, quod non soluta aut, culpa laborum fugit! Saepe ipsa quaerat veritatis temporibus suscipit velit, pariatur esse repudiandae fuga vel earum fugiat? Eligendi recusandae alias quibusdam, voluptates ea obcaecati vel fuga, distinctio commodi illo minus maiores enim, nobis reiciendis earum! Mollitia perferendis, magnam explicabo facilis dolores asperiores facere eos nostrum dolor dignissimos ea sapiente distinctio saepe ad consequatur impedit officiis. Non ratione dicta iure dolor quaerat autem placeat beatae quasi numquam? Quaerat vel eveniet impedit necessitatibus sed consequuntur ipsam! Qui, dignissimos.
     </div>
 </div>
