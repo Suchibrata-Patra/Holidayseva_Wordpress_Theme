@@ -121,24 +121,11 @@ if (have_posts()):
         endif;
     endforeach;
     ?>
-
-    <!--  -->
-
 </div>
-
-<div class="get_personalised_recommendation" style="margin:10px 10%;backgronud-color:black;">
-
-</div>
-
 
 <!-- Related Article Content  -->
 <section class="related-articles">
-    <h2 class="section-title">
-                <div class="section-divider">
-            <h2>Related Articles</h2>
-        </div>
-
-    </h2>
+    <h2 class="section-title">Related articles</h2>
     <div class="travel-guide-grid">
         <?php
         $travel_guides = new WP_Query(array(
