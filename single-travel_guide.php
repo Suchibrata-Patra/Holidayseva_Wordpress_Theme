@@ -156,22 +156,105 @@ get_footer();
     }
 </style>
 
-<?php
-$travel_guides = new WP_Query(array(
-    'post_type'      => 'travel_guide',
-    'posts_per_page' => -1,
-    'post_status'    => 'publish'
-));
+<section class="related-articles">
+    <h2 class="section-title">Related articles</h2>
+    <div class="travel-guide-grid">
+        <?php
+        $travel_guides = new WP_Query(array(
+            'post_type'      => 'travel_guide',
+            'posts_per_page' => 6,
+            'post_status'    => 'publish'
+        ));
 
-if ($travel_guides->have_posts()) {
-    echo '<ul>';
-    while ($travel_guides->have_posts()) {
-        $travel_guides->the_post();
-        echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
-    }
-    echo '</ul>';
-    wp_reset_postdata();
-} else {
-    echo 'No travel guides found.';
+        if ($travel_guides->have_posts()) :
+            while ($travel_guides->have_posts()) : $travel_guides->the_post();
+                $categories = get_the_category();
+                $category_names = array_map(function ($cat) {
+                    return $cat->name;
+                }, $categories);
+                $categories_list = implode(', ', $category_names);
+                ?>
+                <div class="travel-guide-card">
+                    <a href="<?php the_permalink(); ?>">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <div class="card-image">
+                                <?php the_post_thumbnail('medium_large'); ?>
+                            </div>
+                        <?php endif; ?>
+                        <div class="card-content">
+                            <p class="card-meta"><?php echo esc_html($categories_list); ?></p>
+                            <h3 class="card-title"><?php the_title(); ?></h3>
+                            <p class="card-date"><?php echo get_the_date(); ?> / Global</p>
+                        </div>
+                    </a>
+                </div>
+            <?php endwhile;
+            wp_reset_postdata();
+        else : ?>
+            <p>No travel guides found.</p>
+        <?php endif; ?>
+    </div>
+</section>
+
+<style>
+    .related-articles {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
-?>
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.travel-guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.travel-guide-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.travel-guide-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-meta {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.card-title {
+    font-size: 18px;
+    color: #111;
+    margin: 0 0 10px;
+}
+
+.card-date {
+    font-size: 13px;
+    color: #666;
+}
+
+</style>
