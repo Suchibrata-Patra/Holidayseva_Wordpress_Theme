@@ -259,9 +259,11 @@ get_footer();
 }
 
 .card-title {
-    font-size: 18px;
+    font-size: 24px;
     color: #111;
     margin: 0 0 10px;
+    line-height:32px;
+    font-weight:500;
 }
 
 .card-date {
