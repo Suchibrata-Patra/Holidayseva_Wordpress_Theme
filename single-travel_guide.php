@@ -143,7 +143,7 @@ get_footer();
         text-align: center;
         font-family: Georgia, serif;
         padding: 0 10%;
-        margin:0 10%;
+        margin:0 2%;
         border-radius:5px;
         overflow: hidden;
     }
