@@ -182,9 +182,9 @@ if (have_posts()):
 </section>
 
 
-<div style="align-items: center; gap: 20px; background-color: rgb(229, 229, 229); padding: 20px; border-radius: 12px;">
+<div style="display: flex; justify-content: center; align-items: center; gap: 20px; background-color: rgb(229, 229, 229); padding: 20px; border-radius: 12px;">
     <label for="email-subscribe" style="font-size: 18px; font-weight: 500;">Stay up to date</label>
-    
+
     <input 
         type="email" 
         id="email-subscribe" 
@@ -192,7 +192,7 @@ if (have_posts()):
         style="padding: 15px 20px; font-size: 18px; border: 1px solid #ccc; border-radius: 8px; width: 300px;"
         required
     />
-    
+
     <button
         style="border: none; padding: 15px 30px; background-color: black; color: white; border-radius: 10px; font-size: 18px; cursor: pointer;">
         Subscribe
