@@ -54,14 +54,16 @@ if (have_posts()):
 
 
 <div style="display:flex;">
-    <div>
-        Share Buttons
+
+    <div style="background-color:grey; padding:20px;">
+        <span style="font-weight:500;">Share Buttons</span>
         <ul>
             <li>LInkedin</li>
             <li>Twitter</li>
             <li>Instagram</li>
         </ul>
     </div>
+
     <div class="travel-guide-container">
     <span style="font-size:14px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering <span
             style="color:rgb(94, 94, 94);">, Backend, Data / ML</span></span>
