@@ -52,40 +52,7 @@ if (have_posts()):
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
-
-
-<div class="travel-guide-wrapper" style="display: flex;">
-    <!-- Sticky Sidebar -->
-    <nav class="travel-sidebar">
-        <ul id="scrollspy-nav">
-            <li><a href="#intro">Introduction</a></li>
-            <li><a href="#overview">Destination Overview</a></li>
-            <li><a href="#how_to_get">How to Get There</a></li>
-            <li><a href="#top_attractions">Top Attractions</a></li>
-            <li><a href="#where_to_stay">Where to Stay</a></li>
-            <li><a href="#eat_drink">Eat & Drink</a></li>
-            <li><a href="#top_reasons">Top 5 Reasons to Visit</a></li>
-            <li><a href="#cultural_tips">Cultural Etiquette</a></li>
-            <li><a href="#budget">Budget Breakdown</a></li>
-            <li><a href="#itinerary">Itinerary</a></li>
-            <li><a href="#personal_exp">Personal Experiences</a></li>
-            <li><a href="#travel_tips">Travel Tips & Safety</a></li>
-            <li><a href="#resources">Useful Resources</a></li>
-            <li><a href="#conclusion">Final Thoughts</a></li>
-        </ul>
-    </nav>
-
-    <!-- Travel Guide Main Content -->
-    <div class="travel-guide-container">
-        <!-- Your Existing PHP Content Goes Here -->
-    </div>
-</div>
-
-
-
-
-
-
+    
 <div class="travel-guide-container">
     <span style="font-size:14px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering <span
             style="color:rgb(94, 94, 94);">, Backend, Data / ML</span></span>
@@ -243,31 +210,3 @@ get_footer();
     </div>
     <div style="margin-left: auto; cursor: pointer; font-weight: bold;">X</div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll(".travel-guide-section");
-    const navLinks = document.querySelectorAll("#scrollspy-nav a");
-
-    window.addEventListener("scroll", () => {
-        let fromTop = window.scrollY + 120; // offset
-
-        sections.forEach(section => {
-            const id = section.getAttribute("id");
-            if (!id) return;
-
-            if (
-                section.offsetTop <= fromTop &&
-                section.offsetTop + section.offsetHeight > fromTop
-            ) {
-                navLinks.forEach(link => {
-                    link.classList.remove("active");
-                    if (link.getAttribute("href") === "#" + id) {
-                        link.classList.add("active");
-                    }
-                });
-            }
-        });
-    });
-});
-</script>
