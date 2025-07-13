@@ -83,7 +83,7 @@ if (have_posts()):
 
     <?php
     $sections = [
-        'intro' => 'Introduction',
+        // 'intro' => 'Introduction',
         'overview' => 'Destination Overview',
         'how_to_get' => 'How to Get There',
         'top_attractions' => 'Top Attractions',
