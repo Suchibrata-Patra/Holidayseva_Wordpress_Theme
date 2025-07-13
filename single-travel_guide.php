@@ -182,16 +182,24 @@ if (have_posts()):
 </section>
 
 
-<div style="display: flex; align-items: center; gap: 20px; background-color: rgb(229, 229, 229); padding: 20px;">
-    <div>Stay up to date</div>
-    <div>
-        <button
-            style="border: none; padding: 20px 30px; background-color: black; color: white; border-radius: 10px; font-size: 20px;">
-            Subscribe
-        </button>
-    </div>
-    <!-- <div style="margin-left: auto; cursor: pointer; font-weight: bold;">X</div> -->
+<div style="display: flex; align-items: center; gap: 20px; background-color: rgb(229, 229, 229); padding: 20px; border-radius: 12px;">
+    <label for="email-subscribe" style="font-size: 18px; font-weight: 500;">Stay up to date</label>
+    
+    <input 
+        type="email" 
+        id="email-subscribe" 
+        placeholder="Enter your email" 
+        style="padding: 15px 20px; font-size: 18px; border: 1px solid #ccc; border-radius: 8px; width: 300px;"
+        required
+    />
+    
+    <button
+        style="border: none; padding: 15px 30px; background-color: black; color: white; border-radius: 10px; font-size: 18px; cursor: pointer;">
+        Subscribe
+    </button>
 </div>
+
+
 <?php
     endwhile;
 endif;
