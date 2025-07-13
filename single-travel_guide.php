@@ -190,7 +190,7 @@ if (have_posts()):
             Subscribe
         </button>
     </div>
-    <div style="margin-left: auto; cursor: pointer; font-weight: bold;">X</div>
+    <!-- <div style="margin-left: auto; cursor: pointer; font-weight: bold;">X</div> -->
 </div>
 <?php
     endwhile;
