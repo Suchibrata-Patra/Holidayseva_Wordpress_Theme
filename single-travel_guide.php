@@ -53,17 +53,6 @@ if (have_posts()):
     rel="stylesheet">
 
 
-<div style="display:flex;">
-
-    <div>
-        <span style="font-weight:500;">Share Buttons</span>
-        <ul style="background-color:rgb(201, 201, 201); padding:50px 70px;margin-left:20px;border-radius: 10px;">
-            <li>LInkedin</li>
-            <li>Twitter</li>
-            <li>Instagram</li>
-        </ul>
-    </div>
-
     <div class="travel-guide-container">
     <span style="font-size:14px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering <span
             style="color:rgb(94, 94, 94);">, Backend, Data / ML</span></span>
@@ -136,7 +125,6 @@ if (have_posts()):
     ?>
 </div>
 
-</div>
 <!-- Related Article Content  -->
 <section class="related-articles">
     <h2 class="section-title">Related articles</h2>
