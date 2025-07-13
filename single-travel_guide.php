@@ -52,8 +52,17 @@ if (have_posts()):
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
-    
-<div class="travel-guide-container">
+
+<div style="display:flex;">
+    <div>
+        Share Buttons
+        <ul>
+            <li>LInkedin</li>
+            <li>Twitter</li>
+            <li>Instagram</li>
+        </ul>
+    </div>
+    <div class="travel-guide-container">
     <span style="font-size:14px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering <span
             style="color:rgb(94, 94, 94);">, Backend, Data / ML</span></span>
     <h1>
@@ -125,6 +134,7 @@ if (have_posts()):
     ?>
 </div>
 
+</div>
 <!-- Related Article Content  -->
 <section class="related-articles">
     <h2 class="section-title">Related articles</h2>
