@@ -57,7 +57,7 @@ if (have_posts()):
 
     <div>
         <span style="font-weight:500;">Share Buttons</span>
-        <ul style="background-color:grey; padding:20px;">
+        <ul style="background-color:rgb(201, 201, 201); padding:50px 70px;margin-left:20px;border-radius: 10px;">
             <li>LInkedin</li>
             <li>Twitter</li>
             <li>Instagram</li>
