@@ -126,7 +126,6 @@ if (have_posts()):
 </div>
 
 <!-- Related Article Content  -->
-<!-- Related Article Content  -->
 <section class="related-articles">
     <h2 class="section-title">Related articles</h2>
     <div class="travel-guide-grid">
@@ -137,72 +136,64 @@ if (have_posts()):
             'post_status'    => 'publish'
         ));
 
-        $index = 0;
-
         if ($travel_guides->have_posts()):
             while ($travel_guides->have_posts()):
                 $travel_guides->the_post();
+                $categories = get_the_category();
+                $category_names = array_map(function ($cat) {
+                    return $cat->name;
+                }, $categories);
+                $categories_list = implode(', ', $category_names);
 
-                if ($index < 5):
-                    $categories = get_the_category();
-                    $category_names = array_map(function ($cat) {
-                        return $cat->name;
-                    }, $categories);
-                    $categories_list = implode(', ', $category_names);
+                // Custom featured image logic
+                $custom_feat_id = get_post_meta(get_the_ID(), '_tg_featured_image', true);
+                if ($custom_feat_id) {
+                    $image_url = wp_get_attachment_image($custom_feat_id, 'medium_large');
+                } else {
+                    $image_url = '<img src="' . esc_url(get_template_directory_uri() . '/images/default.jpg') . '" alt="Default image">';
+                }
+                ?>
+        <div class="travel-guide-card">
+            <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
+                <div class="related_content_card_image">
+                    <?php echo $image_url; ?>
+                </div>
+                <div class="related_content_card_content">
+                    <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel
+                        Guide</span>
+                    <p class="related_content_card_meta">
+                        <?php echo esc_html($categories_list); ?>
+                    </p>
+                    <!-- <h3 class="related_content_card_title">
+                                <?php the_title(); ?>
+                            </h3> -->
+                    <h3 class="related_content_card_title">
+                        <?php
+    $title = get_the_title();
+    if (mb_strlen($title) > 50) {
+        echo esc_html(mb_substr($title, 0, 48)) . '...';
+    } else {
+        echo esc_html($title);
+    }
+    ?>
+                    </h3>
 
-                    // Custom featured image logic
-                    $custom_feat_id = get_post_meta(get_the_ID(), '_tg_featured_image', true);
-                    if ($custom_feat_id) {
-                        $image_url = wp_get_attachment_image($custom_feat_id, 'medium_large');
-                    } else {
-                        $image_url = '<img src="' . esc_url(get_template_directory_uri() . '/images/default.jpg') . '" alt="Default image">';
-                    }
-                    ?>
-                    <div class="travel-guide-card">
-                        <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
-                            <div class="related_content_card_image">
-                                <?php echo $image_url; ?>
-                            </div>
-                            <div class="related_content_card_content">
-                                <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel Guide</span>
-                                <p class="related_content_card_meta">
-                                    <?php echo esc_html($categories_list); ?>
-                                </p>
-                                <h3 class="related_content_card_title">
-                                    <?php
-                                    $title = get_the_title();
-                                    echo esc_html(mb_strlen($title) > 50 ? mb_substr($title, 0, 48) . '...' : $title);
-                                    ?>
-                                </h3>
-                                <p class="related_content_card_date">
-                                    <?php echo get_the_date(); ?> / Global
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                <?php elseif ($index === 5): ?>
-                    <!-- Sixth card as 'View More Stories' -->
-                    <div class="travel-guide-card">
-                        <a href="/all-travel-guides" style="text-decoration:none;">
-                            <div class="related_content_card_image" style="background:#f5f5f5; display:flex; align-items:center; justify-content:center; height:120px;">
-                                <span style="font-size:2rem; color:#333;">➕</span>
-                            </div>
-                            <div class="related_content_card_content">
-                                <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel Guide</span>
-                                <p class="related_content_card_meta">Explore More</p>
-                                <h3 class="related_content_card_title">View all stories</h3>
-                                <p class="related_content_card_date">Click to see more</p>
-                            </div>
-                        </a>
-                    </div>
-                <?php endif;
-
-                $index++;
-            endwhile;
+                    <p class="related_content_card_date">
+                        <?php echo get_the_date(); ?> / Global
+                    </p>
+                </div>
+            </a>
+        </div>
+        <?php endwhile;
             wp_reset_postdata();
         else: ?>
-            <p>No travel guides found.</p>
+        <p>No travel guides found.</p>
         <?php endif; ?>
+    </div>
+    <div style="text-align: center; margin: 20px 0;">
+        <span style="font-size: 1 rem; border-bottom: 1px solid black; display: inline-block;font-weight:500;">
+            View more stories
+        </span>
     </div>
 </section>
 
