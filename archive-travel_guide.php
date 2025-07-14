@@ -7,12 +7,31 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
     header('Content-Type: application/json');
     $search_term = sanitize_text_field($_GET['term']);
 
-    $args = array(
-        'post_type' => 'travel_guide',
-        's' => $search_term,
-        'posts_per_page' => 10,
-        'post_status' => 'publish'
-    );
+global $wpdb;
+$like = '%' . $wpdb->esc_like($search_term) . '%';
+
+$results = $wpdb->get_results(
+    $wpdb->prepare("
+        SELECT ID, post_title
+        FROM {$wpdb->prefix}posts
+        WHERE post_type = %s
+        AND post_status = 'publish'
+        AND post_title LIKE %s
+        ORDER BY post_date DESC
+        LIMIT 10
+    ", 'travel_guide', $like)
+);
+
+$response = array_map(function ($post) {
+    return [
+        'title' => esc_html($post->post_title),
+        'link' => get_permalink($post->ID)
+    ];
+}, $results);
+
+echo json_encode($response);
+exit;
+
 
     $query = new WP_Query($args);
     $results = [];
