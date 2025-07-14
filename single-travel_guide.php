@@ -126,13 +126,13 @@ if (have_posts()):
 </div>
 
 <!-- Related Article Content  -->
-<!-- <section class="related-articles">
+<section class="related-articles">
     <h2 class="section-title">Related articles</h2>
     <div class="travel-guide-grid">
         <?php
         $travel_guides = new WP_Query(array(
             'post_type'      => 'travel_guide',
-            'posts_per_page' => 6,
+            'posts_per_page' => 5, // Fetch only 5
             'post_status'    => 'publish'
         ));
 
@@ -152,7 +152,7 @@ if (have_posts()):
                 } else {
                     $image_url = '<img src="' . esc_url(get_template_directory_uri() . '/images/default.jpg') . '" alt="Default image">';
                 }
-                ?>
+        ?>
         <div class="travel-guide-card">
             <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
                 <div class="related_content_card_image">
@@ -164,20 +164,12 @@ if (have_posts()):
                     <p class="related_content_card_meta">
                         <?php echo esc_html($categories_list); ?>
                     </p>
-                    <!-- <h3 class="related_content_card_title">
-                                <?php the_title(); ?>
-                            </h3> -->
                     <h3 class="related_content_card_title">
                         <?php
-    $title = get_the_title();
-    if (mb_strlen($title) > 50) {
-        echo esc_html(mb_substr($title, 0, 48)) . '...';
-    } else {
-        echo esc_html($title);
-    }
-    ?>
+                            $title = get_the_title();
+                            echo esc_html(mb_strlen($title) > 50 ? mb_substr($title, 0, 48) . '...' : $title);
+                        ?>
                     </h3>
-
                     <p class="related_content_card_date">
                         <?php echo get_the_date(); ?> / Global
                     </p>
@@ -189,8 +181,24 @@ if (have_posts()):
         else: ?>
         <p>No travel guides found.</p>
         <?php endif; ?>
+
+        <!-- 🔥 Manually Added 6th Card -->
+        <div class="travel-guide-card" id="sixth_related_card">
+            <a href="/custom-guide" style="text-decoration:none;">
+                <div class="related_content_card_image">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/custom.jpg'); ?>" alt="Custom image">
+                </div>
+                <div class="related_content_card_content">
+                    <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Curated Special</span>
+                    <p class="related_content_card_meta">Editor’s Pick</p>
+                    <h3 class="related_content_card_title">The Untold Story of a Hidden Paradise</h3>
+                    <p class="related_content_card_date"><?php echo date('F j, Y'); ?> / Exclusive</p>
+                </div>
+            </a>
+        </div>
     </div>
-</section> -->
+</section>
+
 <div style="text-align: center; margin: 20px 0;">
     <span style="font-size: 1 rem; border-bottom: 1px solid black; display: inline-block;font-weight:500;">
         View more stories
