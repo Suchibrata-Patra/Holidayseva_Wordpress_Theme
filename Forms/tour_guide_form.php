@@ -6,7 +6,7 @@ wp_nonce_field('travel_guide_nonce_action', 'travel_guide_nonce');
 
 // Define content sections
 $fields = [
-   'intro', 'overview', 'how_to_get', 'top_attractions', 'where_to_stay', 'eat_drink',
+   'intro', 'overview', 'how_to_get', 'top_attractions','things_to_do' ,'where_to_stay', 'eat_drink',
         'top_reasons', 'cultural_tips', 'budget', 'itinerary', 'personal_exp',
         'travel_tips', 'resources', 'conclusion'
 ];

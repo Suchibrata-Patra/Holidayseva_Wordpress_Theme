@@ -11,7 +11,7 @@ if (have_posts()):
         $meta_keys = [
             'location', 'duration', 'best_season', 'where_to_stay', 'top_reasons', 'featured_image',
             'intro', 'overview', 'how_to_get', 'eat_drink', 'cultural_tips', 'budget',
-            'itinerary', 'personal_exp', 'travel_tips', 'resources', 'conclusion', 'top_attractions'
+            'itinerary', 'personal_exp', 'travel_tips', 'resources', 'conclusion', 'top_attractions','things_to_do'
         ];
         $meta = [];
         foreach ($meta_keys as $key) {
@@ -87,6 +87,7 @@ if (have_posts()):
         'overview' => 'Destination Overview',
         'how_to_get' => 'How to Get There',
         'top_attractions' => 'Top Attractions',
+        'things_to_do' => 'Things to do',
         'where_to_stay' => 'Where to Stay',
         'eat_drink' => 'Eat & Drink',
         'top_reasons' => 'Top 5 Reasons to Visit',
