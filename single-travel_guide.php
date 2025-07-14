@@ -251,7 +251,7 @@ if (have_posts()):
     </div>
 
 <div style="text-align: center; margin: 20px 0;">
-    <span style="font-size: 1 rem; border-bottom: 1px solid black; display: inline-block;font-weight:500;">
+    <span style="font-size: 1 rem; border-bottom: 1.2px solid rgb(174, 174, 174); display: inline-block;font-weight:500;">
         View more stories
     </span>
 </div>
