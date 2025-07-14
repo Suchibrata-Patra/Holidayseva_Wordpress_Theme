@@ -188,6 +188,7 @@ if (have_posts()):
 
         <!-- ✅ Manually added 6th card styled like 'Most Popular' layout -->
 <div class="travel-guide-card" id="sixth_related_card" style="display: flex; justify-content: space-between; gap: 15px; margin-bottom: 20px;padding:24px;background:none;">
+    <span style="font-sie:1.2rem;color:black;">Most Popular</span>
     <a href="/your-custom-link" style="text-decoration: none; display: flex; flex: 1; gap: 7px;">
         <div class="related_content_card_text" style="flex: 1;">
             <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
