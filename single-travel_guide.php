@@ -153,7 +153,7 @@ if (have_posts()):
                     $image_url = '<img src="' . esc_url(get_template_directory_uri() . '/images/default.jpg') . '" alt="Default image">';
                 }
                 ?>
-                <div class="travel-guide-card">
+                <div class="travel-guide-card" style="display:flex;">
                     <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
                         <div class="related_content_card_image">
                             <?php echo $image_url; ?>
