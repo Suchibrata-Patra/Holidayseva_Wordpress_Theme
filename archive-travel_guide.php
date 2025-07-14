@@ -7,7 +7,7 @@
     
     <!-- Left Image Section (80%) -->
     <div style="flex: 7;">
-        <img src="your-image.jpg" alt="Cityscape" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="https://blog.uber-cdn.com/cdn-cgi/image/width=1536,quality=80,onerror=redirect,format=auto/wp-content/uploads/2025/07/cover-17514078235579.jpg" alt="Cityscape" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
     
     <!-- Right Content Section (20%) -->
