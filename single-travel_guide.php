@@ -168,15 +168,17 @@ if (have_posts()):
                                 <?php the_title(); ?>
                             </h3> -->
                     <h3 class="related_content_card_title">
-                        <?php
+    <?php
     $title = get_the_title();
     if (mb_strlen($title) > 50) {
-        echo esc_html(mb_substr($title, 0, 48)) . '...';
+        echo esc_html(mb_substr($title, 0, 47)) . '...';
     } else {
-        echo esc_html($title);
+        $padded = $title . str_repeat('&nbsp;', 50 - mb_strlen($title));
+        echo $padded;
     }
     ?>
-                    </h3>
+</h3>
+
 
                     <p class="related_content_card_date">
                         <?php echo get_the_date(); ?> / Global
