@@ -127,12 +127,6 @@ get_header(); ?>
   <div class="legalPages">
     <div class="html not-front not-logged-in no-sidebars page-node page-node- page-node-4161 node-type-legal-page">
       <div id="block-block-29" class="block block-block">
-        <div class="content">
-          <div class="hrtlCenter prependTop5 appendBottom40" style="text-align: center">
-            <img src="https://imgak.HolidaySevacdn.com/pwa_v3/pwa_hotel_assets/header/logo@2x.png" style="height: 40px"
-              alt="Make My Trip" />
-          </div>
-        </div>
       </div>
       <div class="grid_976 top_section">
         <div class="append_bottom clearFix">
@@ -10575,7 +10569,6 @@ gdprRenderConsentRoot.render(GdprConsentFormElement);
   </div>
 </footer>
 <style>
-
 
   .bgGradient {
     background: #f2f2f2;
