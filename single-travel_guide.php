@@ -190,6 +190,7 @@ if (have_posts()):
         <p>No travel guides found.</p>
         <?php endif; ?>
     </div>
+    <span><center>View more stories</center></span>
 </section>
 
 
