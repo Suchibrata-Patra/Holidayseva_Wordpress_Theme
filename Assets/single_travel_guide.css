@@ -300,5 +300,11 @@
     width: 100% !important;
     height: 200px !important;
 }
+ .related-articles {
+    max-width: 100%;
+    margin: 0px;
+    padding: 10px 5px;
+}
+
 
 }
