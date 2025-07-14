@@ -10,7 +10,7 @@ get_header();
     
     <!-- Left Image Section (80%) -->
     <div style="flex: 7;">
-        <img src="https://blog.uber-cdn.com/cdn-cgi/image/width=1536,quality=80,onerror=redirect,format=auto/wp-content/uploads/2025/07/cover-17514078235579.jpg" alt="Cityscape" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="https://holidayseva.com/wp-content/uploads/2025/07/Screenshot-2025-07-14-at-6.23.24-PM.png" alt="Cityscape" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
     
     <!-- Right Content Section (20%) -->
