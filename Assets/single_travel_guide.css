@@ -336,5 +336,11 @@
     margin: 0px;
     padding: 10px 5px;
 }
+    #email-subscribe{
+        width:400px;
+    }
+    #subscribe_button{
+        padding: 10px 20px;
+    }
 
 }
