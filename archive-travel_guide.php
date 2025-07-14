@@ -6,7 +6,7 @@
 get_header();
 ?>
 <br><br>
-<div style="display: flex; width: 85%; max-width: 1400px; margin: auto; border: 1px solid #eee; font-family: Arial, sans-serif;">
+<div style="display: flex; width: 85%; max-width: 1400px; margin: auto; border: none; font-family: Arial, sans-serif;">
     
     <!-- Left Image Section (80%) -->
     <div style="flex: 7;">
