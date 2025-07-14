@@ -112,13 +112,22 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(res => res.json())
             .then(data => {
                 if (data.length > 0) {
-                  resultBox.innerHTML = data.map(item => `
+                    resultBox.innerHTML = data.map(item => `
   <div onclick="window.location.href='${item.link}'"
-       style="padding: 18px 0; border-bottom: 1px solid #eee; cursor: pointer;">
-    <h3 style="font-size: 18px; margin: 0 0 5px 0; color: #111; font-weight: 600;">${item.title}</h3>
-    <p style="font-size: 14px; color: #666; margin: 0;">Suggested destination based on your search</p>
+       style="display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding: 20px 10px; border-bottom: 1px solid #eee; cursor: pointer;">
+    
+    <div style="flex: 1;">
+      <p style="color: #7c7c7c; font-size: 13px; margin: 0 0 6px 0;">Engineering, Backend / 14 July / Global</p>
+      <h3 style="font-size: 18px; color: #111; font-weight: 600; margin: 0 0 8px 0;">${item.title}</h3>
+      <p style="font-size: 14px; color: #666; margin: 0;">Special Feature</p>
+    </div>
+
+    <div style="width: 100px; height: 70px; border-radius: 6px; overflow: hidden; flex-shrink: 0;">
+      <img src="${item.image}" alt="thumb" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
   </div>
 `).join('');
+
                     resultBox.style.display = 'block';
                 } else {
                     resultBox.innerHTML = '<div style="padding:10px;">No results found</div>';
