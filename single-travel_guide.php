@@ -191,7 +191,7 @@ if (have_posts()):
         <?php endif; ?>
     </div>
 <div style="text-align: center; margin: 20px 0;">
-    <span style="font-size: 1.5rem; border-bottom: 1px solid black; display: inline-block;">
+    <span style="font-size: 1.5rem; border-bottom: 1px solid black; display: inline-block;font-weight:500;">
         View more stories
     </span>
 </div>
