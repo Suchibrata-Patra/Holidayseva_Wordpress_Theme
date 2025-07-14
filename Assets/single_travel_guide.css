@@ -275,34 +275,15 @@
     letter-spacing: -1px;
     margin-bottom: 20px;
 }
+/* Related Articles - Stack on Mobile */
 .travel-guide-grid {
-        flex-direction: column;
-        gap: 15px;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-    .travel-guide-card {
-        width: 100%;
-    }
+.travel-guide-card {
+    width: 100%;
+}
 
-    #sixth_related_card {
-        flex-direction: column;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    #sixth_related_card a {
-        flex-direction: column !important;
-        gap: 10px;
-    }
-
-    #sixth_related_card .related_content_card_image {
-        width: 100% !important;
-        height: 180px !important;
-    }
-
-    #sixth_related_card img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover;
-    }
 }
