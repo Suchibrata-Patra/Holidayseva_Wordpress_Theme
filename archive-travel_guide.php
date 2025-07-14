@@ -5,6 +5,24 @@
 <?php
 get_header();
 ?>
+<!-- 🔍 Search Bar to Filter Travel Guides -->
+<div style="width: 85%; max-width: 1400px; margin: 30px auto 0; font-family: Arial, sans-serif;">
+    <form method="get" action="<?php echo esc_url(home_url('/')); ?>" style="display: flex; gap: 15px;">
+        <input 
+            type="text" 
+            name="s" 
+            placeholder="Search travel guides by title..." 
+            value="<?php echo get_search_query(); ?>"
+            style="flex: 1; padding: 12px 18px; font-size: 1rem; border: 1px solid #ccc; border-radius: 30px; outline: none;"
+        >
+        <input type="hidden" name="post_type" value="travel_guide">
+        <button 
+            type="submit"
+            style="padding: 12px 25px; background-color: black; color: white; border: none; border-radius: 30px; font-weight: 600; cursor: pointer;">
+            Search
+        </button>
+    </form>
+</div>
 <br><br>
 <div style="display: flex; width: 85%; max-width: 1400px; margin: auto; border: none; font-family: Arial, sans-serif;">
     
