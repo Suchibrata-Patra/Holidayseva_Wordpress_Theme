@@ -302,7 +302,7 @@ function holidayseva_live_travel_search($request) {
         $response[] = [
             'title' => get_the_title($post->ID),
             'link'  => get_permalink($post->ID),
-$image = get_post_thumbnail_id($post->ID) ? wp_get_attachment_image_url(get_post_thumbnail_id($post->ID), 'medium') : null;
+            'image' => $image ?: get_template_directory_uri() . '/images/default.jpg'
         ];
     }
 
