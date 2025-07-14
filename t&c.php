@@ -12,10 +12,6 @@ get_header(); ?>
 <html lang="en" >
   <head>
     
-    
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="x-dns-prefetch-control" content="on">
 
 
     
@@ -130,9 +126,7 @@ get_header(); ?>
       </div>
       <div class="grid_976 top_section">
         <div class="append_bottom clearFix">
-          <p class="top_heading append_bottomHalf">
-            Agreement Between User and HolidaySeva
-          </p>
+          
           <table width="100%" style="height: 100%" cellpadding="0" cellspacing="0" border="0" align="center"
             class="word-break2">
             <tbody>
@@ -149,7 +143,6 @@ get_header(); ?>
                               </tr>
                               <tr>
                                 <td height="20" colspan="2" class="text-11-bold" style="padding-left: 6px">
-                                  Click on the links below for details :<br />
                                 </td>
                               </tr>
                               <tr>
