@@ -6,7 +6,7 @@ get_header(); ?>
 <!-- This Code is responsible for generating the Travel Blog Page -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/Central_styling.css">
 
-<div>
+<pre>
     APPLICABILITY
 This User Agreement along with Terms Of Service (collectively, the "User Agreement") forms the terms and conditions for the use of services and products of HolidaySeva (India) Private Limited ("HLS").
 
@@ -1231,7 +1231,7 @@ Cruise Provider may modify or cancel a Cruise Service due to an unforeseen circu
 HLS may charge applicable taxes or service charge, convenience fees etc. wherever applicable which are not refundable upon cancellation or no show.
 
 HLS shall not be liable for any failure or delay in performing its obligations due to events beyond its reasonable control, including natural disasters, war, civil unrest, or governmental actions. Refunds for Activities booked and not provided by the Cruise Provider will be made as per the policy of the Cruise Provider and as provided by the Cruise Provider to HLS.
-</div>
+</pre>
 <!-- YOUR CUSTOM CONTENT ENDS HERE -->
 
 <?php get_footer(); ?>
