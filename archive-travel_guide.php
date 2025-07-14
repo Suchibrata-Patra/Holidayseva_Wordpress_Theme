@@ -55,7 +55,7 @@ get_header();
 <div style="width: 100%; background: url(https://theapplication.in/wp-content/uploads/2024/11/Search-Form-Background-image-for-TheApplication.webp); padding: 100px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
 
   <!-- SEARCH CONTAINER -->
-  <div style="position: relative; width: 100%; max-width: 680px;">
+  <div style="position: relative; width: 88%;">
     <input 
       type="text" 
       id="live-travel-search" 
@@ -152,6 +152,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <br><br>
 
+<div style="display: flex; width: 85%; max-width: 1400px; margin: auto; border: none; font-family: Arial, sans-serif;">
+    
+    <!-- Left Image Section (80%) -->
+    <div style="flex: 7;">
+        <img src="https://holidayseva.com/wp-content/uploads/2025/07/Screenshot-2025-07-14-at-6.23.24-PM.png" alt="Cityscape" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    
+    <!-- Right Content Section (20%) -->
+    <div style="flex: 3; background-color: #f9f9f9; padding: 40px;">
+        <p style="font-size: 12px; color: #666; margin-bottom: 10px;">inhouse AI, ML developed by Holidayseva</p>
+        
+        <h2 style="font-size: 24px; margin-bottom: 20px; line-height: 1.3;">
+            Reinforcement Learning for Picking Best Tour Destination
+        </h2>
+        
+        <p style="font-size: 15px; line-height: 1.6; color: #444;">
+            At HolidaySeva, we leverage cutting-edge advancements in Machine Learning and Artificial Intelligence to intelligently analyze vast datasets, detect travel trends, and craft hyper-personalized travel itineraries. Our systems continuously learn and adapt to ensure you discover not just good plans, but the perfect travel experiences — curated uniquely for your preferences, timing, and lifestyle.
+        </p>
+        
+        <p style="font-size: 13px; color: #999; margin-top: 20px;">14th July / INDIA</p>
+        <button style="padding:15px 40px; background-color:black;border:none;border-radius:50px;color:white;">Know More</button>
+    </div>
+
+</div>
 
 <section class="related-articles">
     <h1 class="section-title">Best Articles</h1>
