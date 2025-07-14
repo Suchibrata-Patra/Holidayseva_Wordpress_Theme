@@ -57,7 +57,7 @@ get_header();
       type="text" 
       id="live-travel-search" 
       placeholder="Where do you want to go ?" 
-      style="flex: 1; padding: 16px 12px; font-size: 40px; font-weight: 500; border: none; outline: none; background: transparent; color: #dbdbdb;"
+      style="flex: 1; padding: 16px 12px; font-size: 40px; font-weight: 500; border: none; outline: none; background: transparent; color: #dbdbdb !important;"
     />
     <button 
       type="button" 
