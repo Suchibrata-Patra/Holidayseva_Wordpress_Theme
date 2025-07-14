@@ -284,6 +284,75 @@ if (have_posts()):
 </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+// Create dummy data (you can replace this with real data)
+$data = [];
+for ($i = 0; $i < 100; $i++) {
+    $data[] = rand(0, 100); // Random scores between 0 and 100
+}
+
+// Parameters
+$width = 500;
+$height = 300;
+$margin = 40;
+$bin_count = 10;
+
+// Compute histogram bins
+$bins = array_fill(0, $bin_count, 0);
+foreach ($data as $value) {
+    $index = min((int)($value / (100 / $bin_count)), $bin_count - 1);
+    $bins[$index]++;
+}
+$max_bin = max($bins);
+
+// Create image
+$image = imagecreatetruecolor($width, $height);
+
+// Colors
+$white = imagecolorallocate($image, 255, 255, 255);
+$black = imagecolorallocate($image, 0, 0, 0);
+$blue = imagecolorallocate($image, 30, 144, 255);
+
+// Background
+imagefilledrectangle($image, 0, 0, $width, $height, $white);
+
+// Draw histogram bars
+$bar_width = ($width - 2 * $margin) / $bin_count;
+for ($i = 0; $i < $bin_count; $i++) {
+    $x1 = $margin + $i * $bar_width;
+    $x2 = $x1 + $bar_width - 4;
+    $y1 = $height - $margin;
+    $y2 = $y1 - (($height - 2 * $margin) * ($bins[$i] / $max_bin));
+    imagefilledrectangle($image, $x1, $y1, $x2, $y2, $blue);
+}
+
+// Axes
+imageline($image, $margin, $margin, $margin, $height - $margin, $black); // Y-axis
+imageline($image, $margin, $height - $margin, $width - $margin, $height - $margin, $black); // X-axis
+
+// Output image
+header('Content-Type: image/png');
+imagepng($image);
+imagedestroy($image);
+?>
+
 <?php
     endwhile;
 endif;
