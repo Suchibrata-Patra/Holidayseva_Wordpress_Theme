@@ -7,7 +7,6 @@
     <title><?php wp_title(); ?></title>  
     
     <?php wp_head(); ?> <!-- Place wp_head() here -->
-
     <?php if ( is_front_page() && !is_paged() ) : ?>
     <meta name="description" content="Your homepage description here" />
     <meta name="title" content="Your homepage title here" />
@@ -26,7 +25,6 @@
     <!-- For getting Access of centralised Colour Scheme -->
     <link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/holidayseva_colors.css">
 </head>
-test
 
 <body style="margin:0px !important;">
 <!-- Main Header Content -->
