@@ -200,11 +200,11 @@ if (have_posts()):
     <label for="email-subscribe" style="font-size: 18px; font-weight: 500;">Stay up to date</label>
 
     <input type="email" id="email-subscribe" placeholder="Enter your email"
-        style="padding: 15px 20px; font-size: 18px; border: 1px solid #ccc; border-radius: 10px 0px 0px 10px; width: 300px;"
+        style="padding: 15px 20px; font-size: 18px; border: 1px solid #ccc; border-radius: 50px 0px 0px 50px; width: 300px;"
         required />
 
     <button
-        style="border: none; padding: 15px 30px; background-color: black; color: white; border-radius:0px 10px 10px 0px; font-size: 18px; cursor: pointer;">
+        style="border: none; padding: 15px 30px; background-color: black; color: white; border-radius:0px 50px 50px 0px; font-size: 18px; cursor: pointer;">
         Subscribe
     </button>
 </div>
