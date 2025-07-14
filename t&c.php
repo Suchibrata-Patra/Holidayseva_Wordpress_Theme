@@ -10575,13 +10575,7 @@ gdprRenderConsentRoot.render(GdprConsentFormElement);
   </div>
 </footer>
 <style>
-  .fontweight {
-    font-weight: 400;
-  }
-  * {
-    box-sizing: border-box;
-    box-sizing: border-box;
-  }
+
 
   .bgGradient {
     background: #f2f2f2;
