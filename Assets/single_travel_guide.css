@@ -285,5 +285,20 @@
 .travel-guide-card {
     width: 100%;
 }
+#sixth_related_card {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#sixth_related_card a {
+    flex-direction: column !important;
+    width: 100%;
+}
+
+#sixth_related_card .related_content_card_image {
+    width: 100% !important;
+    height: 200px !important;
+}
 
 }
