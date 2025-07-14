@@ -301,57 +301,63 @@ if (have_posts()):
 
 
 
+<!-- Add this where you want the histogram to appear -->
+<canvas id="myHistogram" width="600" height="400"></canvas>
+
 <?php
-// Create dummy data (you can replace this with real data)
+// Example PHP data (replace with dynamic WP data)
 $data = [];
 for ($i = 0; $i < 100; $i++) {
-    $data[] = rand(0, 100); // Random scores between 0 and 100
+    $data[] = rand(0, 100);
 }
 
-// Parameters
-$width = 500;
-$height = 300;
-$margin = 40;
-$bin_count = 10;
+// Pass to JavaScript
+echo "<script>
+    const rawData = " . json_encode($data) . ";
+    
+    // Bin the data into 10 buckets
+    const binCount = 10;
+    const bins = Array(binCount).fill(0);
+    rawData.forEach(val => {
+        const index = Math.min(Math.floor(val / (100 / binCount)), binCount - 1);
+        bins[index]++;
+    });
 
-// Compute histogram bins
-$bins = array_fill(0, $bin_count, 0);
-foreach ($data as $value) {
-    $index = min((int)($value / (100 / $bin_count)), $bin_count - 1);
-    $bins[$index]++;
-}
-$max_bin = max($bins);
+    const labels = Array.from({length: binCount}, (_, i) => {
+        const start = Math.round(i * (100 / binCount));
+        const end = Math.round((i + 1) * (100 / binCount)) - 1;
+        return `${start}-${end}`;
+    });
 
-// Create image
-$image = imagecreatetruecolor($width, $height);
-
-// Colors
-$white = imagecolorallocate($image, 255, 255, 255);
-$black = imagecolorallocate($image, 0, 0, 0);
-$blue = imagecolorallocate($image, 30, 144, 255);
-
-// Background
-imagefilledrectangle($image, 0, 0, $width, $height, $white);
-
-// Draw histogram bars
-$bar_width = ($width - 2 * $margin) / $bin_count;
-for ($i = 0; $i < $bin_count; $i++) {
-    $x1 = $margin + $i * $bar_width;
-    $x2 = $x1 + $bar_width - 4;
-    $y1 = $height - $margin;
-    $y2 = $y1 - (($height - 2 * $margin) * ($bins[$i] / $max_bin));
-    imagefilledrectangle($image, $x1, $y1, $x2, $y2, $blue);
-}
-
-// Axes
-imageline($image, $margin, $margin, $margin, $height - $margin, $black); // Y-axis
-imageline($image, $margin, $height - $margin, $width - $margin, $height - $margin, $black); // X-axis
-
-// Output image
-header('Content-Type: image/png');
-imagepng($image);
-imagedestroy($image);
+    const ctx = document.getElementById('myHistogram').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Frequency',
+                data: bins,
+                backgroundColor: 'rgba(30, 144, 255, 0.7)',
+                borderRadius: 4,
+                barPercentage: 0.8,
+                categoryPercentage: 1.0
+            }]
+        },
+        options: {
+            scales: {
+                y: { beginAtZero: true },
+                x: { ticks: { autoSkip: false } }
+            },
+            plugins: {
+                legend: { display: false }
+            }
+        }
+    });
+</script>";
 ?>
+
+<!-- Chart.js CDN (Add this once per page) -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <?php
     endwhile;
