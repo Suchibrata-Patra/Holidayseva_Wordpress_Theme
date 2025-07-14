@@ -145,18 +145,18 @@ if (have_posts()):
                 }, $categories);
                 $categories_list = implode(', ', $category_names);
 
-                // Check if the post has a featured image
-                if (has_post_thumbnail()) {
-                    $image_html = get_the_post_thumbnail(null, 'medium_large');
+                // Custom featured image logic
+                $custom_feat_id = get_post_meta(get_the_ID(), '_tg_featured_image', true);
+                if ($custom_feat_id) {
+                    $image_url = wp_get_attachment_image($custom_feat_id, 'medium_large');
                 } else {
-                    $default_img_url = get_template_directory_uri() . '/images/default.jpg'; // Or a full URL
-                    $image_html = '<img src="' . esc_url($default_img_url) . '" alt="Default image" />';
+                    $image_url = '<img src="' . esc_url(get_template_directory_uri() . '/images/default.jpg') . '" alt="Default image">';
                 }
                 ?>
                 <div class="travel-guide-card">
                     <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
                         <div class="related_content_card_image">
-                            <?php echo $image_html; ?>
+                            <?php echo $image_url; ?>
                         </div>
                         <div class="related_content_card_content">
                             <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel Guide</span>
@@ -172,7 +172,7 @@ if (have_posts()):
                         </div>
                     </a>
                 </div>
-            <?php endwhile;
+        <?php endwhile;
             wp_reset_postdata();
         else: ?>
             <p>No travel guides found.</p>
