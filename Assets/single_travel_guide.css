@@ -251,3 +251,8 @@
     color: #666;
 }
 
+#sixth_related_card:hover {
+    box-shadow: none;
+    transform: none;
+    cursor: default;
+}

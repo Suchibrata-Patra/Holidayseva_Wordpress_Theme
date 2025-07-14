@@ -254,10 +254,6 @@ if (have_posts()):
 </div>
 </section>
 
-
-
-
-
 <div
     style="display: flex; justify-content: center; align-items: center;background-color: rgb(229, 229, 229); padding: 20px; ">
     <!-- <label for="email-subscribe" style="font-size: 18px; font-weight: 500;">Stay up to date</label> -->
