@@ -298,12 +298,17 @@ function holidayseva_live_travel_search($request) {
     $response = [];
 
     foreach ($results as $post) {
-        $image = get_the_post_thumbnail_url($post->ID, 'thumbnail');
-        $response[] = [
-            'title' => get_the_title($post->ID),
-            'link'  => get_permalink($post->ID),
-            'image' => $image ?: get_template_directory_uri() . '/images/default.jpg'
-        ];
+        $custom_feat_id = get_post_meta($post->ID, '_tg_featured_image', true);
+$image = $custom_feat_id 
+    ? wp_get_attachment_image_url($custom_feat_id, 'medium_large') 
+    : get_the_post_thumbnail_url($post->ID, 'medium_large');
+
+$response[] = [
+    'title' => get_the_title($post->ID),
+    'link'  => get_permalink($post->ID),
+    'image' => $image ?: get_template_directory_uri() . '/images/default.jpg'
+];
+
     }
 
     return $response;
