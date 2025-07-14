@@ -116,9 +116,7 @@ if (have_posts()):
         }
         ?>
         <p>
-           <div class="section-content">
     <?php echo wp_kses_post($meta[$key]); ?>
-</div>
         </p>
     </div>
     <?php
