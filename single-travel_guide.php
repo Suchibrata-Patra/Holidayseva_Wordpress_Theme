@@ -197,7 +197,7 @@ if (have_posts()):
 
 <div
     style="display: flex; justify-content: center; align-items: center;background-color: rgb(229, 229, 229); padding: 20px; ">
-    <label for="email-subscribe" style="font-size: 18px; font-weight: 500;">Stay up to date</label>
+    <!-- <label for="email-subscribe" style="font-size: 18px; font-weight: 500;">Stay up to date</label> -->
 
     <input type="email" id="email-subscribe" placeholder="Enter your email"
         style="padding: 15px 20px; font-size: 18px; border: 1px solid #ccc; border-radius: 50px 0px 0px 50px; width: 300px;"
