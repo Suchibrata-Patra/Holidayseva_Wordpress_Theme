@@ -192,8 +192,9 @@ if (have_posts()):
 
 <span style="font-size:1.3rem; color:black; font-weight:600; border-bottom:0.7px solid rgb(207, 207, 207); padding-bottom:6px; display:inline-block;">Most Popular</span>
 
-    <a href="/your-custom-link" style="text-decoration: none; display: flex !important; flex-direction:row;">
-        <div class="related_content_card_text" >
+    <a href="/your-custom-link" style="text-decoration: none;">
+    <div style="display: flex; flex-direction: row; align-items: center; gap: 15px;">
+        <div class="related_content_card_text" style="flex: 1;">
             <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
                 Engineering, Backend / 14 July / Global
             </span>
@@ -204,12 +205,14 @@ if (have_posts()):
                 Special Feature
             </p>
         </div>
-        <div class="related_content_card_image" style="width: 10px; min-width: 10px; height: 60px; overflow: hidden;">
+        <div class="related_content_card_image" style="width: 70px; height: 60px; flex-shrink: 0; overflow: hidden; border-radius: 4px;">
             <img src="https://blog.uber-cdn.com/cdn-cgi/image/width=300,quality=80,onerror=redirect,format=auto/wp-content/uploads/2025/05/cover-photo-17466478352548.png" 
                  alt="Special Feature" 
-                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+                 style="width: 100%; height: 100%; object-fit: cover;">
         </div>
-    </a>
+    </div>
+</a>
+
 
     <a href="/your-custom-link" style="text-decoration: none; display: flex; gap: 15px;">
         <div class="related_content_card_text">
