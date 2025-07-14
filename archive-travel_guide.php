@@ -7,7 +7,7 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
     header('Content-Type: application/json');
     $search_term = sanitize_text_field($_GET['term']);
 
-global $wpdb;
+    global $wpdb;
 $like = '%' . $wpdb->esc_like($search_term) . '%';
 
 $results = $wpdb->get_results(
@@ -23,9 +23,11 @@ $results = $wpdb->get_results(
 );
 
 $response = array_map(function ($post) {
+    $image = get_the_post_thumbnail_url($post->ID, 'thumbnail');
     return [
-        'title' => esc_html($post->post_title),
-        'link' => get_permalink($post->ID)
+        'title' => get_the_title($post->ID),
+        'link' => get_permalink($post->ID),
+        'image' => $image ?: get_template_directory_uri() . '/images/default.jpg'
     ];
 }, $results);
 
@@ -80,11 +82,16 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(res => res.json())
             .then(data => {
                 if (data.length > 0) {
-                    resultBox.innerHTML = data.map(item =>
-                        `<div onclick="window.location.href='${item.link}'"
-                              style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">
-                             ${item.title}
-                         </div>`).join('');
+                   resultBox.innerHTML = data.map(item =>
+    `<div onclick="window.location.href='${item.link}'"
+          style="display:flex; justify-content:space-between; align-items:center; padding:10px 15px; cursor:pointer; border-bottom:1px solid #eee;">
+         <div style="flex:1; font-size: 0.95rem; font-weight:500; color:#333;">${item.title}</div>
+         <div style="width: 60px; height: 40px; margin-left: 10px; flex-shrink:0;">
+            <img src="${item.image}" alt="thumb" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+         </div>
+     </div>`
+).join('');
+
                     resultBox.style.display = 'block';
                 } else {
                     resultBox.innerHTML = '<div style="padding:10px;">No results found</div>';
@@ -102,19 +109,20 @@ document.addEventListener('DOMContentLoaded', function () {
         placeholder="Search travel guide titles..." 
         style="width: 100%; padding: 12px 20px; font-size: 1rem; border-radius: 30px; border: 1px solid #ccc;"
     >
-    <div id="search-results" style="
-        display: none;
-        position: absolute;
-        top: 45px;
-        width: 100%;
-        background: white;
-        border: 1px solid #ccc;
-        border-top: none;
-        border-radius: 0 0 10px 10px;
-        max-height: 300px;
-        overflow-y: auto;
-        z-index: 9999;
-    "></div>
+<div id="search-results" style="
+    display: none;
+    position: absolute;
+    top: 52px;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 0 0 10px 10px;
+    max-height: 350px;
+    overflow-y: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    z-index: 9999;
+"></div>
+
 </div>
 
 <br><br>
