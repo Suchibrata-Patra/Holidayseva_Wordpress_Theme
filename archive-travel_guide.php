@@ -93,7 +93,7 @@ get_header();
     </div>
     
     <!-- Right Content Section (20%) -->
-    <div style="flex: 3; background-color: #f9f9f9; padding: 40px;">
+    <div style="flex: 3; background-color: #f9f9f9; padding: 40px; margin-top:40px;">
         <p style="font-size: 12px; color: #666; margin-bottom: 10px;">inhouse AI, ML developed by Holidayseva</p>
         
         <h2 style="font-size: 24px; margin-bottom: 20px; line-height: 1.3;">
