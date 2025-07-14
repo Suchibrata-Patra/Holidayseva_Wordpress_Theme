@@ -323,6 +323,7 @@
 }
 
 #sixth_related_card a {
+    display: flex !important;
     flex-direction: column !important;
     width: 100%;
 }
