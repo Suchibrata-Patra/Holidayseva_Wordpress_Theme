@@ -218,7 +218,7 @@
 }
 
 .related_content_card_content {
-    padding: 15px;
+    margin : 24px;
     width: 100%;
     box-sizing: border-box;
 }
