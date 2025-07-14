@@ -26,11 +26,16 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
     $response = [];
 
     foreach ($results as $post) {
-        $image = get_the_post_thumbnail_url($post->ID, 'thumbnail');
+        // ✅ Get the custom featured image ID
+        $custom_feat_id = get_post_meta($post->ID, '_tg_featured_image', true);
+
+        // ✅ Get image URL from attachment ID
+        $image_url = $custom_feat_id ? wp_get_attachment_image_url($custom_feat_id, 'medium_large') : null;
+
         $response[] = [
             'title' => get_the_title($post->ID),
             'link'  => get_permalink($post->ID),
-            'image' => $image ?: get_template_directory_uri() . '/images/default.jpg'
+            'image' => $image_url ?: get_template_directory_uri() . '/images/default.jpg'
         ];
     }
 
@@ -38,7 +43,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
     exit;
 }
 ?>
-
 
 <?php
 get_header();
