@@ -51,8 +51,8 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
 get_header();
 ?>
 <!-- FULL-WIDTH SEARCH SECTION -->
-<div style="width: 100%; padding: 60px 20px; box-sizing: border-box;">
-  <div style="max-width: 1000px; margin: auto; border-bottom: 2px solid #000; display: flex; align-items: center;">
+<div style="width: 80%; padding: 60px 20px; box-sizing: border-box;">
+  <div style="max-width: 2000px; margin: auto; border-bottom: 2px solid #000; display: flex; align-items: center;">
     <input 
       type="text" 
       id="live-travel-search" 
