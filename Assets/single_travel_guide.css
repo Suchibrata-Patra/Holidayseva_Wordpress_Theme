@@ -263,7 +263,7 @@
 @media only screen and (max-width: 768px){
     .travel-guide-container{
         max-width: 98%;
-        padding:12px;
+        /* padding:12px; */
     }
 
 .travel-guide-container h1 {
