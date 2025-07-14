@@ -83,7 +83,9 @@ get_header();
   <!-- SEARCH RESULTS CONTAINER -->
   <div 
     id="search-results" 
-    style="margin-top: 10px; width: 80%;background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); display: none; max-height: 400px; overflow-y: auto; padding: 24px;">
+    style="margin-top: 10px; width: 80%;background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); display: none; max-height: 400px; overflow-y: auto; padding: 24px;"><div>
+        Searchresult
+    </div>
   </div>
 </div>
 
