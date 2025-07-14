@@ -54,11 +54,6 @@ get_header();
 <!-- FULL-WIDTH BACKGROUND SECTION -->
 <div style="width: 100%; background: url(https://theapplication.in/wp-content/uploads/2024/11/Search-Form-Background-image-for-TheApplication.webp); padding: 100px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
 
-  <!-- HEADING -->
-  <h1 style="font-size: 36px; font-weight: 700; color: white; text-align: center; margin-bottom: 40px; font-family: 'Segoe UI', sans-serif;">
-    Your Path to Dream Destination Begins Here!
-  </h1>
-
   <!-- SEARCH CONTAINER -->
   <div style="position: relative; width: 100%; max-width: 680px;">
     <input 
