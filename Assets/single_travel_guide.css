@@ -262,6 +262,17 @@
 /* Mobile Responsive Query */
 @media only screen and (max-width: 768px){
     .travel-guide-container{
-        max-width: 100%;
+        max-width: 98%;
+        padding:12px;
     }
+
+.travel-guide-container h1 {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 36px;
+    margin-top: 0px;
+    color: #000000;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
 }
