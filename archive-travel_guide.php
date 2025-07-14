@@ -50,24 +50,30 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
 <?php
 get_header();
 ?>
-<div style="position: relative; max-width: 600px; margin: auto; border-bottom: 1.2px solid #000; display: flex; align-items: center;">
-  <input 
-    type="text" 
-    id="live-travel-search" 
-    placeholder="Search Jobs" 
-    style="flex: 1; padding: 12px 10px; font-size: 18px; font-weight: 500; border: none; outline: none; background: transparent; color: #333;"
-  />
-  <button 
-    type="button" 
-    style="background: none; border: none; cursor: pointer; padding: 10px;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <line x1="5" y1="12" x2="19" y2="12" />
-      <polyline points="12 5 19 12 12 19" />
-    </svg>
-  </button>
+<!-- FULL-WIDTH SEARCH SECTION -->
+<div style="width: 100%; padding: 60px 20px; background: #fafafa; box-sizing: border-box;">
+  <div style="max-width: 1000px; margin: auto; border-bottom: 1.5px solid #000; display: flex; align-items: center;">
+    <input 
+      type="text" 
+      id="live-travel-search" 
+      placeholder="Where do you want to go?" 
+      style="flex: 1; padding: 16px 12px; font-size: 22px; font-weight: 500; border: none; outline: none; background: transparent; color: #111;"
+    />
+    <button 
+      type="button" 
+      style="background: none; border: none; cursor: pointer; padding: 10px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12" />
+        <polyline points="12 5 19 12 12 19" />
+      </svg>
+    </button>
+  </div>
 
-  <!-- ✅ Search results box — untouched -->
-  <div id="search-results" style="position: absolute; top: 105%; left: 0; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; display: none; max-height: 300px; overflow-y: auto;"></div>
+  <!-- PROFESSIONAL SEARCH RESULTS DROPDOWN -->
+  <div 
+    id="search-results" 
+    style="position: absolute; top: 130px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 1000px; background: #fff; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 1000; display: none; max-height: 400px; overflow-y: auto; padding: 20px;">
+  </div>
 </div>
 
 
@@ -106,17 +112,13 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(res => res.json())
             .then(data => {
                 if (data.length > 0) {
-                    resultBox.innerHTML = data.map(item => `
-                        <div onclick="window.location.href='${item.link}'"
-                             style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; cursor:pointer; transition: background 0.2s ease; border-bottom:1px solid #f0f0f0;"
-                             onmouseover="this.style.background='#f9f9f9';"
-                             onmouseout="this.style.background='white';">
-                            <div style="flex:1; font-size: 1rem; font-weight: 500; color:#1f1f1f;">${item.title}</div>
-                            <div style="width: 64px; height: 44px; margin-left: 12px; flex-shrink: 0; border-radius: 6px; overflow: hidden;">
-                                <img src="${item.image}" alt="thumb" style="width:100%; height:100%; object-fit:cover;">
-                            </div>
-                        </div>
-                    `).join('');
+                  resultBox.innerHTML = data.map(item => `
+  <div onclick="window.location.href='${item.link}'"
+       style="padding: 18px 0; border-bottom: 1px solid #eee; cursor: pointer;">
+    <h3 style="font-size: 18px; margin: 0 0 5px 0; color: #111; font-weight: 600;">${item.title}</h3>
+    <p style="font-size: 14px; color: #666; margin: 0;">Suggested destination based on your search</p>
+  </div>
+`).join('');
                     resultBox.style.display = 'block';
                 } else {
                     resultBox.innerHTML = '<div style="padding:10px;">No results found</div>';
