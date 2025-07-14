@@ -53,7 +53,7 @@ get_header();
 <!-- WRAPPER to center the whole section -->
 <div style="width: 100%; display: flex; justify-content: center;">
   <!-- MAIN SEARCH CONTAINER -->
-  <div style="width: 85%; padding: 60px 20px; box-sizing: border-box;">
+  <div style="width: 90%; padding: 60px 20px; box-sizing: border-box;">
     <div style="margin: auto; border-bottom: 2px solid #000; display: flex; align-items: center;">
       <input 
         type="text" 
