@@ -188,13 +188,13 @@ if (have_posts()):
 
         <!-- ✅ Manually added 6th card styled like 'Most Popular' layout -->
 <div class="travel-guide-card" id="sixth_related_card" style="display: flex; justify-content: space-between; gap: 15px; margin-bottom: 20px;padding:24px;background:none;">
-    <span style="font-sie:1.2rem;color:black;">Most Popular</span>
+    <span style="font-size:1.2rem;color:black;font-weight:600;">Most Popular</span>
     <a href="/your-custom-link" style="text-decoration: none; display: flex; flex: 1; gap: 7px;">
         <div class="related_content_card_text" style="flex: 1;">
             <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
                 Engineering, Backend / 14 July / Global
             </span>
-            <h3 style="font-size: 1rem; font-weight: 600; color: black; margin: 5px 0;">
+            <h3 style="font-size: 1rem; font-weight: 500; color: black; margin: 5px 0;">
                 Reinventing Travel Systems for Scalable Performance
             </h3>
             <p style="font-size: 0.8rem; color: rgb(100, 100, 100); margin-top: 2px;">
@@ -212,7 +212,7 @@ if (have_posts()):
             <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
                 Engineering, Backend / 14 July / Global
             </span>
-            <h3 style="font-size: 1rem; font-weight: 600; color: black; margin: 5px 0;">
+            <h3 style="font-size: 1rem; font-weight: 500; color: black; margin: 5px 0;">
                 Reinventing Travel Systems for Scalable Performance
             </h3>
             <p style="font-size: 0.8rem; color: rgb(100, 100, 100); margin-top: 2px;">
@@ -230,7 +230,7 @@ if (have_posts()):
             <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
                 Engineering, Backend / 14 July / Global
             </span>
-            <h3 style="font-size: 1rem; font-weight: 600; color: black; margin: 5px 0;">
+            <h3 style="font-size: 1rem; font-weight: 500; color: black; margin: 5px 0;">
                 Reinventing Travel Systems for Scalable Performance
             </h3>
             <p style="font-size: 0.8rem; color: rgb(100, 100, 100); margin-top: 2px;">
