@@ -25,7 +25,7 @@ get_header();
             At HolidaySeva, we leverage cutting-edge advancements in Machine Learning and Artificial Intelligence to intelligently analyze vast datasets, detect travel trends, and craft hyper-personalized travel itineraries. Our systems continuously learn and adapt to ensure you discover not just good plans, but the perfect travel experiences — curated uniquely for your preferences, timing, and lifestyle.
         </p>
         
-        <p style="font-size: 13px; color: #999; margin-top: 20px;">2 July / Global</p>
+        <p style="font-size: 13px; color: #999; margin-top: 20px;">14th July / INDIA</p>
         <button style="padding:15px 40px; background-color:black;border:none;border-radius:50px;color:white;">Know More</button>
     </div>
 
