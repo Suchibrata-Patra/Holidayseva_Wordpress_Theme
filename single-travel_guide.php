@@ -132,7 +132,7 @@ if (have_posts()):
         <?php
         $travel_guides = new WP_Query(array(
             'post_type'      => 'travel_guide',
-            'posts_per_page' => 6,
+            'posts_per_page' => 5,
             'post_status'    => 'publish'
         ));
 
@@ -145,7 +145,7 @@ if (have_posts()):
                 }, $categories);
                 $categories_list = implode(', ', $category_names);
 
-                // Custom featured image logic
+                // Featured image logic
                 $custom_feat_id = get_post_meta(get_the_ID(), '_tg_featured_image', true);
                 if ($custom_feat_id) {
                     $image_url = wp_get_attachment_image($custom_feat_id, 'medium_large');
@@ -153,47 +153,46 @@ if (have_posts()):
                     $image_url = '<img src="' . esc_url(get_template_directory_uri() . '/images/default.jpg') . '" alt="Default image">';
                 }
                 ?>
+                <div class="travel-guide-card">
+                    <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
+                        <div class="related_content_card_image">
+                            <?php echo $image_url; ?>
+                        </div>
+                        <div class="related_content_card_content">
+                            <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel Guide</span>
+                            <p class="related_content_card_meta"><?php echo esc_html($categories_list); ?></p>
+                            <h3 class="related_content_card_title">
+                                <?php
+                                $title = get_the_title();
+                                echo esc_html(mb_strlen($title) > 50 ? mb_substr($title, 0, 48) . '...' : $title);
+                                ?>
+                            </h3>
+                            <p class="related_content_card_date">
+                                <?php echo get_the_date(); ?> / Global
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            <?php endwhile;
+            wp_reset_postdata();
+        else: ?>
+            <p>No travel guides found.</p>
+        <?php endif; ?>
+
+        <!-- 6th static card like the others -->
         <div class="travel-guide-card">
-            <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
-                <div class="related_content_card_image">
-                    <?php echo $image_url; ?>
+            <a href="/all-travel-guides" style="text-decoration:none;">
+                <div class="related_content_card_image" style="background-color:#f0f0f0; height: 120px; display: flex; align-items: center; justify-content: center;">
+                    <span style="font-size: 1.5rem; color: #555;">🡒</span>
                 </div>
                 <div class="related_content_card_content">
-                    <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel
-                        Guide</span>
-                    <p class="related_content_card_meta">
-                        <?php echo esc_html($categories_list); ?>
-                    </p>
-                    <!-- <h3 class="related_content_card_title">
-                                <?php the_title(); ?>
-                            </h3> -->
-                    <h3 class="related_content_card_title">
-                        <?php
-    $title = get_the_title();
-    if (mb_strlen($title) > 50) {
-        echo esc_html(mb_substr($title, 0, 48)) . '...';
-    } else {
-        echo esc_html($title);
-    }
-    ?>
-                    </h3>
-
-                    <p class="related_content_card_date">
-                        <?php echo get_the_date(); ?> / Global
-                    </p>
+                    <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel Guide</span>
+                    <p class="related_content_card_meta">Explore More</p>
+                    <h3 class="related_content_card_title">View all stories</h3>
+                    <p class="related_content_card_date">Click to browse</p>
                 </div>
             </a>
         </div>
-        <?php endwhile;
-            wp_reset_postdata();
-        else: ?>
-        <p>No travel guides found.</p>
-        <?php endif; ?>
-    </div>
-    <div style="text-align: center; margin: 20px 0;">
-        <span style="font-size: 1 rem; border-bottom: 1px solid black; display: inline-block;font-weight:500;">
-            View more stories
-        </span>
     </div>
 </section>
 
