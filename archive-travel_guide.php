@@ -32,7 +32,7 @@ get_header();
 </div>
 
 <section class="related-articles">
-    <h2 class="section-title">Related articles</h2>
+    <h1 class="section-title">Best Articles</h1>
     <div class="travel-guide-grid">
         <?php
         $travel_guides = new WP_Query(array(
