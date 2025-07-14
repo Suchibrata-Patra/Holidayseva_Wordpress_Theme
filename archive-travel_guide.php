@@ -5,52 +5,40 @@
 <?php
 if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset($_GET['term'])) {
     header('Content-Type: application/json');
+
     $search_term = sanitize_text_field($_GET['term']);
 
     global $wpdb;
-$like = '%' . $wpdb->esc_like($search_term) . '%';
+    $like = '%' . $wpdb->esc_like($search_term) . '%';
 
-$results = $wpdb->get_results(
-    $wpdb->prepare("
-        SELECT ID, post_title
-        FROM {$wpdb->prefix}posts
-        WHERE post_type = %s
-        AND post_status = 'publish'
-        AND post_title LIKE %s
-        ORDER BY post_date DESC
-        LIMIT 10
-    ", 'travel_guide', $like)
-);
+    $results = $wpdb->get_results(
+        $wpdb->prepare("
+            SELECT ID, post_title
+            FROM {$wpdb->prefix}posts
+            WHERE post_type = %s
+            AND post_status = 'publish'
+            AND post_title LIKE %s
+            ORDER BY post_date DESC
+            LIMIT 10
+        ", 'travel_guide', $like)
+    );
 
-$response = array_map(function ($post) {
-    $image = get_the_post_thumbnail_url($post->ID, 'thumbnail');
-    return [
-        'title' => get_the_title($post->ID),
-        'link' => get_permalink($post->ID),
-        'image' => $image ?: get_template_directory_uri() . '/images/default.jpg'
-    ];
-}, $results);
+    $response = [];
 
-echo json_encode($response);
-exit;
-
-
-    $query = new WP_Query($args);
-    $results = [];
-
-    while ($query->have_posts()) {
-        $query->the_post();
-        $results[] = [
-            'title' => get_the_title(),
-            'link' => get_permalink()
+    foreach ($results as $post) {
+        $image = get_the_post_thumbnail_url($post->ID, 'thumbnail');
+        $response[] = [
+            'title' => get_the_title($post->ID),
+            'link'  => get_permalink($post->ID),
+            'image' => $image ?: get_template_directory_uri() . '/images/default.jpg'
         ];
     }
 
-    wp_reset_postdata();
-    echo json_encode($results);
+    echo json_encode($response);
     exit;
 }
 ?>
+
 
 <?php
 get_header();
@@ -78,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        fetch('<?php echo admin_url("admin-ajax.php"); ?>?action=live_travel_search&term=' + encodeURIComponent(searchVal))
+        fetch(window.location.href + '?action=live_travel_search&term=' + encodeURIComponent(searchVal))
             .then(res => res.json())
             .then(data => {
                 if (data.length > 0) {
