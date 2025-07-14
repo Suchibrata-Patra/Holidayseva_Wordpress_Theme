@@ -192,7 +192,7 @@ if (have_posts()):
     Most Popular
 </span>
     <a href="/your-custom-link" style="text-decoration: none; display: flex; flex: 1; gap: 7px;">
-        <div class="related_content_card_text" style="flex: 1;">
+        <div class="related_content_card_text" >
             <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
                 Engineering, Backend / 14 July / Global
             </span>
@@ -210,7 +210,7 @@ if (have_posts()):
         </div>
     </a>
     <a href="/your-custom-link" style="text-decoration: none; display: flex; flex: 1; gap: 15px;">
-        <div class="related_content_card_text" style="flex: 1;">
+        <div class="related_content_card_text">
             <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
                 Engineering, Backend / 14 July / Global
             </span>
@@ -228,7 +228,7 @@ if (have_posts()):
         </div>
     </a>
     <a href="/your-custom-link" style="text-decoration: none; display: flex; flex: 1; gap: 15px;">
-        <div class="related_content_card_text" style="flex: 1;">
+        <div class="related_content_card_text" >
             <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
                 Engineering, Backend / 14 July / Global
             </span>

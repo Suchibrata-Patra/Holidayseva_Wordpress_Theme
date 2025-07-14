@@ -256,7 +256,9 @@
     transform: none;
     cursor: default;
 }
-
+.related_content_card_text{
+    flex: 1;
+}
 
 
 /* Mobile Responsive Query */
@@ -286,7 +288,7 @@
     width: 100%;
 }
 #sixth_related_card {
-    flex-direction: row;
+    flex-direction: column;
     gap: 5px;
     align-items: flex-start;
 }
@@ -305,6 +307,7 @@
     margin: 0px;
     padding: 10px 5px;
 }
-
-
+ .related_content_card_text{
+    flex-direction: row;
+ }
 }
