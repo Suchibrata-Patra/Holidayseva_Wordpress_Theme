@@ -7,21 +7,6 @@ get_header(); ?>
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/Central_styling.css">
 
 <!-- YOUR CUSTOM CONTENT ENDS HERE -->
-
-<!DOCTYPE html>
-<html lang="en" >
-  <head>
-    
-
-
-    
-      
-    <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>User Agreement - HolidaySeva</title>
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
 <style>
       @media (max-width: 767px) {
         footer {
@@ -30,44 +15,7 @@ get_header(); ?>
       }
     </style>
   
-      <!-- Coming from head-->
-    
-  
-    
-
-    
-
-
-
-    <title>
-  Legal India User Agreement
-  
-</title>
-
-    
-    
-
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    
-
-    
-
-    
-    
-  </head>
-  <body class=" " data-apos-level='2' data-apos='{"modules":{},"prefix":"","sitePrefix":"","shortName":"apos-app","locale":"en","csrfCookieName":"apos-app.csrf","tabId":"dmnuuivbx00p8z0nysfp1cjg","uploadsUrl":"https://imgak.HolidaySevacdn.com/pwa_v3/pwa-HolidaySeva-static-pages","assetBaseUrl":"/apos-frontend/releases/Vx6IT3Lm3OTTb7TEWSk6auJ4adtbkapz/default","scene":"public"}'>
-    
-
-    
-
-    
-      
-    
-    
-      
-    
+      <!-- Coming from head-->    
     <div data-apos-context-label></div>
     <div data-apos-refreshable>
       
@@ -102,23 +50,10 @@ get_header(); ?>
   
 <div class="bp-wrapper">
   <main class="bp-main">
-
-      <a name="main"></a>
-      
-
-      
-  
   <section class="bp-content">
-    
       
 <div class="apos-area">
-  
-
-
 <div data-raw-html class="html-apostrophe-widget">
-  <!DOCTYPE html>
-<html>
-
 <body style="margin-top:-30px;">
   <div class="legalPages">
     <div class="html not-front not-logged-in no-sidebars page-node page-node- page-node-4161 node-type-legal-page" style="padding:0% 10%;">
