@@ -164,6 +164,7 @@ if (have_posts()):
                                 <?php echo esc_html($categories_list); ?>
                             </p>
                             <h3 class="related_content_card_title">
+                                s
                                 <?php the_title(); ?>
                             </h3>
                             <p class="related_content_card_date">
