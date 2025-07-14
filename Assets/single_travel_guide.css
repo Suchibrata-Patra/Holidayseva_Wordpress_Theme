@@ -323,8 +323,9 @@
 }
 
 #sixth_related_card a {
+    display:flex;
     flex-direction: column !important;
-    width: 100%;
+    /* width: 100%; */
 }
 
 #sixth_related_card .related_content_card_image {
