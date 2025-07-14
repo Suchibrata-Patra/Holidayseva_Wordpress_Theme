@@ -267,3 +267,44 @@ function display_global_variables_page() {
 }
 
 
+
+// Code to add search Feature 
+add_action('rest_api_init', function () {
+    register_rest_route('holidayseva/v1', '/travel-search', [
+        'methods' => 'GET',
+        'callback' => 'holidayseva_live_travel_search',
+        'permission_callback' => '__return_true'
+    ]);
+});
+
+function holidayseva_live_travel_search($request) {
+    $term = sanitize_text_field($request->get_param('term'));
+    global $wpdb;
+
+    $like = '%' . $wpdb->esc_like($term) . '%';
+
+    $results = $wpdb->get_results(
+        $wpdb->prepare("
+            SELECT ID, post_title
+            FROM {$wpdb->prefix}posts
+            WHERE post_type = %s
+            AND post_status = 'publish'
+            AND post_title LIKE %s
+            ORDER BY post_date DESC
+            LIMIT 10
+        ", 'travel_guide', $like)
+    );
+
+    $response = [];
+
+    foreach ($results as $post) {
+        $image = get_the_post_thumbnail_url($post->ID, 'thumbnail');
+        $response[] = [
+            'title' => get_the_title($post->ID),
+            'link'  => get_permalink($post->ID),
+            'image' => $image ?: get_template_directory_uri() . '/images/default.jpg'
+        ];
+    }
+
+    return $response;
+}

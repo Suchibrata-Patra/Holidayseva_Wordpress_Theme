@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        fetch(window.location.href + '?action=live_travel_search&term=' + encodeURIComponent(searchVal))
+fetch('<?php echo esc_url(home_url('/wp-json/holidayseva/v1/travel-search')); ?>?term=' + encodeURIComponent(searchVal))
             .then(res => res.json())
             .then(data => {
                 if (data.length > 0) {
