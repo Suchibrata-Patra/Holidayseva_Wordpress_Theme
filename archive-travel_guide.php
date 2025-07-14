@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/single_travel_guide.css">
 
 <br><br>
-<div style="display: flex; width: 100%; max-width: 1400px; margin: auto; border: 1px solid #eee; font-family: Arial, sans-serif;">
+<div style="display: flex; width: 80%; max-width: 1400px; margin: auto; border: 1px solid #eee; font-family: Arial, sans-serif;">
     
     <!-- Left Image Section (80%) -->
     <div style="flex: 8;">
