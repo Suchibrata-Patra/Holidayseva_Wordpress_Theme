@@ -51,43 +51,47 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
 get_header();
 ?>
 <!-- WRAPPER to center the whole section -->
-<div style="width: 100%; display: flex; justify-content: center;">
-  <!-- MAIN SEARCH CONTAINER -->
-  <div style="width: 88%; padding: 40px 0; box-sizing: border-box; max-width: 1200px;">
-    
-    <div style="margin: auto; border-bottom: 1.5px solid #222; display: flex; align-items: center; gap: 12px;">
-      <input 
-        type="text" 
-        id="live-travel-search" 
-        placeholder="Where do you want to go?" 
-        style="flex: 1; padding: 12px 0; font-size: 22px; font-weight: 500; border: none; outline: none; background: transparent; color: #111;"
-      />
+<!-- FULL-WIDTH BACKGROUND SECTION -->
+<div style="width: 100%; background: linear-gradient(to right, #19536b, #3f8654); padding: 100px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
 
-      <style>
-        #live-travel-search::placeholder {
-          color: #aaa;
-          font-weight: 400;
-        }
-      </style>
+  <!-- HEADING -->
+  <h1 style="font-size: 36px; font-weight: 700; color: white; text-align: center; margin-bottom: 40px; font-family: 'Segoe UI', sans-serif;">
+    Your Path to Dream Destination Begins Here!
+  </h1>
 
-      <button 
-        type="button" 
-        style="background: #000; border: none; cursor: pointer; padding: 10px 14px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="5" y1="12" x2="15" y2="12" />
-          <polyline points="10 6 15 12 10 18" />
-        </svg>
-      </button>
-    </div>
+  <!-- SEARCH CONTAINER -->
+  <div style="position: relative; width: 100%; max-width: 680px;">
+    <input 
+      type="text" 
+      id="live-travel-search" 
+      placeholder="Search for place, experience, or guide..." 
+      style="width: 100%; padding: 20px 60px 20px 24px; font-size: 18px; font-weight: 500; border-radius: 50px; border: none; outline: none; background: #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif;"
+    />
+    <style>
+      #live-travel-search::placeholder {
+        color: #aaa;
+        font-weight: 400;
+      }
+    </style>
 
-    <!-- PROFESSIONAL SEARCH RESULTS DROPDOWN -->
-    <div 
-      id="search-results" 
-      style="position: absolute; left: 50%; transform: translateX(-50%); width: 88%; background: #fff; border-radius: 12px; box-shadow: 0 25px 60px rgba(0,0,0,0.2); z-index: 1000; display: none; max-height: 70vh; overflow-y: auto; padding: 24px;">
-    </div>
-    
+    <!-- SEARCH ICON BUTTON -->
+    <button 
+      type="button" 
+      style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="#555" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="10" cy="10" r="7" />
+        <line x1="15" y1="15" x2="21" y2="21" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- SEARCH RESULTS CONTAINER -->
+  <div 
+    id="search-results" 
+    style="margin-top: 30px; width: 100%; max-width: 680px; background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); display: none; max-height: 400px; overflow-y: auto; padding: 24px;">
   </div>
 </div>
+
 
 
 
