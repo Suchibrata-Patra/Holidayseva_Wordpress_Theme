@@ -192,7 +192,7 @@ if (have_posts()):
 <span style="font-size:1.3rem; color:black; font-weight:600; border-bottom:0.7px solid rgb(207, 207, 207); padding-bottom:6px; display:inline-block;">
     Most Popular
 </span>
-    <a href="/your-custom-link" style="text-decoration: none; display: flex; flex: 1; gap: 7px;">
+    <a href="/your-custom-link" style="text-decoration: none; display: flex; gap: 7px;">
         <div class="related_content_card_text" >
             <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
                 Engineering, Backend / 14 July / Global
@@ -210,7 +210,7 @@ if (have_posts()):
                  style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
         </div>
     </a>
-    <a href="/your-custom-link" style="text-decoration: none; display: flex; flex: 1; gap: 15px;">
+    <a href="/your-custom-link" style="text-decoration: none; display: flex; gap: 15px;">
         <div class="related_content_card_text">
             <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
                 Engineering, Backend / 14 July / Global
@@ -228,7 +228,7 @@ if (have_posts()):
                  style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
         </div>
     </a>
-    <a href="/your-custom-link" style="text-decoration: none; display: flex; flex: 1; gap: 15px;">
+    <a href="/your-custom-link" style="text-decoration: none; display: flex; gap: 15px;">
         <div class="related_content_card_text" >
             <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
                 Engineering, Backend / 14 July / Global
