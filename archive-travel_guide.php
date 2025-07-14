@@ -123,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     resultBox.innerHTML = data.map(item => `
   <div onclick="window.location.href='${item.link}'"
        style="display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; padding: 20px 10px; border-bottom: 1px solid #eee; cursor: pointer;">
-          <span style="font-size: 2rem;color: black;font-weight: 500;">Search Results</span>
     <div style="flex: 1;">
       <p style="color: #7c7c7c; font-size: 13px; margin: 0 0 6px 0;">Engineering, Backend / 14 July / Global</p>
       <h3 style="font-size: 18px; color: #111; font-weight: 600; margin: 0 0 8px 0;">${item.title}</h3>
