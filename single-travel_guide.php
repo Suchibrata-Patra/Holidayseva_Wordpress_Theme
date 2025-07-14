@@ -204,7 +204,7 @@ if (have_posts()):
         required />
 
     <button
-        style="border: none; padding: 15px 30px; background-color: black; color: white; border-radius:0px 50px 50px 0px; font-size: 18px; cursor: pointer;border-color:black;">
+        style="border: none; padding: 15px 30px; background-color: black; color: white; border-radius:0px 50px 50px 0px; font-size: 18px; cursor: pointer;border-color:black;border:black;">
         Subscribe
     </button>
 </div>
