@@ -126,7 +126,7 @@ if (have_posts()):
 </div>
 
 <!-- Related Article Content  -->
-<section class="related-articles">
+<!-- <section class="related-articles">
     <h2 class="section-title">Related articles</h2>
     <div class="travel-guide-grid">
         <?php
@@ -190,7 +190,7 @@ if (have_posts()):
         <p>No travel guides found.</p>
         <?php endif; ?>
     </div>
-</section>
+</section> -->
 <div style="text-align: center; margin: 20px 0;">
     <span style="font-size: 1 rem; border-bottom: 1px solid black; display: inline-block;font-weight:500;">
         View more stories
