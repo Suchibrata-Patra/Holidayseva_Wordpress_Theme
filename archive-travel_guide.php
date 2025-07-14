@@ -50,35 +50,37 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
 <?php
 get_header();
 ?>
-<!-- FULL-WIDTH SEARCH SECTION -->
-<div style="width: 80%; padding: 60px 20px; box-sizing: border-box;align-items: center;justify-content: center;">
-  <div style="margin: auto; border-bottom: 2px solid #000; display: flex; align-items: center;">
-    <input 
-      type="text" 
-      id="live-travel-search" 
-      placeholder="Where do you want to go ?" 
-      style="flex: 1; padding: 16px 12px; font-size: 40px; font-weight: 500; border: none; outline: none; background: transparent;"
-    />
-    <style>
+<!-- WRAPPER to center the whole section -->
+<div style="width: 100%; display: flex; justify-content: center;">
+  <!-- MAIN SEARCH CONTAINER -->
+  <div style="width: 80%; padding: 60px 20px; box-sizing: border-box;">
+    <div style="margin: auto; border-bottom: 2px solid #000; display: flex; align-items: center;">
+      <input 
+        type="text" 
+        id="live-travel-search" 
+        placeholder="Where do you want to go ?" 
+        style="flex: 1; padding: 16px 12px; font-size: 40px; font-weight: 500; border: none; outline: none; background: transparent;"
+      />
+      <style>
         #live-travel-search::placeholder {
-  color: #dbdbdb;
-}
+          color: #dbdbdb;
+        }
+      </style>
+      <button 
+        type="button" 
+        style="background: none; border: none; cursor: pointer; padding: 10px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </button>
+    </div>
 
-    </style>
-    <button 
-      type="button" 
-      style="background: none; border: none; cursor: pointer; padding: 10px;">
-      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="5" y1="12" x2="19" y2="12" />
-        <polyline points="12 5 19 12 12 19" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- PROFESSIONAL SEARCH RESULTS DROPDOWN -->
-  <div 
-    id="search-results" 
-    style="position: absolute; top: 130px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 1000px; background: #fff; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 1000; display: none; max-height: 400px; overflow-y: auto; padding: 20px;">
+    <!-- PROFESSIONAL SEARCH RESULTS DROPDOWN -->
+    <div 
+      id="search-results" 
+      style="position: absolute; top: 130px; left: 50%; transform: translateX(-50%); width: 100%; max-width: 1000px; background: #fff; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 1000; display: none; max-height: 400px; overflow-y: auto; padding: 20px;">
+    </div>
   </div>
 </div>
 
