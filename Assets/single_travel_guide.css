@@ -283,6 +283,11 @@
 .travel-guide-section p{
     font-size: 16px;
 }
+.section-title {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
 
 .travel-guide-container h1 {
     font-size: 24px;
