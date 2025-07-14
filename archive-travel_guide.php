@@ -1,7 +1,9 @@
 <!-- This Code is responsible for generating the Travel Blog Page -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/Central_styling.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/single_travel_guide.css">
-
+<?php
+get_header();
+?>
 <br><br>
 <div style="display: flex; width: 85%; max-width: 1400px; margin: auto; border: 1px solid #eee; font-family: Arial, sans-serif;">
     
