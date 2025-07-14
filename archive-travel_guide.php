@@ -52,7 +52,7 @@ get_header();
 ?>
 <!-- FULL-WIDTH SEARCH SECTION -->
 <div style="width: 80%; padding: 60px 20px; box-sizing: border-box;">
-  <div style="max-width: 2000px; margin: auto; border-bottom: 2px solid #000; display: flex; align-items: center;">
+  <div style="margin: auto; border-bottom: 2px solid #000; display: flex; align-items: center;">
     <input 
       type="text" 
       id="live-travel-search" 
