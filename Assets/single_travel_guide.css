@@ -192,7 +192,7 @@
 .travel-guide-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* fixed 4 columns */
-    gap: 15px;
+    gap: 24px;
     width: 100%;
     max-width: 100%;
     margin-top: 20px;
