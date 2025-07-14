@@ -60,7 +60,7 @@ get_header();
       type="text" 
       id="live-travel-search" 
       placeholder="Search for place, experience, or guide..." 
-      style="width: 100%; padding: 20px 60px 20px 24px; font-size: 18px; font-weight: 500; border-radius: 50px; border: none; outline: none; background: #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif;"
+      style="width: 100%; padding: 20px 60px 20px 24px; font-size: 18px; font-weight: 500; border-radius: 0px; border: none; outline: none; background: #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif;"
     />
     <style>
       #live-travel-search::placeholder {
