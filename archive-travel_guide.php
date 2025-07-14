@@ -3,26 +3,101 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/single_travel_guide.css">
 <title>HolidaySeva - Travel Guide</title>
 <?php
+if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset($_GET['term'])) {
+    header('Content-Type: application/json');
+    $search_term = sanitize_text_field($_GET['term']);
+
+    $args = array(
+        'post_type' => 'travel_guide',
+        's' => $search_term,
+        'posts_per_page' => 10,
+        'post_status' => 'publish'
+    );
+
+    $query = new WP_Query($args);
+    $results = [];
+
+    while ($query->have_posts()) {
+        $query->the_post();
+        $results[] = [
+            'title' => get_the_title(),
+            'link' => get_permalink()
+        ];
+    }
+
+    wp_reset_postdata();
+    echo json_encode($results);
+    exit;
+}
+?>
+
+<?php
 get_header();
 ?>
-<!-- 🔍 Search Bar to Filter Travel Guides -->
-<div style="width: 85%; max-width: 1400px; margin: 30px auto 0; font-family: Arial, sans-serif;">
-    <form method="get" action="<?php echo esc_url(home_url('/')); ?>" style="display: flex; gap: 15px;">
-        <input 
-            type="text" 
-            name="s" 
-            placeholder="Search travel guides by title..." 
-            value="<?php echo get_search_query(); ?>"
-            style="flex: 1; padding: 12px 18px; font-size: 1rem; border: 1px solid #ccc; border-radius: 30px; outline: none;"
-        >
-        <input type="hidden" name="post_type" value="travel_guide">
-        <button 
-            type="submit"
-            style="padding: 12px 25px; background-color: black; color: white; border: none; border-radius: 30px; font-weight: 600; cursor: pointer;">
-            Search
-        </button>
-    </form>
+
+<!-- LIVE SEARCH BAR (No functions.php needed) -->
+<script>
+function debounce(func, delay) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), delay);
+    };
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const input = document.getElementById('live-travel-search');
+    const resultBox = document.getElementById('search-results');
+
+    input.addEventListener('input', debounce(function () {
+        const searchVal = input.value.trim();
+        if (searchVal.length < 2) {
+            resultBox.innerHTML = '';
+            resultBox.style.display = 'none';
+            return;
+        }
+
+        fetch('<?php echo admin_url("admin-ajax.php"); ?>?action=live_travel_search&term=' + encodeURIComponent(searchVal))
+            .then(res => res.json())
+            .then(data => {
+                if (data.length > 0) {
+                    resultBox.innerHTML = data.map(item =>
+                        `<div onclick="window.location.href='${item.link}'"
+                              style="padding: 10px; cursor: pointer; border-bottom: 1px solid #eee;">
+                             ${item.title}
+                         </div>`).join('');
+                    resultBox.style.display = 'block';
+                } else {
+                    resultBox.innerHTML = '<div style="padding:10px;">No results found</div>';
+                    resultBox.style.display = 'block';
+                }
+            });
+    }, 300));
+});
+</script>
+
+<div style="width: 85%; max-width: 1400px; margin: 30px auto 0; position: relative; font-family: Arial, sans-serif;">
+    <input 
+        type="text" 
+        id="live-travel-search" 
+        placeholder="Search travel guide titles..." 
+        style="width: 100%; padding: 12px 20px; font-size: 1rem; border-radius: 30px; border: 1px solid #ccc;"
+    >
+    <div id="search-results" style="
+        display: none;
+        position: absolute;
+        top: 45px;
+        width: 100%;
+        background: white;
+        border: 1px solid #ccc;
+        border-top: none;
+        border-radius: 0 0 10px 10px;
+        max-height: 300px;
+        overflow-y: auto;
+        z-index: 9999;
+    "></div>
 </div>
+
 <br><br>
 <div style="display: flex; width: 85%; max-width: 1400px; margin: auto; border: none; font-family: Arial, sans-serif;">
     
