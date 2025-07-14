@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/Central_styling.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/single_travel_guide.css">
 
-
+<br><br>
 <div style="display: flex; font-family: Arial, sans-serif; width: 100%; max-width: 1200px; margin: auto; border: 1px solid #e0e0e0;">
     
     <!-- Left Image Section -->
