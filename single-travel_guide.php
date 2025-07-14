@@ -301,63 +301,6 @@ if (have_posts()):
 
 
 
-<!-- Add this where you want the histogram to appear -->
-<canvas id="myHistogram" width="600" height="400"></canvas>
-
-<?php
-// Example PHP data (replace with dynamic WP data)
-$data = [];
-for ($i = 0; $i < 100; $i++) {
-    $data[] = rand(0, 100);
-}
-
-// Pass to JavaScript
-echo "<script>
-    const rawData = " . json_encode($data) . ";
-    
-    // Bin the data into 10 buckets
-    const binCount = 10;
-    const bins = Array(binCount).fill(0);
-    rawData.forEach(val => {
-        const index = Math.min(Math.floor(val / (100 / binCount)), binCount - 1);
-        bins[index]++;
-    });
-
-    const labels = Array.from({length: binCount}, (_, i) => {
-        const start = Math.round(i * (100 / binCount));
-        const end = Math.round((i + 1) * (100 / binCount)) - 1;
-        return `${start}-${end}`;
-    });
-
-    const ctx = document.getElementById('myHistogram').getContext('2d');
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: 'Frequency',
-                data: bins,
-                backgroundColor: 'rgba(30, 144, 255, 0.7)',
-                borderRadius: 4,
-                barPercentage: 0.8,
-                categoryPercentage: 1.0
-            }]
-        },
-        options: {
-            scales: {
-                y: { beginAtZero: true },
-                x: { ticks: { autoSkip: false } }
-            },
-            plugins: {
-                legend: { display: false }
-            }
-        }
-    });
-</script>";
-?>
-
-<!-- Chart.js CDN (Add this once per page) -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <?php
     endwhile;
