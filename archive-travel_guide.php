@@ -85,7 +85,8 @@ get_header();
     id="search-results" 
     style="margin-top: 10px; width: 80%;background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); display: none; max-height: 50vh; overflow-y: auto; padding: 24px;">
   </div>
-  <div style="display: flex; width: 85%; max-width: 1400px; margin: auto; border: none; font-family: Arial, sans-serif;">
+
+  <div style="display: flex; width: 85%; max-width: 1400px; margin: auto; border: none;">
     
     <!-- Left Image Section (80%) -->
     <div style="flex: 7;">
@@ -93,7 +94,7 @@ get_header();
     </div>
     
     <!-- Right Content Section (20%) -->
-    <div style="flex: 3; background-color: #f9f9f9; padding: 40px; margin-top:40px;">
+    <div style="flex: 3; background-color: #f9f9f9; padding: 40px;">
         <p style="font-size: 12px; color: #666; margin-bottom: 10px;">inhouse AI, ML developed by Holidayseva</p>
         
         <h2 style="font-size: 24px; margin-bottom: 20px; line-height: 1.3;">
