@@ -116,7 +116,7 @@ add_action('save_post_travel_guide', function($post_id) {
     if (!isset($_POST['travel_guide_nonce']) || !wp_verify_nonce($_POST['travel_guide_nonce'], 'travel_guide_nonce_action')) return;
 
     $fields = [
-        'location', 'duration', 'best_season', 'where_to_stay', 'top_reasons', 'featured_image',
+        'location', 'duration', 'best_season', 'where_to_stay', 'top_reasons','things_to_do' ,'featured_image',
         'intro', 'overview', 'how_to_get', 'eat_drink', 'cultural_tips', 'budget', 'itinerary',
         'personal_exp', 'travel_tips', 'resources', 'conclusion', 'top_attractions'
     ];
