@@ -83,7 +83,7 @@ get_header();
       <div>
         <style>
             .body{
-                background-color: black;
+                background-color: black !important;
             }
         </style>
       </div>
