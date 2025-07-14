@@ -7,7 +7,7 @@
         <?php
         $travel_guides = new WP_Query(array(
             'post_type' => 'travel_guide',
-            'posts_per_page' => 5,  // Fetch only 5
+            'posts_per_page' => 15,  // Fetch only 5
             'post_status' => 'publish'
         ));
 
