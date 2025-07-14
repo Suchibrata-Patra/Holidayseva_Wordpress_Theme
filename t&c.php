@@ -119,9 +119,9 @@ get_header(); ?>
   <!DOCTYPE html>
 <html>
 
-<body>
+<body style="margin-top:-30px;">
   <div class="legalPages">
-    <div class="html not-front not-logged-in no-sidebars page-node page-node- page-node-4161 node-type-legal-page">
+    <div class="html not-front not-logged-in no-sidebars page-node page-node- page-node-4161 node-type-legal-page" style="padding:0% 10%;">
       <div id="block-block-29" class="block block-block">
       </div>
       <div class="grid_976 top_section">
