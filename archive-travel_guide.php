@@ -50,23 +50,17 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
 <?php
 get_header();
 ?>
-<div style="position: relative; max-width: 600px; margin: auto; border-bottom: 1px solid #000; display: flex; align-items: center;">
+<div style="position: relative; max-width: 500px; margin: auto;">
   <input 
     type="text" 
     id="live-travel-search" 
-    placeholder="Search Jobs" 
-    style="flex: 1; padding: 10px 12px; font-size: 18px; border: none; outline: none; background: transparent; color: #333; font-weight: 500;"
+    placeholder="Where do you want to go?" 
+    style="width: 100%; padding: 14px 20px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); transition: border-color 0.2s ease, box-shadow 0.2s ease;"
+    onfocus="this.style.borderColor='#000'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.15)';"
+    onblur="this.style.borderColor='#ccc'; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.08)';"
   />
-  <button 
-    type="submit" 
-    style="background: none; border: none; cursor: pointer; padding: 10px;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right">
-      <line x1="5" y1="12" x2="19" y2="12" />
-      <polyline points="12 5 19 12 12 19" />
-    </svg>
-  </button>
+  <div id="search-results" style="position: absolute; top: 105%; left: 0; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; display: none; max-height: 300px; overflow-y: auto;"></div>
 </div>
-
 
 <!-- LIVE SEARCH BAR (No functions.php needed) -->
 <script>
