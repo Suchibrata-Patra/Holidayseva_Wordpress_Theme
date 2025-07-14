@@ -163,6 +163,19 @@
         }
     }
 </style>
+<div
+    style="display: flex; justify-content: center; align-items: center;background-color: rgb(229, 229, 229); padding: 20px; ">
+    <!-- <label for="email-subscribe" style="font-size: 18px; font-weight: 500;">Stay up to date</label> -->
+
+    <input type="email" id="email-subscribe" placeholder="Enter your email"
+        style="padding: 15px 20px; font-size: 18px; border: 1px solid #ccc; border-radius: 50px 0px 0px 50px; width: 300px;"
+        required />
+
+    <button
+        style="border: none; padding: 15px 30px; background-color: black; color: white; border-radius:0px 50px 50px 0px; font-size: 18px; cursor: pointer;border-color:black;border:black;" id="subscribe_button">
+        Subscribe
+    </button>
+</div>
 <footer class="holidayseva_main_footer">
     <section class="footer_columns_group">
         <nav class="footer_column" aria-label="About Holidayseva">
