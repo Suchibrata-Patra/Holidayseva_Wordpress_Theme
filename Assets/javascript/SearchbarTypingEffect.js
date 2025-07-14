@@ -61,4 +61,7 @@
 
     // Start the typing effect
     typeEffect();
-    
+
+    // model = function(){
+        // const Modular_fucntion ="Const";
+    // }
