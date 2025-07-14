@@ -57,14 +57,11 @@ get_header();
       type="text" 
       id="live-travel-search" 
       placeholder="Where do you want to go ?" 
-      style="flex: 1; padding: 16px 12px; font-size: 40px; font-weight: 500; border: none; outline: none; background: transparent; color: red !important;"
+      style="flex: 1; padding: 16px 12px; font-size: 40px; font-weight: 500; border: none; outline: none; background: transparent;"
     />
     <style>
         #live-travel-search::placeholder {
-  color: #d90000;
-  font-style: italic;
-  letter-spacing: 0.5px;
-  opacity: 0.9;
+  color: #dbdbdb;
 }
 
     </style>
