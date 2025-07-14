@@ -68,21 +68,8 @@ foreach ($all_fields as $field) {
                     <input type="text" name="tg_<?php echo $field; ?>" id="tg_<?php echo $field; ?>" class="widefat"
                         value="<?php echo esc_attr($meta[$field]); ?>">
                 <?php else: ?>
-                    <!-- <textarea name="tg_<?php echo $field; ?>" id="tg_<?php echo $field; ?>" class="widefat" rows="3"><?php echo esc_textarea($meta[$field]); ?></textarea> -->
-                     <?php
-wp_editor(
-    $meta[$field],              // Content
-    'tg_' . $field,             // Editor ID
-    [
-        'textarea_name' => 'tg_' . $field,
-        'media_buttons' => true,           // Enables "Add Media" button
-        'teeny'         => false,          // Set to true for minimal toolbar
-        'textarea_rows' => 8,
-        'quicktags'     => true            // Shows HTML view tabs
-    ]
-);
-?>
-
+                    <textarea name="tg_<?php echo $field; ?>" id="tg_<?php echo $field; ?>" class="widefat" rows="3"><?php echo esc_textarea($meta[$field]); ?></textarea>
+                     
                 <?php endif; ?>
             </p>
         <?php endforeach; ?>

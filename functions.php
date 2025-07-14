@@ -8,6 +8,10 @@ function holidayseva_register_menus() {
 add_action('after_setup_theme', 'holidayseva_register_menus');
 add_theme_support('menus'); // Fallback support
 
+add_action('admin_enqueue_scripts', function () {
+    wp_enqueue_editor(); // Ensures TinyMCE, quicktags, media buttons, etc. load
+});
+
 // Include meta box logic
 require_once get_template_directory() . '/Forms/TourDetailsEntry.php';
 
