@@ -308,7 +308,6 @@
     padding: 10px 5px;
 }
  .related_content_card_text{
-    display: flex;
     flex-direction: row;
  }
  .related_content_card_image img {
