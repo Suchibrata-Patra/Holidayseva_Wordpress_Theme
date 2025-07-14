@@ -145,41 +145,41 @@ if (have_posts()):
                 }, $categories);
                 $categories_list = implode(', ', $category_names);
 
-                // Check if the post has thumbnail
-                $image_html = '';
+                // Image logic: featured image or fallback
                 if (has_post_thumbnail()) {
                     $image_html = get_the_post_thumbnail(null, 'medium_large');
                 } else {
-                    $image_html = '<img src="' . esc_url($featured_image_url) . '" alt="Default image">';
+                    $default_img_url = get_template_directory_uri() . '/images/default.jpg'; // Path to your default image
+                    $image_html = '<img src="' . esc_url($default_img_url) . '" alt="Default image">';
                 }
                 ?>
-        <div class="travel-guide-card">
-            <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
-                <div class="related_content_card_image">
-                    <?php echo $image_html; ?>
+                <div class="travel-guide-card">
+                    <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
+                        <div class="related_content_card_image">
+                            <?php echo $image_html; ?>
+                        </div>
+                        <div class="related_content_card_content">
+                            <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel Guide</span>
+                            <p class="related_content_card_meta">
+                                <?php echo esc_html($categories_list); ?>
+                            </p>
+                            <h3 class="related_content_card_title">
+                                <?php the_title(); ?>
+                            </h3>
+                            <p class="related_content_card_date">
+                                <?php echo get_the_date(); ?> / Global
+                            </p>
+                        </div>
+                    </a>
                 </div>
-                <div class="related_content_card_content">
-                    <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel
-                        Guide</span>
-                    <p class="related_content_card_meta">
-                        <?php echo esc_html($categories_list); ?>
-                    </p>
-                    <h3 class="related_content_card_title">
-                        <?php the_title(); ?>
-                    </h3>
-                    <p class="related_content_card_date">
-                        <?php echo get_the_date(); ?> / Global
-                    </p>
-                </div>
-            </a>
-        </div>
-        <?php endwhile;
+            <?php endwhile;
             wp_reset_postdata();
         else: ?>
-        <p>No travel guides found.</p>
+            <p>No travel guides found.</p>
         <?php endif; ?>
     </div>
 </section>
+
 
 
 <div style="display: flex; justify-content: center; align-items: center;background-color: rgb(229, 229, 229); padding: 20px; ">
