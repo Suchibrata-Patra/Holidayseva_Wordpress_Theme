@@ -310,7 +310,7 @@ get_footer();
             </p>
         </div>
         <div class="related_content_card_image" style="width: 80px; min-width: 80px; height: 60px; overflow: hidden;">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/your-custom.jpg'); ?>" 
+            <img src="https://blog.uber-cdn.com/cdn-cgi/image/width=300,quality=80,onerror=redirect,format=auto/wp-content/uploads/2025/05/cover-photo-17466478352548.png" 
                  alt="Special Feature" 
                  style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
         </div>
@@ -328,7 +328,7 @@ get_footer();
             </p>
         </div>
         <div class="related_content_card_image" style="width: 80px; min-width: 80px; height: 60px; overflow: hidden;">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/your-custom.jpg'); ?>" 
+            <img src="https://blog.uber-cdn.com/cdn-cgi/image/width=300,quality=80,onerror=redirect,format=auto/wp-content/uploads/2025/05/cover-photo-17478702183017.png" 
                  alt="Special Feature" 
                  style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
         </div>
@@ -346,7 +346,7 @@ get_footer();
             </p>
         </div>
         <div class="related_content_card_image" style="width: 80px; min-width: 80px; height: 60px; overflow: hidden;">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/your-custom.jpg'); ?>" 
+            <img src="https://blog.uber-cdn.com/cdn-cgi/image/width=300,quality=80,onerror=redirect,format=auto/wp-content/uploads/2025/05/cover-17484716129443.jpg" 
                  alt="Special Feature" 
                  style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
         </div>
