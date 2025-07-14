@@ -26,7 +26,7 @@
     <!-- For getting Access of centralised Colour Scheme -->
     <link rel="stylesheet" href="<?php echo $template_uri; ?>/Assets/holidayseva_colors.css">
 </head>
-
+test
 
 <body style="margin:0px !important;">
 <!-- Main Header Content -->
