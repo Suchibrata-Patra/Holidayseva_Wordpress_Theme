@@ -26,7 +26,7 @@ get_header();
         </p>
         
         <p style="font-size: 13px; color: #999; margin-top: 20px;">2 July / Global</p>
-        <button style="padding:20px 30px; background-black;border:none;border-radius:50px;color:white;">Know More</button>
+        <button style="padding:20px 30px; background-color:black;border:none;border-radius:50px;color:white;">Know More</button>
     </div>
 
 </div>
