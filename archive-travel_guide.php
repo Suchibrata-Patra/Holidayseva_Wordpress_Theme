@@ -43,6 +43,13 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
     exit;
 }
 ?>
+
+
+
+
+<?php
+get_header();
+?>
 <div style="position: relative; max-width: 500px; margin: auto;">
   <input 
     type="text" 
@@ -54,12 +61,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
   />
   <div id="search-results" style="position: absolute; top: 105%; left: 0; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; display: none; max-height: 300px; overflow-y: auto;"></div>
 </div>
-
-
-
-<?php
-get_header();
-?>
 
 <!-- LIVE SEARCH BAR (No functions.php needed) -->
 <script>
@@ -110,29 +111,6 @@ fetch('<?php echo esc_url(home_url('/wp-json/holidayseva/v1/travel-search')); ?>
     }, 300));
 });
 </script>
-
-<div style="width: 85%; max-width: 1400px; margin: 30px auto 0; position: relative; font-family: Arial, sans-serif;">
-    <input 
-        type="text" 
-        id="live-travel-search" 
-        placeholder="Search travel guide titles..." 
-        style="width: 100%; padding: 12px 20px; font-size: 1rem; border-radius: 30px; border: 1px solid #ccc;"
-    >
-<div id="search-results" style="
-    display: none;
-    position: absolute;
-    top: 52px;
-    width: 100%;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 0 0 10px 10px;
-    max-height: 350px;
-    overflow-y: auto;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    z-index: 9999;
-"></div>
-
-</div>
 
 <br><br>
 <div style="display: flex; width: 85%; max-width: 1400px; margin: auto; border: none; font-family: Arial, sans-serif;">
