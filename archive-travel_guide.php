@@ -18,14 +18,15 @@ get_header();
         <p style="font-size: 12px; color: #666; margin-bottom: 10px;">Engineering, Data / ML, Uber AI</p>
         
         <h2 style="font-size: 24px; margin-bottom: 20px; line-height: 1.3;">
-            Reinforcement Learning for Modeling Marketplace Balance
+            Reinforcement Learning for Picking Best Tour Destination
         </h2>
         
         <p style="font-size: 15px; line-height: 1.6; color: #444;">
-            Uber uses reinforcement learning to optimize matching and better balance drivers with demand in real time. By considering long-term outcomes, we improve efficiency and increase driver earnings by proactively aligning drivers with demand.
+            At HolidaySeva, we leverage cutting-edge advancements in Machine Learning and Artificial Intelligence to intelligently analyze vast datasets, detect travel trends, and craft hyper-personalized travel itineraries. Our systems continuously learn and adapt to ensure you discover not just good plans, but the perfect travel experiences — curated uniquely for your preferences, timing, and lifestyle.
         </p>
         
         <p style="font-size: 13px; color: #999; margin-top: 20px;">2 July / Global</p>
+        <button style="padding:20px 30px; background-black;border:none;border-radius:50px;color:white;">Know More</button>
     </div>
 
 </div>
