@@ -80,6 +80,13 @@ get_header();
     <div 
       id="search-results" 
       style="position: absolute;left: 50%; transform: translateX(-50%); width: 88%;background: #fff; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 1000; display: none; max-height: 80vh; overflow-y: auto; padding: 20px;">
+      <div>
+        <style>
+            .body{
+                background-color: black;
+            }
+        </style>
+      </div>
     </div>
   </div>
 </div>
