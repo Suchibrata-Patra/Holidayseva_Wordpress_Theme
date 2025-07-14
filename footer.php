@@ -217,12 +217,12 @@
         <nav class="horizontal_button_bar"
             style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;font-weight:500;text-decoration: underline;"
             aria-label="Legal Navigation">
-            <a href="#">Terms of Use</a>
-            <a href="#">Privacy and Cookies Statement</a>
-            <a href="#">Cookie Consent</a>
-            <a href="#">Site Map</a>
-            <a href="#">How the Site Works</a>
-            <a href="#">Contact Us</a>
+            <a href="#" style="color:black;">Terms of Use</a>
+            <a href="#" style="color:black;">Privacy and Cookies Statement</a>
+            <a href="#" style="color:black;">Cookie Consent</a>
+            <a href="#" style="color:black;">Site Map</a>
+            <a href="#" style="color:black;">How the Site Works</a>
+            <a href="#" style="color:black;">Contact Us</a>
         </nav>
     </div>
 
