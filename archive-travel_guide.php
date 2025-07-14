@@ -80,6 +80,7 @@ get_header();
     <div 
       id="search-results" 
       style="position: absolute;left: 50%; transform: translateX(-50%); width: 88%;background: #fff; border-radius: 12px; box-shadow: 0 30px 50px rgba(0,0,0,0.4); z-index: 1000; display: none; max-height: 80vh; overflow-y: auto; padding: 24px;">
+      <span style="font-size: 2rem;color: black;font-weight: 500;">Search Results</span>
     </div>
   </div>
 </div>
