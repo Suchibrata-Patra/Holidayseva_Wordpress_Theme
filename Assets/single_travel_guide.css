@@ -211,9 +211,11 @@
 }
 
 .travel-guide-card:hover {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 
+                0 10px 10px rgba(0, 0, 0, 0.22);
     transition: all 0.3s ease;
 }
+
 
 
 .related_content_card_image img {
