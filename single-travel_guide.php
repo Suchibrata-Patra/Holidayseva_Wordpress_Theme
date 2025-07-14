@@ -19,8 +19,8 @@ if (have_posts()):
         }
 
         // Main Featured Image
-        // $featured_image_url = $meta['featured_image'] ? wp_get_attachment_url($meta['featured_image']) : '';
-        $featured_image_url = 'https://images.unsplash.com/photo-1751013781844-fa6a78089e49?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+        $featured_image_url = $meta['featured_image'] ? wp_get_attachment_url($meta['featured_image']) : '';
+        // $featured_image_url = 'https://images.unsplash.com/photo-1751013781844-fa6a78089e49?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
         // Section-specific images
         $image_fields = [
