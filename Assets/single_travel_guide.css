@@ -263,6 +263,18 @@
 
 /* Mobile Responsive Query */
 @media only screen and (max-width: 768px){
+    .holidayseva_blog_hero_section{
+        height: 30vh;
+    }
+    .holidayseva_travel_guide_hero_title{
+        font-size: 27px;
+    }
+    .holidayseva_travel_guide_author-name{
+        font-size: 11px;
+    }
+    .holidayseva_travel_guide_author-date{
+        font-size: 10px;
+    }
     .travel-guide-container{
         max-width: 98%;
         /* padding:12px; */
