@@ -171,7 +171,7 @@ if (have_posts()):
                         <?php
     $title = get_the_title();
     if (mb_strlen($title) > 50) {
-        echo esc_html(mb_substr($title, 0, 47)) . '...';
+        echo esc_html(mb_substr($title, 0, 48)) . '...';
     } else {
         echo esc_html($title);
     }
