@@ -63,7 +63,7 @@ if (have_posts()):
     <span style="font-size:12px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering, Backend, Data /
         ML</span>
     <br>
-    <!-- <div class="travel-guide-meta">
+    <div class="travel-guide-meta">
         <?php if ($meta['location']): ?>
         <p><strong>
                 <?php echo esc_html($meta['location']); ?>
@@ -79,7 +79,7 @@ if (have_posts()):
             <?php echo esc_html($meta['best_season']); ?>
         </p>
         <?php endif; ?>
-    </div> -->
+    </div>
 
     <?php
     $sections = [
@@ -116,7 +116,9 @@ if (have_posts()):
         }
         ?>
         <p>
-            <?php echo esc_html($meta[$key]); ?>
+           <div class="section-content">
+    <?php echo wp_kses_post($meta[$key]); ?>
+</div>
         </p>
     </div>
     <?php
