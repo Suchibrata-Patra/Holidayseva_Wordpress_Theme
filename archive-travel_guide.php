@@ -53,25 +53,29 @@ get_header();
 <!-- WRAPPER to center the whole section -->
 <div style="width: 100%; display: flex; justify-content: center;">
   <!-- MAIN SEARCH CONTAINER -->
-  <div style="width: 88%; padding: 60px 20px; box-sizing: border-box;">
-    <div style="margin: auto; border-bottom: 2px solid #000; display: flex; align-items: center;">
+  <div style="width: 88%; padding: 40px 0; box-sizing: border-box; max-width: 1200px;">
+    
+    <div style="margin: auto; border-bottom: 1.5px solid #222; display: flex; align-items: center; gap: 12px;">
       <input 
         type="text" 
         id="live-travel-search" 
-        placeholder="Where do you want to go ?" 
-        style="flex: 1; padding: 3px 12px 3px 0px; font-size: 40px; font-weight: 600; border: none; outline: none; background: transparent;"
+        placeholder="Where do you want to go?" 
+        style="flex: 1; padding: 12px 0; font-size: 22px; font-weight: 500; border: none; outline: none; background: transparent; color: #111;"
       />
+
       <style>
         #live-travel-search::placeholder {
-          color: #dbdbdb;
+          color: #aaa;
+          font-weight: 400;
         }
       </style>
+
       <button 
         type="button" 
-        style="background:transparent; border: none; cursor: pointer; padding: 10px;color:white;border-radius: 50px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#000" stroke-width="5" stroke-linecap="square" stroke-linejoin="round">
-          <line x1="5" y1="12" x2="19" y2="12" />
-          <polyline points="12 5 19 12 12 19" />
+        style="background: #000; border: none; cursor: pointer; padding: 10px 14px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="15" y2="12" />
+          <polyline points="10 6 15 12 10 18" />
         </svg>
       </button>
     </div>
@@ -79,10 +83,12 @@ get_header();
     <!-- PROFESSIONAL SEARCH RESULTS DROPDOWN -->
     <div 
       id="search-results" 
-      style="position: absolute;left: 50%; transform: translateX(-50%); width: 88%;background: #fff; border-radius: 12px; box-shadow: 0 30px 50px rgba(0,0,0,0.4); z-index: 1000; display: none; max-height: 80vh; overflow-y: auto; padding: 24px;">
+      style="position: absolute; left: 50%; transform: translateX(-50%); width: 88%; background: #fff; border-radius: 12px; box-shadow: 0 25px 60px rgba(0,0,0,0.2); z-index: 1000; display: none; max-height: 70vh; overflow-y: auto; padding: 24px;">
     </div>
+    
   </div>
 </div>
+
 
 
 <!-- LIVE SEARCH BAR (No functions.php needed) -->
