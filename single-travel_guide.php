@@ -188,6 +188,7 @@ if (have_posts()):
         <?php endif; ?>
 
         <!-- ✅ Manually added 6th card styled like 'Most Popular' layout -->
+         <span style="font-size:1.3rem; color:black; font-weight:600; border-bottom:0.7px solid rgb(207, 207, 207); padding-bottom:6px; display:inline-block;">Most Popular</span>
          <div style="display: flex; flex-direction: column; gap: 20px;">
     <!-- Card 1 -->
     <div style="display: flex; align-items: flex-start; gap: 15px;">
@@ -255,7 +256,6 @@ if (have_posts()):
         </a>
     </div>
 </div>
-
 
 
 
