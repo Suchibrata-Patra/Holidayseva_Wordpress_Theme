@@ -69,7 +69,7 @@ get_header();
       <button 
         type="button" 
         style="background: black; border: none; cursor: pointer; padding: 10px;color:white;border-radius: 50px;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
           <line x1="5" y1="12" x2="19" y2="12" />
           <polyline points="12 5 19 12 12 19" />
         </svg>
