@@ -123,7 +123,9 @@ add_action('save_post_travel_guide', function($post_id) {
 
     foreach ($fields as $field) {
         if (isset($_POST["tg_$field"])) {
-            update_post_meta($post_id, "_tg_$field", sanitize_text_field($_POST["tg_$field"]));
+            // update_post_meta($post_id, "_tg_$field", sanitize_text_field($_POST["tg_$field"]));
+            update_post_meta($post_id, '_tg_' . $field, wp_kses_post($_POST['tg_' . $field]));
+
         }
         $image_field = "tg_{$field}_image";
         if (isset($_POST[$image_field])) {

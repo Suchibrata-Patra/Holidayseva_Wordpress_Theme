@@ -58,22 +58,42 @@ foreach ($all_fields as $field) {
 <div class="tg-meta-container">
 
     <!-- TEXT INPUT COLUMN -->
-    <div class="tg-main">
-        <h1>Travel Guide Content</h1>
-        <?php foreach ($fields as $field): ?>
-            <?php if ($field === 'featured_image') continue; ?>
-            <p>
-                <label for="tg_<?php echo $field; ?>"><strong><?php echo ucwords(str_replace('_', ' ', $field)); ?>:</strong></label><br>
-                <?php if (in_array($field, ['location', 'duration', 'best_season'])): ?>
-                    <input type="text" name="tg_<?php echo $field; ?>" id="tg_<?php echo $field; ?>" class="widefat"
-                        value="<?php echo esc_attr($meta[$field]); ?>">
-                <?php else: ?>
-                    <textarea name="tg_<?php echo $field; ?>" id="tg_<?php echo $field; ?>" class="widefat" rows="3"><?php echo esc_textarea($meta[$field]); ?></textarea>
-                     
-                <?php endif; ?>
-            </p>
-        <?php endforeach; ?>
-    </div>
+   <!-- TEXT INPUT COLUMN -->
+<div class="tg-main">
+    <h1>Travel Guide Content</h1>
+    <?php foreach ($fields as $field): ?>
+        <?php if ($field === 'featured_image') continue; ?>
+        <div style="margin-bottom: 25px;">
+            <label for="tg_<?php echo $field; ?>">
+                <strong><?php echo ucwords(str_replace('_', ' ', $field)); ?>:</strong>
+            </label><br>
+
+            <?php if (in_array($field, ['location', 'duration', 'best_season'])): ?>
+                <input 
+                    type="text" 
+                    name="tg_<?php echo $field; ?>" 
+                    id="tg_<?php echo $field; ?>" 
+                    class="widefat" 
+                    value="<?php echo esc_attr($meta[$field]); ?>">
+            <?php else: ?>
+                <?php
+                wp_editor(
+                    $meta[$field],                      // Field value
+                    'tg_' . $field,                    // Editor ID (must be unique)
+                    [
+                        'textarea_name' => 'tg_' . $field, // Form name for saving
+                        'media_buttons' => true,
+                        'textarea_rows' => 8,
+                        'teeny'         => false,
+                        'quicktags'     => true,
+                    ]
+                );
+                ?>
+            <?php endif; ?>
+        </div>
+    <?php endforeach; ?>
+</div>
+
 
     <!-- IMAGE UPLOAD COLUMN -->
     <div class="tg-sidebar">
