@@ -53,7 +53,7 @@ if (have_posts()):
     rel="stylesheet">
 
 
-    <div class="travel-guide-container">
+<div class="travel-guide-container">
     <span style="font-size:14px;color:#AFAFAF;margin-top:80px !important;line-height:20px;">Engineering <span
             style="color:rgb(94, 94, 94);">, Backend, Data / ML</span></span>
     <h1>
@@ -153,46 +153,54 @@ if (have_posts()):
                     $image_url = '<img src="' . esc_url(get_template_directory_uri() . '/images/default.jpg') . '" alt="Default image">';
                 }
                 ?>
-                <div class="travel-guide-card">
-                    <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
-                        <div class="related_content_card_image">
-                            <?php echo $image_url; ?>
-                        </div>
-                        <div class="related_content_card_content">
-                            <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel Guide</span>
-                            <p class="related_content_card_meta">
-                                <?php echo esc_html($categories_list); ?>
-                            </p>
-                            <h3 class="related_content_card_title">
-                                s
-                                <?php the_title(); ?>
-                            </h3>
-                            <p class="related_content_card_date">
-                                <?php echo get_the_date(); ?> / Global
-                            </p>
-                        </div>
-                    </a>
+        <div class="travel-guide-card">
+            <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
+                <div class="related_content_card_image">
+                    <?php echo $image_url; ?>
                 </div>
+                <div class="related_content_card_content">
+                    <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel
+                        Guide</span>
+                    <p class="related_content_card_meta">
+                        <?php echo esc_html($categories_list); ?>
+                    </p>
+                    <!-- <h3 class="related_content_card_title">
+                                <?php the_title(); ?>
+                            </h3> -->
+                    <h3 class="related_content_card_title">
+                        <?php
+    $title = get_the_title();
+    if (mb_strlen($title) > 50) {
+        echo esc_html(mb_substr($title, 0, 47)) . '...';
+    } else {
+        echo esc_html($title);
+    }
+    ?>
+                    </h3>
+
+                    <p class="related_content_card_date">
+                        <?php echo get_the_date(); ?> / Global
+                    </p>
+                </div>
+            </a>
+        </div>
         <?php endwhile;
             wp_reset_postdata();
         else: ?>
-            <p>No travel guides found.</p>
+        <p>No travel guides found.</p>
         <?php endif; ?>
     </div>
 </section>
 
 
 
-<div style="display: flex; justify-content: center; align-items: center;background-color: rgb(229, 229, 229); padding: 20px; ">
+<div
+    style="display: flex; justify-content: center; align-items: center;background-color: rgb(229, 229, 229); padding: 20px; ">
     <label for="email-subscribe" style="font-size: 18px; font-weight: 500;">Stay up to date</label>
 
-    <input 
-        type="email" 
-        id="email-subscribe" 
-        placeholder="Enter your email" 
+    <input type="email" id="email-subscribe" placeholder="Enter your email"
         style="padding: 15px 20px; font-size: 18px; border: 1px solid #ccc; border-radius: 10px 0px 0px 10px; width: 300px;"
-        required
-    />
+        required />
 
     <button
         style="border: none; padding: 15px 30px; background-color: black; color: white; border-radius:0px 10px 10px 0px; font-size: 18px; cursor: pointer;">
