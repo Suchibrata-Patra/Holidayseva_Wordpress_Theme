@@ -5,7 +5,6 @@
         justify-content: space-between;
         align-items: flex-start;
         background-color: #f2f2f2;
-        color:black;
     }
 
     .holidayseva_main_footer a:hover {
@@ -23,6 +22,7 @@
     }
 
     .holidayseva_main_footer a {
+        color: black
     }
 
     .footer_column strong {
@@ -41,6 +41,7 @@
     .footer_column li {
         margin-bottom: 4px;
         font-size: 0.9rem;
+        color: #000000;
         cursor: pointer;
         font-weight: 300;
     }
