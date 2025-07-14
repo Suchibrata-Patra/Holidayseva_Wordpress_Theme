@@ -125,7 +125,7 @@
         }
 
         .horizontal_button_bar a {
-            color: black;
+            color: black !important;
         }
 
         .footer_second_part>div:last-child {
