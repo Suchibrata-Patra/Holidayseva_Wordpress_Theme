@@ -131,118 +131,9 @@ if (have_posts()):
     <div class="travel-guide-grid">
         <?php
         $travel_guides = new WP_Query(array(
-            'post_type'      => 'travel_guide',
-            'posts_per_page' => 6,
-            'post_status'    => 'publish'
-        ));
-
-        if ($travel_guides->have_posts()):
-            while ($travel_guides->have_posts()):
-                $travel_guides->the_post();
-                $categories = get_the_category();
-                $category_names = array_map(function ($cat) {
-                    return $cat->name;
-                }, $categories);
-                $categories_list = implode(', ', $category_names);
-
-                // Custom featured image logic
-                $custom_feat_id = get_post_meta(get_the_ID(), '_tg_featured_image', true);
-                if ($custom_feat_id) {
-                    $image_url = wp_get_attachment_image($custom_feat_id, 'medium_large');
-                } else {
-                    $image_url = '<img src="' . esc_url(get_template_directory_uri() . '/images/default.jpg') . '" alt="Default image">';
-                }
-                ?>
-        <div class="travel-guide-card">
-            <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
-                <div class="related_content_card_image">
-                    <?php echo $image_url; ?>
-                </div>
-                <div class="related_content_card_content">
-                    <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel
-                        Guide</span>
-                    <p class="related_content_card_meta">
-                        <?php echo esc_html($categories_list); ?>
-                    </p>
-                    <!-- <h3 class="related_content_card_title">
-                                <?php the_title(); ?>
-                            </h3> -->
-                    <h3 class="related_content_card_title">
-                        <?php
-    $title = get_the_title();
-    if (mb_strlen($title) > 50) {
-        echo esc_html(mb_substr($title, 0, 48)) . '...';
-    } else {
-        echo esc_html($title);
-    }
-    ?>
-                    </h3>
-
-                    <p class="related_content_card_date">
-                        <?php echo get_the_date(); ?> / Global
-                    </p>
-                </div>
-            </a>
-        </div>
-        <?php endwhile;
-            wp_reset_postdata();
-        else: ?>
-        <p>No travel guides found.</p>
-        <?php endif; ?>
-    </div>
-</section>
-<div style="text-align: center; margin: 20px 0;">
-    <span style="font-size: 1 rem; border-bottom: 1px solid black; display: inline-block;font-weight:500;">
-        View more stories
-    </span>
-</div>
-
-
-
-
-<div
-    style="display: flex; justify-content: center; align-items: center;background-color: rgb(229, 229, 229); padding: 20px; ">
-    <!-- <label for="email-subscribe" style="font-size: 18px; font-weight: 500;">Stay up to date</label> -->
-
-    <input type="email" id="email-subscribe" placeholder="Enter your email"
-        style="padding: 15px 20px; font-size: 18px; border: 1px solid #ccc; border-radius: 50px 0px 0px 50px; width: 300px;"
-        required />
-
-    <button
-        style="border: none; padding: 15px 30px; background-color: black; color: white; border-radius:0px 50px 50px 0px; font-size: 18px; cursor: pointer;border-color:black;border:black;">
-        Subscribe
-    </button>
-</div>
-
-
-<?php
-    endwhile;
-endif;
-get_footer();
-?>
-<style>
-    .holidayseva_blog_hero_section {
-        position: relative;
-        height: 70vh;
-        background: url('<?php echo esc_url($featured_image_url); ?>') no-repeat center center / cover;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        text-align: center;
-        overflow: hidden;
-    }
-</style>
-
-
-<section class="related-articles">
-    <h2 class="section-title">Related articles</h2>
-    <div class="travel-guide-grid">
-        <?php
-        $travel_guides = new WP_Query(array(
-            'post_type'      => 'travel_guide',
-            'posts_per_page' => 5, // Fetch only 5
-            'post_status'    => 'publish'
+            'post_type' => 'travel_guide',
+            'posts_per_page' => 5,  // Fetch only 5
+            'post_status' => 'publish'
         ));
 
         if ($travel_guides->have_posts()):
@@ -275,13 +166,13 @@ get_footer();
                     </p>
                     <h3 class="related_content_card_title">
                         <?php
-    $title = get_the_title();
-    if (mb_strlen($title) > 50) {
-        echo esc_html(mb_substr($title, 0, 48)) . '...';
-    } else {
-        echo esc_html($title);
-    }
-    ?>
+                        $title = get_the_title();
+                        if (mb_strlen($title) > 50) {
+                            echo esc_html(mb_substr($title, 0, 48)) . '...';
+                        } else {
+                            echo esc_html($title);
+                        }
+                        ?>
                     </h3>
                     <p class="related_content_card_date">
                         <?php echo get_the_date(); ?> / Global
@@ -355,4 +246,48 @@ get_footer();
 
 
     </div>
+
+<div style="text-align: center; margin: 20px 0;">
+    <span style="font-size: 1 rem; border-bottom: 1px solid black; display: inline-block;font-weight:500;">
+        View more stories
+    </span>
+</div>
 </section>
+
+
+
+
+
+<div
+    style="display: flex; justify-content: center; align-items: center;background-color: rgb(229, 229, 229); padding: 20px; ">
+    <!-- <label for="email-subscribe" style="font-size: 18px; font-weight: 500;">Stay up to date</label> -->
+
+    <input type="email" id="email-subscribe" placeholder="Enter your email"
+        style="padding: 15px 20px; font-size: 18px; border: 1px solid #ccc; border-radius: 50px 0px 0px 50px; width: 300px;"
+        required />
+
+    <button
+        style="border: none; padding: 15px 30px; background-color: black; color: white; border-radius:0px 50px 50px 0px; font-size: 18px; cursor: pointer;border-color:black;border:black;">
+        Subscribe
+    </button>
+</div>
+
+
+<?php
+    endwhile;
+endif;
+get_footer();
+?>
+<style>
+    .holidayseva_blog_hero_section {
+        position: relative;
+        height: 70vh;
+        background: url('<?php echo esc_url($featured_image_url); ?>') no-repeat center center / cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-align: center;
+        overflow: hidden;
+    }
+</style>
