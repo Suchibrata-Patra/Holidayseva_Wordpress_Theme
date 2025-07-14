@@ -76,6 +76,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const input = document.getElementById('live-travel-search');
     const resultBox = document.getElementById('search-results');
 
+    // Hide results when clicking outside
+    document.addEventListener('click', function (e) {
+        const isClickInsideInput = input.contains(e.target);
+        const isClickInsideResults = resultBox.contains(e.target);
+        if (!isClickInsideInput && !isClickInsideResults) {
+            resultBox.style.display = 'none';
+        }
+    });
+
     input.addEventListener('input', debounce(function () {
         const searchVal = input.value.trim();
         if (searchVal.length < 2) {
@@ -84,24 +93,21 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-fetch('<?php echo esc_url(home_url('/wp-json/holidayseva/v1/travel-search')); ?>?term=' + encodeURIComponent(searchVal))
+        fetch('<?php echo esc_url(home_url('/wp-json/holidayseva/v1/travel-search')); ?>?term=' + encodeURIComponent(searchVal))
             .then(res => res.json())
             .then(data => {
                 if (data.length > 0) {
-                   resultBox.innerHTML = data.map(item => `
-  <div onclick="window.location.href='${item.link}'"
-       style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; cursor:pointer; transition: background 0.2s ease; border-bottom:1px solid #f0f0f0;"
-       onmouseover="this.style.background='#f9f9f9';"
-       onmouseout="this.style.background='white';"
-  >
-    <div style="flex:1; font-size: 1rem; font-weight: 500; color:#1f1f1f;">${item.title}</div>
-    <div style="width: 64px; height: 44px; margin-left: 12px; flex-shrink: 0; border-radius: 6px; overflow: hidden;">
-      <img src="${item.image}" alt="thumb" style="width:100%; height:100%; object-fit:cover;">
-    </div>
-  </div>
-`).join('');
-
-
+                    resultBox.innerHTML = data.map(item => `
+                        <div onclick="window.location.href='${item.link}'"
+                             style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; cursor:pointer; transition: background 0.2s ease; border-bottom:1px solid #f0f0f0;"
+                             onmouseover="this.style.background='#f9f9f9';"
+                             onmouseout="this.style.background='white';">
+                            <div style="flex:1; font-size: 1rem; font-weight: 500; color:#1f1f1f;">${item.title}</div>
+                            <div style="width: 64px; height: 44px; margin-left: 12px; flex-shrink: 0; border-radius: 6px; overflow: hidden;">
+                                <img src="${item.image}" alt="thumb" style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                        </div>
+                    `).join('');
                     resultBox.style.display = 'block';
                 } else {
                     resultBox.innerHTML = '<div style="padding:10px;">No results found</div>';
