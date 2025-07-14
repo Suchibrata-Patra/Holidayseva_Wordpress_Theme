@@ -1,6 +1,28 @@
 <!-- This Code is responsible for generating the Travel Blog Page -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/Central_styling.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/single_travel_guide.css">
+
+
+<div style="display: flex; font-family: Arial, sans-serif; width: 100%; max-width: 1200px; margin: auto; border: 1px solid #e0e0e0;">
+    
+    <!-- Left Image Section -->
+    <div style="flex: 1;">
+        <img src="https://blog.uber-cdn.com/cdn-cgi/image/width=1536,quality=80,onerror=redirect,format=auto/wp-content/uploads/2025/07/cover-17514078235579.jpg" alt="Cityscape" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    
+    <!-- Right Content Section -->
+    <div style="flex: 1; background-color: #f9f9f9; padding: 40px;">
+        <p style="font-size: 12px; color: #555; margin: 0 0 10px;">Engineering, Data / ML, Uber AI</p>
+        <h2 style="font-size: 28px; margin: 0 0 20px;">Reinforcement Learning for Modeling Marketplace Balance</h2>
+        <p style="font-size: 16px; line-height: 1.6; color: #444;">
+            Uber uses reinforcement learning to optimize matching and better balance drivers with demand in real time.
+            By considering long-term outcomes, we improve efficiency and increase driver earnings by proactively aligning drivers with demand.
+        </p>
+        <p style="font-size: 13px; color: #888; margin-top: 20px;">2 July / Global</p>
+    </div>
+
+</div>
+
 <section class="related-articles">
     <h2 class="section-title">Related articles</h2>
     <div class="travel-guide-grid">
