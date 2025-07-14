@@ -264,7 +264,7 @@
 /* Mobile Responsive Query */
 @media only screen and (max-width: 768px){
     .holidayseva_blog_hero_section{
-        height: 30vh;
+        height: 30vh !important;
     }
     .holidayseva_travel_guide_hero_title{
         font-size: 27px;
