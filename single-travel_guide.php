@@ -248,6 +248,73 @@ if (have_posts()):
         </div>
     </a>
 </div>
+<div style="display: flex; flex-direction: column; gap: 20px;">
+    <!-- Card 1 -->
+    <div style="display: flex; align-items: flex-start; gap: 15px;">
+        <a href="/your-custom-link" style="text-decoration: none; display: flex; gap: 15px; flex: 1;">
+            <div class="related_content_card_text" style="flex: 1;">
+                <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
+                    Engineering, Backend / 14 July / Global
+                </span>
+                <h3 style="font-size: 1rem; font-weight: 500; color: black; margin: 5px 0;">
+                    Reinventing Travel Systems for Scalable Performance
+                </h3>
+                <p style="font-size: 0.8rem; color: rgb(100, 100, 100); margin-top: 2px;">
+                    Special Feature
+                </p>
+            </div>
+            <div class="related_content_card_image" style="width: 80px; min-width: 80px; height: 60px; overflow: hidden;">
+                <img src="https://blog.uber-cdn.com/cdn-cgi/image/width=300,quality=80,onerror=redirect,format=auto/wp-content/uploads/2025/05/cover-photo-17466478352548.png"
+                     alt="Special Feature"
+                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+            </div>
+        </a>
+    </div>
+
+    <!-- Card 2 -->
+    <div style="display: flex; align-items: flex-start; gap: 15px;">
+        <a href="/your-custom-link" style="text-decoration: none; display: flex; gap: 15px; flex: 1;">
+            <div class="related_content_card_text" style="flex: 1;">
+                <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
+                    Engineering, Backend / 14 July / Global
+                </span>
+                <h3 style="font-size: 1rem; font-weight: 500; color: black; margin: 5px 0;">
+                    Reinventing Travel Systems for Scalable Performance
+                </h3>
+                <p style="font-size: 0.8rem; color: rgb(100, 100, 100); margin-top: 2px;">
+                    Special Feature
+                </p>
+            </div>
+            <div class="related_content_card_image" style="width: 80px; min-width: 80px; height: 60px; overflow: hidden;">
+                <img src="https://blog.uber-cdn.com/cdn-cgi/image/width=300,quality=80,onerror=redirect,format=auto/wp-content/uploads/2025/05/cover-photo-17478702183017.png"
+                     alt="Special Feature"
+                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+            </div>
+        </a>
+    </div>
+
+    <!-- Card 3 -->
+    <div style="display: flex; align-items: flex-start; gap: 15px;">
+        <a href="/your-custom-link" style="text-decoration: none; display: flex; gap: 15px; flex: 1;">
+            <div class="related_content_card_text" style="flex: 1;">
+                <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
+                    Engineering, Backend / 14 July / Global
+                </span>
+                <h3 style="font-size: 1rem; font-weight: 500; color: black; margin: 5px 0;">
+                    Reinventing Travel Systems for Scalable Performance
+                </h3>
+                <p style="font-size: 0.8rem; color: rgb(100, 100, 100); margin-top: 2px;">
+                    Special Feature
+                </p>
+            </div>
+            <div class="related_content_card_image" style="width: 80px; min-width: 80px; height: 60px; overflow: hidden;">
+                <img src="https://blog.uber-cdn.com/cdn-cgi/image/width=300,quality=80,onerror=redirect,format=auto/wp-content/uploads/2025/05/cover-17484716129443.jpg"
+                     alt="Special Feature"
+                     style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+            </div>
+        </a>
+    </div>
+</div>
 
 
     </div>
