@@ -43,6 +43,17 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
     exit;
 }
 ?>
+<div style="position: relative; max-width: 500px; margin: auto;">
+  <input 
+    type="text" 
+    id="live-travel-search" 
+    placeholder="Where do you want to go?" 
+    style="width: 100%; padding: 14px 20px; font-size: 16px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); transition: border-color 0.2s ease, box-shadow 0.2s ease;"
+    onfocus="this.style.borderColor='#000'; this.style.boxShadow='0 2px 6px rgba(0,0,0,0.15)';"
+    onblur="this.style.borderColor='#ccc'; this.style.boxShadow='0 1px 4px rgba(0,0,0,0.08)';"
+  />
+  <div id="search-results" style="position: absolute; top: 105%; left: 0; right: 0; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000; display: none; max-height: 300px; overflow-y: auto;"></div>
+</div>
 
 
 
@@ -76,15 +87,19 @@ fetch('<?php echo esc_url(home_url('/wp-json/holidayseva/v1/travel-search')); ?>
             .then(res => res.json())
             .then(data => {
                 if (data.length > 0) {
-                   resultBox.innerHTML = data.map(item =>
-    `<div onclick="window.location.href='${item.link}'"
-          style="display:flex; justify-content:space-between; align-items:center; padding:10px 15px; cursor:pointer; border-bottom:1px solid #eee;">
-         <div style="flex:1; font-size: 0.95rem; font-weight:500; color:#333;">${item.title}</div>
-         <div style="width: 60px; height: 40px; margin-left: 10px; flex-shrink:0;">
-            <img src="${item.image}" alt="thumb" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
-         </div>
-     </div>`
-).join('');
+                   resultBox.innerHTML = data.map(item => `
+  <div onclick="window.location.href='${item.link}'"
+       style="display:flex; justify-content:space-between; align-items:center; padding:14px 18px; cursor:pointer; transition: background 0.2s ease; border-bottom:1px solid #f0f0f0;"
+       onmouseover="this.style.background='#f9f9f9';"
+       onmouseout="this.style.background='white';"
+  >
+    <div style="flex:1; font-size: 1rem; font-weight: 500; color:#1f1f1f;">${item.title}</div>
+    <div style="width: 64px; height: 44px; margin-left: 12px; flex-shrink: 0; border-radius: 6px; overflow: hidden;">
+      <img src="${item.image}" alt="thumb" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+  </div>
+`).join('');
+
 
                     resultBox.style.display = 'block';
                 } else {
