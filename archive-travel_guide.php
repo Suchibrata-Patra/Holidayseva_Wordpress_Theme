@@ -6,12 +6,12 @@
 <div style="display: flex; width: 85%; max-width: 1400px; margin: auto; border: 1px solid #eee; font-family: Arial, sans-serif;">
     
     <!-- Left Image Section (80%) -->
-    <div style="flex: 8;">
+    <div style="flex: 7;">
         <img src="your-image.jpg" alt="Cityscape" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
     
     <!-- Right Content Section (20%) -->
-    <div style="flex: 2; background-color: #f9f9f9; padding: 40px;">
+    <div style="flex: 3; background-color: #f9f9f9; padding: 40px;">
         <p style="font-size: 12px; color: #666; margin-bottom: 10px;">Engineering, Data / ML, Uber AI</p>
         
         <h2 style="font-size: 24px; margin-bottom: 20px; line-height: 1.3;">
