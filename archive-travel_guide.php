@@ -53,6 +53,9 @@ get_header();
 <!-- WRAPPER to center the whole section -->
 <!-- FULL-WIDTH BACKGROUND SECTION -->
 <div style="width: 100%; background: url(https://theapplication.in/wp-content/uploads/2024/11/Search-Form-Background-image-for-TheApplication.webp); padding: 100px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
+    <h1 style="font-size: 36px; font-weight: 700; color: white; text-align: center; margin-bottom: 40px; font-family: 'Segoe UI', sans-serif;">
+    Search the location which is in your mind since last Friday :)
+  </h1>
 
   <!-- SEARCH CONTAINER -->
   <div style="position: relative; width: 88%;">
