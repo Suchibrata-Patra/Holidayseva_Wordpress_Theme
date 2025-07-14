@@ -233,3 +233,81 @@ get_footer();
         overflow: hidden;
     }
 </style>
+
+
+<section class="related-articles">
+    <h2 class="section-title">Related articles</h2>
+    <div class="travel-guide-grid">
+        <?php
+        $travel_guides = new WP_Query(array(
+            'post_type'      => 'travel_guide',
+            'posts_per_page' => 5, // Fetch only 5
+            'post_status'    => 'publish'
+        ));
+
+        if ($travel_guides->have_posts()):
+            while ($travel_guides->have_posts()):
+                $travel_guides->the_post();
+                $categories = get_the_category();
+                $category_names = array_map(function ($cat) {
+                    return $cat->name;
+                }, $categories);
+                $categories_list = implode(', ', $category_names);
+
+                // Custom featured image logic
+                $custom_feat_id = get_post_meta(get_the_ID(), '_tg_featured_image', true);
+                if ($custom_feat_id) {
+                    $image_url = wp_get_attachment_image($custom_feat_id, 'medium_large');
+                } else {
+                    $image_url = '<img src="' . esc_url(get_template_directory_uri() . '/images/default.jpg') . '" alt="Default image">';
+                }
+                ?>
+        <div class="travel-guide-card">
+            <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
+                <div class="related_content_card_image">
+                    <?php echo $image_url; ?>
+                </div>
+                <div class="related_content_card_content">
+                    <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel
+                        Guide</span>
+                    <p class="related_content_card_meta">
+                        <?php echo esc_html($categories_list); ?>
+                    </p>
+                    <h3 class="related_content_card_title">
+                        <?php
+    $title = get_the_title();
+    if (mb_strlen($title) > 50) {
+        echo esc_html(mb_substr($title, 0, 48)) . '...';
+    } else {
+        echo esc_html($title);
+    }
+    ?>
+                    </h3>
+                    <p class="related_content_card_date">
+                        <?php echo get_the_date(); ?> / Global
+                    </p>
+                </div>
+            </a>
+        </div>
+        <?php endwhile;
+            wp_reset_postdata();
+        else: ?>
+        <p>No travel guides found.</p>
+        <?php endif; ?>
+
+        <!-- ✅ Manually added 6th card -->
+        <div class="travel-guide-card" id="sixth_related_card">
+            <a href="/your-custom-link" style="text-decoration:none;">
+                <div class="related_content_card_image">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/images/your-custom.jpg'); ?>" alt="Special Feature">
+                </div>
+                <div class="related_content_card_content">
+                    <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Special Highlight</span>
+                    <p class="related_content_card_meta">Handpicked by Editor</p>
+                    <h3 class="related_content_card_title">Discover The Secret Side of Wanderlust</h3>
+                    <p class="related_content_card_date"><?php echo date('F j, Y'); ?> / Insider</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
