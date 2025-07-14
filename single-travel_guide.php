@@ -351,6 +351,24 @@ get_footer();
                  style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
         </div>
     </a>
+    <a href="/your-custom-link" style="text-decoration: none; display: flex; flex: 1; gap: 15px;">
+        <div class="related_content_card_text" style="flex: 1;">
+            <span style="color: rgb(107, 107, 107); font-size: 0.8rem; font-weight: 500;">
+                Engineering, Backend / 14 July / Global
+            </span>
+            <h3 style="font-size: 1rem; font-weight: 600; color: black; margin: 5px 0;">
+                Reinventing Travel Systems for Scalable Performance
+            </h3>
+            <p style="font-size: 0.8rem; color: rgb(100, 100, 100); margin-top: 2px;">
+                Special Feature
+            </p>
+        </div>
+        <div class="related_content_card_image" style="width: 80px; min-width: 80px; height: 60px; overflow: hidden;">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/images/your-custom.jpg'); ?>" 
+                 alt="Special Feature" 
+                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+        </div>
+    </a>
 </div>
 
 
