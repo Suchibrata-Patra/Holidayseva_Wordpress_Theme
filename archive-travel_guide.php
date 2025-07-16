@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
     @media only screen and (max-width: 480px){
         #ai-tour-section{
             width:100% !important;
-            padding:10px
+            padding:10px !important;
         }
         #image-section{
             display:none;
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
             font-size:7px !important;
         }
         #cta-button{
-            padding:5px 10px;
+            padding:5px 10px !important;
         }
 
     }
