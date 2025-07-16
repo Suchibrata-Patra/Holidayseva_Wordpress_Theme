@@ -334,7 +334,7 @@
     display: flex!important;
     flex:2;
     /* width: 0% !important; */
-    height: 200px !important;
+    /* height: 200px !important; */
 }
 .related_content_card_image img{
     width: 50% !important;
