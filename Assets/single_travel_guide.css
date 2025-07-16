@@ -358,12 +358,16 @@
         padding: 10px 20px;
     }
 
-.related_content_card_image {
-      float: left;
-    }
 
-    .related_content_card_content {
-      overflow: hidden; /* To contain content next to the float */
-    }
-    
+.related_content_card_image {
+  flex-basis: 100px; /* Or a percentage like 30% */
+  flex-shrink: 0; /* Prevent the image from shrinking below its basis */
+  width: auto; /* Reset width to let flex-basis take over */
+}
+
+.related_content_card_content {
+  flex-grow: 1; /* Allows content to fill remaining space */
+  flex-basis: auto; /* Let flex determine initial size based on content/container */
+  width: auto; /* Reset width if it was fixed */
+}
 }
