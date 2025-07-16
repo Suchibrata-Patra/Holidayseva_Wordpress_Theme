@@ -235,32 +235,34 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 ?>
         <div class="travel-guide-card">
-            <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
-                <div class="related_content_card_image">
-                    <?php echo $image_url; ?>
-                </div>
-                <div class="related_content_card_content">
-                    <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel
-                        Guide</span>
-                    <p class="related_content_card_meta">
-                        <?php echo esc_html($categories_list); ?>
-                    </p>
-                    <h3 class="related_content_card_title">
-                        <?php
-                        $title = get_the_title();
-                        if (mb_strlen($title) > 50) {
-                            echo esc_html(mb_substr($title, 0, 48)) . '...';
-                        } else {
-                            echo esc_html($title);
-                        }
-                        ?>
-                    </h3>
-                    <p class="related_content_card_date">
-                        <?php echo get_the_date(); ?> / Global
-                    </p>
-                </div>
+    <div class="related_content_card_image">
+        <a href="<?php the_permalink(); ?>" style="text-decoration:none;">
+            <?php echo $image_url; ?>
+        </a>
+    </div>
+    <div class="related_content_card_content">
+        <span style="color:rgb(107, 107, 107);font-size:0.8rem;font-weight:400;">Holidayseva Travel Guide</span>
+        <p class="related_content_card_meta">
+            <?php echo esc_html($categories_list); ?>
+        </p>
+        <h3 class="related_content_card_title">
+            <a href="<?php the_permalink(); ?>" style="text-decoration:none; color:inherit;">
+                <?php
+                $title = get_the_title();
+                if (mb_strlen($title) > 50) {
+                    echo esc_html(mb_substr($title, 0, 48)) . '...';
+                } else {
+                    echo esc_html($title);
+                }
+                ?>
             </a>
-        </div>
+        </h3>
+        <p class="related_content_card_date">
+            <?php echo get_the_date(); ?> / Global
+        </p>
+    </div>
+</div>
+
         <?php endwhile;
             wp_reset_postdata();
         else: ?>
