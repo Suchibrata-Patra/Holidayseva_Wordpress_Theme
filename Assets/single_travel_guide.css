@@ -347,7 +347,7 @@
 .related_content_card_content {
     padding : 1px;
     /* width: 100%; */
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
  .related-articles {
     max-width: 100%;
