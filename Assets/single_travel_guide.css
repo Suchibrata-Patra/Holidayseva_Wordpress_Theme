@@ -301,7 +301,7 @@
 }
 .travel-guide-card{
    display: flex; 
-   flex-direction: row;
+   flex-direction: column;
    gap: 1px;
 }
 .related_content_card_meta {
