@@ -187,6 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         #search_bar_background{
             background-image: none;
+            padding: 0px !important;
         }
     }
 </style>
