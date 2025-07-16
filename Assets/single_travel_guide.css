@@ -299,6 +299,10 @@
    flex-direction: row;
    gap: 1px;
 }
+.related_content_card_meta {
+    font-size: 1px;
+    color: #999;
+}
 .travel-guide-container h1 {
     font-size: 24px;
     font-weight: 600;
