@@ -189,6 +189,11 @@ document.addEventListener('DOMContentLoaded', function () {
             background: none !important;
             padding: 0px !important;
         }
+        #live-travel-search::placeholder {
+        color: #aaa;
+        font-weight: 400;
+        font-size:1rem !important;
+      }
     }
 </style>
 
