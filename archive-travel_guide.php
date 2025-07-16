@@ -66,6 +66,7 @@ get_header();
         <line x1="15" y1="15" x2="21" y2="21" />
       </svg>
     </button>
+    <span>Algorithm is developed by holidayseva.com </span>
   </div>
 
   <!-- SEARCH RESULTS CONTAINER -->
