@@ -280,8 +280,11 @@
         /* padding:12px; */
     }
 
-    .related_content_card_image img {
-   width: 10%; height: auto; object-fit: cover; border-radius: 4px;
+.related_content_card_image img {
+   width: 100px; 
+   height: 100px; 
+   object-fit: cover; 
+   border-radius: 4px;
 }
 
 .travel-guide-section p{
@@ -348,10 +351,11 @@
 }
 
 .related_content_card_content {
-    flex: 8;
-    padding : 1px;
-    font-size: 0.1rem !important;
+    flex: 1;
+    padding: 8px;
+    font-size: 14px !important;
 }
+
  .related-articles {
     max-width: 100%;
     margin: 0px;
