@@ -159,7 +159,6 @@ document.addEventListener('DOMContentLoaded', function () {
         </p>
         
         <p id="date-location" style="font-size: 13px; color: #999; margin-top: 20px;">14th July / INDIA</p>
-        
         <button id="cta-button" style="padding:15px 40px; background-color:black;border:none;border-radius:50px;color:white;">Know More</button>
     </div>
 </div>
@@ -178,12 +177,15 @@ document.addEventListener('DOMContentLoaded', function () {
             font-size:1rem !important;
         }
         #main-description{
-            font-size:1rem !important;
+            font-size:0.7rem !important;
         }
         #cta-button{
             padding:5px 10px !important;
+            font-size:0.8rem !important;
         }
-
+        #date-location{
+            font-size:8px !important;
+        }
     }
 </style>
 
