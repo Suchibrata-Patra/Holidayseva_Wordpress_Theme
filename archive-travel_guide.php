@@ -40,7 +40,7 @@ get_header();
 ?>
 <!-- WRAPPER to center the whole section -->
 <!-- FULL-WIDTH BACKGROUND SECTION -->
-<div style="width: 100%; background: url(https://theapplication.in/wp-content/uploads/2024/11/Search-Form-Background-image-for-TheApplication.webp); padding: 100px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
+<div style="width: 100%; background: url(https://theapplication.in/wp-content/uploads/2024/11/Search-Form-Background-image-for-TheApplication.webp); padding: 10px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
   <!-- SEARCH CONTAINER -->
   <div style="position: relative; width: 88%;">
     <input 
