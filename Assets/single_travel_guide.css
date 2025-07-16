@@ -296,8 +296,9 @@
 }
 .travel-guide-card{
    display: flex; 
+   flex-direction: row;
    align-items: flex-start; 
-   gap: 15px;
+   gap: 1px;
 }
 .travel-guide-container h1 {
     font-size: 24px;
