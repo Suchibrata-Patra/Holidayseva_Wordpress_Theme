@@ -337,10 +337,7 @@
     /* width: 0% !important; */
     /* height: 200px !important; */
 }
-.related_content_card_image img{
-    width: 50% !important;
-    border-radius: 10px !important;
-}
+
 .related_content_card_content {
     flex: 8;
     padding : 1px;
