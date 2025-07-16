@@ -330,7 +330,7 @@
     width: 100%;
 }
 
-#sixth_related_card .related_content_card_image {
+#sixth_related_card {
     display: flex!important;
     flex:2 !important;
     height: auto !important;
