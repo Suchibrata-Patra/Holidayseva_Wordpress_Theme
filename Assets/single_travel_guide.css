@@ -341,6 +341,7 @@
 }
 .related_content_card_content {
     padding : 1px;
+    font-size: 0.1rem !important;
     /* width: 100%; */
     /* box-sizing: border-box; */
 }
