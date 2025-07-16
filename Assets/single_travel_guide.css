@@ -332,7 +332,8 @@
 }
 
 #sixth_related_card .related_content_card_image {
-    display: flex 2 !important;
+    display: flex!important;
+    flex:2;
     width: 50% !important;
     height: 200px !important;
 }
@@ -342,7 +343,8 @@
     border-radius: 10px !important;
 }
 .related_content_card_content {
-    display: flex 8;
+    display: flex;
+    flex: 8;
     padding : 1px;
     font-size: 0.1rem !important;
 }
