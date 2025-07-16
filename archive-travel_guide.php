@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
             padding:10px !important;
         }
         #section-title{
-            font-size:1rem !important;
+            font-size:0.9rem !important;
         }
         #main-description{
             font-size:0.7rem !important;
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <?php
         $travel_guides = new WP_Query(array(
             'post_type' => 'travel_guide',
-            'posts_per_page' => 15,  // Fetch only 5
+            'posts_per_page' => 15,  // Fetch only 15
             'post_status' => 'publish'
         ));
 
