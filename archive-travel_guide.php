@@ -163,6 +163,14 @@ document.addEventListener('DOMContentLoaded', function () {
         <button id="cta-button" style="padding:15px 40px; background-color:black;border:none;border-radius:50px;color:white;">Know More</button>
     </div>
 </div>
+<style>
+    @media only screen and (max-width: 480px){
+        #content-section{
+            padding:1px !important;
+        }
+        
+    }
+</style>
 
 <section class="related-articles">
     <h1 class="section-title">Best Articles</h1>
