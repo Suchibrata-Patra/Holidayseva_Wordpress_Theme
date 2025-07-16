@@ -333,7 +333,7 @@
 #sixth_related_card .related_content_card_image {
     display: flex!important;
     flex:2;
-    width: 50% !important;
+    /* width: 0% !important; */
     height: 200px !important;
 }
 .related_content_card_image img{
@@ -359,15 +359,4 @@
     }
 
 
-.related_content_card_image {
-  flex-basis: 100px; /* Or a percentage like 30% */
-  flex-shrink: 0; /* Prevent the image from shrinking below its basis */
-  width: auto; /* Reset width to let flex-basis take over */
-}
-
-.related_content_card_content {
-  flex-grow: 1; /* Allows content to fill remaining space */
-  flex-basis: auto; /* Let flex determine initial size based on content/container */
-  width: auto; /* Reset width if it was fixed */
-}
 }
