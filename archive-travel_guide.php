@@ -140,29 +140,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <br><br>
 
-<div style="display: flex; width: 85%; max-width: 1400px; margin: auto; border: none; font-family: Arial, sans-serif;">
-    
+<div id="ai-tour-section" style="display: flex; width: 85%; max-width: 1400px; margin: auto; border: none; font-family: Arial, sans-serif;">
     <!-- Left Image Section (80%) -->
-    <div style="flex: 7;">
-        <img src="https://holidayseva.com/wp-content/uploads/2025/07/Screenshot-2025-07-14-at-6.23.24-PM.png" alt="Cityscape" style="width: 100%; height: 100%; object-fit: cover;">
+    <div id="image-section" style="flex: 7;">
+        <img id="cityscape-image" src="https://holidayseva.com/wp-content/uploads/2025/07/Screenshot-2025-07-14-at-6.23.24-PM.png" alt="Cityscape" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
     
     <!-- Right Content Section (20%) -->
-    <div style="flex: 3; background-color: #f9f9f9; padding: 40px;">
-        <p style="font-size: 12px; color: #666; margin-bottom: 10px;">inhouse AI, ML developed by Holidayseva</p>
+    <div id="content-section" style="flex: 3; background-color: #f9f9f9; padding: 40px;">
+        <p id="tech-tagline" style="font-size: 12px; color: #666; margin-bottom: 10px;">inhouse AI, ML developed by Holidayseva</p>
         
-        <h2 style="font-size: 24px; margin-bottom: 20px; line-height: 1.3;">
+        <h2 id="section-title" style="font-size: 24px; margin-bottom: 20px; line-height: 1.3;">
             Reinforcement Learning for Picking Best Tour Destination
         </h2>
         
-        <p style="font-size: 15px; line-height: 1.6; color: #444;">
+        <p id="main-description" style="font-size: 15px; line-height: 1.6; color: #444;">
             At HolidaySeva, we leverage cutting-edge advancements in Machine Learning and Artificial Intelligence to intelligently analyze vast datasets, detect travel trends, and craft hyper-personalized travel itineraries. Our systems continuously learn and adapt to ensure you discover not just good plans, but the perfect travel experiences — curated uniquely for your preferences, timing, and lifestyle.
         </p>
         
-        <p style="font-size: 13px; color: #999; margin-top: 20px;">14th July / INDIA</p>
-        <button style="padding:15px 40px; background-color:black;border:none;border-radius:50px;color:white;">Know More</button>
+        <p id="date-location" style="font-size: 13px; color: #999; margin-top: 20px;">14th July / INDIA</p>
+        
+        <button id="cta-button" style="padding:15px 40px; background-color:black;border:none;border-radius:50px;color:white;">Know More</button>
     </div>
-
 </div>
 
 <section class="related-articles">
@@ -225,7 +224,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <p>No travel guides found.</p>
         <?php endif; ?>
 
-        <!-- ✅ Manually added 6th card styled like 'Most Popular' layout -->
+        <!-- Manually added 6th card styled like 'Most Popular' layout -->
       
          <div style="display: flex; flex-direction: column; gap: 20px; padding:30px;">
                <span style="font-size:1.3rem; color:black; font-weight:600; border-bottom:0.7px solid rgb(207, 207, 207); padding-bottom:6px; display:inline-block;">Most Popular</span>
