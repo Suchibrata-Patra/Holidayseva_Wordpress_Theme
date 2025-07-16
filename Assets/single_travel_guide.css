@@ -343,7 +343,7 @@
     height: 200px !important;
 }
 .related_content_card_image img {
-    width: 50% !important;
+    width: auto !important;
     height: auto !important;
     object-fit: cover;
     display: block;
