@@ -399,7 +399,7 @@
     }
 .travel-guide-card {
     display: flex;
-    flex-direction: column;
+    flex-direction: column !important;
     gap: 12px;
     padding: 12px;
     border-radius: 10px;
