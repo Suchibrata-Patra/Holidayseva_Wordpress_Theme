@@ -167,13 +167,12 @@ document.addEventListener('DOMContentLoaded', function () {
     @media only screen and (max-width: 480px){
         #ai-tour-section{
             width:100% !important;
-            padding:10px !important;
         }
         #image-section{
             display:none;
         }
         #content-section{
-            padding:1px !important;
+            padding:10px !important;
         }
         #section-title{
             font-size:1rem !important;
