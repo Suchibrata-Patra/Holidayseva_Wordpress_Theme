@@ -5,12 +5,9 @@
 <?php
 if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset($_GET['term'])) {
     header('Content-Type: application/json');
-
     $search_term = sanitize_text_field($_GET['term']);
-
     global $wpdb;
     $like = '%' . $wpdb->esc_like($search_term) . '%';
-
     $results = $wpdb->get_results(
         $wpdb->prepare("
             SELECT ID, post_title
@@ -22,31 +19,22 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
             LIMIT 10
         ", 'travel_guide', $like)
     );
-
     $response = [];
-
     foreach ($results as $post) {
-        // ✅ Get the custom featured image ID
+        // Get the custom featured image ID
         $custom_feat_id = get_post_meta($post->ID, '_tg_featured_image', true);
-
-        // ✅ Get image URL from attachment ID
+        // Get image URL from attachment ID
         $image_url = $custom_feat_id ? wp_get_attachment_image_url($custom_feat_id, 'medium_large') : null;
-
         $response[] = [
             'title' => get_the_title($post->ID),
-            'link'  => get_permalink($post->ID),
+            'link' => get_permalink($post->ID),
             'image' => $image_url ?: get_template_directory_uri() . '/images/default.jpg'
         ];
     }
-
     echo json_encode($response);
     exit;
 }
 ?>
-
-
-
-
 <?php
 get_header();
 ?>
@@ -55,6 +43,7 @@ get_header();
 <div style="width: 100%; background: url(https://theapplication.in/wp-content/uploads/2024/11/Search-Form-Background-image-for-TheApplication.webp); padding: 100px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
   <!-- SEARCH CONTAINER -->
   <div style="position: relative; width: 88%;">
+    <span style="color:white;">Search Places</span>
     <input 
       type="text" 
       id="live-travel-search" 
@@ -314,7 +303,6 @@ document.addEventListener('DOMContentLoaded', function () {
         View more stories
     </span>
 </div>
-
 
 <?php
 get_footer();
