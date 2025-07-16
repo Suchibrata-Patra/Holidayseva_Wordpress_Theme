@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function () {
         #live-travel-search::placeholder {
         color: #aaa;
         font-weight: 400;
-        font-size:1rem !important;
+        font-size:0.8rem !important;
       }
     }
 </style>
