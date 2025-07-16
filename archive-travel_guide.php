@@ -136,9 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 300));
 });
 </script>
-
-<br><br>
-
 <div id="ai-tour-section" style="display: flex; width: 85%; max-width: 1400px; margin: auto; border: none; font-family: Arial, sans-serif;">
     <!-- Left Image Section (80%) -->
     <div id="image-section" style="flex: 7;">
