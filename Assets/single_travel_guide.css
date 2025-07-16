@@ -332,7 +332,8 @@
 
 #sixth_related_card .related_content_card_image {
     display: flex!important;
-    flex:2;
+    flex:2 !important;
+    height: auto !important;
     /* width: 0% !important; */
     /* height: 200px !important; */
 }
