@@ -343,7 +343,6 @@
     border-radius: 10px !important;
 }
 .related_content_card_content {
-    display: flex;
     flex: 8;
     padding : 1px;
     font-size: 0.1rem !important;
