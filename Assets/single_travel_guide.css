@@ -335,8 +335,10 @@
     width: 50% !important;
     height: 200px !important;
 }
-.related_content_card_image img {
-    display: block;
+.related_content_card_image img{
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 10px !important;
 }
 .related_content_card_content {
     padding : 1px;
