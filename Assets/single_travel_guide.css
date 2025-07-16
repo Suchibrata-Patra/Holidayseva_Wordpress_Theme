@@ -344,6 +344,11 @@
     object-fit: cover;
     display: block;
 }
+.related_content_card_content {
+    padding : 1px;
+    width: 100%;
+    box-sizing: border-box;
+}
  .related-articles {
     max-width: 100%;
     margin: 0px;
