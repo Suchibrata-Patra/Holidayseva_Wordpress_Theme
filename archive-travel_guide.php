@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
         #cta-button{
             padding:5px 10px !important;
             font-size:0.8rem !important;
-            border-radius:10px !important;
+            border-radius:2px !important;
         }
         #date-location{
             font-size:8px !important;
