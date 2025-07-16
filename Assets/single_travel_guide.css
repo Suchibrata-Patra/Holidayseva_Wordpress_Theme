@@ -338,6 +338,7 @@
 }
 .related_content_card_image img {
     display: block;
+    width: 10% !important;
 }
 .related_content_card_content {
     padding : 1px;
