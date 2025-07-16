@@ -358,5 +358,12 @@
         padding: 10px 20px;
     }
 
+.related_content_card_image {
+      float: left;
+    }
 
+    .related_content_card_content {
+      overflow: hidden; /* To contain content next to the float */
+    }
+    
 }
