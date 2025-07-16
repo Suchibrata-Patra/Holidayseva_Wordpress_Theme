@@ -308,9 +308,9 @@
 
 /* Related Articles - Stack on Mobile */
 .travel-guide-grid {
-    .travel-guide-grid {
-    grid-template-columns: 1fr;
-  }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
 }
 
 .related_content_card_date {
