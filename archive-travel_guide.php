@@ -167,6 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
     @media only screen and (max-width: 480px){
         #ai-tour-section{
             width:100% !important;
+            padding:10px
         }
         #image-section{
             display:none;
