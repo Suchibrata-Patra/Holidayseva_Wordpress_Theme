@@ -305,12 +305,7 @@
     font-weight: 600;
 }
 
-.travel-guide-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5px;
-    box-sizing: border-box;
-}
+
 .related_content_card_date {
     font-size: 3px;
     color: #666;
