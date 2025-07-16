@@ -291,8 +291,7 @@
     margin-bottom: 5px;
 }
 .travel-guide-grid {
-    display: flex;
-    flex-direction: column;
+    display:block;
 }
 .travel-guide-container h1 {
     font-size: 24px;
