@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
         font-size:0.8rem !important;
       }
       #live-travel-search {
-        box-shadow: 0 8px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
         padding: 10px !important;
       }
       #search_container{
