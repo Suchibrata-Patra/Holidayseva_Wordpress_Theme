@@ -176,7 +176,7 @@
 
 
 /* This COntent is for related article */
- .related-articles {
+.related-articles {
     max-width: 100%;
     margin: 0 70px;
     padding: 40px 20px;
@@ -190,7 +190,8 @@
 
 .travel-guide-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* fixed 4 columns */
+    grid-template-columns: repeat(3, 1fr);
+    /* fixed 4 columns */
     gap: 24px;
     width: 100%;
     max-width: 100%;
@@ -210,8 +211,8 @@
 }
 
 .travel-guide-card:hover {
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 
-                0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
     transition: all 0.3s ease;
 }
 
@@ -225,7 +226,7 @@
 }
 
 .related_content_card_content {
-    padding : 24px 24px 14px 24px;
+    padding: 24px 24px 14px 24px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -255,135 +256,146 @@
     transform: none;
     cursor: default;
 }
-.related_content_card_text{
+
+.related_content_card_text {
     flex: 1;
 }
 
 
 /* Mobile Responsive Query */
-@media only screen and (max-width: 768px){
-    .holidayseva_blog_hero_section{
+@media only screen and (max-width: 768px) {
+    .holidayseva_blog_hero_section {
         height: 30vh !important;
     }
-    .holidayseva_travel_guide_hero_title{
+
+    .holidayseva_travel_guide_hero_title {
         font-size: 27px;
     }
-    .holidayseva_travel_guide_author-name{
+
+    .holidayseva_travel_guide_author-name {
         font-size: 11px;
     }
-    .holidayseva_travel_guide_author-date{
+
+    .holidayseva_travel_guide_author-date {
         font-size: 10px;
     }
-    .travel-guide-container{
+
+    .travel-guide-container {
         margin-top: 1rem;
         max-width: 100%;
         /* padding:12px; */
     }
 
-.related_content_card_image img {
-   width: 100px; 
-   height: 100px; 
-   object-fit: cover; 
-   border-radius: 4px;
-}
-
-.travel-guide-section p{
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    color: #2c2c2c;
-}
-.section-title {
-    text-align: left;
-    font-size: 24px;
-    margin-bottom: 5px;
-}
-.travel-guide-grid {
-    display:flex;
-    flex-direction: column;
-}
-.travel-guide-card {
-   flex-direction: column !important;
-}
-
-.related_content_card_meta {
-    font-size: 12px;
-    color: #999;
-}
-.travel-guide-container h1 {
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 30px;
-    margin-top: 0px;
-    color: #000000;
-    letter-spacing: -1px;
-    margin-bottom: none;
-}
-.travel-guide-section h2 {
-    font-size: 24px;
-    font-weight: 600;
-}
-
-
-.related_content_card_date {
-    font-size: 3px;
-    color: #666;
-}
-
-#sixth_related_card {
-    flex-direction: column;
-    gap: 5px;
-    align-items: flex-start;
-}
-
-#sixth_related_card a {
-    flex-direction: column !important;
-    width: 100%;
-}
-
-#sixth_related_card {
-    display: flex!important;
-    flex:2 !important;
-    height: auto !important;
-    /* width: 0% !important; */
-    /* height: 200px !important; */
-}
-
-.related_content_card_content {
-    flex: 1;
-    padding: 8px;
-    font-size: 14px !important;
-}
-
- .related-articles {
-    max-width: 100%;
-    margin: 0px;
-    padding: 10px 5px;
-}
-    #email-subscribe{
-        width:400px;
-        padding:7px 20px;
+    .related_content_card_image img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 4px;
     }
-    #subscribe_button{
+
+    .travel-guide-section p {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #2c2c2c;
+    }
+
+    .section-title {
+        text-align: left;
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    .travel-guide-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .travel-guide-card {
+        flex-direction: column !important;
+    }
+
+    .related_content_card_meta {
+        font-size: 12px;
+        color: #999;
+    }
+
+    .travel-guide-container h1 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+        margin-top: 0px;
+        color: #000000;
+        letter-spacing: -1px;
+        margin-bottom: none;
+    }
+
+    .travel-guide-section h2 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+
+    .related_content_card_date {
+        font-size: 3px;
+        color: #666;
+    }
+
+    #sixth_related_card {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+    }
+
+    #sixth_related_card a {
+        flex-direction: column !important;
+        width: 100%;
+    }
+
+    #sixth_related_card {
+        display: flex !important;
+        flex: 2 !important;
+        height: auto !important;
+        /* width: 0% !important; */
+        /* height: 200px !important; */
+    }
+
+    .related_content_card_content {
+        flex: 1;
+        padding: 8px;
+        font-size: 14px !important;
+    }
+
+    .related-articles {
+        max-width: 100%;
+        margin: 0px;
+        padding: 10px 5px;
+    }
+
+    #email-subscribe {
+        width: 400px;
+        padding: 7px 20px;
+    }
+
+    #subscribe_button {
         padding: 10px 20px;
     }
 
-.travel-guide-card {
-    align-items: flex-start;
-    padding: 8px;
-    border-radius: 8px;
-}
+    .travel-guide-card {
+        align-items: flex-start;
+        padding: 8px;
+        border-radius: 8px;
+    }
 
-.related_content_card_title {
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 600;
-    margin-bottom: 6px;
-}
+    .related_content_card_title {
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
 
-.related_content_card_content p {
-    margin: 2px 0;
-}
+    .related_content_card_content p {
+        margin: 2px 0;
+    }
 
 }
-
