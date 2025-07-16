@@ -11,7 +11,6 @@
 .holidayseva_hero-content {
     position: relative;
     z-index: 2;
-    /* max-width: 900px; */
     padding: 0 1px;
 }
 
@@ -338,13 +337,10 @@
 }
 .related_content_card_image img {
     display: block;
-    width: 10% !important;
 }
 .related_content_card_content {
     padding : 1px;
     font-size: 0.1rem !important;
-    /* width: 100%; */
-    /* box-sizing: border-box; */
 }
  .related-articles {
     max-width: 100%;
