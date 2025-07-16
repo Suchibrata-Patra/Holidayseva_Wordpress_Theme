@@ -20,14 +20,12 @@
     // Voice Search Functionality
     const searchInput = document.getElementById('searchInput');
     const micButton = document.getElementById('micButton');
-
     if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
         const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-        const recognition = new SpeechRecognition();
 
+        const recognition = new SpeechRecognition();
         recognition.continuous = false; // Stop after one input
         recognition.lang = 'en-US'; // Set the language
-
         // Start speech recognition on button click
         micButton.addEventListener('click', () => {
             try {
@@ -54,5 +52,3 @@
         micButton.disabled = true;
         micButton.title = "Your browser doesn't support Speech Recognition.";
     }
-
-    /// Modified Fuzzy Logic
