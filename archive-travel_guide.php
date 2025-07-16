@@ -196,6 +196,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       #live-travel-search {
         box-shadow: 0 8px 10px rgba(0,0,0,0.1);
+        padding: 10px !important;
       }
     }
 </style>
