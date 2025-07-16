@@ -42,7 +42,7 @@ get_header();
 <!-- FULL-WIDTH BACKGROUND SECTION -->
 <div id="search_bar_background" style="width: 100%; background: url(https://theapplication.in/wp-content/uploads/2024/11/Search-Form-Background-image-for-TheApplication.webp); padding: 100px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
   <!-- SEARCH CONTAINER -->
-  <div style="position: relative; width: 88%;">
+  <div id="search_container" style="position: relative; width: 88%;">
     <input 
       type="text" 
       id="live-travel-search" 
@@ -196,6 +196,9 @@ document.addEventListener('DOMContentLoaded', function () {
       #live-travel-search {
         box-shadow: 0 8px 10px rgba(0,0,0,0.1);
         padding: 10px !important;
+      }
+      #search_container{
+        width:100% !important;
       }
     }
 </style>
