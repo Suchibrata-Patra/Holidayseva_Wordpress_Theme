@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
             font-size:1rem !important;
         }
         #main-description{
-            font-size:7px !important;
+            font-size:1rem !important;
         }
         #cta-button{
             padding:5px 10px !important;
