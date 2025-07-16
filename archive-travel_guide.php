@@ -201,6 +201,9 @@ document.addEventListener('DOMContentLoaded', function () {
       #search_container{
         width:100% !important;
       }
+      .related_content_card_title{
+        font-size:15px !important;
+      }
     }
 </style>
 
@@ -342,7 +345,6 @@ document.addEventListener('DOMContentLoaded', function () {
         View more stories
     </span>
 </div>
-
 <?php
 get_footer();
 ?>
