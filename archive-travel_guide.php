@@ -168,7 +168,13 @@ document.addEventListener('DOMContentLoaded', function () {
         #content-section{
             padding:1px !important;
         }
-        
+        #section-title{
+            font-size:1rem !important;
+        }
+        #main-description{
+            font-size:7px !important;
+        }
+
     }
 </style>
 
