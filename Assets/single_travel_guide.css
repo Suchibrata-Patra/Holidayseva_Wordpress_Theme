@@ -319,6 +319,10 @@
     margin-top: 10px;
     box-sizing: border-box;
 }
+.related_content_card_date {
+    font-size: 3px;
+    color: #666;
+}
 
 .travel-guide-card {
     width: 100%;
@@ -361,5 +365,6 @@
     #subscribe_button{
         padding: 10px 20px;
     }
+
 
 }
