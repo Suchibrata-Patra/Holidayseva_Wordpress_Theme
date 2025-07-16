@@ -311,9 +311,6 @@
     color: #666;
 }
 
-.travel-guide-card {
-    width: 100%;
-}
 #sixth_related_card {
     flex-direction: column;
     gap: 5px;
