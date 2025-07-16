@@ -43,7 +43,7 @@ get_header();
 <div style="width: 100%; background: url(https://theapplication.in/wp-content/uploads/2024/11/Search-Form-Background-image-for-TheApplication.webp); padding: 100px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
   <!-- SEARCH CONTAINER -->
   <div style="position: relative; width: 88%;">
-    <span style="color:white;">Search Places</span>
+    <span style="color:white;font-weight:500;padding:10px;">Search Places</span>
     <input 
       type="text" 
       id="live-travel-search" 
