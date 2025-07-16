@@ -332,6 +332,7 @@
 }
 
 #sixth_related_card .related_content_card_image {
+    display: none !important;
     width: 100% !important;
     height: 200px !important;
 }
