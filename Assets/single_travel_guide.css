@@ -337,11 +337,10 @@
     height: 200px !important;
 }
 .related_content_card_image img {
-    display: none !important;
-    width: auto !important;
+    width: 40% !important;
     height: auto !important;
     object-fit: cover;
-    /* display: block; */
+    display: block;
 }
 .related_content_card_content {
     padding : 1px;
