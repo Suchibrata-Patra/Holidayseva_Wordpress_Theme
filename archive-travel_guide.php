@@ -193,8 +193,9 @@ document.addEventListener('DOMContentLoaded', function () {
         color: #aaa;
         font-weight: 400;
         font-size:0.8rem !important;
+      }
+      #live-travel-search {
         box-shadow: none !important;
-        border: 0.5px solid grey;
       }
     }
 </style>
