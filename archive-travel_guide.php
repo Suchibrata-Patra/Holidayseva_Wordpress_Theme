@@ -180,6 +180,9 @@ document.addEventListener('DOMContentLoaded', function () {
         #main-description{
             font-size:7px !important;
         }
+        #cta-button{
+            padding:5px 10px;
+        }
 
     }
 </style>
