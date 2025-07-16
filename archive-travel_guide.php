@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
             font-size:8px !important;
         }
         #search_bar_background{
-            background: none;
+            background: none !important;
             padding: 0px !important;
         }
     }
