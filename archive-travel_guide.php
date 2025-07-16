@@ -165,6 +165,9 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 <style>
     @media only screen and (max-width: 480px){
+        #image-section{
+            display:none;
+        }
         #content-section{
             padding:1px !important;
         }
