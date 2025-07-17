@@ -1,7 +1,7 @@
 <!-- This Code is responsible for generating the Travel Blog Page -->
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/Central_styling.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/Assets/single_travel_guide.css">
-<title>HolidaySeva - Travel Guide</title>
+<title>HolidaySeva-Travel Guide</title>
 <?php
 if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset($_GET['term'])) {
     header('Content-Type: application/json');
@@ -35,13 +35,11 @@ if (isset($_GET['action']) && $_GET['action'] === 'live_travel_search' && isset(
     exit;
 }
 ?>
-<?php
-get_header();
-?>
-<!-- WRAPPER to center the whole section -->
-<!-- FULL-WIDTH BACKGROUND SECTION -->
+<?php get_header(); ?>
+
+<!-- Full Width Background Selection -->
 <div id="search_bar_background" style="width: 100%; background: url(https://theapplication.in/wp-content/uploads/2024/11/Search-Form-Background-image-for-TheApplication.webp); padding: 100px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; box-sizing: border-box;">
-  <!-- SEARCH CONTAINER -->
+  <!-- Search Container -->
   <div id="search_container" style="position: relative; width: 88%;">
     <input 
       type="text" 
@@ -50,13 +48,9 @@ get_header();
       style="width: 100%; padding: 20px 60px 20px 24px; font-size: 18px; font-weight: 500; border-radius: 0px; border: none; outline: none; background: #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.1); font-family: 'Segoe UI', sans-serif;"
     />
     <style>
-      #live-travel-search::placeholder {
-        color: #aaa;
-        font-weight: 400;
-      }
+      #live-travel-search::placeholder {color: #aaa;font-weight: 400;}
     </style>
-
-    <!-- SEARCH ICON BUTTON -->
+    <!-- Search Icon Button -->
     <button 
       type="button" 
       style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer;">
@@ -67,15 +61,12 @@ get_header();
     </button>
   </div>
 
-  <!-- SEARCH RESULTS CONTAINER -->
+  <!-- Search Result Container -->
   <div 
     id="search-results" 
     style="margin-top: -40px; width: 88%;background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); display: none; max-height: 50vh; overflow-y: auto; padding: 55px 24px 24px 24px;">
   </div>
 </div>
-
-
-
 
 <!-- LIVE SEARCH BAR (No functions.php needed) -->
 <script>

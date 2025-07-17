@@ -6,8 +6,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/suchibratapatra/Desktop/Holidayseva_Wordpress_Theme/Assets",
-      "program": "/Users/suchibratapatra/Desktop/Holidayseva_Wordpress_Theme/Assets/build/Debug/outDebug"
+      "cwd": "/Users/suchibratapatra/Desktop/Holidayseva_Wordpress_Theme",
+      "program": "/Users/suchibratapatra/Desktop/Holidayseva_Wordpress_Theme/build/Debug/outDebug"
     }
   ]
 }
